@@ -1,0 +1,31 @@
+@startuml HttpRequestFlow
+start
+:API called GET/POST ...;
+fork
+:Default Handler;
+note: for JSON in/out
+fork again
+:Custom Handler;
+note: for binary\n and anything\nnot JSON
+endfork
+partition AbstractApiHandler {
+    card prepare {
+        :cacheCheck (disabled);
+        :add Headers for EventBus;
+        :prepareBody;
+    }
+    card send {
+        :getObservable;
+        note: Observable kicks off\nEventBus communication
+    }
+    card listen {
+        :listenForResponse;
+        note: ReactiveX Observer Pattern
+        :Observable.subscribe(data, error, end);
+        :data -> prepareJsonResponse;
+        :data -> response.write(buffer);
+        :error -> endWithError;
+    }
+}
+end
+@enduml

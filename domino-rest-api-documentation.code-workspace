@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"editor.fontFamily": "'Jetbrains Mono', Menlo, Monaco, 'Courier New', monospace",
+		"plantuml.exportFormat": "png",
+		"plantuml.exportOutDir": "../",
+		"plantuml.exportSubFolder": false,
+		"plantuml.diagramsRoot": ".",
+		"plantuml.exportMapFile": false,
+		"plantuml.previewSnapIndicators": true
+	}
+}

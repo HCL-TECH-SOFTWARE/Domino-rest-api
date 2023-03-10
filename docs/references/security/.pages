@@ -1,0 +1,10 @@
+title: Security
+
+nav:
+  - securityindex.md
+  - authentication.md
+  - configurationParameters.md
+  - configjson.md
+  - encryption.md
+  - securityjson.md
+  - customIdp.md

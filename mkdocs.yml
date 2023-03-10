@@ -1,0 +1,86 @@
+#Project Information
+site_name: HCL Domino REST API Documentation
+site_url: https://opensource.hcltechsw.com/Domino-rest-api/
+site_description: >-
+  HCL Domino REST API, formerly Project KEEP, provides a secure REST API with access into HCL Domino servers and databases.
+use_directory_urls: false
+site_dir: docs
+# Theme Configuration
+theme:
+  name: material
+  logo: /Domino-rest-api/assets/images/HCL_KEEP_ICON.jpg
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+    - navigation.instant
+    - search.highlight
+    - search.share
+    - search.suggest
+  custom_dir: theme_overrides/
+  icon:
+    repo: fontawesome/brands/github
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: favicon.ico
+
+# Markdown Extensions
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.snippets:
+      base_path:
+        - "docs/.snippets"
+  - footnotes
+
+# Copyright
+copyright: >-
+  Copyright &copy; 2023, HCL Technologies Limited -
+  <a href="#__consent">Change cookie settings</a>
+
+extra:
+  productversion: 1.0.2
+  flexnet_url: "https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/entitledDownloadFile.action?downloadPkgId=HCL%20Domino%20REST%20API%20Early%20Access%20Release"
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/HCL-TECH-SOFTWARE/Domino-rest-api
+  version:
+    provider: mike
+  analytics:
+    provider: google
+    property: UA-169645537-2
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+    actions:
+      - accept
+      - manage
+
+# Repository
+repo_url: https://github.com/HCL-TECH-SOFTWARE/Domino-rest-api
+repo_name: Domino-rest-api
+edit_uri: edit/main/docs
+
+# Customization
+extra_css:
+  - /Domino-rest-api/assets/css/keep_style.css
+
+plugins:
+  - search
+  - awesome-pages
+  - section-index
+  - tags
+  - markdownextradata: {}

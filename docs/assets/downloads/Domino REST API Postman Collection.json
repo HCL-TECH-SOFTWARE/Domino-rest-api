@@ -1,0 +1,2615 @@
+{
+	"info": {
+		"_postman_id": "fe7c62cc-bf9f-4ae4-bf26-aedf41c8c839",
+		"name": "Domino REST API",
+		"description": "Next Generation APIs for Domino",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7846503"
+	},
+	"item": [
+		{
+			"name": "authentication",
+			"item": [
+				{
+					"name": "Admin Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Capture Bearer\", function () {",
+									"    pm.response.to.be.json;",
+									"    var jsonData = pm.response.json();",
+									"    pm.environment.set(\"AUTH_KEY\",jsonData.bearer);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\" : \"{{AdminPassword}}\",\t\n    \"username\" : \"{{AdminName}}\"\n}"
+						},
+						"url": {
+							"raw": "{{HOST}}/auth",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Auth Invalid User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 500\", function () {",
+									"    pm.response.to.have.status(500);",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Json message\", function () {",
+									"    pm.response.to.be.json;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"Don't know\",\n    \"password\" : \"wild guess\"\n}"
+						},
+						"url": {
+							"raw": "{{HOST}}/auth",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User logout",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Json message\", function () {",
+									"    pm.response.to.be.json;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AUTH_KEY}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"logout\" : \"Yes\"}"
+						},
+						"url": {
+							"raw": "{{HOST}}/auth/logout",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "All things login/logout"
+		},
+		{
+			"name": "server",
+			"item": [
+				{
+					"name": "Get current Log",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{MANAGEMENT_PASSWORD}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{MANAGEMENT_USERNAME}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"shutdownkey\" : \"The End is near!!\"\n}"
+						},
+						"url": {
+							"raw": "{{ADMINHOST}}/log",
+							"host": [
+								"{{ADMINHOST}}"
+							],
+							"path": [
+								"log"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Keep Info",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{MANAGEMENT_PASSWORD}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{MANAGEMENT_USERNAME}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ADMINHOST}}/info",
+							"host": [
+								"{{ADMINHOST}}"
+							],
+							"path": [
+								"info"
+							]
+						},
+						"description": "http://localhost:8889/info"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Keep Config",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{MANAGEMENT_PASSWORD}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{MANAGEMENT_USERNAME}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ADMINHOST}}/config",
+							"host": [
+								"{{ADMINHOST}}"
+							],
+							"path": [
+								"config"
+							]
+						},
+						"description": "http://localhost:8889/info"
+					},
+					"response": []
+				},
+				{
+					"name": "Shutdown the server",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{MANAGEMENT_PASSWORD}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{MANAGEMENT_USERNAME}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"shutdownkey\" : \"The End is near!!\",\n\t\"StopServer\" : true\n}"
+						},
+						"url": {
+							"raw": "{{ADMINHOST}}/shutdown",
+							"host": [
+								"{{ADMINHOST}}"
+							],
+							"path": [
+								"shutdown"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reload the server",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{MANAGEMENT_PASSWORD}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{MANAGEMENT_USERNAME}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"shutdownkey\" : \"The End is near!!\",\n\t\"StopServer\" : true\n}"
+						},
+						"url": {
+							"raw": "{{ADMINHOST}}/reload",
+							"host": [
+								"{{ADMINHOST}}"
+							],
+							"path": [
+								"reload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List DXL files",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{MANAGEMENT_PASSWORD}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{MANAGEMENT_USERNAME}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ADMINHOST}}/dxl",
+							"host": [
+								"{{ADMINHOST}}"
+							],
+							"path": [
+								"dxl"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Output Factory Cache",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{MANAGEMENT_PASSWORD}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{MANAGEMENT_USERNAME}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ADMINHOST}}/factoryCache",
+							"host": [
+								"{{ADMINHOST}}"
+							],
+							"path": [
+								"factoryCache"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get agent states",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{MANAGEMENT_PASSWORD}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{MANAGEMENT_USERNAME}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"shutdownkey\" : \"The End is near!!\"\n}"
+						},
+						"url": {
+							"raw": "{{ADMINHOST}}/asyncAgentInfo",
+							"host": [
+								"{{ADMINHOST}}"
+							],
+							"path": [
+								"asyncAgentInfo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "configuration",
+			"item": [
+				{
+					"name": "Invalid Path",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AUTH_KEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/xzy",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"xzy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Keep Access",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							}
+						],
+						"url": {
+							"raw": "{{SETUPHOST}}/admin/access",
+							"host": [
+								"{{SETUPHOST}}"
+							],
+							"path": [
+								"admin",
+								"access"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Databases available",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"checkAllNsf\": true,\n    \"onlyConfigured\": false\n}"
+						},
+						"url": {
+							"raw": "{{SETUPHOST}}/admin/access",
+							"host": [
+								"{{SETUPHOST}}"
+							],
+							"path": [
+								"admin",
+								"access"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get demo db schema",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{SETUPHOST}}/schema?configName=demo&nsfPath=demo.nsf",
+							"host": [
+								"{{SETUPHOST}}"
+							],
+							"path": [
+								"schema"
+							],
+							"query": [
+								{
+									"key": "configName",
+									"value": "demo"
+								},
+								{
+									"key": "nsfPath",
+									"value": "demo.nsf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete demo db config",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{SETUPHOST}}/schema?configName=Demo&nsfPath=Demo.nsf",
+							"host": [
+								"{{SETUPHOST}}"
+							],
+							"path": [
+								"schema"
+							],
+							"query": [
+								{
+									"key": "configName",
+									"value": "Demo"
+								},
+								{
+									"key": "nsfPath",
+									"value": "Demo.nsf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get lists of scopes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"pm.test(\"User worked\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.length > 20);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/scopes",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"scopes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create one schema",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"apiName\": \"demo\",\r\n    \"name\": \"demo\",\r\n    \"description\": \"Demo database\",\r\n    \"nsfPath\": \"Demo.nsf\",\r\n    \"icon\": \"Base64 stuff, preferably SVG\",\r\n    \"iconName\": \"mountain\",\r\n    \"isActive\": true,\r\n    \"requireRevisionToUpdate\": false,\r\n    \"formulaEngine\": \"domino\",\r\n    \"openAccess\": true,\r\n    \"allowCode\": true,\r\n    \"dqlAccess\": true,\r\n    \"dqlFormula\": {\r\n        \"formulaType\": \"domino\",\r\n        \"formula\": \"@True\"\r\n    },\r\n    \"views\": [\r\n        {\r\n            \"name\": \"Customers\",\r\n            \"alias\": [\r\n                \"Customers\"\r\n            ],\r\n            \"unid\": \"86C72C1BF64B6DF04825847100373215\"\r\n        },\r\n        {\r\n            \"name\": \"MarketingInfo\",\r\n            \"alias\": [\r\n                \"MarketingInfo\"\r\n            ],\r\n            \"unid\": \"10EA9EC66EA748BC4825851100420810\"\r\n        },\r\n        {\r\n            \"name\": \"ChineseCustomers\",\r\n            \"alias\": [\r\n                \"ChineseCustomers\"\r\n            ],\r\n            \"unid\": \"3FE5CD63E179F21600258680006DB25B\"\r\n        },\r\n        {\r\n            \"name\": \"($All)\",\r\n            \"alias\": [\r\n                \"($All)\"\r\n            ],\r\n            \"unid\": \"0E35D520A1EBBB5B48258435003E8284\"\r\n        },\r\n        {\r\n            \"name\": \"Samples\",\r\n            \"alias\": [\r\n                \"Samples\"\r\n            ],\r\n            \"unid\": \"5318911D496571410025860D00544B17\"\r\n        }\r\n    ],\r\n    \"forms\": [\r\n        {\r\n            \"formName\": \"Customer\",\r\n            \"formModes\": [\r\n                {\r\n                    \"modeName\": \"default\",\r\n                    \"fields\": [\r\n                        {\r\n                            \"name\": \"Form\",\r\n                            \"type\": \"string\",\r\n                            \"readOnly\": true,\r\n                            \"fieldGroup\" : \"thing\",\r\n                            \"multivalue\" : true\r\n                        },\r\n                        {\r\n                            \"name\": \"Pet\",\r\n                            \"type\": \"string\"\r\n                        },\r\n                        {\r\n                            \"name\": \"color\",\r\n                            \"type\": \"string\"\r\n                        },\r\n                        {\r\n                            \"name\": \"email\",\r\n                            \"type\": \"string\"\r\n                        },\r\n                        {\r\n                            \"name\": \"employee_count\",\r\n                            \"type\": \"integer\"\r\n                        },\r\n                        {\r\n                            \"name\": \"first_name\",\r\n                            \"type\": \"string\"\r\n                        },\r\n                        {\r\n                            \"name\": \"last_name\",\r\n                            \"type\": \"string\"\r\n                        },\r\n                        {\r\n                            \"name\": \"hobbies\",\r\n                            \"type\": \"array\",\r\n                            \"items\": {\r\n                                \"type\": \"string\"\r\n                            }\r\n                        },\r\n                        {\r\n                            \"name\": \"Owner\",\r\n                            \"type\": \"string\",\r\n                            \"format\": \"authors\"\r\n                        },\r\n                        {\r\n                            \"name\": \"Body\",\r\n                            \"type\": \"object\",\r\n                            \"format\": \"richtext\"\r\n                        }\r\n                    ],\r\n                    \"required\": [\r\n                        \"Form\",\r\n                        \"email\",\r\n                        \"first_name\"\r\n                    ],\r\n                    \"readAccessFormula\": {\r\n                        \"formulaType\": \"domino\",\r\n                        \"formula\": \"@True\"\r\n                    },\r\n                    \"writeAccessFormula\": {\r\n                        \"formulaType\": \"domino\",\r\n                        \"formula\": \"@True\"\r\n                    },\r\n                    \"deleteAccessFormula\": {\r\n                        \"formulaType\": \"domino\",\r\n                        \"formula\": \"@False\"\r\n                    },\r\n                    \"computeWithForm\": false\r\n                },\r\n                {\r\n                    \"modeName\": \"dql\",\r\n                    \"fields\": [\r\n                        {\r\n                            \"name\": \"Form\",\r\n                            \"type\": \"string\",\r\n                            \"readOnly\": true\r\n                        },\r\n                        {\r\n                            \"name\": \"Pet\",\r\n                            \"type\": \"string\"\r\n                        },\r\n                        {\r\n                            \"name\": \"color\",\r\n                            \"type\": \"string\"\r\n                        },\r\n                        {\r\n                            \"name\": \"email\",\r\n                            \"type\": \"string\"\r\n                        },\r\n                        {\r\n                            \"name\": \"first_name\",\r\n                            \"type\": \"string\"\r\n                        },\r\n                        {\r\n                            \"name\": \"last_name\",\r\n                            \"type\": \"string\"\r\n                        },\r\n                        {\r\n                            \"name\": \"hobbies\",\r\n                            \"type\": \"array\",\r\n                            \"items\": {\r\n                                \"type\": \"string\"\r\n                            }\r\n                        }\r\n                    ],\r\n                    \"required\": [\r\n                        \"Form\",\r\n                        \"email\",\r\n                        \"first_name\"\r\n                    ],\r\n                    \"readAccessFormula\": {\r\n                        \"formulaType\": \"domino\",\r\n                        \"formula\": \"@True\"\r\n                    },\r\n                    \"writeAccessFormula\": {\r\n                        \"formulaType\": \"domino\",\r\n                        \"formula\": \"@True\"\r\n                    },\r\n                    \"deleteAccessFormula\": {\r\n                        \"formulaType\": \"domino\",\r\n                        \"formula\": \"@False\"\r\n                    },\r\n                    \"computeWithForm\": false\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"formName\": \"Marketing\",\r\n            \"formModes\": [\r\n                {\r\n                    \"modeName\": \"default\",\r\n                    \"fields\": [\r\n                        {\r\n                            \"name\": \"Form\",\r\n                            \"type\": \"string\",\r\n                            \"readOnly\": true\r\n                        },\r\n                        {\r\n                            \"name\": \"Assets\",\r\n                            \"type\": \"string\"\r\n                        },\r\n                        {\r\n                            \"name\": \"Country\",\r\n                            \"type\": \"string\"\r\n                        },\r\n                        {\r\n                            \"name\": \"FullName\",\r\n                            \"type\": \"string\"\r\n                        },\r\n                        {\r\n                            \"name\": \"Industry\",\r\n                            \"type\": \"string\"\r\n                        },\r\n                        {\r\n                            \"name\": \"Newsletter\",\r\n                            \"type\": \"string\"\r\n                        },\r\n                        {\r\n                            \"name\": \"email\",\r\n                            \"type\": \"string\"\r\n                        },\r\n                        {\r\n                            \"name\": \"gender\",\r\n                            \"type\": \"string\",\r\n                            \"writeOnly\": true\r\n                        }\r\n                    ],\r\n                    \"readAccessFormula\": {\r\n                        \"formulaType\": \"domino\",\r\n                        \"formula\": \"@True\"\r\n                    },\r\n                    \"writeAccessFormula\": {\r\n                        \"formulaType\": \"domino\",\r\n                        \"formula\": \"@True\"\r\n                    },\r\n                    \"deleteAccessFormula\": {\r\n                        \"formulaType\": \"domino\",\r\n                        \"formula\": \"@False\"\r\n                    },\r\n                    \"computeWithForm\": false\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"formName\": \"SampleForm\",\r\n            \"formModes\": [\r\n                {\r\n                    \"modeName\": \"default\",\r\n                    \"fields\": [\r\n                        {\r\n                            \"name\": \"Color\",\r\n                            \"type\": \"string\"\r\n                        },\r\n                        {\r\n                            \"name\": \"Form\",\r\n                            \"type\": \"string\"\r\n                        },\r\n                        {\r\n                            \"name\": \"Shape\",\r\n                            \"type\": \"string\"\r\n                        },\r\n                        {\r\n                            \"name\": \"Taste\",\r\n                            \"type\": \"string\"\r\n                        }\r\n                    ],\r\n                    \"readAccessFormula\": {\r\n                        \"formulaType\": \"domino\",\r\n                        \"formula\": \"@True\"\r\n                    },\r\n                    \"writeAccessFormula\": {\r\n                        \"formulaType\": \"domino\",\r\n                        \"formula\": \"@True\"\r\n                    },\r\n                    \"deleteAccessFormula\": {\r\n                        \"formulaType\": \"domino\",\r\n                        \"formula\": \"@False\"\r\n                    },\r\n                    \"computeWithForm\": false\r\n                },\r\n                {\r\n                    \"modeName\": \"odata\",\r\n                    \"fields\": [\r\n                        {\r\n                            \"name\": \"Color\",\r\n                            \"type\": \"string\"\r\n                        },\r\n                        {\r\n                            \"name\": \"Form\",\r\n                            \"type\": \"string\"\r\n                        },\r\n                        {\r\n                            \"name\": \"Shape\",\r\n                            \"type\": \"string\"\r\n                        },\r\n                        {\r\n                            \"name\": \"Taste\",\r\n                            \"type\": \"string\"\r\n                        }\r\n                    ],\r\n                    \"readAccessFormula\": {\r\n                        \"formulaType\": \"domino\",\r\n                        \"formula\": \"@True\"\r\n                    },\r\n                    \"writeAccessFormula\": {\r\n                        \"formulaType\": \"domino\",\r\n                        \"formula\": \"@True\"\r\n                    },\r\n                    \"deleteAccessFormula\": {\r\n                        \"formulaType\": \"domino\",\r\n                        \"formula\": \"@False\"\r\n                    },\r\n                    \"computeWithForm\": false\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"formAliases\": {\r\n        \"Entry\": \"Entry\",\r\n        \"SampleEntry\": \"SampleEntry\",\r\n        \"Customer\": \"Customer\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "{{SETUPHOST}}/schema?nsfPath=Demo.nsf&configName=demo",
+							"host": [
+								"{{SETUPHOST}}"
+							],
+							"path": [
+								"schema"
+							],
+							"query": [
+								{
+									"key": "nsfPath",
+									"value": "Demo.nsf"
+								},
+								{
+									"key": "configName",
+									"value": "demo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create one scope",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AUTH_KEY}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"apiName\": \"demo\",\n    \"schemaName\": \"demo\",\n    \"nsfPath\": \"Demo.nsf\",\n    \"isActive\": true\n}"
+						},
+						"url": {
+							"raw": "{{SETUPHOST}}/admin/scope?createSchema=true",
+							"host": [
+								"{{SETUPHOST}}"
+							],
+							"path": [
+								"admin",
+								"scope"
+							],
+							"query": [
+								{
+									"key": "createSchema",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one scope",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AUTH_KEY}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Subject\": \"The famous demo database\",\n    \"apiName\": \"demo\",\n    \"schemaName\": \"demo\",\n    \"nsfPath\": \"Demo.nsf\",\n    \"isActive\": true,\n    \"ISiteNameFull\": \"REST Database Site: demo (active)\",\n    \"ISiteOrg\": \"Domino REST access\"\n}"
+						},
+						"url": {
+							"raw": "{{SETUPHOST}}/admin/scope?scopeName=demo",
+							"host": [
+								"{{SETUPHOST}}"
+							],
+							"path": [
+								"admin",
+								"scope"
+							],
+							"query": [
+								{
+									"key": "scopeName",
+									"value": "demo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete keep db Form Access Mode",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{HOST}}/admin/database/demo?formMode=dql",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"admin",
+								"database",
+								"demo"
+							],
+							"query": [
+								{
+									"key": "formMode",
+									"value": "dql"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create one external application",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"pm.test(\"User worked\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.environment.set(\"CLIENT_ID\", jsonData[\"client_id\"]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AUTH_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"client_name\": \"My App\",\n  \"client_uri\": \"https://www.projectcastle.io/coolapp\",\n  \"contacts\": [\n    \"admin@projectcastle.io\"\n  ],\n  \"description\": \"Super cool demo App\",\n  \"logo_uri\": \"https://www.projectcastle.io/castle.jpg\",\n  \"redirect_uris\": [\n    \"http://localhost/callback\",\n    \"https://domino.projectcastle.io/identity\",\n    \"https://www.projectcastle.io/oauth\"\n  ],\n  \"scope\": \"demo $DECRYPT\",\n  \"status\": \"isActive\"\n}"
+						},
+						"url": {
+							"raw": "{{SETUPHOST}}/admin/application",
+							"host": [
+								"{{SETUPHOST}}"
+							],
+							"path": [
+								"admin",
+								"application"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update one external application Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"pm.test(\"User worked\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.environment.set(\"APP_ID\", jsonData[0][\"appId\"]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AUTH_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"client_name\": \"My App\",\n  \"client_uri\": \"https://www.projectcastle.io/coolapp\",\n  \"contacts\": [\n    \"admin@projectcastle.io\"\n  ],\n  \"description\": \"Super cool demo App\",\n  \"logo_uri\": \"https://www.projectcastle.io/castle.jpg\",\n  \"redirect_uris\": [\n    \"http://localhost/callback\",\n    \"https://domino.projectcastle.io/identity\",\n    \"https://www.projectcastle.io/oauth\"\n  ],\n  \"scope\": \"demo $DECRYPT\",\n  \"status\": \"isActive\"\n}"
+						},
+						"url": {
+							"raw": "{{SETUPHOST}}/admin/application/{{CLIENT_ID}}",
+							"host": [
+								"{{SETUPHOST}}"
+							],
+							"path": [
+								"admin",
+								"application",
+								"{{CLIENT_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch one external application",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"appName\": \"My Second Application\",\n\t\"databasesRequested\": [\n\t\t\"keepconfig\",\n\t\t\"demo\"\n\t\t]\n}"
+						},
+						"url": {
+							"raw": "{{SETUPHOST}}/admin/application/{{CLIENT_ID}}",
+							"host": [
+								"{{SETUPHOST}}"
+							],
+							"path": [
+								"admin",
+								"application",
+								"{{CLIENT_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch external applications",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"appName\": \"My Second Application\",\n\t\"databasesRequested\": [\n\t\t\"keepconfig\",\n\t\t\"demo\"\n\t\t]\n}"
+						},
+						"url": {
+							"raw": "{{SETUPHOST}}/admin/applications/all",
+							"host": [
+								"{{SETUPHOST}}"
+							],
+							"path": [
+								"admin",
+								"applications",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch my external applications",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"appName\": \"My Second Application\",\n\t\"databasesRequested\": [\n\t\t\"keepconfig\",\n\t\t\"demo\"\n\t\t]\n}"
+						},
+						"url": {
+							"raw": "{{SETUPHOST}}/admin/applications",
+							"host": [
+								"{{SETUPHOST}}"
+							],
+							"path": [
+								"admin",
+								"applications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete one external application",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{SETUPHOST}}/admin/application/{{CLIENT_ID}}",
+							"host": [
+								"{{SETUPHOST}}"
+							],
+							"path": [
+								"admin",
+								"application",
+								"{{CLIENT_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post one external application secret",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"client_id\": \"{{client_id}}\",\n    \"status\": \"isActive\"\n}"
+						},
+						"url": {
+							"raw": "{{SETUPHOST}}/admin/application/{{CLIENT_ID}}/secret?force=true",
+							"host": [
+								"{{SETUPHOST}}"
+							],
+							"path": [
+								"admin",
+								"application",
+								"{{CLIENT_ID}}",
+								"secret"
+							],
+							"query": [
+								{
+									"key": "force",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Backup Keep configuration",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{SETUPHOST}}/admin/backup",
+							"host": [
+								"{{SETUPHOST}}"
+							],
+							"path": [
+								"admin",
+								"backup"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "All Admin functions"
+		},
+		{
+			"name": "design",
+			"item": [
+				{
+					"name": "Create NSF",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nsfPath\": \"demo1.nsf\",\n\t\"title\": \"Blank Demo\"\n}"
+						},
+						"url": {
+							"raw": "{{SETUPHOST}}/design/nsf?dataSource=blankDemo",
+							"host": [
+								"{{SETUPHOST}}"
+							],
+							"path": [
+								"design",
+								"nsf"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "blankDemo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create View",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"entries\",\n\t\"selectionFormula\": \"Form = \\\"Entry\\\"\",\n\t\"columns\": [\n\t\t{\n\t\t\t\"name\": \"name\",\n\t\t\t\"title\": \"name\",\n\t\t\t\"separatemultiplevalues\": false,\n\t\t\t\"sort\": \"ascending\",\n\t\t\t\"formula\": \"name\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"email\",\n\t\t\t\"title\": \"email\",\n\t\t\t\"separatemultiplevalues\": false,\n\t\t\t\"sort\": \"ascending\",\n\t\t\t\"formula\": \"email\"\n\t\t}\n\t]\n}"
+						},
+						"url": {
+							"raw": "{{SETUPHOST}}/design/views/entries?dataSource=demo",
+							"host": [
+								"{{SETUPHOST}}"
+							],
+							"path": [
+								"design",
+								"views",
+								"entries"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "demo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Form",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Entry\",\n\t\"alias\": \"\",\n\t\"fields\": [\n\t\t{\n\t\t\t\"name\": \"name\",\n\t\t\t\"type\": \"text\",\n\t\t\t\"allowmultivalues\": false\n\t\t},\n\t\t{\n\t\t\t\"name\": \"email\",\n\t\t\t\"type\": \"text\",\n\t\t\t\"allowmultivalues\": false\n\t\t}\n\t]\n}"
+						},
+						"url": {
+							"raw": "{{SETUPHOST}}/design/forms/Entry?dataSource=demo",
+							"host": [
+								"{{SETUPHOST}}"
+							],
+							"path": [
+								"design",
+								"forms",
+								"Entry"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "demo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Demo design",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AUTH_KEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{SETUPHOST}}/design?dataSource=demo",
+							"host": [
+								"{{SETUPHOST}}"
+							],
+							"path": [
+								"design"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "demo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Demo forms",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"pm.test(\"User worked\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.environment.set(\"FORM_0\", jsonData[0][\"@name\"]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							}
+						],
+						"url": {
+							"raw": "{{SETUPHOST}}/design/forms?dataSource=demo",
+							"host": [
+								"{{SETUPHOST}}"
+							],
+							"path": [
+								"design",
+								"forms"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "demo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Form \"Sampleform\" from Demo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"pm.test(\"User worked\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData[\"@unid\"]).to.eql(pm.environment.get(\"FORM_0\"));",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							}
+						],
+						"url": {
+							"raw": "{{SETUPHOST}}/design/forms/{{FORM_0}}?dataSource=demo",
+							"host": [
+								"{{SETUPHOST}}"
+							],
+							"path": [
+								"design",
+								"forms",
+								"{{FORM_0}}"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "demo"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Design related functions like read/update/alter design\nPreload design cache"
+		},
+		{
+			"name": "data",
+			"item": [
+				{
+					"name": "Get OpenAPI Schema for Keep Database",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/openapi?dataSource=demo",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"openapi"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "demo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get lists of scopes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"pm.test(\"User worked\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.length > 20);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/scopes",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"scopes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one scope",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AUTH_KEY}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Subject\": \"The famous demo database\",\n    \"apiName\": \"demo\",\n    \"schemaName\": \"demo\",\n    \"nsfPath\": \"Demo.nsf\",\n    \"isActive\": true,\n    \"ISiteNameFull\": \"REST Database Site: demo (active)\",\n    \"ISiteOrg\": \"Domino REST access\"\n}"
+						},
+						"url": {
+							"raw": "{{HOST}}/scope?dataSource=demo",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"scope"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "demo"
+								},
+								{
+									"key": "x-keep-version",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get demo db Customer Form Access Modes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{HOST}}/scope/form/Customer?dataSource=demo",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"scope",
+								"form",
+								"Customer"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "demo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get demo db Customer Form Default Access Modes Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{HOST}}/scope/mode/Customer/default?dataSource=demo",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"scope",
+								"mode",
+								"Customer",
+								"default"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "demo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get lists of views in demo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"pm.test(\"User worked\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.length > 20);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AUTH_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/lists?dataSource=demo",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"lists"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "demo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Documents View data in demo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"pm.test(\"User worked\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.environment.set(\"UNID_0\", jsonData[0][\"@unid\"]);",
+									"    pm.expect(jsonData.length > 20);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AUTH_KEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/lists/%28%24All%29?dataSource=demo",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"lists",
+								"%28%24All%29"
+							],
+							"query": [
+								{
+									"key": "count",
+									"value": "10",
+									"description": "Number of entries to return",
+									"disabled": true
+								},
+								{
+									"key": "start",
+									"value": "10",
+									"description": "nth entry to start from",
+									"disabled": true
+								},
+								{
+									"key": "startswith",
+									"value": "MI",
+									"description": "value to partially match against first sorted column, to refine first entry to return",
+									"disabled": true
+								},
+								{
+									"key": "documents",
+									"value": "true",
+									"description": "whether to retrurn documents (using form access mode restrictions) instead of columns from the view",
+									"disabled": true
+								},
+								{
+									"key": "mode",
+									"value": "default",
+									"description": "Form Access Mode to use to return documents. Only valid if documents=true. \"default\" is used if omitted.",
+									"disabled": true
+								},
+								{
+									"key": "column",
+									"value": "State",
+									"description": "Column to sort on, by default sorted ascending",
+									"disabled": true
+								},
+								{
+									"key": "direction",
+									"value": "asc",
+									"description": "Asacending (asc) or Descending (desc)",
+									"disabled": true
+								},
+								{
+									"key": "scope",
+									"value": "categories",
+									"description": "What to return: categories only (categories), categories and documents (all) or just document entries (documents)",
+									"disabled": true
+								},
+								{
+									"key": "dataSource",
+									"value": "demo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Documents View 10 documents in demo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"pm.test(\"User worked\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.environment.set(\"UNID_0\", jsonData[0][\"@unid\"]);",
+									"    pm.expect(jsonData.length == 10);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/lists/%28%24All%29?dataSource=demo&count=10&documents=true",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"lists",
+								"%28%24All%29"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "demo"
+								},
+								{
+									"key": "count",
+									"value": "10"
+								},
+								{
+									"key": "documents",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create one document in demo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"User created\", function () {",
+									"    pm.response.to.be.json;",
+									"    var jsonData = pm.response.json();",
+									"    pm.environment.set(\"UNID_0\", jsonData['@meta'].unid);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Madison\",\n    \"last_name\": \"Branthwaite\",\n    \"email\": \"mbranthwaite0@nba.com\",\n    \"Color\": \"Puce\",\n    \"Pet\": \"Black-capped chickadee\",\n    \"Form\": \"Customer\"\n}"
+						},
+						"url": {
+							"raw": "{{HOST}}/document?dataSource=demo",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"document"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "demo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one document from demo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AUTH_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{HOST}}/document/{{UNID_0}}?dataSource=demo",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"document",
+								"{{UNID_0}}"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "demo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete one document from demo",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AUTH_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{HOST}}/document/{{UNID_0}}?dataSource=demo",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"document",
+								"{{UNID_0}}"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "demo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update one document from demo",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Madison\",\n    \"last_name\": \"Branthwaite\",\n    \"email\": \"mbranthwaite0@nba.com\",\n    \"Color\": \"Puce\",\n    \"Pet\": \"Black-capped chickadee\",\n    \"Form\": \"Customer\"\n}"
+						},
+						"url": {
+							"raw": "{{HOST}}/document/{{UNID_0}}?dataSource=demo&mode=default",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"document",
+								"{{UNID_0}}"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "demo"
+								},
+								{
+									"key": "mode",
+									"value": "default"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bulk update documents from demo with DQL",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AUTH_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"query\": \"form = 'Customer' and Color = 'Puce'\",\n    \"replaceItems\": {\n        \"Color\": \"Red\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/bulk/update?dataSource=demo",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"bulk",
+								"update"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "demo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query demo with DQL",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"pm.test(\"User worked\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.environment.set(\"UNID_0\", jsonData[0][\"@unid\"]);",
+									"    pm.expect(jsonData.length > 20);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AUTH_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"query\": \"form = 'Customer' and Color = ?Color\",\n    \"maxScanDocs\": 500000,\n    \"maxScanEntries\": 200000,\n    \"timeoutSecs\": 300,\n    \"viewRefresh\": true,\n    \"noViews\": false,\n    \"variables\": {\n        \"Color\": \"Maroon\",\n        \"Pet\": \"Giraffe\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{HOST}}/query?action=execute&dataSource=demo",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"query"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "execute",
+									"description": "execute, explain or parse"
+								},
+								{
+									"key": "start",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "count",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "dataSource",
+									"value": "demo"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "code",
+			"item": [
+				{
+					"name": "Agents of demo.nsf",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AUTH_KEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{SETUPHOST}}/design/agents?dataSource=demo",
+							"host": [
+								"{{SETUPHOST}}"
+							],
+							"path": [
+								"design",
+								"agents"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "demo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get oneAgent from demo",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AUTH_KEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{SETUPHOST}}/design/agents/SalesforceProcessing?dataSource=demo",
+							"host": [
+								"{{SETUPHOST}}"
+							],
+							"path": [
+								"design",
+								"agents",
+								"SalesforceProcessing"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "demo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Run Agent",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Capture UUID\", function() {",
+									"    pm.response.to.be.json;",
+									"    var jsonData = pm.response.json();",
+									"    pm.environment.set(\"ASYNC_AGENT\", jsonData.unid);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"agentName\": \"(TestAgent)\",\n    \"payload\": {\n        \"test\": \"body\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/run/agent?dataSource=demo",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"run",
+								"agent"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "demo"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Code related functions\nRead agent, transform, run code"
+		},
+		{
+			"name": "odata",
+			"item": [
+				{
+					"name": "Get List of oData endpoints",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"pm.test(\"User worked\", function () {",
+									"    var jsonData = pm.response.json();",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{AdminPassword}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{AdminName}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/odata",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"odata"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Demo data Service document",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{AdminPassword}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{AdminName}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "OData-Version",
+								"value": "4.0",
+								"type": "text"
+							},
+							{
+								"key": "OData-MaxVersion",
+								"value": "4.0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/odata/demo",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"odata",
+								"demo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Demo data MetaData",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{AdminPassword}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{AdminName}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "OData-Version",
+								"value": "4.0",
+								"type": "text"
+							},
+							{
+								"key": "OData-MaxVersion",
+								"value": "4.0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/odata/demo/$metadata",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"odata",
+								"demo",
+								"$metadata"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Demo data SampleForm",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{AdminPassword}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{AdminName}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "OData-Version",
+								"value": "4.0",
+								"type": "text"
+							},
+							{
+								"key": "OData-MaxVersion",
+								"value": "4.0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/odata/demo/SampleForm",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"odata",
+								"demo",
+								"SampleForm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Demo data Customer",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{AdminPassword}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{AdminName}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "OData-Version",
+								"value": "4.0",
+								"type": "text"
+							},
+							{
+								"key": "OData-MaxVersion",
+								"value": "4.0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/odata/demo/Customer?$top=10",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"odata",
+								"demo",
+								"Customer"
+							],
+							"query": [
+								{
+									"key": "$top",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Operations related to oDATA. They are special since they run on BASIC auth (sorry for that)"
+		},
+		{
+			"name": "metrics",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{METRICS_PASSWORD}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{METRICS_USERNAME}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{METRICSADMINHOST}}/metrics",
+					"host": [
+						"{{METRICSADMINHOST}}"
+					],
+					"path": [
+						"metrics"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

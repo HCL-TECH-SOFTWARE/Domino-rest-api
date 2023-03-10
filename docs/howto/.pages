@@ -1,0 +1,15 @@
+title: How-to guides
+
+nav:
+    - index.md
+    - configuring-keep-idplite-with-identity-service.md
+    - configuringCertificates.md
+    - configuringIdentityProvider.md
+    - configuringKeycloak.md
+    - httpsproxy.md
+    - httpsproxy2.md
+    - keepsaml.md
+    - notesclient.md
+    - enablingadb.md
+    - externalnames.md
+    - uninstall.md

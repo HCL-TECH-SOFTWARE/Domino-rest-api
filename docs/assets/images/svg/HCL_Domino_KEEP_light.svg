@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 3076.22 387.23"
+   version="1.1"
+   id="svg183"
+   sodipodi:docname="KeepNewLogo.svg"
+   inkscape:version="1.2 (dc2aeda, 2022-05-15)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview185"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.40504256"
+     inkscape:cx="1170.2474"
+     inkscape:cy="790.04044"
+     inkscape:window-width="2513"
+     inkscape:window-height="1354"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="Layer_1-2" />
+  <defs
+     id="defs141">
+    <rect
+       x="1192.4673"
+       y="96.286179"
+       width="728.31853"
+       height="229.6055"
+       id="rect561" />
+    <rect
+       x="1165.3097"
+       y="96.286179"
+       width="1083.8367"
+       height="204.91674"
+       id="rect555" />
+    <rect
+       x="1273.9402"
+       y="123.44382"
+       width="908.5465"
+       height="212.32337"
+       id="rect499" />
+    <style
+       id="style129">.cls-1{fill:url(#linear-gradient);}.cls-2{fill:#12191f;}.cls-3{clip-path:url(#clip-path);}.cls-4{fill:url(#linear-gradient-3);}.cls-5{fill:url(#linear-gradient-4);}.cls-6{fill:#93a2ad;}</style>
+    <linearGradient
+       id="linear-gradient"
+       y1="193.61"
+       x2="387.23"
+       y2="193.61"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#ff7a7a"
+         id="stop131" />
+      <stop
+         offset="1"
+         stop-color="#ff7de5"
+         id="stop133" />
+    </linearGradient>
+    <clipPath
+       id="clip-path"
+       transform="translate(0 0)">
+      <path
+         class="cls-1"
+         d="M14.71,14.71h357.8V372.52H14.71ZM14.71,0A14.71,14.71,0,0,0,0,14.7H0V372.52a14.71,14.71,0,0,0,14.7,14.71H372.51a14.72,14.72,0,0,0,14.72-14.7h0V14.71A14.72,14.72,0,0,0,372.52,0Z"
+         id="path136" />
+    </clipPath>
+    <linearGradient
+       id="linear-gradient-3"
+       y1="193.62"
+       x2="387.23"
+       y2="193.62"
+       xlink:href="#linear-gradient" />
+    <linearGradient
+       id="linear-gradient-4"
+       x1="58.08"
+       y1="192.09"
+       x2="185.16"
+       y2="192.09"
+       xlink:href="#linear-gradient" />
+  </defs>
+  <g
+     id="Layer_2"
+     data-name="Layer 2">
+    <g
+       id="Layer_1-2"
+       data-name="Layer 1">
+      <rect
+         class="cls-2"
+         x="14.71"
+         y="14.71"
+         width="357.81"
+         height="357.81"
+         id="rect143" />
+      <path
+         class="cls-1"
+         d="M14.71,14.71h357.8V372.52H14.71ZM14.71,0A14.71,14.71,0,0,0,0,14.7H0V372.52a14.71,14.71,0,0,0,14.7,14.71H372.51a14.72,14.72,0,0,0,14.72-14.7h0V14.71A14.72,14.72,0,0,0,372.52,0Z"
+         transform="translate(0 0)"
+         id="path145" />
+      <g
+         class="cls-3"
+         clip-path="url(#clip-path)"
+         id="g149">
+        <rect
+           class="cls-4"
+           width="387.23"
+           height="387.23"
+           id="rect147" />
+      </g>
+      <polygon
+         class="cls-5"
+         points="120.8 116.12 120.8 154.57 99.29 167.24 99.29 128.52 58.08 152.27 58.08 233.09 81.02 247.28 81.02 305.16 185.16 305.16 185.16 79.02 120.8 116.12"
+         id="polygon151" />
+      <polygon
+         class="cls-6"
+         points="266.4 116.12 266.4 154.57 287.55 167.24 287.55 128.52 328.04 152.27 328.04 233.09 305.5 247.28 305.5 305.16 203.15 305.16 203.15 79.02 266.4 116.12"
+         id="polygon153" />
+      <path
+         class="cls-2"
+         d="M541.46,93h35.77v84.62h97.12V93h35.77V296.57H674.35V210.78H577.23v85.79H541.46Z"
+         transform="translate(0 0)"
+         id="path155" />
+      <path
+         class="cls-2"
+         d="M741.81,195.37v-.58c0-57.87,43.33-105.27,105-105.27,37.51,0,60.2,13.09,79.68,31.7l-23,26.46c-16.29-15.12-33.74-25.3-57-25.3-38.67,0-67.17,32-67.17,71.83v.58c0,39.84,28.21,72.11,67.17,72.11,25,0,41-9.88,58.45-26.17l23,23.27c-21.23,22.1-44.49,36.05-82.58,36.05C786,300.05,741.81,253.82,741.81,195.37Z"
+         transform="translate(0 0)"
+         id="path157" />
+      <path
+         class="cls-2"
+         d="M953.79,93h35.77V264h107v32.57H953.79Z"
+         transform="translate(0 0)"
+         id="path159" />
+      <path
+         class="cls-2"
+         d="M2352.74,93h35.77V195.37L2485.34,93h44.2l-84.91,87.53,88.69,116H2489.7L2420.21,205l-31.7,32.57v59h-35.77Z"
+         transform="translate(0 0)"
+         id="path173" />
+      <path
+         class="cls-2"
+         d="M2552.22,93h150.92v32H2588v52.92h102.07v32H2588v54.67h116.6v32H2552.22Z"
+         transform="translate(0 0)"
+         id="path175" />
+      <path
+         class="cls-2"
+         d="M2735.42,93h150.92v32H2771.18v52.92h102.07v32H2771.18v54.67h116.61v32H2735.42Z"
+         transform="translate(0 0)"
+         id="path177" />
+      <path
+         class="cls-2"
+         d="M2918.61,93h80.26c47.69,0,77.35,27.05,77.35,68.05v.58c0,45.65-36.64,69.5-81.42,69.5h-40.42v65.43h-35.77ZM2996,198.86c27,0,43.91-15.12,43.91-36.35v-.58c0-23.84-17.16-36.35-43.91-36.35h-41.58v73.28Z"
+         transform="translate(0 0)"
+         id="path179" />
+      <text
+         xml:space="preserve"
+         id="text497"
+         style="white-space:pre;shape-inside:url(#rect499);fill:#000000"
+         transform="matrix(28.138939,0,0,23.580414,-34721.206,-2873.3164)" />
+      <text
+         xml:space="preserve"
+         id="text553"
+         style="fill:#000000;white-space:pre;shape-inside:url(#rect555)" />
+      <text
+         xml:space="preserve"
+         id="text559"
+         style="white-space:pre;shape-inside:url(#rect561);fill:#000000" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:318.998px;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke-width:26.5833;image-rendering:auto"
+         x="1043.8867"
+         y="325.00223"
+         id="text571"
+         transform="scale(1.0880994,0.91903365)"><tspan
+           sodipodi:role="line"
+           id="tspan569"
+           x="1043.8867"
+           y="325.00223"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:318.998px;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:26.5833">Project</tspan></text>
+    </g>
+  </g>
+</svg>

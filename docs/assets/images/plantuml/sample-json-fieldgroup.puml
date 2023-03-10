@@ -1,0 +1,23 @@
+@startjson SampleJsonFieldGroup
+{
+	"Customer" :"Peter Pan",
+	"Location" : "Neverland",
+	"LostBoys" : {
+		"_1" : {
+			"Name" : "Nibs",
+			"age" : 5,
+			"fruit" : "Banana"
+		},
+		"_2" : {
+			"Name" : "Tootles",
+			"age" : 12,
+			"fruit" : "apple" 
+		},
+		"_3" : {
+			"Name" : "Curly",
+			"age" : 7,
+			"fruit" : "Banana" 
+		}  
+	}
+}
+@endjson

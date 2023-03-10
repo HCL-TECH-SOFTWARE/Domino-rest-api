@@ -1,0 +1,9 @@
+@startjson FunctionalUsers
+{ "identity": {
+    "healthcheckAPI": {},
+    "managementAPI": {},
+    "metricsAPI": {},
+    "singleDbModeUsers": {}
+  }
+}  
+@endjson

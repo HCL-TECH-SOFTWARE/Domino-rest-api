@@ -1,0 +1,12 @@
+@startjson test
+{
+    "Name" : "Tinkerbell",
+    "age" : 362,
+    "friends" : {
+        "Peter" : {
+            "name" : "pan",
+            "home" : "neverland"
+        }
+    }
+}
+@endjson

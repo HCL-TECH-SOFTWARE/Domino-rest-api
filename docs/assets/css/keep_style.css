@@ -1,0 +1,21 @@
+pre {
+  word-break: break-all;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+header {
+  background-image: linear-gradient(to right, #5f1ebe, #3c91ff);
+}
+
+nav.md-tabs {
+  background-image: linear-gradient(to right, #5f1ebe, #3c91ff);
+}
+@font-face {
+  font-family: 'HCLTech Roobert';
+  src: local('HCLTechRoobert-Regular'), url(HCLTechRoobert-Regular.otf);
+}
+
+tr.lostLinkItem:nth-child(even) {
+  background-color: #eeeeee;
+}

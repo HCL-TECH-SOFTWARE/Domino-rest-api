@@ -1,0 +1,62 @@
+# (C) 2021 HCL America Inc. All rights reserved
+# This is a Docker compose command to setup a
+# secondary server, one that connects to
+# your existing Domino Domain
+#
+# You have to EDIT the .env file and replace
+# all entries after the = sign with your values:
+#
+# Variable             Example
+# =====================================================================
+# ${CONTAINER_HOSTNAME}                domino.acme.com
+# ${CONTAINER_VOLUMES}                 domino_keep_notesdata
+# ${CONTAINER_NAME}                    domino-keep-test02
+# ${CONTAINER_IMAGE}                   docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.12.0
+# ---
+# ${SERVERSETUP_ADMIN_CN}                     Peter Parker
+# ${SERVERSETUP_SERVER_DOMAINNAME}            MarvelPhase4  <- YOUR EXSISTING NOTES DOMAIN
+# ${SERVERSETUP_ORG_ORGNAME}                  Stark Industries <- YOUR EXSISTING ORG
+# ${SERVERSETUP_SERVER_NAME}                  keep-server-02
+# ${SERVERSETUP_NETWORK_HOSTNAME}             keep01.domino.acme.com <- MUST RESOLVE
+# ${SERVERSETUP_EXISTINGSERVER_CN}            domino01 <- YOUR EXISTING SERVER
+# ${SERVERSETUP_EXISTINGSERVER_HOSTNAMEORIP}  10.45.10.3 <- MUST BE REACHABLE, can use DNS too
+
+version: "3.6"
+services:
+  domino02:
+    image: "${CONTAINER_IMAGE}"
+    container_name: "${CONTAINER_NAME}"
+    hostname: "${CONTAINER_HOSTNAME}"
+    stop_grace_period: 120s
+    environment:
+      SetupAutoConfigure: 1
+      SERVERSETUP_SERVER_TYPE: "additional"
+      SERVERSETUP_ADMIN_CN: "${SERVERSETUP_ADMIN_CN}"
+      SERVERSETUP_SERVER_DOMAINNAME: "${SERVERSETUP_SERVER_DOMAINNAME}"
+      SERVERSETUP_ORG_ORGNAME: "${SERVERSETUP_ORG_ORGNAME}"
+      SERVERSETUP_SERVER_IDFILEPATH: "/tmp/server.id"
+      SERVERSETUP_SERVER_NAME: "${SERVERSETUP_SERVER_NAME}"
+      SERVERSETUP_NETWORK_HOSTNAME: "${SERVERSETUP_NETWORK_HOSTNAME}"
+      SERVERSETUP_EXISTINGSERVER_CN: "${SERVERSETUP_EXISTINGSERVER_CN}"
+      SERVERSETUP_EXISTINGSERVER_HOSTNAMEORIP: "${SERVERSETUP_EXISTINGSERVER_HOSTNAMEORIP}"
+      SERVERSETUP_SECURITY_ACL_PROHIBITANONYMOUSACCESS: "true"
+      SERVERSETUP_SECURITY_ACL_ADDLOCALDOMAINADMINS: "true"
+      SERVERSETUP_SERVER_SERVERTASKS: replica,router,update,amgr,adminp,http,restapi
+      KEEP_LAUNCH_TYPE: task
+      LANG: "en_US.UTF-8"
+    cap_add:
+      - SYS_PTRACE
+    ports:
+      - 80:80
+      - 443:443
+      - 1352:1352
+      - 8880:8880
+      - 8889:8889
+      - 8890:8890
+    volumes:
+      - keep_vol:/local/notesdata
+      - ./server.id:/tmp/server.id
+volumes:
+  keep_vol:
+    name: "${CONTAINER_VOLUMES}"
+    external: false

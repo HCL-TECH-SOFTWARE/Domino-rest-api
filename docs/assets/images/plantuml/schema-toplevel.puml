@@ -1,0 +1,24 @@
+@startjson SchemaTopLevel
+{
+	"apiName": "demo",
+	"schemaName": "demoschema",
+	"description": "Explaining how the API works",
+	"filePath": "samples/explainer.nsf",
+	"iconName": "weather",
+	"isActive": true,
+	"requireRevisionToUpdate": false,
+    "allowDecryption": true,
+    "formulaEngine": "domino",
+	"openAccess": true,
+	"allowCode": false,
+	"dqlAccess": true,
+        "dqlFormula" : {
+        "formulaType" : "domino",
+        "formula" : "@IsMember(@UserName,[\"DQLUsers\"])"
+    },
+	"views": [],
+	"agents": [],
+	"forms": [	],
+	"formAliases": {}
+}
+@endjson

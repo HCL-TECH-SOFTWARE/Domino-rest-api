@@ -1,0 +1,11 @@
+title: Installation and configuration
+
+nav:
+    - index.md
+    - docker.md
+    - linux.md
+    - mac.md
+    - win.md
+    - postinstallation.md
+    - functionalUsers.md
+    - configuringPorts.md

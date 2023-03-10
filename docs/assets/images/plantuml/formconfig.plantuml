@@ -1,0 +1,43 @@
+@startwbs Formconfiguration
+* Form
+** FormMode 1
+*** Mode Properties
+**** OnLoad/Save
+*** ReadAccess
+**** Fields
+*** WriteAccess
+**** Fields
+*** Delete Access
+*** Validation
+**** Rules
+** FormMode 2
+*** Mode Properties
+**** OnLoad/Save
+*** ReadAccess
+**** Fields
+*** WriteAccess
+**** Fields
+*** Delete Access
+*** Validation
+**** Rules
+** FormMode 3
+*** Mode Properties
+**** OnLoad/Save
+*** ReadAccess
+**** Fields
+*** WriteAccess
+**** Fields
+*** Delete Access
+*** Validation
+**** Rules
+** FormMode 4
+*** Mode Properties
+**** OnLoad/Save
+*** ReadAccess
+**** Fields
+*** WriteAccess
+**** Fields
+*** Delete Access
+*** Validation
+**** Rules
+@endwbs

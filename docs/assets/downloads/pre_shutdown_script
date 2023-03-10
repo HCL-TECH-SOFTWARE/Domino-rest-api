@@ -1,0 +1,9 @@
+#!/bin/bash
+# Before she shutdown domino we shutdown KEEP
+if [ "$KEEP_LAUNCH_TYPE" != "script" ]; then
+  echo KEEP started in task mode, no pre_shutdown action required
+  exit 0
+fi
+
+export ADMINPORT=8889
+curl --max-time 10 -d '{"shutdownkey" : "The End is near!!"}' -H "Content-Type: application/json" -X POST http://localhost:$ADMINPORT/shutdown

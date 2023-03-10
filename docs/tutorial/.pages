@@ -1,0 +1,11 @@
+title: Tutorial
+
+nav:
+  - index.md
+  - Installation and configuration: installconfig
+  - adminui.md
+  - postmancurl.md
+  - swagger.md
+  - odata.md
+  - quickstartindex.md
+  

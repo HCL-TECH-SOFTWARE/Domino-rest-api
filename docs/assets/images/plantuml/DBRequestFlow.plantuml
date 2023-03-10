@@ -1,0 +1,14 @@
+@startuml DBRequestFlow
+start
+card DBRequestHandler {
+    : handle();
+    note: incoming request from EventBus
+    : HandlerFactory.get -> AsyncDominoJNX;
+}
+card  AsyncDominoJNX {
+    : processDominoRequest;
+    : EventBusJsonResponseSubscriber;
+    : this.subscribe();
+}
+end
+@enduml
