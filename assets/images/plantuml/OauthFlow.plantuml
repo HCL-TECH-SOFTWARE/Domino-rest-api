@@ -1,0 +1,26 @@
+@startuml WebAuth
+autonumber
+title OAuth Flow with application server
+actor       "Resource\nOwner" as human
+participant "Application\n Server" as IdP1
+participant "Identity Provide\n Authorization\nEndpoint" as IdP2
+participant "Identity Provider\n Token \nEndpoint" as IdP3
+database "KEEP API\nEndpoint" as keep
+' note right of human: Browsers can't keep secrets\nso they can't have an app secret 
+note right of IdP2: Keep can act as IDP
+human -> IdP1: request resource
+human <-- IdP1: request\nauthorization
+human -> IdP2: access IdP
+human <-> IdP2: authenticates
+human <-> IdP2: authorizes client
+human <-- IdP2: redirects with authorization code
+human -> IdP1: provide authorization code
+IdP1 -> IdP3: send Application server credentials\nand authorization code
+note over IdP2: not suitable for browser\nor client based access\nsince they can't keep secrets
+IdP1 <- IdP3: provide access token (JWT)
+IdP1 -> keep: send access token (JWT) & keep App ID/Secret\n with resource request
+IdP1 <- keep: provide resource
+human <- IdP1: provide resource
+' group covered by KEEP
+' end
+@enduml

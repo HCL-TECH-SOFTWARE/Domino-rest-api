@@ -1,0 +1,47 @@
+@startuml DBRequestProcessing
+
+package keep.dbrequests {
+    interface AsyncDominoBase
+    abstract AsyncDominoJNX implements AsyncDominoBase
+    abstract AsyncDominoJNXBuffer extends AsyncDominoJNX
+    abstract AsyncDominoJNXJson extends AsyncDominoJNX
+    class HandlerFactory
+    class DbRequestsHandler
+
+    abstract DbRequestParameters
+    abstract DbRequestParametersBuilder
+    class DbRequestParametersBuilderJson extends DbRequestParametersBuilder
+    class DbRequestParametersBuilderBuffer extends DbRequestParametersBuilder
+
+    HandlerFactory --* DbRequestsHandler
+    DbRequestParametersBuilderJson --* DbRequestParameters
+    DbRequestParametersBuilderBuffer --* DbRequestParameters
+    DbRequestsHandler --* AsyncDominoJNX
+    DbRequestParameters --* AsyncDominoJNX
+}
+
+package reactiveX {
+    interface ObservableEmitter
+    interface Observer
+    interface ObservableOnSubscribe
+    interface Subscription
+}
+
+package keep.eventbus {
+    interface EventBusResponseSubscriber extends ObservableEmitter, Observer, KeepSubscriberInfo
+    abstract AbstractEventBusResponseSubscriber implements EventBusResponseSubscriber
+    interface EventBusRequestObservable extends ObservableOnSubscribe, Subscription
+    abstract KeepSubscriber implements ObservableEmitter, KeepSubscriberInfo
+    class EventBusJsonResponseSubscriber extends AbstractEventBusResponseSubscriber
+    class EventBusBufferResponseSubscriber extends AbstractEventBusResponseSubscriber
+
+}
+
+package keep.dbrequests.data {
+    class GetDocument implements AsyncDominoJNXJson
+    class GetDocumentAttachment implements AsyncDominoJNXBuffer
+}
+
+AsyncDominoJNXBuffer -- EventBusBufferResponseSubscriber
+AsyncDominoJNXJson -- EventBusJsonResponseSubscriber
+@enduml

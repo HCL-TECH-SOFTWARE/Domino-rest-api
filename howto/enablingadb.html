@@ -1,0 +1,3077 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Domino REST API, formerly Project KEEP, provides a secure REST API with access into HCL Domino servers and databases.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/Domino-rest-api/howto/enablingadb.html">
+      
+      
+        <link rel="prev" href="notesclient.html">
+      
+      
+        <link rel="next" href="externalnames.html">
+      
+      <link rel="icon" href="../favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.2">
+    
+    
+      
+        <title>How to enable a database - HCL Domino REST API Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7bf56d0a.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="/Domino-rest-api/assets/css/keep_style.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-169645537-2","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");ga("send","event","feedback","click",t,e),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){ga("send","pageview",e.pathname)})});var e=document.createElement("script");e.async=!0,e.src="https://www.google-analytics.com/analytics.js",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-to-enable-a-database" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="HCL Domino REST API Documentation" class="md-header__button md-logo" aria-label="HCL Domino REST API Documentation" data-md-component="logo">
+      
+  <img src="/Domino-rest-api/assets/images/HCL_KEEP_ICON.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Domino REST API Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              How to enable a database
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/Domino-rest-api" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Domino-rest-api
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../index.html" class="md-tabs__link">
+      Welcome
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../tutorial/index.html" class="md-tabs__link">
+      Tutorial
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="index.html" class="md-tabs__link md-tabs__link--active">
+      How-to guides
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../topicguides/index.html" class="md-tabs__link">
+      Topic guides
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../references/index.html" class="md-tabs__link">
+      References
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="HCL Domino REST API Documentation" class="md-nav__button md-logo" aria-label="HCL Domino REST API Documentation" data-md-component="logo">
+      
+  <img src="/Domino-rest-api/assets/images/HCL_KEEP_ICON.jpg" alt="logo">
+
+    </a>
+    HCL Domino REST API Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/Domino-rest-api" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Domino-rest-api
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        Welcome
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../tutorial/index.html">Tutorial</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../tutorial/installconfig/index.html">Installation and configuration</a>
+          
+            <label for="__nav_2_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Installation and configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/installconfig/docker.html" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/installconfig/linux.html" class="md-nav__link">
+        Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/installconfig/mac.html" class="md-nav__link">
+        Mac
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/installconfig/win.html" class="md-nav__link">
+        Windows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/installconfig/postinstallation.html" class="md-nav__link">
+        Post Installation Tasks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/installconfig/functionalUsers.html" class="md-nav__link">
+        Functional accounts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/installconfig/configuringPorts.html" class="md-nav__link">
+        Configuring ports
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/adminui.html" class="md-nav__link">
+        Using Admin UI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/postmancurl.html" class="md-nav__link">
+        Using Postman and curl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/swagger.html" class="md-nav__link">
+        SwaggerUI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/odata.html" class="md-nav__link">
+        OData
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/quickstartindex.html" class="md-nav__link">
+        Quickstart
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="index.html">How-to guides</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          How-to guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="configuring-keep-idplite-with-identity-service.html" class="md-nav__link">
+        How to configure Domino REST API IDP with Volt MX Foundry Identity Service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="configuringCertificates.html" class="md-nav__link">
+        How to configure certificates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="configuringIdentityProvider.html" class="md-nav__link">
+        How to configure an identity provider
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="configuringKeycloak.html" class="md-nav__link">
+        How to configure Keycloak
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="httpsproxy.html" class="md-nav__link">
+        How to configure nginx as HTTPS proxy with subdomains
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="httpsproxy2.html" class="md-nav__link">
+        How to configure nginx as HTTPS proxy - single domain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="keepsaml.html" class="md-nav__link">
+        How to configure Domino REST API as SAML identity provider
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="notesclient.html" class="md-nav__link">
+        How to deploy HCL Domino REST API to HCL Notes Client
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          How to enable a database
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="enablingadb.html" class="md-nav__link md-nav__link--active">
+        How to enable a database
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-domino-rest-api-schema" class="md-nav__link">
+    The Domino REST API Schema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-components" class="md-nav__link">
+    Schema components
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#views" class="md-nav__link">
+    Views
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agents" class="md-nav__link">
+    Agents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forms-mode" class="md-nav__link">
+    Forms &amp; Mode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-formulas" class="md-nav__link">
+    Access formulas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domino-rest-api-fields" class="md-nav__link">
+    Domino REST API Fields
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fieldgroups" class="md-nav__link">
+    FieldGroups
+  </a>
+  
+    <nav class="md-nav" aria-label="FieldGroups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#form-aliases" class="md-nav__link">
+    Form aliases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-schema" class="md-nav__link">
+    Sample Schema
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enabling-a-database-via-schema-and-scope" class="md-nav__link">
+    Enabling a database via Schema and Scope
+  </a>
+  
+    <nav class="md-nav" aria-label="Enabling a database via Schema and Scope">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-a-database-schema" class="md-nav__link">
+    Add a database schema
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-a-database-scope" class="md-nav__link">
+    Add a database scope
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-available-views" class="md-nav__link">
+    List available views
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieve-documents-from-the-customers-view" class="md-nav__link">
+    Retrieve documents from the Customers view
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-available-agents" class="md-nav__link">
+    List available agents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-available-forms" class="md-nav__link">
+    List available forms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-document" class="md-nav__link">
+    Creating a document
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieving-a-document" class="md-nav__link">
+    Retrieving a document
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-available-applications" class="md-nav__link">
+    List available applications
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-an-application" class="md-nav__link">
+    Add an application
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="externalnames.html" class="md-nav__link">
+        How to use external names in schema definitions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="uninstall.html" class="md-nav__link">
+        How to remove Domino REST API from Domino server or Notes Client
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../topicguides/index.html">Topic guides</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Topic guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/introducingrestapi.html" class="md-nav__link">
+        Introducing the Domino REST API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/understanding.html" class="md-nav__link">
+        Understanding HCL Domino REST API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/howkeepworks.html" class="md-nav__link">
+        How HCL Domino REST API works
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/keepdifference.html" class="md-nav__link">
+        Domino REST API is different
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/keepFlows.html" class="md-nav__link">
+        Domino REST API flows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/KeepFactory-and-caches.html" class="md-nav__link">
+        Factories and Caches
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/architecture.html" class="md-nav__link">
+        Architectural decisions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/barbican.html" class="md-nav__link">
+        The Barbican
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/eventbus.html" class="md-nav__link">
+        EventBus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/httpHandler.html" class="md-nav__link">
+        HTTP handler
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/scopes.html" class="md-nav__link">
+        Scopes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/dominojnx.html" class="md-nav__link">
+        DominoJNX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/agents.html" class="md-nav__link">
+        Agent processing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/securingKEEPEndpoints.html" class="md-nav__link">
+        Securing Domino REST API endpoints
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/usecases.html" class="md-nav__link">
+        Use cases
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../references/index.html">References</a>
+          
+            <label for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          References
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/whatisnew.html" class="md-nav__link">
+        What's new in Domino REST API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../references/usingdominorestapi/index.html">Using Domino REST API</a>
+          
+            <label for="__nav_5_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Using Domino REST API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingdominorestapi/keepcli.html" class="md-nav__link">
+        Domino REST API CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingdominorestapi/restapitask.html" class="md-nav__link">
+        Domino REST API task
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingdominorestapi/roles.html" class="md-nav__link">
+        Domino REST API roles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingdominorestapi/keepapplications.html" class="md-nav__link">
+        Domino REST API Applications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingdominorestapi/accesscontrol.html" class="md-nav__link">
+        Access Control
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingdominorestapi/planning.html" class="md-nav__link">
+        Planning your application
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingdominorestapi/salesforce.html" class="md-nav__link">
+        Domino data with Salesforce
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingdominorestapi/dataformats.html" class="md-nav__link">
+        DataFormats
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingdominorestapi/richtext.html" class="md-nav__link">
+        RichText and the Domino REST API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingdominorestapi/metrics.html" class="md-nav__link">
+        Metrics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingdominorestapi/administrationui.html" class="md-nav__link">
+        Using Web UI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingdominorestapi/console.html" class="md-nav__link">
+        Using Domino Console
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789" class="md-nav__link">
+        System requirements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../references/security/securityindex.html">Security</a>
+          
+            <label for="__nav_5_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Security
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/security/authentication.html" class="md-nav__link">
+        Auth\*
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/security/configurationParameters.html" class="md-nav__link">
+        Configuration parameters
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/security/configjson.html" class="md-nav__link">
+        config.json
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/security/encryption.html" class="md-nav__link">
+        Encryption Keys
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/security/securityjson.html" class="md-nav__link">
+        security.json
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/security/customIdp.html" class="md-nav__link">
+        Custom Identity Provider (IdP)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../references/usertools/index.html">User tools</a>
+          
+            <label for="__nav_5_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          User tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usertools/curl.html" class="md-nav__link">
+        curl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usertools/postman.html" class="md-nav__link">
+        Postman
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usertools/swagger.html" class="md-nav__link">
+        Swagger UI
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/changelog.html" class="md-nav__link">
+        Change Log
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/troubleshooting.html" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_8" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../references/quickreference/index.html">Quick reference</a>
+          
+            <label for="__nav_5_8">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_8">
+          <span class="md-nav__icon md-icon"></span>
+          Quick reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/quickreference/parameters.html" class="md-nav__link">
+        Parameters
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/quickreference/standards.html" class="md-nav__link">
+        Standards
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/quickreference/glossary.html" class="md-nav__link">
+        Glossary
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/downloads.html" class="md-nav__link">
+        Downloads
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-domino-rest-api-schema" class="md-nav__link">
+    The Domino REST API Schema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-components" class="md-nav__link">
+    Schema components
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#views" class="md-nav__link">
+    Views
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agents" class="md-nav__link">
+    Agents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forms-mode" class="md-nav__link">
+    Forms &amp; Mode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-formulas" class="md-nav__link">
+    Access formulas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domino-rest-api-fields" class="md-nav__link">
+    Domino REST API Fields
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fieldgroups" class="md-nav__link">
+    FieldGroups
+  </a>
+  
+    <nav class="md-nav" aria-label="FieldGroups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#form-aliases" class="md-nav__link">
+    Form aliases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-schema" class="md-nav__link">
+    Sample Schema
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enabling-a-database-via-schema-and-scope" class="md-nav__link">
+    Enabling a database via Schema and Scope
+  </a>
+  
+    <nav class="md-nav" aria-label="Enabling a database via Schema and Scope">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-a-database-schema" class="md-nav__link">
+    Add a database schema
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-a-database-scope" class="md-nav__link">
+    Add a database scope
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-available-views" class="md-nav__link">
+    List available views
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieve-documents-from-the-customers-view" class="md-nav__link">
+    Retrieve documents from the Customers view
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-available-agents" class="md-nav__link">
+    List available agents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-available-forms" class="md-nav__link">
+    List available forms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-document" class="md-nav__link">
+    Creating a document
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieving-a-document" class="md-nav__link">
+    Retrieving a document
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-available-applications" class="md-nav__link">
+    List available applications
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-an-application" class="md-nav__link">
+    Add an application
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+  
+  
+
+
+<h1 id="how-to-enable-a-database">How to enable a database</h1>
+<p>The Domino REST API does not expose any database to HTTP(S) by default. Enabling a database for REST access requires some configuration first:</p>
+<p><img alt="From DB to schema to scope" src="../assets/images/KeepAPISteps.png" /></p>
+<ol>
+<li><strong>Create a Domino REST API Schema</strong> in the NSF database to be enabled. A database can have one or more Domino REST API schemas for different access needs. A Domino REST API schema is stored as JSON file in the database's design file resources.</li>
+</ol>
+<p><img alt="Domino Designer with Domino REST API" src="../assets/images/KeepSchemaFileResource1.png" /></p>
+<p><img alt="Domino Designer with Domino REST API" src="../assets/images/KeepSchemaFileResource2.png" /></p>
+<p>A brave developer could use Domino designer to create or update one. The rest (pun intended) use the API or the <strong>Schema and Scope Management UI</strong> (colloquially known as the AdminUI).</p>
+<ol>
+<li>
+<p><strong>Link a schema to a scope</strong> The scope configuration is stored in the <code>KeepConfig.nsf</code> database. This separation of <code>scope</code> and <code>schema</code> means multiple scopes can link to a single schema. You use the scope name when performing all CRUD operations, it's the value to the query param <code>dataSource</code>. You can create the scope using the API or the AdminUI.</p>
+</li>
+<li>
+<p>Optional <strong>Create an OAuth application</strong> When you use Domino REST API as your IdP, you can create one or more OAuth applications that can access one or more of the defined scopes.</p>
+</li>
+</ol>
+<h2 id="the-domino-rest-api-schema">The Domino REST API Schema</h2>
+<p>The schema defines what views, folders, document and agents can be accessed through the Domino REST API. Access to documents is controlled by accessing their <code>Form</code> item and use the value to lookup access definitions, called <code>Mode</code> in Domino REST API's lingo that define the item names and properties accessible read- or writable.</p>
+<p>Since the exact terminology is long winded and colloquially often no distinction is made between document/item and form/field, the short version is: The Domino REST API schema controls accesss to forms and fields.</p>
+<p><img alt="From DB to schema to scope" src="../assets/images/KeepSchemaToApp.png" /></p>
+<p>While the AdminUI helps to generate a Domino REST API schema from an existing form, there no technical need for a form to be present, other than the possibility to open the Notes document in a Notes client too. Creating such a Schema requires direct post to the API.</p>
+<h2 id="schema-components">Schema components</h2>
+<!-- prettier-ignore -->
+<div class="admonition tip">
+<p class="admonition-title"><strong>Note</strong></p>
+</div>
+<p>Please refer to the OpenAPI specification running on your server. It is the complete reference guide to the APIs available to your deployed version of the Domino REST API.</p>
+<p>The high level entry contains a few properties and the collection of forms, views and agents made available:</p>
+<p><img alt="High Level schema components" src="../assets/images/SchemaTopLevel.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Entry</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>schemaName</strong></td>
+<td>internal name, matches the JSON file name in Domino design</td>
+</tr>
+<tr>
+<td><strong>description</strong></td>
+<td>visible in AdminUI</td>
+</tr>
+<tr>
+<td><strong>nsfPath</strong></td>
+<td>path to nsf relative to data directory</td>
+</tr>
+<tr>
+<td><strong>iconName</strong></td>
+<td>name of the icon (fixed set) used in the UI. Alternative <code>icon</code> can contain a Base64 svg</td>
+</tr>
+<tr>
+<td><strong>isActive</strong></td>
+<td>Can the API be used now</td>
+</tr>
+<tr>
+<td><strong>requireRevisionToUpdate</strong></td>
+<td>Measure to prevent overwrite conflicts</td>
+</tr>
+<tr>
+<td><strong>allowDecryption</strong></td>
+<td>When also the user hass the permission, decrypt documents</td>
+</tr>
+<tr>
+<td><strong>formulaEngine</strong></td>
+<td>domino (current only option)</td>
+</tr>
+<tr>
+<td><strong>openAccess</strong></td>
+<td>true - allow access when user has $DATA scope, false: require exact scope</td>
+</tr>
+<tr>
+<td><strong>allowCode</strong></td>
+<td>Run supplied external code</td>
+</tr>
+<tr>
+<td><strong>dqlAccess</strong></td>
+<td>allow DQL queries</td>
+</tr>
+<tr>
+<td><strong>dqlFormula</strong></td>
+<td>Domino formula with @True/@False result to restrict use of DQL query access</td>
+</tr>
+<tr>
+<td><strong>views</strong></td>
+<td>collection of available views</td>
+</tr>
+<tr>
+<td><strong>agents</strong></td>
+<td>collection of available agents</td>
+</tr>
+<tr>
+<td><strong>forms</strong></td>
+<td>collection of available forms</td>
+</tr>
+<tr>
+<td><strong>formAliases</strong></td>
+<td>defined aliases to avoid duplicate definitions</td>
+</tr>
+</tbody>
+</table>
+<h3 id="views">Views</h3>
+<p>An array of entries describing name, alias(es), if any and UNID of the view design element.
+Views will show all columns contained</p>
+<p><img alt="Schema component View" src="../assets/images/SchemaView.png" /></p>
+<h3 id="agents">Agents</h3>
+<p>An array of agent names that can be called from the REST endpoint. The API doesn't check if the agent is suitable for being called individually, it is the developers responsibility to ensure this.</p>
+<h3 id="forms-mode">Forms &amp; Mode</h3>
+<p>The form array has Form entries with 2 elements:</p>
+<ul>
+<li><strong>formName</strong>: Ideally the value stored in "<code>Form</code>" items. Alias resolution provided by <code>formAliases</code> element</li>
+<li><strong>formModes</strong>: Named schema for a form defining fields and access conditions. A form needs at least one FormMode to make documents available on Domino REST API. There are three mode names with special meaning:</li>
+<li><strong>default</strong> : The first (and last) formMode in a Domino REST API schema</li>
+<li><strong>odata</strong> : The mode used when accessing Domino REST API's ODATA endpoints</li>
+<li><strong>dql</strong> : The mode used when executing a DQL query</li>
+</ul>
+<p><img alt="Schema component View" src="../assets/images/SchemaFormMode.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Entry</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>modeName</td>
+<td>lowercase letters, used in URL addressing</td>
+</tr>
+<tr>
+<td>fields</td>
+<td>Array of KeepFields defining field properties (see below)</td>
+</tr>
+<tr>
+<td>readAccessFormula</td>
+<td>Domino formula that needs to compute to @True/@False to determine if this mode is available for read access</td>
+</tr>
+<tr>
+<td>writeAccessFormula</td>
+<td>Domino formula that needs to compute to @True/@False to determine if this mode is available for write access</td>
+</tr>
+<tr>
+<td>deleteAccessFormula</td>
+<td>Domino formula that needs to compute to @True/@False to determine if this mode is available for delete access</td>
+</tr>
+<tr>
+<td>required</td>
+<td>Array of field names that must be provided on creation or update. Following the JSON schema specification here</td>
+</tr>
+</tbody>
+</table>
+<h2 id="access-formulas">Access formulas</h2>
+<p>The avalability of access formulas follows typical Notes development pattern where actions are rendered based on Formula conditions (a.k.a HideWhen formula). Typically those formula include references the user name, role or group membership and item values like <code>Status</code> or <code>Approver</code></p>
+<h2 id="domino-rest-api-fields">Domino REST API Fields</h2>
+<p>We follow the ideas proposed by <a href="https://json-schema.org">JSON schema</a> with the intention to support most of the constrains available there at some point in time.</p>
+<p><img alt="Domino REST API Fields" src="../assets/images/SchemaKeepFields.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Entry</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>Field name mapping to item name</td>
+</tr>
+<tr>
+<td>type</td>
+<td>Type as permitted by <a href="https://www.json.org/json-en.html">JSON</a></td>
+</tr>
+<tr>
+<td>items</td>
+<td>when type = <code>array</code>, entry with type/format for array entries</td>
+</tr>
+<tr>
+<td>format</td>
+<td>data format as specified in <a href="https://json-schema.org">JSON schema</a></td>
+</tr>
+<tr>
+<td></td>
+<td>with the addition of Notes specific <code>names</code>, <code>authors</code>, <code>readers</code></td>
+</tr>
+<tr>
+<td>readyOnly*</td>
+<td>Field value can be read, but not written</td>
+</tr>
+<tr>
+<td>writeOnly*</td>
+<td>Field value can be written, but not read</td>
+</tr>
+<tr>
+<td></td>
+<td>* only one can be set true at a time</td>
+</tr>
+<tr>
+<td>fieldGroup</td>
+<td>allows to group a set of multi values into records</td>
+</tr>
+</tbody>
+</table>
+<h2 id="fieldgroups">FieldGroups</h2>
+<p>A typical Notes constuct are documents containing a group of multi value fields, where values with the same index position form a record. On the REST API that is an odd construction. A document might get returned like this:</p>
+<p><img alt="Domino REST API Fields" src="../assets/images/SampleJsonNoFieldGroup.png" /></p>
+<p>By assigning the fields <code>Name</code>, <code>age</code> and <code>fruit</code> the <strong>fieldGroup</strong> <code>LostBoys</code>, Domino REST API will render them as records in an JSON Object. We opted for an object to ease processing and addressing since arrays might not have a guarantee of sequence. The result looks like this:</p>
+<p><img alt="Domino REST API Fields" src="../assets/images/SampleJsonFieldGroup.png" /></p>
+<h3 id="form-aliases">Form aliases</h3>
+<p>The form aliases object allows to specify additional values in the form item to be mapped to the form configuration in the schema. The AdminUI will use form alias information extracted from the database design, but the API is not bound to these settings</p>
+<h3 id="sample-schema">Sample Schema</h3>
+<p><a href="../assets/images/SchemaComplete.png"><img alt="Domino REST API Fields" src="../assets/images/SchemaComplete.png" /></a></p>
+<h2 id="enabling-a-database-via-schema-and-scope">Enabling a database via Schema and Scope</h2>
+<p>Follow the tutorial for instructions on how to do this using <a href="../tutorial/adminui.html">AdminUI</a> or <a href="../tutorial/postmancurl.html">Postman or curl</a>.</p>
+<p>It is worth noting that all the actions that you can do using the Admin UI can also be done using Postman, curl or any similar tool.
+Below are some examples to perform additional actions for database and application management, like adding a database, listing views, agents and forms, listing and adding application.</p>
+<p>A group of API requests is known as a collection. Each collection may have subfolders and multiple requests. Request URL or the endpoint is used to identify the link to where the API will communicate with.</p>
+<!-- prettier-ignore -->
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>The following examples require a <code>bearer</code> token, which is returned in the response of the <code>/api/v1/auth</code> api. Replace <code>$Bearer</code> in the examples below with that <code>bearer</code> token.</p>
+<h3 id="add-a-database-schema">Add a database schema</h3>
+<p>To add a database schema, run the following command. Find the applicable Request URL from the OpenAPI Specification document. Provide the body for <code>POST</code> request.</p>
+<p><img alt="Adddatabase" src="../assets/images/adddatabaseschema.png" /></p>
+<details>
+<summary><b>cURL code snippet</b></summary>
+
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--location<span class="w"> </span>--request<span class="w"> </span>POST<span class="w"> </span><span class="s1">&#39;localhost:8880/api/setup-v1/schema?nsfPath=Demo.nsf&amp;configName=demo&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer $Bearer&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+--data-raw<span class="w"> </span><span class="s1">&#39;</span>
+<span class="s1">{</span>
+<span class="s1">    &quot;apiName&quot;: &quot;demo&quot;,</span>
+<span class="s1">    &quot;name&quot;: &quot;demo&quot;,</span>
+<span class="s1">    &quot;description&quot;: &quot;Demo database&quot;,</span>
+<span class="s1">    &quot;nsfPath&quot;: &quot;Demo.nsf&quot;,</span>
+<span class="s1">    &quot;icon&quot;: &quot;Base64 stuff, preferably SVG&quot;,</span>
+<span class="s1">    &quot;iconName&quot;: &quot;mountain&quot;,</span>
+<span class="s1">    &quot;isActive&quot;: true,</span>
+<span class="s1">    &quot;requireRevisionToUpdate&quot;: false,</span>
+<span class="s1">    &quot;formulaEngine&quot;: &quot;domino&quot;,</span>
+<span class="s1">    &quot;openAccess&quot;: true,</span>
+<span class="s1">    &quot;allowCode&quot;: true,</span>
+<span class="s1">    &quot;dqlAccess&quot;: true,</span>
+<span class="s1">    &quot;dqlFormula&quot;: {</span>
+<span class="s1">        &quot;formulaType&quot;: &quot;domino&quot;,</span>
+<span class="s1">        &quot;formula&quot;: &quot;@True&quot;</span>
+<span class="s1">    },</span>
+<span class="s1">    &quot;views&quot;: [</span>
+<span class="s1">        {</span>
+<span class="s1">            &quot;name&quot;: &quot;Customers&quot;,</span>
+<span class="s1">            &quot;alias&quot;: [</span>
+<span class="s1">                &quot;Customers&quot;</span>
+<span class="s1">            ],</span>
+<span class="s1">            &quot;unid&quot;: &quot;86C72C1BF64B6DF04825847100373215&quot;</span>
+<span class="s1">        },</span>
+<span class="s1">        {</span>
+<span class="s1">            &quot;name&quot;: &quot;MarketingInfo&quot;,</span>
+<span class="s1">            &quot;alias&quot;: [</span>
+<span class="s1">                &quot;MarketingInfo&quot;</span>
+<span class="s1">            ],</span>
+<span class="s1">            &quot;unid&quot;: &quot;10EA9EC66EA748BC4825851100420810&quot;</span>
+<span class="s1">        },</span>
+<span class="s1">        {</span>
+<span class="s1">            &quot;name&quot;: &quot;ChineseCustomers&quot;,</span>
+<span class="s1">            &quot;alias&quot;: [</span>
+<span class="s1">                &quot;ChineseCustomers&quot;</span>
+<span class="s1">            ],</span>
+<span class="s1">            &quot;unid&quot;: &quot;3FE5CD63E179F21600258680006DB25B&quot;</span>
+<span class="s1">        },</span>
+<span class="s1">        {</span>
+<span class="s1">            &quot;name&quot;: &quot;($All)&quot;,</span>
+<span class="s1">            &quot;alias&quot;: [</span>
+<span class="s1">                &quot;($All)&quot;</span>
+<span class="s1">            ],</span>
+<span class="s1">            &quot;unid&quot;: &quot;0E35D520A1EBBB5B48258435003E8284&quot;</span>
+<span class="s1">        },</span>
+<span class="s1">        {</span>
+<span class="s1">            &quot;name&quot;: &quot;Samples&quot;,</span>
+<span class="s1">            &quot;alias&quot;: [</span>
+<span class="s1">                &quot;Samples&quot;</span>
+<span class="s1">            ],</span>
+<span class="s1">            &quot;unid&quot;: &quot;5318911D496571410025860D00544B17&quot;</span>
+<span class="s1">        }</span>
+<span class="s1">    ],</span>
+<span class="s1">    &quot;forms&quot;: [</span>
+<span class="s1">        {</span>
+<span class="s1">            &quot;formName&quot;: &quot;Customer&quot;,</span>
+<span class="s1">            &quot;formModes&quot;: [</span>
+<span class="s1">                {</span>
+<span class="s1">                    &quot;modeName&quot;: &quot;default&quot;,</span>
+<span class="s1">                    &quot;fields&quot;: [</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;Form&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;string&quot;,</span>
+<span class="s1">                            &quot;readOnly&quot;: true,</span>
+<span class="s1">                            &quot;fieldGroup&quot; : &quot;thing&quot;,</span>
+<span class="s1">                            &quot;multivalue&quot; : true</span>
+<span class="s1">                        },</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;Pet&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;string&quot;</span>
+<span class="s1">                        },</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;color&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;string&quot;</span>
+<span class="s1">                        },</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;email&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;string&quot;</span>
+<span class="s1">                        },</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;employee_count&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;integer&quot;</span>
+<span class="s1">                        },</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;first_name&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;string&quot;</span>
+<span class="s1">                        },</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;last_name&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;string&quot;</span>
+<span class="s1">                        },</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;hobbies&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;array&quot;,</span>
+<span class="s1">                            &quot;items&quot;: {</span>
+<span class="s1">                                &quot;type&quot;: &quot;string&quot;</span>
+<span class="s1">                            }</span>
+<span class="s1">                        },</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;Owner&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;string&quot;,</span>
+<span class="s1">                            &quot;format&quot;: &quot;authors&quot;</span>
+<span class="s1">                        },</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;Body&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;object&quot;,</span>
+<span class="s1">                            &quot;format&quot;: &quot;richtext&quot;</span>
+<span class="s1">                        }</span>
+<span class="s1">                    ],</span>
+<span class="s1">                    &quot;required&quot;: [</span>
+<span class="s1">                        &quot;Form&quot;,</span>
+<span class="s1">                        &quot;email&quot;,</span>
+<span class="s1">                        &quot;first_name&quot;</span>
+<span class="s1">                    ],</span>
+<span class="s1">                    &quot;readAccessFormula&quot;: {</span>
+<span class="s1">                        &quot;formulaType&quot;: &quot;domino&quot;,</span>
+<span class="s1">                        &quot;formula&quot;: &quot;@True&quot;</span>
+<span class="s1">                    },</span>
+<span class="s1">                    &quot;writeAccessFormula&quot;: {</span>
+<span class="s1">                        &quot;formulaType&quot;: &quot;domino&quot;,</span>
+<span class="s1">                        &quot;formula&quot;: &quot;@True&quot;</span>
+<span class="s1">                    },</span>
+<span class="s1">                    &quot;deleteAccessFormula&quot;: {</span>
+<span class="s1">                        &quot;formulaType&quot;: &quot;domino&quot;,</span>
+<span class="s1">                        &quot;formula&quot;: &quot;@False&quot;</span>
+<span class="s1">                    },</span>
+<span class="s1">                    &quot;computeWithForm&quot;: false</span>
+<span class="s1">                },</span>
+<span class="s1">                {</span>
+<span class="s1">                    &quot;modeName&quot;: &quot;dql&quot;,</span>
+<span class="s1">                    &quot;fields&quot;: [</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;Form&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;string&quot;,</span>
+<span class="s1">                            &quot;readOnly&quot;: true</span>
+<span class="s1">                        },</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;Pet&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;string&quot;</span>
+<span class="s1">                        },</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;color&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;string&quot;</span>
+<span class="s1">                        },</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;email&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;string&quot;</span>
+<span class="s1">                        },</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;first_name&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;string&quot;</span>
+<span class="s1">                        },</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;last_name&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;string&quot;</span>
+<span class="s1">                        },</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;hobbies&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;array&quot;,</span>
+<span class="s1">                            &quot;items&quot;: {</span>
+<span class="s1">                                &quot;type&quot;: &quot;string&quot;</span>
+<span class="s1">                            }</span>
+<span class="s1">                        }</span>
+<span class="s1">                    ],</span>
+<span class="s1">                    &quot;required&quot;: [</span>
+<span class="s1">                        &quot;Form&quot;,</span>
+<span class="s1">                        &quot;email&quot;,</span>
+<span class="s1">                        &quot;first_name&quot;</span>
+<span class="s1">                    ],</span>
+<span class="s1">                    &quot;readAccessFormula&quot;: {</span>
+<span class="s1">                        &quot;formulaType&quot;: &quot;domino&quot;,</span>
+<span class="s1">                        &quot;formula&quot;: &quot;@True&quot;</span>
+<span class="s1">                    },</span>
+<span class="s1">                    &quot;writeAccessFormula&quot;: {</span>
+<span class="s1">                        &quot;formulaType&quot;: &quot;domino&quot;,</span>
+<span class="s1">                        &quot;formula&quot;: &quot;@True&quot;</span>
+<span class="s1">                    },</span>
+<span class="s1">                    &quot;deleteAccessFormula&quot;: {</span>
+<span class="s1">                        &quot;formulaType&quot;: &quot;domino&quot;,</span>
+<span class="s1">                        &quot;formula&quot;: &quot;@False&quot;</span>
+<span class="s1">                    },</span>
+<span class="s1">                    &quot;computeWithForm&quot;: false</span>
+<span class="s1">                }</span>
+<span class="s1">            ]</span>
+<span class="s1">        },</span>
+<span class="s1">        {</span>
+<span class="s1">            &quot;formName&quot;: &quot;Marketing&quot;,</span>
+<span class="s1">            &quot;formModes&quot;: [</span>
+<span class="s1">                {</span>
+<span class="s1">                    &quot;modeName&quot;: &quot;default&quot;,</span>
+<span class="s1">                    &quot;fields&quot;: [</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;Form&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;string&quot;,</span>
+<span class="s1">                            &quot;readOnly&quot;: true</span>
+<span class="s1">                        },</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;Assets&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;string&quot;</span>
+<span class="s1">                        },</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;Country&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;string&quot;</span>
+<span class="s1">                        },</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;FullName&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;string&quot;</span>
+<span class="s1">                        },</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;Industry&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;string&quot;</span>
+<span class="s1">                        },</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;Newsletter&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;string&quot;</span>
+<span class="s1">                        },</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;email&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;string&quot;</span>
+<span class="s1">                        },</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;gender&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;string&quot;,</span>
+<span class="s1">                            &quot;writeOnly&quot;: true</span>
+<span class="s1">                        }</span>
+<span class="s1">                    ],</span>
+<span class="s1">                    &quot;readAccessFormula&quot;: {</span>
+<span class="s1">                        &quot;formulaType&quot;: &quot;domino&quot;,</span>
+<span class="s1">                        &quot;formula&quot;: &quot;@True&quot;</span>
+<span class="s1">                    },</span>
+<span class="s1">                    &quot;writeAccessFormula&quot;: {</span>
+<span class="s1">                        &quot;formulaType&quot;: &quot;domino&quot;,</span>
+<span class="s1">                        &quot;formula&quot;: &quot;@True&quot;</span>
+<span class="s1">                    },</span>
+<span class="s1">                    &quot;deleteAccessFormula&quot;: {</span>
+<span class="s1">                        &quot;formulaType&quot;: &quot;domino&quot;,</span>
+<span class="s1">                        &quot;formula&quot;: &quot;@False&quot;</span>
+<span class="s1">                    },</span>
+<span class="s1">                    &quot;computeWithForm&quot;: false</span>
+<span class="s1">                }</span>
+<span class="s1">            ]</span>
+<span class="s1">        },</span>
+<span class="s1">        {</span>
+<span class="s1">            &quot;formName&quot;: &quot;SampleForm&quot;,</span>
+<span class="s1">            &quot;formModes&quot;: [</span>
+<span class="s1">                {</span>
+<span class="s1">                    &quot;modeName&quot;: &quot;default&quot;,</span>
+<span class="s1">                    &quot;fields&quot;: [</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;Color&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;string&quot;</span>
+<span class="s1">                        },</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;Form&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;string&quot;</span>
+<span class="s1">                        },</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;Shape&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;string&quot;</span>
+<span class="s1">                        },</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;Taste&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;string&quot;</span>
+<span class="s1">                        }</span>
+<span class="s1">                    ],</span>
+<span class="s1">                    &quot;readAccessFormula&quot;: {</span>
+<span class="s1">                        &quot;formulaType&quot;: &quot;domino&quot;,</span>
+<span class="s1">                        &quot;formula&quot;: &quot;@True&quot;</span>
+<span class="s1">                    },</span>
+<span class="s1">                    &quot;writeAccessFormula&quot;: {</span>
+<span class="s1">                        &quot;formulaType&quot;: &quot;domino&quot;,</span>
+<span class="s1">                        &quot;formula&quot;: &quot;@True&quot;</span>
+<span class="s1">                    },</span>
+<span class="s1">                    &quot;deleteAccessFormula&quot;: {</span>
+<span class="s1">                        &quot;formulaType&quot;: &quot;domino&quot;,</span>
+<span class="s1">                        &quot;formula&quot;: &quot;@False&quot;</span>
+<span class="s1">                    },</span>
+<span class="s1">                    &quot;computeWithForm&quot;: false</span>
+<span class="s1">                },</span>
+<span class="s1">                {</span>
+<span class="s1">                    &quot;modeName&quot;: &quot;odata&quot;,</span>
+<span class="s1">                    &quot;fields&quot;: [</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;Color&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;string&quot;</span>
+<span class="s1">                        },</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;Form&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;string&quot;</span>
+<span class="s1">                        },</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;Shape&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;string&quot;</span>
+<span class="s1">                        },</span>
+<span class="s1">                        {</span>
+<span class="s1">                            &quot;name&quot;: &quot;Taste&quot;,</span>
+<span class="s1">                            &quot;type&quot;: &quot;string&quot;</span>
+<span class="s1">                        }</span>
+<span class="s1">                    ],</span>
+<span class="s1">                    &quot;readAccessFormula&quot;: {</span>
+<span class="s1">                        &quot;formulaType&quot;: &quot;domino&quot;,</span>
+<span class="s1">                        &quot;formula&quot;: &quot;@True&quot;</span>
+<span class="s1">                    },</span>
+<span class="s1">                    &quot;writeAccessFormula&quot;: {</span>
+<span class="s1">                        &quot;formulaType&quot;: &quot;domino&quot;,</span>
+<span class="s1">                        &quot;formula&quot;: &quot;@True&quot;</span>
+<span class="s1">                    },</span>
+<span class="s1">                    &quot;deleteAccessFormula&quot;: {</span>
+<span class="s1">                        &quot;formulaType&quot;: &quot;domino&quot;,</span>
+<span class="s1">                        &quot;formula&quot;: &quot;@False&quot;</span>
+<span class="s1">                    },</span>
+<span class="s1">                    &quot;computeWithForm&quot;: false</span>
+<span class="s1">                }</span>
+<span class="s1">            ]</span>
+<span class="s1">        }</span>
+<span class="s1">    ],</span>
+<span class="s1">    &quot;formAliases&quot;: {</span>
+<span class="s1">        &quot;Entry&quot;: &quot;Entry&quot;,</span>
+<span class="s1">        &quot;SampleEntry&quot;: &quot;SampleEntry&quot;,</span>
+<span class="s1">        &quot;Customer&quot;: &quot;Customer&quot;</span>
+<span class="s1">    }</span>
+<span class="s1">}</span>
+<span class="s1">&#39;</span>
+</code></pre></div>
+
+</details>
+
+<h3 id="add-a-database-scope">Add a database scope</h3>
+<p>To add a database scope, run the following command. Find the applicable Request URL from the OpenAPI Specification document. Provide the body for <code>POST</code> request.</p>
+<p><img alt="Adddatabase" src="../assets/images/adddatabasescope.png" /></p>
+<details>
+<summary><b>cURL code snippet</b></summary>
+
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--location<span class="w"> </span>--request<span class="w"> </span>POST<span class="w"> </span><span class="s1">&#39;localhost:8880/api/setup-v1/admin/scope&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer $Bearer&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+--data-raw<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;apiName&quot;: &quot;demo&quot;,</span>
+<span class="s1">    &quot;schemaName&quot;: &quot;demo&quot;,</span>
+<span class="s1">    &quot;nsfPath&quot;: &quot;Demo.nsf&quot;,</span>
+<span class="s1">    &quot;isActive&quot;: true</span>
+<span class="s1">}</span>
+<span class="s1">&#39;</span>
+</code></pre></div>
+
+</details>
+
+<h3 id="list-available-views">List available views</h3>
+<p>To list the views available through this scope, run the following command. Find the applicable Request URL from the OpenAPI Specification document.Execute. For <code>GET</code> request, body is not needed.</p>
+<p><img alt="ListViews" src="../assets/images/listviews.png" /></p>
+<details>
+<summary><b>cURL code snippet</b></summary>
+
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--location<span class="w"> </span>--request<span class="w"> </span>GET<span class="w"> </span><span class="s1">&#39;localhost:8880/api/v1/lists?dataSource=demo&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer $Bearer&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Accept: application/json&#39;</span>
+</code></pre></div>
+
+</details>
+
+<h3 id="retrieve-documents-from-the-customers-view">Retrieve documents from the Customers view</h3>
+<p>Find the applicable Request URL from the OpenAPI Specification document. Execute. For <code>GET</code> request, body is not needed.</p>
+<p><img alt="RetrieveView" src="../assets/images/retrieveview.png" /></p>
+<details>
+<summary>cURL code snippet</summary>
+
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--location<span class="w"> </span>-g<span class="w"> </span>--request<span class="w"> </span>GET<span class="w"> </span><span class="s1">&#39;localhost:8880/api/v1/lists/Customers?dataSource=demo&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer $Bearer&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+--data-raw<span class="w"> </span><span class="s1">&#39;&#39;</span>
+</code></pre></div>
+
+</details>
+
+<h3 id="list-available-agents">List available agents</h3>
+<p>To list the agents, run the following command. Find the applicable Request URL from the OpenAPI Specification document.Execute. For <code>GET</code> request, body is not needed.</p>
+<p><img alt="ListAgents" src="../assets/images/listagents.png" /></p>
+<details>
+<summary>cURL code snippet</summary>
+
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--location<span class="w"> </span>--request<span class="w"> </span>GET<span class="w"> </span><span class="s1">&#39;localhost:8880/api/setup-v1/design/agents?dataSource=demo&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer $Bearer &#39;</span>
+</code></pre></div>
+
+</details>
+
+<h3 id="list-available-forms">List available forms</h3>
+<p>To list the forms available through this scope, run the following command. Find the applicable Request URL from the OpenAPI Specification document.Execute. For <code>GET</code> request, body is not needed.</p>
+<p><img alt="ListForms" src="../assets/images/ListForms.png" /></p>
+<details>
+<summary>cURL code snippet</summary>
+
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--location<span class="w"> </span>--request<span class="w"> </span>GET<span class="w"> </span><span class="s1">&#39;localhost:8880/api/setup-v1/design/forms?dataSource=demo&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer $Bearer &#39;</span>
+</code></pre></div>
+
+</details>
+
+<h3 id="creating-a-document">Creating a document</h3>
+<p>Find the applicable Request URL from the OpenAPI Specification document. In Postman, include the request body in JSON format for the <code>POST</code> request.</p>
+<p><img alt="Create document" src="../assets/images/CreateDocument.png" /></p>
+<details>
+<summary>cURL code snippet</summary>
+
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--location<span class="w"> </span>--request<span class="w"> </span>POST<span class="w"> </span><span class="s1">&#39;localhost:8880/api/v1/document?dataSource=demo&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer $Bearer&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+--data-raw<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;first_name&quot;: &quot;Madison&quot;,</span>
+<span class="s1">    &quot;last_name&quot;: &quot;Branthwaite&quot;,</span>
+<span class="s1">    &quot;email&quot;: &quot;mbranthwaite0@nba.com&quot;,</span>
+<span class="s1">    &quot;Color&quot;: &quot;Puce&quot;,</span>
+<span class="s1">    &quot;Pet&quot;: &quot;Black-capped chickadee&quot;,</span>
+<span class="s1">    &quot;Form&quot;: &quot;Customer&quot;</span>
+<span class="s1">}&#39;</span>
+</code></pre></div>
+
+</details>
+
+<h3 id="retrieving-a-document">Retrieving a document</h3>
+<p>Find the applicable Request URL from the OpenAPI Specification document.Execute. For <code>GET</code> request, body is not needed.</p>
+<!-- prettier-ignore -->
+<div class="admonition tip">
+<p class="admonition-title">Document UniversalID (unid)</p>
+</div>
+<p>This API requires the Document's UniversalID (<code>unid</code>). The <code>unid</code> is returned within the response from APIs such as the Create Document (from the previous example) as well as within the list of documents retrieved from a View (from a previous example as well).</p>
+<p><img alt="RetrieveDoc" src="../assets/images/retrievedoc.png" /></p>
+<!-- prettier-ignore -->
+<div class="admonition tip">
+<p class="admonition-title">Postman Variables</p>
+</div>
+<p>In the image above <code>{{ UNID_0 }}</code> is a Postman Environment Variable that automatically got created if you ran the <code>Create Document</code> Postman test. This is a feature built into the Postman collection we provided.
+If you are not using Postman, replace that with the <code>unid</code> of the document you'd like to retrieve.</p>
+<details>
+<summary>cURL code snippet</summary>
+
+<!-- prettier-ignore -->
+!!! tip "unid"
+Replace `$Unid` below with the unid you'd like to retrieve.
+
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--location<span class="w"> </span>-g<span class="w"> </span>--request<span class="w"> </span>GET<span class="w"> </span><span class="s1">&#39;localhost:8880/api/v1/document/$Unid/default?db=demo&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer $Bearer&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+--data-raw<span class="w"> </span><span class="s1">&#39;&#39;</span>
+</code></pre></div>
+
+</details>
+
+<h3 id="list-available-applications">List available applications</h3>
+<p>To live the available applications, run the following command. Find the applicable Request URL from the OpenAPI Specification document.Execute. For <code>GET</code> request, body is not needed.</p>
+<p><img alt="ListApplications" src="../assets/images/ListApplications.png" /></p>
+<details>
+<summary>cURL code snippet</summary>
+
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--location<span class="w"> </span>--request<span class="w"> </span>GET<span class="w"> </span><span class="s1">&#39;localhost:8880/api/setup-v1/admin/applications/all&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer $Bearer &#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+--data-raw<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">   &quot;appName&quot;: &quot;My Second Application&quot;,</span>
+<span class="s1">   &quot;databasesRequested&quot;: [</span>
+<span class="s1">     &quot;keepconfig&quot;,</span>
+<span class="s1">     &quot;demo&quot;</span>
+<span class="s1">    ]</span>
+<span class="s1">}&#39;</span>
+</code></pre></div>
+
+</details>
+
+<h3 id="add-an-application">Add an application</h3>
+<p>To add an application, run the following command. Find the applicable Request URL from the OpenAPI Specification document. Provide the body for Post request.</p>
+<p><img alt="AddApplicationPostman" src="../assets/images/createapplication.PNG" /></p>
+<details>
+<summary>cURL code snippet</summary>
+
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--location<span class="w"> </span>--request<span class="w"> </span>POST<span class="w"> </span><span class="s1">&#39;localhost:8880/api/setup-v1/admin/application&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer $Bearer &#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+--data-raw<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">  &quot;client_name&quot;: &quot;My App&quot;,</span>
+<span class="s1">  &quot;client_uri&quot;: &quot;https://www.projectcastle.io/coolapp&quot;,</span>
+<span class="s1">  &quot;contacts&quot;: [</span>
+<span class="s1">    &quot;admin@projectcastle.io&quot;</span>
+<span class="s1">  ],</span>
+<span class="s1">  &quot;description&quot;: &quot;Super cool demo App&quot;,</span>
+<span class="s1">  &quot;logo_uri&quot;: &quot;https://www.projectcastle.io/castle.jpg&quot;,</span>
+<span class="s1">  &quot;redirect_uris&quot;: [</span>
+<span class="s1">    &quot;http://localhost/callback&quot;,</span>
+<span class="s1">    &quot;https://domino.projectcastle.io/identity&quot;,</span>
+<span class="s1">    &quot;https://www.projectcastle.io/oauth&quot;</span>
+<span class="s1">  ],</span>
+<span class="s1">  &quot;scope&quot;: &quot;demo $DECRYPT&quot;,</span>
+<span class="s1">  &quot;status&quot;: &quot;isActive&quot;</span>
+<span class="s1">}&#39;</span>
+</code></pre></div>
+
+</details>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023, HCL Technologies Limited - <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE/Domino-rest-api" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+  
+    
+  
+
+
+  
+    
+  
+
+
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="analytics" checked>
+          <span class="task-list-indicator"></span>
+          Google Analytics
+        </label>
+      </li>
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="github" checked>
+          <span class="task-list-indicator"></span>
+          GitHub
+        </label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fc8c2696.min.js"></script>
+      
+    
+  </body>
+</html>

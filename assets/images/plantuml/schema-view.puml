@@ -1,0 +1,10 @@
+@startjson SchemaView
+{
+    "name": "($All)",
+    "alias": [
+        "All Documents",
+        "Alle Dokumente"
+    ],
+    "unid": "C7F4FC872D34DDB580257E99003EB09C"
+}
+@endjson

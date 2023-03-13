@@ -1,0 +1,42 @@
+#!/bin/bash
+# Prepare on first run if mode is task
+
+if [ "$KEEP_LAUNCH_TYPE" == "script" ]; then
+  echo KEEP starting in script mode, no pre_startup actions
+  exit 0
+fi
+
+# Actual 
+export v1TriggerFile=./KEEPADDED.trg
+export triggerFile=./KEEPADDED.v2.trg
+export notesIni=/local/notesdata/notes.ini
+
+#remove the v1 trigger file, also remove KeepCmdLine from notes.ini
+#notes.ini is backed up
+if [ -f "$v1TriggerFile" ]; then
+ rm -f $v1TriggerFile
+ sed -i.bak '/KeepCmdLine=/d' $notesIni
+fi
+
+#if the trigger file exists we've already run this once, exit.
+if [ -f "$triggerFile" ]; then
+   exit 0
+fi
+
+#check for a value for KeepInstallDir in notes.ini, if it exists create trigger and exit
+export keepInstallDir="$(awk -F  "=" 'tolower($0) ~ /^keepinstalldir/ {gsub(/[ \t]/, "", $2); print $2}' $notesIni)"
+if [ ! -z "$keepInstallDir" ]; then
+    echo -e "$(date -u +"%Y-%m-%dT%H%MZ")" > $triggerFile
+    exit 0
+fi
+
+#if keep not already in ServerTasks, add it
+export serverTasks="$(awk -F  "=" 'tolower($1) == "servertasks" {gsub(/[ \t]/, "", $2); print $2}' $notesIni)"
+keeptask='(,|^)keep(,|$)'
+if [ ! -z "$serverTasks" ] && ! [[ "$serverTasks" =~ $keeptask ]]; then
+  sed -i "/^ServerTasks=/s/=.*/=$serverTasks,keep/" $notesIni
+fi
+
+echo First Run, updating notes.ini and creating trigger file
+echo -e "KeepInstallDir=/opt/hcl/keep\n" >> $notesIni
+echo -e "$(date -u +"%Y-%m-%dT%H%MZ")" > $triggerFile
