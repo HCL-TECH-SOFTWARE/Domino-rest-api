@@ -2,7 +2,7 @@
 
 <!-- prettier-ignore -->
 !!! Note "Important Information about API Changes"
-Items below that are marked in <span style="color:red">**red**</span> are API changes that may impact your application(s) and should be reviewed before upgrading.
+    Items below that are marked in <span style="color:red">**red**</span> are API changes that may impact your application(s) and should be reviewed before upgrading.
 
 ## v1.0.2 - _What's new or changed_
 
@@ -30,7 +30,7 @@ Items below that are marked in <span style="color:red">**red**</span> are API ch
               ...
   ```
 
-- Docker image version for docker compose .env file (CONTAINER*IMAGE) is \_docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.12.0*
+- Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.12.0*
 
 ## V1.0.1 - _What's new or changed_
 
@@ -46,6 +46,7 @@ Items below that are marked in <span style="color:red">**red**</span> are API ch
 - `null` has been added as valid json for document updating, setting a field value to `null` will remove that field from the document.
 - Inactive scopes will no longer show in the Swagger UI's drop down list since they are not available.
 - Performance improvements.
+- Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.10.0*
 
 ## V1.0 - _What's changed since the Early Access Release_
 
