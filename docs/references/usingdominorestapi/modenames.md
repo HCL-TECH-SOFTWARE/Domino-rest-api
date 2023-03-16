@@ -18,5 +18,7 @@ You use a mode which will set a different sets of data coming from a document wi
 ## oData                         
   The odata mode lets you define the data that comes through our odata endpoints. The API support the odata standard [Open Data Protocol(oData)](https://en.wikipedia.org/wiki/). The odata mode defines the data that may be obtained or changed using odata mode. 
 
+## raw
+
 
 <!--See additional topics under this category for more information.-->
