@@ -11,7 +11,7 @@ There are three reserved form mode names in Domino API database management namel
 
 | Name                          | Description                                                                                       |
 | -----------                   | ----------- |
-| Default                       | Default is the pre-selected option that is available to the user. The user may use the default mode in creating, reading, updating and deleting the data that come from any server that uses the API.  |
+| Default                       | Default is the pre-selected option that is available to the user. The Default mode is automatically created when configuring a form in a Schema. The Default mode of the Form that is being referenced will be applied whenever an API calls for the declaration of a Scope (dataSource). |
 | DQL                           | A unique mode that may be created using the Database Management REST API is denoted by the DQL mode name. It allows you to define the data come through with DQL endpoints.  Domino Query Language, often known as DQL, is the method that is used in order to get data from a Domino Server. It always use a DQL query to retrieve the data and returns a JSON data back. |
 | odata                         | The odata mode lets you define the data that comes through our odata endpoints. The API support the odata standard [Open Data Protocol(oData)](https://en.wikipedia.org/wiki/). The odata mode defines the data that may be obtained or changed using odata mode.    |
 
