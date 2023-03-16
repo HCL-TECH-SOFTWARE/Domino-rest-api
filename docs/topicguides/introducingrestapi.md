@@ -35,7 +35,7 @@ For example, the data in a Domino database that could earlier be viewed only in 
 The Domino REST API are secure and standards-compliant, making them the right choice for your Notes and Domino ecosystem.
 
 <!-- prettier-ignore -->
-!!! caution ""
+!!! info 
     Much like the architectural keep that fortifies the castle, Project Domino REST API adds to the existing functionalities provided by Notes and Domino.
 
 <!-- prettier-ignore -->

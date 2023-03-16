@@ -8,7 +8,7 @@ Download `Demo.nsf` from [Resources](../references/downloads.md) and save it in 
 
 ## Login
 
-## Postman
+### Postman
 
 1. Start Postman and import the Postman collection and environment you downloaded.
 2. Open the Domino REST API Environment by clicking **Environments** and selecting `Domino REST API`.
@@ -21,7 +21,7 @@ Download `Demo.nsf` from [Resources](../references/downloads.md) and save it in 
 
 ![Login](../assets/images/PostmanLogin.png)
 
-## curl
+### curl
 
 Replace `$password` with your password value and `$username` with your username value.
 
@@ -40,11 +40,11 @@ This will return a bearer token that will be used to replace all `$Bearer` in th
 
 Use the following API to list all the databases:
 
-## Postman
+### Postman
 
 ![AllDatabases](../assets/images/AllDatabasesPostman.png)
 
-## curl
+### curl
 
 Replace `$Bearer` with the bearer token from login.
 
@@ -64,11 +64,11 @@ You should be able to see `Demo.nsf` in the list of databases if it's in the Not
 
 Use the following to create a schema:
 
-## Postman
+### Postman
 
 ![PostmanCreateSchema](../assets/images/PostmanCreateSchema.png)
 
-## curl
+### curl
 
 Replace `$Bearer` with the bearer token from login.
 
@@ -408,11 +408,11 @@ The created schema would have configured forms and views.
 
 Use the following to create a scope for the schema we created:
 
-## Postman
+### Postman
 
 ![PostmanCreateScope](../assets/images/PostmanCreateScope.png)
 
-## curl
+### curl
 
 Please replace `$Bearer` with the bearer token from login.
 
@@ -432,11 +432,11 @@ curl --location --request POST 'localhost:8880/api/setup-v1/admin/scope?createSc
 
 Use the following to check the forms in the database:
 
-## Postman
+### Postman
 
 ![PostmanForms](../assets/images/PostmanForms.png)
 
-## curl
+### curl
 
 Please replace `$Bearer` with the bearer token from login and `$scope` with the demo scope name.
 
@@ -450,11 +450,11 @@ curl --location --request GET 'localhost:8880/api/setup-v1/design/forms?dataSour
 
 Use the following to check the views in the database:
 
-## Postman
+### Postman
 
 ![PostmanViews](../assets/images/PostmanViews.png)
 
-## curl
+### curl
 
 Replace `$Bearer` with the bearer token from login and `$scope` with the demo scope name.
 
@@ -468,11 +468,11 @@ curl --location --request GET 'localhost:8880/api/v1/lists?dataSource=$scope' \
 
 Use the following to create a document:
 
-## Postman
+### Postman
 
 ![CreateDocument](../assets/images/CreateDocument.png)
 
-## curl
+### curl
 
 Replace `$Bearer` with the bearer token from login and `$scope` with the demo scope name.
 
@@ -496,11 +496,11 @@ curl --location --request POST 'localhost:8880/api/v1/document?dataSource=$scope
 
 Use the following to retrieve a document:
 
-## Postman
+### Postman
 
 ![RetrieveDocument](../assets/images/retrievedoc.png)
 
-## curl
+### curl
 
 Replace `$Bearer` with the bearer token from login, `$UNID` with the UNID from the previously created document and `$scope` with the demo scope name.
 
@@ -513,11 +513,11 @@ curl --location --request GET 'localhost:8880/api/v1/document/$UNID?dataSource=$
 
 Use the following command to delete a document:
 
-## Postman
+### Postman
 
 ![DeleteDocument](../assets/images/Deletedoc.png)
 
-## curl
+### curl
 
 Replace `$Bearer` with the bearer token from login, `$UNID` with the UNID from the previously created document and `$scope` with the demo scope name.
 
@@ -534,11 +534,11 @@ To verify document deletion, try getting it again using the retrieve command sho
 
 Use the following command to log out:
 
-## Postman
+### Postman
 
 ![Logout](../assets/images/Logout.png)
 
-## curl
+### curl
 
 Replace `$Bearer` with the bearer token.
 
@@ -555,11 +555,11 @@ curl --location --request POST 'localhost:8880/api/v1/auth/logout' \
 
 Use the following command to shut down the Domino REST API server:
 
-## Postman
+### Postman
 
 ![Shutdown](../assets/images/Shutdown.png)
 
-## curl
+### curl
 
 Replace `$Bearer` with the bearer token.
 

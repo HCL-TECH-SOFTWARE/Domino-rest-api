@@ -174,7 +174,6 @@ Domino REST API reads all config.json from Domino REST API core and deployed ext
   }
 }
 ```
-
 {: .resize-config-json}
 
 ## Properties
@@ -221,7 +220,7 @@ The name of the entries must match the name used in versions of the RestAPI vert
 | :------- | :------------------------------------------------------------------------ | :---------------------------- |
 | metric   | [metricsParameters](https://vertx.io/docs/vertx-micrometer-metrics/java/) | Parameter for vert.x metrics. |
 
-## Metrics parameters
+### Metrics parameters
 
 Here is a JSON representation of the resource:
 
@@ -258,7 +257,7 @@ Verticles defines a separate unit of work for particular tags. For the RestAPI v
 
 The following are types of verticles with additional parameters:
 
-## AsyncAgentScheduler verticle
+### AsyncAgentScheduler verticle
 
 This is the verticle for running async agents - calls to "/run/agent" with "async" set to true in the payload. In the Notes client you can look at KeepAgents.nsf for the asynchronous agents that are running or have run. This properties for this verticle include the [above](#vertical-parameters), plus these:
 
@@ -267,7 +266,7 @@ This is the verticle for running async agents - calls to "/run/agent" with "asyn
 | agentDefaultMaxDurationSeconds | int  | Timeout for asynchronous agents, in seconds. A value of -1 allows all agents to run to completion without timeout. |
 | logFrequencyMs                 | int  | Frequency to log messages of running async agents to the console.                                                  |
 
-## RestAPI verticle
+### RestAPI verticle
 
 This is the verticle for managing WebHandlers. "worker", "threadPoolName", "threadPoolSize", "className" and "active" parameters are as for the other verticles. This verticle also has a "versions" parameter. This maps to the top-level "versions" parameter and has the following properties:
 
@@ -280,13 +279,13 @@ This is the verticle for managing WebHandlers. "worker", "threadPoolName", "thre
 | package         | String | Package in which to find the WebHandlers for this version.                                                                                                                                                                                                                         |
 | route           | String | URL path for all OpenAPI endpoints for this spec.                                                                                                                                                                                                                                  |
 
-### Remarks
+## Remarks
 
-## Named elements vs. arrays
+### Named elements vs. arrays
 
 All configuration entries are **named** entries and not arrays, since named entries can be merged in the configuration while arrays can only be overwritten.
 
-## Deactivation of entries
+### Deactivation of entries
 
 The `config.json` in the Jar has the entry:
 
@@ -322,6 +321,6 @@ the resulting configuration available to Domino REST API is:
 
 In summary, the `v1` is not loaded This is the mechanism to disable default components without packing the Jar apart.
 
-## Overwriting the values
+### Overwriting the values
 
 All values can be [over written](https://vertx.io/docs/vertx-config/java/#_overloading_rules) by entries in the `keepconfig.d` directory. The structure needs to be the same as in the default file, but only needs the entries you want to change.
