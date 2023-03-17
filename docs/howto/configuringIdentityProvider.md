@@ -24,7 +24,7 @@ Domino REST API supports identity providers that can produce JWT access tokens. 
 
 <!-- prettier-ignore -->
 !!! tip
-Check out the [Keycloak](configuringKeycloak.md) example configuration.
+    Check out the [Keycloak](configuringKeycloak.md) example configuration.
 
 ## Example For Encode JWT
 

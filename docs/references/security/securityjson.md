@@ -110,8 +110,6 @@ The jwt (in lowercase) parameters include one ore more **named** entries contain
 
 An accepted JWT can be configured either by specifying the "providerUrl" property or by specifying "algorithm", "iss", "kid", and one of "key" or "keyFile".
 
-## Remarks
-
 ## Overwriting the values
 
 All values can be [overwritten](https://vertx.io/docs/vertx-config/java/#_overloading_rules) by entries in the `config.d` directory. The structure needs to be the same as in the default file, but only needs the entries you want to change.

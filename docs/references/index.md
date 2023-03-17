@@ -8,7 +8,7 @@ Contains the latest version information about Domino REST API.
 
 ## Using Domino REST API
 
-- [Overview](usingdominorestapi/usingkeepindex.md)
+- [Overview](usingdominorestapi/index.md)
 - [Access Control for various parts of the REST API](usingdominorestapi/accesscontrol.md)
 - [Domino REST API CLI](usingdominorestapi/keepcli.md)
 - [Domino REST API task](usingdominorestapi/restapitask.md)
@@ -38,7 +38,7 @@ For more information, see [System requirements](https://support.hcltechsw.com/cs
 
 ## User tools
 
-- [Overview](usertools/usertoolsindex.md)
+- [Overview](usertools/index.md)
 - [curl](usertools/curl.md)
 - [Postman](usertools/postman.md)
 - [Swagger UI](usertools/swagger.md)

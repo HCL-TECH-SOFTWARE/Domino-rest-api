@@ -37,13 +37,13 @@ You can arrange the schema names in either list or grid view or sort them alphab
 
 1. On the **Schema Management** page, click **Add Schema** to add a database schema.
 
-   ![Create Database Configuration](../../assets/images/createSchema.png)
+      ![Create Database Configuration](../../assets/images/createSchema.png)
 
-   The shape of data available is referred to as a schema. The schema is an JSON file in the design resources of the database. It gets created by a developer with Designer access to the NSF.
+      The shape of data available is referred to as a schema. The schema is an JSON file in the design resources of the database. It gets created by a developer with Designer access to the NSF.
 
-   This creates the Alias. You can use this to access the database via the Domino REST API. One NSF can be made available under more than one alias (such as with different security settings).
+      This creates the Alias. You can use this to access the database via the Domino REST API. One NSF can be made available under more than one alias (such as with different security settings).
 
-   ![Create Database Form](../../assets/images/AddSchemaForm.PNG)
+      ![Create Database Form](../../assets/images/AddSchemaForm.PNG)
 
 2. Under **Available Databases**, select a database from the list of databases available to the Domino REST API.
 3. Under **Add New Schema**, enter details in the **Schema Name** and **Description**, and then select the **Formula Engine** for the schema you want to create.
@@ -54,7 +54,7 @@ You can arrange the schema names in either list or grid view or sort them alphab
 1. Select a schema from the list of schemas and the details for it will load.
 2. Select **Database Forms** from the menu bar to show the list of all the Forms for the selected database.
 
-   ![List Forms](../../assets/images/ListOfForms.png)
+      ![List Forms](../../assets/images/ListOfForms.png)
 
 ### Configure a Form
 
@@ -67,7 +67,7 @@ To make changes to the configuration:
 
 1. Select the Form. This loads the `default` Access Mode for the Form.
 
-   ![Access Mode](../../assets/images/AccessMode.png)
+      ![Access Mode](../../assets/images/AccessMode.png)
 
 2. Set the Read or Write access formula for each of the fields in the Form.
 
@@ -78,7 +78,7 @@ To make changes to the configuration:
 1. Select a schema from the list of schemas and the details for it will load.
 2. Select **Database Views** from the menu bar. This lists all the Views for the selected schema.
 
-   ![List Views](../../assets/images/ListOfViews.png)
+      ![List Views](../../assets/images/ListOfViews.png)
 
 ### Activate a View
 
@@ -96,7 +96,7 @@ To make changes to the configuration:
 1. Select a schema from the list of schemas and the details for it will load.
 2. Select **Database Agents** from the menu bar. This lists all the Agents for the selected database.
 
-   ![List Agents](../../assets/images/ListOfAgents.png)
+      ![List Agents](../../assets/images/ListOfAgents.png)
 
 ### Activate an Agent
 
@@ -119,12 +119,12 @@ Select **Database Management - Activation** from the home page.
 
 1. On the **Scope Management** page, click **Add Scope** to add a database.
 
-   ![Create Database Scope](../../assets/images/CreateDatabaseBlue.png)
+      ![Create Database Scope](../../assets/images/CreateDatabaseBlue.png)
 
 2. Under **Available Schema**, select the schema that the scope will belong to.
 3. Under **Add New Scope**, fill in the form and click **Add**.
 
-   ![Configure Database](../../assets/images/AddNewDatabase.png)
+      ![Configure Database](../../assets/images/AddNewDatabase.png)
 
 A scope points to a schema that's contained in a database. A database can have multiple schemas for different use cases and a schema can be pointed to by more than one scope
 
@@ -148,12 +148,12 @@ The **Application Management** page shows the list of all available applications
 
 1. On the **Application Management** page, click **Add Application** to add an application.
 
-   ![Add Application](../../assets/images/AddApplication.png)
+      ![Add Application](../../assets/images/AddApplication.png)
 
 2. Under **Add New Application**, fill in the form and click **Add**.
 
-   ![Application Form](../../assets/images/AddApplicationForm.png)
+      ![Application Form](../../assets/images/AddApplicationForm.png)
 
 3. Hover over the application tile to access options to generate Application Secret, and edit and delete the application.
 
-   ![Edit Application](../../assets/images/EditApplication.png)
+      ![Edit Application](../../assets/images/EditApplication.png)

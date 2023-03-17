@@ -89,5 +89,5 @@ Bring up a browser and verify that you can hit these endpoints:
 Based on your interest, start by exploring the following sections of this documentation:
 
 - Dive deeper into [installation and configuration](../tutorial/installconfig/index.md)
-- Learn more about [using Domino REST API](../references/usingdominorestapi/usingkeepindex.md).
+- Learn more about [using Domino REST API](../references/usingdominorestapi/index.md).
 - Explore the internal [working of Domino REST API](../topicguides/howkeepworks.md) and know more about the [Barbican](../topicguides/barbican.md).

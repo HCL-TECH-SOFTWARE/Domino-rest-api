@@ -70,8 +70,8 @@ curl --location --request PUT 'http://yourkeepserver.io:8880/api/admin-v1/acl/en
 ```
 
 !!! note
-**Note:** The part after `/entries/` before `?dataSource` must be [URL encoded](https://en.wikipedia.org/wiki/Percent-encoding).
-{: .alert .alert-info}
+    The part after `/entries/` before `?dataSource` must be [URL encoded](https://en.wikipedia.org/wiki/Percent-encoding).
+    {: .alert .alert-info}
 
 ## Create Foundry Identity Service
 

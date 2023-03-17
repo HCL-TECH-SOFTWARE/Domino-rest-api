@@ -29,10 +29,10 @@ While the AdminUI helps to generate a Domino REST API schema from an existing fo
 ## Schema components
 
 <!-- prettier-ignore -->
-!!! tip "**Note**"
-Please refer to the OpenAPI specification running on your server. It is the complete reference guide to the APIs available to your deployed version of the Domino REST API.
+!!! tip 
+    Refer to the OpenAPI specification running on your server. It's the complete reference guide to the APIs available to your deployed version of the Domino REST API.
 
-The high level entry contains a few properties and the collection of forms, views and agents made available:
+The high level entry contains a few properties and the collection of forms, views, and agents made available:
 
 ![High Level schema components](../assets/images/SchemaTopLevel.png)
 
@@ -138,7 +138,7 @@ A group of API requests is known as a collection. Each collection may have subfo
 
 <!-- prettier-ignore -->
 !!! note
-The following examples require a `bearer` token, which is returned in the response of the `/api/v1/auth` api. Replace `$Bearer` in the examples below with that `bearer` token.
+    The following examples require a `bearer` token, which is returned in the response of the `/api/v1/auth` api. Replace `$Bearer` in the examples below with that `bearer` token.
 
 ### Add a database schema
 
@@ -604,20 +604,18 @@ Find the applicable Request URL from the OpenAPI Specification document.Execute.
 
 <!-- prettier-ignore -->
 !!! tip "Document UniversalID (unid)"
-This API requires the Document's UniversalID (`unid`). The `unid` is returned within the response from APIs such as the Create Document (from the previous example) as well as within the list of documents retrieved from a View (from a previous example as well).
+    This API requires the Document's UniversalID (`unid`). The `unid` is returned within the response from APIs such as the Create Document (from the previous example) as well as within the list of documents retrieved from a View (from a previous example as well).
 
 ![RetrieveDoc](../assets/images/retrievedoc.png)
 
 <!-- prettier-ignore -->
 !!! tip "Postman Variables"
-In the image above `{{UNID_0}}` is a Postman Environment Variable that automatically got created if you ran the `Create Document` Postman test. This is a feature built into the Postman collection we provided.
-If you are not using Postman, replace that with the `unid` of the document you'd like to retrieve.
+    In the image above `{{UNID_0}}` is a Postman Environment Variable that automatically got created if you ran the `Create Document` Postman test. This is a feature built into the Postman collection we provided.
+    If you are not using Postman, replace that with the `unid` of the document you'd like to retrieve.
 
 <details>
 <summary>cURL code snippet</summary>
 
-<!-- prettier-ignore -->
-!!! tip "unid"
 Replace `$Unid` below with the unid you'd like to retrieve.
 
 ```bash

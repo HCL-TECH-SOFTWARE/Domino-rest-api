@@ -7,6 +7,7 @@ The procedure guides you to try the Domino REST API with a sample demo Notes dat
 <!-- prettier-ignore -->
 !!! note
     **Domino REST API on Notes Client**
+
     The HCL Domino REST API is designed for use with the HCL Domino server. The ability to deploy it to a Notes client on Windows or macOS is provided for your convenience so you can evaluate and experiment. You can explore the API without setting up an HCL Domino server.<br />
     **This setup is not supported for any production use**. HCL Support will not entertain tickets for it.
 
@@ -58,7 +59,8 @@ The procedure guides you to try the Domino REST API with a sample demo Notes dat
     }
     ```
 
-    !!! note - The json file creates temporary users that Domino REST API recognizes while the API is running. The users include a Management API user and 2 local users. - To use these users, you may need to add their CN to the Database's ACL. `John Doe/Mauraders` should already be in the `Demo.nsf`'s ACL. - The password for each user is `password`. - For more information, see [Functional Accounts](../tutorial/installconfig/functionalUsers.md)
+    !!! note 
+        The json file creates temporary users that Domino REST API recognizes while the API is running. The users include a Management API user and 2 local users. To use these users, you may need to add their CN to the Database's ACL. `John Doe/Mauraders` should already be in the `Demo.nsf`'s ACL. The password for each user is `password`. For more information, see [Functional Accounts](../tutorial/installconfig/functionalUsers.md).
 
 4.  Open an elevated terminal and navigate to where Domino REST API was installed.
 5.  Run either the Windows cmd file (`runrestapi.cmd`) or Mac bash script (`runrestapi.sh`) that was installed by the installer.
@@ -83,9 +85,9 @@ The procedure guides you to try the Domino REST API with a sample demo Notes dat
 
 If everything is set up correctly, you should get the following message in the terminal console output:
 
-    ```text
+  ``` text
             *** HCL Domino REST API open for business ***
-    ```
+  ```
 
 ## Additional details
 
