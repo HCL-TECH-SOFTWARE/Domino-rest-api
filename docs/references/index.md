@@ -21,6 +21,7 @@ Contains the latest version information about Domino REST API.
 - [Metrics](usingdominorestapi/metrics.md)
 - [Using Web UI](usingdominorestapi/administrationui.md)
 - [Using Domino Console](usingdominorestapi/console.md)
+- [Reserved Form Modes](usingdominorestapi/modenames.md)
 
 ## System requirements
 
