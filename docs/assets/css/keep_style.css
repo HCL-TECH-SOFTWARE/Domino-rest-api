@@ -8,6 +8,10 @@ header {
   background-image: linear-gradient(to right, #5f1ebe, #3c91ff);
 }
 
+footer {
+  background-image: linear-gradient(to right, #5f1ebe, #3c91ff);
+}
+
 nav.md-tabs {
   background-image: linear-gradient(to right, #5f1ebe, #3c91ff);
 }

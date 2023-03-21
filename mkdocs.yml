@@ -82,4 +82,5 @@ plugins:
   - awesome-pages
   - section-index
   - tags
+  - git-revision-date-localized
   - markdownextradata: {}
