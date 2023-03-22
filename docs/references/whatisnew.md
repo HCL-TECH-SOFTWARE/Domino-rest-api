@@ -11,7 +11,7 @@
 - Fixed an issue where a JWT token will fail to decode if it's claims contain extended characters.
 - Fixed an issue where, on a Windows Domino server, the `.wellknown` issuer may be incorrect.
 - New endpoint added to the setup API, call `DELETE /admin/cache` to reset the Domino REST API Scope and Schema cache, call if you are modifying Scopes or Schemas directly in Notes as opposed to the API or the Admin UI.
-- Fixed an issue where, in various endpoints, a may be thrown if a Rich Text CD record returns invalid or unknown data.  This issue may have also prevented a database from showing up in the Admin UI.
+- Fixed an issue where, in various endpoints, an error may be thrown if a Rich Text CD record returns invalid or unknown data.  This issue may have also prevented a database from showing up in the Admin UI.
 - Fixed an issue when calling the `/design/{designType}/{designName}` and using the `nsfPath` parameter as opposed to the `dataSource` parameter results in the API trying to return that design information from KeepConfig.nsf instead of the specified database.
 - Remove invalid Scopes (`openid` and `email`) from the Swagger UI dropdown list of APIs / Scopes.
 - Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.15.0*
