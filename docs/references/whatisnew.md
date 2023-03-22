@@ -4,6 +4,18 @@
 !!! Note "Important Information about API Changes"
     Items below that are marked in <span style="color:red">**red**</span> are API changes that may impact your application(s) and should be reviewed before upgrading.
 
+## v1.0.3 - _What's new or changed_
+
+- Fixed an issue where the Admin UI may become unresponsive when populating the Database list when defining a new Schema when there are a lot of databases on the server.
+- `/lists/{listname}` API has a new parameter `keyAllowPartial=true` added to allow partial key matches.
+- Fixed an issue where a JWT token will fail to decode if it's claims contain extended characters.
+- Fixed an issue where, on a Windows Domino server, the `.wellknown` issuer may be incorrect.
+- New endpoint added to the setup API, call `DELETE /admin/cache` to reset the Domino REST API Scope and Schema cache, call if you are modifying Scopes or Schemas directly in Notes as opposed to the API or the Admin UI.
+- Fixed an issue where, in various endpoints, a may be thrown if a Rich Text CD record returns invalid or unknown data.  This issue may have also prevented a database from showing up in the Admin UI.
+- Fixed an issue when calling the `/design/{designType}/{designName}` and using the `nsfPath` parameter as opposed to the `dataSource` parameter results in the API trying to return that design information from KeepConfig.nsf instead of the specified database.
+- Remove invalid Scopes (`openid` and `email`) from the Swagger UI dropdown list of APIs / Scopes.
+- Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.15.0*
+
 ## v1.0.2 - _What's new or changed_
 
 - Increased speed of design element population in the Admin UI.
