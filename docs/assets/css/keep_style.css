@@ -17,7 +17,7 @@ nav.md-tabs {
 }
 @font-face {
   font-family: 'HCLTech Roobert';
-  src: local('HCLTechRoobert-Regular'), url(HCLTechRoobert-Regular.otf);
+  src: url(HCLTechRoobert-Regular.otf);
 }
 
 tr.lostLinkItem:nth-child(even) {

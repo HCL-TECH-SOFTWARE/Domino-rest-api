@@ -47,7 +47,7 @@ This page lists the changes in each release. For the latest version information,
 ## 12.0.1-EarlyAccess Beta2
 
 - **Installer**: The downloads now include the Java based installer. See [installation](../tutorial/installconfig/index.md) for details. Currently the installer has been tested on Linux only but you are free to try.
-- OData now is read/write for OData clients supporting write operations (such as [Salesforce](../references/usingdominorestapi/salesforce.md)).
+- OData now is read/write for OData clients supporting write operations (such as [Salesforce](../tutorial/odata/salesforce.md)).
 - Updated all Java dependencies to the latest available version.
 - Improved startup sequence: eliminated dependency on DXL to bootstrap Domino REST API, hence making the process more stable.
 - New Domino server add-in task created for Domino REST API. You now can start Domino REST API using `load keep` at the Domino server console.

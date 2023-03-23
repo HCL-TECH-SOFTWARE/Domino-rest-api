@@ -1,10 +1,20 @@
 # References
 
+--8<-- "feedback.md"
+
 This section provides technical references and descriptions for using HCL Domino REST API.
 
 ## [What's new in Domino REST API](whatisnew.md)
 
 Contains the latest version information about Domino REST API.
+
+## [System requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789)
+
+Provides the minimum system requirements for Domino REST API.
+
+## [Installation and configuration](../tutorial/installconfig/index.md)
+
+Provides information related to the installation and configuration of Domino REST API.
 
 ## Using Domino REST API
 
@@ -14,17 +24,13 @@ Contains the latest version information about Domino REST API.
 - [Domino REST API task](usingdominorestapi/restapitask.md)
 - [Domino REST API roles](usingdominorestapi/roles.md)
 - [Domino REST API Applications](usingdominorestapi/keepapplications.md)
-- [Planning your application](usingdominorestapi/planning.md)
-- [Domino data with Salesforce](usingdominorestapi/salesforce.md)
 - [DataFormats](usingdominorestapi/dataformats.md)
+- [Scopes](usingdominorestapi/scopes.md)
 - [RichText](usingdominorestapi/richtext.md)
 - [Metrics](usingdominorestapi/metrics.md)
 - [Using Web UI](usingdominorestapi/administrationui.md)
 - [Using Domino Console](usingdominorestapi/console.md)
-
-## System requirements
-
-For more information, see [System requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789)
+<!-- - [Domino data with Salesforce](usingdominorestapi/salesforce.md) -->
 
 ## Security
 

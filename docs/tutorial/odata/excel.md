@@ -10,19 +10,19 @@ This means that the data in a Notes database can be displayed in something as si
 1. Open Microsoft Excel and create a Blank Workbook.
 2. Select **Data** &rarr; **Get Data** &rarr; **From Other Sources** &rarr; **From ODataFeed**.
 
-   ![FromODataFeed](../../assets/images/FromODataFeed.png)
+      ![FromODataFeed](../../assets/images/FromODataFeed.png)
 
 3. Point it to an application on the Domino server. In the example, it's pointed to a To-do application.
 
-   ![serverURL](../../assets/images/serverURL.png)
+      ![serverURL](../../assets/images/serverURL.png)
 
 4. Click **OK**.
 
-   ![NotesDatabase](../../assets/images/NotesDatabase.png)
+      ![NotesDatabase](../../assets/images/NotesDatabase.png)
 
 5. Select **Load** to display the Notes data in Excel. The structure of the Notes database is understood.
 
-   ![NotesDataInExcel](../../assets/images/NotesDataInExcel.png)
+      ![NotesDataInExcel](../../assets/images/NotesDataInExcel.png)
 
 The Excel sheet is a live document. Any update to the Notes database is seen when you click **Refresh**.
 

@@ -1,6 +1,6 @@
 # How to configure nginx as HTTPS proxy - single domain
 
---8<-- "keepmngtURLcaution.md"
+--8<-- "keepmngtURLcaution1.md"
 
 ## About this task
 
@@ -131,6 +131,6 @@ Once deployed, use [Certbot](https://certbot.eff.org/) to activate SSL. Remember
 
 The resulting system layout looks as follows. Domino REST API can also be installed together with Domino directly on the server (or virtual machine), but the diagram still applies.
 
-![Proxy system diagram](../assets/images/ProxySetup.png)
+![Proxy system diagram](../../assets/images/ProxySetup.png)
 
 As you can see, the flow is the same as [multi-subdomain flow](./httpsproxy.md). The key is the nginx configuration.

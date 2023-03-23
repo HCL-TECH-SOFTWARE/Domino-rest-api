@@ -8,17 +8,17 @@ Determine what type of application you want to build.
 
 If the planned application is mobile, desktop (including Excel), or just uses a command line with curl, it would use direct access.
 
-![Local applications](../../assets/images/access/LocalApp.png)
+![Local applications](../assets/images/access/LocalApp.png)
 
 If the planned application is a web application (build using ReactJS, Angular etc), you can host the static application files in `keepweb.d` directory or your Domino server of choice.
 
-![Domino REST API Properties](../../assets/images/access/WebApp-local.png)
+![Domino REST API Properties](../assets/images/access/WebApp-local.png)
 
-![Domino REST API Properties](../../assets/images/access/WebApp-nginx.png)
+![Domino REST API Properties](../assets/images/access/WebApp-nginx.png)
 
-Finally, if the planned application is application-server-based, like NodeJS, Ruby, SpringBoot, PHP RUST or Go, it can sit between Domino REST API and the application. This type of application does not support open access and requires additional credentials.
+Finally, if the planned application is application-server-based, like NodeJS, Ruby, SpringBoot, PHP RUST or Go, it can sit between Domino REST API and the application. This type of application doesn't support open access and requires additional credentials.
 
-![Application server](../../assets/images/access/AppServer-App.png)
+![Application server](../assets/images/access/AppServer-App.png)
 
 ## Authentication
 
@@ -26,7 +26,7 @@ Domino REST API provides an endpoint to exchange a Domino user name and password
 
 For more robust and flexible authentication, the use of an external identity provider (IdP) that generates the JWT access token as result of an OAuth flow is recommended.
 
-![Domino REST API Properties](../../assets/images/OAuthDance.png)
+![Domino REST API Properties](../assets/images/OAuthDance.png)
 
 ## Detailed access management
 
@@ -38,6 +38,6 @@ The Domino REST API configuration allows you to fine tune access permissions. Do
 - Specify which views to expose on the API.
 - Specify which agents to expose on the API.
 - Specify which forms to expose on the API.
-  Here, [the Barbican's capabilities](../../topicguides/barbican.md) is used to tailor field access based on document data and current user, allowing for API-based data integrity.
+  Here, [the Barbican's capabilities](barbican.md) is used to tailor field access based on document data and current user, allowing for API-based data integrity.
 
-![Domino REST API Properties](../../assets/images/access/KEEPproperties.png)
+![Domino REST API Properties](../assets/images/access/KEEPproperties.png)

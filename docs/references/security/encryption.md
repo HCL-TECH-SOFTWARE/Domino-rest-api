@@ -70,7 +70,7 @@ The shutdown key, as well as the metrics credential password are stored salted a
 
 ### Generate keys and certificates for SAML and JWT
 
-Domino REST API used X509 certificates and a public/private key pair for [SAML](../../howto/keepsaml.md) interaction with the Domino R12 IDVault<!-- [IDVault](TODO: link to vault) -->. The management console offers a convenient way to generate those and the needed configuration entries.
+Domino REST API used X509 certificates and a public/private key pair for [SAML](../../howto/IdP/keepsaml.md) interaction with the Domino R12 IDVault<!-- [IDVault](TODO: link to vault) -->. The management console offers a convenient way to generate those and the needed configuration entries.
 
 Note: You need access to the Domino server's file system to collect the keys/cert.
 {: .alert .alert-danger}

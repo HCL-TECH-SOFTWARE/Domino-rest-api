@@ -195,4 +195,4 @@ The actual result can be inspected on the Domino REST API management API, like [
 > JSON overlay doesn't allow you to **remove** JSON elements. So, most settings have an `active` parameter that
 > can be set to false in an overlay.
 
-Follow this [guide](../../howto/uninstall.md) to remove Domino REST API from your system.
+Follow this [guide](../../howto/install/uninstall.md) to remove Domino REST API from your system.
