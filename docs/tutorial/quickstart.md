@@ -2,16 +2,17 @@
 
 This guide allows new users with working experience in HCL Notes and HCL Domino to quickly get started with Domino REST API.
 
-<!-- ## Downloading Domino REST API
+## Downloading Domino REST API
 
 Log in to [Flexnet](https://hclsoftware.flexnetoperations.com/) to and download Domino REST API.
 
 ## Let's connect
+
 Join us for questions, discussions, ideas and feedback over at [OpenNTF's Discord server](https://discord.com/invite/jmRHpDRnH4).
 
 ## What's New
 
-Check the [Changelog](../references/changelog) to learn what is new in Domino REST API V1.-->
+Check the [Changelog](../references/changelog) to learn what is new in Domino REST API
 
 ## The Domino REST API schema
 
