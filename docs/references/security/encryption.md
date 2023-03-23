@@ -102,15 +102,15 @@ The 4 files get created in your `keepconfig.d` directory. Distribute them to all
 - Login into the Management console (Port 8889).
 - Type a name you want to call this certificate into the "Certificate Name". No spaces or special characters.
 
-  - e.g. MultiDomain
+    - for example: MultiDomain
 
 - Click "Create IdP certificate".
 - Domino REST API generates 4 files in this server's [Notesdata]/keepconfig.d directory:
 
-  - MultiDomain.cert.pem
-  - MultiDomain.json
-  - MultiDomain.private.key.pem
-  - MultiDomain.public.key.pem
+    - MultiDomain.cert.pem
+    - MultiDomain.json
+    - MultiDomain.private.key.pem
+    - MultiDomain.public.key.pem
 
 - Copy these 4 files to your other Domino servers into the [notesdata]/keepconfig.d directory.
 - Restart Domino REST API on all servers with this new configuration and you are they will now share the same JWT keys.

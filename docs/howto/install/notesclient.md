@@ -57,7 +57,8 @@ The procedure guides you to try the Domino REST API with a sample demo Notes dat
     }
     ```
 
-    !!! note - The json file creates temporary users that Domino REST API recognizes while the API is running. The users include a Management API user and 2 local users. - To use these users, you may need to add their CN to the Database's ACL. `John Doe/Mauraders` should already be in the `Demo.nsf`'s ACL. - The password for each user is `password`. - For more information, see [Functional Accounts](../tutorial/installconfig/functionalUsers.md)
+    !!! note 
+        The json file creates temporary users that Domino REST API recognizes while the API is running. The users include a Management API user and 2 local users. To use these users, you may need to add their CN to the Database's ACL. `John Doe/Mauraders` should already be in the `Demo.nsf`'s ACL. The password for each user is `password`. For more information, see [Functional Accounts](../tutorial/installconfig/functionalUsers.md).
 
 4.  Open an elevated terminal and navigate to where Domino REST API was installed.
 5.  Run either the Windows cmd file (`runrestapi.cmd`) or Mac bash script (`runrestapi.sh`) that was installed by the installer.

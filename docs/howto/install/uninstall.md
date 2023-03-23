@@ -37,45 +37,36 @@ The Domino REST API doesn't have an uninstaller. If you'd like to remove it from
 2. Make a complete backup of your system.
 3. Edit your Domino Server's `notes.ini` file and remove:
 
-   - `,restapi` from the `ServerTasks=` line
-   - entire `KeepInstallDir=` line
-   - entire `KeepManagementURL=` line
+      - `,restapi` from the `ServerTasks=` line
+      - entire `KeepInstallDir=` line
+      - entire `KeepManagementURL=` line
 
 4. Remove runtime files in the Domino program directory:
 
-   - Windows:
+      - Windows:
 
-     - `nrestapi.*`
+         - `nrestapi.*`
+         - `nkeepevents.*`
 
-     - `nkeepevents.*`
+      - Linux:
 
-   - Linux:
-
-     - `restapi`
-
-     - `libkeepevents.so`
-
-     - `libidvaultapi.so`
+         - `restapi`
+         - `libkeepevents.so`
+         - `libidvaultapi.so`
 
 5. Remove databases from your Domino Data directory:
 
-   - `KeepConfig.nsf`
-
-   - `KeepConfig.ntf`
-
-   - `KeepAgents.nsf`
-
-   - `KeepAgents.ntf`
-
-   - `KeepOAuth.nsf`
-
-   - `KeepOAuth.ntf`
+      - `KeepConfig.nsf`
+      - `KeepConfig.ntf`
+      - `KeepAgents.nsf`
+      - `KeepAgents.ntf`
+      - `KeepOAuth.nsf`
+      - `KeepOAuth.ntf`
 
 6. Remove the following directories and their contents from your Domino Data directory:
 
-   - `keepconfig.d`
-
-   - `keepweb.d`
+      - `keepconfig.d`
+      - `keepweb.d`
 
 7. Remove the `Domino REST API` directory and all it's contents.
 
@@ -99,23 +90,17 @@ Domino REST API has been removed from your system.
 
 1. Remove databases from your Notes Data directory:
 
-   - `KeepConfig.nsf`
-
-   - `KeepConfig.ntf`
-
-   - `KeepAgents.nsf`
-
-   - `KeepAgents.ntf`
-
-   - `KeepOAuth.nsf`
-
-   - `KeepOAuth.ntf`
+      - `KeepConfig.nsf`
+      - `KeepConfig.ntf`
+      - `KeepAgents.nsf`
+      - `KeepAgents.ntf`
+      - `KeepOAuth.nsf`
+      - `KeepOAuth.ntf`
 
 2. Remove the following directories and their contents from your Notes Data directory:
 
-   - `keepconfig.d`
-
-   - `keepweb.d`
+      - `keepconfig.d`
+      - `keepweb.d`
 
 3. Remove the `Domino REST API` directory and all it's contents.
 
