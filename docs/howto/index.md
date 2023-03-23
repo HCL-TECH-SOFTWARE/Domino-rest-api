@@ -13,3 +13,13 @@ This section intends to guide experienced users in completing key goals and task
 - [How to enable a database](enablingadb.md)
 - [How to use external names in schema definitions](externalnames.md)
 - [How to remove Domino REST API from your Domino server or Notes Client](uninstall.md)
+
+## Installation
+
+You can follow instructions ....
+
+## Web
+
+## Identity Providers (IdP)
+
+## Databases

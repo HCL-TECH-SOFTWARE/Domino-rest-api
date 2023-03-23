@@ -30,8 +30,6 @@ The HCL Domino REST API documentation is based on the [Diátaxis framework](http
 
 **[References](references/index.md)** - Technical references and descriptions on using HCL Domino REST API
 
----
-
 ## Let's connect
 
-For questions, discussions, sharing ideas, and feedback, join the [OpenNTF Discord channel](https://discord.com/invite/jmRHpDRnH4).
+--8<-- "feedback.md"
