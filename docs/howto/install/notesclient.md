@@ -1,14 +1,13 @@
-# How to deploy HCL Domino REST API to HCL Notes Client
+# Deployment to HCL Notes Client
+
+<!-- prettier-ignore -->
+!!! danger "**Domino REST API on Notes Client**"
+    The HCL Domino REST API is designed for use with the HCL Domino server. The ability to deploy it to a Notes client on Windows or macOS is provided for your convenience so you can evaluate and experiment. You can explore the API without setting up an HCL Domino server.<br />
+    **This setup is not supported for any production use**. HCL Support will not entertain tickets for it.
 
 ## About this task
 
 The procedure guides you to try the Domino REST API with a sample demo Notes database with your existing HCL Notes Desktop Client.
-
-<!-- prettier-ignore -->
-!!! note
-    **Domino REST API on Notes Client**
-    The HCL Domino REST API is designed for use with the HCL Domino server. The ability to deploy it to a Notes client on Windows or macOS is provided for your convenience so you can evaluate and experiment. You can explore the API without setting up an HCL Domino server.<br />
-    **This setup is not supported for any production use**. HCL Support will not entertain tickets for it.
 
 ## Prerequisites
 
@@ -67,25 +66,25 @@ The procedure guides you to try the Domino REST API with a sample demo Notes dat
 
     > `chmod 755 runrestapi.sh`
 
-    !!! note
-
+<!-- prettier-ignore -->
+    !!! note "Beware of the JRE"
         For different versions of Notes, the Notes JRE path in the script may vary. You may need to change the path in the script.
 
 6.  When prompted for a password for your notes.id file in the Java window, enter your password in that Java window. If any error occurs, stop the running process (kill -9 for Mac) and restart the script. For more information, see [Troubleshooting guide](../references/troubleshooting.md).
 
-    !!! tip
-
+<!-- prettier-ignore -->
+    !!! tip "Password Prompt"
         To avoid being prompted for a password each time you start the Domino REST API, go to **File > Security > User Security** in your HCL Notes Client, and then select the *Don't prompt for a password from other Notes-based programs** checkbox in the *Security Basics* tab.
 
-    ![OpenAPI](../assets/images/NotesSecurityPasswordOption.png){: .scale-img-seventy-five-percent }
+    ![OpenAPI](../../assets/images/NotesSecurityPasswordOption.png){: .scale-img-seventy-five-percent }
 
 ## Expected result
 
 If everything is set up correctly, you should get the following message in the terminal console output:
 
-    ```text
-            *** HCL Domino REST API open for business ***
-    ```
+```text
+   *** HCL Domino REST API open for business ***
+```
 
 ## Additional details
 
