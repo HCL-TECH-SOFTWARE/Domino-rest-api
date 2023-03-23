@@ -1,11 +1,10 @@
-title: Tutorial
+title: Tutorials
 
 nav:
   - index.md
+  - quickstart.md
   - Installation and configuration: installconfig
   - adminui.md
   - postmancurl.md
   - swagger.md
-  - odata.md
-  - quickstartindex.md
-  
+  - OData: odata
