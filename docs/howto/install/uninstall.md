@@ -1,4 +1,4 @@
-# How to remove Domino REST API from Domino server or Notes Client
+# Remove Domino REST API from Domino server or Notes Client
 
 ## About this task
 

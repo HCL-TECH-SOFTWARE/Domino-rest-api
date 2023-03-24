@@ -44,4 +44,4 @@ If you are new to Domino, see the [New Domino Database](https://opensource.hclte
 
 ### OData
 
-The [how-to guide](../tutorial/odata/excel.md) demonstrates how to export data from Notes databases to [OData](https://www.odata.org) using Domino REST API.
+The [tutorial](../tutorial/odata/index.md) demonstrates how to export data from Notes databases to [OData](https://www.odata.org) using Domino REST API.

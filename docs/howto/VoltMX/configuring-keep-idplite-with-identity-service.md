@@ -1,4 +1,4 @@
-# How to configure Domino REST API IDP with Volt MX Foundry Identity Service
+# Configure Domino REST API IDP with Volt MX Foundry Identity Service
 
 --8<-- "keepmngtURLcaution1.md"
 

@@ -1,4 +1,4 @@
-# How to configure Domino REST API as SAML identity provider
+# Configure Domino REST API as SAML identity provider
 
 To be able to access encrypted resources, like emails or confidential documents in application databases, Domino REST API needs to be configured as a SAML identity provider.
 

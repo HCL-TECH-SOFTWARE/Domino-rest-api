@@ -1,4 +1,4 @@
-# How to configure nginx as HTTPS proxy - single domain
+# Configure nginx as HTTPS proxy - single domain
 
 --8<-- "keepmngtURLcaution1.md"
 

@@ -79,7 +79,7 @@
 ### Resolved issues
 
 - The Domino restapi task may not successfully start on Linux Domino.
-- A document is prevented from being created or updated if one of it's multi-value fields had empty value(s).
+- A document was prevented from being created or updated if one of it's multi-value fields had empty value(s).
 - Fixed multiple issues around odata.
 
 ### Others
@@ -103,7 +103,7 @@ You will find that there are still references to the KEEP branding throughout th
 
 | Examples of pages in the documentation still referring to KEEP                                                                       |
 | ------------------------------------------------------------------------------------------------------------------------------------ |
-| [Enabling a database](../howto/enablingadb.md)                                                                                       |
+| [Enabling a database](../howto/database/enablingadb.md)                                                                                       |
 | [The Domino REST API CLI](../references/usingdominorestapi/keepcli.md#keepcmd)                                                       |
 | [Running Agents: keepAgents.nsf](../topicguides/agents.md#running-agents)                                                            |
 | [Parameters - AsyncAgentScheduler verticle: keepAgents.nsf](../references/quickreference/parameters.md#asyncagentscheduler-verticle) |

@@ -1,4 +1,4 @@
-# How to configure Keycloak
+# Configure Keycloak
 
 --8<-- "keepmngtURLcaution1.md"
 

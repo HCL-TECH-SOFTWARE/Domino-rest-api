@@ -16,13 +16,13 @@
     {
       "title": "System Requirements",
       "old": "https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789",
-      "new": "references/"
+      "new": "references/index.html"
     },
 
     {
       "title": "Quick start",
       "old": "quickstart",
-      "new": "tutorial/quickstartindex.html"
+      "new": "tutorial/quickstart.html"
     },
 
     {
@@ -40,39 +40,21 @@
     {
       "title": "Planning your application",
       "old": "quickstart/planning.html",
-      "new": "references/usingdominorestapi/planning.html"
+      "new": "topicguides/planning.html"
     },
 
-    { "title": "Tutorial", "old": "tutorial", "new": "tutorial/" },
-
-    {
-      "title": "Using Admin UI",
-      "old": "tutorial/adminui.html",
-      "new": "tutorial/adminui.html"
-    },
-
-    {
-      "title": "Using Postman and curl",
-      "old": "tutorial/postmancurl.html",
-      "new": "tutorial/postmancurl.html"
-    },
-
-    {
-      "title": "SwaggerUI",
-      "old": "tutorial/swagger.html",
-      "new": "tutorial/swagger.html"
-    },
+    { "title": "Tutorial", "old": "tutorial", "new": "tutorial/index.html" },
 
     {
       "title": "OData",
       "old": "tutorial/odata.html",
-      "new": "tutorial/odata.html"
+      "new": "tutorial/odata/index.html"
     },
 
     {
       "title": "Installing & Configuring",
       "old": "installconfig",
-      "new": "tutorial/installconfig/"
+      "new": "tutorial/installconfig/index.html"
     },
 
     {
@@ -132,19 +114,13 @@
     {
       "title": "Client config",
       "old": "installconfig/configuration/notesclient.html",
-      "new": "howto/notesclient.html"
+      "new": "howto/install/notesclient.html"
     },
 
     {
       "title": "Parameters",
       "old": "installconfig/configuration/parameters.html",
       "new": "references/quickreference/parameters.html"
-    },
-
-    {
-      "title": "Logging",
-      "old": "installconfig/logging.html",
-      "new": "installconfig/logging.html"
     },
 
     {
@@ -162,7 +138,7 @@
     {
       "title": "Uninstalling",
       "old": "installconfig/installation/uninstall.html",
-      "new": "howto/uninstall.html"
+      "new": "howto/install/uninstall.html"
     },
 
     {
@@ -186,19 +162,19 @@
     {
       "title": "Configuring certificates",
       "old": "security/configuringCertificates.html",
-      "new": "howto/configuringCertificates.html"
+      "new": "howto/IdP/configuringCertificates.html"
     },
 
     {
       "title": "Configuring identity provider",
       "old": "security/configuringIdentityProvider.html",
-      "new": "howto/configuringIdentityProvider.html"
+      "new": "howto/IdP/configuringIdentityProvider.html"
     },
 
     {
       "title": "Configuring Keycloak",
       "old": "security/configuringKeycloak.html",
-      "new": "howto/configuringKeycloak.html"
+      "new": "howto/IdP/configuringKeycloak.html"
     },
 
     {
@@ -222,7 +198,7 @@
     {
       "title": "Domino REST API SAML configuration",
       "old": "security/keepsaml.html",
-      "new": "howto/keepsaml.html"
+      "new": "howto/IdP/keepsaml.html"
     },
 
     {
@@ -234,13 +210,13 @@
     {
       "title": "HTTPS - multi domain",
       "old": "security/httpsproxy.html",
-      "new": "howto/httpsproxy.html"
+      "new": "howto/web/httpsproxy.html"
     },
 
     {
       "title": "HTTPS - single domain",
       "old": "security/httpsproxy2.html",
-      "new": "howto/httpsproxy2.html"
+      "new": "howto/web/httpsproxy2.html"
     },
 
     {
@@ -252,13 +228,13 @@
     {
       "title": "Domino REST API IdP & Foundry",
       "old": "security/configuring-keep-idplite-with-identity-service.html",
-      "new": "howto/configuring-keep-idplite-with-identity-service.html"
+      "new": "howto/VoltMX/configuring-keep-idplite-with-identity-service.html"
     },
 
     {
       "title": "Using the API",
       "old": "usingkeep",
-      "new": "references/usingdominorestapi/usingkeepindex.html"
+      "new": "references/usingdominorestapi/index.html"
     },
 
     {
@@ -276,7 +252,7 @@
     {
       "title": "Enabling a Database",
       "old": "usingkeep/enablingadb.html",
-      "new": "howto/enablingadb.html"
+      "new": "howto/database/enablingadb.html"
     },
 
     {
@@ -318,7 +294,7 @@
     {
       "title": "Domino data with Salesforce",
       "old": "usingkeep/salesforce.html",
-      "new": "references/usingdominorestapi/salesforce.html"
+      "new": "tutorial/odata/salesforce.html"
     },
 
     {
@@ -372,7 +348,7 @@
     {
       "title": "Scopes",
       "old": "howkeepworks/scopes.html",
-      "new": "topicguides/scopes.html"
+      "new": "reference/usingdominorestapi/scopes.html"
     },
 
     {
@@ -381,13 +357,7 @@
       "new": "topicguides/dominojnx.html"
     },
 
-    { "title": "References", "old": "references", "new": "references/" },
-
-    {
-      "title": "Change Log",
-      "old": "references/changelog.html",
-      "new": "references/changelog.html"
-    },
+    { "title": "References", "old": "references", "new": "references/index.html" },
 
     {
       "title": "Glossary",
@@ -402,33 +372,9 @@
     },
 
     {
-      "title": "Downloads",
-      "old": "references/downloads.html",
-      "new": "references/downloads.html"
-    },
-
-    {
       "title": "Usertools",
       "old": "references/usertools",
-      "new": "references/usertoolsindex.html"
-    },
-
-    {
-      "title": "Swagger UI",
-      "old": "references/usertools/swagger.html",
-      "new": "references/usertools/swagger.html"
-    },
-
-    {
-      "title": "Postman",
-      "old": "references/usertools/postman.html",
-      "new": "references/usertools/postman.html"
-    },
-
-    {
-      "title": "curl",
-      "old": "references/usertools/curl.html",
-      "new": "references/usertools/curl.html"
+      "new": "references/usertools/index.html"
     }
   ]
 }

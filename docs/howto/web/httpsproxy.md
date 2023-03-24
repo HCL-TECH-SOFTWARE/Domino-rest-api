@@ -1,4 +1,4 @@
-# How to configure nginx as HTTPS proxy with subdomains
+# Configure nginx as HTTPS proxy with subdomains
 
 --8<-- "keepmngtURLcaution1.md"
 

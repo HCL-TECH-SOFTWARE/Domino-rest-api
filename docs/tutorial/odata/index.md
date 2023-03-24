@@ -7,7 +7,7 @@
 - Micrrosoft
   - MS Excel (Windows only)
   - MS PowerBI
-- [HCL VoltMX](https://opensource.hcltechsw.com/volt-mx-docs/index.html)
+- [HCL Volt MX](https://opensource.hcltechsw.com/volt-mx-docs/index.html)
 
 The Domino REST API allows Domino data to be exposed following the OData standard. These are the preparation steps required.
 

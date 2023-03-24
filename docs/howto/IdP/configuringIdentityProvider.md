@@ -1,4 +1,4 @@
-# How to configure an identity provider
+# Configure an identity provider
 
 --8<-- "keepmngtURLcaution1.md"
 
