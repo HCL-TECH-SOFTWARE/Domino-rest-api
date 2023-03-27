@@ -18,6 +18,5 @@ The `odata` mode lets you define the data that comes through our odata endpoints
 
 Needed for `/api/v1/raw` endpoint. The endpoint /api/v1/raw will only return data when the mode raw exists for the form requested exists and the user has the permission, expressed in the @formula of the raw mode definition. Typically you want to restrict raw access to admin and support users.
 
-!!! note
-
-        `raw` mode returns all fields without translation or adjustment.
+!!! Note "Note"
+         `raw` mode returns all fields without translation or adjustment.
