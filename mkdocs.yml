@@ -1,8 +1,7 @@
 #Project Information
 site_name: HCL Domino REST API Documentation
 site_url: https://opensource.hcltechsw.com/Domino-rest-api/
-site_description: 
-  HCL Domino REST API, formerly Project KEEP, provides a secure REST API with access into HCL Domino servers and databases.
+site_description: HCL Domino REST API, formerly Project KEEP, provides a secure REST API with access into HCL Domino servers and databases.
 use_directory_urls: false
 # Theme Configuration
 theme:
@@ -47,7 +46,7 @@ copyright: >-
   <a href="#__consent">Change cookie settings</a>
 
 extra:
-  productversion: 1.0.2
+  productversion: 1.0.3
   flexnet_url: "https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/entitledDownloadFile.action?downloadPkgId=HCL%20Domino%20REST%20API%20Early%20Access%20Release"
   social:
     - icon: fontawesome/brands/github
@@ -82,5 +81,4 @@ plugins:
   - awesome-pages
   - section-index
   - tags
-  - git-revision-date-localized
   - markdownextradata: {}
