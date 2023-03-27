@@ -2,16 +2,17 @@
 
 This guide allows new users with working experience in HCL Notes and HCL Domino to quickly get started with Domino REST API.
 
-<!-- ## Downloading Domino REST API
+## Downloading Domino REST API
 
 Log in to [Flexnet](https://hclsoftware.flexnetoperations.com/) to and download Domino REST API.
 
 ## Let's connect
+
 Join us for questions, discussions, ideas and feedback over at [OpenNTF's Discord server](https://discord.com/invite/jmRHpDRnH4).
 
 ## What's New
 
-Check the [Changelog](../references/changelog) to learn what is new in Domino REST API V1.-->
+Check the [Changelog](../references/changelog) to learn what's new in Domino REST API
 
 ## The Domino REST API schema
 
@@ -25,7 +26,7 @@ You won't find the Domino REST API schema here. Samples and explanations, config
 - A **Domino REST API Application** is an [OAuth](https://oauth.net/) compatible definition of a `client_id` and a `client_secret` as well as the list of permitted scopes
 - A **scope** points to a **schema** that is contained in a database. A database can have [**multiple schemas**](../assets/images/KeepSchemaToApp.png) for different use cases and a **schema** can be pointed to by **more than one scope**
 
-Pick the name of your **scope** wisely. It is the external name you share with others and thus hard to change without breaking external apps
+Pick the name of your **scope** wisely. It's the external name you share with others and thus hard to change without breaking external apps
 {: .alert .alert-danger}
 
 ## Let's get started
@@ -82,12 +83,12 @@ Bring up a browser and verify that you can hit these endpoints:
 | [Management API](http://localhost:8889/)                                                              | 8889  | Access to the log and runtime info                                                                                                                                                                                                                                                                                                    | ![Server Info](../assets/images/ServerInfo.png)               |
 | [Prometheus Metrics](http://localhost:8890/)                                                          | 8890  | Performance info in Prometheus format. Protected with basic authentication (metrics/metrics)                                                                                                                                                                                                                                          | ![Performance Metris](../assets/images/PrometheusMetrics.png) |
 | [Health check endpoint](http://localhost:8886/)                                                       | 8886  | Server healthcheck endpoint as used by Kubernetes or Openshift                                                                                                                                                                                                                                                                        |
-| [Auth](http://localhost:8880/api/v1/auth)                                                             | 8880  | The endpoint, `[POST] http/s://${HOST}:8880/api/v1/auth`, is the default end point to exchange Domino web credentials for a JWT access token. For example, use the token in Postman request headers as a Bearer authentication header. You also can use your [own IdP](../howto/configuringIdentityProvider.md) to gain access tokens |
+| [Auth](http://localhost:8880/api/v1/auth)                                                             | 8880  | The endpoint, `[POST] http/s://${HOST}:8880/api/v1/auth`, is the default end point to exchange Domino web credentials for a JWT access token. For example, use the token in Postman request headers as a Bearer authentication header. You also can use your [own IdP](../howto/IdP/configuringIdentityProvider.md) to gain access tokens |
 
 ### What's next?
 
 Based on your interest, start by exploring the following sections of this documentation:
 
 - Dive deeper into [installation and configuration](../tutorial/installconfig/index.md)
-- Learn more about [using Domino REST API](../references/usingdominorestapi/usingkeepindex.md).
+- Learn more about [using Domino REST API](../references/usingdominorestapi/index.md).
 - Explore the internal [working of Domino REST API](../topicguides/howkeepworks.md) and know more about the [Barbican](../topicguides/barbican.md).

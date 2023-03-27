@@ -1,8 +1,7 @@
 nav:
-    - Welcome: index.md
-    - Tutorial: tutorial
-    - How-to guides: howto
-    - Topic guides: topicguides
-    - References: references
-  # - WIP: wip.md
-  # - Feedback: feedback.md
+  - Welcome: index.md
+  - Tutorials: tutorial
+  - How-to guides: howto
+  - Topic guides: topicguides
+  - References: references
+

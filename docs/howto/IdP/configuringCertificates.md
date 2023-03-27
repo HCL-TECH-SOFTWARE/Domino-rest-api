@@ -1,6 +1,6 @@
-# How to configure certificates
+# Configure certificates
 
---8<-- "keepmngtURLcaution.md"
+--8<-- "keepmngtURLcaution1.md"
 
 ## About this task
 

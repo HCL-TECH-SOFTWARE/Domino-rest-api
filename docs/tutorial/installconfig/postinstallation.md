@@ -6,7 +6,7 @@ Complete the tasks listed here to finalize a production worthy Domino REST API d
 
 A production environment must encrypt the communication between any client and the Domino REST API Server. We use many ports, learn how to secure them.
 
-## [Enable a database](../../howto/enablingadb.md)
+## [Enable a database](../../howto/database/enablingadb.md)
 
 To make a database available on the Domino REST API, create a Domino REST API `schema` and link it to a publicly visible `scope`. The schema defines what documents, based on the value of their `form` item, views, folders, and agents are available for a call via HTTP.
 

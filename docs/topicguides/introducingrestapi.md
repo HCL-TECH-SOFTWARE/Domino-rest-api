@@ -4,7 +4,7 @@
 
 The HCL Domino REST API provides a secure REST API with access to HCL Domino servers and databases.
 
-Domino REST API runs on Domino and/or your Notes Client on Windows/Linux/Mac. Someone with previous working experience of Notes and Domino can [quickly get started](../tutorial/quickstartindex.md) with Domino REST API.
+Domino REST API runs on Domino and/or your Notes Client on Windows/Linux/Mac. Someone with previous working experience of Notes and Domino can [quickly get started](../tutorial/quickstart.md) with Domino REST API.
 
 Domino REST API is based on industry standards, allows Notes and Domino to be accessed from other platforms, follows standard APIs, is extendable and uses the Notes and Domino security model. Domino REST API also puts the power in the hands of the developer to work using their preferred programming language.
 
@@ -35,7 +35,7 @@ For example, the data in a Domino database that could earlier be viewed only in 
 The Domino REST API are secure and standards-compliant, making them the right choice for your Notes and Domino ecosystem.
 
 <!-- prettier-ignore -->
-!!! caution ""
+!!! info 
     Much like the architectural keep that fortifies the castle, Project Domino REST API adds to the existing functionalities provided by Notes and Domino.
 
 <!-- prettier-ignore -->

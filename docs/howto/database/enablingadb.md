@@ -1,14 +1,14 @@
-# How to enable a database
+# Enable a database
 
 The Domino REST API does not expose any database to HTTP(S) by default. Enabling a database for REST access requires some configuration first:
 
-![From DB to schema to scope](../assets/images/KeepAPISteps.png)
+![From DB to schema to scope](../../assets/images/KeepAPISteps.png)
 
 1. **Create a Domino REST API Schema** in the NSF database to be enabled. A database can have one or more Domino REST API schemas for different access needs. A Domino REST API schema is stored as JSON file in the database's design file resources.
 
-![Domino Designer with Domino REST API](../assets/images/KeepSchemaFileResource1.png)
+![Domino Designer with Domino REST API](../../assets/images/KeepSchemaFileResource1.png)
 
-![Domino Designer with Domino REST API](../assets/images/KeepSchemaFileResource2.png)
+![Domino Designer with Domino REST API](../../assets/images/KeepSchemaFileResource2.png)
 
 A brave developer could use Domino designer to create or update one. The rest (pun intended) use the API or the **Schema and Scope Management UI** (colloquially known as the AdminUI).
 
@@ -22,19 +22,19 @@ The schema defines what views, folders, document and agents can be accessed thro
 
 Since the exact terminology is long winded and colloquially often no distinction is made between document/item and form/field, the short version is: The Domino REST API schema controls accesss to forms and fields.
 
-![From DB to schema to scope](../assets/images/KeepSchemaToApp.png)
+![From DB to schema to scope](../../assets/images/KeepSchemaToApp.png)
 
 While the AdminUI helps to generate a Domino REST API schema from an existing form, there no technical need for a form to be present, other than the possibility to open the Notes document in a Notes client too. Creating such a Schema requires direct post to the API.
 
 ## Schema components
 
 <!-- prettier-ignore -->
-!!! tip "**Note**"
-Please refer to the OpenAPI specification running on your server. It is the complete reference guide to the APIs available to your deployed version of the Domino REST API.
+!!! tip 
+    Refer to the OpenAPI specification running on your server. It's the complete reference guide to the APIs available to your deployed version of the Domino REST API.
 
-The high level entry contains a few properties and the collection of forms, views and agents made available:
+The high level entry contains a few properties and the collection of forms, views, and agents made available:
 
-![High Level schema components](../assets/images/SchemaTopLevel.png)
+![High Level schema components](../../assets/images/SchemaTopLevel.png)
 
 | Entry                       | Description                                                                              |
 | --------------------------- | ---------------------------------------------------------------------------------------- |
@@ -60,7 +60,7 @@ The high level entry contains a few properties and the collection of forms, view
 An array of entries describing name, alias(es), if any and UNID of the view design element.
 Views will show all columns contained
 
-![Schema component View](../assets/images/SchemaView.png)
+![Schema component View](../../assets/images/SchemaView.png)
 
 ### Agents
 
@@ -76,7 +76,7 @@ The form array has Form entries with 2 elements:
   - **odata** : The mode used when accessing Domino REST API's ODATA endpoints
   - **dql** : The mode used when executing a DQL query
 
-![Schema component View](../assets/images/SchemaFormMode.png)
+![Schema component View](../../assets/images/SchemaFormMode.png)
 
 | Entry               | Description                                                                                                    |
 | ------------------- | -------------------------------------------------------------------------------------------------------------- |
@@ -95,7 +95,7 @@ The avalability of access formulas follows typical Notes development pattern whe
 
 We follow the ideas proposed by [JSON schema](https://json-schema.org) with the intention to support most of the constrains available there at some point in time.
 
-![Domino REST API Fields](../assets/images/SchemaKeepFields.png)
+![Domino REST API Fields](../../assets/images/SchemaKeepFields.png)
 
 | Entry       | Description                                                        |
 | ----------- | ------------------------------------------------------------------ |
@@ -113,11 +113,11 @@ We follow the ideas proposed by [JSON schema](https://json-schema.org) with the 
 
 A typical Notes constuct are documents containing a group of multi value fields, where values with the same index position form a record. On the REST API that is an odd construction. A document might get returned like this:
 
-![Domino REST API Fields](../assets/images/SampleJsonNoFieldGroup.png)
+![Domino REST API Fields](../../assets/images/SampleJsonNoFieldGroup.png)
 
 By assigning the fields `Name`, `age` and `fruit` the **fieldGroup** `LostBoys`, Domino REST API will render them as records in an JSON Object. We opted for an object to ease processing and addressing since arrays might not have a guarantee of sequence. The result looks like this:
 
-![Domino REST API Fields](../assets/images/SampleJsonFieldGroup.png)
+![Domino REST API Fields](../../assets/images/SampleJsonFieldGroup.png)
 
 ### Form aliases
 
@@ -125,26 +125,26 @@ The form aliases object allows to specify additional values in the form item to 
 
 ### Sample Schema
 
-[![Domino REST API Fields](../assets/images/SchemaComplete.png)](../assets/images/SchemaComplete.png)
+[![Domino REST API Fields](../../assets/images/SchemaComplete.png)](../../assets/images/SchemaComplete.png)
 
 ## Enabling a database via Schema and Scope
 
-Follow the tutorial for instructions on how to do this using [AdminUI](../tutorial/adminui.md) or [Postman or curl](../tutorial/postmancurl.md).
+Follow the tutorial for instructions on how to do this using [AdminUI](../../tutorial/adminui.md) or [Postman or curl](../../tutorial/postmancurl.md).
 
-It is worth noting that all the actions that you can do using the Admin UI can also be done using Postman, curl or any similar tool.
+It's worth noting that all the actions that you can do using the Admin UI can also be done using Postman, curl, or any similar tool.
 Below are some examples to perform additional actions for database and application management, like adding a database, listing views, agents and forms, listing and adding application.
 
 A group of API requests is known as a collection. Each collection may have subfolders and multiple requests. Request URL or the endpoint is used to identify the link to where the API will communicate with.
 
 <!-- prettier-ignore -->
 !!! note
-The following examples require a `bearer` token, which is returned in the response of the `/api/v1/auth` api. Replace `$Bearer` in the examples below with that `bearer` token.
+    The following examples require a `bearer` token, which is returned in the response of the `/api/v1/auth` api. Replace `$Bearer` in the examples below with that `bearer` token.
 
 ### Add a database schema
 
 To add a database schema, run the following command. Find the applicable Request URL from the OpenAPI Specification document. Provide the body for `POST` request.
 
-![Adddatabase](../assets/images/adddatabaseschema.png)
+![Adddatabase](../../assets/images/adddatabaseschema.png)
 
 <details>
 <summary><b>cURL code snippet</b></summary>
@@ -486,7 +486,7 @@ curl --location --request POST 'localhost:8880/api/setup-v1/schema?nsfPath=Demo.
 
 To add a database scope, run the following command. Find the applicable Request URL from the OpenAPI Specification document. Provide the body for `POST` request.
 
-![Adddatabase](../assets/images/adddatabasescope.png)
+![Adddatabase](../../assets/images/adddatabasescope.png)
 
 <details>
 <summary><b>cURL code snippet</b></summary>
@@ -510,7 +510,7 @@ curl --location --request POST 'localhost:8880/api/setup-v1/admin/scope' \
 
 To list the views available through this scope, run the following command. Find the applicable Request URL from the OpenAPI Specification document.Execute. For `GET` request, body is not needed.
 
-![ListViews](../assets/images/listviews.png)
+![ListViews](../../assets/images/listviews.png)
 
 <details>
 <summary><b>cURL code snippet</b></summary>
@@ -527,7 +527,7 @@ curl --location --request GET 'localhost:8880/api/v1/lists?dataSource=demo' \
 
 Find the applicable Request URL from the OpenAPI Specification document. Execute. For `GET` request, body is not needed.
 
-![RetrieveView](../assets/images/retrieveview.png)
+![RetrieveView](../../assets/images/retrieveview.png)
 
 <details>
 <summary>cURL code snippet</summary>
@@ -543,9 +543,9 @@ curl --location -g --request GET 'localhost:8880/api/v1/lists/Customers?dataSour
 
 ### List available agents
 
-To list the agents, run the following command. Find the applicable Request URL from the OpenAPI Specification document.Execute. For `GET` request, body is not needed.
+To list the agents, run the following command. Find the applicable Request URL from the OpenAPI Specification document. Execute. For `GET` request, body is not needed.
 
-![ListAgents](../assets/images/listagents.png)
+![ListAgents](../../assets/images/listagents.png)
 
 <details>
 <summary>cURL code snippet</summary>
@@ -561,7 +561,7 @@ curl --location --request GET 'localhost:8880/api/setup-v1/design/agents?dataSou
 
 To list the forms available through this scope, run the following command. Find the applicable Request URL from the OpenAPI Specification document.Execute. For `GET` request, body is not needed.
 
-![ListForms](../assets/images/ListForms.png)
+![ListForms](../../assets/images/ListForms.png)
 
 <details>
 <summary>cURL code snippet</summary>
@@ -577,7 +577,7 @@ curl --location --request GET 'localhost:8880/api/setup-v1/design/forms?dataSour
 
 Find the applicable Request URL from the OpenAPI Specification document. In Postman, include the request body in JSON format for the `POST` request.
 
-![Create document](../assets/images/CreateDocument.png)
+![Create document](../../assets/images/CreateDocument.png)
 
 <details>
 <summary>cURL code snippet</summary>
@@ -600,24 +600,22 @@ curl --location --request POST 'localhost:8880/api/v1/document?dataSource=demo' 
 
 ### Retrieving a document
 
-Find the applicable Request URL from the OpenAPI Specification document.Execute. For `GET` request, body is not needed.
+Find the applicable Request URL from the OpenAPI Specification document.Execute. For `GET` request, body isn't needed.
 
 <!-- prettier-ignore -->
 !!! tip "Document UniversalID (unid)"
-This API requires the Document's UniversalID (`unid`). The `unid` is returned within the response from APIs such as the Create Document (from the previous example) as well as within the list of documents retrieved from a View (from a previous example as well).
+    This API requires the Document's UniversalID (`unid`). The `unid` is returned within the response from APIs such as the Create Document (from the previous example) as well as within the list of documents retrieved from a View (from a previous example as well).
 
-![RetrieveDoc](../assets/images/retrievedoc.png)
+![RetrieveDoc](../../assets/images/retrievedoc.png)
 
 <!-- prettier-ignore -->
 !!! tip "Postman Variables"
-In the image above `{{UNID_0}}` is a Postman Environment Variable that automatically got created if you ran the `Create Document` Postman test. This is a feature built into the Postman collection we provided.
-If you are not using Postman, replace that with the `unid` of the document you'd like to retrieve.
+    In the image above `{{UNID_0}}` is a Postman Environment Variable that automatically got created if you ran the `Create Document` Postman test. This is a feature built into the Postman collection we provided.
+    If you are not using Postman, replace that with the `unid` of the document you'd like to retrieve.
 
 <details>
 <summary>cURL code snippet</summary>
 
-<!-- prettier-ignore -->
-!!! tip "unid"
 Replace `$Unid` below with the unid you'd like to retrieve.
 
 ```bash
@@ -633,7 +631,7 @@ curl --location -g --request GET 'localhost:8880/api/v1/document/$Unid/default?d
 
 To live the available applications, run the following command. Find the applicable Request URL from the OpenAPI Specification document.Execute. For `GET` request, body is not needed.
 
-![ListApplications](../assets/images/ListApplications.png)
+![ListApplications](../../assets/images/ListApplications.png)
 
 <details>
 <summary>cURL code snippet</summary>
@@ -657,7 +655,7 @@ curl --location --request GET 'localhost:8880/api/setup-v1/admin/applications/al
 
 To add an application, run the following command. Find the applicable Request URL from the OpenAPI Specification document. Provide the body for Post request.
 
-![AddApplicationPostman](../assets/images/createapplication.PNG)
+![AddApplicationPostman](../../assets/images/createapplication.PNG)
 
 <details>
 <summary>cURL code snippet</summary>

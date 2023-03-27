@@ -4,8 +4,8 @@
 
 <!-- prettier-ignore -->
 !!! caution
-    - The Domino server is not available for macOS, so you can use the Domino REST API only with a Notes client.
-    - Notes client support is experimental and not supported for any production use. It is provided to ease evaluation of the Domino REST API and experimentation without the need to configure a Domino server.
+    - The Domino server isn't available for macOS, so you can use the Domino REST API only with a Notes client.
+    - Notes client support is experimental and not supported for any production use. It's provided to ease evaluation of the Domino REST API and experimentation without the need to configure a Domino server.
 
 To install, follow the example below:
 
@@ -74,3 +74,5 @@ If an exiting installation is found at the location you specified as the restapi
     If your Notes client has an issue when running `runrestapi.sh`, please downloand and install `openJ9` SDK and modify the `JAVA_HOME` variable in the `runrestapi.sh` to point to your `openJ9` directory.
 
 --8<-- "limitclientuse.md"
+
+For more information, see [Deploy HCL Domino REST API to HCL Notes Client](../../howto/install/notesclient.md) for additional steps required to use the Notes client.

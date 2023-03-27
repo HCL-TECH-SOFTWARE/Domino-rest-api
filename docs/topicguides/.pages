@@ -9,11 +9,12 @@ nav:
   - keepFlows.md
   - KeepFactory-and-caches.md
   - architecture.md
+  - planning.md
   - barbican.md
   - eventbus.md
   - httpHandler.md
-  - scopes.md
   - dominojnx.md
   - agents.md
   - securingKEEPEndpoints.md
   - usecases.md
+  #  - scopes.md

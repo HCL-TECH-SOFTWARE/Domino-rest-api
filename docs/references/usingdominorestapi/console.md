@@ -13,7 +13,9 @@ The **Domino Console** lets an administrator to send commands and listen to mess
         Make sure the **Management console** is secure. For more information, see [Functional Accounts](../../tutorial/installconfig/functionalUsers.md).
 
 1. Log in to the **Management console** (Port 8889).
-   ![Management console](../../assets/images/mngmntconsole.png) Please note, that credentials for the management console are not managed by the configured IdP, but are derived from the [configuration of functional accounts](../../tutorial/installconfig/functionalUsers.md)
+   ![Management console](../../assets/images/mngmntconsole.png)
+
+      Take note that credentials for the management console are not managed by the configured IdP, but are derived from the [configuration of functional accounts](../../tutorial/installconfig/functionalUsers.md). 
 
 2. Click **Console**. The **Domino Console** opens.
    ![Console page](../../assets/images/consolepage.png)

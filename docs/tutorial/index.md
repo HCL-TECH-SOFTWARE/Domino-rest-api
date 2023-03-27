@@ -1,6 +1,8 @@
-# Tutorial
+# Tutorials
 
-The tutorial intends to familiarize Domino REST API administrators and Notes or Web developers with the Domino REST API.
+--8<-- "feedback.md"
+
+The tutorials intends to familiarize Domino REST API administrators and Notes or Web developers with the Domino REST API.
 
 <!-- prettier-ignore -->
 !!! note "Important"
@@ -13,9 +15,9 @@ In this tutorial, we will use the database `Demo.nsf`. You can download it from 
 This tutorial includes multiple sections. You will see how to add a database to the Domino REST API configuration so that its content can be accessed by the Domino REST API. You will also perform basic actions like viewing the list of databases, checking the views and forms, creating a document, deleting a document and more. Each of these actions can be performed using the AdminUI or Postman/curl.
 
 <!-- prettier-ignore -->
-!!! tip
+!!! tip Quickstart for the busy professional
 
-    If you have working experience in HCL Notes and HCL Domino and wants to quickly get started with Domino REST API, you can directly go to [Quickstart](../tutorial/quickstartindex.md).
+    If you have working experience in HCL Notes and HCL Domino and wants to quickly get started with Domino REST API, you can directly go to [Quickstart](../tutorial/quickstart.md).
 
 ## More tutorials
 
@@ -42,4 +44,4 @@ If you are new to Domino, see the [New Domino Database](https://opensource.hclte
 
 ### OData
 
-The [tutorial](odata.md) demonstrates how to export data from Notes databases to [OData](https://www.odata.org) using Domino REST API.
+The [tutorial](../tutorial/odata/index.md) demonstrates how to export data from Notes databases to [OData](https://www.odata.org) using Domino REST API.

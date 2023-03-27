@@ -4,11 +4,11 @@ The configuration is assembled from JSON files and a few selected environment pa
 
 Parameters are **case sensitive**
 
-### Environment
+## Environment
 
 --8<-- "environmentparam.md"
 
-### Parameters in JSON files
+## Parameters in JSON files
 
 A configuration can have the following top-level properties. These properties are case-sensitive.
 
@@ -29,7 +29,7 @@ A configuration can have the following top-level properties. These properties ar
 | AllowLocalMailFile       | Boolean                                        | Set to `true` to allow local mail file                                                                                                                                                                                                     |
 | shutdownkey              | String                                         | Key to be passed to trigger a server shutdown. This is hashed out in the `/config` endpoint and only accessible by looking at the relevant config files. Note, this may have been overloaded in a config file in the `config.d` directory. |
 
-### Prometheus Parameters
+## Prometheus Parameters
 
 | Property         | Type    | Description                        |
 | :--------------- | :------ | :--------------------------------- |
@@ -37,7 +37,7 @@ A configuration can have the following top-level properties. These properties ar
 | enabled          | Boolean | true to enable metrics collection. |
 | publishQuantiles | Boolean | true to publish Qantiles.          |
 
-### Version parameters
+## Version parameters
 
 Versions has a named list of entries with two parameters:
 
@@ -48,13 +48,13 @@ Versions has a named list of entries with two parameters:
 
 The name of the entries must match the name used in versions of the RestAPI verticle (See [below](#restapi-verticle)).
 
-### Vert.x parameters
+## Vert.x parameters
 
 | Property | Type                                     | Description                   |
 | :------- | :--------------------------------------- | :---------------------------- |
 | metric   | [metricsParameters](#metrics-parameters) | Parameter for vert.x metrics. |
 
-## Metrics parameters
+### Metrics parameters
 
 Here is a JSON representation of the resource:
 
@@ -75,7 +75,7 @@ Here is a JSON representation of the resource:
 | labelMatches              | Array of Match   | List of rules for label matching.                                                                                                                                                           |
 | registryName              | String           | Name for the metrics registry, so that a new registry is created and associated with this name. Leave blank for default.                                                                    |
 
-### Verticle parameters
+## Verticle parameters
 
 Verticles defines a separate unit of work for particular tags. For the Rest API verticle, see [below](#restapi-verticle). The rest have a standard set of parameters:
 
@@ -91,7 +91,7 @@ Verticles defines a separate unit of work for particular tags. For the Rest API 
 
 The following are types of verticles with additional parameters:
 
-## AsyncAgentScheduler verticle
+### AsyncAgentScheduler verticle
 
 This is the verticle for running async agents - calls to `/run/agent` with `async` set to `true` in the payload. In the Notes client you can look at `KeepAgents.nsf` for the asynchronous agents that are running or have run. This properties for this verticle include the [above](#vertical-parameters), plus these:
 
@@ -100,7 +100,7 @@ This is the verticle for running async agents - calls to `/run/agent` with `asyn
 | agentDefaultMaxDurationSeconds | int  | Timeout for asynchronous agents, in seconds. A value of -1 allows all agents to run to completion without timeout. |
 | logFrequencyMs                 | int  | Frequency to log messages of running async agents to the console.                                                  |
 
-## RestAPI verticle
+### RestAPI verticle
 
 This is the verticle for managing WebHandlers. `worker`, `threadPoolName`, `threadPoolSize`, `className` and `active` parameters are as for the other verticles. This verticle also has a `versions` parameter. This maps to the top-level `versions` parameter and has the following properties:
 
@@ -113,13 +113,13 @@ This is the verticle for managing WebHandlers. `worker`, `threadPoolName`, `thre
 | package         | String | Package in which to find the WebHandlers for this version.                                                                                                                                                                                                                         |
 | route           | String | URL path for all OpenAPI endpoints for this spec.                                                                                                                                                                                                                                  |
 
-### Remarks
+## Remarks
 
-## Named elements vs. arrays
+### Named elements vs. arrays
 
 All configuration entries are **named** entries and not arrays, since named entries can be merged in the configuration while arrays can only be overwritten.
 
-## Deactivation of entries
+### Deactivation of entries
 
 The `config.json` in the Jar has the entry for the `setup` API as:
 
@@ -155,6 +155,6 @@ the resulting configuration available to Domino REST API is:
 
 In summary, the `setup` API is not loaded. This is the mechanism to disable default components without having to update the Jar.
 
-## Overwriting the values
+### Overwriting the values
 
 All values can be [over written](https://vertx.io/docs/vertx-config/java/#_overloading_rules) by entries in the `keepconfig.d` located in your Notes/Domino Data directory. If this directory does not exist, create it. The structure needs to be the same as in the default file, but only needs the entries you want to change.

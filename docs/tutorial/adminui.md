@@ -36,12 +36,12 @@ Click **Database Management - Rest API** in the landing page. This opens the **S
 
 1. In the **Schema Management** page, click **Add Schema**. This opens a menu as shown below:
 
-   ![Add Schema Menu](../assets/images/AddNewSchema.png)
+      ![Add Schema Menu](../assets/images/AddNewSchema.png)
 
 2. Under **Available Databases**, select `Demo.nsf`.
 3. Under **Add New Schema**, fill up the form and then click **Add**.
 
-![Configure New Schema](../assets/images/ConfigureNewSchema.png)
+      ![Configure New Schema](../assets/images/ConfigureNewSchema.png)
 
 This creates a schema that defines what views, folders, document, and agents can be accessed through the Domino REST API.
 
@@ -56,16 +56,16 @@ To set up a scope:
 1. Go back to the landing page by clicking **Overview**.
 2. Click **Database Management - Activation**. This opens the **Scope Management** page.
 
-   ![Scope Management Page](../assets/images/ScopeManagement.png)
+      ![Scope Management Page](../assets/images/ScopeManagement.png)
 
 3. Click **Add Scope**. This opens a menu as shown below:
 
-   ![Add scope Menu](../assets/images/AddNewScope.png)
+      ![Add scope Menu](../assets/images/AddNewScope.png)
 
 4. Under **Available Schema**, click `Demo.nsf`. This shows a list of schemas that uses `Demo.nsf` as a database.
 5. Select the schema you created earlier, and then fill out the form in **Add New Scope**.
 
-   ![Configure New Scope](../assets/images/ConfigureNewScope.png)
+      ![Configure New Scope](../assets/images/ConfigureNewScope.png)
 
 6. Click **Add**. This creates a scope.
 
@@ -83,7 +83,7 @@ This page allows you to set various configurations to your schema.
 
 1. Click **Database Forms** from the menu bar. This lists all the forms available for the schema.
 
-   ![List Forms](../assets/images/ListOfForms.png)
+      ![List Forms](../assets/images/ListOfForms.png)
 
 2. From the list of **Unconfigured Forms**, click a form to configure.
 3. In the **Configure** dialog, click **Yes** to configure the form with default settings.
@@ -94,7 +94,7 @@ The selected form is now listed under **Configured Forms**.
 
 1. Select the form to load the **Access Mode** page for the form.
 
-   ![Access Mode](../assets/images/AccessMode.png)
+      ![Access Mode](../assets/images/AccessMode.png)
 
 2. Under **Show fields from**, which shows the fields that can be added to the form, hover over a field item and click the **+** icon. This adds the field in the form. Repeat this for all.
 3. Click **Save**.
@@ -103,7 +103,7 @@ The selected form is now listed under **Configured Forms**.
 
 1. Click **Database Views** from the menu bar. This lists all the views for the selected database.
 
-   ![List Views](../assets/images/ListOfViews.png)
+      ![List Views](../assets/images/ListOfViews.png)
 
 2. Click a view to activate. This moves the selected view under **Activated Views**.
 3. Click **Save**.
@@ -116,7 +116,7 @@ The selected form is now listed under **Configured Forms**.
 
 1. Click **Database Agents** from the menu bar. This lists all the agents for the selected database.
 
-   ![List Agents](../assets/images/ListOfAgents.png)
+      ![List Agents](../assets/images/ListOfAgents.png)
 
 2. Click an agent to activate. This moves the selected agent under **Activated Agents**.
 3. Click **Save**.
