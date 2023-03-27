@@ -85,3 +85,32 @@ An SPA (Single Page App) or a mobile client can't keep a client secret. For thos
 ![Keycloak Application scope](../../assets/images/Keycloak-08d.png)
 
 It is **SECURITY** so learn about [Keycloak](https://www.keycloak.org/guides#getting-started/)!
+
+## Configure the Domino REST API
+
+Full explanation can be [found here](./configuringIdentityProvider.md), the short version:
+
+- Create a JSON file in `keepconfig.d` to contain the Keycloak related information
+- Restart the REST API
+
+```json
+{
+  "jwt": {
+    "Trantor": {
+      "providerUrl": "https://trantor.keycloak.yours/auth/realms/Trantor"
+    }
+  }
+}
+```
+
+where:
+
+| key         | explanation                                                                                                                   |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| jwt         | Indicates that the config belongs to JWT                                                                                      |
+| Trantor     | The sample Keycloak realm name. It must be unique in the jwt key. Replace it with your choosen realm                          |
+| providerUrl | Points to Keycloak's endpoint with the public key. Note that the last segment is the realm name. The string is case sensitive |
+
+!!! note
+
+    Keycloak's `providerUrl` is different from the general IdP practise to use `/.well-known/openid-configuration`, mainly since Keycloak can handle multiple realms, the well-known approach can't handle. Hence you need ro use `/auth/realms/[RealmName]`

@@ -107,11 +107,32 @@ The JSON file looks like this:
 
 wherein:
 
-- `disableJwtExpiryCheck`: By setting the value to `false`, this ensures enforcement of JWT expiration (default is `true`).
+- `disableJwtExpiryCheck`: By setting the value to `true`, the enforcement of JWT expiration can be disabled. **DO NOT** do this on a production system (default is `false`).
 - `jwt`: Entry is related to JWT authorization.
 - `oicd`: The name you give your IdP. It could be `Rumpelstielzchen` but needs to be unique on your server.
 - `active`: True/false.
 - `algorithm`: Currently supported: `RS256`.
-- `keyFile`: Path to public key file, either relative to `keepconfig.d`or an absolute path.
+- `keyFile`: Path to public key file (PEM format), either relative to `keepconfig.d`or an absolute path.
 
 Domino REST API supports more than one IdP, distinguished by the name `oicd` in the example. Access checking takes longer the more identity providers you configure since Domino REST API checks every provider's key until it finds a match.
+
+## Obtaining the public key directly from the IdP
+
+TO ease configuration and simplify key rollover, the public key for JWT verification can be directly obtained from the key server. You are responsible to only use trusted connections.
+
+```json
+{
+  "disableJwtExpiryCheck": false,
+  "jwt": {
+    "somother": {
+      "active": true,
+      "providerUrl": "https://someidp.your.domain"
+    }
+  }
+```
+
+The Domino REST API will extend this URL to `https://someidp.your.domain/.well-known/openid-configuration` and check for a JSON return containing the `jwks_uri` key. When your IdP doesn't use the `.well-known` approach (e.g. [Keycloak](./configuringKeycloak.md)), you need to directly point to they key URL.
+
+!!! note
+
+    Keycloak's `providerUrl` is different from the general IdP practise to use `/.well-known/openid-configuration`, mainly since Keycloak can handle multiple realms, the well-known approach can't handle. Hence you need ro use `/auth/realms/[RealmName]`
