@@ -1,3 +1,10 @@
-!!! success "Your input matters!"
+<!-- prettier-ignore -->
+!!! danger "We really like to hear from you!"
+    Your opinion matters. Let us know all your
 
-    We would like to here from you. If you have questions, topics for discussion, ideas to share, or feedback, reach us through the [OpenNTF Discord channel](https://discord.com/invite/jmRHpDRnH4).
+    - questions
+    - discussions
+    - ideas
+    - feedback
+
+    join the [OpenNTF Discord channel](https://discord.com/invite/jmRHpDRnH4).

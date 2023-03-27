@@ -30,8 +30,6 @@ The HCL Domino REST API documentation is based on the [Diátaxis framework](http
 
 **[References](references/index.md)** - Technical references and descriptions on using HCL Domino REST API
 
----
-
 ## Let's connect
 
 --8<-- "feedback.md"
