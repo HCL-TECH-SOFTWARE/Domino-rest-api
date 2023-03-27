@@ -31,7 +31,7 @@ These free for all capabilities are not very suitable to be exposed in an API. A
 
 ## Who are you? It depends
 
-Domino provides its own source of identity, the Domino directory. However this is not the only option in use in customer environments. Furthermore, applications need to access data **on your behalf**. To accommodate this Domino REST API uses [JWT](https://jwt.io) tokens, defined [scopes](../topicguides/scopes.md) and an [OAuth 2.0](https://oauth.net/2/) compliant authorization service:
+Domino provides its own source of identity, the Domino directory. However this is not the only option in use in customer environments. Furthermore, applications need to access data **on your behalf**. To accommodate this Domino REST API uses [JWT](https://jwt.io) tokens, defined [scopes](../references/usingdominorestapi/scopes.md) and an [OAuth 2.0](https://oauth.net/2/) compliant authorization service:
 
 - Authorization is provided using a JWT token defining permitted scope and user identity
 - Direct login is provided for users, it can be deactivated
@@ -51,7 +51,7 @@ Domino provides its own source of identity, the Domino directory. However this i
 - Each schema in an NSF database can be mapped to one or more scopes in the directory.
 - The scope is the name used in `?dataSource=` as public access name. You shouldn't change scope names after they get used. You however can change which schema they map to any time.
 - Each scope can be mapped to **one** schema at a time.
-- Each oauth app can store multiple scopes it wants to access. Created by admin, not by the calling application.
+- Each OAuth app can store multiple scopes it wants to access. Created by admin, not by the calling application.
 - In the OAuth cycle, if an application requests an undefined scope or an unknown callback, the request gets denied.
 
 ## RichText

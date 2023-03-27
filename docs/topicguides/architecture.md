@@ -167,4 +167,4 @@ To familiarize yourself with Domino REST API's functionality, you should read th
 - [OpenAPI specification](https://swagger.io/specification/)
 - [The EventBus](eventbus.md)
 - [The Barbican](barbican.md)
-- [OData](../tutorial/odata.md)
+- [OData](../tutorial/odata/excel.md)

@@ -1,6 +1,6 @@
-# How to use external names in schema definitions
+# Use external names in schema definitions
 
-The external name allows you to specify the name of the matching configured forms used in the KEEP service URL. The **customer** is one of the configured forms which enables us to deliver the same data using multiple cases from different clients and schemas. If no other schema mode is identified, the data will be sent and received using the default mode.
+The external name allows you to specify the name of the matching configured forms used in the KEEP service URL. The **customer** is one of the configured forms that can deliver the same data using multiple cases from different clients and schemas. If no other schema mode is identified, the data will be sent and received using the default mode.
 
 ## About this task
 
@@ -41,13 +41,13 @@ The procedures guide you on using external names in schema definitions and in te
 
 The image below is the **default** mode.
 
-![Default External Name](../assets/images/SchemaExternalname1.png)
+![Default External Name](../../assets/images/SchemaExternalname1.png)
 
 The service UI will return the field names you put in the new test mode.
 
 The image below is the **test** mode.
 
-![test External Name](../assets/images/SchemaExternalname2.png)
+![test External Name](../../assets/images/SchemaExternalname2.png)
 
 ## How to test external names result in Postman
 
@@ -67,7 +67,7 @@ The image below is the **test** mode.
 
       > {{HOST}}/document/{{UNID_0}}?dataSource=demo&<mark style="background-color: #FFFF00">mode=test</mark>&meta=false
 
-It will retrieve the same data result but a different field name translation. The same thing happens if you want to edit the data. It will be delivered to the field name of a different schema mode.
+It retrieves the same data result but a different field name translation. The same thing happens if you want to edit the data. It's delivered to the field name of a different schema mode.
 
 ### Expected Result
 

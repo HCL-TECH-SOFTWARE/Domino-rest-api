@@ -21,4 +21,4 @@ A scope doesn't **open** access to a resource; that's the job of the database AC
 Besides the default scopes of `MAIL`, `$DATA` and `$DECRYPT`, any of the database aliases can be used as a scope term.
 This allows an IdP to ask a user for tailored permissions in an OICD flow to limit exact access required instead of having the full user spectrum.
 
-For more information, see [Scope](../topicguides/understanding.md#databases-schemas-and-scopes).
+For more information, see [Scope](../../topicguides/understanding.md#databases-schemas-and-scopes).

@@ -4,6 +4,8 @@ nav:
   - index.md
   - quickstart.md
   - Installation and configuration: installconfig
+  - Domino ToDo Database tutorial: https://opensource.hcltechsw.com/domino-keep-tutorials/pages/todo/index
+  - New Domino Database tutorial: https://opensource.hcltechsw.com/domino-keep-tutorials/pages/domino-new/index
   - adminui.md
   - postmancurl.md
   - swagger.md

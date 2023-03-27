@@ -1,5 +1,7 @@
 # Tutorials
 
+--8<-- "feedback.md"
+
 The tutorials intends to familiarize Domino REST API administrators and Notes or Web developers with the Domino REST API.
 
 <!-- prettier-ignore -->
@@ -15,7 +17,7 @@ This tutorial includes multiple sections. You will see how to add a database to 
 <!-- prettier-ignore -->
 !!! tip Quickstart for the busy professional
 
-    If you have working experience in HCL Notes and HCL Domino and wants to quickly get started with Domino REST API, you can directly go to [Quickstart](../tutorial/quickstartindex.md).
+    If you have working experience in HCL Notes and HCL Domino and wants to quickly get started with Domino REST API, you can directly go to [Quickstart](../tutorial/quickstart.md).
 
 ## More tutorials
 
@@ -42,4 +44,4 @@ If you are new to Domino, see the [New Domino Database](https://opensource.hclte
 
 ### OData
 
-The [tutorial](odata.md) demonstrates how to export data from Notes databases to [OData](https://www.odata.org) using Domino REST API.
+The [tutorial](../tutorial/odata/index.md) demonstrates how to export data from Notes databases to [OData](https://www.odata.org) using Domino REST API.

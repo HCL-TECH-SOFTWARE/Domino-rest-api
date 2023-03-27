@@ -8,7 +8,7 @@
 
 ### Define RichText
 
-Any field you want to access in Domino REST API needs to be defined [in a schema](../../howto/enablingadb.md), using the correct data format.
+Any field you want to access in Domino REST API needs to be defined [in a schema](../../howto/database/enablingadb.md), using the correct data format.
 
 ```json
 {

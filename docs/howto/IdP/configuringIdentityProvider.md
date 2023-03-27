@@ -1,6 +1,6 @@
-# How to configure an identity provider
+# Configure an identity provider
 
---8<-- "keepmngtURLcaution.md"
+--8<-- "keepmngtURLcaution1.md"
 
 In its default configuration, Domino REST API uses Domino as its identity provider (IdP).
 This allows you to start evaluating and testing out of the box. To enable this, you need to have an HTTP password configured in Domino and good enough for internal use.
@@ -20,7 +20,7 @@ Domino REST API supports identity providers that can produce JWT access tokens. 
 - Tivoli Federate Identity Manager
 - Okta
 - Auth0
-- [Roll your own](../references/security/customIdp.md)
+- [Roll your own](../../references/security/customIdp.md)
 
 <!-- prettier-ignore -->
 !!! tip
@@ -30,7 +30,7 @@ Domino REST API supports identity providers that can produce JWT access tokens. 
 
 You can use the [official JWT site](https://jwt.io/) to decode and inspect the encoded token.
 
-![JWT Encode & Decode](../assets/images/JWTEncode&Decode.png)
+![JWT Encode & Decode](../../assets/images/JWTEncode&Decode.png)
 
 ```bash
 eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUaGUgRGVtbyBXaXp6YXJkIiwic3ViIjoiQ049RG9jdG9yIE5vdGVzL0
@@ -66,7 +66,7 @@ wherein:
 
 - `iss` stands for _Issuer_ and refers to the name of the IdP providing the claim.
 - `sub` stands for _Subject_ and refers to the full qualified X500 expanded Notes name, which starts with `CN=`.
-- `scope` refers to the databases and services that the user accesses. For more information, see [Scopes](../topicguides/scopes.md).
+- `scope` refers to the databases and services that the user accesses. For more information, see [Scopes](../../references/usingdominorestapi/scopes.md).
 - `iat` stands for _Issued at_ and refers to the epoch time of creation.
 - `exp` stands for _Expiry_ and refers to the epoch time of expiration. It must fit into `maxJwtDuration` number of minutes.
 - `aud` stands for _Audience_ and **MUST** have a value of `Domino` (case-sensitive).

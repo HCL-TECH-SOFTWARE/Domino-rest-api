@@ -104,3 +104,5 @@ The installer conducts a series of actions:
 - Create `runrestapi.cmd` in the Domino REST API directory.
 
 --8<-- "limitclientuse.md"
+
+For more information, see [Deploy HCL Domino REST API to HCL Notes Client](../../howto/install/notesclient.md) for additional steps required to use the Notes client.

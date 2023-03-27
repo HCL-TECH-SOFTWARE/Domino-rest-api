@@ -1,6 +1,6 @@
-# How to configure nginx as HTTPS proxy with subdomains
+# Configure nginx as HTTPS proxy with subdomains
 
---8<-- "keepmngtURLcaution.md"
+--8<-- "keepmngtURLcaution1.md"
 
 ## About this task
 
@@ -10,7 +10,7 @@ The provided information guides you in configuring nginx as an HTTPS proxy with 
 
 A typical deployment using a proxy looks like this:
 
-![Nginx Proxy](../assets/images/NginxProxy.png)
+![Nginx Proxy](../../assets/images/NginxProxy.png)
 
 Domino's own http runs on Port 81 and HTTPS is handled by the nginx proxy. The proxy also handles the assignment of subdomains to the correct ports. We will use three domains:
 
@@ -139,6 +139,6 @@ Once deployed, use [Certbot](https://certbot.eff.org/) to activate SSL. Remember
 
 The resulting system layout looks as follows. Domino REST API can also be installed together with Domino directly on the server (or virtual machine), but the diagram is the same.
 
-![Proxy system diagram](../assets/images/ProxySetup.png)
+![Proxy system diagram](../../assets/images/ProxySetup.png)
 
 The flow is the same as [single domain flow](./httpsproxy2.md). The key is the nginx configuration.
