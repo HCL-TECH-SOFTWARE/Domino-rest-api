@@ -30,6 +30,12 @@ Provides information related to the installation and configuration of Domino RES
 - [Metrics](usingdominorestapi/metrics.md)
 - [Using Web UI](usingdominorestapi/administrationui.md)
 - [Using Domino Console](usingdominorestapi/console.md)
+- [Reserved Form Modes](usingdominorestapi/modenames.md)
+
+
+## System requirements
+
+For more information, see [System requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789)
 <!-- - [Domino data with Salesforce](usingdominorestapi/salesforce.md) -->
 
 ## Security
