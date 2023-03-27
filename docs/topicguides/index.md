@@ -19,9 +19,6 @@ This section discusses and explains topics and concepts about HCL Domino REST AP
 - [Agent processing](agents.md)
 - [Securing Domino REST API endpoints](securingKEEPEndpoints.md)
 - [Use cases](usecases.md)
-<<<<<<< HEAD
 - [Reserved Form mode names](modenames.md)
 
-=======
 <!--- [Scopes](scopes.md)-->
->>>>>>> 07813debd9a3fc5ca92845d0dfa0c3a293b38ead
