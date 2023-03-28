@@ -17,6 +17,5 @@ This section discusses and explains topics and concepts about HCL Domino REST AP
 - [HTTP handler](httpHandler.md)
 - [DominoJNX](dominojnx.md)
 - [Agent processing](agents.md)
-- [Securing Domino REST API endpoints](securingKEEPEndpoints.md)
 - [Use cases](usecases.md)
 - [Reserved Form mode names](../references/usingdominorestapi/modenames.md)

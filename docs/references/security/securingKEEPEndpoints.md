@@ -6,21 +6,21 @@ title: Securing Domino REST API endpoints
 #nav_order: 6
 ---
 
---8<-- "keepmngtURLcaution.md"
+--8<-- "keepmngtURLcaution1.md"
 
 Domino REST API uses three endpoints:
 
-![Domino REST API Endpoints](../assets/images/PortUse.png)
+![Domino REST API Endpoints](../../assets/images/PortUse.png)
 
-Only one must be reachable by users (humans or servers). Configure your firewall accordingly and eventually use [a proxy](../howto/web/httpsproxy.md).
+Only one must be reachable by users (humans or servers). Configure your firewall accordingly and eventually use [a proxy](../../howto/web/httpsproxy.md).
 
-To be able to securely and efficiently deploy Domino REST API into a production environment, you must understand how Domino REST API configuration works. See the [configurating section](../references/security/securityindex.md) for a deeper dive.
+To be able to securely and efficiently deploy Domino REST API into a production environment, you must understand how Domino REST API configuration works. See the [configurating section](../security/securityindex.md) for a deeper dive.
 
 The Domino REST API configuration includes the Domino REST API binary directory, `keepconfig.d`, and environment variables.
 
-![The call hierarchy](../assets/images/ActualConfiguration.png)
+![The call hierarchy](../../assets/images/ActualConfiguration.png)
 
-Examples of the default security settings are here, [security.json](../references/security/securityjson.md) and the default configuration settings are here, [config.json](../references/security/configjson.md). Whenever you do a new Domino REST API install, these two files and the projectkeep.jar file are overwritten.
+Examples of the default security settings are here, [security.json](../security/securityjson.md) and the default configuration settings are here, [config.json](../security/configjson.md). Whenever you do a new Domino REST API install, these two files and the projectkeep.jar file are overwritten.
 
 We recommend that you keep your configuration changes in the `config.d` directory so that they persist when you reinstall or update your Domino REST API version.
 
@@ -41,7 +41,7 @@ The credentials for the management endpoint are **deliberately NOT** retrieved f
 
 - How to handle HTTPS (via proxy or let Domino REST API handle it):
 
-    - For configuring HTTPS via proxy, see the example under [HTTPS via Proxy](../howto/web/httpsproxy.md).
+    - For configuring HTTPS via proxy, see the example under [HTTPS via Proxy](../../howto/web/httpsproxy.md).
     - Domino REST API supports three different types of certificates: PEM, JKS, and PKS.
 
 - How to handle JWT authentication token:
@@ -50,5 +50,5 @@ The credentials for the management endpoint are **deliberately NOT** retrieved f
     - Multi-server built-in, where a multi-server environment reacts to the same JWT token.
     - External identify provider, for example, Active Directory, [Keycloak](https://www.keycloak.org/), etc.
 
-- Domino REST API can access encrypted resources when Domino's ID vault is deployed and the [KEEP SAML](../howto/IdP/keepsaml.md) configuration is set up correctly.
+- Domino REST API can access encrypted resources when Domino's ID vault is deployed and the [KEEP SAML](../../howto/IdP/keepsaml.md) configuration is set up correctly.
     - Details are still being ironed out on how to do this. This will be updated as soon as we have a solution.

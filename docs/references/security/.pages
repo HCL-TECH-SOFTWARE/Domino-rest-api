@@ -8,3 +8,4 @@ nav:
   - encryption.md
   - securityjson.md
   - customIdp.md
+  - securingKEEPEndpoints.md
