@@ -44,7 +44,8 @@ FOR /F "tokens=1,2 delims=:{}, " %%A IN ("%K_curlout%") DO (
     IF "%%~A"=="bearer" SET K_token=%%~B
 )
 IF "%K_token%"=="" GOTO loginfailed
-
+ECHO %K_token%
+ECHO.
 ECHO Login successful
 ECHO.
 ECHO token=%K_token%>%TEMP%\keep.login
@@ -78,6 +79,7 @@ REM ECHO Performing `curl --silent -X %K_httpcommand% --fail --show-error --inse
 curl --silent -X %K_httpcommand% --fail --show-error --insecure -H "Authorization: Bearer %K_token%" -H "Content-Type: application/json" %K_server%/%K_apipath%/%K_allbutfirstparm% >> %K_curloutfile%
 IF NOT EXIST %K_curloutfile% goto error_executing
 TYPE %K_curloutfile%
+ECHO.
 IF EXIST %K_curloutfile% DEL /Q %K_curloutfile%
 GOTO end
 
@@ -93,9 +95,10 @@ ECHO       "keep get" without parameters - returns list of APIs"
 ECHO       common APIs: v1,admin-v1,pim-v1,poi-v1,setup-v1
 ECHO       "keep get [api]/schema/[schema-json-fiel from keep get]" returns the OpenAPI spec for that API
 ECHO  e.g. keep get v1/schema/openapi.basis.json
-ECHO       to use a body in a request, use --data-raw and enclose your data in double quotes
-ECHO       for Windows, you must escape all commas (^^,) and quotes (\") in the json
-ECHO          example: --data-raw "{\"Form\":\"Customer\"^,\"First_Name\":\"Joe\"^,\"last_name\":\"Notesguy\"}"
+ECHO       to use a body in a request #1, use --data-binary "@pathToYourJsonFile"
+ECHO       to use a body in a request #2, use --data-raw and enclose your data in double quotes
+ECHO            for Windows, you must escape all commas (^^,) and quotes (\") in the json
+ECHO            example: --data-raw "{\"Form\":\"Customer\"^,\"First_Name\":\"Joe\"^,\"last_name\":\"Notesguy\"}"
 ECHO       using "| jq" after a command returns pretty printed JSON (jq installed separately)
 ECHO.
 GOTO end
