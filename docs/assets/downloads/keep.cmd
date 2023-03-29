@@ -38,7 +38,7 @@ ECHO.
 SET K_dataraw={\"username\":\"%K_uservar%\",\"password\":\"%K_passvar%\"}
 
 REM ECHO Performing 'curl --location --request POST %K_server%/api/v1/auth --header "Content-Type: application/json" --data-raw "%K_dataraw%"'
-FOR /F "delims=" %%i in ('curl --silent --location --request POST %K_server%/api/v1/auth --header "Content-Type: application/json" --data-raw "%K_dataraw%"') DO SET K_curlout=%%i 
+FOR /F "delims=" %%i in ('curl --silent --location --request POST %K_server%/api/v1/auth --header "Content-Type: application/json" --data-raw "%K_dataraw%"') DO SET K_curlout=%%i
 
 FOR /F "tokens=1,2 delims=:{}, " %%A IN ("%K_curlout%") DO (
     IF "%%~A"=="bearer" SET K_token=%%~B
@@ -71,8 +71,12 @@ FOR /F "usebackq delims=" %%p IN (`%K_ps3%`) DO SET K_httpcommand=%%p
 
 SET K_curloutfile=%TEMP%\keep.curlout
 IF EXIST %K_curloutfile% DEL /Q %K_curloutfile%
-REM ECHO Performing curl -X %K_httpcommand% --fail --insecure -H "Authorization: Bearer %K_token%" -H "Content-Type: application/json" %K_server%/%K_apipath%/%2
-FOR /F "delims=" %%i in ('curl -s -X %K_httpcommand% --fail --insecure -H "Authorization: Bearer %K_token%" -H "Content-Type: application/json" %K_server%/%K_apipath%/%2') DO ECHO %%i >> %K_curloutfile%
+
+FOR /F "tokens=1,*" %%a in ("%*") do set K_allbutfirstparm=%%b
+REM ECHO Performing `curl --silent -X %K_httpcommand% --fail --show-error --insecure -H "Authorization: Bearer %K_token%" -H "Content-Type: application/json" %K_server%/%K_apipath%/%K_allbutfirstparm%'
+
+curl --silent -X %K_httpcommand% --fail --show-error --insecure -H "Authorization: Bearer %K_token%" -H "Content-Type: application/json" %K_server%/%K_apipath%/%K_allbutfirstparm% >> %K_curloutfile%
+IF NOT EXIST %K_curloutfile% goto error_executing
 TYPE %K_curloutfile%
 IF EXIST %K_curloutfile% DEL /Q %K_curloutfile%
 GOTO end
@@ -89,6 +93,9 @@ ECHO       "keep get" without parameters - returns list of APIs"
 ECHO       common APIs: v1,admin-v1,pim-v1,poi-v1,setup-v1
 ECHO       "keep get [api]/schema/[schema-json-fiel from keep get]" returns the OpenAPI spec for that API
 ECHO  e.g. keep get v1/schema/openapi.basis.json
+ECHO       to use a body in a request, use --data-raw and enclose your data in double quotes
+ECHO       for Windows, you must escape all commas (^^,) and quotes (\") in the json
+ECHO          example: --data-raw "{\"Form\":\"Customer\"^,\"First_Name\":\"Joe\"^,\"last_name\":\"Notesguy\"}"
 ECHO       using "| jq" after a command returns pretty printed JSON (jq installed separately)
 ECHO.
 GOTO end
@@ -116,6 +123,12 @@ GOTO end
 :loginfailed
 ECHO.
 ECHO Failed to log in.
+ECHO.
+GOTO end
+
+:error_executing
+ECHO.
+ECHO Your command failed to execute
 ECHO.
 GOTO end
 
