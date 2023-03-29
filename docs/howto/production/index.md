@@ -10,4 +10,4 @@ Topics under development:
 - Disable modules
 - HTTPS
 - Config parameter
-- JWT multi server
+- [JWT multi server](jwtmultiserver.md)
