@@ -73,4 +73,4 @@ This creates the user "Doctor Notes" with the password `password` to access the 
 !!! tip
 
     **Don't leave default passwords in your system**.
-    When done with creating new salted passwords, delete `tempmanagement.json` and restart Domino REST API. Someone **will** try to use it.
+    When done with creating new salted passwords, securely back-up `tempmanagement.json` to prevent unauthorized access, and then restart Domino REST API. 

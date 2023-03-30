@@ -6,6 +6,13 @@ nav:
     - linux.md
     - mac.md
     - win.md
+    #- Post installation tasks:
     - postinstallation.md
+    #    - Securing ports: configuringPorts.md
+    #    - Enable a database: ../howto/database/enablingdb.html
+    #    - Configure JWT: /reference/whatisnew.html
+    #    - Sharing JWT between servers: ../references/security/encryption.html
+    #    - Configure apps: ../tutorial/adminui.html
+    #    - Setup functional accounts: functionalUsers.md 
     - functionalUsers.md
     - configuringPorts.md

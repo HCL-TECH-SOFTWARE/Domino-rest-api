@@ -2,7 +2,6 @@ title: Using Domino REST API
 
 nav:
   - index.md
-  - accesscontrol.md
   - keepcli.md
   - restapitask.md
   - roles.md

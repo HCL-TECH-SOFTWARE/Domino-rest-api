@@ -6,6 +6,20 @@
 !!! note "**System requirements**"
       Before performing the installation, make sure to check the [System requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789).
 
+### Download the Domino REST API
+
+1. Go to [HCL License and Download Portal](https://hclsoftware.flexnetoperations.com/).
+2. On the sign in page, enter your username and click **Next**. The **License & Download Portal** home page opens. 
+3. In the **Your Downloads** pane, scroll to find and then select **HCL Domino**. The **Download Packages** page opens. 
+4. On the **New Versions** tab, select the HCL Domino REST API version that you want to download.
+
+**OR**
+
+1. On the **License & Download Portal** home page, go to **Downloads** &rarr; **Search Downloads**.
+2. On the **Download Search** page, enter `HCL Domino REST API` in the **Search for** field, and then click **Search**.
+3. Select the HCL Domino REST API version that you want to download from the search result. 
+  
+
 [Download the Domino REST API](https://hclsoftware.flexnetoperations.com/)
 
 <!-- prettier-ignore -->
@@ -41,9 +55,10 @@ The installer requires a series of parameters:
 !!! tip
       Notes and Domino install a JVM on your computer. You can and should use it to install.
 
-### Post installation
+      - On Linux, `/opt/hcl/domino/notes/latest/linux/jvm/bin`
+      - On Windows, `<Notes installation directory>/jvm/bin` (example: `Program Files/HCL/Notes/jvm/bin`)
 
-After completing the installation of Domino REST API, make sure to complete the [Post Installation Tasks](../installconfig/postinstallation.md)
+      You can also verify the Java version by opening the command prompt, going to the installation location, and then typing `java -version`. 
 
 ### Explanation of parameters
 

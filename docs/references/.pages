@@ -4,10 +4,13 @@ nav:
   - index.md
   - What's new in Domino REST API: whatisnew.md
   - System requirements: https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789
+  - Installation and configuration: ../tutorial/installconfig/index.html
+  - accesscontrol.md
   - Using Domino REST API: usingdominorestapi
   - Security: security
   - User tools: usertools
   - troubleshooting.md
   - Quick reference: quickreference
   - downloads.md
+  - admincheatsheet.md
   #- changelog.md
