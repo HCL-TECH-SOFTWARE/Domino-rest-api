@@ -24,10 +24,12 @@ Domino REST API is preconfigured with settings that allow you to get started rig
       }
   ```
 5. Click **Save** in .json format.
+
 6. Restart Domino REST API on all servers with this new configuration.
 
 
 ## Understanding configuration
+
 The configuration follows the concept of an [Overlay File System](https://en.wikipedia.org/wiki/OverlayFS). The base configuration is retrieved from the installation directory or `jar` files.
 
 When jar files contain a resource `/config/config.json`, that configuration file is added to total configuration.
