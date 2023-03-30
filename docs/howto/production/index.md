@@ -7,7 +7,7 @@ This section intends to guide you in completing configuration goals and tasks in
 Topics under development:
 
 - Ports
-- Disable modules
+- [Disable modules](disablemodule.md)
 - HTTPS
 - [Config parameter](configparam.md)
 - [JWT multi server](jwtmultiserver.md)
