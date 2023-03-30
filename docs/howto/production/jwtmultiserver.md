@@ -2,7 +2,9 @@
    The API uses JWT Bearer tokens for verification, but because the access tokens come from different token servers, the validation of the tokens needs to be changed. 
 
 
-Procedure:
+## Procedure:
+
+
 1. Login into the Management console (Port 8889).
 
 2. Type a name you want to call this certificate into the "Certificate Name". No spaces or special characters.
