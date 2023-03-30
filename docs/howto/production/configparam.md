@@ -1,7 +1,5 @@
 # Configuration parameters
 
-Configuration & Security
-
 Domino REST API is preconfigured with settings that allow you to get started right away. However, you should familiarize yourself with all configuration parameters and security settings before you deploy into a production environment.
 
 ## Procedure
@@ -10,23 +8,23 @@ Domino REST API is preconfigured with settings that allow you to get started rig
 
     Make sure that the administration location can only be accessed from a network that can be accessed by a your system administrator.
 
-3. Go to the `keepconfig.d` and open the `config.json`. The default configuration settings are here, [config.json](/docs/references/security/configjson.md).
+3. **Go** to the `keepconfig.d` and open the `config.json`. The default configuration settings are here, [config.json](/docs/references/security/configjson.md).
 
-4. Copy only  that one you need to change your parameters.
+4. Copy only  that one you need to change your parameters from the `config.json`.
 
-Sample: 
-Place your measurements behind a firewall that only your metric server can access. This ensures that only authorized users can access the data. 
-If you don't use a metric server, the firewall should have its protection completely disabled.
+  Example: 
+  Place your measurements behind a firewall that only your metric server can access. This ensures that only authorized users can access the data. 
+  If you don't use a metric server, the firewall should have its protection completely disabled.
 
-Example:
-```
-  "metrics": {
-    "enabled": false,
-    "jvmMetricsEnabled": false
-    }
-```
-3. Click **Save** in .json format.
-4. Restart Domino REST API on all servers with this new configuration.
+
+  ```
+    "metrics": {
+      "enabled": false,
+      "jvmMetricsEnabled": false
+      }
+  ```
+5. Click **Save** in .json format.
+6. Restart Domino REST API on all servers with this new configuration.
 
 
 ## Understanding configuration
