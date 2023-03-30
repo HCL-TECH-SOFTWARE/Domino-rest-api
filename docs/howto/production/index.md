@@ -9,5 +9,5 @@ Topics under development:
 - Ports
 - Disable modules
 - HTTPS
-- Config parameter
+- [Config parameter](configparam.md)
 - [JWT multi server](jwtmultiserver.md)
