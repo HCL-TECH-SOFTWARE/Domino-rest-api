@@ -8,9 +8,9 @@ Domino REST API is preconfigured with settings that allow you to get started rig
 
     Make sure that the administration location can only be accessed from a network that can be accessed by a your system administrator.
 
-3. **Go** to the `keepconfig.d` and open the `config.json`. The default configuration settings are here, [config.json](/docs/references/security/configjson.md).
+2. **Go** to the `keepconfig.d` and open the `config.json`. The default configuration settings are here, [config.json](/docs/references/security/configjson.md).
 
-4. Copy only  that one you need to change your parameters from the `config.json`.
+3. Copy only  that one you need to change your parameters from the `config.json`.
 
   Example: 
   Place your measurements behind a firewall that only your metric server can access. This ensures that only authorized users can access the data. 
@@ -23,9 +23,9 @@ Domino REST API is preconfigured with settings that allow you to get started rig
       "jvmMetricsEnabled": false
       }
   ```
-5. Click **Save** in .json format.
+4. Click **Save** in .json format.
 
-6. Restart Domino REST API on all servers with this new configuration.
+5. Restart Domino REST API on all servers with this new configuration.
 
 
 ## Understanding configuration
