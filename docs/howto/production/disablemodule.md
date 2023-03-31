@@ -1,4 +1,4 @@
-# Disable and enable module
+# Disable and enable module in production
    If your specific configuration entry or references suggest that there are variables or function in the `config.json` file, you may be able to change them. 
 
 
