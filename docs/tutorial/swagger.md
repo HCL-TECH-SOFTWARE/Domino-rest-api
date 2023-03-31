@@ -1,6 +1,6 @@
 # OpenAPI UI (a.k.a. Swagger)
 
-This tutorial shows how to use the OpenAPI UI (a.k.a. Swagger) to create a document and to list views.
+This tutorial shows how to use the OpenAPI UI (a.k.a. Swagger) to create a document and to list views. For an introduction, see [Swagger UI](../references/usertools/swagger.md).
 
 The [SwaggerUI](https://github.com/swagger-api/swagger-ui) is an OpenSource component supported/maintained by [SmartBear](https://swagger.io) and packaged into a [WebJar](https://www.webjars.org) to render the collection of definitions that constitute the Domino REST API.
 

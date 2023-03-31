@@ -10,12 +10,12 @@ The **Domino Console** lets an administrator to send commands and listen to mess
 
 <!-- prettier-ignore -->
 !!! note
-        Make sure the **Management console** is secure. For more information, see [Functional Accounts](../../tutorial/installconfig/functionalUsers.md).
+        Make sure the **Management console** is secure. For more information, see [Functional Accounts](../functionalUsers.md).
 
 1. Log in to the **Management console** (Port 8889).
    ![Management console](../../assets/images/mngmntconsole.png)
 
-      Take note that credentials for the management console are not managed by the configured IdP, but are derived from the [configuration of functional accounts](../../tutorial/installconfig/functionalUsers.md). 
+      Take note that credentials for the management console are not managed by the configured IdP, but are derived from the [configuration of functional accounts](../functionalUsers.md). 
 
 2. Click **Console**. The **Domino Console** opens.
    ![Console page](../../assets/images/consolepage.png)
@@ -47,9 +47,3 @@ When the _Live_ feature is enabled, the command output shows the corresponding c
 1. On the **Domino Console** window, click **V** at the end of the **Enter command** text box. A **Command history** dialog opens and shows the list of previously entered commands.
 2. Select a command from the list shown in the **Command history** dialog to enter it in the **Enter command** text box.
 3. Press **Enter** or click **Send**.
-
-<!--### To disable the Live feature
-
-- On the **Console** window, clear the **Live** checkbox.
-
-The command output shows the `Live connection closed` and `web socket closed` messages. -->

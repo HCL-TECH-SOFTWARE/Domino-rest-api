@@ -20,8 +20,6 @@
 3. Select the HCL Domino REST API version that you want to download from the search result. 
   
 
-[Download the Domino REST API](https://hclsoftware.flexnetoperations.com/)
-
 <!-- prettier-ignore -->
 !!! tip
       If you downloaded the `Domino REST API Installer`, extract the `.tar.gz` file before installing.
@@ -126,6 +124,10 @@ This is similar to Domino's feature serving static files from its `domino/html` 
 
 Domino REST API is preconfigured with settings that allow you to get started right away. However, you should familiarize yourself with all [configuration parameters](../../references/quickreference/parameters.md) and [security](../../references/security/securityindex.md) settings before you deploy into a production environment.
 
+<!-- prettier-ignore -->
+!!!tip
+    Domino REST API honors all Domino access control mechanisms and doesn't allow anonymous access. For more information, see [Access Control](../../references/accesscontrol.md).
+
 ### Understanding configuration
 
 The configuration follows the concept of an [Overlay File System](https://en.wikipedia.org/wiki/OverlayFS). The base configuration is retrieved from the installation directory or `jar` files.
@@ -148,7 +150,7 @@ For more information, see [vert.x overloading rules](https://vertx.io/docs/vertx
 
 Given the files `config.json`, `a.json` and the environment variable `PORT=8564`, you get the result `result.json` as shown below:
 
-## config.json
+#### config.json
 
 ```json
 {
@@ -163,7 +165,7 @@ Given the files `config.json`, `a.json` and the environment variable `PORT=8564`
 }
 ```
 
-## a.json
+#### a.json
 
 ```json
 {
@@ -183,7 +185,7 @@ Given the files `config.json`, `a.json` and the environment variable `PORT=8564`
 
 Merge these 2 files and apply the environment variables.
 
-## result.json
+#### result.json
 
 ```json
 {
@@ -205,7 +207,7 @@ Merge these 2 files and apply the environment variables.
 
 The actual result can be inspected on the Domino REST API management API, like [on a local install](http://localhost:8889/config).
 
-### Important Notes
+### Important notes
 
 > JSON overlay doesn't allow you to **remove** JSON elements. So, most settings have an `active` parameter that
 > can be set to false in an overlay.

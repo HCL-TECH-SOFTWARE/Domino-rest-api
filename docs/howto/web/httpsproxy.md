@@ -6,6 +6,9 @@
 
 The provided information guides you in configuring nginx as an HTTPS proxy with subdomains.
 
+!!!tip
+    Know more about [Domino REST API and Proxy](../../topicguides/keepasproxy.md). 
+
 ## Configuring nginx as an HTTPS proxy with subdomains
 
 A typical deployment using a proxy looks like this:

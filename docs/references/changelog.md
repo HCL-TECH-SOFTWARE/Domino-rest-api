@@ -12,7 +12,7 @@ This page lists the changes in each release. For the latest version information,
 - Updated landing page
 - OpenAPI display now has dropdown showing all schemas
 - Updated RichText to MIME, RichText to Markdown rendering
-- [Functional accounts](../tutorial/installconfig/functionalUsers.md) are now stored in JSON file
+- [Functional accounts](functionalUsers.md) are now stored in JSON file
 
 ## 1.6 Beta EA
 

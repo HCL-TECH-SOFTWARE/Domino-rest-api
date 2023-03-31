@@ -16,6 +16,8 @@ Provides the minimum [system requirements for Domino REST API](https://support.h
 
 Provides information related to the [installation and configuration of Domino REST API](../tutorial/installconfig/index.md).
 
+- [Functional accounts](functionalUsers.md)
+
 ## Access control
 
 [Access control for various parts of the REST API](accesscontrol.md)

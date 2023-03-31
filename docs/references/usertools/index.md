@@ -2,6 +2,9 @@
 
 The table shows the tools you can use when dealing with REST APIs. Some tools are referenced in this documentation, but you can use whichever tool you are comfortable with.
 
+!!!note
+    These tools aren't installed on the server. They're provided as tool recommendations for individual developers.
+
 | Tool Name                                            | Description                                                                                                                                                   |
 | :--------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [curl](https://curl.haxx.se/)                        | Command line tool and library for transferring data with URLs. It is used for REST interaction - for scripts and command line.                                |
