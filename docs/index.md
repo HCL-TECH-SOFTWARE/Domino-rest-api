@@ -21,8 +21,9 @@ For the latest release information about HCL Domino REST API, see [What's new](r
 
 !!!tip
 
-    - If you want to start quickly, see [Quickstart](tutorial/quickstart.md).
-    - For everything that admin needs to know, see [Admin cheat sheet](references/admincheatsheet.md)
+    - If you want to start quickly, go to [Quickstart](tutorial/quickstart.md).
+    - For installation information, see [Installation and configuration](tutorial/installconfig/index.md)
+    - For everything that admin needs to know, use the [Admin cheat sheet](references/admincheatsheet.md).
 
 ---
 ## How the documentation is organized
