@@ -8,7 +8,7 @@ The `default` mode is, as the name implies, the default when creating or reading
 
 ## dql
 
-When data is queried by [DQL](https://help.hcltechsw.com/dom_designer/12.0.1/basic/dql_overview.html), forms need a `dql` mode to return values. The mode specified what data gets returned. If a form doesn't have a `dql` mode, no data will be returned for that form in a DQL query. If y
+When data is queried by [DQL](https://help.hcltechsw.com/dom_designer/12.0.1/basic/dql_overview.html), forms need a `dql` mode to return values. The mode specified what data gets returned. If a form doesn't have a `dql` mode, no data will be returned for that form in a DQL query.
 
 ## odata
 
