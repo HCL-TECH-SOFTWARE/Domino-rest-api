@@ -2,10 +2,18 @@ title: Installation and configuration
 
 nav:
     - index.md
+    - System requirements: https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789
     - docker.md
     - linux.md
     - mac.md
     - win.md
-    - postinstallation.md
-    - functionalUsers.md
-    - configuringPorts.md
+    - Post installation tasks:
+        - postinstallation.md
+        - Securing ports: configuringPorts.md
+        - Enable a database: ../howto/database/enablingadb.html
+        - Configure JWT: ../references/security/authentication.html
+        - Sharing JWT between servers: ../references/security/encryption.html
+        - Configure apps: ../tutorial/adminui.html
+        - Setup functional accounts: setupfunctionalaccount.md 
+    #- functionalUsers.md
+    #- configuringPorts.md

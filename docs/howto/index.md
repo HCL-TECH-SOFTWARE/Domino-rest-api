@@ -6,7 +6,7 @@ This section intends to guide experienced users in completing key goals and task
 
 ## [Installation](install/index.md)
 
-Installation, deinstallation and configuration tasks
+Installation, deinstallation, and configuration tasks
 
 ## [Web](web/index.md)
 
@@ -14,7 +14,7 @@ Configure HTTPS and an optional nginx proxy
 
 ## [Identity Provider (IdP)](IdP/index.md)
 
-Task to use Domino as your Identity provider (IdP) and tasks to configure external IdP to be used with Domino
+Task to use Domino as your Identity Provider (IdP) and tasks to configure external IdP to be used with Domino
 
 ## [Production](production/index.md)
 

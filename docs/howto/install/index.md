@@ -2,7 +2,7 @@
 
 --8<-- "future.md"
 
-This section intends to guide you in completing goals and tasks related to installation, configuration, and settings for Domino REST API.
+Topics to guide you in completing goals and tasks related to installation, configuration, and settings for Domino REST API:
 
 - [Installation and configuration](../../tutorial/installconfig/index.md)
 - [Check Domino REST API settings](checksettings.md)

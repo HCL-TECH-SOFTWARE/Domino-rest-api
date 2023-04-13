@@ -6,9 +6,10 @@ nav:
   - restapitask.md
   - roles.md
   - keepapplications.md
-  - accesscontrol.md
   - dataformats.md
   - scopes.md
   - richtext.md
   - metrics.md
   - administrationui.md
+  - console.md
+  - modenames.md

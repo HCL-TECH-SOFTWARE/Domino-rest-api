@@ -13,11 +13,16 @@ There are many reasons to keep this users separate from your enterprise director
 - They need to be available when the directory isn't available.
 - They don't need access to regular end points.
 
+!!!note
+    Functional account names are verbatim. Domino REST API doesn't accept any variations as you expect in a Domino login.
+
+For information on setting up a functional account, see [Set up a functional account](../tutorial/installconfig/setupfunctionalaccount.md).
+
 ## Functional users configuration file
 
 Create a file `functionalUsers.json` in the directory `[NotesData]/keepconfig.d`. Add the following JSON structure:
 
-![Functional Users](../../assets/images/FunctionalUsers.png)
+![Functional Users](../assets/images/FunctionalUsers.png)
 
 ```json
 {
@@ -32,7 +37,9 @@ Create a file `functionalUsers.json` in the directory `[NotesData]/keepconfig.d`
 
 In each of the sections you specify a user object in the same way:
 
-![Functional User](../../assets/images/FunctionalUser.png)
+![Functional User](../assets/images/FunctionalUser.png)
+
+**Example 1**
 
 ```json
 {
@@ -43,11 +50,23 @@ In each of the sections you specify a user object in the same way:
 }
 ```
 
+**Example 2**
+
+```json
+{
+  "John Doe": {
+    "active": true,
+    "CN": "CN=John Doe/O=Mauraders",
+    "secret": "E4B321EBA91B7F92D9BF5EAFA5322824FEC2287B8A6C133D7C31EFB706A2BA30:1A57478185E7AF3A98F01ECA08F0BA881DBC88BEC60AE8C6F1B1CC5CC55C11A20F676E082BF2D28BB96DB5A8CFB091C767C035B380DB4CBC7D1001EA8BE01663"
+  }
+}
+```
+
 | Key      | Purpose                                                                      |
 | -------- | ---------------------------------------------------------------------------- |
-| Json key | UserId for authentication, case sensitive, no variations.                    |
+| JSON key | UserId for authentication, case sensitive, no variations. In the examples, `metrics` and `John Doe` are JSON keys. You can use other values for the JSON key.               |
 | active   | true/false to temporarily disable an account.                                |
-| CN       | Common name in X500 format, optional. When missing username is the JSON key. |
+| CN       | **Optional**: Common name in X500 format. When defined, the name is for display only. You still need to login using the JSON key as your username. |
 | secret   | Salted and encrypted password.                                               |
 
 ## Obtain salted passwords
@@ -73,4 +92,4 @@ This creates the user "Doctor Notes" with the password `password` to access the 
 !!! tip
 
     **Don't leave default passwords in your system**.
-    When done with creating new salted passwords, delete `tempmanagement.json` and restart Domino REST API. Someone **will** try to use it.
+    When done with creating new salted passwords, securely back-up `tempmanagement.json` to prevent unauthorized access, and then restart Domino REST API. 

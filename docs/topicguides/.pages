@@ -15,6 +15,5 @@ nav:
   - httpHandler.md
   - dominojnx.md
   - agents.md
-  - securingKEEPEndpoints.md
   - usecases.md
-  #  - scopes.md
+  - keepasproxy.md

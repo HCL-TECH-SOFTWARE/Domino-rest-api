@@ -17,7 +17,15 @@ HCL Domino REST API provides a secure REST API with access to HCL Domino servers
 For the latest release information about HCL Domino REST API, see [What's new](references/whatisnew.md).
 
 ---
+## TL/TR
 
+!!!tip
+
+    - If you want to start quickly, go to [Quickstart](tutorial/quickstart.md).
+    - For installation information, see [Installation and configuration](tutorial/installconfig/index.md)
+    - For everything that admin needs to know, use the [Admin cheat sheet](references/admincheatsheet.md).
+
+---
 ## How the documentation is organized
 
 The HCL Domino REST API documentation is based on the [Diátaxis framework](https://diataxis.fr/), which organizes documentation into the following modes to address users' documentation needs at different times and in different circumstances. Below shows an overview that guides you on where to look for needed information:
@@ -30,8 +38,9 @@ The HCL Domino REST API documentation is based on the [Diátaxis framework](http
 
 **[References](references/index.md)** - Technical references and descriptions on using HCL Domino REST API
 
+---
 ## Let's connect
 
 --8<-- "feedback.md"
 
-<!--For questions, discussions, sharing ideas, and feedback, join the [OpenNTF Discord channel](https://discord.com/invite/jmRHpDRnH4).-->
+

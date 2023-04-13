@@ -22,7 +22,7 @@ JWT token can be shared between servers, effectively enabling SSO (Single Sign O
 
 The Admin UI allows to configure database schemas, server scopes and OAuth applications (Domino functioning as IdP).
 
-## [Setup functional Accounts](../installconfig/functionalUsers.md)
+## [Setup functional Accounts](../installconfig/setupfunctionalaccount.md)
 
 There are a series of endpoints that aren't associated with regular user ids:
 
@@ -30,4 +30,4 @@ There are a series of endpoints that aren't associated with regular user ids:
 - Metrics endpoint (Port 8890)
 - Health check (Port 8886)
 
-To enable access to those, you need functional accounts.
+To enable access to those, you need [functional accounts](../../references/functionalUsers.md).

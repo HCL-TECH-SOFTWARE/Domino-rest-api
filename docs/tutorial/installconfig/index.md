@@ -6,7 +6,19 @@
 !!! note "**System requirements**"
       Before performing the installation, make sure to check the [System requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789).
 
-[Download the Domino REST API](https://hclsoftware.flexnetoperations.com/)
+### Download the Domino REST API
+
+1. Go to [HCL License and Download Portal](https://hclsoftware.flexnetoperations.com/).
+2. On the sign in page, enter your username and click **Next**. The **License & Download Portal** home page opens. 
+3. In the **Your Downloads** pane, scroll to find and then select **HCL Domino**. The **Download Packages** page opens. 
+4. On the **New Versions** tab, select the HCL Domino REST API version that you want to download.
+
+**OR**
+
+1. On the **License & Download Portal** home page, go to **Downloads** &rarr; **Search Downloads**.
+2. On the **Download Search** page, enter `HCL Domino REST API` in the **Search for** field, and then click **Search**.
+3. Select the HCL Domino REST API version that you want to download from the search result. 
+  
 
 <!-- prettier-ignore -->
 !!! tip
@@ -41,9 +53,10 @@ The installer requires a series of parameters:
 !!! tip
       Notes and Domino install a JVM on your computer. You can and should use it to install.
 
-### Post installation
+      - On Linux, `/opt/hcl/domino/notes/latest/linux/jvm/bin`
+      - On Windows, `<Notes installation directory>/jvm/bin` (example: `Program Files/HCL/Notes/jvm/bin`)
 
-After completing the installation of Domino REST API, make sure to complete the [Post Installation Tasks](../installconfig/postinstallation.md)
+      You can also verify the Java version by opening the command prompt, going to the installation location, and then typing `java -version`. 
 
 ### Explanation of parameters
 
@@ -111,6 +124,10 @@ This is similar to Domino's feature serving static files from its `domino/html` 
 
 Domino REST API is preconfigured with settings that allow you to get started right away. However, you should familiarize yourself with all [configuration parameters](../../references/quickreference/parameters.md) and [security](../../references/security/securityindex.md) settings before you deploy into a production environment.
 
+<!-- prettier-ignore -->
+!!!tip
+    Domino REST API honors all Domino access control mechanisms and doesn't allow anonymous access. For more information, see [Access Control](../../references/accesscontrol.md).
+
 ### Understanding configuration
 
 The configuration follows the concept of an [Overlay File System](https://en.wikipedia.org/wiki/OverlayFS). The base configuration is retrieved from the installation directory or `jar` files.
@@ -133,7 +150,7 @@ For more information, see [vert.x overloading rules](https://vertx.io/docs/vertx
 
 Given the files `config.json`, `a.json` and the environment variable `PORT=8564`, you get the result `result.json` as shown below:
 
-## config.json
+#### config.json
 
 ```json
 {
@@ -148,7 +165,7 @@ Given the files `config.json`, `a.json` and the environment variable `PORT=8564`
 }
 ```
 
-## a.json
+#### a.json
 
 ```json
 {
@@ -168,7 +185,7 @@ Given the files `config.json`, `a.json` and the environment variable `PORT=8564`
 
 Merge these 2 files and apply the environment variables.
 
-## result.json
+#### result.json
 
 ```json
 {
@@ -190,7 +207,7 @@ Merge these 2 files and apply the environment variables.
 
 The actual result can be inspected on the Domino REST API management API, like [on a local install](http://localhost:8889/config).
 
-### Important Notes
+### Important notes
 
 > JSON overlay doesn't allow you to **remove** JSON elements. So, most settings have an `active` parameter that
 > can be set to false in an overlay.

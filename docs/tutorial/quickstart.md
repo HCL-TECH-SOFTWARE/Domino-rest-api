@@ -12,7 +12,7 @@ Join us for questions, discussions, ideas and feedback over at [OpenNTF's Discor
 
 ## What's New
 
-Check the [Changelog](../references/changelog) to learn what's new in Domino REST API
+Check [What's New](../references/whatisnew.md) to learn what's new in Domino REST API.
 
 ## The Domino REST API schema
 
@@ -72,7 +72,7 @@ Read more about them in [Domino REST API](../references/usingdominorestapi/roles
 
 ### Endpoints
 
-Ensure your endpoints are [secure](../topicguides/securingKEEPEndpoints.md).
+Ensure your endpoints are [secure](../references/security/securingKEEPEndpoints.md).
 Bring up a browser and verify that you can hit these endpoints:
 
 | Endpoints                                                                                             | Ports | Details                                                                                                                                                                                                                                                                                                                               | Webpages                                                      |
