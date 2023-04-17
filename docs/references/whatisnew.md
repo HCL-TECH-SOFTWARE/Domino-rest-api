@@ -4,6 +4,21 @@
 !!! Note "Important Information about API Changes"
     Items marked in <span style="color:red">**red**</span> are API changes that may impact your applications and should be reviewed before upgrading.
 
+## v1.0.4 - _What's new or changed_
+
+### New 
+- Added parameter `metaAdditional=` to the `/lists/{name}` endpoint in `api/v1` to return additional metadata for each row. Currently just returning the Form name of the underlying document.
+- Added the OpenID `/userinfo` endpoint in `api/v1` for OIDC compliance.
+
+### Improvements
+- Increased throughput performance of most endpoints.
+- Modified the `/admin/quickconfig` endpoint in `api/setup-v1` to add default values to some Schema items if not specified.
+### Resolved issues
+-  A page in the **Admin UI** may time out while bringing up a list of databases if there are a lot of databases.
+ - The `/attachments/{unid}` endpoint in `api/v1` didn't honor the `fieldName=` parameter. This parameter specifies the Rich Text field to attach to, instead, it attached to the document.
+### Others
+ - Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.17.0*.
+
 ## v1.0.3 - _What's new or changed_
 
 ### New 
@@ -12,7 +27,7 @@
 - New endpoint added to the setup API, call `DELETE /admin/cache` to reset the Domino REST API Scope and Schema cache, call if you are modifying Scopes or Schemas directly in Notes as opposed to the API or the Admin UI.
 ### Improvements
 
-- Remove invalid Scopes (`openid` and `email`) from the Swagger UI dropdown list of APIs / Scopes.
+- Removed invalid Scopes (`openid` and `email`) from the Swagger UI dropdown list of APIs / Scopes.
 
 ### Resolved issues
 
@@ -24,7 +39,7 @@
 
 ### Others
 
-- Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.15.0*
+- Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.15.0*.
 
 ## v1.0.2 - _What's new or changed_
 
@@ -58,7 +73,7 @@
 
 ### Others
 
-- Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.12.0*
+- Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.12.0*.
 
 ## V1.0.1 - _What's new or changed_
 
@@ -84,7 +99,7 @@
 
 ### Others
 
-- Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.10.0*
+- Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.10.0*.
 
 ## V1.0 - _What's changed since the Early Access Release_
 
