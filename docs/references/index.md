@@ -45,6 +45,7 @@ Provides information related to the [installation and configuration of Domino RE
 - [config.json](security/configjson.md)
 - [Encryption keys](security/encryption.md)
 - [security.json](security/securityjson.md)
+- [Set up oauth.nsf](../howto/VoltMX/setupoauthnsf.md)
 - [Custom Identity Provider](security/customIdp.md)
 - [Securing Domino REST API endpoints](security/securingKEEPEndpoints.md)
 

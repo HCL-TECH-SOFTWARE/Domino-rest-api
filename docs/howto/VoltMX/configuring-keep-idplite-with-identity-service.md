@@ -37,41 +37,7 @@ An example of `oauth.json` is shown below. Expiration times can be adjusted. Mak
 
 <!-- prettier-ignore -->
 !!! note
-      If you are using Domino+Domino REST API docker image, the `oauth.nsf` should already be "deployed" in the image (though not fully configured as of this writing). If for some reason you need to create `oauth.nsf`, create it from a template.
-
-To create `oauth.nsf` from a template:
-
-1. Start the Notes Client.
-2. Go to **File > Application > New** or press **Ctrl+N**.
-
-   1. Pick (the target) server.
-   2. Set the file name to `oauth.nsf`.
-   3. Set the title as you deem fit.
-   4. Pick `KeepOauth.ntf` as the application template.
-
-3. Assign the role `[OAuthAdmin]` to the server and your administrative user or usergroup (we suggest `[LocalKeepAdmins]` using your notes client). Make sure there is an ACL entry of type `server` (for your server) that has Manager access and has `OAuthAdmin` role (make sure to select the checkbox).
-
-![Domino REST API oauthnsf acl](../../assets/images/keep-oauthnsf-acl.png)
-
-If you don't have the ability to connect a Notes Client to your Domino server then:
-
-1. Add the `oauth.nsf` to your list of Domino REST API databases.
-2. Use postman or curl to add the `OAuthAdmin` role (see example, but note that headers are removed for clarity):
-
-```json
-curl --location --request PUT 'http://yourkeepserver.io:8880/api/admin-v1/acl/entries/CN%3Dyourkeepserver%2FO%3Dyourorg?dataSource=oauth.nsf' \
---data-raw '{
-    "name": "CN=yourkeepserver/O=yourorg",
-    "level": "MANAGER",
-    "roles": ["OAuthAdmin"],
-    "type": "SERVER",
-    "flags": ["NODELETE"]
-}'
-```
-
-!!! note
-    The part after `/entries/` before `?dataSource` must be [URL encoded](https://en.wikipedia.org/wiki/Percent-encoding).
-    {: .alert .alert-info}
+      If you are using Domino+Domino REST API docker image, the `oauth.nsf` should already be "deployed" in the image but may not be fully configured. If for some reason you need to create `oauth.nsf`, see [Set up oauth.nsf](../VoltMX/setupoauthnsf.md).
 
 ## Create Foundry Identity Service
 
