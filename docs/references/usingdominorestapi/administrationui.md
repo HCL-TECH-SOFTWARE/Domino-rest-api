@@ -21,9 +21,7 @@ For more information on logging in to the Domino REST API Admin UI, see [Login](
 
 Select **Database Management - REST API** from the home page.
 
----
-
-### List Available Database Schemas
+### List available database schemas
 
 The **Schema Management** page shows the list of all available schemas.
 
@@ -31,17 +29,15 @@ The **Schema Management** page shows the list of all available schemas.
 
 You can arrange the schema names in either list or grid view or sort them alphabetically. There is also a provision to search through the list.
 
----
-
-### Add A Schema
+### Add a schema
 
 1. On the **Schema Management** page, click **Add Schema** to add a database schema.
 
       ![Create Database Configuration](../../assets/images/createSchema.png)
 
-      The shape of data available is referred to as a schema. The schema is an JSON file in the design resources of the database. It gets created by a developer with Designer access to the NSF.
+      The shape of data available is referred to as a schema. The schema is a JSON file in the design resources of the database. It gets created by a developer with Designer access to the NSF.
 
-      This creates the Alias. You can use this to access the database via the Domino REST API. One NSF can be made available under more than one alias (such as with different security settings).
+      This creates the Alias. You can use this to access the database via the Domino REST API. One NSF can be available under more than one alias, such as with different security settings.
 
       ![Create Database Form](../../assets/images/AddSchemaForm.PNG)
 
@@ -49,14 +45,14 @@ You can arrange the schema names in either list or grid view or sort them alphab
 3. Under **Add New Schema**, enter details in the **Schema Name** and **Description**, and then select the **Formula Engine** for the schema you want to create.
 4. Click **Add**.
 
-### List Available Forms
+### List available forms
 
 1. Select a schema from the list of schemas and the details for it will load.
 2. Select **Database Forms** from the menu bar to show the list of all the Forms for the selected database.
 
       ![List Forms](../../assets/images/ListOfForms.png)
 
-### Configure a Form
+### Configure a form
 
 1. From the list of **Unconfigured Forms**, select the Form that you would like to configure.
 2. In the **Configure** dialog, select **Yes**.
@@ -71,27 +67,31 @@ To make changes to the configuration:
 
 2. Set the Read or Write access formula for each of the fields in the Form.
 
----
-
-### List Available Views
+### List available views
 
 1. Select a schema from the list of schemas and the details for it will load.
-2. Select **Database Views** from the menu bar. This lists all the Views for the selected schema.
+2. Select **Database Views** from the menu bar. This lists all the views for the selected schema.
 
       ![List Views](../../assets/images/ListOfViews.png)
 
-### Activate a View
+### Activate a view
 
-1. Click a View that you would like to activate to move it to **Activated Views**.
+**To activate a specific view or views**:
+
+1. Select the view that you want to activate, and then click the corresponding **Active** option under **Status**.
 2. Click **Save**.
 
-<!-- prettier-ignore -->
-!!! tip
-    Clicking on a View from the **Activated Views** undos the selection.
+!!!tip
+    Clicking the **Inactive** option corresponding to a view, and then clicking **Save** deactivates the view.  
 
----
+**To activate all Views**:
 
-### List Available Agents
+- Click **Activate All**, and then click **Save**.
+
+!!!tip
+    Clicking **Deactivate All**, and then clicking **Save** deactivates all active Views.
+
+### List available agents
 
 1. Select a schema from the list of schemas and the details for it will load.
 2. Select **Database Agents** from the menu bar. This lists all the Agents for the selected database.
@@ -107,15 +107,11 @@ To make changes to the configuration:
 !!! tip
     Clicking on an Agent from the **Activated Agents** section undos the selection.
 
----
-
 ## Database Management - Activation
 
 Select **Database Management - Activation** from the home page.
 
----
-
-### Add A Scope
+### Add a scope
 
 1. On the **Scope Management** page, click **Add Scope** to add a database.
 
@@ -126,25 +122,19 @@ Select **Database Management - Activation** from the home page.
 
       ![Configure Database](../../assets/images/AddNewDatabase.png)
 
-A scope points to a schema that's contained in a database. A database can have multiple schemas for different use cases and a schema can be pointed to by more than one scope
-
----
+A scope points to a schema that's contained in a database. A database can have many schemas for different use cases and a schema can be pointed to by more than one scope.
 
 ## Application Management - OAuth
 
 Select **Application Management - OAuth** from the home page.
 
----
-
-### List Available Applications
+### List available applications
 
 The **Application Management** page shows the list of all available applications.
 
 ![List Applications](../../assets/images/ListOfApplications.png)
 
----
-
-### Add An Application
+### Add an application
 
 1. On the **Application Management** page, click **Add Application** to add an application.
 

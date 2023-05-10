@@ -1,6 +1,6 @@
 # Using Admin UI
 
-This tutorial shows how to use the Admin UI to configure and use a database for Domino REST API. Download the database `Demo.nsf` from [Resources](../references/downloads.md) and follow along. Anything you can do with the Admin UI you can also do using Postman, curl, SwaggerUI or similar tools. See how to do each of the tasks in this tutorial using [Postman and Curl](./postmancurl.md) and using [SwaggerUI](./swagger.md).
+This tutorial shows how to use the Admin UI to configure and use a database for Domino REST API. Download the database `Demo.nsf` from [Resources](../references/downloads.md) and follow along. Anything you can do with the Admin UI you can also do using Postman, curl, SwaggerUI, or similar tools. See how to do each of the tasks in this tutorial using [Postman and Curl](./postmancurl.md) and using [SwaggerUI](./swagger.md).
 
 <!-- prettier-ignore -->
 !!! note
@@ -105,12 +105,12 @@ The selected form is now listed under **Configured Forms**.
 
       ![List Views](../assets/images/ListOfViews.png)
 
-2. Click a view to activate. This moves the selected view under **Activated Views**.
+2. Select the view that you want to activate, and then click the corresponding **Active** option under **Status**.
 3. Click **Save**.
 
 <!-- prettier-ignore -->
-!!! note
-    Clicking a view under **Activated Views** undoes the selection.
+!!!tip
+    Clicking the **Inactive** option corresponding to a view, and then clicking **Save** deactivates the view.
 
 ## Manage database agents
 
