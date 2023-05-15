@@ -15,7 +15,8 @@
 - Refined Rich Text MIME representation and Rich Text Markdown representation.
 - An error message now appears when deleting an ACL role using `admin-v1/acl/roles/{rolename}` while a member in the ACL still has that role.
 - Returns the rendered Markdown as HTML when retrieving a document where the Rich Text representation is HTML and the Rich Text field contains Markdown. 
-- Searches for the text/markdown MIME part of the document and returns it if existing when retrieving a document where the Rich Text representation is Markdown but stored as MIME. 
+- Searches for the text/markdown MIME part of the document and returns it if existing when retrieving a document where the Rich Text representation is Markdown but stored as MIME.
+- Updated the **Database Views** activation page in **Schema Management** for better user experience.   
  
 ### Resolved issues
 - `admin-v1/access/groups` parameters weren't working as expected.
