@@ -4,6 +4,28 @@
 !!! Note "Important Information about API Changes"
     Items marked in <span style="color:red">**red**</span> are API changes that may impact your applications and should be reviewed before upgrading.
 
+## v1.0.5 - _What's new or changed_
+
+### New
+- Added `v1/docmeta/{unid}` endpoint that includes metadata information about the document specified.
+- Added `richTextAs` parameter to the `v1/bulk/create`, `v1/bulk/unid`, `v1/bulk/update` and `v1/lists/{name}` endpoints when using `documents=true`.
+- Added a list of Server Commands to the Management Page's Domino Server console.
+
+### Improvements
+- Refined Rich Text MIME representation and Rich Text Markdown representation.
+- An error message now appears when deleting an ACL role using `admin-v1/acl/roles/{rolename}` while a member in the ACL still has that role.
+- Returns the rendered Markdown as HTML when retrieving a document where the Rich Text representation is HTML and the Rich Text field contains Markdown. 
+- Searches for the text/markdown MIME part of the document and returns it if existing when retrieving a document where the Rich Text representation is Markdown but stored as MIME. 
+ 
+### Resolved issues
+- `admin-v1/access/groups` parameters weren't working as expected.
+- `v1/scope/form/{form}` didn't return the form information when using the form's alias.
+- The default configuration wasn't set for some attributes when using the **Admin UI Quick Config** or the `setup-v1/admin/quickconfig` endpoint.
+- `v1/bulk/delete` returned an error instead of deleting the document.
+
+### Others
+- Changed default Rich Text representation to MIME in the documentation. 
+
 ## v1.0.4 - _What's new or changed_
 
 ### New 
@@ -89,7 +111,7 @@
 
 - <span style="color:red">Field schema has been modified. The boolean fields `readOnly` and `writeOnly` were removed and replaced with String field `fieldAccess` which specifies the access of this field, either `RW`, `RO` or `WO`. If existing schemas have the old fields, they will be still processed correctly.</span>
 - `null` has been added as valid json for document updating, setting a field value to `null` will remove that field from the document.
-- Inactive scopes will no longer show in the Swagger UI's drop down list since they are not available.
+- Inactive scopes will no longer show in the Swagger UI's drop down list since they're not available.
 - Performance improvements.
 ### Resolved issues
 
