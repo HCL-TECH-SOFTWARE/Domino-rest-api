@@ -30,11 +30,14 @@ There are 5 ways to retrieve RichText:
 - Using the `/richtext/mime/{unid}` endpoint returning a [MIME](https://datatracker.ietf.org/doc/html/rfc1341) representation of a Notes RichText
 - Using the `/bulk/unid` URL
 
-By default the following APIs return RichText as HTML, but you can specify a different format by using the `richTextAs=` URL parameter. The valid formats are `html`, `mime` and `md`.
+By default the following APIs return RichText as MIME, but you can specify a different format by using the `richTextAs=` URL parameter. The valid formats are `html`, `mime` and `md`.
 
 - `/document/{unid}`
 - `/query`
 - `/bulk/unid`
+- `/bulk/create`
+- `/bulk/update`
+- `/lists/{name}` (when using the `documents=true` parameter)
 
 ### Writing RichText
 
