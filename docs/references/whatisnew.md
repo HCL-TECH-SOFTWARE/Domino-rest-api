@@ -25,7 +25,8 @@
 - `v1/bulk/delete` returned an error instead of deleting the document.
 
 ### Others
-- Changed default Rich Text representation to MIME in the documentation. 
+- Changed default Rich Text representation to MIME in the documentation.
+ - Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.18.3*. 
 
 ## v1.0.4 - _What's new or changed_
 
