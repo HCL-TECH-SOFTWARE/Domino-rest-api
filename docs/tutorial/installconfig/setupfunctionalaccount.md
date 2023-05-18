@@ -75,6 +75,8 @@ You use the password when logging in to the endpoints, while you use the salted 
     !!!note
         The text you enter for `secret` is the salted password you [generated](setupfunctionalaccount.md#generate-user-password).
 
+4. Restart Domino REST API on all servers with this new configuration.
+
 ## Expected output
 
 Based on the example in the procedure, you can now log in to the endpoints using `metrics` as your username and the password [you set](setupfunctionalaccount.md#generate-user-password) corresponding to the salted password. 
