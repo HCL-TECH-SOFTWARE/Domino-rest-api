@@ -6,6 +6,12 @@ There are a series of endpoints that aren't associated with regular user ids:
 - Metrics endpoint (Port 8890)
 - Health check (Port 8886)
 
+    !!!tip
+        You can also configure access to Health check (Port 8886) using the following environment parameters:
+        
+        - HEALTHCHECK_USER
+        - HEALTHCHECK_PASSWORD
+
 To enable access to those, you need functional accounts. Same applies to the use of KEEP in a local context when running on a client.
 
 There are many reasons to keep this users separate from your enterprise directory:
@@ -15,6 +21,8 @@ There are many reasons to keep this users separate from your enterprise director
 
 !!!note
     Functional account names are verbatim. Domino REST API doesn't accept any variations as you expect in a Domino login.
+  
+
 
 For information on setting up a functional account, see [Set up a functional account](../tutorial/installconfig/setupfunctionalaccount.md).
 
