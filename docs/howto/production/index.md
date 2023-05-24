@@ -6,8 +6,8 @@ Topics to guide you in completing configuration goals and tasks in relation to d
 
 Topics under development:
 
-- [Config parameter](configparam.md)
-- [Configuring Ports](prodports.md)
+- [Configuring parameters](configparam.md)
 - [Disable modules](disablemodule.md)
 - [Configuring HTTPS](httpsprod.md)
 - [JWT multi server](jwtmultiserver.md)
+- [Configuring Ports](prodports.md)
