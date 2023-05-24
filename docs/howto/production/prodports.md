@@ -34,9 +34,12 @@ By default the ports are set in Domino REST API as specified in the documentatio
         "singleDbMode": {
         "active": false
         },
+        }
     ``` 
 
-4. Copy the one where you need to change a certain port in `config.json` values in any text/code app such as vscode, notepad,notepad++ etc, and save the file in `.json` format inside the `keepconfig.d` directory.
+4. Copy the function where you need to change a certain port in `config.json` values in any text/code app such as vscode, notepad, notepad++ etc, and save the file in `.json` format inside the `keepconfig.d` directory.
  
+    !!!note
+        Use other names except `config.json`
 
-6. Restart Domino REST API on all servers with this new configuration.
+5. Restart Domino REST API on all servers with this new configuration.

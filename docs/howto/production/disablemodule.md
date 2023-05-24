@@ -23,16 +23,13 @@
 
       This is how the `active` value to the corresponding configuration entry is turned off or disabled.
 
- 3. Copy the one where you need to change your `config.json` values in any text/code app such as vscode, notepad,notepad++ etc.
+ 3. Copy the function where you need to change your `config.json` values in any text/code editor app such as vscode, notepad, notepad++ etc.
 
       You may edit the file according to your reference. False and true are the indicator for disable and enable.
 
 4. Save the file in `.json` format inside the `keepconfig.d` directory.
-
-   !!!note
-      Use other names aside from `config.json`
-
+      
+    !!!note
+        Use other names except `config.json`
+           
 5. Restart Domino REST API on all servers with this new configuration.
-
-
-
