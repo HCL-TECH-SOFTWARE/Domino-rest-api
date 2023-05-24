@@ -4,13 +4,13 @@ Domino REST API is preconfigured with settings that allow you to get started rig
 
 ## Procedure
 
-1. **Log in** into the Management console (Port 8889). 
+1. Log in into the Management console (Port 8889). 
 
     Make sure that the administration location can only be accessed from a network that can be accessed by a your system administrator.
 
-2. **Go** to the `keepconfig.d` and open the `config.json`. The default configuration settings are here, [config.json](/docs/references/security/configjson.md).
+2. Open the [`config.json`](#understanding-configuration). The default configuration settings are here, [config.json](/docs/references/security/configjson.md).
 
-3. Only copy the one where you need to modify your config.json values.
+3. Only copy the one where you need to change your `config.json` values in any text/code app such as vscode, notepad,notepad++ etc.
 
       Example: 
       
@@ -18,13 +18,16 @@ Domino REST API is preconfigured with settings that allow you to get started rig
       If you don't use a metric server, the firewall should have its protection completely disabled.
 
 
-  ```json
-    "metrics": {
-      "enabled": false,
-      "jvmMetricsEnabled": false
-      }
-  ```
-4. Click **Save** in .json format.
+    ```json
+      "metrics": {
+        "enabled": false,
+        "jvmMetricsEnabled": false
+        }
+    ```
+4. Save the file in `.json` format inside the `keepconfig.d` directory.
+
+  !!!note
+      Use other names aside from `config.json`
 
 5. Restart Domino REST API on all servers with this new configuration.
 

@@ -7,12 +7,12 @@
 
 1. Login into the Management console (Port 8889).
 
-2. Type a name you want to call this certificate into the "Certificate Name". No spaces or special characters.
+2. Type a name you want to call this certificate into the **Certificate Name**. No spaces or special characters.
 
     - for example: MultiDomain
 
-3. Click "Create IdP certificate".
-4.  Domino REST API generates 4 files in this server's [Notesdata]/keepconfig.d directory:
+3. Click **Create IdP certificate**.
+4.  Domino REST API generates 4 files in this server's [notesdata]/keepconfig.d directory:
 
     - MultiDomain.cert.pem
     - MultiDomain.json
