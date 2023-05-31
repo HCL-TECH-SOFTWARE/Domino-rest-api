@@ -25,21 +25,15 @@ By default the ports are set in Domino REST API as specified in the documentatio
         "MANAGMENTPORT": 8889,
         "METRICSPORT": 8890,
         "HEALTHCHECKPORT": 8886,
-        "FIREHOSEPORT": 42424,
-        "CalendarTemplateFileName": "mail12.ntf",
-        "AllowJwtMail": true,
-        "AllowLocalMailFile": true,
-        "ServerDirectDBAccess": false,
-        "createKeepDBfromTemplate": true,
-        "singleDbMode": {
-        "active": false
+        "FIREHOSEPORT": 42424, {
+        "active": true
         },
         }
     ``` 
 
 4. Copy the function where you need to change a certain port in `config.json` values in any text/code app such as vscode, notepad, notepad++ etc, and save the file in `.json` format inside the `keepconfig.d` directory.
  
-    !!!note
-        Use other names except `config.json`
+    !!!note "Naming your json files"
+        The config loader processes json files in alphabetical order, so when you have conflicting entries, the last one wins. Use a name that reveals its purpose. e.g. management-port.json
 
 5. Restart Domino REST API on all servers with this new configuration.
