@@ -30,6 +30,6 @@
 4. Save the file in `.json` format inside the `keepconfig.d` directory.
       
     !!!note "Naming your json files"
-    The config loader processes json files in alphabetical order, so when you have conflicting entries, the last one wins. Use a name that reveals its purpose. e.h. inactive-design.json
+         The config loader processes json files in alphabetical order, so when you have conflicting entries, the last one wins. Use a name that reveals its purpose. e.g. inactive-design.json
            
 5. Restart Domino REST API on all servers with this new configuration.

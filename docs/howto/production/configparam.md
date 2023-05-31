@@ -14,7 +14,7 @@ Domino REST API is preconfigured with settings that allow you to get started rig
 
       Example: 
       
-      When you don't take advantage of the [Prometheus](https://prometheus.io/) formatted runtime metrics by using a metric server (e.g. [Grafana] (https://grafana.com/)), you can and should disable KEEP's metrics endpoint.
+      When you don't take advantage of the [Prometheus](https://prometheus.io/) formatted runtime metrics by using a metric server (e.g. [Grafana](https://grafana.com/) ), you can and should disable KEEP's metrics endpoint.
 
 
     ```json
@@ -27,7 +27,7 @@ Domino REST API is preconfigured with settings that allow you to get started rig
 4. Save the file in `.json` format inside the `keepconfig.d` directory.
   
     !!!note "Naming your json files"
-      The config loader processes json files in aphabetical order, so when you have conflicting entries, the last one wins. Use a name that reveals its purpose. e.h. disable-metrics.json
+        The config loader processes json files in aphabetical order, so when you have conflicting entries, the last one wins. Use a name that reveals its purpose. e.g. disable-metrics.json
 
 
 5. Restart Domino REST API on all servers with this new configuration.
