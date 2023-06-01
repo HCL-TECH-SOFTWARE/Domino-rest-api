@@ -4,6 +4,15 @@
 !!! Note "Important Information about API Changes"
     Items marked in <span style="color:red">**red**</span> are API changes that may impact your applications and should be reviewed before upgrading.
 
+## v1.0.6 - _What's new or changed_
+
+### New
+
+### Improvements
+
+### Resolved issues
+
+### Others
 ## v1.0.5 - _What's new or changed_
 
 ### New
