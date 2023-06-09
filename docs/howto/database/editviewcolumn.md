@@ -1,4 +1,4 @@
-# Edit columns in a database view of a schema
+# Edit database view of a schema
  
 ## About this task
  
