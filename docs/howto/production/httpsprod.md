@@ -4,23 +4,17 @@
 
 ## Procedure
 
-* You are going to need to use a proxy in front, which is described in the [nginx documentation](../../howto/web/httpsproxy.md). 
-* Obtain your https certificate. To obtain your certificate, go to the [configure certificate](../../howto/IdP/configuringCertificates.md). 
-  Ceate a `.json` file in `keepconfig.d`
-
- Use the following entry to configure TLS (JKS, PEM, PFX):
-
-```json
-{
-  "TLSFile": "path.to.file",
-  "TLSPassword": "password-in-clear-protect-this",
-  "TLSType": "pfx"
-}
-```
+### Use a Reverse Proxy
+* You can have an option to use a reverse proxy as outlined in the [nginx documentation](../../howto/web/httpsproxy.md). 
+ 
+### Use a TLS Certificate
+* Another option is to obtain your TLS certificate, this is to secure your data and connection. To obtain your certificate, go to the [configure certificate](../../howto/IdP/configuringCertificates.md). 
 
 
 
-<!-- prettier-ignore -->
+
+
+
 
 
 
