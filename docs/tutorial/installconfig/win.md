@@ -5,7 +5,7 @@
 <!-- prettier-ignore -->
 !!! caution
 
-    - Domino REST API is supported for installation on Windows with an **HCL Notes client** or **an HCL Domino server**, but not both on the same machine. Should you install both on the same machine, you are on your own.
+    - Domino REST API is supported for installation on Windows with an **HCL Notes client** or an **HCL Domino server**, but not both on the same machine. Should you install both on the same machine, you are on your own.
     - Notes client support is experimental and not supported for any production use. It is provided to ease evaluation of the Domino REST API and experimentation without the need to configure a Domino server.
 
 ## Install on a Windows Domino Server
