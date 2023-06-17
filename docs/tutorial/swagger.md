@@ -14,15 +14,15 @@ The [SwaggerUI](https://github.com/swagger-api/swagger-ui) is an OpenSource comp
 
 2. Provide the server variables as shown:
 
-   ![JwtToken](../assets/images/TokenJwt.png)
+      ![JwtToken](../assets/images/TokenJwt.png)
 
 3. Create the JWT token for authorization: Scroll to the authentication section, expand it and expand the `/auth` end point. Click on "Try it out". Update the request body with username and password and click execute. When your credentials are valid, the returned JSON will contain the JWT token in the `bearer` element. Copy the token.
 
-   ![Swagger login](../assets/images/ApiSwaggerLogin.png)
+      ![Swagger login](../assets/images/ApiSwaggerLogin.png)
 
 4. Scroll back up to the Authorize button, click it, paste the JWT token in and click **Authorize**.
 
-   ![JwtToken1](../assets/images/TokenJwt1.png)
+      ![JwtToken1](../assets/images/TokenJwt1.png)
 
 5. Scroll to the data section, expand it, scroll to "POST /document", expand it. Click on "Try it out", enter all the mandatory field values (like below), and then click **Execute**.
 
@@ -39,7 +39,7 @@ The [SwaggerUI](https://github.com/swagger-api/swagger-ui) is an OpenSource comp
 
    ![SwaggerAPI](../assets/images/ApiSwagger.png)
 
-   Observe what happens when you supply less fields
+   Observe what happens when you supply less fields.
 
 ### List views with SwaggerUI
 

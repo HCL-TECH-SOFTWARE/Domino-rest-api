@@ -84,12 +84,16 @@ To make changes to the configuration:
 !!!tip
     Clicking the **Inactive** option corresponding to a view, and then clicking **Save** deactivates the view.  
 
-**To activate all Views**:
+**To activate all views**:
 
 - Click **Activate All**, and then click **Save**.
 
 !!!tip
     Clicking **Deactivate All**, and then clicking **Save** deactivates all active Views.
+
+**To edit a view**
+
+- See [Edit a database view of a schema](../../howto/database/editviewcolumn.md) for more information. 
 
 ### List available agents
 
