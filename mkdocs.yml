@@ -39,6 +39,8 @@ markdown_extensions:
       base_path:
         - "docs/.snippets"
   - footnotes
+  - toc:
+      title: On this page
 
 # Copyright
 copyright: >-
@@ -69,7 +71,7 @@ extra:
 
 # Repository
 repo_url: https://github.com/HCL-TECH-SOFTWARE/Domino-rest-api
-repo_name: Domino-rest-api
+repo_name: HCL-TECH-SOFTWARE/Domino-rest-api
 edit_uri: edit/main/docs
 
 # Customization
@@ -81,4 +83,6 @@ plugins:
   - awesome-pages
   - section-index
   - tags
+  - git-revision-date-localized:
+      type: date
   - markdownextradata: {}

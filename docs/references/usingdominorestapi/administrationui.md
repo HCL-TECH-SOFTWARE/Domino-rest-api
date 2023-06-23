@@ -15,7 +15,10 @@ You'll need the administrator username and password to access the server.
 
 To use a Domino database in Domino REST API, it must be configured for use in the API. Download `Demo.nsf` from [Resources](../../references/downloads.md) and save it in the Notes data directory. Then login to the Domino REST API Admin UI using the administrator user name and password.
 
-For more information on logging in to the Domino REST API Admin UI, see [Login](../../tutorial/adminui.md#login).
+For more information on logging in to the Domino REST API Admin UI:
+
+- see [Login](../../tutorial/adminui.md#login)
+- see [Use passkey to login to Admin UI](../../howto/install/passkey.md) 
 
 ## Database Management - REST API
 
