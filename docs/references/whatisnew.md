@@ -4,17 +4,18 @@
 !!! Note "Important Information about API Changes"
     Items marked in <span style="color:red">**red**</span> are API changes that may impact your applications and should be reviewed before upgrading.
 
-<!--## v1.0.6 - _What's new or changed_
+## v1.0.6 - _What's new or changed_
 
 ### New
-- A database view can now be edited in the Admin UI to select which columns to include. Column external names can now also be set or edited.
+- HCL Domino REST API now supports WebAuthn allowing users to [log in to the **Admin UI** using a passkey](../howto/install/passkey.md).
 
 ### Improvements
+- A database view can now be edited in the Admin UI to select which columns to include. Column external names can now also be set or edited.
 
 ### Resolved issues
 
 ### Others
--->
+
 ## v1.0.5 - _What's new or changed_
 
 ### New
