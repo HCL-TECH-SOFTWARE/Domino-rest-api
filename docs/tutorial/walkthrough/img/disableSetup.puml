@@ -1,0 +1,22 @@
+@startjson "DisableSetup"
+{
+  "versions": {
+    "setup": {
+      "active": false
+    }
+  },
+  "verticles": {
+    "Design": {
+      "active": false
+    },
+    "KeepAdmin": {
+      "active": false
+    }
+  },
+   "webapps": {
+    "webjars": {
+      "active" : false
+    }
+  }
+}
+@endjson

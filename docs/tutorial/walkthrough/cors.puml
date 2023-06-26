@@ -1,0 +1,9 @@
+@startjson "CORS"
+{
+"CORS": {
+    "localhost": true,
+    ".local": false,
+    "yourDomain.com": true
+  }
+}
+@endjson

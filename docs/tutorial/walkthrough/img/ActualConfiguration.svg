@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="569px" height="744px" viewBox="0 0 569 744" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ActualConfiguration</title>
+    <g id="ActualConfiguration" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="569" height="744"></rect>
+        <rect id="Rectangle" stroke="#979797" fill="#D3D1FB" x="11" y="512" width="470" height="217" rx="8"></rect>
+        <text id="/opt/hcl/keep" font-family="3270Medium, IBM 3270" font-size="48" font-weight="400" fill="#0000FF">
+            <tspan x="78.768" y="724">/opt/hcl/keep</tspan>
+        </text>
+        <rect id="Rectangle" stroke="#979797" fill="#9BD5FB" x="21" y="604" width="370" height="66"></rect>
+        <text id="config.json" font-family="3270Medium, IBM 3270" font-size="48" font-weight="400" fill="#0000FF">
+            <tspan x="62.496" y="651">config.json</tspan>
+        </text>
+        <rect id="Rectangle" stroke="#979797" fill="#9BD5FB" x="22" y="527" width="370" height="66"></rect>
+        <text id="security.json" font-family="3270Medium, IBM 3270" font-size="48" font-weight="400" fill="#0000FF">
+            <tspan x="38.268" y="574">security.json</tspan>
+        </text>
+        <rect id="Rectangle" stroke="#979797" fill="#C6FFB9" x="11" y="287" width="470" height="217" rx="8"></rect>
+        <text id="keepconfig.d" font-family="3270Medium, IBM 3270" font-size="48" font-weight="400" fill="#025702">
+            <tspan x="92.632" y="500">keepconfig.d</tspan>
+        </text>
+        <rect id="Rectangle" stroke="#979797" fill="#9BFBC8" x="17" y="413" width="255" height="52"></rect>
+        <rect id="Rectangle" stroke="#979797" fill="#9BFBC8" x="17" y="293" width="255" height="52"></rect>
+        <rect id="Rectangle" stroke="#979797" fill="#9BFBC8" x="17" y="353" width="255" height="52"></rect>
+        <text id="a.json" font-family="3270Medium, IBM 3270" font-size="48" font-weight="400" fill="#235700">
+            <tspan x="62.816" y="455">a.json</tspan>
+        </text>
+        <text id="security.json" font-family="3270Medium, IBM 3270" font-size="48" font-weight="400" fill="#235700">
+            <tspan x="68.316" y="395">b.json</tspan>
+        </text>
+        <text id="security.json" font-family="3270Medium, IBM 3270" font-size="48" font-weight="400" fill="#235700">
+            <tspan x="68.316" y="335">c.json</tspan>
+        </text>
+        <rect id="Rectangle" stroke="#979797" fill="#FFFFE5" x="11" y="194" width="470" height="82" rx="8"></rect>
+        <text id="Environment" font-family="3270Medium, IBM 3270" font-size="48" font-weight="400" fill="#DE9A04">
+            <tspan x="104.496" y="249">Environment</tspan>
+        </text>
+        <path d="M216.899543,348 C233.26484,348 245.928463,343.228464 254.890411,333.685393 C263.852359,324.142322 268.333333,306.127341 268.333333,279.640449 L268.333333,279.640449 L268.333333,182.067416 C268.333333,165.707865 271.937595,152.464419 279.146119,142.337079 C286.354642,132.209738 296.972603,127.146067 311,127.146067 L311,127.146067 L311,102.606742 C296.972603,102.606742 286.354642,97.5430712 279.146119,87.4157303 C271.937595,77.2883895 268.333333,64.0449438 268.333333,47.6853933 L268.333333,47.6853933 L268.333333,-51.6404494 C268.333333,-77.7378277 263.852359,-95.6554307 254.890411,-105.393258 C245.928463,-115.131086 233.26484,-120 216.899543,-120 L216.899543,-120 L183,-120 L183,-98.3820225 L201.703196,-98.3820225 C211.834094,-98.3820225 219.432268,-95.4606742 224.497717,-89.6179775 C229.563166,-83.7752809 232.09589,-71.1161049 232.09589,-51.6404494 L232.09589,-51.6404494 L232.09589,44.1797753 C232.09589,64.0449438 236.576865,79.2359551 245.538813,89.752809 C254.500761,100.269663 267.164384,108.449438 283.52968,114.292135 L283.52968,114.292135 L283.52968,115.460674 C267.164384,121.303371 254.500761,129.483146 245.538813,140 C236.576865,150.516854 232.09589,165.707865 232.09589,185.573034 L232.09589,185.573034 L232.09589,279.640449 C232.09589,299.116105 229.563166,311.775281 224.497717,317.617978 C219.432268,323.460674 211.834094,326.382022 201.703196,326.382022 L201.703196,326.382022 L183,326.382022 L183,348 L216.899543,348 Z" id="}" fill="#FF0000" fill-rule="nonzero" transform="translate(247.000000, 114.000000) rotate(-90.000000) translate(-247.000000, -114.000000) "></path>
+        <text id="Actual-configuration" font-family="3270Medium, IBM 3270" font-size="36" font-weight="400" fill="#FF0000">
+            <tspan x="53.04" y="35">Actual configuration</tspan>
+        </text>
+        <polygon id="Triangle" fill="#D8D8D8" points="522 195 557 238 487 238"></polygon>
+        <rect id="Rectangle" fill="#D8D8D8" x="488" y="238" width="69" height="491"></rect>
+        <text id="Priority" transform="translate(522.968750, 512.292969) rotate(-90.000000) translate(-522.968750, -512.292969) " font-family="3270Medium, IBM 3270" font-size="48" font-weight="400" fill="#FF0000">
+            <tspan x="420.05675" y="526.292969">Priority</tspan>
+        </text>
+    </g>
+</svg>

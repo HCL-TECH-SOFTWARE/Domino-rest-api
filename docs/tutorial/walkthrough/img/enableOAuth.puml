@@ -1,0 +1,12 @@
+@startjson "EnableOAuth"
+{
+"oauth": {
+    "active": true,
+    "database": "oauth.nsf",
+    "authCodeExpiresIn": 120,
+    "accessTokenExpiresIn": 3600,
+    "refreshTokenExpiresIn": 525600,
+    "url": "http://localhost:8880"
+  }
+}
+@endjson

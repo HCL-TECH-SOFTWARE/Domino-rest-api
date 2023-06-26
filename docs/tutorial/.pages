@@ -4,6 +4,7 @@ nav:
   - index.md
   - quickstart.md
   - Installation and configuration: installconfig
+  - Walk through: walkthrough
   - ToDo Database tutorial: https://opensource.hcltechsw.com/domino-keep-tutorials/pages/todo/index
   - From Scratch tutorial: https://opensource.hcltechsw.com/domino-keep-tutorials/pages/domino-new/index
   - adminui.md
