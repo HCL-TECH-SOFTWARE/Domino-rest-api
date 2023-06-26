@@ -4,9 +4,9 @@ hide:
   - navigation
 ---
 
-# Welcome to HCL Domino REST API documentation
+# Welcome to {{ variable.drapi }} documentation
 
-HCL Domino REST API provides a secure REST API with access to HCL Domino servers and databases while running on HCL Domino and HCL Notes on Windows, Linux, and Mac. Designed to re-establish Domino as a world class, modern, standards-compliant, cloud native and enterprise-level collaboration platform, it adds contemporary REST APIs to Notes and Domino, enabling a modern programming experience with the tools of your choice. For more information, see [Introducing Domino REST API](topicguides/introducingrestapi.md).
+{{ variable.drapi }} provides a secure REST API with access to HCL Domino servers and databases while running on HCL Domino and HCL Notes on Windows, Linux, and Mac. Designed to re-establish Domino as a world class, modern, standards-compliant, cloud native and enterprise-level collaboration platform, it adds contemporary REST APIs to Notes and Domino, enabling a modern programming experience with the tools of your choice. For more information, see [Introducing Domino REST API](topicguides/introducingrestapi.md).
 
 ![Domino REST API](assets/images/svg/DominoKeepAPI.svg)
 
@@ -14,7 +14,11 @@ HCL Domino REST API provides a secure REST API with access to HCL Domino servers
 
 ## What's new
 
-For the latest release information about HCL Domino REST API, see [What's new](references/whatisnew.md).
+For the latest release information about {{ variable.drapi }}, see [What's new](references/whatisnew.md).
+
+!!! info "API definitions now available"
+
+    The OpenAPI definitions, rendering using [ReDoc](https://github.com/Redocly/redoc), are now [available in the References](references/openapidefinitions.md). **Depending on your server configuration, not all endpoints will be active.**
 
 ---
 
@@ -30,11 +34,7 @@ For the latest release information about HCL Domino REST API, see [What's new](r
 
 ## How the documentation is organized
 
-The HCL Domino REST API documentation is based on the [Diátaxis framework](https://diataxis.fr/), which organizes documentation into the following modes to address users' documentation needs at different times and in different circumstances. Below shows an overview that guides you on where to look for needed information:
-
-!!! info "API definitions now available"
-
-    The OpenAPI definitions, rendering using [RedDoc]() are now [available in the references](references/openapidefinitions.md). Please note: depending on your server configuration, not all endpoints will be active
+The {{ variable.drapi }} documentation is based on the [Diátaxis framework](https://diataxis.fr/), which organizes documentation into the following modes to address users' documentation needs at different times and in different circumstances. Below shows an overview that guides you on where to look for needed information:
 
 **[Tutorials](tutorial/index.md)** - Hands-on introduction to HCL Domino REST API
 

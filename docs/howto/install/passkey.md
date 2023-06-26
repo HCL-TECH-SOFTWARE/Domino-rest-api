@@ -1,4 +1,4 @@
-# Use passkey to login to Admin UI
+# Use passkey to log in to Admin UI
 
 ## About this task
 The procedures guide you in using a passkey to log in to **Admin UI**. The procedures involve:
@@ -39,7 +39,7 @@ Passkeys are better options to passwords as they use public key cryptography to 
 
     ![Sign up with passkey](../../assets/images/signuppasskey.png){: style="height:60%;width:60%"}
 
-    If you’re using Safari on Mac, a **Sign In** dialog appears.
+    If you are using Safari on Mac, a **Sign In** dialog appears.
 
     ![Sign In dialog](../../assets/images/macsigninpasskey.png){: style="height:60%;width:60%"}
     
