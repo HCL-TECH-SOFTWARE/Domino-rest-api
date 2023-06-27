@@ -1,0 +1,19 @@
+@startuml Document Count
+start
+:raw count;
+fork
+:documentCollection
+.getDocumentCount();
+fork again
+:DQL - IdTable.size();
+end fork;
+#LightGreen: send value to header;
+partition "per document" {
+   :remove reader protected;
+   :remove unconfigured forms;
+   :remove empty json;
+   :emit value;
+}
+#HotPink:actual number;
+stop
+@enduml

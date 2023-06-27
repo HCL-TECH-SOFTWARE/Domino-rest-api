@@ -16,6 +16,8 @@ The approach follows the same principle as the Notes client or the Domino HTTP t
 
     The REST API does "normalize" the value of the form item. The returned form item is the (last) alias of the found form configuration. The stored document is not altered
 
+![Form and Alias](../../assets/images/FormAndAlias2.png)
+
 ## The rationale
 
 In contemporary development understanding we have label/value pairs. To normalize Notes documents we follow this pattern with the form name being the label and the last item being the value.
