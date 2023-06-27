@@ -1,12 +1,32 @@
 # OpenAPI Definitions and specifications
 
-The Domino REST API is driven by multiple OpenAPI specifications. Every Domino server is surfacing the specifications according to its configuration. Additionally each configured access to a database (refered to as scope) is available on your server.
+The Domino REST API is driven by multiple OpenAPI 3.0.2 specifications. Every Domino server is surfacing the specifications according to its configuration. Additionally each configured access to a database (refered to as scope) is available on your server.
 
 The deninitions below serve as reference and guide, so you can learn about the API without having the API installed.
 
 !!! info "API definitions are individual"
 
     Please note: depending on your server configuration, not all endpoints will be active. Custom access definitions are not visible here
+
+## OpenAPI extensions
+
+The OpenAPI specification is extensible, for one you can define new data types beyond [the default types](https://spec.openapis.org/oas/v3.0.3#schema-object) and you can introduce new method attributes prefixed with `x-`.
+We added the following data types:
+
+- Names : translate from/to a Domino names item
+- Authors: translate from/to a Domino authors item
+- Readers: translate from/to a Domino readers item
+- RichText
+
+### Custom attributes
+
+| Name                  | Value                    | Purpose                                                 |
+| --------------------- | ------------------------ | ------------------------------------------------------- |
+| x-keep-version        | number                   | active since which API version, governed by config.json |
+| x-keep-nofly          | enum (SERVER,CLIENT,EOS) | In which mode clinet, server, light is this unavailable |
+| x-preview             | boolean                  | Is the endpoint available as preview only               |
+| x-keep-scope          | string                   | ANY, $SETUP -> scope requirements for endpoint          |
+| x-content-disposition | string                   | specify content use (attachment vs. inline)             |
 
 ## Basis
 
