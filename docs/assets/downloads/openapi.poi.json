@@ -1,1 +1,363 @@
-{"openapi":"3.0.2","info":{"title":"HCL Domino REST API poi","version":"1.0.3","description":"Extension of Domino REST API for handling of office files. Named poi after the main package for office handling","contact":{"name":"HCL America Inc","url":"https://opensource.hcltechsw.com/Domino-rest-api/","email":"HeyHCL@pnp-hcl.com"},"license":{"name":"Apache 2.0","url":"https://www.apache.org/licenses/LICENSE-2.0"}},"servers":[{"url":"/api/poi-v1","description":"KEEP enabled server"}],"paths":{"/spreadsheet":{"summary":"Dealing with spreadsheets","post":{"requestBody":{"description":"Form upload","content":{"multipart/form-data":{}},"required":true},"tags":["sheets"],"responses":{"201":{"content":{"application/json":{"schema":{"type":"array","items":{"type":"object"}}}},"description":"Sucessful data upload"},"401":{"$ref":"#/components/responses/401Unauthorized1"}},"security":[{"jwt":[]}],"operationId":"sheetDocumentUpload","summary":"Upload data from Spreadsheet","description":"UPload an xlsx file. THe individual sheet names will be the form name\nField names are retrived from the first column.","x-keep-version":1},"parameters":[{"examples":{"CustomApp":{"value":"customcontacts"},"Directory":{"value":"dominodirectory"}},"name":"dataSource","description":"Keep alias for the database to be queried","schema":{"type":"string"},"in":"query","required":true}]},"/csv":{"description":"Comma separated files","post":{"requestBody":{"description":"Form upload","content":{"multipart/form-data":{}},"required":true},"tags":["sheets"],"parameters":[{"name":"form","description":"What form name should be used to create the documents","schema":{"type":"string"},"in":"query","required":true},{"name":"separator","description":"Define how the data is separated, comma (default if missing), semicolon, pipe","schema":{"enum":["comma","semicolon","pipe"],"type":"string"},"in":"query"}],"responses":{"201":{"content":{"application/json":{"schema":{"type":"array","items":{"type":"object"}}}},"description":"Sucessful data upload"},"401":{"$ref":"#/components/responses/401Unauthorized1"}},"security":[{"jwt":[]}],"operationId":"csvDocumentUpload","summary":"Upload data from csv","description":"Upload an csv file. form and separator need to be defined on query\nField names are retrived from the first row.","x-keep-version":1},"parameters":[{"examples":{"CustomApp":{"value":"customcontacts"},"Directory":{"value":"dominodirectory"}},"name":"dataSource","description":"Keep alias for the database to be queried","schema":{"type":"string"},"in":"query","required":true}]}},"components":{"schemas":{"ErrorMessage":{"title":"Root Type for ErrorMessage","description":"Detailed error message, might contain stacktrace","type":"object","properties":{"details":{"type":"string"},"message":{"type":"string"},"status":{"format":"int32","type":"integer"}},"example":{"details":"Long list of details","message":"We screwed up","status":500}}},"responses":{"401Unauthorized":{"$ref":"#/components/responses/401Unauthorized1"},"401Unauthorized1":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/ErrorMessage"},"examples":{"Unauthorized":{"value":{"status":401,"message":"Invalid credentials or account locked"}}}}},"description":"401 Unauthorized"},"400BadRequest":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/ErrorMessage"}}},"description":"Invalid request. Shows up when submission is flaky:\n- Wrong authentication\n- Wrong content-type\n- Missing or wrong parameter types"},"403Forbidden":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/ErrorMessage"},"examples":{"Forbidden":{"value":{"message":"Nice try chap, ask before next time","status":403}}}}},"description":"Forbidden"},"404NotFound":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/ErrorMessage"},"examples":{"NotFound":{"value":{"message":"This is not the data you seek!","status":404}}}}},"description":"Content not found"},"405MethodNotAllowed":{"description":"Method not allowed"},"406NotAcceptable":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/ErrorMessage"},"examples":{"GenericRejection":{"value":{"details":"The haferlup needs left turning shrufti","message":"This is not a supported operation. Try again","status":406}}}}},"description":"Invalid operation - something got requested that isn't supported"},"500InternalServerError":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/ErrorMessage"},"examples":{"GenericError":{"value":{"details":"Dreaded pirate NullPointer","message":"Sorry pal, we screwed up","status":500}}}}},"description":"The server screwed up"},"501NotImplemented":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/ErrorMessage"},"examples":{"NextVersion":{"value":{"details":"We do sprints, not marathons","message":"Not now, maybe tomorrow","status":501}}}}},"description":"Working on it, just not yet"}},"securitySchemes":{"jwt":{"scheme":"bearer","type":"http","description":"Token based auth (preferred)"}}},"security":[{"jwt":[]}],"tags":[{"name":"sheets","description":"Dealing with spreadsheets"},{"name":"docs","description":"Dealing with Documents"},{"name":"preso","description":"Dealing with presentations"},{"name":"pdf","description":"PDF documents"}]}
+{
+    "openapi": "3.0.2",
+    "info": {
+        "title": "HCL Domino REST API poi",
+        "version": "1.0.3",
+        "description": "Extension of Domino REST API for handling of office files. Named poi after the main package for office handling",
+        "contact": {
+            "name": "HCL America Inc",
+            "url": "https://opensource.hcltechsw.com/Domino-rest-api/",
+            "email": "HeyHCL@pnp-hcl.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0"
+        }
+    },
+    "servers": [
+        {
+            "url": "/api/poi-v1",
+            "description": "KEEP enabled server"
+        }
+    ],
+    "paths": {
+        "/spreadsheet": {
+            "summary": "Dealing with spreadsheets",
+            "post": {
+                "requestBody": {
+                    "description": "Form upload",
+                    "content": {
+                        "multipart/form-data": {
+
+                        }
+                    },
+                    "required": true
+                },
+                "tags": [
+                    "sheets"
+                ],
+                "responses": {
+                    "201": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object"
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Sucessful data upload"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/401Unauthorized1"
+                    }
+                },
+                "security": [
+                    {
+                        "jwt": [
+                        ]
+                    }
+                ],
+                "operationId": "sheetDocumentUpload",
+                "summary": "Upload data from Spreadsheet",
+                "description": "UPload an xlsx file. THe individual sheet names will be the form name\nField names are retrived from the first column.",
+                "x-keep-version": 1
+            },
+            "parameters": [
+                {
+                    "examples": {
+                        "CustomApp": {
+                            "value": "customcontacts"
+                        },
+                        "Directory": {
+                            "value": "dominodirectory"
+                        }
+                    },
+                    "name": "dataSource",
+                    "description": "Keep alias for the database to be queried",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "in": "query",
+                    "required": true
+                }
+            ]
+        },
+        "/csv": {
+            "description": "Comma separated files",
+            "post": {
+                "requestBody": {
+                    "description": "Form upload",
+                    "content": {
+                        "multipart/form-data": {
+
+                        }
+                    },
+                    "required": true
+                },
+                "tags": [
+                    "sheets"
+                ],
+                "parameters": [
+                    {
+                        "name": "form",
+                        "description": "What form name should be used to create the documents",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "name": "separator",
+                        "description": "Define how the data is separated, comma (default if missing), semicolon, pipe",
+                        "schema": {
+                            "enum": [
+                                "comma",
+                                "semicolon",
+                                "pipe"
+                            ],
+                            "type": "string"
+                        },
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object"
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Sucessful data upload"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/401Unauthorized1"
+                    }
+                },
+                "security": [
+                    {
+                        "jwt": [
+                        ]
+                    }
+                ],
+                "operationId": "csvDocumentUpload",
+                "summary": "Upload data from csv",
+                "description": "Upload an csv file. form and separator need to be defined on query\nField names are retrived from the first row.",
+                "x-keep-version": 1
+            },
+            "parameters": [
+                {
+                    "examples": {
+                        "CustomApp": {
+                            "value": "customcontacts"
+                        },
+                        "Directory": {
+                            "value": "dominodirectory"
+                        }
+                    },
+                    "name": "dataSource",
+                    "description": "Keep alias for the database to be queried",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "in": "query",
+                    "required": true
+                }
+            ]
+        }
+    },
+    "components": {
+        "schemas": {
+            "ErrorMessage": {
+                "title": "Root Type for ErrorMessage",
+                "description": "Detailed error message, might contain stacktrace",
+                "type": "object",
+                "properties": {
+                    "details": {
+                        "type": "string"
+                    },
+                    "message": {
+                        "type": "string"
+                    },
+                    "status": {
+                        "format": "int32",
+                        "type": "integer"
+                    }
+                },
+                "example": {
+                    "details": "Long list of details",
+                    "message": "We screwed up",
+                    "status": 500
+                }
+            }
+        },
+        "responses": {
+            "401Unauthorized": {
+                "$ref": "#/components/responses/401Unauthorized1"
+            },
+            "401Unauthorized1": {
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/ErrorMessage"
+                        },
+                        "examples": {
+                            "Unauthorized": {
+                                "value": {
+                                    "status": 401,
+                                    "message": "Invalid credentials or account locked"
+                                }
+                            }
+                        }
+                    }
+                },
+                "description": "401 Unauthorized"
+            },
+            "400BadRequest": {
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/ErrorMessage"
+                        }
+                    }
+                },
+                "description": "Invalid request. Shows up when submission is flaky:\n- Wrong authentication\n- Wrong content-type\n- Missing or wrong parameter types"
+            },
+            "403Forbidden": {
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/ErrorMessage"
+                        },
+                        "examples": {
+                            "Forbidden": {
+                                "value": {
+                                    "message": "Nice try chap, ask before next time",
+                                    "status": 403
+                                }
+                            }
+                        }
+                    }
+                },
+                "description": "Forbidden"
+            },
+            "404NotFound": {
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/ErrorMessage"
+                        },
+                        "examples": {
+                            "NotFound": {
+                                "value": {
+                                    "message": "This is not the data you seek!",
+                                    "status": 404
+                                }
+                            }
+                        }
+                    }
+                },
+                "description": "Content not found"
+            },
+            "405MethodNotAllowed": {
+                "description": "Method not allowed"
+            },
+            "406NotAcceptable": {
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/ErrorMessage"
+                        },
+                        "examples": {
+                            "GenericRejection": {
+                                "value": {
+                                    "details": "The haferlup needs left turning shrufti",
+                                    "message": "This is not a supported operation. Try again",
+                                    "status": 406
+                                }
+                            }
+                        }
+                    }
+                },
+                "description": "Invalid operation - something got requested that isn't supported"
+            },
+            "500InternalServerError": {
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/ErrorMessage"
+                        },
+                        "examples": {
+                            "GenericError": {
+                                "value": {
+                                    "details": "Dreaded pirate NullPointer",
+                                    "message": "Sorry pal, we screwed up",
+                                    "status": 500
+                                }
+                            }
+                        }
+                    }
+                },
+                "description": "The server screwed up"
+            },
+            "501NotImplemented": {
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/ErrorMessage"
+                        },
+                        "examples": {
+                            "NextVersion": {
+                                "value": {
+                                    "details": "We do sprints, not marathons",
+                                    "message": "Not now, maybe tomorrow",
+                                    "status": 501
+                                }
+                            }
+                        }
+                    }
+                },
+                "description": "Working on it, just not yet"
+            }
+        },
+        "securitySchemes": {
+            "jwt": {
+                "scheme": "bearer",
+                "type": "http",
+                "description": "Token based auth (preferred)"
+            }
+        }
+    },
+    "security": [
+        {
+            "jwt": [
+            ]
+        }
+    ],
+    "tags": [
+        {
+            "name": "sheets",
+            "description": "Dealing with spreadsheets"
+        },
+        {
+            "name": "docs",
+            "description": "Dealing with Documents"
+        },
+        {
+            "name": "preso",
+            "description": "Dealing with presentations"
+        },
+        {
+            "name": "pdf",
+            "description": "PDF documents"
+        }
+    ]
+}
