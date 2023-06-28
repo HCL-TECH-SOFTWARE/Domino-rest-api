@@ -29,3 +29,7 @@ To make all ports accessible on Port 443, an https proxy server (Ingress on Kube
 
 - [Proxy using multiple sub-domains](../../howto/web/httpsproxy.md)
 - [Proxy using URL path access](../../howto/web/httpsproxy2.md)
+
+Alternatively you can configure the Ports directly for TLS. The ports don't change like the web default settings (80 for http, 443 for https), they just start to require https, e.g. `https://yourserver.com:8880`
+
+Details on certificate configuration [can be found here](../../howto/IdP/configuringCertificates.md).
