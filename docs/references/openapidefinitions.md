@@ -1,12 +1,32 @@
-# OpenAPI definitions and specifications
+# OpenAPI Definitions and specifications
 
-The Domino REST API is driven by many OpenAPI specifications. Every Domino server is surfacing the specifications according to its configuration. Additionally, each configured access to a database (referred to as scope) is available on your server.
+The Domino REST API is driven by multiple OpenAPI 3.0.2 specifications. Every Domino server is surfacing the specifications according to its configuration. Additionally each configured access to a database (refered to as scope) is available on your server.
 
-The definitions below serve as reference and guide, so you can learn about the API without having the API installed.
+The deninitions below serve as reference and guide, so you can learn about the API without having the API installed.
 
 !!! info "API definitions are individual"
 
-    Kindly note that depending on your server configuration, not all endpoints will be active. Custom access definitions are not visible here.
+    Please note: depending on your server configuration, not all endpoints will be active. Custom access definitions are not visible here
+
+## OpenAPI extensions
+
+The OpenAPI specification is extensible, for one you can define new data types beyond [the default types](https://spec.openapis.org/oas/v3.0.3#schema-object) and you can introduce new method attributes prefixed with `x-`.
+We added the following data types:
+
+- Names : translate from/to a Domino names item
+- Authors: translate from/to a Domino authors item
+- Readers: translate from/to a Domino readers item
+- RichText
+
+### Custom attributes
+
+| Name                  | Value                    | Purpose                                                 |
+| --------------------- | ------------------------ | ------------------------------------------------------- |
+| x-keep-version        | number                   | active since which API version, governed by config.json |
+| x-keep-nofly          | enum (SERVER,CLIENT,EOS) | In which mode clinet, server, light is this unavailable |
+| x-preview             | boolean                  | Is the endpoint available as preview only               |
+| x-keep-scope          | string                   | ANY, $SETUP -> scope requirements for endpoint          |
+| x-content-disposition | string                   | specify content use (attachment vs. inline)             |
 
 ## Basis
 
@@ -24,7 +44,7 @@ Access to administrative functions allowing to manage:
 - Groups
 - Access control lists (ACL)
 
-[Explore the admin API using the ReDoc viewer](https://redocly.github.io/redoc/?url=https://opensource.hcltechsw.com/Domino-rest-api/assets/downloads/openapi.admin.json) 
+[Explore the admin API using the ReDoc viewer](https://redocly.github.io/redoc/?url=https://opensource.hcltechsw.com/Domino-rest-api/assets/downloads/openapi.admin.json)
 
 [Open the `openapi.admin.json` file](https://opensource.hcltechsw.com/Domino-rest-api/assets/downloads/openapi.admin.json)
 
@@ -32,7 +52,7 @@ Access to administrative functions allowing to manage:
 
 The setup API provides endpoints to configure access to databases. You can specify what documents, views, folders, agents, and items are made available in the REST API. Requires designer access to databases and `LocalKeepAdmins` membership.
 
-[Explore the setup API using the ReDoc viewer](https://redocly.github.io/redoc/?url=https://opensource.hcltechsw.com/Domino-rest-api/assets/downloads/openapi.setup.json) 
+[Explore the setup API using the ReDoc viewer](https://redocly.github.io/redoc/?url=https://opensource.hcltechsw.com/Domino-rest-api/assets/downloads/openapi.setup.json)
 
 [Open the `openapi.setup.json` file](https://opensource.hcltechsw.com/Domino-rest-api/assets/downloads/openapi.setup.json)
 
@@ -40,7 +60,7 @@ The setup API provides endpoints to configure access to databases. You can speci
 
 PIM stands for "Personal Information Management" and includes access to mail, calendar, contacts, todos, and notebook. Access is based on users ownership of mail resources.
 
-[Explore the PIM API using the ReDoc viewer](https://redocly.github.io/redoc/?url=https://opensource.hcltechsw.com/Domino-rest-api/assets/downloads/openapi.pim.json) 
+[Explore the PIM API using the ReDoc viewer](https://redocly.github.io/redoc/?url=https://opensource.hcltechsw.com/Domino-rest-api/assets/downloads/openapi.pim.json)
 
 [Open the `openapi.pim.json` file](https://opensource.hcltechsw.com/Domino-rest-api/assets/downloads/openapi.pim.json)
 
@@ -48,7 +68,7 @@ PIM stands for "Personal Information Management" and includes access to mail, ca
 
 We named this API in honor of an [Apache project](https://poi.apache.org/) that enables the access to Microsoft office formats.
 
-[Explore the POI API using the ReDoc viewer](https://redocly.github.io/redoc/?url=https://opensource.hcltechsw.com/Domino-rest-api/assets/downloads/openapi.poi.json) 
+[Explore the POI API using the ReDoc viewer](https://redocly.github.io/redoc/?url=https://opensource.hcltechsw.com/Domino-rest-api/assets/downloads/openapi.poi.json)
 
 [Open the `openapi.poi.json` file](https://opensource.hcltechsw.com/Domino-rest-api/assets/downloads/openapi.poi.json)
 
