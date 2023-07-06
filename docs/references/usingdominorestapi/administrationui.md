@@ -130,7 +130,7 @@ Select **Database Management - Activation** from the home page.
 ![Configure Database](../../assets/images/AddNewDatabase.png)
 
 !!!note
-    You can set the **Maximum Access Level** of the scope to control the maximum access anyone using the scope should have to prevent applications from inheriting a user's access rights when that user grants app access on their behalf. By default, the set maximum access level is **Editor**. To know more about what each access level allows and to whom the access level is assigned, see [Access levels in the ACL](https://help.hcltechsw.com/domino/12.0.2/admin/conf_accesslevelsintheacl_c.html){: target="_blank" rel="noopener noreferrer"}.     
+    You can set the **Maximum Access Level** of the scope to control the maximum access anyone using the scope should have. This prevents an app, which has inherited a user's access rights when the user grants app access, from unauthorized altering of schemas or access control lists. By default, the set maximum access level is **Editor**. To know more about what each access level allows and to whom the access level is assigned, see [Access levels in the ACL](https://help.hcltechsw.com/domino/12.0.2/admin/conf_accesslevelsintheacl_c.html){: target="_blank" rel="noopener noreferrer"}.     
 
 A scope points to a schema that's contained in a database. A database can have many schemas for different use cases and a schema can be pointed to by more than one scope.
 
@@ -151,6 +151,9 @@ The **Application Management** page shows the list of all available applications
       ![Add Application](../../assets/images/AddApplication.png)
 
 2. Under **Add New Application**, fill in the form and click **Add**.
+
+      Kindly note that when your app accesses endpoints that run write operations in the `/setup-v1/` URL path, make sure to add the `$SETUP` scope aside from the `$DATA` scope to enhance access control in relation to the app inheriting a user's access rights when the user grants app access. 
+
 
       ![Application Form](../../assets/images/AddApplicationForm.png)
 
