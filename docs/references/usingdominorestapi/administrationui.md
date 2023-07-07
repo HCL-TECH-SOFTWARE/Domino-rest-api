@@ -62,13 +62,16 @@ You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical Vie
 
 The selected form is now configured with default settings and listed under **Configured Forms**.
 
-To make changes to the configuration:
+**To make changes to the configuration:**
 
 1. Select the Form. This loads the `default` Access Mode for the Form.
 
       ![Access Mode](../../assets/images/AccessMode.png)
 
 2. Set the Read or Write access formula for each of the fields in the Form.
+
+!!!tip
+      Click **Add All** if you want to add all the available fields to the Form. 
 
 ### List available views
 
@@ -81,18 +84,17 @@ To make changes to the configuration:
 
 **To activate a specific view or views**:
 
-1. Select the view that you want to activate, and then click the corresponding **Active** option under **Status**.
-2. Click **Save**.
+- Select the view that you want to activate, and then click the corresponding **Active** option under **Status**.
 
 !!!tip
-    Clicking the **Inactive** option corresponding to a view, and then clicking **Save** deactivates the view.  
+    Clicking the **Inactive** option corresponding to a view deactivates the view. On the **Reset Views Columns** dialog, click **Yes** to confirm deactivation of the view. 
 
 **To activate all views**:
 
-- Click **Activate All**, and then click **Save**.
+- Click **Activate All**.
 
 !!!tip
-    Clicking **Deactivate All**, and then clicking **Save** deactivates all active Views.
+    Clicking **Deactivate All** deactivates all active views. On the **Reset ALL View Columns** dialog, click **Yes** to confirm deactivation of all views. 
 
 **To edit a view**
 

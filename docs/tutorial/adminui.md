@@ -105,11 +105,9 @@ The selected form is now listed under **Configured Forms**.
 
       ![List Views](../assets/images/ListOfViews1.png)
 
-3. Click **Save**.
-
 <!-- prettier-ignore -->
 !!!tip
-    Clicking the **Inactive** option corresponding to a view, and then clicking **Save** deactivates the view.
+     Clicking the **Inactive** option corresponding to a view deactivates the view. On the **Reset Views Columns** dialog, click **Yes** to confirm deactivation of the view.
 
 ## Manage database agents
 
