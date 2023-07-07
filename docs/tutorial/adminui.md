@@ -82,35 +82,32 @@ This page allows you to set various configurations to your schema.
 ## Manage database forms
 
 1. Click **Database Forms** from the menu bar. This lists all the forms available for the schema.
-
-      ![List Forms](../assets/images/ListOfForms.png)
-
 2. From the list of **Unconfigured Forms**, click a form to configure.
 3. In the **Configure** dialog, click **Yes** to configure the form with default settings.
 
 The selected form is now listed under **Configured Forms**.
 
+![List Forms](../assets/images/ListOfForms1.png)
+
 **To make changes to the configured form:**
 
 1. Select the form to load the **Access Mode** page for the form.
-
-      ![Access Mode](../assets/images/AccessMode.png)
-
 2. Under **Show fields from**, which shows the fields that can be added to the form, hover over a field item and click the **+** icon. This adds the field in the form. Repeat this for all.
+
+      ![Access Mode](../assets/images/AccessMode1.png)
+
 3. Click **Save**.
 
 ## Manage database views
 
 1. Click **Database Views** from the menu bar. This lists all the views for the selected database.
-
-      ![List Views](../assets/images/ListOfViews.png)
-
 2. Select the view that you want to activate, and then click the corresponding **Active** option under **Status**.
-3. Click **Save**.
+
+      ![List Views](../assets/images/ListOfViews1.png)
 
 <!-- prettier-ignore -->
 !!!tip
-    Clicking the **Inactive** option corresponding to a view, and then clicking **Save** deactivates the view.
+     Clicking the **Inactive** option corresponding to a view deactivates the view. On the **Reset Views Columns** dialog, click **Yes** to confirm deactivation of the view.
 
 ## Manage database agents
 

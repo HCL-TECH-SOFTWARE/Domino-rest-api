@@ -28,9 +28,9 @@ Select **Database Management - REST API** from the home page.
 
 The **Schema Management** page shows the list of all available schemas.
 
-![List Database](../../assets/images/ListSchemas.PNG)
+![List Database](../../assets/images/ListSchemas.png)
 
-You can arrange the schema names in either list or grid view or sort them alphabetically. There is also a provision to search through the list.
+You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical View**, or **NSF View**. There is also a provision to search through the list either via **Schema Name** or **NSF Name**.
 
 ### Add a schema
 
@@ -42,7 +42,7 @@ You can arrange the schema names in either list or grid view or sort them alphab
 
       This creates the Alias. You can use this to access the database via the Domino REST API. One NSF can be available under more than one alias, such as with different security settings.
 
-      ![Create Database Form](../../assets/images/AddSchemaForm.PNG)
+      ![Create Database Form](../../assets/images/AddSchemaForm.png)
 
 2. Under **Available Databases**, select a database from the list of databases available to the Domino REST API.
 3. Under **Add New Schema**, enter details in the **Schema Name** and **Description**, and then select the **Formula Engine** for the schema you want to create.
@@ -62,13 +62,16 @@ You can arrange the schema names in either list or grid view or sort them alphab
 
 The selected form is now configured with default settings and listed under **Configured Forms**.
 
-To make changes to the configuration:
+**To make changes to the configuration:**
 
 1. Select the Form. This loads the `default` Access Mode for the Form.
 
       ![Access Mode](../../assets/images/AccessMode.png)
 
 2. Set the Read or Write access formula for each of the fields in the Form.
+
+!!!tip
+      Click **Add All** if you want to add all the available fields to the Form. 
 
 ### List available views
 
@@ -81,18 +84,17 @@ To make changes to the configuration:
 
 **To activate a specific view or views**:
 
-1. Select the view that you want to activate, and then click the corresponding **Active** option under **Status**.
-2. Click **Save**.
+- Select the view that you want to activate, and then click the corresponding **Active** option under **Status**.
 
 !!!tip
-    Clicking the **Inactive** option corresponding to a view, and then clicking **Save** deactivates the view.  
+    Clicking the **Inactive** option corresponding to a view deactivates the view. On the **Reset Views Columns** dialog, click **Yes** to confirm deactivation of the view. 
 
 **To activate all views**:
 
-- Click **Activate All**, and then click **Save**.
+- Click **Activate All**.
 
 !!!tip
-    Clicking **Deactivate All**, and then clicking **Save** deactivates all active Views.
+    Clicking **Deactivate All** deactivates all active views. On the **Reset ALL View Columns** dialog, click **Yes** to confirm deactivation of all views. 
 
 **To edit a view**
 
@@ -127,7 +129,10 @@ Select **Database Management - Activation** from the home page.
 2. Under **Available Schema**, select the schema that the scope will belong to.
 3. Under **Add New Scope**, fill in the form and click **Add**.
 
-      ![Configure Database](../../assets/images/AddNewDatabase.png)
+![Configure Database](../../assets/images/AddNewDatabase.png)
+
+!!!note
+    You can set the **Maximum Access Level** of the scope to control the maximum access anyone using the scope should have. This prevents an app, which has inherited a user's access rights when the user grants app access, from unauthorized altering of schemas or access control lists. By default, the set maximum access level is **Editor**. To know more about what each access level allows and to whom the access level is assigned, see [Access levels in the ACL](https://help.hcltechsw.com/domino/12.0.2/admin/conf_accesslevelsintheacl_c.html){: target="_blank" rel="noopener noreferrer"}.     
 
 A scope points to a schema that's contained in a database. A database can have many schemas for different use cases and a schema can be pointed to by more than one scope.
 
@@ -148,6 +153,9 @@ The **Application Management** page shows the list of all available applications
       ![Add Application](../../assets/images/AddApplication.png)
 
 2. Under **Add New Application**, fill in the form and click **Add**.
+
+      Kindly note that when your app accesses endpoints that run write operations in the `/setup-v1/` URL path, make sure to add the `$SETUP` scope aside from the `$DATA` scope to enhance access control in relation to the app inheriting a user's access rights when the user grants app access. 
+
 
       ![Application Form](../../assets/images/AddApplicationForm.png)
 
