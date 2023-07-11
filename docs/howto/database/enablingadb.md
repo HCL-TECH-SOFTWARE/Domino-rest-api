@@ -144,7 +144,7 @@ A group of API requests is known as a collection. Each collection may have subfo
 
 To add a database schema, run the following command. Find the applicable Request URL from the OpenAPI Specification document. Provide the body for `POST` request.
 
-![Adddatabase](../../assets/images/adddatabaseschema.png)
+![Add database](../../assets/images/adddatabaseschema.png)
 
 <details>
 <summary><b>cURL code snippet</b></summary>
