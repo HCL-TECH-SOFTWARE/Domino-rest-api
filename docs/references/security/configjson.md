@@ -180,8 +180,8 @@ Domino REST API reads all config.json from Domino REST API core and deployed ext
 
 A current `config.json` has the following top-level properties. These properties are case-sensitive.
 
-| Property                 | Type                                           | Description                                                                                                                                           |
-| :----------------------- | :--------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Property | Type | Description |
+| :---- | :---- | :---- |
 | MANAGEMENTPORT           | int (0 to 65353)                               | (default 8889) Commands regarding the runtime, such as config and shutdown, should only be exposed to an admin network workstation.                      |
 | METRICSPORT              | int (0 to 65353)                               | (default 8890) Port for Prometheus metrics.                                                                                                           |
 | Firehoseport             | int (0 to 65353)                               | (default 42424) Port for Firehose to successfully deliver data to custom HTTP endpoints.                                                              |
@@ -194,6 +194,8 @@ A current `config.json` has the following top-level properties. These properties
 | createKeepDBfromTemplate | Boolean                                        | True to allow create Domino REST API Database from template.                                                                                          |
 | AllowJwtMail             | Boolean                                        | True to allow email to be sent via a JWT token.                                                                                                       |
 | AllowLocalMailFile       | Boolean                                        | True to allow local mail file.                                                                                                                        |
+|⁠showDeprecatedEndpoints|Boolean|True to allow access to deprecated endpoints / APIs|
+|⁠showPreviewFeatures|Boolean|True to allow preview access to new features, endpoints, or APIs|
 
 ## Prometheus Parameters
 

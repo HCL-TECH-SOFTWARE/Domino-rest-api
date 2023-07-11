@@ -6,6 +6,7 @@ Topics to guide you in completing configuration goals and tasks in relation to d
 
 Topics under development:
 
+- [Change file size limit](changefilesize.md)
 - [Configuring parameters](configparam.md)
 - [Disable modules](disablemodule.md)
 - [Configuring HTTPS](httpsprod.md)
