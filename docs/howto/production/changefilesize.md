@@ -10,9 +10,11 @@ The procedure guides you on how to change the file size limit in Domino REST API
 2.	Copy the JSON object to the JSON file.
 
     ```json
-    "bodyHandler": {
-      "uploadsDirectory": "keep-file-uploads.d",
-      "bodyLimit": 10000000
+    {
+      "bodyHandler": {
+        "uploadsDirectory": "keep-file-uploads.d",
+        "bodyLimit": 10000000
+      }
     }
     ```
 
@@ -20,10 +22,12 @@ The procedure guides you on how to change the file size limit in Domino REST API
 In the example, the file size limit is set to 128 MB. 
 
     ```json
-    "bodyHandler": {
-      "uploadsDirectory": "keep-file-uploads.d",
-      "bodyLimit": 128000000
-    }
+    {
+      "bodyHandler": {
+        "uploadsDirectory": "keep-file-uploads.d",
+        "bodyLimit": 128000000
+      }
+    }  
     ```
 
 	!!!tip
