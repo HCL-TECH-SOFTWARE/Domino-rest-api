@@ -4,7 +4,7 @@
 
 Domino REST API uses four ports which have different purposes and warrant different access/security settings. By dividing Domino REST API access across more than one port, an administrator can take advantage of access security provided by the operating system and/or firewall.
 
-The ports are specified in `config.json` but can be overwritten using environment variables. See the page on [configuration](../../references/security/configjson.md) for details.
+The ports are specified in `config.json` but can be overwritten using environment variables. See the page on [configuration](../../references/quickreference/parameters.md) for details.
 
 ## Data PORT (8880)
 

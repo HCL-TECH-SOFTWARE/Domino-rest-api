@@ -84,7 +84,7 @@ const captureFailedURL = (baseURL) => {
   const hits = pageSource.filter((page) => pageHit(page, lookfor));
   if (hits.length > 0) {
     const tryThis = document.createElement('p');
-    tryThis.innerText = 'Is this what you were looking for:';
+    tryThis.innerText = 'We think this is this what you might be looking for:';
     const list = document.createElement('ul');
     hits.forEach((page) => {
       const item = document.createElement('li');
@@ -92,6 +92,7 @@ const captureFailedURL = (baseURL) => {
       link.innerText = page.title;
       link.href = baseURL + page.new;
       item.appendChild(link);
+      item.appendChild(document.createTextNode(' URL:' + link.href));
       list.appendChild(item);
     });
     errorDiv.appendChild(tryThis);

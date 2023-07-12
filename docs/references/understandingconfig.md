@@ -8,7 +8,7 @@ Then, it's overlaid with any JSON files in the `keepconfig.d` directory within t
 
 ## Hierarchy
 
-![The call hierarchy](../../assets/images/ActualConfiguration.png)
+![The call hierarchy](../assets/images/ActualConfiguration.png)
 
 All files contribute JSON, which are overlaid on top of each other. JSON elements with same names get overwritten. Arrays are replaced and not overwritten.
 

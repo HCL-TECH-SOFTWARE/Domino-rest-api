@@ -192,7 +192,13 @@
     {
       "title": "config.json",
       "old": "security/configjson.html",
-      "new": "references/security/configjson.html"
+      "new": "references/quickreference/parameters.html"
+    },
+
+    {
+      "title": "config.json",
+      "old": "references/security/configjson.html",
+      "new": "references/quickreference/parameters.html"
     },
 
     {
@@ -210,7 +216,13 @@
     {
       "title": "security.json",
       "old": "security/securityjson.html",
-      "new": "references/security/securityjson.html"
+      "new": "references/quickreference/parameters.html"
+    },
+
+    {
+      "title": "security.json",
+      "old": "references/security/securityjson.html",
+      "new": "references/quickreference/parameters.html"
     },
 
     {

@@ -1,8 +1,14 @@
-# COnfiguration Parameters
+# Configuration Parameters
 
-The configuration is assembled from JSON files and a few selected environment parameters. We provide environment parameters because they are a popular way to configure instances in virtual environments such as Docker, IBM Cloud, and Kubernetes.
+The configuration is assembled from JSON files and a few selected environment parameters. We use those environment parameters because they are a commonly used way to configure instances in virtual environments such as Docker, IBM Cloud, and Kubernetes.
 
-Parameters are **case sensitive**
+The Domino REST API ships with default settings in internal files `config.json` and `security.json`. These are internal files, not subject to user modifications (A kitten will die when you try).
+
+!!! warning "CaSe SeNsItIvE"
+
+    Parameters are **case sensitive**
+
+To alter a parameter either set an environment parameter, if one exists (there are not that many) or create a json file in `keepconfig.d` following the how-to guide [Modify configuration of Domino REST API](../../howto/install/modifyconfig.md)
 
 ## Environment
 
