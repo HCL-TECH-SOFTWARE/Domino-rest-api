@@ -33,3 +33,7 @@ The following are settings that can be set in the notes.ini
 | `KeepManagementURL`     | optional    | Domino REST API management URL if different than http://localhost:8889  |
 | `KeepNumAttachAttempts` | optional    | Number of attempts to get status of Domino REST API launch (default 10) |
 | `KeepLaunchWaitSecs`    | optional    | Number of seconds to wait before executing java command (default 0)     |
+
+!!! danger "Keep the KeepManagementURL parameter current"
+
+    When configuring the REST API to use [TLS directly](../../howto/production/httpsprod.md) you need to update `KeepManagementURL` to use `https://` and the domain name your TLS certificate is issued to

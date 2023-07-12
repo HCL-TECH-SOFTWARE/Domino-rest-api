@@ -12,6 +12,8 @@ If Domino isn't up and running, follow the steps for [Troubleshooting one-touch 
 
 You get a timeout error when trying to access `http://yourserver:8880` (replace `yourserver` with the DNS name of your Domino server). You need to check if the REST API is loaded: In the Domino server console type `show tasks`. If there is no entry `restapi` in the list, load it using `load restapi` in the Domino console. If it is listed shut it down with `tell restapi quit` before trying `load restapi`. Take note of any messages in case you need more support.
 
+--8<-- "iskeeprunning.md"
+
 ## Address already in use error
 
 You get this error when you run the [sample script](../references/downloads.md) with the sample Notes database:

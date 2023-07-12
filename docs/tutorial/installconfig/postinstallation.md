@@ -2,11 +2,13 @@
 
 After installation the Domino REST API will run on port 8880 with http and a transient JWT token for single server use. This is nice to try things out, but not production ready. Familiarize yourself with the tasks listed here to finalize a **production worthy** Domino REST API deployment.
 
+--8<-- "iskeeprunning.md"
+
 The headlines link to details for each task. Feedback is welcome.
 
 ## [Securing ports](../installconfig/configuringPorts.md)
 
-A production environment must encrypt the communication between any client and the Domino REST API Server. We use many ports, learn how to secure them.
+A production environment must encrypt the communication between any client and the Domino REST API Server. We use multiple ports, learn how to secure them.
 
 ## [Enable a database](../../howto/database/enablingadb.md)
 
@@ -20,7 +22,7 @@ Domino REST API uses JSON Web Token (JWT) for Authorization. To allow using Domi
 
 JWT token can be shared between servers, effectively enabling SSO (Single Sign On) for Domino REST API. It's LTPA for grownups.
 
-## [Configure apps](../../tutorial/adminui.md)
+## [Configure OAuth access for apps](../../tutorial/adminui.md)
 
 The Admin UI allows to configure database schemas, server scopes and OAuth applications (Domino functioning as IdP).
 

@@ -1,0 +1,40 @@
+@startjson hardening.json
+{
+  "CORS": {
+    "localhost": false,
+    ".local": false
+  },
+  "DEBUG": false,
+  "DisableEventBusSocket": true,
+  "enabledProtocols": {
+    "TLSv1.2": false
+  },
+  "PORT": 443,
+  "showDeprecatedEndpoints": false,
+  "showPreviewFeatures": false,
+  "TLSFile": "thecertificate.pem",
+  "TLSType": "pem",
+  "versions": {
+    "setup": {
+      "active": false
+    },
+    "admin": {
+      "active": false
+    }
+  },
+  "verticles": {
+    "Design": {
+      "active": false
+    },
+    "KeepAdmin": {
+      "active": false
+    },
+    "AdminAccess": {
+      "active": false
+    },
+    "Firehose": {
+      "active": false
+    }
+  }
+}
+@endjson

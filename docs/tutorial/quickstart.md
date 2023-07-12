@@ -1,6 +1,12 @@
 # Quickstart
 
-This guide allows new users with working experience in HCL Notes and HCL Domino to quickly get started with Domino REST API.
+This guide allows new users with working experience in HCL Notes and HCL Domino to quickly get started with Domino REST API. These are the steps:
+
+- Download the installer or Container (a.k.a. Docker) image
+- [Install](installconfig/index.md) and run the REST API
+- Follow [the tutorials](../tutorial/index.md) to learn about [AdminUI](../tutorial/adminui.md),
+- Read the introduction to the concepts, especially [schemas and scopes](../topicguides/understanding.md)
+- Get to know [Postman and curl](../tutorial/postmancurl.md), two invaluable tools for REST usage
 
 ## Downloading Domino REST API
 
@@ -8,7 +14,7 @@ Log in to [Flexnet](https://hclsoftware.flexnetoperations.com/) to and download 
 
 ## Let's connect
 
-Join us for questions, discussions, ideas and feedback over at [OpenNTF's Discord server](https://discord.com/invite/jmRHpDRnH4).
+--8<-- "feedback.md"
 
 ## What's New
 
@@ -16,7 +22,7 @@ Check [What's New](../references/whatisnew.md) to learn what's new in Domino RES
 
 ## The Domino REST API schema
 
-You won't find the Domino REST API schema here. Samples and explanations, configuration and steps - yes. The actual schema however resides on your Domino REST API server instance as OpenAPI specification. You can read and explore it directly with your own data.
+You will find a snapshot of the Domino REST API schemas [here](../references/openapidefinitions.md). The actual schema however resides on your Domino REST API server instance as OpenAPI specification. You can read and explore it directly with your own data.
 {: .alert .alert-danger}
 
 ## A few phrases you should know
@@ -75,14 +81,14 @@ Read more about them in [Domino REST API](../references/usingdominorestapi/roles
 Ensure your endpoints are [secure](../references/security/securingKEEPEndpoints.md).
 Bring up a browser and verify that you can hit these endpoints:
 
-| Endpoints                                                                                             | Ports | Details                                                                                                                                                                                                                                                                                                                               | Webpages                                                      |
-| ----------------------------------------------------------------------------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| [Domino REST API Home Page](http://localhost:8880/)                                                   | 8880  | Start page                                                                                                                                                                                                                                                                                                                            | ![StartPage](../assets/images/startpage.png)                  |
-| [Live Domino REST API](http://localhost:8880/openapi/index.html?url=/api/v1/schema/openapi.core.json) | 8880  | Interact live with the API                                                                                                                                                                                                                                                                                                            | ![OpenAPI](../assets/images/OpenAPI.png)                      |
-| [Admin UI](http://localhost:8880/admin/ui/)                                                           | 8880  | Login with an admin user. LocalDomainAdmin member                                                                                                                                                                                                                                                                                     | ![Admin Login](../assets/images/AdminLogin.png)               |
-| [Management API](http://localhost:8889/)                                                              | 8889  | Access to the log and runtime info                                                                                                                                                                                                                                                                                                    | ![Server Info](../assets/images/ServerInfo.png)               |
-| [Prometheus Metrics](http://localhost:8890/)                                                          | 8890  | Performance info in Prometheus format. Protected with basic authentication (metrics/metrics)                                                                                                                                                                                                                                          | ![Performance Metris](../assets/images/PrometheusMetrics.png) |
-| [Health check endpoint](http://localhost:8886/)                                                       | 8886  | Server healthcheck endpoint as used by Kubernetes or Openshift                                                                                                                                                                                                                                                                        |
+| Endpoints                                                                                             | Ports | Details                                                                                                                                                                                                                                                                                                                                   | Webpages                                                      |
+| ----------------------------------------------------------------------------------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| [Domino REST API Home Page](http://localhost:8880/)                                                   | 8880  | Start page                                                                                                                                                                                                                                                                                                                                | ![StartPage](../assets/images/startpage.png)                  |
+| [Live Domino REST API](http://localhost:8880/openapi/index.html?url=/api/v1/schema/openapi.core.json) | 8880  | Interact live with the API                                                                                                                                                                                                                                                                                                                | ![OpenAPI](../assets/images/OpenAPI.png)                      |
+| [Admin UI](http://localhost:8880/admin/ui/)                                                           | 8880  | Login with an admin user. LocalDomainAdmin member                                                                                                                                                                                                                                                                                         | ![Admin Login](../assets/images/AdminLogin.png)               |
+| [Management API](http://localhost:8889/)                                                              | 8889  | Access to the log and runtime info                                                                                                                                                                                                                                                                                                        | ![Server Info](../assets/images/ServerInfo.png)               |
+| [Prometheus Metrics](http://localhost:8890/)                                                          | 8890  | Performance info in Prometheus format. Protected with basic authentication (metrics/metrics)                                                                                                                                                                                                                                              | ![Performance Metris](../assets/images/PrometheusMetrics.png) |
+| [Health check endpoint](http://localhost:8886/)                                                       | 8886  | Server healthcheck endpoint as used by Kubernetes or Openshift                                                                                                                                                                                                                                                                            |
 | [Auth](http://localhost:8880/api/v1/auth)                                                             | 8880  | The endpoint, `[POST] http/s://${HOST}:8880/api/v1/auth`, is the default end point to exchange Domino web credentials for a JWT access token. For example, use the token in Postman request headers as a Bearer authentication header. You also can use your [own IdP](../howto/IdP/configuringIdentityProvider.md) to gain access tokens |
 
 ### What's next?

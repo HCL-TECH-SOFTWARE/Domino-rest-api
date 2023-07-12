@@ -106,3 +106,5 @@ The installer conducts a series of actions:
 --8<-- "limitclientuse.md"
 
 For more information, see [Deploy HCL Domino REST API to HCL Notes Client](../../howto/install/notesclient.md) for additional steps required to use the Notes client.
+
+--8<-- "iskeeprunning.md"

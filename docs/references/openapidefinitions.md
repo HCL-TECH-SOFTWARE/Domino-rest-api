@@ -8,26 +8,6 @@ The deninitions below serve as reference and guide, so you can learn about the A
 
     Please note: depending on your server configuration, not all endpoints will be active. Custom access definitions are not visible here
 
-## OpenAPI extensions
-
-The OpenAPI specification is extensible, for one you can define new data types beyond [the default types](https://spec.openapis.org/oas/v3.0.3#schema-object) and you can introduce new method attributes prefixed with `x-`.
-We added the following data types:
-
-- Names : translate from/to a Domino names item
-- Authors: translate from/to a Domino authors item
-- Readers: translate from/to a Domino readers item
-- RichText
-
-### Custom attributes
-
-| Name                  | Value                    | Purpose                                                 |
-| --------------------- | ------------------------ | ------------------------------------------------------- |
-| x-keep-version        | number                   | active since which API version, governed by config.json |
-| x-keep-nofly          | enum (SERVER,CLIENT,EOS) | In which mode clinet, server, light is this unavailable |
-| x-preview             | boolean                  | Is the endpoint available as preview only               |
-| x-keep-scope          | string                   | ANY, $SETUP -> scope requirements for endpoint          |
-| x-content-disposition | string                   | specify content use (attachment vs. inline)             |
-
 ## Basis
 
 The main API of the Domino REST API. It allows access to documents, views, folders, and agents. An external application will only need this specification.
@@ -71,6 +51,26 @@ We named this API in honor of an [Apache project](https://poi.apache.org/) that 
 [Explore the POI API using the ReDoc viewer](https://redocly.github.io/redoc/?url=https://opensource.hcltechsw.com/Domino-rest-api/assets/downloads/openapi.poi.json)
 
 [Open the `openapi.poi.json` file](https://opensource.hcltechsw.com/Domino-rest-api/assets/downloads/openapi.poi.json)
+
+## OpenAPI extensions
+
+The OpenAPI specification is extensible, for one you can define new data types beyond [the default types](https://spec.openapis.org/oas/v3.0.3#schema-object) and you can introduce new method attributes prefixed with `x-`.
+We added the following data types:
+
+- Names : translate from/to a Domino names item
+- Authors: translate from/to a Domino authors item
+- Readers: translate from/to a Domino readers item
+- RichText
+
+### Custom attributes
+
+| Name                  | Value                    | Purpose                                                 |
+| --------------------- | ------------------------ | ------------------------------------------------------- |
+| x-keep-version        | number                   | active since which API version, governed by config.json |
+| x-keep-nofly          | enum (SERVER,CLIENT,EOS) | In which mode clinet, server, light is this unavailable |
+| x-preview             | boolean                  | Is the endpoint available as preview only               |
+| x-keep-scope          | string                   | ANY, $SETUP -> scope requirements for endpoint          |
+| x-content-disposition | string                   | specify content use (attachment vs. inline)             |
 
 ## Let's connect
 
