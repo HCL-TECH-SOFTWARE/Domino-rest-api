@@ -31,4 +31,4 @@ Run a custom NodeJS application that interacts with the Domino Rest API
 
 - [Official Domino REST API documentation](https://opensource.hcltechsw.com/Domino-rest-api/index.html)
 - [Discord discussion](https://discord.com/invite/jmRHpDRnH4)
-- check out the source code
+- Check out the source code.

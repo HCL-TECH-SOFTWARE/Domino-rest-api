@@ -1,6 +1,6 @@
 # Lab 10 - Configure JWT
 
-Out of the box KEEP uses a random symetrical JWT signing key, that is changed on any reboot of the API. This is OK for test and single server use, but not for multi-server operation or use as IdP.
+Out of the box KEEP uses a random symmetrical JWT signing key, that's changed on any reboot of the API. This is OK for test and single server use, but not for multi-server operation or use as IdP.
 
 ## Duration 20 min
 
@@ -25,16 +25,16 @@ Out of the box KEEP uses a random symetrical JWT signing key, that is changed on
 
 ## How to check
 
-- new files in keepconfig.d. E.g when you filled in `KeepLabIdP` as Certificate Name, you end up with:
+- new files in `keepconfig.d`. E.g when you filled in `KeepLabIdP` as Certificate Name, you end up with:
   - `KeepLabIdP.json`
   - `KeepLabIdP.cert.pem`
   - `KeepLabIdP.private.key.pem`
   - `KeepLabIdP.public.key.pem`
-- on restart keep: JWT provider changes (see login in KEEP)
+- on restart keep: JWT provider changes (see login in KEEP).
 
 When you copy these files to another server, the JWT issued by the first server will be accepted by the second server as well. This extends to the Domino HTTP task if core Domino is configured for JWT.
 
-Check [`http://localhost:8880/.well-known/openid-configuration`](http://localhost:8880/.well-known/openid-configuration)
+Check [`http://localhost:8880/.well-known/openid-configuration`](http://localhost:8880/.well-known/openid-configuration).
 
 ![OpenID config](img/Openidconfig.png)
 
@@ -42,4 +42,4 @@ Check [`http://localhost:8880/.well-known/openid-configuration`](http://localhos
 
 - [Official Domino REST API documentation](https://opensource.hcltechsw.com/Domino-rest-api/index.html)
 - [Discord discussion](https://discord.com/invite/jmRHpDRnH4)
-- copy files generated to another server and try cross login
+- Copy files generated to another server and try cross login.

@@ -4,8 +4,8 @@
 
 ## What you will learn
 
-- What is a form mode
-- What is a field group
+- What's a form mode
+- What's a field group
 - Formulas to control access
 
 ## Prerequisites
@@ -52,8 +52,8 @@ Don't forget to save your changes
 
 - [Official Domino REST API documentation](https://opensource.hcltechsw.com/Domino-rest-api/index.html)
 - [Discord discussion](https://discord.com/invite/jmRHpDRnH4)
-- Change the formula for read/write access to exclude your default user, observe the API reaction in Postman
-- Try the "Test Formula" button in mode
-- change the write access for default to `Status = "" | Status = "draft"`
-- observe the difference when "compute with form" is checked
+- Change the formula for read/write access to exclude your default user, observe the API reaction in Postman.
+- Try the "Test Formula" button in mode.
+- Change the write access for default to `Status = "" | Status = "draft"`.
+- Observe the difference when "compute with form" is checked.
 - Modify a field Name, do you see the output changing?

@@ -62,4 +62,4 @@ This setting can get reset each time you start Notes depending upon your organiz
 
 ## Logging
 
-Domino REST API logging of info and errors are stored in the `domino-keep.log` file located in your Notes Data's `IBM_TECHNICAL_SUPPORT` directory. This log file is a rolling file and will get moved to a new file with a date stamp if the Domino REST API is restarted or the file is larger for 10MB. Thirty days of logs are retained.
+Domino REST API logging of info and errors are stored in the `domino-keep.log` file located in your Notes Data's `IBM_TECHNICAL_SUPPORT` directory. This log file is a rolling file and will get moved to a new file with a date stamp if the Domino REST API is restarted or the file is larger for 10 MB. Thirty days of logs are retained.

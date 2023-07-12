@@ -15,8 +15,8 @@
 
 ![config stack](img/ActualConfiguration.svg)
 
-- create json file in `keepconfig.d` with any name e.g. `portmagic.json`
-- add the content like below
+- Create a JSON file in `keepconfig.d` with any name, such as `portmagic.json`.
+- Add the content like below:
 
 !!! danger "[supersecret] isn't a good password"
 
@@ -54,13 +54,13 @@
 }
 ```
 
-- Restart the restapi
+- Restart the restapi.
 
 ![Enable Ports](img/portenable.png)
 
 ## How to check
 
-Navigate to the new URLs, you should be prompted with basic auth. Password is `supersecret` and user the respective key from the JSON file
+Navigate to the new URLs, you should be prompted with basic auth. Password is `supersecret` and user is the respective key from the JSON file.
 
 ![Ports in use](img/PortUse.png)
 

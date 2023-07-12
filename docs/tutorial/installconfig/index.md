@@ -40,7 +40,7 @@ Domino REST API can be installed on:
 - Domino Server on [Linux](../installconfig/linux.md)
 - Domino Server on [Docker or Kubernetes](../installconfig/docker.md)
 
-All platforms use a Java-based installer, except Kubernetes or Docker, which uses a container (colloquial refered tgo as Docker) image. You can download the installer and the Docker image from your Flexnet account. For any questions, contact your HCL reseller.
+All platforms use a Java-based installer, except Kubernetes or Docker, which uses a container (colloquial referred to as Docker) image. You can download the installer and the Docker image from your Flexnet account. For any questions, contact your HCL reseller.
 
 !!! warning "You did shut down Domino, did you?"
 
@@ -129,7 +129,7 @@ Follow this [guide](../../howto/install/uninstall.md) to remove Domino REST API 
 
 ## What to read next
 
-- Complete the [walkthru tutorial](../walkthrough/index.md)
-- Learn about the [OpenAPI Swagger UI](../swagger.md)
-- [Understanding configuration](../../references/understandingconfig.md), Once you are ready to tweak the default configuration, you need to understand how
-- [Hosting static applications](../../references/hostingstatic.md), often refered to as Single Page Applications (SPA) or browser apps. The [tutorial](../walkthrough/index.md) has [an example](../walkthrough/lab07.md)
+- Complete the [walkthrough tutorial](../walkthrough/index.md).
+- Learn about the [OpenAPI Swagger UI](../swagger.md).
+- [Understanding configuration](../../references/understandingconfig.md), Once you are ready to tweak the default configuration, you need to understand how.
+- [Hosting static applications](../../references/hostingstatic.md), often referred to as Single Page Applications (SPA) or browser apps. The [tutorial](../walkthrough/index.md) has [an example](../walkthrough/lab-07.md).

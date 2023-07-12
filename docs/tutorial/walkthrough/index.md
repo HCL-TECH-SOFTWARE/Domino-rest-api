@@ -1,6 +1,6 @@
 # Domino REST AOI Walkthru
 
-This workshop is designed for a duration of 3.5h (210 min) and covers the use and configuration of the Domino REST API using
+This workshop is designed for a duration of 3.5 h (210 min) and covers the use and configuration of the Domino REST API using
 
 - Command line
 - POSTMAN (or your favorite REST client)
@@ -9,11 +9,11 @@ This workshop is designed for a duration of 3.5h (210 min) and covers the use an
 
 ## Agenda
 
-See the menu on the left for sequence
+See the menu on the left for sequence.
 
 ## Prerequisites
 
-- a running Domino server with the Domino REST API installed
+- a running Domino server with the Domino REST API installed:
   - on your local machine
   - a remote server (note: you need OS access there)
   - in a virtual machine
