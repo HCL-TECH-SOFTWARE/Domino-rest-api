@@ -28,7 +28,7 @@ Select **Database Management - REST API** from the home page.
 
 The **Schema Management** page shows the list of all available schemas.
 
-![List Database](../../assets/images/ListSchemas.png)
+![List Database](../../assets/images/ListSchemas.PNG)
 
 You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical View**, or **NSF View**. There is also a provision to search through the list either via **Schema Name** or **NSF Name**.
 
@@ -42,7 +42,7 @@ You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical Vie
 
       This creates the Alias. You can use this to access the database via the Domino REST API. One NSF can be available under more than one alias, such as with different security settings.
 
-      ![Create Database Form](../../assets/images/AddSchemaForm.png)
+      ![Create Database Form](../../assets/images/AddSchemaForm.PNG)
 
 2. Under **Available Databases**, select a database from the list of databases available to the Domino REST API.
 3. Under **Add New Schema**, enter details in the **Schema Name** and **Description**, and then select the **Formula Engine** for the schema you want to create.
