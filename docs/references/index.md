@@ -39,7 +39,7 @@ Provides information related to the [installation and configuration of Domino RE
 
 ## Security
 
-- [Security overview](security/securityindex.md)
+- [Security overview](security/index.md)
 - [Auth\*](security/authentication.md)
 - [Configuration parameters](security/configurationParameters.md)
 - [config.json](security/configjson.md)

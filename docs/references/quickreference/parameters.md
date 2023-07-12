@@ -1,4 +1,4 @@
-# Parameters
+# COnfiguration Parameters
 
 The configuration is assembled from JSON files and a few selected environment parameters. We provide environment parameters because they are a popular way to configure instances in virtual environments such as Docker, IBM Cloud, and Kubernetes.
 

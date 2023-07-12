@@ -44,7 +44,7 @@ Frameworks like Angular, ReactJS, Swelte etc. usually generate a `build` directo
 
 You can copy that directory to `keepweb.d` in your Domino data directory and Domino REST API will serve them on the `/keepweb/` URL path. This eliminates the need for CORS configuration.
 
-Check the details in [Security Configuration](../security/securityindex.md).
+Check the details in [Security Configuration](../security/index.md).
 
 ### Server based applications
 

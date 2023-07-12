@@ -148,6 +148,12 @@
     },
 
     {
+      "title": "Security",
+      "old": "references/security/securityindex.html",
+      "new": "references/security/index.html"
+    },
+
+    {
       "title": "Auth*",
       "old": "security/authentication.html",
       "new": "references/security/authentication.html"
@@ -357,7 +363,11 @@
       "new": "topicguides/dominojnx.html"
     },
 
-    { "title": "References", "old": "references", "new": "references/index.html" },
+    {
+      "title": "References",
+      "old": "references",
+      "new": "references/index.html"
+    },
 
     {
       "title": "Glossary",

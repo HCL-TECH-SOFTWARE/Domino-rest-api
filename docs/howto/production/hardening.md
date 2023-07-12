@@ -27,6 +27,7 @@ The name, as long as it ends in `.json`, can ve choosen freely. It needs to be p
   "DEBUG": false,
   "DisableEventBusSocket": true,
   "enabledProtocols": {
+    "TLSv1.3": true,
     "TLSv1.2": false
   },
   "PORT": 443,
