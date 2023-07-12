@@ -27,8 +27,9 @@ For the latest release information about {{ variable.drapi }}, see [What's new](
 !!!tip
 
     - If you want to start quickly, go to [Quickstart](tutorial/quickstart.md).
-    - For installation information, see [Installation and configuration](tutorial/installconfig/index.md)
+    - For installation information, see [Installation and configuration](tutorial/installconfig/index.md).
     - For everything that admin needs to know, use the [Admin cheat sheet](references/admincheatsheet.md).
+    - Trouble running the Domino REST API? Use the [Troubleshooting guide](references/troubleshooting.md).
 
 ---
 
