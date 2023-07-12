@@ -5,6 +5,8 @@ nav:
   - What's new in Domino REST API: whatisnew.md
   - System requirements: https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789
   - Installation and configuration: ../tutorial/installconfig/index.html
+  - understandingconfig.md
+  - hostingstatic.md
   - OpenAPI: openapidefinitions.md
   - Functional accounts: functionalUsers.md
   - accesscontrol.md

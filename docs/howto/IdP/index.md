@@ -1,4 +1,4 @@
-# Identity Provider 
+# Identity Provider
 
 --8<-- "future.md"
 
@@ -9,5 +9,3 @@ Topics to guide you in completing goals and tasks about Identity Provider in rel
 - [Configure an identity provider](configuringIdentityProvider.md)
 - [Configure Keycloak](configuringKeycloak.md)
 - [Configure Domino REST API as SAML identity provider](keepsaml.md)
-
-

@@ -9,16 +9,15 @@
 ### Download the Domino REST API
 
 1. Go to [HCL License and Download Portal](https://hclsoftware.flexnetoperations.com/).
-2. On the sign in page, enter your username and click **Next**. The **License & Download Portal** home page opens. 
-3. In the **Your Downloads** pane, scroll to find and then select **HCL Domino**. The **Download Packages** page opens. 
+2. On the sign in page, enter your username and click **Next**. The **License & Download Portal** home page opens.
+3. In the **Your Downloads** pane, scroll to find and then select **HCL Domino**. The **Download Packages** page opens.
 4. On the **New Versions** tab, select the HCL Domino REST API version that you want to download.
 
 **OR**
 
 1. On the **License & Download Portal** home page, go to **Downloads** &rarr; **Search Downloads**.
 2. On the **Download Search** page, enter `HCL Domino REST API` in the **Search for** field, and then click **Search**.
-3. Select the HCL Domino REST API version that you want to download from the search result. 
-  
+3. Select the HCL Domino REST API version that you want to download from the search result.
 
 <!-- prettier-ignore -->
 !!! tip
@@ -41,7 +40,11 @@ Domino REST API can be installed on:
 - Domino Server on [Linux](../installconfig/linux.md)
 - Domino Server on [Docker or Kubernetes](../installconfig/docker.md)
 
-All platforms use a Java-based installer, except Docker, which uses a Docker image. You can download the installer and the Docker image from your Flexnet account. For any questions, contact your HCL reseller.
+All platforms use a Java-based installer, except Kubernetes or Docker, which uses a container (colloquial refered tgo as Docker) image. You can download the installer and the Docker image from your Flexnet account. For any questions, contact your HCL reseller.
+
+!!! warning "You did shut down Domino, did you?"
+
+    It is strongly recommended, that you shut down your Domino server before running the installer. The installer updates the `notes.ini` which could conflict with a running Domino server
 
 The installer requires a series of parameters:
 
@@ -56,7 +59,7 @@ The installer requires a series of parameters:
       - On Linux, `/opt/hcl/domino/notes/latest/linux/jvm/bin`
       - On Windows, `<Notes installation directory>/jvm/bin` (example: `Program Files/HCL/Notes/jvm/bin`)
 
-      You can also verify the Java version by opening the command prompt, going to the installation location, and then typing `java -version`. 
+      You can also verify the Java version by opening the command prompt, going to the installation location, and then typing `java -version`.
 
 ### Explanation of parameters
 
@@ -71,7 +74,7 @@ The installer requires a series of parameters:
 | `-f`  | `--forceUpgrade`            |           | Performs an upgrade without regard to the previous version. If an unknown<br />version or unexpected files are found in the rest API directory, this option will delete<br />the entire contents of the rest API directory and subdirectories first before installing<br/>the new version. |
 | `-a`  | `--accept`                  |           | Automatically accept terms & conditions.                                                                                                                                                                                                                                                   |
 | `-h`  | `--help`                    |           | Show this help message and exit.                                                                                                                                                                                                                                                           |
-| `-n`  | `--noIniUpdates`            |           | Install the files, show updated ini entries but don't write them out.                                                                                                                                                                                                                      |
+| `-n`  | `--noIniUpdates`            |           | Install the files, show updated ini entries but don't write them out. You are then responsible to update the [`notes.ini`](../../references/usingdominorestapi/restapitask.md) yourself, especially adding `restapi` to `servertasks` to auto-start the REST API                           |
 | `-o`  | `--oneTouchInstall`         |           | If installing restapi as part of a Domino One Touch Install, use this option<br />to prevent checking for Notes / Domino directories and notes.ini.                                                                                                                                        |
 | `-y`  | `--dryRun`                  |           | Do not actually copy or alter files and settings.                                                                                                                                                                                                                                          |
 | `-s`  | `--skipDirectoryCheck`      |           | Skips the checks if the program and data directories<br />contain Notes or Domino.                                                                                                                                                                                                         |
@@ -112,104 +115,21 @@ The file contains one parameter per line. Lines starting with `#` get ignored. V
 --accept
 ```
 
-## Hosting your static application
-
-A typical use case for Domino REST API is to build a web UI with the flavor of the day web development framework like Angular, ReactJS, Swelte etc. These frameworks usually generate a `build` directory with a set of static files.
-
-You can copy that directory to `keepweb.d` in your Domino data directory and Domino REST API will serve them on the `/keepweb/` URL path. This eliminates the need for [CORS](../../references/usingdominorestapi/keepapplications.md) configuration.
-
-This is similar to Domino's feature serving static files from its `domino/html` directory.
-
 ## Configuration & Security
 
-Domino REST API is preconfigured with settings that allow you to get started right away. However, you should familiarize yourself with all [configuration parameters](../../references/quickreference/parameters.md) and [security](../../references/security/securityindex.md) settings before you deploy into a production environment.
+Domino REST API is preconfigured with settings that allow you to get started right away. It will run on **http** (not https) on port **8880**. However, you should familiarize yourself with all [configuration parameters](../../references/quickreference/parameters.md) and [security](../../references/security/securityindex.md) settings before you deploy into a production environment.
 
 <!-- prettier-ignore -->
 !!!tip
     Domino REST API honors all Domino access control mechanisms and doesn't allow anonymous access. For more information, see [Access Control](../../references/accesscontrol.md).
 
-### Understanding configuration
-
-The configuration follows the concept of an [Overlay File System](https://en.wikipedia.org/wiki/OverlayFS). The base configuration is retrieved from the installation directory or `jar` files.
-
-When jar files contain a resource `/config/config.json`, that configuration file is added to total configuration.
-
-Then, it's overlaid with any JSON files in the `keepconfig.d` directory within the Notes data directory and then finally, with any environment parameters.
-
-### Hierarchy
-
-![The call hierarchy](../../assets/images/ActualConfiguration.png)
-
-All files contribute JSON, which are overlaid on top of each other. JSON elements with same names get overwritten. Arrays are replaced and not overwritten.
-
-The JSON files in `keepconfig.d` are processed in alphabetical order. Last entry wins. This processing order allows you, for example, to disable elements temporarily through settings in a `z-final-words.json` file without impacting the permanent configuration.
-
-For more information, see [vert.x overloading rules](https://vertx.io/docs/vertx-config/java/#_overloading_rules).
-
-### Example
-
-Given the files `config.json`, `a.json` and the environment variable `PORT=8564`, you get the result `result.json` as shown below:
-
-#### config.json
-
-```json
-{
-  "PORT": 8880,
-  "AllowJwtMail": true,
-  "versions": {
-    "basis": {
-      "path": "/schema/openapi.basis.json",
-      "active": true
-    }
-  }
-}
-```
-
-#### a.json
-
-```json
-{
-  "dance": "tango",
-  "PORT": 1234,
-  "versions": {
-    "basis": {
-      "active": false
-    },
-    "special": {
-      "path": "/schema/openapi.special.json",
-      "active": true
-    }
-  }
-}
-```
-
-Merge these 2 files and apply the environment variables.
-
-#### result.json
-
-```json
-{
-  "PORT": 8564,
-  "AllowJwtMail": true,
-  "dance": "tango",
-  "versions": {
-    "basis": {
-      "path": "/schema/openapi.basis.json",
-      "active": false
-    },
-    "special": {
-      "path": "/schema/openapi.special.json",
-      "active": true
-    }
-  }
-}
-```
-
-The actual result can be inspected on the Domino REST API management API, like [on a local install](http://localhost:8889/config).
-
-### Important notes
-
-> JSON overlay doesn't allow you to **remove** JSON elements. So, most settings have an `active` parameter that
-> can be set to false in an overlay.
+## Uninstall
 
 Follow this [guide](../../howto/install/uninstall.md) to remove Domino REST API from your system.
+
+## What to read next
+
+- Complete the [walkthru tutorial](../walkthrough/index.md)
+- Learn about the [OpenAPI Swagger UI](../swagger.md)
+- [Understanding configuration](../../references/understandingconfig.md), Once you are ready to tweak the default configuration, you need to understand how
+- [Hosting static applications](../../references/hostingstatic.md), often refered to as Single Page Applications (SPA) or browser apps. The [tutorial](../walkthrough/index.md) has [an example](../walkthrough/lab07.md)
