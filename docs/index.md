@@ -14,18 +14,15 @@ hide:
 
 ## What's new
 
-For the latest release information about {{ variable.drapi }}, see [What's new](references/whatisnew.md).
+!!!tip
 
-!!! info "API definitions now available"
-
-    The OpenAPI definitions, rendering using [ReDoc](https://github.com/Redocly/redoc), are now [available in the References](references/openapidefinitions.md). **Depending on your server configuration, not all endpoints will be active.**
-
----
+    For the latest release information about {{ variable.drapi }}, see [What's new](references/whatisnew.md).
 
 ## TL/TR
 
 !!!tip
 
+    - Get a first idea what you are dealing with by [Understanding how the Domino REST API works](topicguides/understanding.md)
     - If you want to start quickly, go to [Quickstart](tutorial/quickstart.md).
     - For installation information, see [Installation and configuration](tutorial/installconfig/index.md).
     - For everything that admin needs to know, use the [Admin cheat sheet](references/admincheatsheet.md).
@@ -44,6 +41,19 @@ The {{ variable.drapi }} documentation is based on the [Diátaxis framework](htt
 **[Topic guides](topicguides/index.md)** - Discussion and explanation of key topics and concepts to give background information
 
 **[References](references/index.md)** - Technical references and descriptions on using HCL Domino REST API
+
+---
+
+!!! tip "Ol' Notes hands start here"
+
+    Are you coming from a Notes client with Dmino server background? You never had to deal with certificates, Json Web Token, multiple TCP ports, OAuth
+    and all the fancy new terms of shiny new web world. We got you covered, read [the primer](topicguides/notesprimer.md) to get started
+
+---
+
+!!! info "API definitions now available"
+
+    The OpenAPI definitions, rendering using [ReDoc](https://github.com/Redocly/redoc), are now [available in the References](references/openapidefinitions.md). **Depending on your server configuration, not all endpoints will be active.**
 
 ---
 

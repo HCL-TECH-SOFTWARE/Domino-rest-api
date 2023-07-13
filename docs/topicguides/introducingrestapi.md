@@ -35,7 +35,7 @@ For example, the data in a Domino database that could earlier be viewed only in 
 The Domino REST API are secure and standards-compliant, making them the right choice for your Notes and Domino ecosystem.
 
 <!-- prettier-ignore -->
-!!! info 
+!!! info
     Much like the architectural keep that fortifies the castle, Project Domino REST API adds to the existing functionalities provided by Notes and Domino.
 
 <!-- prettier-ignore -->
@@ -58,7 +58,7 @@ Domino REST API is designed to work with:
 
 ### Domino REST API is secure
 
-Domino REST API is secure by default since it inherits all the [security features](../references/security/securityindex.md) of Notes and Domino. All access to the database is authenticated using [JSON Web Token (JWT)](https://jwt.io/) and [Scopes](../references/security/authentication.md). Identity can be provided using Domino credentials and/or your Enterprise IdP (Identity Provider) like Keycloak or Active Directory. The databases or forms and views that can be accessed are explicitly listed. Security extends to a field level read/write control by the [Barbican](../topicguides/barbican.md).
+Domino REST API is secure by default since it inherits all the [security features](../references/security/index.md) of Notes and Domino. All access to the database is authenticated using [JSON Web Token (JWT)](https://jwt.io/) and [Scopes](../references/security/authentication.md). Identity can be provided using Domino credentials and/or your Enterprise IdP (Identity Provider) like Keycloak or Active Directory. The databases or forms and views that can be accessed are explicitly listed. Security extends to a field level read/write control by the [Barbican](../topicguides/barbican.md).
 
 ### Modern Java API (Java 8++)
 

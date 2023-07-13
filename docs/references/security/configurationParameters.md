@@ -8,7 +8,7 @@ Domino REST API comes with reasonable default configuration settings. They allow
 
 ## Understanding configuration
 
-The configuration follows the concept of and Overlay File System, where the base configuration is retrieved from the jar file and then overlaid with all the JSON files (if present) in the keepconfig.d directory within the Notes data directory and finally, the environment parameters, if any of those exist.
+The configuration follows the concept of and Overlay File System, where the base configuration is retrieved from the jar file and then overlaid with all the JSON files (if present) in the keepconfig.d directory within the Notes data directory and finally, the environment parameters, if any of those exist. Check [the details here](../understandingconfig.md)
 
 ## Environment
 
@@ -16,7 +16,11 @@ Parameters are case sensitive.
 
 --8<-- "environmentparam.md"
 
+## JSON Parameters
+
+The detailed overview [can be found here](../quickreference/parameters.md), a sample [how to use it for hardening a production environment here](../../howto/production/hardening.md) and how [it actually works](../understandingconfig.md)
+
 ## Configuration retrieval
 
 The current configuration can be retrieved (with sensitive information masked) on the management port:
-e.g. https://keep.yourserver.io:8889/config.
+e.g. `https://keep.yourserver.io:8889/config`.
