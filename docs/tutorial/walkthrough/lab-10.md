@@ -16,20 +16,20 @@ Out of the box KEEP uses a random symmetrical JWT signing key, that's changed on
 
 ## Steps
 
-- access [http://localhost:8889](http://localhost:8889)
+- Access [http://localhost:8889](http://localhost:8889)
 
 ![ManagementConsole](img/ManagementConsole.png)
 
-- fill in "Certificate Name", click "Create IdP Certificate"
-- restart KEEP
+- Fill in **Certificate Name**, and click **Create IdP Certificate**.
+- Restart Domino REST API. 
 
 ## How to check
 
-- new files in `keepconfig.d`. E.g when you filled in `KeepLabIdP` as Certificate Name, you end up with:
-  - `KeepLabIdP.json`
-  - `KeepLabIdP.cert.pem`
-  - `KeepLabIdP.private.key.pem`
-  - `KeepLabIdP.public.key.pem`
+- New files in `keepconfig.d`, such as when you filled in `KeepLabIdP` as Certificate Name, you end up with:
+    - `KeepLabIdP.json`
+    - `KeepLabIdP.cert.pem`
+    - `KeepLabIdP.private.key.pem`
+    - `KeepLabIdP.public.key.pem`
 - on restart keep: JWT provider changes (see login in KEEP).
 
 When you copy these files to another server, the JWT issued by the first server will be accepted by the second server as well. This extends to the Domino HTTP task if core Domino is configured for JWT.

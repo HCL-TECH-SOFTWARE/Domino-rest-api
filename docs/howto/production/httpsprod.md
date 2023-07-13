@@ -10,7 +10,7 @@ Terminate your TLS connection at a proxy. When the proxy runs on the same "machi
 
 The REST API can directly use TLS and is HTTP 1.1 and HTTP/2 compliant. You would obtain a TLS certificate from your IT security team or your favorite supplier (We like [LetsEncypt](https://letsencrypt.org), it's free) and set the configuration parameters in a json file.
 
--8<-- "tlssettings.md"
+--8<-- "tlssettings.md"
 
 Read the details here: [configure certificate](../../howto/IdP/configuringCertificates.md).
 

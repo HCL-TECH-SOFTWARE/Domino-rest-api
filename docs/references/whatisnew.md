@@ -16,6 +16,7 @@
 ### Resolved issues
 
 ### Others
+- Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.18.3*.
 -->
 
 ## v1.0.5 - _What's new or changed_

@@ -108,7 +108,7 @@ All configuration settings are kept in JSON files you place in `keepcofig.d` Fil
 
 - [Official Domino REST API documentation](https://opensource.hcltechsw.com/Domino-rest-api/index.html)
 - [Discord discussion](https://discord.com/invite/jmRHpDRnH4)
-- mess with other parameters:
-  - disable Domino login
-  - enable Preview features
-  - update NsfExclusions
+- Mess with other parameters:
+    - disable Domino login
+    - enable Preview features
+    - update NsfExclusions

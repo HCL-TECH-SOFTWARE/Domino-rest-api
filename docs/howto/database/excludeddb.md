@@ -78,6 +78,6 @@ The procedure guides you on how to include the excluded NSF files and NSF files 
 4. Save the JSON file in the `keepconfig.d` directory.
 
     !!!tip
-    Use a filename for the JSON file that reveals its purpose, such as `enable-names-nsf.json`. To learn more on how JSON files in `keepconfig.d` are processed, see [Understanding configuration](../production/configparam.md#understanding-configuration).
+        Use a filename for the JSON file that reveals its purpose, such as `enable-names-nsf.json`. To learn more on how JSON files in `keepconfig.d` are processed, see [Understanding configuration](../production/configparam.md#understanding-configuration).
 
 5. Restart Domino REST API on all servers.
