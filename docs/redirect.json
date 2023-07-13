@@ -148,6 +148,12 @@
     },
 
     {
+      "title": "Security",
+      "old": "references/security/securityindex.html",
+      "new": "references/security/index.html"
+    },
+
+    {
       "title": "Auth*",
       "old": "security/authentication.html",
       "new": "references/security/authentication.html"
@@ -186,7 +192,13 @@
     {
       "title": "config.json",
       "old": "security/configjson.html",
-      "new": "references/security/configjson.html"
+      "new": "references/quickreference/parameters.html"
+    },
+
+    {
+      "title": "config.json",
+      "old": "references/security/configjson.html",
+      "new": "references/quickreference/parameters.html"
     },
 
     {
@@ -204,7 +216,13 @@
     {
       "title": "security.json",
       "old": "security/securityjson.html",
-      "new": "references/security/securityjson.html"
+      "new": "references/quickreference/parameters.html"
+    },
+
+    {
+      "title": "security.json",
+      "old": "references/security/securityjson.html",
+      "new": "references/quickreference/parameters.html"
     },
 
     {
@@ -357,7 +375,11 @@
       "new": "topicguides/dominojnx.html"
     },
 
-    { "title": "References", "old": "references", "new": "references/index.html" },
+    {
+      "title": "References",
+      "old": "references",
+      "new": "references/index.html"
+    },
 
     {
       "title": "Glossary",

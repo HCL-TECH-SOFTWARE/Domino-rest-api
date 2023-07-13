@@ -39,12 +39,11 @@ Provides information related to the [installation and configuration of Domino RE
 
 ## Security
 
-- [Security overview](security/securityindex.md)
+- [Security overview](security/index.md)
 - [Auth\*](security/authentication.md)
 - [Configuration parameters](security/configurationParameters.md)
-- [config.json](security/configjson.md)
+- [config.json](quickreference/parameters.md)
 - [Encryption keys](security/encryption.md)
-- [security.json](security/securityjson.md)
 - [Set up oauth.nsf](../howto/VoltMX/setupoauthnsf.md)
 - [Custom Identity Provider](security/customIdp.md)
 - [Securing Domino REST API endpoints](security/securingKEEPEndpoints.md)

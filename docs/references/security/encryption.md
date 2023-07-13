@@ -8,7 +8,7 @@ There are three areas in Domino REST API where encryption keys are needed:
 - JSON Web Token (JWT) signing
 - ID vault signing requests
 
-This page documents the creation of those keys. Check the [security](./securityindex.md) page for configuration details.
+This page documents the creation of those keys. Check the [security](./index.md) page for configuration details.
 
 ## HTTPs certificates for Domino REST API ports
 
@@ -31,7 +31,7 @@ Again: **It's generally better to use [LetsEncrypt](https://letsencrypt.org/)**.
 
 Domino REST API uses JWT for authentication. When you get started with Domino REST API, you probably log in with a Domino username and password. KEEP, out of the box, uses an ephemeral symmetric encryption key to sign requests. Since you can't see the key or share it, this configuration is reasonably secure. When you restart KEEP, a new key is used.
 
-To use a key that can be deployed to an external identity provider (IdP) or used to send requests to the Domino ID vault service, you must generate a public/private key pair and configure the [security](./securityindex.md) settings. Never share the private key!
+To use a key that can be deployed to an external identity provider (IdP) or used to send requests to the Domino ID vault service, you must generate a public/private key pair and configure the [security](index.md) settings. Never share the private key!
 
 Use the [OpenSSL](https://www.openssl.org/) tool to generate a key. The key is an [RSA](<https://en.wikipedia.org/wiki/RSA_(cryptosystem)>) key:
 
@@ -51,7 +51,7 @@ The parameter `-name secp521r1` defines the **ES512** encryption algorithm. Don'
 
 ## Encryption key to sign ID vault requests
 
-The required key is an ES512 elliptic-curve as described above. Domino REST API the private key safe and configure it in [security](./securityindex.md). The public key must be imported into the ID vault. Check the documentation there.
+The required key is an ES512 elliptic-curve as described above. Domino REST API the private key safe and configure it in [security](./index.md). The public key must be imported into the ID vault. Check the documentation there.
 
 ```bash
 openssl ecparam -genkey -name secp521r1 -noout -out privatekey.pem
@@ -102,15 +102,15 @@ The 4 files get created in your `keepconfig.d` directory. Distribute them to all
 - Login into the Management console (Port 8889).
 - Type a name you want to call this certificate into the "Certificate Name". No spaces or special characters.
 
-    - for example: MultiDomain
+  - for example: MultiDomain
 
 - Click "Create IdP certificate".
 - Domino REST API generates 4 files in this server's [Notesdata]/keepconfig.d directory:
 
-    - MultiDomain.cert.pem
-    - MultiDomain.json
-    - MultiDomain.private.key.pem
-    - MultiDomain.public.key.pem
+  - MultiDomain.cert.pem
+  - MultiDomain.json
+  - MultiDomain.private.key.pem
+  - MultiDomain.public.key.pem
 
 - Copy these 4 files to your other Domino servers into the [notesdata]/keepconfig.d directory.
 - Restart Domino REST API on all servers with this new configuration and you are they will now share the same JWT keys.

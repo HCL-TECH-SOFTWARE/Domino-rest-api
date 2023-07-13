@@ -117,7 +117,7 @@ The file contains one parameter per line. Lines starting with `#` get ignored. V
 
 ## Configuration & Security
 
-Domino REST API is preconfigured with settings that allow you to get started right away. It will run on **http** (not https) on port **8880**. However, you should familiarize yourself with all [configuration parameters](../../references/quickreference/parameters.md) and [security](../../references/security/securityindex.md) settings before you deploy into a production environment.
+Domino REST API is preconfigured with settings that allow you to get started right away. It will run on **http** (not https) on port **8880**. However, you should familiarize yourself with all [configuration parameters](../../references/quickreference/parameters.md) and [security](../../references/security/index.md) settings before you deploy into a production environment.
 
 <!-- prettier-ignore -->
 !!!tip
