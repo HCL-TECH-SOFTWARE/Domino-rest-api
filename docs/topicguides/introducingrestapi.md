@@ -12,7 +12,7 @@ Domino REST API is based on industry standards, allows Notes and Domino to be ac
 
 Domino REST API is designed to re-establish Domino as a world class, modern, standards-compliant, cloud native and enterprise-level collaboration platform. It adds contemporary [REST APIs](https://www.redhat.com/en/topics/api/what-is-a-rest-api) to Notes and Domino, enabling a modern programming experience with the tools of your choice.
 
-Classic Domino applications are document-oriented and often based on an approval model: documents flow through a business lifecyle and are approved at each stage. Domino developers develop a separate user interface for each approval state that is used by the people who perform the actions for that state.
+Classic Domino applications are document-oriented and often based on an approval model: documents flow through a business lifecycle and are approved at each stage. Domino developers develop a separate user interface for each approval state that is used by the people who perform the actions for that state.
 
 <!-- prettier-ignore -->
 !!! tip "Where is the **actual** API documentation?"
@@ -74,7 +74,7 @@ Domino REST API has an extensible architecture that allows it to serve multiple 
 
 ### Web GUI for Schema, Scope and App management
 
-We provide a [Web UI](../references/usingdominorestapi/administrationui.md) that facilitates managing schemas, scopes and applications.
+We provide a [Web UI](../references/usingdominorestapi/administrationui.md) that facilitates managing schemas, scopes, and applications.
 
 ### Design, admin and data
 

@@ -1,6 +1,6 @@
 # Configuration Parameters
 
-The configuration is assembled from JSON files and a few selected environment parameters. We use those environment parameters because they are a commonly used way to configure instances in virtual environments such as Docker, IBM Cloud, and Kubernetes.
+The configuration is assembled from JSON files and a few selected environment parameters. We use those environment parameters because they're a commonly used way to configure instances in virtual environments such as Docker, IBM Cloud, and Kubernetes.
 
 The Domino REST API ships with default settings in internal files `config.json` and `security.json`. These are internal files, not subject to user modifications (A kitten will die when you try).
 
@@ -8,7 +8,7 @@ The Domino REST API ships with default settings in internal files `config.json` 
 
     Parameters are **case sensitive**
 
-To alter a parameter either set an environment parameter, if one exists (there are not that many) or create a json file in `keepconfig.d` following the how-to guide [Modify configuration of Domino REST API](../../howto/install/modifyconfig.md)
+To alter a parameter either set an environment parameter, if one exists (there aren't that many) or create a JSON file in `keepconfig.d` following the how-to guide [Modify configuration of Domino REST API](../../howto/install/modifyconfig.md).
 
 ## Environment
 
@@ -159,8 +159,8 @@ the resulting configuration available to Domino REST API is:
     }
 ```
 
-In summary, the `setup` API is not loaded. This is the mechanism to disable default components without having to update the Jar.
+In summary, the `setup` API isn't loaded. This is the mechanism to disable default components without having to update the Jar.
 
 ### Overwriting the values
 
-All values can be [over written](https://vertx.io/docs/vertx-config/java/#_overloading_rules) by entries in the `keepconfig.d` located in your Notes/Domino Data directory. If this directory does not exist, create it. The structure needs to be the same as in the default file, but only needs the entries you want to change.
+All values can be [over written](https://vertx.io/docs/vertx-config/java/#_overloading_rules) by entries in the `keepconfig.d` located in your Notes/Domino Data directory. If this directory doesn't exist, create it. The structure needs to be the same as in the default file, but only needs the entries you want to change.

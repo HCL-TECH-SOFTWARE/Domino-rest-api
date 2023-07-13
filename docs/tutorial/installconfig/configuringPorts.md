@@ -16,7 +16,7 @@ Healthcheck is to check whether Domino REST API is up. It's a standard approach 
 
 ## Management Port (8889)
 
-The management port allows access to Domino REST API runtime behavior, such as current config (`/config`), runtime info (`/info`) or Domino REST API shutdown/restart. It should **not** be exposed to normal users but only to the administrator network.
+The management port allows access to Domino REST API runtime behavior, such as current config (`/config`), runtime info (`/info`), or Domino REST API shutdown/restart. It should **not** be exposed to normal users but only to the administrator network.
 A typical configuration is to block access to Port 8889 from anything but `localhost`. An administrator who wants to interact with the management port would use an `ssh` session to access the server and use `curl` to access the management endpoints.
 
 ## Port for Prometheus metrics (8890)

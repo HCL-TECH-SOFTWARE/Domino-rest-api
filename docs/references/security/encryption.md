@@ -83,7 +83,7 @@ Then enter the `Shutdown key` (masked input) and click on `Create IdP Certificat
 - Creation of a configuration json file
 - Update of the IdP Cert button on the management page
 
-The 4 files get created in your `keepconfig.d` directory. Distribute them to all Domino REST API servers to achive single login and decryption capabilities. For example, when you specified **AcmeKeepTest** as your `Certificate Name`, you get this configuration file:
+The 4 files get created in your `keepconfig.d` directory. Distribute them to all Domino REST API servers to achieve single login and decryption capabilities. For example, when you specified **AcmeKeepTest** as your `Certificate Name`, you get this configuration file:
 
 ```json
 {
