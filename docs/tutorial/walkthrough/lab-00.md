@@ -16,7 +16,7 @@
 ## Steps (not all are needed)
 
 - Verify that you have a running Domino server with admin access
-- Download POSTMAN [collection](../downloads/dachnug2023.postman_collection.json) & POSTMAN [environemnt](../downloads/dachnug2023.postman_environment.json)
+- Download POSTMAN [collection](../downloads/dachnug2023.postman_collection.json) & POSTMAN [environment](../downloads/dachnug2023.postman_environment.json)
 - download [`keep`](../downloads/keep) (Mac/Linux) or [`keep.cmd`](../downloads/keep.cmd) (Windows)
 - download [ApprovalCentral.zip](../downloads/ApprovalCentral.zip)
 - Import into POSTMAN: environment & collection

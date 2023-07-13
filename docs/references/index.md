@@ -30,6 +30,7 @@ Provides information related to the [installation and configuration of Domino RE
 - [Domino REST API roles](usingdominorestapi/roles.md)
 - [Domino REST API Applications](usingdominorestapi/keepapplications.md)
 - [DataFormats](usingdominorestapi/dataformats.md)
+- [Form and Alias handling](usingdominorestapi/formnames.md)
 - [Scopes](usingdominorestapi/scopes.md)
 - [RichText](usingdominorestapi/richtext.md)
 - [Metrics](usingdominorestapi/metrics.md)

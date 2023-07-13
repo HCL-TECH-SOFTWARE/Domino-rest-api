@@ -6,27 +6,27 @@ Domino REST API is preconfigured with settings that allow you to get started rig
 
 1. Log in into the Management console (Port 8889).
 
-   Make sure that the administration location can only be accessed from a network that can be accessed by a your system administrator.
+    Make sure that the administration location can only be accessed from a network that can be accessed by a your system administrator.
 
 2. Click the `Config` button. The actual configuration settings opens. The default configuration is in [config.json](/docs/references/quickreference/parameters.md).
 
-3. Only copy the KEEP configuration where you need to change your `config.json` values in any text/code app such as vscode, notepad, notepad++ etc.
+3. Only copy the KEEP configuration where you need to change your `config.json` values in any text/code app such as VSCode, notepad, notepad++ etc.
 
-   Example:
+    **Example**:
+       
+    When you don't take advantage of the [Prometheus](https://prometheus.io/) formatted runtime metrics by using a metric server, such as [Grafana](https://grafana.com/), you can and should disable KEEP's metrics endpoint.
 
-   When you don't take advantage of the [Prometheus](https://prometheus.io/) formatted runtime metrics by using a metric server (e.g. [Grafana](https://grafana.com/) ), you can and should disable KEEP's metrics endpoint.
-
-   ```json
-     "metrics": {
-       "enabled": false,
-       "jvmMetricsEnabled": false
+    ```json
+      "metrics": {
+         "enabled": false,
+         "jvmMetricsEnabled": false
        }
-   ```
+      ```
 
 4. Save the file in `.json` format inside the `keepconfig.d` directory.
 
-   !!!note "Naming your json files"
-   The config loader processes json files in aphabetical order, so when you have conflicting entries, the last one wins. Use a name that reveals its purpose. e.g. disable-metrics.json
+    !!!note "Naming your json files"
+        The config loader processes JSON files in alphabetical order. So when you have conflicting entries, the last one wins. Use a name that reveals its purpose such as `disable-metrics.json`.
 
 5. Restart Domino REST API on all servers with this new configuration.
 

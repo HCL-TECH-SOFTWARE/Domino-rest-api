@@ -7,7 +7,7 @@ but neither cost nor approval flows
 
 ## What you will learn
 
-- a database can expose different sets of information based on different schema
+- A database can expose different sets of information based on different schema
 
 ## Prerequisites
 
@@ -68,13 +68,13 @@ alternative `POST` to `/api/setup-v1/admin/scope`
 
 ## How to check
 
-- retrive list of schemas for ApprovalCentral.nsf
-- retrive list of scopes
-- check adminUI
+- Retrieve list of schemas for `ApprovalCentral.nsf`.
+- Retrieve list of scopes.
+- Check adminUI.
 - Login with limit to scope `trainingcorp` and look at data in POSTMAN
 
 ## Things to explore
 
 - [Official Domino REST API documentation](https://opensource.hcltechsw.com/Domino-rest-api/index.html)
 - [Discord discussion](https://discord.com/invite/jmRHpDRnH4)
-- Login with a limited scope and try to access the other scope's data
+- Login with a limited scope and try to access the other scope's data.

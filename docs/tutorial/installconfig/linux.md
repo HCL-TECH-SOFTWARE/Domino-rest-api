@@ -59,7 +59,7 @@ If an exiting installation is found at the location you specified as the restapi
     - If you specified `-u` on the command line, removal of the old files and installation of the new are performed.
     - If you didn't specify `-u`, you will be asked if you want to upgrade, answering `A <enter>` continues, removal of the old files and installation of the new is performed.
 
-  - If this file does not exist (which it did not with `Domino REST API V1`) the installer will check to see if this is V1 by checking for the existance of the `keep-core-1.9.5.jar` file in the Domino REST API directory.
+  - If this file does not exist (which it did not with `Domino REST API V1`) the installer will check to see if this is V1 by checking for the existence of the `keep-core-1.9.5.jar` file in the Domino REST API directory.
 
     - If this is V1, the installer will use the list of known V1 files before proceeding.
 

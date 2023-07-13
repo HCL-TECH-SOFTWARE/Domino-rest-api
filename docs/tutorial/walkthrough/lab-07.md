@@ -30,5 +30,5 @@ You can create a browser single page application using just 3 files
 
 - [Official Domino REST API documentation](https://opensource.hcltechsw.com/Domino-rest-api/index.html)
 - [Discord discussion](https://discord.com/invite/jmRHpDRnH4)
-- create a new directory in keepweb.d and a manifest.json file. Check out the landing page
-- check the application source code (5 files only)
+- Create a new directory in `keepweb.d` and a `manifest.json` file. Check out the landing page.
+- Check the application source code (5 files only).

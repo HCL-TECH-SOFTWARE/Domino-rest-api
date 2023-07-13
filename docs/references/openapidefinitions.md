@@ -1,8 +1,8 @@
 # OpenAPI Definitions and specifications
 
-The Domino REST API is driven by multiple OpenAPI 3.0.2 specifications. Every Domino server is surfacing the specifications according to its configuration. Additionally each configured access to a database (refered to as scope) is available on your server.
+The Domino REST API is driven by multiple OpenAPI 3.0.2 specifications. Every Domino server is surfacing the specifications according to its configuration. Additionally each configured access to a database (referred to as scope) is available on your server.
 
-The deninitions below serve as reference and guide, so you can learn about the API without having the API installed.
+The definitions below serve as reference and guide, so you can learn about the API without having the API installed.
 
 !!! info "API definitions are individual"
 
@@ -67,7 +67,7 @@ We added the following data types:
 | Name                  | Value                    | Purpose                                                 |
 | --------------------- | ------------------------ | ------------------------------------------------------- |
 | x-keep-version        | number                   | active since which API version, governed by config.json |
-| x-keep-nofly          | enum (SERVER,CLIENT,EOS) | In which mode clinet, server, light is this unavailable |
+| x-keep-nofly          | enum (SERVER,CLIENT,EOS) | In which mode client, server, light is this unavailable |
 | x-preview             | boolean                  | Is the endpoint available as preview only               |
 | x-keep-scope          | string                   | ANY, $SETUP -> scope requirements for endpoint          |
 | x-content-disposition | string                   | specify content use (attachment vs. inline)             |
