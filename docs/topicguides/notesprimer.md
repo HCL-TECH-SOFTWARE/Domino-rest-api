@@ -31,7 +31,22 @@ The Domino REST API makes heavy use of the JSON based [OpenAPI specification](ht
 
 ## JSON Web Token (JWT)
 
-[JWT explained](https://jwt.io/)
+A JWT is a string with a fixed structure. It is composed of 3 strings in [Base64](https://en.wikipedia.org/wiki/Base64) encoding joined by `.` (dot). When decoded, the first patr is JSON decribing the signature slgorithm and token type, the second part is also JSON, providing the actual information, while the third part is a digital signature.
+
+Notably:
+
+- JWT are not encrypted, so they are not suitable to carry confidential information
+- The signature "only" guarantees that the token hasn't been altered since signing
+- For verification (see OAUth below) you need access to the public key of th signer
+- the actual information could be anythin JSON, but has defined elements like issue date and expiry when used as access token
+
+There is [more to learn about JWT](https://jwt.io/), including sn easy tool to check.
+
+JWT are often used, including in the Domino REST API as [Access Tokens](https://www.oauth.com/oauth2-servers/access-tokens/) to gain authorized access to a server. To serve as an access token, it gets presenten with the [Authorization](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization) http(s) header as `Bearer [JWT Token]`.
+
+A reasonable good anology: The JWT token is your concert ticket. At the entrance of the concert hall, security checks if the ticket is valid. They don't care how you did get it: ordered online, queued at the ticket booth, got it from an authorized reseller or won it from the local radio morning show. They only care if it is genuine.
+
+The same principle applies to JWT as access token. As long as the token was signed by a trusted issuer (commonly refered to as Identity Provider or IdP) and is still valid, not expired, concert hall security will let you through. Of course a valid "Adele" ticket won't get you into the "Taylor Swift" concert, so the content of the ticket matters
 
 ## OAuth
 
