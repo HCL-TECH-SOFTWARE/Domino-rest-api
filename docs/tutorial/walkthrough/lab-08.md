@@ -28,4 +28,4 @@ File sample.csv created training requests
 
 - [Official Domino REST API documentation](https://opensource.hcltechsw.com/Domino-rest-api/index.html)
 - [Discord discussion](https://discord.com/invite/jmRHpDRnH4)
-- modify app to upload data
+- Modify app to upload data.

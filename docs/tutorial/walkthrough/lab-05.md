@@ -69,6 +69,6 @@ Alternative `POST` to `/api/setup-v1/admin/application/{{CLIENT_ID}}/secret?forc
 
 - [Official Domino REST API documentation](https://opensource.hcltechsw.com/Domino-rest-api/index.html)
 - [Discord discussion](https://discord.com/invite/jmRHpDRnH4)
-- Explore creating / retriving app in Postman
-- reset the secret
-- Do the OAuth dance in Postman
+- Explore creating / retrieving app in Postman.
+- Reset the secret.
+- Do the OAuth dance in Postman.

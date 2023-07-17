@@ -39,7 +39,7 @@ curl --location --request POST "http://localhost:8880/api/v1/auth" \
 
 Alternative type `keep login`
 
-You will, on succesful login receive a JSON response, we can verify on [jwt.io](https://jwt.io/)
+You will, on successful login, receive a JSON response we can verify on [jwt.io](https://jwt.io/).
 
 ![Successful local login](img/localLogin.png)
 
@@ -59,11 +59,11 @@ Check you have the correct port,protocol and host. For a local installation that
 
 ![Access to Swagger](img/swagger2.png)
 
-scroll down to `authentication` expand `authLogin` and click try it out. Fill in username and password
+Scroll down to `authentication`, expand `authLogin`, and click try it out. Fill in username and password
 
 ![Access to Swagger](img/swagger3.png)
 
-The resulting bearer needs to be copied into form behind the button ![Access to Swagger](img/swagger4.png)
+The resulting bearer needs to be copied into form behind the button ![Access to Swagger](img/swagger4.png).
 
 ![Access to Swagger](img/swagger5.png)
 
@@ -71,16 +71,16 @@ The resulting bearer needs to be copied into form behind the button ![Access to 
 
 ![Admin Login](img/AdminLogin.png)
 
-a successful login will show the AdminUI
+A successful login will show the AdminUI.
 
 ![Admin UI](img/AdminUI.png)
 
 ### Login using Postman
 
 - Download Import the Postman [collection](../downloads/dachnug2023.postman_collection.json) and [environment](../downloads/dachnug2023.postman_environment.json)
-- Open the Lab1 folder, execute the first entry lsabeled "Login"
+- Open the Lab1 folder, execute the first entry labeled "Login"
 
-The sucessful login shows the beraer token and 4 passed tests
+The successful login shows the bearer token and 4 passed tests
 
 ![Postman login](img/PostmanLogin.png)
 
@@ -93,7 +93,7 @@ The sucessful login shows the beraer token and 4 passed tests
 
 - [Official Domino REST API documentation](https://opensource.hcltechsw.com/Domino-rest-api/index.html)
 - [Discord discussion](https://discord.com/invite/jmRHpDRnH4)
-- call the `/api` endpoint using curl
-- check the different OpenAPI collections in the swagger UI
-- check what happens when invalid credentials are provided
-- Access a endpoint (e.g. `/api/v1/scopes`), then the logout endpoint and try again
+- Call the `/api` endpoint using curl.
+- Check the different OpenAPI collections in the swagger UI.
+- Check what happens when invalid credentials are provided.
+- Access an endpoint, such as `/api/v1/scopes`, then the logout endpoint and try again.

@@ -8,7 +8,7 @@ Domino REST API comes with reasonable default configuration settings. They allow
 
 ## Understanding configuration
 
-The configuration follows the concept of and Overlay File System, where the base configuration is retrieved from the jar file and then overlaid with all the JSON files (if present) in the keepconfig.d directory within the Notes data directory and finally, the environment parameters, if any of those exist. Check [the details here](../understandingconfig.md)
+The configuration follows the concept of an Overlay File System, where the base configuration is retrieved from the jar file and then overlaid with all the JSON files (if present) in the `keepconfig.d` directory within the Notes data directory and finally, the environment parameters, if any of those exist. Check [the details here](../understandingconfig.md)
 
 ## Environment
 

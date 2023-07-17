@@ -5,17 +5,14 @@ By default the ports are set in Domino REST API as specified in the documentatio
 
 ## Procedure:
 
-1. Go to the `keepconfig.d` directory on your Domino Data directory. For linux `/local/notesdata/keepconfig.d` or on windows `C:\Program Files\HCL\Domino\Data\keepconfig.d` 
+1. Go to the `keepconfig.d` directory on your Domino Data directory. For Linux `/local/notesdata/keepconfig.d` or on Windows `C:\Program Files\HCL\Domino\Data\keepconfig.d`.
 2. The default configuration is stored in a `config.json`. 
     You may know that someone change the configuration if there are other `.json` files in the `config.json`. For example, `sample.json`.
 3. Open each `.json` file and see if the ports are being changed. To know that there are changes, the following settings are modified. See [configuring port](../../tutorial/installconfig/configuringPorts.md) for more details.
 
     - "PORT" for the main API port
-
     - "MANAGMENTPORT" for the Management page port
-
     - "METRICSPORT" for the Metrics port
-
     - "HEALTHCHECKPORT" for the Health Check port
 
 
@@ -31,9 +28,9 @@ By default the ports are set in Domino REST API as specified in the documentatio
         }
     ``` 
 
-4. Copy the function where you need to change a certain port in `config.json` values in any text/code app such as vscode, notepad, notepad++ etc, and save the file in `.json` format inside the `keepconfig.d` directory.
+4. Copy the function where you need to change a certain port in `config.json` values in any text/code app such as VSCode, Notepad, Notepad++ etc, and save the file in `.json` format inside the `keepconfig.d` directory.
  
     !!!note "Naming your json files"
-        The config loader processes json files in alphabetical order, so when you have conflicting entries, the last one wins. Use a name that reveals its purpose. e.g. management-port.json
+        The config loader processes json files in alphabetical order, so when you have conflicting entries, the last one wins. Use a name that reveals its purpose such as `management-port.json`.
 
 5. Restart Domino REST API on all servers with this new configuration.
