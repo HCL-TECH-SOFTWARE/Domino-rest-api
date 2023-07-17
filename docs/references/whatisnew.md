@@ -4,20 +4,32 @@
 !!! Note "Important Information about API Changes"
     Items marked in <span style="color:red">**red**</span> are API changes that may impact your applications and should be reviewed before upgrading.
 
-<!--## v1.0.6 - _What's new or changed_
+## v1.0.6 - _What's new or changed_
 
 ### New
 - HCL Domino REST API now supports WebAuthn allowing users to [log in to the **Admin UI** using a passkey](../howto/install/passkey.md).
-- Introduced access control for scopes to control the maximum access anyone using a scope might have, and control access to endpoints that run write operations in the `/setup-v1/` URL path.  
+- Introduced access control for scopes via maximum access level to control the maximum access anyone using a scope might have. For example, if a scope's maximum access level is Editor and you are a Manager, the API runs as Editor. This feature doesn't increase a user's access level. The default for existing scopes is Editor.
+- Introduced `$SETUP` scope that can be added to an application, which needs access to `$SETUP` endpoints. For more information, see [Scopes](../references/usingdominorestapi/scopes.md).
+- Added `ftSearchQuery` to the `GET v1/lists/{name}` endpoint to filter a view based on a full text search query.
+- Added column multi-value delimiter and column position when retrieving information about views utilizing the `GET v1/lists?columns=true` endpoint. 
+- Enabled retrieval of Rich Text embedded images by the `GET v1/attachments/{unid}/{attachmentName}` endpoint. When retrieving the html of a Rich Text field, embedded images come back in an <img> tag such as `<img src="/test.nsf/0/a0286fbd3bdc1d5bc12222d5006ac837/Photo/0.84?OpenElement&FieldElemFormat=gif">`. Use base64 encoding to encode the image src URL and pass that in as the `attachmentName`. 
 
 ### Improvements
 - A database view can now be edited in the Admin UI to select which columns to include. Column external names can now also be set or edited.
+- Added ability to mark a document as read (`markRead=true`) or unread (`markUnread=true`) when getting a view that contains those documents using the `GET v1/lists/{name}` endpoint.
+- Added the ability to select only district documents (`distinctDocuments=true` when retrieving view contents via the `GET v1/lists/{name}` endpoint.
+- Added ability to mark a document as read (`markRead=true`) or unread (`markUnread=true`) when retrieving a document using the `GET v1/document/{unid}` endpoint.
+- Added ability to mark a document as unread (`markUnread=true`) when updating a document using the `PUT/PATCH v1/document/{unid}` endpoints.
+- Added ability to retrieve a database's DXL utilizing the `GET setup-v1/dxl` endpoint.
+- Updated the Domino REST API serializer / deserializer so that only items specific to the fields and their types are added to the schema when creating or updating the schema. There should be no issues with pre-existing schemas, and the schema will update next time something in that schema has changed. 
 
 ### Resolved issues
+- An issue occurred with `GET setup-v1/design/{designType}/{designName}` when the `designName` contained characters that would normally be encoded.
 
 ### Others
-- Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.18.3*.
--->
+- Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:DRAPI-1.0.6*. 
+- Docker image version for docker compose .env file from Harbor is *hclcr.io/domino/restapi:1.0.6*.
+
 
 ## v1.0.5 - _What's new or changed_
 
@@ -78,7 +90,7 @@
 
 ### Others
 
-- Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.15.0*.
+- Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.15.0*. 
 
 ## v1.0.2 - _What's new or changed_
 
