@@ -1,4 +1,4 @@
-# HTTPS for Production
+# HTTPS for production
 
 Best practice for any REST API access is to secure the connection using TLS (colloquial, still referred to as SSL). This applies to the Domino REST API too. In general you have two options:
 

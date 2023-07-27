@@ -2,7 +2,7 @@
 
 ## About this task
 
-The list of databases available when you define a schema in the **Admin UI** is based on the complete list of NSF files, except for the excluded NSF files and NSF files in the excluded directories defined in the following JSON object in [config.json](../../references/quickreference/parameters.md):
+The list of databases available when you define a schema in the **Admin UI** is based on the complete list of NSF files, except for the excluded NSF files and NSF files in the excluded directories defined in the following JSON object in [config.json](../../references/parameters.md):
 
 ```json
 {

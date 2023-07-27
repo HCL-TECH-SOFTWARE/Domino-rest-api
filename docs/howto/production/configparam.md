@@ -1,4 +1,4 @@
-# Configuration parameters
+# Configure parameters
 
 Domino REST API is preconfigured with settings that allow you to get started right away. However, you should familiarize yourself with all configuration parameters and security settings before you deploy into a production environment.
 
@@ -8,7 +8,7 @@ Domino REST API is preconfigured with settings that allow you to get started rig
 
     Make sure that the administration location can only be accessed from a network that can be accessed by a your system administrator.
 
-2. Click the `Config` button. The actual configuration settings opens. The default configuration is in [config.json](/docs/references/quickreference/parameters.md).
+2. Click the `Config` button. The actual configuration settings opens. The default configuration is in [config.json](/docs/references/parameters.md).
 
 3. Only copy the KEEP configuration where you need to change your `config.json` values in any text/code app such as VSCode, notepad, notepad++ etc.
 

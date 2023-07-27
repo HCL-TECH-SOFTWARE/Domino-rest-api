@@ -43,7 +43,7 @@ Provides information related to the [installation and configuration of Domino RE
 - [Security overview](security/index.md)
 - [Auth\*](security/authentication.md)
 - [Configuration parameters](security/configurationParameters.md)
-- [config.json](quickreference/parameters.md)
+- [config.json](parameters.md)
 - [Encryption keys](security/encryption.md)
 - [Set up oauth.nsf](../howto/VoltMX/setupoauthnsf.md)
 - [Custom Identity Provider](security/customIdp.md)
@@ -56,13 +56,16 @@ Provides information related to the [installation and configuration of Domino RE
 - [Postman](usertools/postman.md)
 - [Swagger UI](usertools/swagger.md)
 
+## Configuration parameters 
+
+To learn more information about parameters used in configuration, see [Configuration parameters](parameters.md)
+
 ## Troubleshooting
 
 For addressing common errors in installing and running the Domino RESt API service, see [Troubleshooting](troubleshooting.md)
 
 ## Quick reference
 
-- [Parameters](quickreference/parameters.md)
 - [Standards](quickreference/standards.md) used by Domino REST API
 - [Glossary](quickreference/glossary.md)
 
