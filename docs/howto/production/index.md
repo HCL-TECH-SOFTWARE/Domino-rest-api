@@ -12,3 +12,4 @@ Topics under development:
 - [Configuring HTTPS](httpsprod.md)
 - [JWT multi server](jwtmultiserver.md)
 - [Configuring Ports](prodports.md)
+- [Update Domino REST API](versionupdate.md)

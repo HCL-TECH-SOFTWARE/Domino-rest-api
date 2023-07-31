@@ -8,7 +8,7 @@
 
 ### Download the Domino REST API
 
-1. Go to [HCL License and Download Portal](https://hclsoftware.flexnetoperations.com/).
+1. Go to [HCL Software License and Download Portal](https://hclsoftware.flexnetoperations.com/).
 2. On the sign in page, enter your username and click **Next**. The **License & Download Portal** home page opens.
 3. In the **Your Downloads** pane, scroll to find and then select **HCL Domino**. The **Download Packages** page opens.
 4. On the **New Versions** tab, select the HCL Domino REST API version that you want to download.
