@@ -31,8 +31,7 @@ hide:
 ---
 !!! tip "Ol' Notes hands start here"
 
-    Are you coming from a Notes client with Dmino server background? You never had to deal with certificates, Json Web Token, multiple TCP ports, OAuth
-    and all the fancy new terms of shiny new web world. We got you covered, read [the primer](topicguides/notesprimer.md) to get started
+    Are you coming from a Notes client with a Domino server background? You never had to deal with certificates, JSON Web Token, multiple TCP ports, OAuth, and all the fancy new terms of a shiny new web world. We got you covered, read [the primer](topicguides/notesprimer.md) to get started
     
 ---
 !!! info "API definitions now available"
