@@ -40,7 +40,10 @@ The procedures guide you in editing a database view of a schema so you can:
 
 ### Expected result 
 
-The view now only shows the columns that you have selected.
+- The view now only shows the columns that you have selected. 
+- On the **Database Views** tab, the edited view is shown in bold font as shown in the example image. Hovering over the question mark icon beside the edited view displays a statement that a change has been made in the view.  
+
+![Updated view](../../assets/images/updateddbview.png)
  
 ### To reset an edited view
  

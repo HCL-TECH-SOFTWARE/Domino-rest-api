@@ -1,4 +1,4 @@
-# Configure parameters
+# Modify configuration parameters
 
 Domino REST API is preconfigured with settings that allow you to get started right away. However, you should familiarize yourself with all configuration parameters and security settings before you deploy into a production environment.
 
