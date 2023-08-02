@@ -29,6 +29,16 @@ hide:
     - Trouble running the Domino REST API? Use the [Troubleshooting guide](references/troubleshooting.md).
 
 ---
+!!! tip "Ol' Notes hands start here"
+
+    Are you coming from a Notes client with a Domino server background? You never had to deal with certificates, JSON Web Token, multiple TCP ports, OAuth, and all the fancy new terms of a shiny new web world. We got you covered, read [the primer](topicguides/notesprimer.md) to get started
+    
+---
+!!! info "API definitions now available"
+
+    The OpenAPI definitions, rendering using [ReDoc](https://github.com/Redocly/redoc), are now [available in the References](references/openapidefinitions.md). **Depending on your server configuration, not all endpoints will be active.**
+
+---
 
 ## How the documentation is organized
 
@@ -41,19 +51,6 @@ The {{ variable.drapi }} documentation is based on the [Diátaxis framework](htt
 **[Topic guides](topicguides/index.md)** - Discussion and explanation of key topics and concepts to give background information
 
 **[References](references/index.md)** - Technical references and descriptions on using HCL Domino REST API
-
----
-
-!!! tip "Ol' Notes hands start here"
-
-    Are you coming from a Notes client with Dmino server background? You never had to deal with certificates, Json Web Token, multiple TCP ports, OAuth
-    and all the fancy new terms of shiny new web world. We got you covered, read [the primer](topicguides/notesprimer.md) to get started
-
----
-
-!!! info "API definitions now available"
-
-    The OpenAPI definitions, rendering using [ReDoc](https://github.com/Redocly/redoc), are now [available in the References](references/openapidefinitions.md). **Depending on your server configuration, not all endpoints will be active.**
 
 ---
 

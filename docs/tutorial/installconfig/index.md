@@ -8,7 +8,7 @@
 
 ### Download the Domino REST API
 
-1. Go to [HCL License and Download Portal](https://hclsoftware.flexnetoperations.com/).
+1. Go to [HCL Software License and Download Portal](https://hclsoftware.flexnetoperations.com/).
 2. On the sign in page, enter your username and click **Next**. The **License & Download Portal** home page opens.
 3. In the **Your Downloads** pane, scroll to find and then select **HCL Domino**. The **Download Packages** page opens.
 4. On the **New Versions** tab, select the HCL Domino REST API version that you want to download.
@@ -117,7 +117,7 @@ The file contains one parameter per line. Lines starting with `#` get ignored. V
 
 ## Configuration & Security
 
-Domino REST API is preconfigured with settings that allow you to get started right away. It will run on **http** (not https) on port **8880**. However, you should familiarize yourself with all [configuration parameters](../../references/quickreference/parameters.md) and [security](../../references/security/index.md) settings before you deploy into a production environment.
+Domino REST API is preconfigured with settings that allow you to get started right away. It will run on **http** (not https) on port **8880**. However, you should familiarize yourself with all [configuration parameters](../../references/parameters.md) and [security](../../references/security/index.md) settings before you deploy into a production environment.
 
 <!-- prettier-ignore -->
 !!!tip

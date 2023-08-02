@@ -5,7 +5,7 @@ If your specific configuration entry or references suggest that there are variab
 ## Procedure
 
 1. Log in into the Management console (Port 8889).
-2. Click the `Config` button. The actual configuration settings opens. The default configuration is this: [config.json](/docs/references/quickreference/parameters.md).
+2. Click the `Config` button. The actual configuration settings opens. The default configuration is this: [config.json](/docs/references/parameters.md).
 
     **Example**:
 

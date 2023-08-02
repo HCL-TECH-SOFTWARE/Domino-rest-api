@@ -1,14 +1,14 @@
-# Configuration Parameters
+# Configuration parameters
 
 The configuration is assembled from JSON files and a few selected environment parameters. We use those environment parameters because they're a commonly used way to configure instances in virtual environments such as Docker, IBM Cloud, and Kubernetes.
 
-The Domino REST API ships with default settings in internal files `config.json` and `security.json`. These are internal files, not subject to user modifications (A kitten will die when you try).
+The Domino REST API ships with default settings in internal files `config.json` and `security.json`. **These are internal files, not subject to user modifications**.
 
 !!! warning "CaSe SeNsItIvE"
 
     Parameters are **case sensitive**
 
-To alter a parameter either set an environment parameter, if one exists (there aren't that many) or create a JSON file in `keepconfig.d` following the how-to guide [Modify configuration of Domino REST API](../../howto/install/modifyconfig.md).
+To alter a parameter either set an environment parameter, if one exists (there aren't that many) or create a JSON file in `keepconfig.d` following the how-to guide [Modify configuration of Domino REST API](../howto/install/modifyconfig.md).
 
 ## Environment
 
@@ -37,6 +37,7 @@ A configuration can have the following top-level properties. These properties ar
 |⁠showDeprecatedEndpoints|Boolean|True to allow access to deprecated endpoints / APIs|
 |⁠showPreviewFeatures|Boolean|True to allow preview access to new features, endpoints, or APIs|
 |bodyHandler |[bodyHandler parameters](#bodyhandler-parameters)| Handles HTTP file uploads and used to limit body sizes|
+|webAuthnActive|Boolean| Set to `true` to enable WebAuthn to be active.|
 
 ## Prometheus Parameters
 
@@ -44,7 +45,7 @@ A configuration can have the following top-level properties. These properties ar
 | :--------------- | :------ | :--------------------------------- |
 | Endpoint         | String  | Route path to metrics.             |
 | enabled          | Boolean | true to enable metrics collection. |
-| publishQuantiles | Boolean | true to publish Qantiles.          |
+| publishQuantiles | Boolean | true to publish Quantiles.          |
 
 ## Version parameters
 
@@ -96,13 +97,13 @@ Verticles defines a separate unit of work for particular tags. For the Rest API 
 | instances | int | Relevant only for RestAPI verticle, loads multiple instances that each use a thread pool. You will need to be aware of the number of cores available and scalability, see the [Vert.x documentation](https://vertx.io/docs/vertx-core/java/#_specifying_number_of_verticle_instances). |
 | threadPoolName | String  | If a worker verticle should use a dedicated pool, a required thread pool name. By default it is assigned 10 threads, but this can be overwritten with `threadPoolSize`. If the same `threadPoolName` is used by multiple verticles, the thread pool is shared across those verticles.  |
 | threads | int | This will only be used for worker threads with a specific `threadPoolName`. The default is 10, but this can be overwritten.|
-| worker | Boolean | To make this a [worker verticle](https://medium.com/@levon_t/java-vert-x-starter-guide-part-2-worker-verticles-c49866df44ab). Worker verticles do not run on the event loop thread, but on worker threads from a preconfigured pool of 20 threads. Use for heavy-duty verticles. |
+| worker | Boolean | To make this a [worker verticle](https://medium.com/@levon_t/java-vert-x-starter-guide-part-2-worker-verticles-c49866df44ab). Worker verticles don't run on the event loop thread, but on worker threads from a preconfigured pool of 20 threads. Use for heavy-duty verticles. |
 
 The following are types of verticles with additional parameters:
 
 ### AsyncAgentScheduler verticle
 
-This is the verticle for running async agents - calls to `/run/agent` with `async` set to `true` in the payload. In the Notes client you can look at `KeepAgents.nsf` for the asynchronous agents that are running or have run. This properties for this verticle include the [above](#vertical-parameters), plus these:
+This is the verticle for running async agents - calls to `/run/agent` with `async` set to `true` in the payload. In the Notes client you can look at `KeepAgents.nsf` for the asynchronous agents that are running or have run. This properties for this verticle include the [above](#verticle-parameters), plus these:
 
 | Property | Type | Description |
 | :----- | :--- | :-----|
@@ -201,4 +202,4 @@ All values can be [over written](https://vertx.io/docs/vertx-config/java/#_overl
    }
 ```
 
-To make an NSF file or directory, defined in the JSON object, available in the list of databases available when you define a schema in the **Admin UI**, see [Enable excluded database files and directories](../../howto/database/excludeddb.md).
+To make an NSF file or directory, defined in the JSON object, available in the list of databases available when you define a schema in the **Admin UI**, see [Enable excluded database files and directories](../howto/database/excludeddb.md).

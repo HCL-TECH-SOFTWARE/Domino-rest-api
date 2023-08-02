@@ -120,7 +120,7 @@
     {
       "title": "Parameters",
       "old": "installconfig/configuration/parameters.html",
-      "new": "references/quickreference/parameters.html"
+      "new": "references/parameters.html"
     },
 
     {
@@ -192,13 +192,13 @@
     {
       "title": "config.json",
       "old": "security/configjson.html",
-      "new": "references/quickreference/parameters.html"
+      "new": "references/parameters.html"
     },
 
     {
       "title": "config.json",
       "old": "references/security/configjson.html",
-      "new": "references/quickreference/parameters.html"
+      "new": "references/parameters.html"
     },
 
     {
@@ -216,13 +216,13 @@
     {
       "title": "security.json",
       "old": "security/securityjson.html",
-      "new": "references/quickreference/parameters.html"
+      "new": "references/parameters.html"
     },
 
     {
       "title": "security.json",
       "old": "references/security/securityjson.html",
-      "new": "references/quickreference/parameters.html"
+      "new": "references/parameters.html"
     },
 
     {

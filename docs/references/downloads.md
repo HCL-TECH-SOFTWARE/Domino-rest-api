@@ -18,8 +18,8 @@ title: Downloads
 - [Docker compose file for additional servers](../assets/downloads/docker-compose-secondary.yml)
 - [Docker compose `sample.env` file](../assets/downloads/sample.env)
 
-!!! note
-    Rename this file to `.env` and update your values before use.
+    !!!note
+        Rename this file to `.env` and update your values before use.
 
 ## Postman
 

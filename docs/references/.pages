@@ -13,6 +13,7 @@ nav:
   - Using Domino REST API: usingdominorestapi
   - Security: security
   - User tools: usertools
+  - parameters.md
   - troubleshooting.md
   - Quick reference: quickreference
   - downloads.md

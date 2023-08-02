@@ -27,7 +27,42 @@ nav.md-tabs {
 
 @font-face {
   font-family: 'HCLTech Roobert';
-  src: url(HCLTechRoobert-Regular.otf);
+  src: url(../fonts/HCLTechRoobert-Regular.otf);
+}
+
+:root {
+  --md-text-font: "HCLTech Roobert"; 
+}
+
+:root {
+  --md-code-font: "Courier";
+}
+
+:root > * {
+  --md-code-hl-string-color: #475156;
+}
+
+.md-typeset h1{
+  font-family:"HCLTech Roobert";
+}
+
+.md-typeset h2{
+  font-family:"HCLTech Roobert";
+}
+.md-typeset h3{
+  font-family:"HCLTech Roobert";
+}
+.md-typeset h4{
+  font-family:"HCLTech Roobert";
+}
+.md-typeset h5{
+  font-family:"HCLTech Roobert";
+  text-transform: capitalize;
+  font-size: medium;
+  color: #5b666d;
+}
+.md-typeset h6{
+  font-family:"HCLTech Roobert";
 }
 
 tr.lostLinkItem:nth-child(even) {

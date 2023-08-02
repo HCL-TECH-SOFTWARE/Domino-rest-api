@@ -19,9 +19,9 @@ theme:
   custom_dir: theme_overrides/
   icon:
     repo: fontawesome/brands/github
-  font:
-    text: Roboto
-    code: Roboto Mono
+  font: false
+  #  text: Roboto
+  #  code: Roboto Mono
   favicon: favicon.ico
 
 # Markdown Extensions
