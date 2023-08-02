@@ -25,9 +25,9 @@ Running Domino REST API with a Docker image requires the following:
 
     When you install a Docker Desktop version (Windows, macOS), Docker compose is already included. For servers, it's an [additional install](https://docs.docker.com/compose/install/).
 
-- **[Domino REST API Docker image](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/entitledDownloadFile.action?downloadPkgId=HCL_Domino_REST_API_EAP)**. 
+- **Domino REST API Docker image**. 
 
-    Download the image as an archive file from [HCL Software License and Download Portal (Flexnet)](https://hclsoftware.flexnetoperations.com/).
+    Download the image as an archive file from [HCL Software License and Download Portal (Flexnet)](https://hclsoftware.flexnetoperations.com/). For more information, see [Download Domino REST API](index.md#download-the-domino-rest-api).
 
     !!!warning "Important"
         This prerequisite is only needed if you would use the docker image from **HCL Software License and Download Portal (Flexnet)**. If you would use the docker image from [HCL Container Repository (Harbor)](https://hclcr.io/){: target="_blank"}, you just need to take note of the image name of the latest docker image version for docker compose .env file from Harbor indicated in [What's New](../../references/whatisnew.md) for each version of Domino REST API.
