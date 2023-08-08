@@ -5,7 +5,7 @@ hide:
 
 # Downloads
 
-Here all resource materials for setting up workshops and completing the exercides can be found
+Here you can find all the resource materials for the workshop and for completing the exercises: 
 
 - [DominoAutoConfig.json](DominoAutoConfig.json)
 - [docker-compose.yml](docker-compose.yml)
@@ -18,7 +18,7 @@ Here all resource materials for setting up workshops and completing the exercide
 
 ## Command line utilities
 
-put those somewhere on your path. On Linux/macOS that's typically `~/bin`, On Windows I recommend to create `~\cmd` and add it to the path.
+Put the command line utilities somewhere on your path. On Linux/macOS, that's typically `~/bin`. On Windows, you can create `~\cmd` and add it to the path.
 
 - [Keep shell script](keep) (Linux / macOS)
 - [Keep.cmd](keep.cmd) (Windows)

@@ -1,7 +1,7 @@
 title: Capability Walkthrough
 
 nav:
-  - Downloads: ./downloads/index.md
+  - index.md
   - lab-00.md
   - lab-01.md
   - lab-02.md
@@ -14,3 +14,4 @@ nav:
   - lab-09.md
   - lab-10.md
   - lab-11.md
+  - Downloads: ../../tutorial/downloads/index.html
