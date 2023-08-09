@@ -14,4 +14,5 @@ nav:
   - lab-09.md
   - lab-10.md
   - lab-11.md
-  - Downloads: ../../tutorial/downloads/index.html
+  - Downloads: downloadindex.md
+  #- Downloads: ../../tutorial/downloads/index.html

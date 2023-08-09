@@ -10,7 +10,7 @@ Four ways to login to the REST API
 
 - Lab 0 completed
 - Domino with REST running
-- downloaded `keep` or `keep.cmd` [from here](../downloads/index.md)
+- downloaded `keep` or `keep.cmd` [from here](downloadindex.md)
 
 ## Steps
 
