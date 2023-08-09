@@ -1,23 +1,23 @@
-# Domino REST AOI Walkthru
+# Domino REST API Walkthrough
 
-This workshop is designed for a duration of 3.5 h (210 min) and covers the use and configuration of the Domino REST API using
+This workshop is designed for a duration of 3.5 h (210 min) and covers the use and configuration of the Domino REST API using:
 
 - Command line
 - POSTMAN (or your favorite REST client)
-- The Domino REST AdminUI
+- Domino REST AdminUI
 - Code examples
 
 ## Agenda
 
-See the menu on the left for sequence.
+See the menu on the left for the sequence.
 
 ## Prerequisites
 
 - a running Domino server with the Domino REST API installed:
-  - on your local machine
-  - a remote server (note: you need OS access there)
-  - in a virtual machine
-  - in a (Docker) container using the the Domino REST API Container image
+    - on your local machine
+    - a remote server (note: you need OS access there)
+    - in a virtual machine
+    - in a (Docker) container using the the Domino REST API Container image
 - [Postman](https://www.postman.com) installed
 - [CURL](https://curl.se) installed
 - An IDE, like Eclipse or Visual Studio Code, installed
@@ -26,10 +26,8 @@ See the menu on the left for sequence.
 - Internet connection
 - Optional (but you want out of curiosity): Domino Designer installed
 
-!!! danger "Don't use a production server"
-
-    We will mess with settings, so you don't want to work
-    on a production system. A temporary local server will do
+!!!danger "Don't use a production server"
+    We will mess with settings, so you don't want to work on a production system. A temporary local server will do.
 
 ### Skills
 
@@ -38,11 +36,11 @@ See the menu on the left for sequence.
 - Understanding what an API is
 - Ability to use the command line (preferably with `curl`)
 - for the code exercises:
-  - experience in Java programming
-  - experience with JavaScript and NodeJS
+    - experience in Java programming
+    - experience with JavaScript and NodeJS
 
-## Conduct
+<!--## Conduct
 
 - ask questions
 - try things out
-- talk to your fellow participants (a.k.a. pair-[programming|admin])
+- talk to your fellow participants (a.k.a. pair-programming)-->
