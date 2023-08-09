@@ -12,14 +12,13 @@ The information in this section guides you in configuring nginx as an HTTPS prox
 ## Configuring nginx as an HTTPS proxy - single domain
 
 When the installation requires limiting to a single Domain, routing needs to be configured on a path basis.
-Again, Domino would run on port 81, but this version uses path settings instead of subdomains. When you prefer to use subdomains,
-check [these instructions](./httpsproxy.md) instead.
+Again, Domino would run on port 81, but this version uses path settings instead of subdomains. When you prefer to use subdomains, check [these instructions](./httpsproxy.md) instead.
 
 The path assignment looks like this:
 
-- /api: KEEP on port 8880
-- /admin: KEEP admin UI on port 8880
-- /keep: KEEP Homepage on port 8880
+- /api: Domino REST API on port 8880
+- /admin/ui/: Domino REST API Admin UI on port 8880
+- /keep: Domino REST API Homepage on port 8880
 - /openapi: OpenAPI spec files and UI on port 8880
 - /EWS: custom app on port 3000
 - /autodiscover: custom app on port 3000

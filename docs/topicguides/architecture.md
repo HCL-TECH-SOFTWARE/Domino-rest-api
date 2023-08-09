@@ -38,7 +38,7 @@ We considered but decided against the following APIs:
 
 ### Implication
 
-OpenAPI allows for [contract-first-design](https://en.wikipedia.org/wiki/Design_by_contract) with well defined and documented APIs. We are not limited by CRUD operation considerations and OpenAPI offers higher function calls (like accepting meetings, sending emails and more). In one Domino REST API instance, we can load different API definitions, which can then be used for versioning and for add-on APIs like Admin or Quattro.
+OpenAPI allows for [contract-first-design](https://en.wikipedia.org/wiki/Design_by_contract) with well defined and documented APIs. We're not limited by CRUD operation considerations and OpenAPI offers higher function calls (like accepting meetings, sending emails and more). In one Domino REST API instance, we can load different API definitions, which can then be used for versioning and for add-on APIs like Admin or Quattro.
 
 We use the OpenAPI specified _OperationId_ to identify what EventBus routes and processing classes to use. When Domino REST API starts, it checks for the availability of operation classes matching each _OperationId_. In info API, where the information about the configuration is available, Domino REST API specifies which classes have been identified and loaded and gives error messages on startup console for missing classes.
 
@@ -48,10 +48,10 @@ We use the OpenAPI specified _OperationId_ to identify what EventBus routes and 
 
 Domino REST API uses HTTP(S) distributed over four ports:
 
-- KEEP REST API (the main access)
-- KEEP Admin commands (usually limited to localhost)
+- Domino REST API (the main access)
+- Domino REST API Admin commands (usually limited to localhost)
 - Prometheus metrics (usually only accessible by Prometheus)
-- KEEPJWT service for responding to IdVault requests (typically on one Domino REST API node)
+- Domino REST API JWT service for responding to IdVault requests (typically on one Domino REST API node)
 
 However, we are not limited to HTTP. [The EventBus model](eventbus.md) allows us to implement additional protocols. We have an experimental PubSub access using Redis to the EventArch. There's also an ability to use gRPC, once its format (Protocol Buffers or JSON) is clarified.
 

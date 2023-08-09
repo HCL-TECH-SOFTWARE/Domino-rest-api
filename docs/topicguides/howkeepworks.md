@@ -10,7 +10,7 @@ Let's take a look at the internal structure of Domino REST API to understand how
 - Requests that provide and expect JSON are handled by the default code i.e. the _defaultJsonHandler class_. When the content-type is different, an HTTP side handler is provided. This handler is named after the operationID from the OpenAPI specification. The runtime indicates which handler classes are missing.
 - These classes then send the message to EventBus.
 - The EventBus then distributes the work to worker verticles, the _DominoDefaultVerticle_ class.
-- The basic configuration of the Domino REST API system has worker verticles for code, data, design and personal information maanagement (PIM). Since Domino REST API is extensible, you can add worker verticles, if needed.
+- The basic configuration of the Domino REST API system has worker verticles for code, data, design and personal information management (PIM). Since Domino REST API is extensible, you can add worker verticles, if needed.
 - The _DominoDefault Verticle_ class knows which handler class to load.
 - The appropriate _dbrequests_ handler class then takes over and processes the request, for example, talks to the Notes database, retrieves or updates information, and so forth.
 
