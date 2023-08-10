@@ -6,7 +6,7 @@ The [SwaggerUI](https://github.com/swagger-api/swagger-ui) is an OpenSource comp
 
 <!-- prettier-ignore -->
 !!! note "URLs in this tutorial"
-    The URLs in this tutorial point to a local instance of the REST API. When you want to follow it on your own remote server you need to replace `http://localhost` with your server address
+    The URLs in this tutorial point to a local instance of the Domino REST API. When you want to follow it on your own remote server, you need to replace `http://localhost` with your server address.
 
 ## Create a document with SwaggerUI
 

@@ -57,17 +57,17 @@ server {
      proxy_set_header X-Forwarded-Host $host;
      proxy_set_header X-Forwarded-Port $server_port;
 
-    # /api: KEEP on port 8880
+    # /api: Domino REST API on port 8880
     location /api {
         proxy_pass http://127.0.0.1:8880/api;
     }
 
-    # /admin: KEEP admin UI on port 8880
-    location /admin {
-        proxy_pass http://127.0.0.1:8880/admin;
+    # /admin: Domino REST API admin UI on port 8880
+    location /admin/ui/ {
+        proxy_pass http://127.0.0.1:8880/admin/ui/;
     }
 
-    # /keep: KEEP Homepage on port 8880
+    # /keep: Domino REST API Homepage on port 8880
     location /keep {
         proxy_pass http://127.0.0.1:8880/keep;
     }
