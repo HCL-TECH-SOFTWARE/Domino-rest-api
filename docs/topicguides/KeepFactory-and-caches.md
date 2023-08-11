@@ -1,9 +1,4 @@
----
-#layout: default
-title: Factories and Caches
-#parent: How the Domino REST API Works
-#nav_order: 6
----
+# Factories and Caches
 
 ## KeepFactory
 

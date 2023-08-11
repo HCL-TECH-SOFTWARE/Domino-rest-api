@@ -12,19 +12,25 @@ The [SwaggerUI](https://github.com/swagger-api/swagger-ui) is an OpenSource comp
 
 1. Go to [SwaggerUI](http://localhost:8880/openapi/index.html).
 
-2. Provide the server variables as shown:
+2. Select your server from the **Servers** drop-down list.
 
       ![JwtToken](../assets/images/TokenJwt.png)
 
-3. Create the JWT token for authorization: Scroll to the authentication section, expand it and expand the `/auth` end point. Click on "Try it out". Update the request body with username and password and click execute. When your credentials are valid, the returned JSON will contain the JWT token in the `bearer` element. Copy the token.
+3. Create the JWT token for authorization.
+
+      1. Go to and expand **authentication**, and then go to and expand the **POST /auth** endpoint. 
+	2. In the **Request body**, update the `username` and `password`, and then click **Execute**. When your credentials are valid, the returned JSON has the JWT token in the `bearer` element.
+	3. Copy the JWT token. 
 
       ![Swagger login](../assets/images/ApiSwaggerLogin.png)
 
-4. Scroll back up to the Authorize button, click it, paste the JWT token in and click **Authorize**.
+4. Scroll back up and click **Authorize**.
+5. In the **Available authorizations** dialog, paste the JWT token in the **Value** field under **jwt (http, Bearer)**, and then click **Authorize**.
 
       ![JwtToken1](../assets/images/TokenJwt1.png)
 
-5. Scroll to the data section, expand it, scroll to "POST /document", expand it. Click on "Try it out", enter all the mandatory field values (like below), and then click **Execute**.
+6. Go to and expand **data**, and then go to and expand the **POST /document** endpoint.
+7. In the **Request body**, enter all the mandatory field values as shown below, and then click **Execute**.
 
    ```json
    {
@@ -43,20 +49,24 @@ The [SwaggerUI](https://github.com/swagger-api/swagger-ui) is an OpenSource comp
 
 ### List views with SwaggerUI
 
-1. Follow Steps of authorization from above.
-
-2. Go to the required API, enter the dataSource value, and then click **Execute**.
+1. Follow the authorization steps in [Create a document with SwaggerUI](#create-a-document-with-swaggerui).
+2. Go to and expand **data**, and then go to and expand the **GET /lists** endpoint.
+3. In the **dataSource**, enter the scope name, and then click **Execute**.   
 
    ![SwaggerAPIViews](../assets/images/ApiSwaggerViews.png)
 
-### View the SwaggerUI for a specific KEEP Database
+### View the SwaggerUI for a specific Domino REST API database
 
-1. In the Explore field in the banner, enter `/api/v1/openapi?dataSource=demo`. This will display the KEEP OpenAPI specification specifically for the demo database.
+1. Select your specific Domino REST API database from the **Select a definition** drop-down list. 
+2. Review the endpoints. The admin and design APIs aren't included since they're not appropriate for accessing the demo database's data. The `dataSource` parameter is always "demo" because the OpenAPI specification is for that Domino REST API database.
+      
+      ![SwaggerAPIDatabase](../assets/images/ApiSwaggerDatabase.png)
 
-2. Review the endpoints. The admin and design APIs aren't included since they're not appropriate for accessing the demo database's data. The `dataSource` parameter is always "demo" because the OpenAPI specification is for that Keep database.
+3. Review the Schemas at the bottom. If you haven't specified read/write fields on a form, you'll see the genericFormResponse/genericFormRequest. If you have specified read or write fields, you'll see a schema for `formName-modeName Responses`/`formName-modeName Requests`.
 
-3. Review the Schemas at the bottom. If you haven't specified read/write fields on a form, you will see the genericFormResult/genericFormRequest. If you have specified read or write fields, you will see a schema for `_formName_-_modeName_ Responses`/`_formName_-_modeName_ Requests`.
+   
+You can share the specific Domino REST API database to other developers who also consume the Domino REST API for that database by copying the URL and then sending it to those developers. 
 
-   ![SwaggerAPIDatabase](../assets/images/ApiSwaggerDatabase.png)
+<!--If you URL encode `/api/v1/openapi?dataSource=demo`, you can create a URL to share with developers who consume the Domino REST API for that database. The URL encoded value should be appended as the "url" querystring parameter. The resulting URL will look like `http://localhost:8880/openapi/index.html?url=/api/v1/openapi%3FdataSource%3Ddemo`, where the Domino REST API database name is after the `%3D` (url encoded "=").
 
-If you URL encode `/api/v1/openapi?dataSource=demo`, you can create a URL to share with developers who consume the Domino REST API for that database. The URL encoded value should be appended as the "url" querystring parameter. The resulting URL will look like `http://localhost:8880/openapi/index.html?url=/api/v1/openapi%3FdataSource%3Ddemo`, where the Domino REST API database name is after the `%3D` (url encoded "=").
+1. In the Explore field in the banner, enter `/api/v1/openapi?dataSource=demo`. This will display the KEEP OpenAPI specification specifically for the demo database.-->
