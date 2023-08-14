@@ -29,7 +29,7 @@ Again: **It's generally better to use [LetsEncrypt](https://letsencrypt.org/)**.
 
 ## Encryption key for JWT signing
 
-Domino REST API uses JWT for authentication. When you get started with Domino REST API, you probably log in with a Domino username and password. KEEP, out of the box, uses an ephemeral symmetric encryption key to sign requests. Since you can't see the key or share it, this configuration is reasonably secure. When you restart KEEP, a new key is used.
+Domino REST API uses JWT for authentication. When you get started with Domino REST API, you probably log in with a Domino username and password. Domino REST API, out of the box, uses an ephemeral symmetric encryption key to sign requests. Since you can't see the key or share it, this configuration is reasonably secure. When you restart Domino REST API, a new key is used.
 
 To use a key that can be deployed to an external identity provider (IdP) or used to send requests to the Domino ID vault service, you must generate a public/private key pair and configure the [security](index.md) settings. Never share the private key!
 
@@ -51,7 +51,7 @@ The parameter `-name secp521r1` defines the **ES512** encryption algorithm. Don'
 
 ## Encryption key to sign ID vault requests
 
-The required key is an ES512 elliptic-curve as described above. Domino REST API the private key safe and configure it in [security](./index.md). The public key must be imported into the ID vault. Check the documentation there.
+The required key is an ES512 elliptic-curve as described above. Keep the private key safe and configure it in [security](./index.md). The public key must be imported into the ID vault. Check the documentation there.
 
 ```bash
 openssl ecparam -genkey -name secp521r1 -noout -out privatekey.pem
