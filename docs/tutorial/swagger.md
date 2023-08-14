@@ -47,7 +47,7 @@ The [SwaggerUI](https://github.com/swagger-api/swagger-ui) is an OpenSource comp
 
    Observe what happens when you supply less fields.
 
-### List views with SwaggerUI
+## List views with SwaggerUI
 
 1. Follow the authorization steps in [Create a document with SwaggerUI](#create-a-document-with-swaggerui).
 2. Go to and expand **data**, and then go to and expand the **GET /lists** endpoint.
@@ -55,7 +55,7 @@ The [SwaggerUI](https://github.com/swagger-api/swagger-ui) is an OpenSource comp
 
    ![SwaggerAPIViews](../assets/images/ApiSwaggerViews.png)
 
-### View the SwaggerUI for a specific Domino REST API database
+## View the SwaggerUI for a specific Domino REST API database
 
 1. Select your specific Domino REST API database from the **Select a definition** drop-down list. 
 2. Review the endpoints. The admin and design APIs aren't included since they're not appropriate for accessing the demo database's data. The `dataSource` parameter is always "demo" because the OpenAPI specification is for that Domino REST API database.
