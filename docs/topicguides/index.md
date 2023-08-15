@@ -19,3 +19,4 @@ This section discusses and explains topics and concepts about HCL Domino REST AP
 - [Agent processing](agents.md)
 - [Use cases](usecases.md)
 - [Reserved Form mode names](../references/usingdominorestapi/modenames.md)
+- [Web world - a primer](notesprimer.md)
