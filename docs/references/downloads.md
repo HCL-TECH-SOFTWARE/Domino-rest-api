@@ -14,8 +14,8 @@ title: Downloads
 
 ## Docker
 
-- [Docker compose file for primary server](../assets/downloads/docker-compose-primary.yml)
-- [Docker compose file for additional servers](../assets/downloads/docker-compose-secondary.yml)
+- [Docker compose file for primary server](../assets/downloads/docker-compose-primary.yml){: download="docker-compose-primary.yml"}
+- [Docker compose file for additional servers](../assets/downloads/docker-compose-secondary.yml){: download="docker-compose-secondary.yml"}
 - [Docker compose `sample.env` file](../assets/downloads/sample.env)
 
     !!!note
