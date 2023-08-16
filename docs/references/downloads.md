@@ -2,15 +2,15 @@
 title: Downloads
 ---
 
-# Downloadable assets to get you started.
+# Downloadable assets to get you started
 
 ## Domino REST API
 
-- Download from [Flexnet](https://hclsoftware.flexnetoperations.com/)
+- Download from [HCL Software License & Download Portal (Flexnet)](https://hclsoftware.flexnetoperations.com/){: target="_blank"}
 
 ## Presentations
 
-- [Engage 2022 Presentation](../assets/downloads/De22%20Project%20KEEP.pdf)
+- [Engage 2022 Presentation](../assets/downloads/De22%20Project%20KEEP.pdf){: download="Engage 2022 Presentation"}
 
 ## Docker
 
@@ -23,27 +23,27 @@ title: Downloads
 
 ## Postman
 
-- [Domino REST Postman collection](../assets/downloads/Domino%20REST%20API%20Postman%20Collection.json) to exercise Domino REST APIs for configuring and consuming databases.
-- [Postman environment](../assets/downloads/Domino%20REST%20API%20Postman%20Environment.json) for both collections.
+- [Domino REST API Postman collection](../assets/downloads/Domino%20REST%20API%20Postman%20Collection.json){: download="Domino REST API Postman collection"} to exercise Domino REST APIs for configuring and consuming databases.
+- [Domino REST API Postman environment](../assets/downloads/Domino%20REST%20API%20Postman%20Environment.json){: download="Domino REST API Postman environment"} for both collections.
 - [Demo.nsf](../assets/downloads/Demo.nsf) - Demo database for the Postman and Tutorial examples.
 
-The scripts below are only for reference. They have been superseded by the scripts provided by the installer, so there's no need beyond satisfying curiosity to download them.
-{: .alert .alert-danger}
+
+The following scripts are for reference only. They have been superseded by the scripts provided by the installer, so there's no need beyond satisfying curiosity to download them.
 
 ## Mac
 
 - [Shell script](../assets/downloads/macClient.sh) to start Domino REST API on MacOS.
 - Modify the script and replace all instances in the Shell script before using as follows:
 
-  - programDir with the directory Notes is located in.
-  - dataDir with the directory the Notes Data is located in.
-  - keepDir with the directory Domino REST API is located in.
+    - programDir with the directory Notes is located in
+    - dataDir with the directory the Notes Data is located in
+    - keepDir with the directory Domino REST API is located in
 
 ## Windows
 
 - [Command file](../assets/downloads/winClient.cmd) to start Domino REST API on a Windows client.
 - Modify the script and replace all instances in the Command file before using as follows:
 
-  - programDir with the directory Notes is located in.
-  - dataDir with the directory the Notes Data is located in.
-  - keepDir with the directory Domino REST API is located in.
+    - programDir with the directory Notes is located in
+    - dataDir with the directory the Notes Data is located in
+    - keepDir with the directory Domino REST API is located in

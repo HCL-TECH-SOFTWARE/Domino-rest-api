@@ -152,28 +152,27 @@
 
 - Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.10.0*.
 
-## V1.0 - _What's changed since the Early Access Release_
+???info "V1.0 - What's changed since the Early Access Release"
+    ## V1.0 - _What's changed since the Early Access Release_
 
-### Improvements
+    **Improvements**
 
-- The `core` api (`/api/v1`) has changed name, it's now `basis`, but still has the same path (`/api/v1`).
-- The `design`, `schema`, `scope`, and some `administrative` APIs that were in the `core` api have been moved to the `setup` api (`/api/setup-v1`). This has been done so that these apis can be disabled from a user facing server.
-- The Domino REST API landing page now has a single button for the Swagger UI, once in the Swagger UI, use the drop down at the top right to switch between API specifications.
+    - The `core` api (`/api/v1`) has changed name, it's now `basis`, but still has the same path (`/api/v1`).
+    - The `design`, `schema`, `scope`, and some `administrative` APIs that were in the `core` api have been moved to the `setup` api (`/api/setup-v1`). This has been done so that these apis can be disabled from a user facing server.
+    - The Domino REST API landing page now has a single button for the Swagger UI, once in the Swagger UI, use the drop down at the top right to switch between API specifications.
 
-## **HCL Domino REST API formerly known as HCL Project KEEP**
+???info "HCL Domino REST API formerly known as HCL Project KEEP"
+    ## HCL Domino REST API formerly known as HCL Project KEEP
 
-`HCL Project KEEP` was introduced as an Early Adopter program. We have re-branded `HCL Project KEEP` to `HCL Domino REST API` to align with our `HCL VOLT MX GO` strategy.
-You will find that there are still references to the KEEP branding throughout the product and in the documentation. Please see the table at the [bottom of this page](#keep-branding-examples) to see those areas where the KEEP branding is still prevalent.
+    *HCL Project KEEP* was introduced as an Early Adopter program. We've re-branded *HCL Project KEEP* to *HCL Domino REST API* to align with the *HCL VOLT MX GO* strategy. You will find that there are still references to the KEEP branding throughout the product and in the documentation. Refer to the *KEEP branding examples* table to see areas and documentation pages where the KEEP branding is still prevalent.
 
-### KEEP Branding Examples
-
-| Examples of pages in the documentation still referring to KEEP                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| [Enabling a database](../howto/database/enablingadb.md)                                                                                       |
-| [The Domino REST API CLI](../references/usingdominorestapi/keepcli.md#keepcmd)                                                       |
-| [Running Agents: keepAgents.nsf](../topicguides/agents.md#running-agents)                                                            |
-| [Parameters - AsyncAgentScheduler verticle: keepAgents.nsf](../references/parameters.md#asyncagentscheduler-verticle) |
-| [Domino REST API Roles](../references/usingdominorestapi/roles.md)                                                                   |
-| [Factories and Caches: KeepFactory & KeepConfig](../topicguides/KeepFactory-and-caches.md)                                           |
-| [HCL Tutorials, may reference KEEP](https://opensource.hcltechsw.com/domino-keep-tutorials)                                          |
-| `HCL Documentation, images and image file names may reference KEEP`                                                                  |
+    | KEEP branding examples|
+    | ---- |
+    | [Enabling a database](../howto/database/enablingadb.md) |
+    | [The Domino REST API CLI](../references/usingdominorestapi/keepcli.md#keepcmd) |
+    | [Running Agents: keepAgents.nsf](../topicguides/agents.md#running-agents) |
+    | [Parameters - AsyncAgentScheduler verticle: keepAgents.nsf](../references/parameters.md#asyncagentscheduler-verticle) |
+    | [Domino REST API Roles](../references/usingdominorestapi/roles.md) |
+    | [Factories and Caches: KeepFactory & KeepConfig](../topicguides/KeepFactory-and-caches.md) |
+    | [HCL Tutorials, may reference KEEP](https://opensource.hcltechsw.com/domino-keep-tutorials) |
+    | HCL Documentation, images and image file names may reference KEEP |
