@@ -45,6 +45,9 @@ You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical Vie
       ![Create Database Form](../../assets/images/AddSchemaForm.PNG)
 
 2. Under **Available Databases**, select a database from the list of databases available to the Domino REST API.
+
+      You can search for a database by clicking **Search Databases** and entering the database name. This filters the list of available databases based on the entered database name. Click the clear icon to remove the entered database name. 
+
 3. Under **Add New Schema**, enter details in the **Schema Name** and **Description**, and then select the **Formula Engine** for the schema you want to create.
 4. Click **Add**.
 
