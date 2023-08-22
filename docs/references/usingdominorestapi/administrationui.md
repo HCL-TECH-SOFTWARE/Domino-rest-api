@@ -70,7 +70,7 @@ You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical Vie
       |In $DATA Scope|Enable the setting to make schema available in the system `$DATA` scope. Disable the setting to limit access to the schema to those with the specific scope. |
       |Enable Code|*feature under development*|
       |Allow Decryption|*feature under development*|
-      |Require Revision|*feature under development*|
+      |Require Revision|Enable the setting to require the provision of the correct revision version of the document to update the document through an update endpoint.|
 
       - You can update the **DQL Formula**. You can use any valid Notes formula to allow or disallow DQL usage depending on the formula.
 
