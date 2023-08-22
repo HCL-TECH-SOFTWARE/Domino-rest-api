@@ -48,40 +48,81 @@ You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical Vie
 
       You can search for a database by clicking **Search Databases** and entering the database name. This filters the list of available databases based on the entered database name. Click the clear icon to remove the entered database name. 
 
-3. Under **Add New Schema**, enter details in the **Schema Name** and **Description**, and then select the **Formula Engine** for the schema you want to create.
+3. Under **Add New Schema**, enter details in the **Schema Name** and **Description**, and then select the **Formula Engine** and **Schema Icon** for the schema you want to create.
 4. Click **Add**.
+
+### Edit a schema
+
+1. On the **Schema Management** page, select the schema you want to edit.
+2. On the schema details card, click the edit icon.
+
+      ![Edit icon](../../assets/images/editschema.png)
+
+3. On the **Edit Schema** dialog:
+      
+      - You can select a new icon from the drop-down icon list.
+      - You can update the description of the schema in the **Description**. 
+      - You can update the configuration by clicking the toggles to enable or disable the configuration settings. For more information, see *Configuration Settings* table. 
+
+      |Configuration setting|Description|
+      |----|----|
+      |DQL Access|Enable the setting to allows DQL queries to run against the elements of the schema. A mode named `dql` must be created on each form specifying the fields allowed for that form.|
+      |In $DATA Scope|Enable the setting to make schema available in the system `$DATA` scope. Disable the setting to limit access to the schema to those with the specific scope. |
+      |Enable Code|*feature under development*|
+      |Allow Decryption|*feature under development*|
+      |Require Revision|*feature under development*|
+
+      - You can update the **DQL Formula**. You can use any valid Notes formula to allow or disallow DQL usage depending on the formula.
+
+      ![Edit schema dialog](../../assets/images/editschema1.png){: style="height:80%;width:80%"}
+
+4. Click **Save**. 
 
 ### List available forms
 
 1. Select a schema from the list of schemas and the details for it will load.
 2. Select **Database Forms** from the menu bar to show the list of all the Forms for the selected database.
 
-      ![List Forms](../../assets/images/ListOfForms.png)
+      ![List Forms](../../assets/images/ListOfForms1.png)
 
 ### Configure a form
 
-1. From the list of **Unconfigured Forms**, select the Form that you would like to configure.
-2. In the **Configure** dialog, select **Yes**.
+1. From the available forms under **Unconfigured Forms**, select the form that you would like to configure.
+2. Click the toggle in the form card of the selected form.
+3. In the **Configure** dialog, click **Yes**. 
 
 The selected form is now configured with default settings and listed under **Configured Forms**.
 
+**To unconfigure a form**
+
+1. From the available forms under **Configured Forms**, select the form that you would like to unconfigure.
+2. Click the toggle in the form card of the selected form.
+3. In the **Unconfigure Form** dialog, click **Yes**. 
+
+The selected form is now moved under **Unconfigured Forms**. 
+
 **To make changes to the configuration:**
 
-1. Select the Form. This loads the `default` Access Mode for the Form.
-
+1. Select the form. This loads the `default` Access Mode for the form.
+      
       ![Access Mode](../../assets/images/AccessMode.png)
 
-2. Set the Read or Write access formula for each of the fields in the Form.
+2. Under **Show fields from**, which shows the fields that can be added to the form, hover over a field item and click the **+** icon. This adds the field in the form. Repeat this for all the fields to be added.
 
-!!!tip
-      Click **Add All** if you want to add all the available fields to the Form. 
+      You can also click **Add All** if you want to add all the available fields to the form. 
+
+3. Set the Read or Write access formula for each of the fields in the Form.
+4. Click **Save**.
+
+!!!note
+    You can click the trash can icon corresponding to the field to remove the field from the form. 
 
 ### List available views
 
 1. Select a schema from the list of schemas and the details for it will load.
 2. Select **Database Views** from the menu bar. This lists all the views for the selected schema.
 
-      ![List Views](../../assets/images/ListOfViews.png)
+      ![List Views](../../assets/images/ListOfViews1.png)
 
 ### Activate a view
 
@@ -112,12 +153,33 @@ The selected form is now configured with default settings and listed under **Con
 
 ### Activate an Agent
 
-1. Click an Agent that you would like to activate to move it to **Activated Agents**.
-2. Click **Save**.
+**To activate a specific agent or agents**
 
-<!-- prettier-ignore -->
+- Select the agent you want to activate, and then click the corresponding **Active** option under **Status**.
+
+!!! tip 
+      Clicking the **Inactive** option corresponding to an agent deactivates the agent.
+
+**To activate all agents**
+
+- Click **Activate All**. 
+
 !!! tip
-    Clicking on an Agent from the **Activated Agents** section undos the selection.
+      Clicking **Deactivate All** deactivates all active agents. On the **Reset ALL Agents** dialog, click **Yes** to confirm the deactivation of all agents.
+
+### View Source
+
+The Source tab allows you to view the database schema details in JSON format. 
+
+1. Select a schema from the list of schemas to load the schema details.
+2. Select **Source** from the menu bar to show the details for the selected schema in the following view mode:
+      
+      - **Text Mode** - shows the text view of the details of the selected schema in JSON format
+      - **Styled Object** - shows the collapsible view of the details of the selected schema in JSON format 
+
+!!!note
+      The database schema JSON details are editable in the **Styled Object** view mode. For more information, see [Edit database schema JSON](../../howto/database/editsourcejson.md).
+
 
 ## Database Management - Activation
 
