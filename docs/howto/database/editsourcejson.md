@@ -11,7 +11,7 @@ The procedures guide you in editing the database schema JSON in the **Styled Obj
 
 ## Prerequisite
 
-- You have selected a schema on the **Schema Management** page
+- You have selected a schema on the **Schema Management** page.
 - You have selected **Source** from the menu bar and is in the **Styled Object** view mode.  
 
 ## Procedures
