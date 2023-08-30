@@ -2,42 +2,59 @@
 
 Azure Active Directory has its own ideas about JWT compatibility:
 
-- The `aud` property is fixed to the ID of the application, not as commonly, the URL of the target system
-- There is no `scope` property, but instead `scp` to describe the requested scopes
+- The `aud` property is fixed to the ID of the application, not as commonly, the URL of the target system.
+- There is no `scope` property, but instead `scp` to describe the requested scopes.
 
 ## Configuration in Azure
 
-Navigate to the [Azure Portal](https://portal.azure.com) to login. Select "App registration"
+### Register an application
 
-![Azure landing page](../../assets/images/configuringAD-01.png)
+1. Navigate to the [Azure Portal](https://portal.azure.com){: target="_blank"} to login, and then select **App registrations**.
 
-### Application registration
+    ![Azure landing page](../../assets/images/configuringAD-01.png)
 
-Select "New Registration" on top of the page
+2. Select **New registration**.
 
-![Azure app registration](../../assets/images/configuringAD-02.png)
+    ![Azure app registration](../../assets/images/configuringAD-02.png)
 
-Provide a name, the account type (in most cases "Single tenant" will do) and a local redirect URL (so you can develop your app). If not sure about the URL, use `http://localhost:8080/redirect`. You can change this later on in "Authentication" in the application page. Click on **Register**.
+3. Enter a **Name**, select a supported account type (in most cases **Single tenant** will do), enter local redirect URL (so you can develop your app), and then click **Register**. 
 
-![Azure app registration](../../assets/images/configuringAD-03.png)
+    !!!tip
+        If you aren't sure about the redirect URL, use `http://localhost:8080/redirect`. You can change this later on in **Authentication** in the application page.
 
-Next step is to add the client credentials. Your application will need the `Application (client) ID` and "Client credentials"
+    ![Azure app registration](../../assets/images/configuringAD-03.png)
+
+### Add credentials
+
+The next step is to add the client credentials. Your application will need the **Application (client) ID** and **Client credentials**.
 
 ![Azure app registration](../../assets/images/configuringAD-04.png)
 
-![Azure app registration](../../assets/images/configuringAD-05.png)
+1. Select **Certificates & secrets** &rarr; **Client secrets** &rarr; **New client secret**.
 
-![Azure app registration](../../assets/images/configuringAD-06.png)
+    ![Azure app registration](../../assets/images/configuringAD-05.png)
 
-![Azure app registration](../../assets/images/configuringAD-07.png)
+2. Add a description, select an expiration for your client secret, and then click **Add**.
 
-### API Definition
+    ![Azure app registration](../../assets/images/configuringAD-06.png)
 
-Select "Expose an API" and "Add" behind the Application ID URI. The URI must start with `api://`. You can overwrite the UUID with som cleartext name
+3. Copy the secret's value for use in your client application code. 
 
-![Azure app registration](../../assets/images/configuringAD-08.png)
+    !!!note
+        The secret value is only shown once and never displayed again after you leave this page.
 
-Next step is to add the scopes, one by one. Ensure admins and users can consent and that the scope is set to active. RFor more information about the scopes in the DOmino REST API refer to the [scopes reference](../../references/usingdominorestapi/scopes.md) and the [scope topic guide](../../topicguides/understanding.md#databases-schemas-and-scopes)
+    ![Azure app registration](../../assets/images/configuringAD-07.png)
+
+### API definition
+
+1. Select **Expose an API**.
+2. Select **Add** next to the **Application ID URI**. The URI must start with `api://`. You can overwrite the UUID with some clear text name.
+
+    ![Azure app registration](../../assets/images/configuringAD-08.png)
+
+3. Select **Add a scope**.
+
+    Add the scopes, one by one. Ensure admins and users can consent and that the scope is set to active. For more information about scopes in Domino REST API, see [scopes reference](../../references/usingdominorestapi/scopes.md) and [scope topic guide](../../topicguides/understanding.md#databases-schemas-and-scopes).
 
 ![Azure app registration](../../assets/images/configuringAD-09.png)
 
