@@ -34,16 +34,17 @@ Click **Database Management - Rest API** in the landing page. This opens the **S
 
 ## Add a schema
 
-1. In the **Schema Management** page, click **Add Schema**. This opens a menu as shown below:
+1. In the **Schema Management** page, click **Add Schema**. 
 
-      ![Add Schema Menu](../assets/images/AddNewSchema.png)
+      ![Create Database Configuration](../assets/images/createSchema.png)
+      <!--![Add Schema Menu](../assets/images/AddNewSchema.png)-->
 
 2. Under **Available Databases**, select `Demo.nsf`.
 3. Under **Add New Schema**, fill up the form and then click **Add**.
 
       ![Configure New Schema](../assets/images/ConfigureNewSchema.png)
 
-This creates a schema that defines what views, folders, document, and agents can be accessed through the Domino REST API.
+This creates a schema that defines what views, folders, document, and agents you can access through the Domino REST API.
 
 <!-- prettier-ignore -->
 !!! note
@@ -92,11 +93,12 @@ The selected form is now listed under **Configured Forms**.
 **To make changes to the configured form:**
 
 1. Select the form to load the **Access Mode** page for the form.
-2. Under **Show fields from**, which shows the fields that can be added to the form, hover over a field item and click the **+** icon. This adds the field in the form. Repeat this for all.
+2. Under **Show fields from**, which shows the fields that can be added to the form, hover over a field item and click the **+** icon. This adds the field in the form. Repeat this for all the fields to be added.
 
       ![Access Mode](../assets/images/AccessMode1.png)
 
-3. Click **Save**.
+3. Set the Read or Write access formula for each of the fields in the Form.
+4. Click **Save**.
 
 ## Manage database views
 
@@ -115,12 +117,11 @@ The selected form is now listed under **Configured Forms**.
 
       ![List Agents](../assets/images/ListOfAgents.png)
 
-2. Click an agent to activate. This moves the selected agent under **Activated Agents**.
-3. Click **Save**.
+2. Select the agent you want to activate, and then click the corresponding **Active** option under **Status**.
 
 <!-- prettier-ignore -->
-!!! note
-    Clicking an agent under **Activated Agents** undoes the selection.
+!!! tip
+    Clicking the **Inactive** option corresponding to an agent deactivates the agent.
 
 ## Logout
 
