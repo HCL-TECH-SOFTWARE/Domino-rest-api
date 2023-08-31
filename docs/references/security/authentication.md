@@ -1,4 +1,4 @@
-# Auth*
+# Auth\*
 
 --8<-- "keepmngtURLcaution1.md"
 
@@ -52,6 +52,23 @@ If your provider supports the [`/.well-known/openid-configuration` endpoint](htt
 ```
 
 During initialization, Domino REST API will query this endpoint for issuer and key information to trust public keys from that service.
+
+Some IdP ([Azure](../../howto/IdP/configuringAD.md), we are talking about you), don't provide full information, missing algorythm or accurate issuer info.
+For them additional parameters `aud`, `iss` and `algoritm` can be specified
+
+```json
+{
+  "jwt": {
+    "AzureAD01": {
+      "active": true,
+      "providerUrl": "https://login.microsoftonline.com/[your-tennantid-here]/v2.0/.well-known/openid-configuration",
+      "aud": "api://dominorest",
+      "iss": "https://sts.windows.net/[your-tennantid-here]/",
+      "algorithm": "RS256"
+    }
+  }
+}
+```
 
 Alternatively, the public key and issuer information can be added to the configuration directly:
 
@@ -113,9 +130,20 @@ By default, Domino REST API will expect that incoming tokens contain a Domino-fo
 }
 ```
 
+## Name resolution
+
+The Domino REST API probes for the existence of various claims in the JWT Token to determine the user name. The claims are probed in the following sequence. On the first available claim probing stops
+
+1. keep.user.attr.dominoDn
+1. CN
+1. upn
+1. preferred_username
+1. email
+1. sub
+
 ## Domino REST API and OAuth
 
-Domino REST API is designed to consume an access token. This token can be the result of an OAuth dance or simply the result of an exchange of Domino credentials. The Domino REST API does not participate in an OAuth dance, it uses the result of it.
+Domino REST API is designed to consume an access token. This token can be the result of an OAuth dance or simply the result of an exchange of Domino credentials. The Domino REST API provides an IdP that does the OAuth dance.
 
 ![Flow Diagram](../../assets/images/WebAuth.png)
 
