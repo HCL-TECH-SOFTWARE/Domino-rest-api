@@ -27,8 +27,8 @@ Should Domino use a permanent JWT Key, we can use a public/private key pair and 
 }
 ```
 
-**Pro tip** The management UI (Port 8889) provides a one click option to create such key pairs and configuration entry stored in `keepconfig.d`
-{: .alert .alert-success}
+!!!tip "Pro tip"
+    The management UI (Port 8889) provides a one click option to create such key pairs and configuration entry stored in `keepconfig.d`
 
 These keys can be shared between Domino servers, allowing, for example, redirects to a different mail server.
 
@@ -38,7 +38,7 @@ This is the configuration we would strongly suggest for outward facing Domino se
 
 To enable an external provider, Domino REST API requires access to the provider’s public key, which can be configured in two ways.
 
-If your provider supports the [`/.well-known/openid-configuration` endpoint](https://ldapwiki.com/wiki/Openid-configuration), you can provide the base URI or the full URI to that endpoint in the configuration:
+If your provider supports the [`/.well-known/openid-configuration` endpoint](https://ldapwiki.com/wiki/Wiki.jsp?page=Openid-configuration){: target="_blank"}, you can provide the base URI or the full URI to that endpoint in the configuration:
 
 ```json
 {
@@ -53,8 +53,7 @@ If your provider supports the [`/.well-known/openid-configuration` endpoint](htt
 
 During initialization, Domino REST API will query this endpoint for issuer and key information to trust public keys from that service.
 
-Some IdP ([Azure](../../howto/IdP/configuringAD.md), we are talking about you), don't provide full information, missing algorythm or accurate issuer info.
-For them additional parameters `aud`, `iss` and `algoritm` can be specified
+Some IdP, such as [Azure](../../howto/IdP/configuringAD.md), don't provide full information, missing algorithm or accurate issuer info. For them, additional parameters `aud`, `iss` and `algoritm` can be specified.
 
 ```json
 {
@@ -86,9 +85,9 @@ Alternatively, the public key and issuer information can be added to the configu
 }
 ```
 
-It is the responsibility of the administrator to save key files in secure locations.
+It's the responsibility of the administrator to save key files in secure locations.
 
-**Note** We have a ticket in our backlog to support the R12 certmanager feature for enhanced security and ease of cert distribution
+**Note**: We have a ticket in our backlog to support the R12 certmanager feature for enhanced security and ease of cert distribution.
 {: .alert .alert-info}
 
 ## JWT Payload
@@ -132,14 +131,14 @@ By default, Domino REST API will expect that incoming tokens contain a Domino-fo
 
 ## Name resolution
 
-The Domino REST API probes for the existence of various claims in the JWT Token to determine the user name. The claims are probed in the following sequence. On the first available claim probing stops
+The Domino REST API probes for the existence of various claims in the JWT token to determine the user name. The claims are probed in the following sequence. On the first available claim, the probing stops.
 
 1. keep.user.attr.dominoDn
-1. CN
-1. upn
-1. preferred_username
-1. email
-1. sub
+2. CN
+3. upn
+4. preferred_username
+5. email
+6. sub
 
 ## Domino REST API and OAuth
 

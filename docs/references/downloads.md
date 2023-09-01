@@ -18,9 +18,9 @@ title: Downloads
 - [Docker compose file for additional servers](../assets/downloads/docker-compose-secondary.yml){: download="docker-compose-secondary.yml"}
 - [Docker compose `sample.env` file](../assets/downloads/sample.env)
 
-<!-- prettier-ignore -->
-!!! note ".env"
-    Rename this file to `.env` and update your values before use.
+    <!-- prettier-ignore -->
+    !!! note ".env"
+        Rename this file to `.env` and update your values before use.
 
 ## Postman
 
@@ -35,19 +35,22 @@ The following scripts are for reference only. They have been superseded by the s
 - [Shell script](../assets/downloads/macClient.sh) to start Domino REST API on MacOS.
 - Modify the script and replace all instances in the Shell script before using as follows:
 
-  - programDir with the directory Notes is located in
-  - dataDir with the directory the Notes Data is located in
-  - keepDir with the directory Domino REST API is located in
+    - programDir with the directory Notes is located in
+    - dataDir with the directory the Notes Data is located in
+    - keepDir with the directory Domino REST API is located in
 
 ## Windows
 
 - [Command file](../assets/downloads/winClient.cmd) to start Domino REST API on a Windows client.
 - Modify the script and replace all instances in the Command file before using as follows:
 
-  - programDir with the directory Notes is located in
-  - dataDir with the directory the Notes Data is located in
-  - keepDir with the directory Domino REST API is located in
+    - programDir with the directory Notes is located in
+    - dataDir with the directory the Notes Data is located in
+    - keepDir with the directory Domino REST API is located in
 
 ## Azure AD
 
-Static files to be run on a local http server, testing only [AzureTester.zip](../assets/downloads/AzureTester.zip)
+[AzureTester.zip](../assets/downloads/AzureTester.zip) is a simple test application you run on a local http server to check if a registered App in Azure AD can be used as JWT provider for the Domino REST API.
+
+!!!warning 
+    This is for testing only. Do **NOT** use this code in production.

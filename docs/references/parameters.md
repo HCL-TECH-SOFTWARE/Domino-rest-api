@@ -38,6 +38,7 @@ A configuration can have the following top-level properties. These properties ar
 |⁠showPreviewFeatures|Boolean|True to allow preview access to new features, endpoints, or APIs|
 |bodyHandler |[bodyHandler parameters](#bodyhandler-parameters)| Handles HTTP file uploads and used to limit body sizes|
 |webAuthnActive|Boolean| Set to `true` to enable WebAuthn to be active.|
+|jwt|[JWT parameters](#jwt-parameters)|Parameters for enabling Domino REST API to accept JWT tokens from external providers|
 
 ## Prometheus Parameters
 
@@ -133,6 +134,18 @@ This is the verticle for managing WebHandlers. `worker`, `threadPoolName`, `thre
 |:----|:----|:----|
 |uploadsDirectory|String|Sets the uploads directory to use. Default value is `keep-file-uploads.d`|
 |bodyLimit|int|Sets the maximum body size in bytes. Setting the value to `-1` means no limit.|
+
+## JWT parameters
+
+|Property|Type|Description|
+|:----|:----|:----|
+|active|Boolean|Set to `true` to load the JWT|
+|providerURL|String|Base or full URI to the endpoint of the external JWT provider|
+|algorithm / alg|String|Signing algorithm being used|
+|kid|String|Stands for *key ID* and is a hint indicating which key was used to secure the JWS.|
+|keyFile|String|Path to the JWT public key|
+|iss|String|Identifies the principal that issued the JWT. The value is a case-sensitive string containing a string or URI value.|
+|aud|String|Identifies the recipient that the JWT is intended for. When configuring Azure Active Directory as an IdP, the value of this parameter is the Application ID URI you configured.|
 
 ## Remarks
 
