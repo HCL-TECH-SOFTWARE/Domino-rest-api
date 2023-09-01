@@ -103,7 +103,7 @@ In **Authentication**, make sure you have localhost for local development and ht
 
 ### Adjust app manifest
 
-1. From the app's **Overview** page, select the **Manifest** section. A web-based manifest editor opens, allowing you to edit the manifest within the portal.
+1. Under **Manage** page, select **Manifest**. A web-based manifest editor opens, allowing you to edit the manifest within the portal.
 2. Change the value of `accessTokenAcceptedVersion` from `null` to `2`.
 
 Before change:

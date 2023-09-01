@@ -9,3 +9,4 @@ Topics to guide you in completing database-related goals and tasks in relation t
 - [Enable a database](enablingadb.md)
 - [Enable excluded database files and directories](excludeddb.md)
 - [Use external names in schema definitions](externalnames.md)
+- [Adjust number of retrieved entries when pulling in view data](pullviewdata.md)

@@ -6,6 +6,25 @@ The section provides the information related to Domino REST API.
 !!! Note "Important Information about API Changes"
     Items marked in <span style="color:red">**red**</span> are API changes that may impact your applications and should be reviewed before upgrading.
 
+<!--???info "v1.0.7 - What's new or changed"
+    ## v1.0.6 - _What's new or changed_
+
+    **New**
+
+    - Added support for [Azure Active Directory as an IdP](../howto/IdP/configuringAD.md).
+
+    **Improvements**
+
+    - Allowed [editing of database schema JSON](../howto/database/editsourcejson.md) in Admin UI. 
+
+    **Resolved issues**
+
+    **Others**
+
+    - Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:DRAPI-1.0.7*. 
+    - Docker image version for docker compose .env file from Harbor is *hclcr.io/domino/restapi:1.0.7*.
+    -->
+
 ???info "v1.0.6 - What's new or changed"
     ## v1.0.6 - _What's new or changed_
 
