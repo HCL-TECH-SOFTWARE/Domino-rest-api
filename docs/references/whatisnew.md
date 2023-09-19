@@ -15,12 +15,13 @@ The section provides the information related to Domino REST API.
 
     **Improvements**
 
-    - Allowed [editing of database schema JSON](../howto/database/editsourcejson.md) in Admin UI. 
+    - Allowed [editing of database schema JSON](../howto/database/editsourcejson.md) and [schema details](../references/usingdominorestapi/administrationui.md#edit-a-schema) in Admin UI.
+    - Implemented UI improvements in Schema Management in the Admin UI for better user experience. 
 
     **Resolved issues**
 
     **Others**
-
+    - Implemented various documentation updates. 
     - Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:DRAPI-1.0.7*. 
     - Docker image version for docker compose .env file from Harbor is *hclcr.io/domino/restapi:1.0.7*.
     -->
