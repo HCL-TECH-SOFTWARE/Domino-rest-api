@@ -2,7 +2,7 @@
 
 <!-- prettier-ignore -->
 !!! info "Background"
-    [RichText (RTF)](https://en.wikipedia.org/wiki/Rich_Text_Format) was specified by Microsoft in 1987. Notes/Domino uses a similar specification. It is essentially a container format designed to host [plain text](https://www.youtube.com/watch?v=_mZBa3sqTrI), formatted text, images, attachments, embedded objects and layout information. It is [white space sensitive](https://twitter.com/jordwalke/status/1272431278868987904), a fancy term for: being able to "format" something by hitting the space key repeatedly.
+    [RichText (RTF)](https://en.wikipedia.org/wiki/Rich_Text_Format) was specified by Microsoft in 1987. Notes/Domino uses a similar specification. It's essentially a container format designed to host [plain text](https://www.youtube.com/watch?v=_mZBa3sqTrI), formatted text, images, attachments, embedded objects and layout information. It's [white space sensitive](https://twitter.com/jordwalke/status/1272431278868987904), a fancy term for being able to "format" something by hitting the space key repeatedly.
 
     The container formats today that resemble these capabilities are [ECMA-376 (ISO/IEC-29500)](https://www.ecma-international.org/publications-and-standards/standards/ecma-376/) (a.k.a Office Open XML), [ISO/IEC 26300:2006](http://www.oasis-open.org/committees/download.php/19274/OpenDocument-v1.0ed2-cs1.pdf) (a.k.a Open Document Format), which are both XML based and [MIME (RFC 1341)](https://datatracker.ietf.org/doc/html/rfc1341) which is widely used in eMail. The XML formats, mainly used in word processors aren't native to the web, while MIME doesn't prescribe (it is **multipurpose** after all) its content parts **and** isn't native to web browsers.
 
@@ -18,19 +18,19 @@ Any field you want to access in Domino REST API needs to be defined [in a schema
 }
 ```
 
-This enables the correct, within the means of the API, processing of RichText, for both read and write.
+This enables the correct, within the means of the API, processing of RichText for both read and write.
 
 ### Reading RichText
 
 There are 5 ways to retrieve RichText:
 
-- As part of the regular `/document/{unid}` URL or a list operation using `&documents=true`
-- Using the `/query` URL
-- Using the `/richtext/markdown/{unid}` endpoint, returning markdown, quite lossy, but easy to digest
-- Using the `/richtext/mime/{unid}` endpoint returning a [MIME](https://datatracker.ietf.org/doc/html/rfc1341) representation of a Notes RichText
+- as part of the regular `/document/{unid}` URL or a list operation using `&documents=true`
+- using the `/query` URL
+- using the `/richtext/markdown/{unid}` endpoint that returns markdown, which is quite lossy but easy to digest
+- Using the `/richtext/mime/{unid}` endpoint that returns a [MIME](https://datatracker.ietf.org/doc/html/rfc1341) representation of a Notes RichText
 - Using the `/bulk/unid` URL
 
-By default the following APIs return RichText as MIME, but you can specify a different format by using the `richTextAs=` URL parameter. The valid formats are `html`, `mime` and `md`.
+By default, the following APIs return RichText as MIME, but you can specify a different format by using the `richTextAs=` URL parameter. The valid formats are `html`, `mime` and `md`.
 
 - `/document/{unid}`
 - `/query`
@@ -39,12 +39,14 @@ By default the following APIs return RichText as MIME, but you can specify a dif
 - `/bulk/update`
 - `/lists/{name}` (when using the `documents=true` parameter)
 
+The request response may include the parameters identified in the parameters table below.  
 ### Writing RichText
 
 <!-- prettier-ignore -->
 !!! note
     **There is no RichText on the web**.
-    Domino REST API does **NOT** attempt to write back data in the original Lotus Notes (ca 1989) RichText format, but will use [MIME](https://datatracker.ietf.org/doc/html/rfc1341) with multipart content. The Notes client can process and render this for display, but can't edit it without first converting it. Try to avoid editing on both sides.
+    Domino REST API does **NOT** attempt to write back data in the original Lotus Notes (ca 1989) RichText format, but will use [MIME](https://datatracker.ietf.org/doc/html/rfc1341) with multipart content. 
+    The Notes client can process and render this for display, but can't edit it without first converting it. Try to avoid editing on both sides.
 
 A submission to a RichText field as part of a `POST /document/{unid}` needs to look like this:
 
@@ -59,14 +61,12 @@ A submission to a RichText field as part of a `POST /document/{unid}` needs to l
 }
 ```
 
-| Parameter             | Details                                                                                                                                                        |
-| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Valid-Content-Type    | Can be `text/[subtype]`, `image/[subtype]` or `multipart/[subtype]`                                                                                            |
-| encoding              | can be `PLAIN` or `BASE64`. When using `PLAIN` you have to escape all quotes, so we recommend `BASE64`                                                         |
-| `text/[subtype]`      | mainly `html` but could be `css` or `javascript`                                                                                                               |
-| `image/[subtype]`     | any image type works in the API, but for rendering in the Notes client stick to `jpg`, `png` or `svg`                                                          |
-| `multipart/[subtype]` | use `mixed` or `form-data`, There is a subtle difference, see below                                                                                            |
-| headers               | [MIME](https://datatracker.ietf.org/doc/html/rfc1341) headers. E.g to determine attachment names: `"Content-Disposition: inline; filename=\"KEEPLogo.png\";",` |
+|Parameter|Details|
+|----|----|
+|type|Its value must be a valid content type. It can be `text/[subtype]`, `image/[subtype]` or `multipart/[subtype]`.</br></br>- `text/[subtype]` is mainly `html` but could be `css` or `javascript`.</br></br>- `image/[subtype]` can be any image type that works in the API. But for rendering in the Notes client, stick to `jpg`, `png` or `svg`.</br></br>- `multipart/[subtype]` can be `mixed` or `form-data`, There is a subtle difference, see examples below.|
+|encoding|Its value can be either be `PLAIN` or `BASE64`. When using `PLAIN`, you have to escape all quotes so we recommend `BASE64`.|
+|headers| [MIME](https://datatracker.ietf.org/doc/html/rfc1341) headers used to, for example, determine attachment names.</br></br>Example: `"Content-Disposition: inline; filename=\"KEEPLogo.png\";",`|
+|content|Base64 encoded content|
 
 ## Examples
 
@@ -148,7 +148,7 @@ Conversion result
 ewogICJ0eXBlIjogImltYWdlL3BuZyIsCiAgImVuY29kaW5nIjogImJhc2U2NCIsCiAgImNvbnRlbnQiOiAiLUVuY29kZWQgYmFzZTY0IGhlcmUtIgp9
 </div></div>
 
-to finally submit it as String (other fields omitted for clarity):
+To finally submit it as String (other fields omitted for clarity):
 
 ```json
 {

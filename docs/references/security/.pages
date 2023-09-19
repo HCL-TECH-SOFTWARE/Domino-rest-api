@@ -3,6 +3,7 @@ title: Security
 nav:
   - index.md
   - authentication.md
+  - jwt.md
   - configurationParameters.md
   - encryption.md
   - Set up oauth.nsf: ../../howto/VoltMX/setupoauthnsf.html
