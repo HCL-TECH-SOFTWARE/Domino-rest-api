@@ -31,7 +31,7 @@ There are 6 ways to retrieve RichText:
 - Using the `/bulk/unid` URL
 - Using `/richtext/plain/{unid}` endpoint that returns a stream of plain unformatted text
 
-By default, the following APIs return RichText as MIME, but you can specify a different format by using the `richTextAs=` URL parameter. The valid formats are `html`, `mime` and `md`.
+By default, the following APIs return RichText as MIME, but you can specify a different format by using the `richTextAs=` URL parameter. The valid formats are `html`, `mime`, `md`, and `plain`.
 
 - `/document/{unid}`
 - `/query`

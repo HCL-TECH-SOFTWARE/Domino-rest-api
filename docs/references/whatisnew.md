@@ -29,14 +29,14 @@ The section provides the information related to Domino REST API.
 
     **Resolved issues**
 
-    - Sorting on a column in GET v1/lists/{name} failed.
-    - A document, which was deleted but in an abnormal state and showing up in a view, generated an error when retrieved via v1/lists/{name}.
-    - Creating a view via POST setup-v1/design would cause an NPE if the selection formula was left off.
+    - A valid sort may fail in `GET v1/lists/{name}` under certain circumstances.
+    - A document, which was deleted but in an abnormal state and showing up in a view, generated an error when retrieved via `v1/lists/{name}`.
+    - Creating a view via `POST setup-v1/design` would cause an NPE if the selection formula was left off.
 
     **Others**
 
     - Implemented various documentation updates.
-    - Starting this release, the installer jar file name now includes the current Domino version, for example, `restapiInstall-r12.jar`. 
+    - Starting this release, the installer jar file name now includes the Domino version, for example, `restapiInstall-r12.jar`. 
     - Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:DRAPI-1.0.7*. 
     - Docker image version for docker compose .env file from Harbor is *hclcr.io/domino/restapi:1.0.7*.
     
