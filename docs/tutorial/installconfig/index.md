@@ -52,6 +52,8 @@ The installer requires a series of parameters:
 [sudo] java -jar restapiInstall.jar [-ahnsyV] -d=<dataDir> -i=<notesIni> -r=<restapiDir> -p=<programDir>
 ```
 
+--8<-- "jarfilename.md"
+
 <!-- prettier-ignore -->
 !!! tip
       Notes and Domino install a JVM on your computer. You can and should use it to install.

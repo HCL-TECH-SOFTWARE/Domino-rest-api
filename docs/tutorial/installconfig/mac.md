@@ -9,6 +9,8 @@
 
 To install, follow the example below:
 
+--8<-- "jarfilename.md"
+
 ```bash
 java -jar restapiInstall.jar \
  -d="/Users/[your user name]/Library/Application Support/HCL Notes Data" \
