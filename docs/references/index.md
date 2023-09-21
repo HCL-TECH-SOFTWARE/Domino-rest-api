@@ -17,7 +17,11 @@ Provides the minimum [system requirements for Domino REST API](https://support.h
 Provides information related to the [installation and configuration of Domino REST API](../tutorial/installconfig/index.md).
 
 - [Functional accounts](functionalUsers.md)
+- [Understanding configuration](understandingconfig.md)
 
+## OpenAPI
+
+[OpenAPI](openapidefinitions.md) definition and specifications
 ## Access control
 
 [Access control for various parts of the REST API](accesscontrol.md)
@@ -76,6 +80,10 @@ For scripts, Postman collections, sample databases, and more, see [Downloads](do
 ## Admin cheat sheet
 
 For information that administrator users need to know, see [Admin cheat sheet](admincheatsheet.md).
+
+## Deprecated features
+
+[Deprecated features](deprecated.md) from the current and earlier releases
 
 ## Acknowledgements
 

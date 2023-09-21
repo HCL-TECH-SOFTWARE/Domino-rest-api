@@ -11,7 +11,7 @@
 # ${CONTAINER_HOSTNAME}                domino.acme.com
 # ${CONTAINER_VOLUMES}                 domino_keep_notesdata
 # ${CONTAINER_NAME}                    domino-keep-test02
-# ${CONTAINER_IMAGE}                   docker.qs.hcllabs.net/hclcom/projectkeep-r12:DRAPI-1.0.6
+# ${CONTAINER_IMAGE}                   docker.qs.hcllabs.net/hclcom/projectkeep-r12:DRAPI-1.0.7
 # ---
 # ${SERVERSETUP_SERVER_DOMAINNAME}     MarvelPhase4  <- YOUR EXSISTING NOTES DOMAIN
 # ${SERVERSETUP_ORG_ORGNAME}           Stark Industries <- YOUR EXSISTING ORG

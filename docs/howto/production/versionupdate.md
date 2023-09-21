@@ -67,6 +67,8 @@ Follow the procedure based on the installation option you used when installing t
 
 To update to the latest release version, run the following command:
 
+--8<-- "jarfilename.md"
+
 ```bash
 sudo java -jar restapiInstall.jar \ 
  -d="/local/notesdata" \ 
@@ -80,6 +82,8 @@ sudo java -jar restapiInstall.jar \
 ### Mac
 
 To update to the latest release version, run the following command:
+
+--8<-- "jarfilename.md"
 
 ```bash
 java -jar restapiInstall.jar \ 
@@ -101,6 +105,9 @@ To update to the latest release version, run the following command:
 
 !!!note
     Domino REST API installer needs to be run as administrator.
+
+
+--8<-- "jarfilename.md"
 
 **For Windows Domino Server**
 

@@ -8,6 +8,8 @@
 
 To install, follow the example below:
 
+--8<-- "jarfilename.md"
+
 ```bash
 sudo java -jar restapiInstall.jar \
  -d="/local/notesdata" \
