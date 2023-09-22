@@ -39,7 +39,8 @@ Follow the procedure based on the installation option you used when installing t
     - When using the docker image from *HCL Software License and Download Portal (Flexnet)*, take note of the image name that was output after being loaded. The image name is also indicated in the [What’s New](../../references/whatisnew.md) for each version of the Domino REST API and marked *Docker image version for docker compose .env file (CONTAINER_IMAGE)*.
   	
         !!!example "Example loaded image name" 
-            docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.10.0
+            - From earlier releases: `docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.10.0`
+            - Starting v1.0.7 release: `domino-rest-api:1.0.7`
     
     - When using the docker image from *HCL Container Repository (Harbor)*, take note of the latest *Docker image version for docker compose .env file from Harbor* indicated in [What’s New](../../references/whatisnew.md).
 
