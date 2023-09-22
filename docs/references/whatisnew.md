@@ -37,7 +37,7 @@ The section provides the information related to Domino REST API.
 
     - Implemented various documentation updates.
     - Starting this release, the installer jar file name now includes the Domino version, for example, `restapiInstall-r12.jar`. 
-    - Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:DRAPI-1.0.7*. 
+    - Docker image version for docker compose .env file (CONTAINER_IMAGE) is *domino-rest-api:1.0.7*. 
     - Docker image version for docker compose .env file from Harbor is *hclcr.io/domino/restapi:1.0.7*.
     
 
