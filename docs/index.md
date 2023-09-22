@@ -16,7 +16,8 @@ hide:
 
 !!!tip
 
-    For the latest release information about {{ variable.drapi }}, see [What's new](references/whatisnew.md).
+    - For the latest release information about {{ variable.drapi }}, see [What's new](references/whatisnew.md).
+    - To know features that have been deprecated in the current and earlier releases, see [deprecated features](references/deprecated.md).
 
 ## TL/TR
 

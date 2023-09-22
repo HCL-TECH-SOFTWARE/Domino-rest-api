@@ -17,6 +17,8 @@
 
 To install, follow the example below:
 
+--8<-- "jarfilename.md"
+
 ```bash
 java -jar restapiInstall.jar ^
  -d="C:\Program Files\HCL\Domino\Data" ^
@@ -69,6 +71,8 @@ If an existing installation is found at the location you specified as the restap
 ## Install on a Windows Notes Client
 
 Run the installer:
+
+--8<-- "jarfilename.md"
 
 ```bash
 java -jar restapiInstall.jar ^

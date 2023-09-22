@@ -3,7 +3,7 @@
 <!-- prettier-ignore -->
 !!! danger "**Domino REST API on Notes Client**"
     The HCL Domino REST API is designed for use with the HCL Domino server. The ability to deploy it to a Notes client on Windows or macOS is provided for your convenience so you can evaluate and experiment. You can explore the API without setting up an HCL Domino server.<br />
-    **This setup is not supported for any production use**. HCL Support will not entertain tickets for it.
+    **This setup is not supported for any production use**. HCL Support won't entertain tickets for it.
 
 ## About this task
 
@@ -13,6 +13,9 @@ The procedure guides you to try the Domino REST API with a sample demo Notes dat
 
 - HCL Notes Desktop Client installed.
 - Domino REST API installed using the `restapiInstall.jar` from Flexnet.
+
+    --8<-- "jarfilename.md"
+
 - `Demo.nsf` from [Downloads](../../references/downloads.md).
 
 ## Procedure

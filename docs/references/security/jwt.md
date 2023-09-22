@@ -6,13 +6,13 @@ When issuing a valid JWT, the payload of the JWT may include the following param
 
 |Parameter/Claim|Type|Description|
 |:---|:---|:---|
-|iss|String|Stands for *Issuer* and refers to the name of the IdP.</br></br>The value of the iss can be the default name of the issuer or can be a series of Domino-format distinguished names, each of which has an attribute type and value pair, indicating the issuer.|
-|sub|String|Stands for *Subject* and refers to the full qualified X.500 expended Notes name.</br></br>The value of the sub includes a series of Domino-format distinguished names, each of which contains an attribute type and value pair. The attribute types are:</br></br>- CN for common name of the user who generated the JWT.</br>- O for organization name of the user.|
+|iss|String|Stands for *Issuer* and refers to the name of the IdP.</br></br>The iss uses the value of the `JwtIssuer` if present. If not, the value is the URL of the server.|
+|sub|String|Stands for *Subject* and refers to the full qualified X.500 expended Notes name.</br></br>The value of the sub includes a series of Domino-format distinguished names, each of which contains an attribute type and value pair. The attribute types are:</br></br>- CN for common name of the user who generated the JWT.</br>- O for organization name of the user.</br></br>Example: `CN=My Name/O=MyOrganization`|
 |iat|Integer|Stands for *Issued At* and identifies the time at which the JWT was issued. Its value is a NumericDate value.|
 |exp|Integer|Stands for *Expiry Time* and identifies the expiration time on or after which the JWT must not be accepted for processing. The expiration time must coincide with the defined value of the `maxJwtDuration` parameter. Its value is a NumericDate value.|
-|aud|String|Stands for *Audience* and identifies the recipient that the JWT is intended for. Its value must be `Domino` (case-sensitive).|
+|aud|Array|Stands for *Audience* and identifies the recipient that the JWT is intended for. Its only value is `Domino` (case-sensitive).|
 |CN|String|Stands for *Common Name* and has the same definition and values as the `sub` claim.|
-|scope|String|Refers to the databases and services that the user accesses. The values must be a space-separated list of database aliases, `Mail`, and/or `$DATA`.|
+|scope|String|Refers to the databases and services that the user accesses. The values must be a space-separated list of database aliases, `Mail`, `$SETUP`, and/or `$DATA`.</br></br> For more information, see [Scopes](../usingdominorestapi/scopes.md)|
 |email|String|Email address of the user whose Domino credentials were used to issue the JWT.|
 
 When processing and using an incoming JWT from an external IdP, you need to configure Domino REST API by creating a JSON file in `keepconfig.d`. The JSON file may include the following keys:
@@ -30,6 +30,9 @@ When processing and using an incoming JWT from an external IdP, you need to conf
 |aud|When using [Azure Active Directory as IdP](../../howto/IdP/configuringAD.md), set its value to the configured *Application ID URI*.|
 |userIdentifier|Use to configure Domino REST API to accept LDAP-format name. Must be configured with `userIdentifierinLdapFormat`. Set the value to `dn`.|
 |userIdentifierInLdapFormat|Use to configure Domino REST API to accept LDAP-format name. Must be configured with `userIdentifier`. Set the value to “true”.|
+
+!!!note
+    When processing and using an incoming JWT from an external IdP, there are 2 configuration modes that you can use to configure Domino REST API. One configuration mode uses the `providerUrl`, while the other uses `keyFile` and `kid`. To learn more, see [External JWT Provider](../security/authentication.md#external-jwt-provider). 
 
 Example configuration:
 
@@ -51,4 +54,4 @@ In the example configuration, **AzureAD01** is the `IdP name`.
 
 
 
-<!--// TODO: [MXGO-1563] Describe JWT Format-->
+

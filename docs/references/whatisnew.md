@@ -3,27 +3,43 @@
 The section provides the information related to Domino REST API.
 
 <!-- prettier-ignore -->
-!!! Note "Important Information about API Changes"
-    Items marked in <span style="color:red">**red**</span> are API changes that may impact your applications and should be reviewed before upgrading.
+!!! note "Important"
+    - Items marked in <span style="color:red">**red**</span> are API changes that may impact your applications and should be reviewed before upgrading.
+    - Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](deprecated.md).
 
-<!--???info "v1.0.7 - What's new or changed"
-    ## v1.0.6 - _What's new or changed_
+???+ info "v1.0.7 - What's new or changed"
+    ## v1.0.7 - _What's new or changed_
 
     **New**
 
+    - Added endpoint `GET v1/richtext/plain/{unid}` to retrieve just plain text from a rich text field.
+    - Added endpoint `POST v1/bulk/etag` to give an entity tag (ETag) to specified documents. The endpoint is also useful in finding if a doc has been updated or deleted.
+    - Added endpoint `POST v1/bulk/folder` to add or remove documents to or from folders.
+    - Added endpoint `GET v1/logout` for OIDC compliance. `POST v1/logout` is still recommended as a browser's PREFETCH could potentially cause issues.
     - Added support for [Azure Active Directory as an IdP](../howto/IdP/configuringAD.md).
-
+    - Added ability to directly [edit a schema JSON](../howto/database/editsourcejson.md) in the **Admin UI**.
+    - Added the ability to specify multiple filter keys for `GET v1/lists/{name}`.
+    - Added the ability to filter by top-level category in `GET v1/lists/{name}`.
+    
     **Improvements**
 
-    - Allowed [editing of database schema JSON](../howto/database/editsourcejson.md) in Admin UI. 
+    - Sped up the `setup-v1/admin/quickconfig` endpoint significantly, which sped up **Admin UI Quick Config**.
+    - Added a file selection button for `POST v1/attachments/{unid}` in the Swagger UI to select attachments for a document.
+    - Implemented UI improvements in Schema Management in the Admin UI for better user experience. 
 
     **Resolved issues**
 
+    - A valid sort may fail in `GET v1/lists/{name}` under certain circumstances.
+    - A document, which was deleted but in an abnormal state and showing up in a view, generated an error when retrieved via `v1/lists/{name}`.
+    - Creating a view via `POST setup-v1/design` would cause an NPE if the selection formula was left off.
+
     **Others**
 
+    - Implemented various documentation updates.
+    - Starting this release, the installer jar file name now includes the Domino version, for example, `restapiInstall-r12.jar`. 
     - Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:DRAPI-1.0.7*. 
     - Docker image version for docker compose .env file from Harbor is *hclcr.io/domino/restapi:1.0.7*.
-    -->
+    
 
 ???info "v1.0.6 - What's new or changed"
     ## v1.0.6 - _What's new or changed_
