@@ -14,7 +14,7 @@ Domino REST API uses certificates for:
 
 ## Obtain certificates
 
-For HTTPS traffic, JKS, PEM, and PTX certificate formats are supported. For public and private key pairs, RSA and EC are supported. HTTPS certificates must be accepted by your browser and HTTP tool, so get valid certificates.
+For HTTPS traffic, JKS, PEM, and PFX certificate formats are supported. For public and private key pairs, RSA and EC are supported. HTTPS certificates must be accepted by your browser and HTTP tool, so get valid certificates.
 
 To get valid certificates, use any of the following approaches:
 
