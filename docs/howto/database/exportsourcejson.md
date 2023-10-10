@@ -15,6 +15,6 @@ The procedure guides you on how to export the database schema in JSON format on 
 
 1. Click **Export**.
 
-    ![Export Source](../../assets/images/insertjsonobject.png)
+    ![Export Source](../../assets/images/exportjson.png)
 
      The export button downloads the Source text in .json format with a filename (exampleschema.json). 
