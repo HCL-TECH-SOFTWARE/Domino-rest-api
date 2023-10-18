@@ -8,7 +8,7 @@ Run a custom NodeJS application that interacts with the Domino Rest API
 
 ## Prerequisites
 
-- Lab 06 completed
+- Lab 05 completed
 - Domino running
 - NodeJS installed
 - Internet connection

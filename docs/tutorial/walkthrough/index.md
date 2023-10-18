@@ -13,7 +13,7 @@ See the menu on the left for the sequence.
 
 ## Prerequisites
 
-- a running Domino server with the Domino REST API installed:
+- A running Domino server with the Domino REST API installed on one of the following:
     - on your local machine
     - a remote server (note: you need OS access there)
     - in a virtual machine
@@ -35,7 +35,7 @@ See the menu on the left for the sequence.
 - Understanding of Containers (optional)
 - Understanding what an API is
 - Ability to use the command line (preferably with `curl`)
-- for the code exercises:
+- For the code exercises:
     - experience in Java programming
     - experience with JavaScript and NodeJS
 

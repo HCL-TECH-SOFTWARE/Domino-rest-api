@@ -13,18 +13,20 @@ Configure credentials, so an application can login _on your behalf_ with a limit
 - Lab 04 completed
 - Domino running
 
-## Steps
+## Steps in  creating app in Admin UI
 
-### Create app in AdminUI
+1. Go to **Application** and click **Add Application**.
+2. Fill in the fields.
 
-![Create application](img/createApp.png)
+    ![Create application](img/createApp.png)
 
-- The callback URLs need to be provided by the application developer/admin and need to match
-- Add scopes as desired
+    - The callback URLs need to be provided by the application developer/admin and need to match
+    - Add scopes as desired
 
-!!! note "Scopes need to exist"
+    !!! note "Scopes need to exist"
+        You can specify one or more scopes that don't exist (yet). Just make sure they do once the application shall be used.
 
-    You can specify one or more scopes that don't exist (yet). Just make sure they do once the application shall be used
+3. Click Add. The app save in the app list.
 
 Alternative `POST` to `/api/setup-v1/admin/application`
 
@@ -41,11 +43,20 @@ Alternative `POST` to `/api/setup-v1/admin/application`
 }
 ```
 
-### Create a secret -- note it down
+### Generate Application Secret
 
-![Create a secret](img/Secret01.png)
+1. Click the generate application secret icon. 
 
-![See secret](img/Secret02.png)
+    ![Create a secret](img/Secret01.png)
+
+
+2. The generated secret will be shown on the app.
+
+    ![See secret](img/Secret02.png)
+
+    !!!note
+        Write or note the app secret and app id.
+
 
 Alternative `POST` to `/api/setup-v1/admin/application/{{CLIENT_ID}}/secret?force=true`
 
@@ -57,13 +68,12 @@ Alternative `POST` to `/api/setup-v1/admin/application/{{CLIENT_ID}}/secret?forc
 ```
 
 !!! warning "App Secrets can't be retrieved"
-
     Once you switch away from the App screen where you saw the "App Secret" it is gone. We store and save it salted and hashed and can't transform it back
 
 ## How to check
 
-- App shows up in adminUI
-- App shows up in landing screen
+- App shows up in admin UI.
+- App shows up in landing screen.
 
 ## Things to explore
 

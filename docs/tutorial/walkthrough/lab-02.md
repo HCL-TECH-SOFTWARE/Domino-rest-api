@@ -2,39 +2,39 @@
 
 ## Duration 10 min
 
-## What you will learn
+## What you will learn:
 
-- Navigate the AdminUI
-- Configure the "Approval Central" database using the adminUI
+- Navigate the Admin UI
+- Configure the "Approval Central" database using the admin UI
 - Difference between **Schema** and **Scope**
 
 ## Prerequisites
 
 - Lab 01 completed
 - You Domino server running
-- Database [ApprovalCentral.nsf](../downloads/ApprovalCentral.zip) deployed to your server
+- Database [ApprovalCentral.nsf](../downloads/ApprovalCentral.zip) deployed to your server.
 
-## Steps
+## Steps in creating a schema and scope in Quick Config
 
-- Login Admin UI
-- Click on quick config
+1. Log in to Admin UI.
+2. Click on Quick Config.
 
-![Quick config](img/AdminUIExpanded.png)
+  ![Quick config](img/AdminUIExpanded.png)
 
-- Fill in the form
+3.  Fill in the form.
 
   - Schema: default
   - Scope: approvals
   - description & icon: at your discretion
 
-![Quick config](img/QuickConfig.png)
+  ![Quick config](img/QuickConfig.png)
 
-- Submit
+4. Click Add.
 
 ### Alternative steps
 
 - Use request in Postman's Lab 01 **Create QuickConfig for ApprovalCentral**
-- use curl, postman or the KEEP cli to post this JSON:
+- Use curl, postman or the KEEP cli to post this JSON:
 
 ```json
 {
@@ -47,7 +47,7 @@
 
 ## How to check
 
-In the AdminUI you will find one entry each for schema and scope:
+In the Admin UI you will find one entry each for schema and scope:
 
 ![Scope available](img/scopeAvailable.png)
 
@@ -67,6 +67,6 @@ In the AdminUI you will find one entry each for schema and scope:
 - Use POSTMAN to create a second quick config using recipe.nsf
 - Open Domino Designer to check resources
 
-![Schema in Designer](img/schemaInDesigner.png)
+  ![Schema in Designer](img/schemaInDesigner.png)
 
-![Schema in Designer](img/schemaInDesigner2.png)
+  ![Schema in Designer](img/schemaInDesigner2.png)
