@@ -82,8 +82,7 @@ You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical Vie
 
 1. On the **Schema management page**, click **Add Schema**.
 2. Click **Import** on the **Add New Schema** section.
-3. Select the `.json` file and click **Open** from the dialog box.
-4. The schema is imported to your server.
+3. Select the `.json` file and click **Open** from the dialog box. The schema is imported to your server.
 
 !!!warning "Important notice"
       - You can't import schema unless your server contains the same `.nsf` database file.
