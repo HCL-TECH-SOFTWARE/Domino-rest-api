@@ -19,7 +19,8 @@ A database can expose different sets of information based on different schema.
 ### Create schema
 
 1. In the Admin UI, select "Database Management - REST API"
-2. Click **Add Schema**", on the **Schema Management**.
+2. Click **Schemas** from the navigation pane.
+2. On the **Schema Management**, click **Add Schema**".
 3. Select `ApprovalCentral.nsf` from the **Available Databases**.
 4. Fill in Schema Name: `training`
 
@@ -31,7 +32,7 @@ A database can expose different sets of information based on different schema.
 
     ![TrainingSchema](img/TrainingSchema.png)
 
-6. Edit the training schema.
+6. Edit the `Training` schema.
 7. Configure only form `Training`.
 
     | Field    |  Type  |   Access   |
