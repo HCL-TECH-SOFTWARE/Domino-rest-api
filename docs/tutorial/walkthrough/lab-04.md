@@ -32,8 +32,8 @@ A database can expose different sets of information based on different schema.
 
     ![TrainingSchema](img/TrainingSchema.png)
 
-6. Edit the `Training` schema.
-7. Configure only form `Training`.
+6. Click to edit the `training` schema.
+7. Under the **Database Forms**, configure only  the form `Training`.
 
     | Field    |  Type  |   Access   |
     | -------- | :----: | :--------: |
@@ -43,20 +43,22 @@ A database can expose different sets of information based on different schema.
 
     Set formula for write access to `@false`
 
-8. Configure view `(TrainingApprovals)`.
+    !!! danger 
+        "Don't forget to save".
 
-  !!! danger 
-  "Don't forget to save".
+8. On the **Databse Views**, the view `(TrainingApprovals)` must set to `active`.
+
 
 ### Create scope
 
-1. Click **Add Scope**, on the **Scope Management**
-2. Select the schema `Training` from the `ApprovalCentral.nsf` from  the **Available Schema**
-3. Fill in Scope Name as `trainingcorp`. Fill the Description.
+1. Click **Scopes** from the navigation pane.
+2. Click **Add Scope**, on the **Scope Management**
+3. Select the schema `training` from the `ApprovalCentral.nsf` from  the **Available Schema**
+4. Fill in Scope Name as `trainingcorp`. Fill the Description.
   
    Server and  Maximum Level Access, leave it as it is. 
 
-4. Click **Add**.
+5. Click **Add**. It will be added to your scopes list.
 
     ![Added scope](img/AddScope.png)
 
