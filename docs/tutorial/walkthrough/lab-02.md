@@ -11,7 +11,7 @@
 ## Prerequisites
 
 - Lab 01 completed
-- You Domino server running
+- Your Domino server running
 - Database [ApprovalCentral.nsf](../downloads/ApprovalCentral.zip) deployed to your server.
 
 ## Steps in creating a schema and scope in Quick Config

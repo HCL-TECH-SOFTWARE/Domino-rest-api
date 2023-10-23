@@ -1,7 +1,6 @@
 # Lab 04 - Additional scope & schema
 
-Rationale: An external training provider shall get access to Name and Course,
-but neither cost nor approval flows.
+Rationale: An external training provider shall get access to Name and Course, but neither cost nor approval flows.
 
 ## Duration 10 min
 
@@ -15,14 +14,14 @@ A database can expose different sets of information based on different schema.
 - Domino running
 - Postman available
 
-## Steps for schema exploration
+## Steps for schema and scope exploration
 
-### Create schema training
+### Create schema
 
 1. In the Admin UI, select "Database Management - REST API"
-2. Click "Add Schema"
-3. Pick `ApprovalCentral.nsf`
-4. Schema Name: `training`
+2. Click **Add Schema**", on the **Schema Management**.
+3. Select `ApprovalCentral.nsf` from the **Available Databases**.
+4. Fill in Schema Name: `training`
 
     ![Add Schema](img/AddSchema.png)
 
@@ -48,9 +47,17 @@ A database can expose different sets of information based on different schema.
   !!! danger 
   "Don't forget to save".
 
-### Create scope trainingcorp
+### Create scope
 
-![Added scope](img/AddScope.png)
+1. Click **Add Scope**, on the **Scope Management**
+2. Select the schema `Training` from the `ApprovalCentral.nsf` from  the **Available Schema**
+3. Fill in Scope Name as `trainingcorp`. Fill the Description.
+  
+   Server and  Maximum Level Access, leave it as it is. 
+
+4. Click **Add**.
+
+    ![Added scope](img/AddScope.png)
 
 alternative `POST` to `/api/setup-v1/admin/scope`
 

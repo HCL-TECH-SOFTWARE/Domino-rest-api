@@ -6,7 +6,7 @@ Rationale: "Application" is the configuration you need when you want to use Domi
 
 ## What you will learn
 
-Configure credentials, so an application can login _on your behalf_ with a limited set of permissions. Needed for lab 6
+Configure credentials, so an application can login _on your behalf_ with a limited set of permissions. Needed for lab 6.
 
 ## Prerequisites
 
