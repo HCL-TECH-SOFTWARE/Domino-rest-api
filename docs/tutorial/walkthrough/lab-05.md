@@ -34,7 +34,7 @@ Alternative `POST` to `/api/setup-v1/admin/application`
 {
   "client_name": "XYTraining",
   "description": "The external Training APP",
-  "redirect_uris": ["http://localhost:3000/callback"],
+  "redirect_uris": ["http://localhost:3000/auth/callback"],
   "client_uri": "https://www.spiegel.de",
   "scope": "trainingcorp",
   "logo_uri": "cathedral",
