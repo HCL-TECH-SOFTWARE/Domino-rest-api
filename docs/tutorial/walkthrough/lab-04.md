@@ -1,13 +1,12 @@
 # Lab 04 - Additional scope & schema
 
-Rationale: An external training provider shall get access to Name and Course,
-but neither cost nor approval flows
+Rationale: An external training provider shall get access to Name and Course, but neither cost nor approval flows.
 
 ## Duration 10 min
 
-## What you will learn
+## What you will learn:
 
-- A database can expose different sets of information based on different schema
+A database can expose different sets of information based on different schema.
 
 ## Prerequisites
 
@@ -15,41 +14,53 @@ but neither cost nor approval flows
 - Domino running
 - Postman available
 
-## Steps
+## Steps for schema and scope exploration
 
-### Create schema training
+### Create schema
 
-- In the AdminUI select "Database Management - REST API"
-- Click "Add Schema"
-- Pick `ApprovalCentral.nsf`
-- Schema Name: `training`
+1. In the Admin UI, select "Database Management - REST API"
+2. Click **Schemas** from the navigation pane.
+2. On the **Schema Management**, click **Add Schema**".
+3. Select `ApprovalCentral.nsf` from the **Available Databases**.
+4. Fill in Schema Name: `training`
 
-  ![Add Schema](img/AddSchema.png)
+    ![Add Schema](img/AddSchema.png)
 
-- Switch to the "NSF View"
+5. Switch to the "NSF View"
 
-  ![NSF View](img/nsfView.png)
+    ![NSF View](img/nsfView.png)
 
-  ![TrainingSchema](img/TrainingSchema.png)
+    ![TrainingSchema](img/TrainingSchema.png)
 
-- Edit the training schema
-- Configure only form `Training`
+6. Click to edit the `training` schema.
+7. Under the **Database Forms**, configure only  the form `Training`.
 
-  | Field    |  Type  |   Access   |
-  | -------- | :----: | :--------: |
-  | Form     | string | read-write |
-  | from     | names  | read-write |
-  | Training | string | read-write |
+    | Field    |  Type  |   Access   |
+    | -------- | :----: | :--------: |
+    | Form     | string | read-write |
+    | from     | names  | read-write |
+    | Training | string | read-write |
 
-  Set formula for write access to `@false`
+    Set formula for write access to `@false`
 
-- Configure view `(TrainingApprovals)`
+    !!! danger 
+        "Don't forget to save".
 
-!!! danger "Don't forget to save"
+8. On the **Databse Views**, the view `(TrainingApprovals)`, and `PendingApprovals` must set to `active`.
 
-### Create scope trainingcorp
 
-![Added scope](img/AddScope.png)
+### Create scope
+
+1. Click **Scopes** from the navigation pane.
+2. Click **Add Scope**, on the **Scope Management**
+3. Select the schema `training` from the `ApprovalCentral.nsf` from  the **Available Schema**
+4. Fill in Scope Name as `trainingcorp`. Fill the Description.
+  
+   Server and  Maximum Level Access, leave it as it is. 
+
+5. Click **Add**. It will be added to your scopes list.
+
+    ![Added scope](img/AddScope.png)
 
 alternative `POST` to `/api/setup-v1/admin/scope`
 
@@ -70,7 +81,7 @@ alternative `POST` to `/api/setup-v1/admin/scope`
 
 - Retrieve list of schemas for `ApprovalCentral.nsf`.
 - Retrieve list of scopes.
-- Check adminUI.
+- Check admin UI.
 - Login with limit to scope `trainingcorp` and look at data in POSTMAN
 
 ## Things to explore
