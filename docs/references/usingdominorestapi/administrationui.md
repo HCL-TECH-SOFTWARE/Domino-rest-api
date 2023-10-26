@@ -32,20 +32,6 @@ The **Schema Management** page shows the list of all available schemas.
 
 You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical View**, or **NSF View**. There is also a provision to search through the list either via **Schema Name** or **NSF Name**.
 
-You can also search names of the schema from **Database Forms**, views in **Database Views** and agents in **Database Agents**.
-
-
-### Inside the database schema
-
-
-- The user can also see the Description, its `nsf` related to, the `configuration` and the DQL Formula.
-- The user can search the available `Forms`, `Views` and, `Agents` from the schema.
-- If you like to  include and disinclude the forms , then click  **Configure All** and **Unconfigure All**.
-- If you like to *activate all* the Views, then click the **Activate All**, otherwise click **Deactivate All** to deactivate all the Views.
-- Same with the Agent, If you like to *activate all* the Agents, then click the **Activate All**, otherwise click **Deactivate All** to deactivate all the Agents.
-
-   ![Database Schema](../../assets/images/insideSchema.png)
-
 
 ### Add a schema
 
@@ -105,16 +91,25 @@ You can also search names of the schema from **Database Forms**, views in **Data
       - You can't import the same schema name in your server.
 
 
-### List available forms
+### Database schema
 
 1. Select a schema from the list of schemas and the details for it will load.
-2. Select **Database Forms** from the menu bar to show the list of all the Forms for the selected database.
+2. Select **Database Forms** from the navigation pane to show the list of all the Forms for the selected database schema.
+3. Search a form(optional)
 
       ![List Forms](../../assets/images/ListOfForms1.png)
 
+- You may select **Configure All**, meaning you may include all the list of Form in your App.
+- You may select **Unconfigure All**, meaning you may NOT include all the list of Form in your App.
+
+<!-- If you like to  include and disinclude the forms , then click  **Configure All** and **Unconfigure All**.
+- If you like to *activate all* the Views, then click the **Activate All**, otherwise click **Deactivate All** to deactivate all the Views.
+- Same with the Agent, If you like to *activate all* the Agents, then click the **Activate All**, otherwise click **Deactivate All** to deactivate all the Agents.-->
+
+   ![Database Schema](../../assets/images/insideSchema.png)
 ### Configure a form
 
-1. From the available forms under **Unconfigured Forms**, select the form that you would like to configure.
+1. From the available forms under **Unconfigured Forms**, select the form that you would like to configure. 
 2. Click the toggle in the form card of the selected form.
 3. In the **Configure** dialog, click **Yes**. 
 
