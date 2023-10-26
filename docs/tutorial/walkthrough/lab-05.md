@@ -16,7 +16,7 @@ Configure credentials, so an application can login _on your behalf_ with a limit
 ## Steps in  creating app in Admin UI
 
 1. Go to **Application** navigation pane and click **Add Application**.
-2. Fill in the fields.
+2. Fill in the fields according to below image.
 
     ![Create application](img/createApp.png)
 

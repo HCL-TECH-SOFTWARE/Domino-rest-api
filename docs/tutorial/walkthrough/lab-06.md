@@ -22,7 +22,7 @@ Run a custom NodeJS application that interacts with the Domino Rest API
 4. Edit the `setup.json` and add the values from **Lab05-Create Application** and also add values from the **Lab-04-Scope**.
 
     !!!note
-        As a user you must know you must know what are the needed fields in order to run the `setup.json`.
+        As a user you must know you must know what are the needed fields to be modify in order to run the `setup.json`.
 
 5. On your Terminal in your IDE, run `npm install`
 6. Run `npm start`. You must start in your browser.

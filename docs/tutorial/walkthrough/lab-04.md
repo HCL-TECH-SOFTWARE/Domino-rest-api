@@ -46,7 +46,7 @@ A database can expose different sets of information based on different schema.
     !!! danger 
         "Don't forget to save".
 
-8. On the **Databse Views**, the view `(TrainingApprovals)` must set to `active`.
+8. On the **Databse Views**, the view `(TrainingApprovals)`, and `PendingApprovals` must set to `active`.
 
 
 ### Create scope
