@@ -2,7 +2,7 @@
 
 ## Duration 30 min
 
-## What you will learn
+## What you will learn:
 
 - What's a form mode
 - What's a field group
@@ -15,31 +15,33 @@
 
 ## Steps
 
-Before you start altering the schema, use **Postman**, as outlined in _How to check_ to observe the API behavior before and after
+Before you start altering the schema, use **Postman**, as outlined in _How to check_ to observe the API behavior before and after.
 
-- In AdminUI edit the `default` schema of ApprovalsCentral.nsf, select the Equipment form
-- in mode `default` add the following fields to a fieldgroup `stuff`
-  - childRN
-  - Comments
-  - Cost
-  - Equipment
-- add new modes: dql, (needs fields), raw (doesn't need fields)
-- add a new mode `decision` with 4 fields:
+1. In Admin UI edit the `default` schema of ApprovalsCentral.nsf, and select the Equipment form.
+2. In mode `default` add the following fields to a `field group` named *stuff*.
 
-  | Name              |  Type  |   Access   |
-  | ----------------- | :----: | :--------: |
-  | completedApprover | names  | write-only |
-  | newHistory        | string | write-only |
-  | Status            | string | read-only  |
-  | CurrentApprover   | names  | read-only  |
+    - childRN
+    - Comments
+    - Cost
+    - Equipment
+
+3. Add new modes: dql, (needs fields), raw (doesn't need fields).
+4. Add a new mode `decision` with 4 fields:
+
+    | Name              |  Type  |   Access   |
+    | ----------------- | :----: | :--------: |
+    | completedApprover | names  | write-only |
+    | newHistory        | string | write-only |
+    | Status            | string | read-only  |
+    | CurrentApprover   | names  | read-only  |
 
   Check the box "compute with form"
 
-![Decision mode](img/DecisionScope.png)
+  ![Decision mode](img/DecisionScope.png)
 
-![additional modes](img/EquipmentModes.png)
+  ![additional modes](img/EquipmentModes.png)
 
-Don't forget to save your changes
+  Don't forget to save your changes.
 
 ## How to check
 

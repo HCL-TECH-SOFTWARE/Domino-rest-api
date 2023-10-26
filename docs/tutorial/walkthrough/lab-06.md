@@ -8,23 +8,30 @@ Run a custom NodeJS application that interacts with the Domino Rest API
 
 ## Prerequisites
 
-- Lab 06 completed
+- Lab 05 completed
 - Domino running
 - NodeJS installed
 - Internet connection
 
 ## Steps
 
-- Unzip the NodeJSExample.zip in a new directory
-- Load it in your IDE
-- Edit the package.json - update the name
-- Edit the .env add the values from Lab06
-- run `npm install`
-- run `npm start`
+1. Download and unzip the [apps-src.zip](../walkthrough//downloads/apps-src.zip) from the `source for all apps` in a folder.
+2. Open your IDE (vs code, etc)
+3. Open the folder `src`.
+4. Inside the folder, open the `DominoOAuth` folder in your IDE.
+5. Edit the `package.json`- on the scripts type in the `"start": "node app.js"`
+6. Edit the `setup.json` and add the values from **Lab05-Create Application** and also add values from the **Lab-04-Scope**.
+
+    !!!note
+        As a user you must know you must know what are the needed fields to be modify in order to run the `setup.json`.
+
+7. On your Terminal in your IDE, run `npm install`
+8. Run `npm start`. You must start your browser to check.
+
 
 ## How to check
 
-- navigate to localhost:3000 - UI should show
+- navigate to http://localhost:3000 - UI should show
 - retrieve data
 
 ## Things to explore

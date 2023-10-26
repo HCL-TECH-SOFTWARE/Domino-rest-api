@@ -15,10 +15,10 @@
 
 ## Steps (not all are needed)
 
-- Verify that you have a running Domino server with admin access
+- Verify that you have a running Domino server with admin access (mandatory)
+- Download [`keep`](../downloads/keep) (Mac/Linux) or [`keep.cmd`](../downloads/keep.cmd) (Windows) (This will used if you're running KEEP locally)
+- Download [ApprovalCentral.zip](../downloads/ApprovalCentral.zip)( you need to have an .nsf file to use in the walkthrough)
 - Download POSTMAN [collection](../downloads/dachnug2023.postman_collection.json) & POSTMAN [environment](../downloads/dachnug2023.postman_environment.json)
-- download [`keep`](../downloads/keep) (Mac/Linux) or [`keep.cmd`](../downloads/keep.cmd) (Windows)
-- download [ApprovalCentral.zip](../downloads/ApprovalCentral.zip)
 - Import into POSTMAN: environment & collection
 
 ## How to check
@@ -32,7 +32,7 @@ curl --version
 ```
 
 - Postman installed (can start)
-- Domino running with REST API active: open [localhost:8880](http://localhost:8880) and see:
+- Domino running with REST API active: open [localhost:8880](http://localhost:8880)(if you're using KEEP installed locally) or [web](your KEEP server)(if you're connecting to internet) and see:
 
 ![Landing page](img/landingPage.png)
 
