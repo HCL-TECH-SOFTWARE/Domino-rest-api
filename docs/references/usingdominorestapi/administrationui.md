@@ -32,6 +32,21 @@ The **Schema Management** page shows the list of all available schemas.
 
 You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical View**, or **NSF View**. There is also a provision to search through the list either via **Schema Name** or **NSF Name**.
 
+You can also search names of the schema from **Database Forms**, views in **Database Views** and agents in **Database Agents**.
+
+
+### Inside the database schema
+
+
+- The user can also see the Description, its `nsf` related to, the `configuration` and the DQL Formula.
+- The user can search the available `Forms`, `Views` and, `Agents` from the schema.
+- If you like to  include and disinclude the forms , then click  **Configure All** and **Unconfigure All**.
+- If you like to *activate all* the Views, then click the **Activate All**, otherwise click **Deactivate All** to deactivate all the Views.
+- Same with the Agent, If you like to *activate all* the Agents, then click the **Activate All**, otherwise click **Deactivate All** to deactivate all the Agents.
+
+   ![Database Schema](../../assets/images/insideSchema.png)
+
+
 ### Add a schema
 
 1. On the **Schema Management** page, click **Add Schema** to add a database schema.
@@ -77,6 +92,7 @@ You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical Vie
       ![Edit schema dialog](../../assets/images/editschema1.png){: style="height:80%;width:80%"}
 
 4. Click **Save**. 
+
 
 ### Import a schema from another server
 
