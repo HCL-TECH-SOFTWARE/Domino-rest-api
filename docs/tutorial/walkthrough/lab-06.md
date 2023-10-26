@@ -26,7 +26,7 @@ Run a custom NodeJS application that interacts with the Domino Rest API
         As a user you must know you must know what are the needed fields to be modify in order to run the `setup.json`.
 
 7. On your Terminal in your IDE, run `npm install`
-8. Run `npm start`. You must start in your browser.
+8. Run `npm start`. You must start your browser to check.
 
 
 ## How to check
