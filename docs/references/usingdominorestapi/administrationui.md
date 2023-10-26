@@ -95,18 +95,14 @@ You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical Vie
 
 1. Select a schema from the list of schemas and the details for it will load.
 2. Select **Database Forms** from the navigation pane to show the list of all the Forms for the selected database schema.
-3. Search a form(optional)
+3. Search available views. (optional)
 
       ![List Forms](../../assets/images/ListOfForms1.png)
 
-- You may select **Configure All**, meaning you may include all the list of Form in your App.
-- You may select **Unconfigure All**, meaning you may NOT include all the list of Form in your App.
-
-<!-- If you like to  include and disinclude the forms , then click  **Configure All** and **Unconfigure All**.
-- If you like to *activate all* the Views, then click the **Activate All**, otherwise click **Deactivate All** to deactivate all the Views.
-- Same with the Agent, If you like to *activate all* the Agents, then click the **Activate All**, otherwise click **Deactivate All** to deactivate all the Agents.-->
+- You may click **Configure All**, meaning you may include all the list of Form in your App, otherwise, you click **Unconfigure All**, meaning you may NOT include all the list of Form in your App.
 
    ![Database Schema](../../assets/images/insideSchema.png)
+   
 ### Configure a form
 
 1. From the available forms under **Unconfigured Forms**, select the form that you would like to configure. 
@@ -139,12 +135,15 @@ The selected form is now moved under **Unconfigured Forms**.
 !!!note
     You can click the trash can icon corresponding to the field to remove the field from the form. 
 
-### List available views
+### Database Views
 
 1. Select a schema from the list of schemas and the details for it will load.
-2. Select **Database Views** from the menu bar. This lists all the views for the selected schema.
+2. Select **Database Views** from the navigation pane. This lists all the views for the selected schema.
+3. Search available views. (optional)
 
       ![List Views](../../assets/images/ListOfViews1.png)
+
+- If you like to *activate all* the Views, then click the **Activate All**, otherwise click **Deactivate All** to deactivate all the Views and no longer available on your App.
 
 ### Activate a view
 
@@ -166,12 +165,16 @@ The selected form is now moved under **Unconfigured Forms**.
 
 - See [Edit a database view of a schema](../../howto/database/editviewcolumn.md) for more information. 
 
-### List available agents
+### Database Agents
 
 1. Select a schema from the list of schemas and the details for it will load.
-2. Select **Database Agents** from the menu bar. This lists all the Agents for the selected database.
+2. Select **Database Agents** from the navigation pane. This lists all the Agents for the selected database.
+3. Search available views. (optional)
 
       ![List Agents](../../assets/images/ListOfAgents.png)
+
+- If you like to *activate all* the Agents, then click the **Activate All**, otherwise click **Deactivate All** to deactivate all the Agents.
+
 
 ### Activate an Agent
 
