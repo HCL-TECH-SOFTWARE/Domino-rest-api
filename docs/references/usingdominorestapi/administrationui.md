@@ -135,6 +135,36 @@ The selected form is now moved under **Unconfigured Forms**.
 !!!note
     You can click the trash can icon corresponding to the field to remove the field from the form. 
 
+### Add Mode
+
+1. Click the **Add Mode**.
+2. Fill in the name of the `Mode` and click **Save**. The mode has been added to the `Mode`list
+      
+      ![mode list](../../assets/images/modeList.png)
+
+3. Add fields.
+4. Click **Save**.
+
+
+### Clone Mode
+
+This **clone mode** is necessary for users who replicate the same fields but in a different mode. 
+
+1. Open a database form.
+2. From the dropdown menu of the **Mode** fields, choose the mode you want to clone. (for example, you want to clone the Mode:`default`)
+3. Click the **Clone Mode**.
+4. Fill in the name of the `Mode` and click **Save**. The mode has been cloned or duplicated.
+5. The cloned mode has been added to the list of `Modes`.
+
+   !!!note
+      In your cloned mode, you can remove or add fields. 
+
+6. Click **Save**.
+
+      ![clone list](../../assets/images/cloneList.png)
+
+  
+
 ### Database Views
 
 1. Select a schema from the list of schemas and the details for it will load.
