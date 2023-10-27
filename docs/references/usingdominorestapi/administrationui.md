@@ -163,7 +163,28 @@ This **clone mode** is necessary for users who replicate the same fields but in 
 
       ![clone list](../../assets/images/cloneList.png)
 
-  
+### Compare Mode
+
+    This function is critical for modes that have been cloned with no changes noted.
+
+!!!note
+      In order for you to use this function, you must have at least two  available `Modes`.
+
+1. Click **Open Mode Compare**.
+
+!!!note
+- You can search  `fields` in the search bar.
+- You can **toggle on** and **off** to show only fields with differences.
+- Differences in the fields are indicated by pink background.
+- You may click **Add New Column** to include "Mode" in your comparisons.
+            
+2. Select and click the Modes you want in the first box.
+3. Select and click the Modes you want in the second box.
+
+You may see the differences immediately between each of the modes.
+
+![Compare Mode](../../assets/images/compareMode.png)
+
 
 ### Database Views
 
