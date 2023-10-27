@@ -35,7 +35,8 @@ You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical Vie
 
 ### Add a schema
 
-1. On the **Schema Management** page, click **Add Schema** to add a database schema.
+1. On the **Schema Management** page, click **Add Schema**.
+2. Select **Create a schema**.
 
       ![Create Database Configuration](../../assets/images/createSchema.png)
 
@@ -79,11 +80,15 @@ You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical Vie
 
 4. Click **Save**. 
 
+    > :memo: **title**
+    >
+    > - list under lists
+    > - under lists
 
 ### Import a schema from another server
 
 1. On the **Schema management page**, click **Add Schema**.
-2. Click **Import** on the **Add New Schema** section.
+2. Click **Import Schema**.
 3. Select the `.json` file and click **Open** from the dialog box. The schema is imported to your server.
 
 !!!warning "Important notice"
@@ -91,7 +96,7 @@ You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical Vie
       - You can't import the same schema name in your server.
 
 
-### Database schema
+### Database Forms
 
 1. Select a schema from the list of schemas and the details for it will load.
 2. Select **Database Forms** from the navigation pane to show the list of all the Forms for the selected database schema.
@@ -156,8 +161,8 @@ This **clone mode** is necessary for users who replicate the same fields but in 
 4. Fill in the name of the `Mode` and click **Save**. The mode has been cloned or duplicated.
 5. The cloned mode has been added to the list of `Modes`.
 
-   !!!note
-      In your cloned mode, you can remove or add fields. 
+      !!!note 
+            In your cloned mode, you can remove or add fields. 
 
 6. Click **Save**.
 
@@ -165,14 +170,14 @@ This **clone mode** is necessary for users who replicate the same fields but in 
 
 ### Compare Mode
 
-    This function is critical for modes that have been cloned with no changes noted.
+This function is critical for modes that have been cloned with no changes noted.
 
 !!!note
       In order for you to use this function, you must have at least two  available `Modes`.
 
 1. Click **Open Mode Compare**.
-
-!!!note
+      
+!!! note "Note"
 - You can search  `fields` in the search bar.
 - You can **toggle on** and **off** to show only fields with differences.
 - Differences in the fields are indicated by pink background.
