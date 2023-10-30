@@ -78,6 +78,17 @@ You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical Vie
 
 4. Click **Save**. 
 
+### Import a schema from another server
+
+1. On the **Schema management page**, click **Add Schema**.
+2. Click **Import** on the **Add New Schema** section.
+3. Select the `.json` file and click **Open** from the dialog box. The schema is imported to your server.
+
+!!!warning "Important notice"
+      - You can't import schema unless your server contains the same `.nsf` database file.
+      - You can't import the same schema name in your server.
+
+
 ### List available forms
 
 1. Select a schema from the list of schemas and the details for it will load.
@@ -177,8 +188,11 @@ The Source tab allows you to view the database schema details in JSON format.
       - **Text Mode** - shows the text view of the details of the selected schema in JSON format
       - **Styled Object** - shows the collapsible view of the details of the selected schema in JSON format 
 
+
 !!!note
-      The database schema JSON details are editable in the **Styled Object** view mode. For more information, see [Edit database schema JSON](../../howto/database/editsourcejson.md).
+      - The database schema JSON details are editable in the **Styled Object** view mode. For more information, see [Edit database schema JSON](../../howto/database/editsourcejson.md).
+      
+      - To export the schema in a .json file, see [Export schema as JSON file](../../howto/database/exportsourcejson.md).
 
 
 ## Database Management - Activation
