@@ -36,9 +36,12 @@ You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical Vie
 ### Add a schema
 
 1. On the **Schema Management** page, click **Add Schema**.
+
+      ![Add schema](../../assets/images/addSchema.png)
+
 2. Select **Create a schema**.
 
-      ![Create Database Configuration](../../assets/images/createSchema.png)
+      ![Create a schema ](../../assets/images/createSchema.png)
 
       The shape of data available is referred to as a schema. The schema is a JSON file in the design resources of the database. It gets created by a developer with Designer access to the NSF.
 
@@ -80,11 +83,6 @@ You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical Vie
 
 4. Click **Save**. 
 
-    > :memo: **title**
-    >
-    > - list under lists
-    > - under lists
-
 ### Import a schema from another server
 
 1. On the **Schema management page**, click **Add Schema**.
@@ -118,9 +116,9 @@ You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical Vie
 
       ![List Forms](../../assets/images/ListOfForms1.png)
 
-- You may click **Configure All**, meaning you may include all the list of Form in your App, otherwise, you click **Unconfigure All**, meaning you may NOT include all the list of Form in your App.
+4. You may click **Configure All**, meaning you may include all the list of Form in your App, otherwise, if you click **Unconfigure All**, meaning you may NOT include all the list of Form in your App.
 
-   ![Database Schema](../../assets/images/insideSchema.png)
+      ![Database Schema](../../assets/images/insideSchema.png)
    
 ### Configure a form
 
@@ -190,13 +188,14 @@ This function is critical for modes that have been cloned with no changes noted.
       In order for you to use this function, you must have at least two  available `Modes`.
 
 1. Click **Open Mode Compare**.
-      
-!!! note "Note"
-- You can search  `fields` in the search bar.
-- You can **toggle on** and **off** to show only fields with differences.
-- Differences in the fields are indicated by pink background.
-- You may click **Add New Column** to include "Mode" in your comparisons.
-            
+
+    > **Note**
+    >
+    > - You can search  `fields` in the search bar.
+    > - You can **toggle on** and **off** to show only fields with differences.
+    > - Differences in the fields are indicated by pink background.
+    > - You may click **Add New Column** to include **Mode** in your comparisons.
+
 2. Select and click the Modes you want in the first box.
 3. Select and click the Modes you want in the second box.
 
