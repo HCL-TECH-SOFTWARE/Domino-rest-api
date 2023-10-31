@@ -88,12 +88,26 @@ You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical Vie
 ### Import a schema from another server
 
 1. On the **Schema management page**, click **Add Schema**.
-2. Click **Import Schema**.
-3. Select the `.json` file and click **Open** from the dialog box. The schema is imported to your server.
+2. Click **Import Schema** on the **Add New Schema** dialog box.
+      
+      ![import schema](../../assets/images/importSchema.png)
+
+3. Select the `.json` file and click **Open**.
+4. Choose the `.nsf` database from the dropdown list of the **Database to import to**
+
+      !!!note
+            The default `.nsf` is from the imported database file.
+
+5. Select the **Icon**.
+6. Fill in  the **Schema name**. The default **schema name** comes from the imported schema name.
+7. Fill in the **Description**. the default description comes from the imported schema name.
+8. Choose from the list of **Formula Engine**. Default is `Domino`.
+9. Click **Save Schema**. The `nsf` database file and schema is imported to the list of schema.
 
 !!!warning "Important notice"
       - You can't import schema unless your server contains the same `.nsf` database file.
       - You can't import the same schema name in your server.
+
 
 
 ### Database Forms
