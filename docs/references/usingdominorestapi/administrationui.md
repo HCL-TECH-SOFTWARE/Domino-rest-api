@@ -181,17 +181,16 @@ Use this function to see the differences between multiple modes.
 !!!note
       In order for you to use this function, you must have at least two  available `Modes`.
 
-1. Click **Open Mode Compare**.
+Click **Open Mode Compare**.
 
-      !!! note
-            - You can search  `fields` in the search bar.
-            - You can toggle on to show only fields with differences.
-            - Differences in the fields are indicated by pink background.
-            - You may click **Add New Column** to include **Mode** in your comparisons.
+!!! note
+      - You can search  `fields` in the search bar.
+      - You can toggle on to show only fields with differences.
+      - Differences in the fields are indicated by pink background.
+      - You may click **Add New Column** to include **Mode** in your comparisons.
 
-
-2. Select and click the Modes you want in the first box.
-3. Select and click the Modes you want in the second box.
+1. Select and click the Modes you want in the first box.
+2. Select and click the Modes you want in the second box.
 
 You may see the differences immediately between each of the modes.
 
