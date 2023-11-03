@@ -1,6 +1,6 @@
 <!--To configure a certificate for HTTPS-->
 
-- Use the following entry to configure TLS for jks or pfx:
+- Use the following entry to configure TLS for jks or pfx (set TLSType to the correct type): 
 
 ```json
 {
