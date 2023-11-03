@@ -83,7 +83,7 @@ You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical Vie
 
 4. Click **Save**. 
 
-### Import a schema from another server
+### Import schema to a database
 
 1. On the **Schema management page**, click **Add Schema**.
 2. Click **Import Schema** on the **Add New Schema** dialog box.
