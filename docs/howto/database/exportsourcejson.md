@@ -11,10 +11,10 @@ The procedure guides you on how to export the database schema in JSON format on 
 
 ## Procedures
 
-
-
 1. Click **Export**.
 
     ![Export Source](../../assets/images/exportjson.png)
 
      The export button downloads the Source text in .json format with a filename *selected schema*.json (e.g,reportschema.json). 
+
+Follow that process if you want to [Import schema to a database](../../references/usingdominorestapi/administrationui.md#import-schema-to-a-database).     

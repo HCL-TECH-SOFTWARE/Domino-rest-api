@@ -85,32 +85,29 @@ You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical Vie
 
 ### Import schema to a database
 
+Use this option if you have a schema that you want to share across multiple databases or even into the same database. Follow that process here [Export database schema as JSON file ](../../howto/database/exportsourcejson.md).
+
 1. On the **Schema management page**, click **Add Schema**.
 2. Click **Import Schema** on the **Add New Schema** dialog box.
       
       ![import schema](../../assets/images/importSchema.png)
 
-3. Select the `.json` file and click **Open**.
-4. Choose the `.nsf` database from the dropdown list of the **Database to import to**
-
-      !!!note
-            The default `.nsf` is from the imported database file.
-
-5. Select the **Icon**.
-6. Fill in  the **Schema name**. The default **schema name** comes from the imported schema name.
-7. Fill in the **Description**. the default description comes from the imported schema name.
+3. Select the `.json` database file and click **Open**. This is the exported file from other database or within your server.
+4. Choose the `.nsf` database from the dropdown list of the **Database to import to**.  The default `.nsf` is from the imported database `json` file.
+5. You may change the **Icon**.
+6. You may change the **Schema name**. The default **schema name** comes from the imported schema name.
+7. You may change the **Description**. The default description comes from the imported schema name.
 8. Choose from the list of **Formula Engine**. Default is `Domino`.
-9. Click **Save Schema**. The `nsf` database file and schema is imported to the list of schema.
+9. Click **Save Schema**. The `nsf` database file and schema are being added to the schema list.
 
-!!!warning "Important notice"
-      - You can't import schema unless your server contains the same `.nsf` database file.
-      - You can't import the same schema name in your server.
+!!!warning "Important notice"   
+      The imported schema name must be unique, you will be warned if you try to save a schema to a database that already has a schema named the same.
 
 
 
 ### Database Forms
 
-1. Select a schema from the list of schemas and the details for it will load.
+1. Select a schema from the list of schemas and the details for it, will load.
 2. Select **Database Forms** from the navigation pane to show the list of all the Forms for the selected database schema.
 3. Search available views. (optional)
 
@@ -165,16 +162,13 @@ The selected form is now moved under **Unconfigured Forms**.
 
 ### Clone Mode
 
-This **clone mode** is necessary for users who replicate the same fields but in a different mode. 
+Use **Clone Mode** to copy an existing mode to a new mode in the same schema.
 
 1. Open a database form.
 2. From the dropdown menu of the **Mode** fields, choose the mode you want to clone. (for example, you want to clone the Mode:`default`)
 3. Click the **Clone Mode**.
-4. Fill in the name of the `Mode` and click **Save**. The mode has been cloned or duplicated.
-5. The cloned mode has been added to the list of `Modes`.
-
-      !!!note 
-            In your cloned mode, you can remove or add fields. 
+4. Fill in the name of the `Mode` and click **Save**. The mode has cloned or duplicated.
+5. The new or cloned mode has added to the list of `Modes`. You can remove or add fields for new mode
 
 6. Click **Save**.
 
@@ -182,19 +176,18 @@ This **clone mode** is necessary for users who replicate the same fields but in 
 
 ### Compare Mode
 
-This function is critical for modes that have been cloned with no changes noted.
+Use this function to see the differences between multiple modes.
 
 !!!note
       In order for you to use this function, you must have at least two  available `Modes`.
 
 1. Click **Open Mode Compare**.
 
-    > **Note**
-    >
-    > - You can search  `fields` in the search bar.
-    > - You can **toggle on** and **off** to show only fields with differences.
-    > - Differences in the fields are indicated by pink background.
-    > - You may click **Add New Column** to include **Mode** in your comparisons.
+      !!! note
+                  - You can search  `fields` in the search bar.
+                  - You can **toggle on** and **off** to show only fields with differences.
+                  - Differences in the fields are indicated by pink background.
+                  - You may click **Add New Column** to include **Mode** in your comparisons.
 
 2. Select and click the Modes you want in the first box.
 3. Select and click the Modes you want in the second box.
@@ -327,7 +320,7 @@ The **Application Management** page shows the list of all available applications
 
 ## View the OAuth Consent
 
-The **OAuth Consent** is the list of the users who login to the server.
+The **OAuth Consent** contains the list of the authorized users who login to the app of the current server.
 
 
 1. Click the **OAuth Consent** navigation pane. 
