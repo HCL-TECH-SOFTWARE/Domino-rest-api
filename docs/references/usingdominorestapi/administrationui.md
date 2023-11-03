@@ -26,7 +26,7 @@ Select **Database Management - REST API** from the home page.
 
 ### List available database schemas
 
-The **Schema Management** page shows the list of all available schemas.
+Click the **Schemas** navigation pane and the  **Schema Management** page shows the list of all available schemas.
 
 ![List Database](../../assets/images/ListSchemas.PNG)
 
@@ -324,3 +324,37 @@ The **Application Management** page shows the list of all available applications
 3. Hover over the application tile to access options to generate Application Secret, and edit and delete the application.
 
       ![Edit Application](../../assets/images/EditApplication.png)
+
+## View the OAuth Consent
+
+The **OAuth Consent** is the list of the users who login to the server.
+
+
+1. Click the **OAuth Consent** navigation pane. 
+
+      ![oAuth Consent](../../assets/images/oauthConsentIcon.png)
+
+
+2. On **OAuth Consent page**, it displays all of the users who have been granted access to the server.
+
+!!!note
+      If the **Maximum Level Access** or ACL is *Manager* or *Designer*, you can see a list of authorized access in the server. Otherwise, you can see yourself on the list of authorized users.
+
+![Revoke](../../assets/images/oauthConsent.png)
+
+### Revoke authorized user
+
+1. Select **Revoke** from the list of authorized users.
+2. Click to **Yes**. It removed from the authorized users list.
+
+![Revoke](../../assets/images/revokeConsent.png)
+
+It means that the user asked to allow the KEEP server to access its data.
+
+### View OAuth consent list
+
+1. Click **View** from the list of allowed users.
+
+In the details, you can see the app, the scope, and the URL.
+
+![View Consent](../../assets/images/viewConsent.png)
