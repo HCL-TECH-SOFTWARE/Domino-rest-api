@@ -183,15 +183,17 @@ Use this function to see the differences between multiple modes.
 
 1. Click **Open Mode Compare**.
 
-      <!-- prettier-ignore -->
+      
       Note:
-            - You can search  `fields` in the search bar.
 
-            - You can toggle on to show only fields with differences.
+      - You can search  `fields` in the search bar.
 
-            - Differences in the fields are indicated by pink background.
+      - You can toggle on to show only fields with differences.
 
-            - You may click **Add New Column** to include **Mode** in your comparisons.
+      - Differences in the fields are indicated by pink background.
+
+      - You may click **Add New Column** to include **Mode** in your comparisons.
+      
 
 2. Select and click the Modes you want in the first box.
 3. Select and click the Modes you want in the second box.
