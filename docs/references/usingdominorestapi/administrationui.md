@@ -77,15 +77,15 @@ You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical Vie
       |Allow Decryption|*feature under development*|
       |Require Revision|Enable the setting to require the provision of the correct revision version of the document to update the document through an update endpoint.|
 
-      - You can update the **DQL Formula**. You can use any valid Notes formula to allow or disallow DQL usage depending on the formula.
-
+      - DQL Formula - Enter a valid Notes formula to limit DQL usage. The formula must evaluate to @TRUE for DQL to be allowed. Default is @TRUE meaning no limitations.
+      
       ![Edit schema dialog](../../assets/images/editschema1.png){: style="height:80%;width:80%"}
 
 4. Click **Save**. 
 
 ### Import schema to a database
 
-Use this option if you have a schema that you want to share across multiple databases or even into the same database. Follow that process here [Export database schema as JSON file ](../../howto/database/exportsourcejson.md).
+Use this option if you have a schema that you want to share across multiple databases or even into the same database. Follow the procedure of exporting a schema here [Export database schema as JSON file ](../../howto/database/exportsourcejson.md).
 
 1. On the **Schema management page**, click **Add Schema**.
 2. Click **Import Schema** on the **Add New Schema** dialog box.
