@@ -78,8 +78,8 @@ You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical Vie
       |Require Revision|Enable the setting to require the provision of the correct revision version of the document to update the document through an update endpoint.|
 
       - DQL Formula - Enter a valid Notes formula to limit DQL usage. The formula must evaluate to @TRUE for DQL to be allowed. Default is @TRUE meaning no limitations.
-      
-      ![Edit schema dialog](../../assets/images/editschema1.png){: style="height:80%;width:80%"}
+
+            ![Edit schema dialog](../../assets/images/editschema1.png){: style="height:80%;width:80%"}
 
 4. Click **Save**. 
 
