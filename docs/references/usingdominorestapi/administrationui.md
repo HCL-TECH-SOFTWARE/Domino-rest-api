@@ -176,10 +176,7 @@ Use **Clone Mode** to copy an existing mode to a new mode in the same schema.
 
 ### Compare Mode
 
-Use this function to see the differences between multiple modes.
-
-!!!note
-      In order for you to use this function, you must have at least two  available `Modes`.
+Use this function to see the differences between multiple modes. In order for you to use this function, you must have at least two  available `Modes`.
 
 Click **Open Mode Compare**.
 
