@@ -20,7 +20,7 @@ A brave developer could use Domino designer to create or update one. The rest (p
 
 The schema defines what views, folders, document and agents can be accessed through the Domino REST API. Access to documents is controlled by accessing their `Form` item and use the value to lookup access definitions, called `Mode` in Domino REST API's lingo that define the item names and properties accessible read- or writable.
 
-Since the exact terminology is long winded and colloquially often no distinction is made between document/item and form/field, the short version is: The Domino REST API schema controls accesss to forms and fields.
+Since the exact terminology is long winded and colloquially often no distinction is made between document/item and form/field, the short version is: The Domino REST API schema controls access to forms and fields.
 
 ![From DB to schema to scope](../../assets/images/KeepSchemaToApp.png)
 
