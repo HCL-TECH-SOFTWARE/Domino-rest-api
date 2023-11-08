@@ -45,7 +45,8 @@ You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical Vie
 
       The shape of data available is referred to as a schema. The schema is a JSON file in the design resources of the database. It gets created by a developer with Designer access to the NSF.
 
-      This creates the Alias. You can use this to access the database via the Domino REST API. One NSF can be available under more than one alias, such as with different security settings.
+      This creates an alias to the Schema. This, along with a Scope, provides access to the database via the Domino REST API.
+      One NSF can have multiple Schemas which is useful to provide different data sets or different levels of access to data.
 
       ![Create Database Form](../../assets/images/AddSchemaForm.PNG)
 
@@ -79,7 +80,7 @@ You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical Vie
 
       - DQL Formula - Enter a valid Notes formula to limit DQL usage. The formula must evaluate to @TRUE for DQL to be allowed. Default is @TRUE meaning no limitations.
 
-            ![Edit schema dialog](../../assets/images/editschema1.png){: style="height:80%;width:80%"}
+        ![Edit schema dialog](../../assets/images/editschema1.png){: style="height:80%;width:80%"}
 
 4. Click **Save**. 
 
@@ -109,14 +110,11 @@ Use this option if you have a schema that you want to share across multiple data
 
 1. Select a schema from the list of schemas and the details for it, will load.
 2. Select **Database Forms** from the navigation pane to show the list of all the Forms for the selected database schema.
-3. Search available views. (optional)
+
 
       ![List Forms](../../assets/images/ListOfForms1.png)
 
-4. You may click **Configure All**, meaning you may include all the list of Form in your App, otherwise, if you click **Unconfigure All**, meaning you may NOT include all the list of Form in your App.
 
-      ![Database Schema](../../assets/images/insideSchema.png)
-   
 ### Configure a form
 
 1. From the available forms under **Unconfigured Forms**, select the form that you would like to configure. 
@@ -133,6 +131,13 @@ The selected form is now configured with default settings and listed under **Con
 
 The selected form is now moved under **Unconfigured Forms**. 
 
+Click **Configure All** if you'd like to quickly enable all Forms to be available in this schema. Click **Unconfigure All** to disable all Forms in this schema.
+
+!!!warning "Important"
+      Unconfiguring all will remove all configurations you have made to each of the Forms.
+
+![Database Schema](../../assets/images/insideSchema.png)
+   
 **To make changes to the configuration:**
 
 1. Select the form. This loads the `default` Access Mode for the form.
@@ -198,11 +203,14 @@ You may see the differences immediately between each of the modes.
 
 1. Select a schema from the list of schemas and the details for it will load.
 2. Select **Database Views** from the navigation pane. This lists all the views for the selected schema.
-3. Search available views. (optional)
 
       ![List Views](../../assets/images/ListOfViews1.png)
 
-- If you like to *activate all* the Views, then click the **Activate All**, otherwise click **Deactivate All** to deactivate all the Views and no longer available on your App.
+3. Click **Activate All** if you'd like to quickly enable all Views to be available in this schema. Click **Deactivate All** to disable all Views in this schema. 
+
+!!!warning "Important"
+      **Deactivating All** will remove all configurations you have made to each of the Forms.
+
 
 ### Activate a view
 
@@ -228,11 +236,11 @@ You may see the differences immediately between each of the modes.
 
 1. Select a schema from the list of schemas and the details for it will load.
 2. Select **Database Agents** from the navigation pane. This lists all the Agents for the selected database.
-3. Search available views. (optional)
+
 
       ![List Agents](../../assets/images/ListOfAgents.png)
 
-- If you like to *activate all* the Agents, then click the **Activate All**, otherwise click **Deactivate All** to deactivate all the Agents.
+4. Click **Activate All** if you'd like to quickly enable all Agents to be available in this schema. Click **Deactivate All** to disable all Agents in this schema.
 
 
 ### Activate an Agent
@@ -315,9 +323,9 @@ The **Application Management** page shows the list of all available applications
 
       ![Edit Application](../../assets/images/EditApplication.png)
 
-## View the OAuth Consent
+## View the OAuth Consent List
 
-The **OAuth Consent** contains the list of the authorized users who login to the app of the current server.
+**OAuth Consent** list allows the current user to view and revoke the OAuth Consents they have available to them.
 
 
 1. Click the **OAuth Consent** navigation pane. 
@@ -325,10 +333,9 @@ The **OAuth Consent** contains the list of the authorized users who login to the
       ![oAuth Consent](../../assets/images/oauthConsentIcon.png)
 
 
-2. On **OAuth Consent page**, it displays all of the users who have been granted access to the server.
 
 !!!note
-      If the **Maximum Level Access** or ACL is *Manager* or *Designer*, you can see a list of authorized access in the server. Otherwise, you can see yourself on the list of authorized users.
+      Users logged into the AdminUI that are in the `LocalKeepAdmins` group or are Managers in the `oauth.nsf` ACL will see all user consents and can revoke them as well.
 
 ![Revoke](../../assets/images/oauthConsent.png)
 
