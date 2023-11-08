@@ -1,6 +1,6 @@
 <!--To configure a certificate for HTTPS-->
 
-- Use the following entry to configure TLS (JKS, PEM, PFX -> Pick one):
+- Use the following entry to configure TLS for jks or pfx (set TLSType to the correct type): 
 
 ```json
 {
@@ -9,7 +9,15 @@
   "TLSType": "pfx"
 }
 ```
+Use the following to configure TLS for pem:
 
+```json
+{
+  "TLSFile": "path.to.file",
+  "PEMCert": "path.to.crt.file",
+  "TLSType": "pem"
+}
+```
 <!-- prettier-ignore -->
 !!! note
     If you won't define a password, you must set the value of `TLSPassword` to `""`.
