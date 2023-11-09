@@ -28,6 +28,10 @@ The section provides the information related to Domino REST API.
     - New endpoint `GET v1/attachmentnames/{unid}` will return a list of attachments attached to this document.
     - New endpoint `GET v1/preview` - lists endpoints that are marked as preview, may be considered beta endpoints.
     - **OAuth consents** can now be viewed and revoked via the AdminUI, please see [**OAuth Consents**](../references/usingdominorestapi/administrationui.md#view-the-oauth-consent-list) for more information.
+    - Added a Clone and Compare Modes for schema to highlight specific different properties per field.
+    - Added an Export schema to a json format and Import Schema if you have a schema that you want to share across multiple databases.
+    - Added search box for schema to make it easier to search for NSFs with many database forms, agents and views.
+    - Added a Configure All and Unconfigure All in database form in AdminUI.
     
     **Resolved Issues**
 
