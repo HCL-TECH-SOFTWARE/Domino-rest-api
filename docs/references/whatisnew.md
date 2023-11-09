@@ -16,30 +16,30 @@ The section provides the information related to Domino REST API.
         
         The following OAuth consent endpoints were added:
         
-        - GET v1/consents will return all valid consents for the current user.
-        - GET v1/consent/{client_id} will return all valid OAuth consents for the current user associated with the application app id (client_id).
-        - DELETE v1/consents will revoke all OAuth consents for the current user has access to.
-        - DELETE v1/consent/revoke/{unid} will revoke a specific OAuth consent. The unid is available in the response of the consent GET endpoints.
+        - `GET v1/consents` will return all valid consents for the current user.
+        - `GET v1/consent/{client_id}` will return all valid OAuth consents for the current user associated with the application app `id (client_id)`.
+        - `DELETE v1/consents` will revoke all OAuth consents for the current user has access to.
+        - `DELETE v1/consent/revoke/{unid}` will revoke a specific OAuth consent. The `unid` is available in the response of the consent `GET` endpoints.
 
-        **Please Note :** Users in the LocalKeepAdmins group or have manager access to the oauth database (oauth.nsf) have access to all valid consents. 
+        **Please Note :** Users in the LocalKeepAdmins group or have manager access to the oauth database (`oauth.nsf`) have access to all valid consents. 
 
         **Caution :** Consent endpoints that act on All consents the user has access to will act on all valid consents.
 
-    - New endpoint GET v1/attachmentnames/{unid} will return a list of attachments attached to this document.
-    - New endpoint GET v1/preview - lists endpoints that are marked as preview, may be considered beta endpoints.
+    - New endpoint `GET v1/attachmentnames/{unid}` will return a list of attachments attached to this document.
+    - New endpoint `GET v1/preview` - lists endpoints that are marked as preview, may be considered beta endpoints.
     - **OAuth consents** can now be viewed and revoked via the AdminUI, please see [**OAuth Consents**](../references/usingdominorestapi/administrationui.md#view-the-oauth-consent-list) for more information.
     
     **Resolved Issues**
 
-    - Fixed an issue where POST v1/run/agent won't run if using the agent's alias.
-    - Fixed an issue where POST v1/run/agent will not run in the user's context if the agent is set to Run as Web User.
-    - Fixed an issue when calling POST /attachments/{unid} multiple times may not render the attachments correctly in Notes.
-    - Fixed an issue where POST v1/query wasn't returning Rich Text fields as plain if richTextAs=plain was set.
+    - Fixed an issue where `POST v1/run/agent` won't run if using the agent's alias.
+    - Fixed an issue where `POST v1/run/agent` will not run in the user's context if the agent is set to Run as Web User.
+    - Fixed an issue when calling `POST /attachments/{unid}` multiple times may not render the attachments correctly in Notes.
+    - Fixed an issue where `POST v1/query` wasn't returning Rich Text fields as plain if `richTextAs=plain` was set.
 
     **Others**
 
-    - Docker image version for docker compose .env file (CONTAINER_IMAGE) is domino-rest-api:1.0.8.
-    - Docker image version for docker compose .env file from Harbor is hclcr.io/domino/restapi:1.0.8.
+    - Docker image version for docker compose .env file (CONTAINER_IMAGE) is *domino-rest-api:1.0.8*.
+    - Docker image version for docker compose .env file from Harbor is *hclcr.io/domino/restapi:1.0.8*.
 
 
 
