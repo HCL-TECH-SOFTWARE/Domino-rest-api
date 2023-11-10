@@ -28,9 +28,9 @@ The section provides the information related to Domino REST API.
     - New endpoint `GET v1/attachmentnames/{unid}` will return a list of attachments attached to this document.
     - New endpoint `GET v1/preview` - lists endpoints that are marked as preview, may be considered beta endpoints.
     - **OAuth consents** can now be viewed and revoked via the AdminUI, please see [**OAuth Consents**](../references/usingdominorestapi/administrationui.md#view-the-oauth-consent-list) for more information.
-    - Added a Clone and Compare Modes for schema to highlight specific different properties per field.
-    - Added an Export schema to a json format and Import Schema if you have a schema that you want to share across multiple databases.
-    - Added search box for schema to make it easier to search for NSFs with many database forms, agents and views.
+    - Added the ability to Clone Form Modes and Compare Form Modes in the AdminUI. Please see [**Clone Form Modes**](../references/usingdominorestapi/administrationui.md#clone-mode) and [**Compare Form Modes**](../references/usingdominorestapi/administrationui.md#compare-mode).
+    - Added the ability to export and import schema to share across multiple databases in the AdminUI. Please see [**Import schema to a database**](../references/usingdominorestapi/administrationui.md#import-schema-to-a-database) and [**Export schema**](../howto/database/exportsourcejson.md).
+    - Added a search inside a schema to easily locate forms, agents and views. (link to topic if there is one)
     - Added a Configure All and Unconfigure All in database form in AdminUI.
     
     **Resolved Issues**
@@ -98,7 +98,7 @@ The section provides the information related to Domino REST API.
 
     - A database view can now be edited in the Admin UI to select which columns to include. Column external names can now also be set or edited.
     - Added ability to mark a document as read (`markRead=true`) or unread (`markUnread=true`) when getting a view that contains those documents using the `GET v1/lists/{name}` endpoint.
-    - Added the ability to select only district documents (`distinctDocuments=true` when retrieving view contents via the `GET v1/lists/{name}` endpoint.
+    - Added the ability to select only district documents `distinctDocuments=true` when retrieving view contents via the `GET v1/lists/{name}` endpoint.
     - Added ability to mark a document as read (`markRead=true`) or unread (`markUnread=true`) when retrieving a document using the `GET v1/document/{unid}` endpoint.
     - Added ability to mark a document as unread (`markUnread=true`) when updating a document using the `PUT/PATCH v1/document/{unid}` endpoints.
     - Added ability to retrieve a database's DXL utilizing the `GET setup-v1/dxl` endpoint.
