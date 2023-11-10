@@ -10,41 +10,47 @@ The section provides the information related to Domino REST API.
 ???+ info "v1.0.8 - What's new or changed"
     ## v1.0.8 - _What's new or changed_
 
+    *Release date: November 14, 2023*
+
     **New**
 
-    - OAuth will autoconsent if a valid refresh token exists for a user scope application combination.
+    - OAuth will auto consent if a valid refresh token exists for a user scope application combination.
+    - Added the following OAuth consent endpoints:
         
-        The following OAuth consent endpoints were added:
-        
-        - `GET v1/consents` will return all valid consents for the current user.
-        - `GET v1/consent/{client_id}` will return all valid OAuth consents for the current user associated with the application app `id (client_id)`.
-        - `DELETE v1/consents` will revoke all OAuth consents for the current user has access to.
-        - `DELETE v1/consent/revoke/{unid}` will revoke a specific OAuth consent. The `unid` is available in the response of the consent `GET` endpoints.
+        - `GET v1/consents` returns all valid consents for the current user.
+        - `GET v1/consent/{client_id}` returns all valid OAuth consents for the current user associated with the application app `id (client_id)`.
+        - `DELETE v1/consents` revokes all OAuth consents that the current user has access to.
+        - `DELETE v1/consent/revoke/{unid}` revokes a specific OAuth consent. The `unid` is available in the response of the consent `GET` endpoints.
 
-        **Please Note :** Users in the LocalKeepAdmins group or have manager access to the oauth database (`oauth.nsf`) have access to all valid consents. 
+        !!!warning "Important"
+            - Users in the LocalKeepAdmins group or have manager access to the OAuth database (`oauth.nsf`) have access to all valid consents. 
+            - Consent endpoints that act on All consents the user has access to will act on all valid consents.
 
-        **Caution :** Consent endpoints that act on All consents the user has access to will act on all valid consents.
+    - Added endpoint `GET v1/attachmentnames/{unid}` to return a list of attachments attached to this document.
+    - Added endpoint `GET v1/preview` to list endpoints that are marked as preview, may be considered beta endpoints.
+    - Added ability to view and revoke OAuth consents in the AdminUI via the [OAuth Consents](../references/usingdominorestapi/administrationui.md#view-the-oauth-consent-list) pane.
+    
+    **Improvements**
 
-    - New endpoint `GET v1/attachmentnames/{unid}` will return a list of attachments attached to this document.
-    - New endpoint `GET v1/preview` - lists endpoints that are marked as preview, may be considered beta endpoints.
-    - **OAuth consents** can now be viewed and revoked via the AdminUI, please see [**OAuth Consents**](../references/usingdominorestapi/administrationui.md#view-the-oauth-consent-list) for more information.
+    - Added the ability to [clone form modes](../references/usingdominorestapi/administrationui.md#clone-mode) and [compare form modes](../references/usingdominorestapi/administrationui.md#compare-mode) in the AdminUI.
+    - Added the ability to [export a schema](../howto/database/exportsourcejson.md) and [import a schema](../references/usingdominorestapi/administrationui.md#import-schema-to-a-database) in the AdminUI. 
     
     **Resolved Issues**
 
-    - Fixed an issue where `POST v1/run/agent` won't run if using the agent's alias.
-    - Fixed an issue where `POST v1/run/agent` will not run in the user's context if the agent is set to Run as Web User.
-    - Fixed an issue when calling `POST /attachments/{unid}` multiple times may not render the attachments correctly in Notes.
-    - Fixed an issue where `POST v1/query` wasn't returning Rich Text fields as plain if `richTextAs=plain` was set.
+    - `POST v1/run/agent` did not run when using the agent's alias.
+    - `POST v1/run/agent` did not run in the user's context when the agent is set to *Run as Web User*.
+    - Calling `POST /attachments/{unid}` multiple times did not render the attachments correctly in Notes.
+    - `POST v1/query` wasn't returning Rich Text fields as plain when `richTextAs=plain` was set.
 
     **Others**
-
+    
+    - Implemented various documentation updates.
     - Docker image version for docker compose .env file (CONTAINER_IMAGE) is *domino-rest-api:1.0.8*.
     - Docker image version for docker compose .env file from Harbor is *hclcr.io/domino/restapi:1.0.8*.
 
 
 
-
-???+ info "v1.0.7 - What's new or changed"
+??? info "v1.0.7 - What's new or changed"
     ## v1.0.7 - _What's new or changed_
 
     **New**
@@ -94,7 +100,7 @@ The section provides the information related to Domino REST API.
 
     - A database view can now be edited in the Admin UI to select which columns to include. Column external names can now also be set or edited.
     - Added ability to mark a document as read (`markRead=true`) or unread (`markUnread=true`) when getting a view that contains those documents using the `GET v1/lists/{name}` endpoint.
-    - Added the ability to select only district documents (`distinctDocuments=true` when retrieving view contents via the `GET v1/lists/{name}` endpoint.
+    - Added the ability to select only district documents (`distinctDocuments=true`) when retrieving view contents via the `GET v1/lists/{name}` endpoint.
     - Added ability to mark a document as read (`markRead=true`) or unread (`markUnread=true`) when retrieving a document using the `GET v1/document/{unid}` endpoint.
     - Added ability to mark a document as unread (`markUnread=true`) when updating a document using the `PUT/PATCH v1/document/{unid}` endpoints.
     - Added ability to retrieve a database's DXL utilizing the `GET setup-v1/dxl` endpoint.
