@@ -30,7 +30,7 @@ The section provides the information related to Domino REST API.
     - **OAuth consents** can now be viewed and revoked via the AdminUI, please see [**OAuth Consents**](../references/usingdominorestapi/administrationui.md#view-the-oauth-consent-list) for more information.
     - Added the ability to Clone Form Modes and Compare Form Modes in the AdminUI. Please see [**Clone Form Modes**](../references/usingdominorestapi/administrationui.md#clone-mode) and [**Compare Form Modes**](../references/usingdominorestapi/administrationui.md#compare-mode).
     - Added the ability to export and import schema to share across multiple databases in the AdminUI. Please see [**Import schema to a database**](../references/usingdominorestapi/administrationui.md#import-schema-to-a-database) and [**Export schema**](../howto/database/exportsourcejson.md).
-    - Added a search inside a schema to easily locate forms, agents and views. (link to topic if there is one)
+    - Added a search inside a schema to easily locate forms, agents and views.
     - Added a Configure All and Unconfigure All in database form in AdminUI.
     
     **Resolved Issues**
