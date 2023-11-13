@@ -32,9 +32,13 @@ The section provides the information related to Domino REST API.
     
     **Improvements**
 
+    - New endpoint `GET v1/attachmentnames/{unid}` will return a list of attachments attached to this document.
+    - New endpoint `GET v1/preview` - lists endpoints that are marked as preview, may be considered beta endpoints.
+    - **OAuth consents** can now be viewed and revoked via the AdminUI, please see [**OAuth Consents**](../references/usingdominorestapi/administrationui.md#view-the-oauth-consent-list) for more information.
     - Added the ability to [clone form modes](../references/usingdominorestapi/administrationui.md#clone-a-mode) and [compare form modes](../references/usingdominorestapi/administrationui.md#compare-modes) in the AdminUI.
     - Added the ability to [export a schema](../howto/database/exportsourcejson.md) and [import a schema](../references/usingdominorestapi/administrationui.md#import-a-schema) in the AdminUI.
     - Added search feature in **Schema Management** to easily look for forms, views, and agents.  
+    - Added a Configure All and Unconfigure All in database form in AdminUI.
     
     **Resolved Issues**
 
@@ -101,7 +105,7 @@ The section provides the information related to Domino REST API.
 
     - A database view can now be edited in the Admin UI to select which columns to include. Column external names can now also be set or edited.
     - Added ability to mark a document as read (`markRead=true`) or unread (`markUnread=true`) when getting a view that contains those documents using the `GET v1/lists/{name}` endpoint.
-    - Added the ability to select only district documents (`distinctDocuments=true`) when retrieving view contents via the `GET v1/lists/{name}` endpoint.
+    - Added the ability to select only distinct documents (`distinctDocuments=true`) when retrieving view contents via the `GET v1/lists/{name}` endpoint.
     - Added ability to mark a document as read (`markRead=true`) or unread (`markUnread=true`) when retrieving a document using the `GET v1/document/{unid}` endpoint.
     - Added ability to mark a document as unread (`markUnread=true`) when updating a document using the `PUT/PATCH v1/document/{unid}` endpoints.
     - Added ability to retrieve a database's DXL utilizing the `GET setup-v1/dxl` endpoint.
