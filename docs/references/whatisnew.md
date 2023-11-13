@@ -32,13 +32,10 @@ The section provides the information related to Domino REST API.
     
     **Improvements**
 
-    - New endpoint `GET v1/attachmentnames/{unid}` will return a list of attachments attached to this document.
-    - New endpoint `GET v1/preview` - lists endpoints that are marked as preview, may be considered beta endpoints.
-    - **OAuth consents** can now be viewed and revoked via the AdminUI, please see [**OAuth Consents**](../references/usingdominorestapi/administrationui.md#view-the-oauth-consent-list) for more information.
     - Added the ability to [clone form modes](../references/usingdominorestapi/administrationui.md#clone-a-mode) and [compare form modes](../references/usingdominorestapi/administrationui.md#compare-modes) in the AdminUI.
     - Added the ability to [export a schema](../howto/database/exportsourcejson.md) and [import a schema](../references/usingdominorestapi/administrationui.md#import-a-schema) in the AdminUI.
     - Added search feature in **Schema Management** to easily look for forms, views, and agents.  
-    - Added a Configure All and Unconfigure All in database form in AdminUI.
+    - Added ability to configure or unconfigure all database forms at the same time.
     
     **Resolved Issues**
 
