@@ -2,7 +2,7 @@
 
 ## About this task
 
-The procedure guides you on exporting the database schema in JSON format from the **Source** tab on the **Schema Management** page.
+The procedure guides you on exporting the database schema in JSON format from the **Source** tab on the **Schema Management** page so you can share the database schema across databases.
 
 ## Prerequisite
 
@@ -20,4 +20,4 @@ A JSON file containing the Source text is downloaded to your default download lo
 <!--The export button downloads the Source text in .json format with a filename *selected schema*.json (e.g,reportschema.json).--> 
 
 !!!tip
-    For information on importing a schema, see [Import schema to a database](../../references/usingdominorestapi/administrationui.md#import-schema-to-a-database).
+    For information on importing a schema, see [Import a schema](../../references/usingdominorestapi/administrationui.md#import-a-schema).

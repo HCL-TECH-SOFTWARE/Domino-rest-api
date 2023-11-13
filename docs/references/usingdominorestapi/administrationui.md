@@ -32,30 +32,55 @@ Click the **Schemas** navigation pane and the  **Schema Management** page shows 
 
 You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical View**, or **NSF View**. There is also a provision to search through the list either via **Schema Name** or **NSF Name**.
 
-
 ### Add a schema
+
+The shape of data available is referred to as a schema. The schema is a JSON file in the design resources of the database. It gets created by a developer with Designer access to the NSF.
+
+This creates an alias to the schema. This, along with a scope, provides access to the database via the Domino REST API. One NSF can have multiple schemas, which is useful to provide different data sets or different levels of access to data.
+
+You can add a schema by [creating your own schema](#create-a-schema) or [importing a schema](#import-a-schema).
+
+#### Create a schema
 
 1. On the **Schema Management** page, click **Add Schema**.
 
       ![Add schema](../../assets/images/addSchema.png)
 
-2. Select **Create a schema**.
+2. In the **Add New Schema** dialog, click **Create Schema**.
 
-      ![Create a schema ](../../assets/images/createSchema.png)
+      ![Create a schema ](../../assets/images/createSchema.png){: style="height:80%;width:80%"}   
 
-      The shape of data available is referred to as a schema. The schema is a JSON file in the design resources of the database. It gets created by a developer with Designer access to the NSF.
-
-      This creates an alias to the Schema. This, along with a Scope, provides access to the database via the Domino REST API.
-      One NSF can have multiple Schemas which is useful to provide different data sets or different levels of access to data.
+3. Under **Available Databases**, select a database from the list of databases available to the Domino REST API.
 
       ![Create Database Form](../../assets/images/AddSchemaForm.PNG)
 
-2. Under **Available Databases**, select a database from the list of databases available to the Domino REST API.
-
       You can search for a database by clicking **Search Databases** and entering the database name. This filters the list of available databases based on the entered database name. Click the clear icon to remove the entered database name. 
 
-3. Under **Add New Schema**, enter details in the **Schema Name** and **Description**, and then select the **Formula Engine** and **Schema Icon** for the schema you want to create.
-4. Click **Add**.
+4. Under **Add New Schema**, enter details in the **Schema Name** and **Description**, and then select the **Formula Engine** and **Schema Icon** for the schema you want to create.
+5. Click **Add**.
+
+#### Import a schema <!--to a database-->
+
+Use this option if you want to import a new schema from a JSON file produced by [exporting database schema as JSON file](../../howto/database/exportsourcejson.md).
+
+<!--Use this option if you have a schema that you want to share across multiple databases or even into the same database. Follow the procedure of exporting a schema here [Export database schema as JSON file ](../../howto/database/exportsourcejson.md).-->
+
+1. On the **Schema management page**, click **Add Schema**.
+2. In the **Add New Schema** dialog, click **Import Schema**.
+      
+      <!--![import schema](../../assets/images/importSchema.png)-->
+
+3. Select the JSON database file and click **Open**. The JSON database file is the exported file from another database or within your server.
+
+4. In the **Import Schema** dialog:
+      1. Choose the `.nsf` database from the **Import Into Database** dropdown list. The default `.nsf` is from the imported database JSON file.
+      2. Update the **Icon**, **Schema Name**, **Schema Description**, and **Formula Engine** as needed. 
+      3. Click **Save Schema**. 
+      
+The `nsf` database file and schema are added to the schema list.
+
+!!!note   
+    The imported schema name must be unique. You'll be warned if you try to save a schema to a database that already has a schema with the same name.
 
 ### Edit a schema
 
@@ -78,38 +103,16 @@ You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical Vie
       |Allow Decryption|*feature under development*|
       |Require Revision|Enable the setting to require the provision of the correct revision version of the document to update the document through an update endpoint.|
 
-      - DQL Formula - Enter a valid Notes formula to limit DQL usage. The formula must evaluate to @TRUE for DQL to be allowed. Default is @TRUE meaning no limitations.
+      - You can enter a valid Notes formula in **DQL Formula** to limit DQL usage. The formula must evaluate to `@TRUE` for DQL to be allowed. The default is `@TRUE`, which means no limitations.
 
         ![Edit schema dialog](../../assets/images/editschema1.png){: style="height:80%;width:80%"}
 
 4. Click **Save**. 
 
-### Import schema to a database
-
-Use this option if you have a schema that you want to share across multiple databases or even into the same database. Follow the procedure of exporting a schema here [Export database schema as JSON file ](../../howto/database/exportsourcejson.md).
-
-1. On the **Schema management page**, click **Add Schema**.
-2. Click **Import Schema** on the **Add New Schema** dialog box.
-      
-      ![import schema](../../assets/images/importSchema.png)
-
-3. Select the `.json` database file and click **Open**. This is the exported file from other database or within your server.
-4. Choose the `.nsf` database from the dropdown list of the **Database to import to**.  The default `.nsf` is from the imported database `json` file.
-5. You may change the **Icon**.
-6. You may change the **Schema name**. The default **schema name** comes from the imported schema name.
-7. You may change the **Description**. The default description comes from the imported schema name.
-8. Choose from the list of **Formula Engine**. Default is `Domino`.
-9. Click **Save Schema**. The `nsf` database file and schema are being added to the schema list.
-
-!!!warning "Important notice"   
-      The imported schema name must be unique, you will be warned if you try to save a schema to a database that already has a schema named the same.
-
-
-
 ### List available forms
 
-1. Select a schema from the list of schemas and the details for it will load.
-2. Select **Database Forms** from the menu var to show the list of all the Forms for the selected database schema.
+1. Select a schema from the list of schemas to load the details.
+2. Select **Database Forms** from the menu bar to show the list of all the forms for the selected database schema.
 
       ![Database Schema](../../assets/images/insideSchema.png)
       <!--![List Forms](../../assets/images/ListOfForms1.png)-->
@@ -199,19 +202,13 @@ Use this function to see the differences between the modes of a selected form. T
 3. Select the modes to compare from the drop-down lists in the comparison columns. The comparison result is displayed. 
 
 ![Compare Mode](../../assets/images/compareMode.png)
-
-The comparison result shows the following:
-
-- number of fields of each mode
-- common fields between the compared modes 
-- fields not existing in the respective modes
  
 !!!note 
-    A field available in only one mode is highlighted, and then indicated as **Field not existing** in the other mode. 
-
+    - A field available in only one mode is highlighted, and then indicated as **Field not existing** in the other mode. 
+    - Fields with differences are highlighted. 
 
 !!!tip
-    - Click the **Show only fields with differences** toggle to only show fields that aren't available in the compared modes.
+    - Click the **Show only fields with differences** toggle to only show fields with differences.
     - In case there are too many fields, and you want to find a specific field, you can enter the field name in the **Search Field** to only display the specific field if available.
     - Click **Add New Column** to add more modes in the comparison. 
     - Click the close icon to close the **Mode Compare - <form name\>** page.    
@@ -219,7 +216,7 @@ The comparison result shows the following:
 
 ### List available views
 
-1. Select a schema from the list of schemas and the details for it will load.
+1. Select a schema from the list of schemas to load the details.
 2. Select **Database Views** from the menu bar. This lists all the views for the selected schema.
 
       ![List Views](../../assets/images/ListOfViews1.png)
@@ -255,7 +252,7 @@ The comparison result shows the following:
 
 ### List available agents
 
-1. Select a schema from the list of schemas and the details for it will load.
+1. Select a schema from the list of schemas to load the details.
 2. Select **Database Agents** from the menu bar. This lists all the Agents for the selected database.
 
 
