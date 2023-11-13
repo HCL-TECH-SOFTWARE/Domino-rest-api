@@ -36,8 +36,12 @@ Click **Database Management - Rest API** in the landing page. This opens the **S
 
 1. In the **Schema Management** page, click **Add Schema**. 
 
-      ![Create Database Configuration](../assets/images/createSchema.png)
+      ![Add schema](../assets/images/addSchema.png)
       <!--![Add Schema Menu](../assets/images/AddNewSchema.png)-->
+
+2. In the **Add New Schema** dialog, click **Create Schema**.
+
+      ![Create Database Configuration](../assets/images/createSchema.png){: style="height:70%;width:70%"}
 
 2. Under **Available Databases**, select `Demo.nsf`.
 3. Under **Add New Schema**, fill up the form and then click **Add**.
@@ -83,12 +87,13 @@ This page allows you to set various configurations to your schema.
 ## Manage database forms
 
 1. Click **Database Forms** from the menu bar. This lists all the forms available for the schema.
-2. From the list of **Unconfigured Forms**, click a form to configure.
+1. From the available forms under **Unconfigured Forms**, select the form that you would like to configure. 
+2. Click the toggle in the form card of the selected form.
 3. In the **Configure** dialog, click **Yes** to configure the form with default settings.
 
 The selected form is now listed under **Configured Forms**.
 
-![List Forms](../assets/images/ListOfForms1.png)
+![List Forms](../assets/images/ListOfForms2.png)
 
 **To make changes to the configured form:**
 

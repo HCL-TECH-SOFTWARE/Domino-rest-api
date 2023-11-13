@@ -32,30 +32,55 @@ Click the **Schemas** navigation pane and the  **Schema Management** page shows 
 
 You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical View**, or **NSF View**. There is also a provision to search through the list either via **Schema Name** or **NSF Name**.
 
-
 ### Add a schema
+
+The shape of data available is referred to as a schema. The schema is a JSON file in the design resources of the database. It gets created by a developer with Designer access to the NSF.
+
+This creates an alias to the schema. This, along with a scope, provides access to the database via the Domino REST API. One NSF can have multiple schemas, which is useful to provide different data sets or different levels of access to data.
+
+You can add a schema by [creating your own schema](#create-a-schema) or [importing a schema](#import-a-schema).
+
+#### Create a schema
 
 1. On the **Schema Management** page, click **Add Schema**.
 
       ![Add schema](../../assets/images/addSchema.png)
 
-2. Select **Create a schema**.
+2. In the **Add New Schema** dialog, click **Create Schema**.
 
-      ![Create a schema ](../../assets/images/createSchema.png)
+      ![Create a schema ](../../assets/images/createSchema.png){: style="height:80%;width:80%"}   
 
-      The shape of data available is referred to as a schema. The schema is a JSON file in the design resources of the database. It gets created by a developer with Designer access to the NSF.
-
-      This creates an alias to the Schema. This, along with a Scope, provides access to the database via the Domino REST API.
-      One NSF can have multiple Schemas which is useful to provide different data sets or different levels of access to data.
+3. Under **Available Databases**, select a database from the list of databases available to the Domino REST API.
 
       ![Create Database Form](../../assets/images/AddSchemaForm.PNG)
 
-2. Under **Available Databases**, select a database from the list of databases available to the Domino REST API.
-
       You can search for a database by clicking **Search Databases** and entering the database name. This filters the list of available databases based on the entered database name. Click the clear icon to remove the entered database name. 
 
-3. Under **Add New Schema**, enter details in the **Schema Name** and **Description**, and then select the **Formula Engine** and **Schema Icon** for the schema you want to create.
-4. Click **Add**.
+4. Under **Add New Schema**, enter details in the **Schema Name** and **Description**, and then select the **Formula Engine** and **Schema Icon** for the schema you want to create.
+5. Click **Add**.
+
+#### Import a schema <!--to a database-->
+
+Use this option if you want to import a new schema from a JSON file produced by [exporting database schema as JSON file](../../howto/database/exportsourcejson.md).
+
+<!--Use this option if you have a schema that you want to share across multiple databases or even into the same database. Follow the procedure of exporting a schema here [Export database schema as JSON file ](../../howto/database/exportsourcejson.md).-->
+
+1. On the **Schema management page**, click **Add Schema**.
+2. In the **Add New Schema** dialog, click **Import Schema**.
+      
+      <!--![import schema](../../assets/images/importSchema.png)-->
+
+3. Select the JSON database file and click **Open**. The JSON database file is the exported file from another database or within your server.
+
+4. In the **Import Schema** dialog:
+      1. Choose the `.nsf` database from the **Import Into Database** dropdown list. The default `.nsf` is from the imported database JSON file.
+      2. Update the **Icon**, **Schema Name**, **Schema Description**, and **Formula Engine** as needed. 
+      3. Click **Save Schema**. 
+      
+The `nsf` database file and schema are added to the schema list.
+
+!!!note   
+    The imported schema name must be unique. You'll be warned if you try to save a schema to a database that already has a schema with the same name.
 
 ### Edit a schema
 
@@ -78,50 +103,36 @@ You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical Vie
       |Allow Decryption|*feature under development*|
       |Require Revision|Enable the setting to require the provision of the correct revision version of the document to update the document through an update endpoint.|
 
-      - DQL Formula - Enter a valid Notes formula to limit DQL usage. The formula must evaluate to @TRUE for DQL to be allowed. Default is @TRUE meaning no limitations.
+      - You can enter a valid Notes formula in **DQL Formula** to limit DQL usage. The formula must evaluate to `@TRUE` for DQL to be allowed. The default is `@TRUE`, which means no limitations.
 
         ![Edit schema dialog](../../assets/images/editschema1.png){: style="height:80%;width:80%"}
 
 4. Click **Save**. 
 
-### Import schema to a database
+### List available forms
 
-Use this option if you have a schema that you want to share across multiple databases or even into the same database. Follow the procedure of exporting a schema here [Export database schema as JSON file ](../../howto/database/exportsourcejson.md).
+1. Select a schema from the list of schemas to load the details.
+2. Select **Database Forms** from the menu bar to show the list of all the forms for the selected database schema.
 
-1. On the **Schema management page**, click **Add Schema**.
-2. Click **Import Schema** on the **Add New Schema** dialog box.
-      
-      ![import schema](../../assets/images/importSchema.png)
-
-3. Select the `.json` database file and click **Open**. This is the exported file from other database or within your server.
-4. Choose the `.nsf` database from the dropdown list of the **Database to import to**.  The default `.nsf` is from the imported database `json` file.
-5. You may change the **Icon**.
-6. You may change the **Schema name**. The default **schema name** comes from the imported schema name.
-7. You may change the **Description**. The default description comes from the imported schema name.
-8. Choose from the list of **Formula Engine**. Default is `Domino`.
-9. Click **Save Schema**. The `nsf` database file and schema are being added to the schema list.
-
-!!!warning "Important notice"   
-      The imported schema name must be unique, you will be warned if you try to save a schema to a database that already has a schema named the same.
-
-
-
-### Database Forms
-
-1. Select a schema from the list of schemas and the details for it, will load.
-2. Select **Database Forms** from the navigation pane to show the list of all the Forms for the selected database schema.
-
-
-      ![List Forms](../../assets/images/ListOfForms1.png)
+      ![Database Schema](../../assets/images/insideSchema.png)
+      <!--![List Forms](../../assets/images/ListOfForms1.png)-->
 
 
 ### Configure a form
+
+**To configure a specific form or forms**
 
 1. From the available forms under **Unconfigured Forms**, select the form that you would like to configure. 
 2. Click the toggle in the form card of the selected form.
 3. In the **Configure** dialog, click **Yes**. 
 
 The selected form is now configured with default settings and listed under **Configured Forms**.
+
+**To configure all forms**
+
+- Click **Configure All**.
+
+All forms are now configured with default settings and listed under **Configured Forms**.
 
 **To unconfigure a form**
 
@@ -131,16 +142,17 @@ The selected form is now configured with default settings and listed under **Con
 
 The selected form is now moved under **Unconfigured Forms**. 
 
-Click **Configure All** if you'd like to quickly enable all Forms to be available in this schema. Click **Unconfigure All** to disable all Forms in this schema.
+**To unconfigure all forms**
 
-!!!warning "Important"
-      Unconfiguring all will remove all configurations you have made to each of the Forms.
+- Click **Unconfigure All**.
 
-![Database Schema](../../assets/images/insideSchema.png)
-   
-**To make changes to the configuration:**
+!!!note
+    Clicking **Unconfigure All** removes all configurations you have made to each of the forms.
 
-1. Select the form. This loads the `default` Access Mode for the form.
+
+### Change form configuration
+
+1. Select a configured form. This loads the `default` Access Mode for the form.
       
       ![Access Mode](../../assets/images/AccessMode.png)
 
@@ -154,10 +166,11 @@ Click **Configure All** if you'd like to quickly enable all Forms to be availabl
 !!!note
     You can click the trash can icon corresponding to the field to remove the field from the form. 
 
-### Add Mode
+### Add a mode
 
-1. Click the **Add Mode**.
-2. Fill in the name of the `Mode` and click **Save**. The mode has been added to the `Mode`list
+1. Select a configured form. This loads the `default` Access Mode for the form.
+1. Click **Add Mode**.
+2. In the **Add New Mode** dialog, enter the name of the new mode and click **Save**. The new mode has been added to the `Mode`list
       
       ![mode list](../../assets/images/modeList.png)
 
@@ -165,51 +178,53 @@ Click **Configure All** if you'd like to quickly enable all Forms to be availabl
 4. Click **Save**.
 
 
-### Clone Mode
+### Clone a mode 
 
-Use **Clone Mode** to copy an existing mode to a new mode in the same schema.
+Use **Clone Mode** to add a new mode based on an existing mode in the same schema.
 
-1. Open a database form.
-2. From the dropdown menu of the **Mode** fields, choose the mode you want to clone. (for example, you want to clone the Mode:`default`)
-3. Click the **Clone Mode**.
-4. Fill in the name of the `Mode` and click **Save**. The mode has cloned or duplicated.
-5. The new or cloned mode has added to the list of `Modes`. You can remove or add fields for new mode
+1. Select a configured form. This loads the `default` Access Mode for the form.
+2. From the **Mode** dropdown list, choose the mode you want to clone, for example the `default` mode.
+3. Click **Clone Mode**.
+4. In the **Clone <mode name\>** dialog, enter the name of the mode and click **Save**. 
+
+      The new mode cloned from an existing mode is now available. You can remove or add fields to the new mode.
 
 6. Click **Save**.
 
       ![clone list](../../assets/images/cloneList.png)
 
-### Compare Mode
+### Compare modes
 
-Use this function to see the differences between multiple modes. In order for you to use this function, you must have at least two  available `Modes`.
+Use this function to see the differences between the modes of a selected form. To use this function, you must have at least two modes in your selected form.
 
-Click **Open Mode Compare**.
-
-!!! note
-      - You can search  `fields` in the search bar.
-      - You can toggle on to show only fields with differences.
-      - Differences in the fields are indicated by pink background.
-      - You may click **Add New Column** to include **Mode** in your comparisons.
-
-1. Select and click the **Modes** you want in the first box.
-2. Select and click the **Modes** you want in the second box.
-
-You may see the differences immediately between each of the modes.
+1. Select a configured form. This loads the `default` Access Mode for the form.
+2. Click **Open Mode Compare**. The **Mode Compare - <form name\>** page opens.
+3. Select the modes to compare from the drop-down lists in the comparison columns. The comparison result is displayed. 
 
 ![Compare Mode](../../assets/images/compareMode.png)
+ 
+!!!note 
+    - A field available in only one mode is highlighted, and then indicated as **Field not existing** in the other mode. 
+    - Fields with differences are highlighted. 
+
+!!!tip
+    - Click the **Show only fields with differences** toggle to only show fields with differences.
+    - In case there are too many fields, and you want to find a specific field, you can enter the field name in the **Search Field** to only display the specific field if available.
+    - Click **Add New Column** to add more modes in the comparison. 
+    - Click the close icon to close the **Mode Compare - <form name\>** page.    
 
 
-### Database Views
+### List available views
 
-1. Select a schema from the list of schemas and the details for it will load.
-2. Select **Database Views** from the navigation pane. This lists all the views for the selected schema.
+1. Select a schema from the list of schemas to load the details.
+2. Select **Database Views** from the menu bar. This lists all the views for the selected schema.
 
       ![List Views](../../assets/images/ListOfViews1.png)
 
-3. Click **Activate All** if you'd like to quickly enable all Views to be available in this schema. Click **Deactivate All** to disable all Views in this schema. 
+<!--3. Click **Activate All** if you'd like to quickly enable all Views to be available in this schema. Click **Deactivate All** to disable all Views in this schema. 
 
-!!!warning "Important"
-      **Deactivating All** will remove all configurations you have made to each of the Forms.
+      !!!warning "Important"
+      **Deactivating All** will remove all configurations you have made to each of the Forms.-->
 
 
 ### Activate a view
@@ -228,22 +243,25 @@ You may see the differences immediately between each of the modes.
 !!!tip
     Clicking **Deactivate All** deactivates all active views. On the **Reset ALL View Columns** dialog, click **Yes** to confirm deactivation of all views. 
 
+!!!note
+    Clicking **Deactivate All** removes all configurations you have made to each of the views.
+
 **To edit a view**
 
 - See [Edit a database view of a schema](../../howto/database/editviewcolumn.md) for more information. 
 
-### Database Agents
+### List available agents
 
-1. Select a schema from the list of schemas and the details for it will load.
-2. Select **Database Agents** from the navigation pane. This lists all the Agents for the selected database.
+1. Select a schema from the list of schemas to load the details.
+2. Select **Database Agents** from the menu bar. This lists all the Agents for the selected database.
 
 
       ![List Agents](../../assets/images/ListOfAgents.png)
 
-4. Click **Activate All** if you'd like to quickly enable all Agents to be available in this schema. Click **Deactivate All** to disable all Agents in this schema.
+<!--4. Click **Activate All** if you'd like to quickly enable all Agents to be available in this schema. Click **Deactivate All** to disable all Agents in this schema.-->
 
 
-### Activate an Agent
+### Activate an agent
 
 **To activate a specific agent or agents**
 
@@ -282,6 +300,9 @@ Select **Database Management - Activation** from the home page.
 
 ### Add a scope
 
+!!!tip
+    A scope points to a schema that's contained in a database. A database can have many schemas for different use cases and a schema can be pointed to by more than one scope.
+
 1. On the **Scope Management** page, click **Add Scope** to add a database.
 
       ![Create Database Scope](../../assets/images/CreateDatabaseBlue.png)
@@ -294,7 +315,6 @@ Select **Database Management - Activation** from the home page.
 !!!note
     You can set the **Maximum Access Level** of the scope to control the maximum access anyone using the scope should have. This prevents an app, which has inherited a user's access rights when the user grants app access, from unauthorized altering of schemas or access control lists. By default, the set maximum access level is **Editor**. To know more about what each access level allows and to whom the access level is assigned, see [Access levels in the ACL](https://help.hcltechsw.com/domino/12.0.2/admin/conf_accesslevelsintheacl_c.html){: target="_blank" rel="noopener noreferrer"}.     
 
-A scope points to a schema that's contained in a database. A database can have many schemas for different use cases and a schema can be pointed to by more than one scope.
 
 ## Application Management - OAuth
 
@@ -304,54 +324,53 @@ Select **Application Management - OAuth** from the home page.
 
 The **Application Management** page shows the list of all available applications.
 
-![List Applications](../../assets/images/ListOfApplications.png)
+![List Applications](../../assets/images/ListOfApplications.png){: style="height:80%;width:80%"}
 
 ### Add an application
 
 1. On the **Application Management** page, click **Add Application** to add an application.
 
-      ![Add Application](../../assets/images/AddApplication.png)
+      ![Add Application](../../assets/images/AddApplication.png){: style="height:80%;width:80%"}
 
 2. Under **Add New Application**, fill in the form and click **Add**.
 
       Kindly note that when your app accesses endpoints that run write operations in the `/setup-v1/` URL path, make sure to add the `$SETUP` scope aside from the `$DATA` scope to enhance access control in relation to the app inheriting a user's access rights when the user grants app access. 
 
 
-      ![Application Form](../../assets/images/AddApplicationForm.png)
+      ![Application Form](../../assets/images/AddApplicationForm.png){: style="height:80%;width:80%"}
 
 3. Hover over the application tile to access options to generate Application Secret, and edit and delete the application.
 
-      ![Edit Application](../../assets/images/EditApplication.png)
+      ![Edit Application](../../assets/images/EditApplication.png){: style="height:80%;width:80%"}
 
-## View the OAuth Consent List
+## OAuth Consents 
 
-**OAuth Consent** list allows the current user to view and revoke the OAuth Consents they have available to them.
-
-
-1. Click the **OAuth Consent** navigation pane. 
-
-      ![oAuth Consent](../../assets/images/oauthConsentIcon.png)
-
-
-
-!!!note
-      Users logged into the AdminUI that are in the `LocalKeepAdmins` group or are Managers in the `oauth.nsf` ACL will see all user consents and can revoke them as well.
-
-![Revoke](../../assets/images/oauthConsent.png)
-
-### Revoke authorized user
-
-1. Select **Revoke** from the list of authorized users.
-2. Click to **Yes**. It removed from the authorized users list.
-
-![Revoke](../../assets/images/revokeConsent.png)
-
-It means that the user asked to allow the KEEP server to access its data.
+Allows the current user to view and revoke available OAuth consents. 
 
 ### View OAuth consent list
 
-1. Click **View** from the list of allowed users.
+Click **OAuth Consents** from the navigation pane. 
 
-In the details, you can see the app, the scope, and the URL.
+![oAuth Consent](../../assets/images/oauthConsentIcon.png){: style="height:80%;width:80%"}
 
-![View Consent](../../assets/images/viewConsent.png)
+This opens the **OAuth Consents** pane. 
+
+![Revoke](../../assets/images/oauthConsent.png){: style="height:80%;width:80%"}
+
+!!!note
+    Users logged into the AdminUI that are in the `LocalKeepAdmins` group or are Managers in the `oauth.nsf` ACL will see all user consents and can revoke them as well.
+
+### View OAuth consent details
+
+Click **View** corresponding to a user in the list to show OAuth consent details, such as scope, app name, URL.
+
+![View Consent](../../assets/images/viewConsent.png){: style="height:80%;width:80%"}
+
+### Revoke authorized user
+
+1. Click **Revoke** corresponding to a user in the list that you want the authorization revoked.
+2. In the **Revoke Consent** dialog, click **Yes**. 
+
+![Revoke](../../assets/images/revokeConsent.png){: style="height:80%;width:80%"}
+
+The user is now removed from the authorized users list.
