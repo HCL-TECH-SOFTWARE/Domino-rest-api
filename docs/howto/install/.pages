@@ -1,6 +1,6 @@
 nav:
     - index.md
-    - Installation and configuration: ../../../tutorial/installconfig/index.html
+    - Installation and configuration: tutorial/installconfig/index.html
     - checksettings.md
     - modifyconfig.md
     - notesclient.md
