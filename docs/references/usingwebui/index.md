@@ -18,4 +18,8 @@ To use a Domino database in Domino REST API, it must be configured for use in th
 For more information on logging in to the Domino REST API Admin UI:
 
 - see [Login](../../tutorial/adminui.md#login)
-- see [Use passkey to login to Admin UI](../../howto/install/passkey.md) 
+- see [Use passkey to login to Admin UI](../../howto/install/passkey.md)
+
+## Database Management - REST API
+
+Select **Database Management - REST API** from the home page.
