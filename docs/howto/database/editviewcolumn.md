@@ -10,7 +10,7 @@ The procedures guide you in editing a database view of a schema so you can:
  
 ## Prerequisite
  
-- The view should be in **Active** status. For more information, see [Activate a view](../../references/usingdominorestapi/administrationui.md#activate-a-view).
+- The view should be in **Active** status. For more information, see [Activate a view](../../references/usingwebui/schemaui.md#activate-a-view).
 
 ## Procedures 
 
