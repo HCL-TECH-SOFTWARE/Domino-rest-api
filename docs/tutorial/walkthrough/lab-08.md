@@ -8,17 +8,19 @@ We use an example that could be some scheduled process to ETL data
 
 ## Prerequisites
 
-- Lab 06 completed
+- Lab 07 completed
 - Java installed
 - Maven installed
 - Internet connection
 
 ## Steps
 
-- Extract DominoJavaCmdLine.zip
-- edit `config.json`
-- run `mvn clean install` (optional)
-- run `java -jar target/etl.jar`
+1. Download and unzip the [apps-src.zip](../downloads/apps-src.zip) from the `source for all apps` in a folder.
+2. Open your IDE (vs code, etc)
+3. Open the `src` folder from the unzipped `apps-src.zip` in your IDE.
+4. Access the `JavaETL` folder to locate the `config.json` file.
+5. Edit `config.json` and click **save**.
+6. From your IDE terminal, run `mvn clean install` (optional) and `java -jar target/etl.jar`.
 
 ## How to check
 
