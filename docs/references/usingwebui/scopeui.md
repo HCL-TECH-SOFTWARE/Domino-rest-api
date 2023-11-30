@@ -1,5 +1,7 @@
 # Scope Management
 
+Select **Database Management - Activation** from the home page or **Scopes** from the side navigation pane to access the **Scope Management** page.
+
 ## Add a scope
 
 !!!tip

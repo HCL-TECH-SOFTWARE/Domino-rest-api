@@ -1,11 +1,13 @@
 # Quick Config
    
-The **Quick Config** icon displays the document's structure by allowing you to choose the `nsf` database file, schema, and scope name from a single window.  
+The **Quick Config** allows you to easily create a schema and a scope. 
 
-1. Click **Quick Config** icon. **Quick config** window shows.
-2. Search and select `.nsf` database file.
-3. Fill-in the name of your **schema**, **scope** and **description**.
-4. Choose from the list of schema icon.
+**To quick configure a schema and a scope**:
+
+1. Click **Quick Config** from the side navigation pane. The **Quick config** panel opens.
+2. Search and select a database from the list of **Available Databases**.
+3. Enter the **Schema Name**, **Scope Name**, and **Description**.
+4. Choose a **Schema Icon**.
 5. Click **Add**.
 
  ![Alt text](../../assets/images/quickconfigui.png)   

@@ -1,5 +1,7 @@
 # Schema Management
 
+Select **Database Management - REST API** from the home page or **Schemas** from the side navigation pane to access the **Schema Management** page.
+
 ## List available database schemas
 
 Click the **Schemas** navigation pane and the  **Schema Management** page shows the list of all available schemas.
@@ -8,7 +10,7 @@ Click the **Schemas** navigation pane and the  **Schema Management** page shows 
 
 You can arrange the schemas in **Stack View**, **Card View**, **Alphabetical View**, or **NSF View**. There is also a provision to search through the list either via **Schema Name** or **NSF Name**.
 
-### Add a schema
+## Add a schema
 
 The shape of data available is referred to as a schema. The schema is a JSON file in the design resources of the database. It gets created by a developer with Designer access to the NSF.
 
@@ -16,7 +18,7 @@ This creates an alias to the schema. This, along with a scope, provides access t
 
 You can add a schema by [creating your own schema](#create-a-schema) or [importing a schema](#import-a-schema).
 
-#### Create a schema
+### Create a schema
 
 1. On the **Schema Management** page, click **Add Schema**.
 
@@ -35,7 +37,7 @@ You can add a schema by [creating your own schema](#create-a-schema) or [importi
 4. Under **Add New Schema**, enter details in the **Schema Name** and **Description**, and then select the **Formula Engine** and **Schema Icon** for the schema you want to create.
 5. Click **Add**.
 
-#### Import a schema <!--to a database-->
+### Import a schema <!--to a database-->
 
 Use this option if you want to import a new schema from a JSON file produced by [exporting database schema as JSON file](../../howto/database/exportsourcejson.md).
 
@@ -58,7 +60,7 @@ The `nsf` database file and schema are added to the schema list.
 !!!note   
     The imported schema name must be unique. You'll be warned if you try to save a schema to a database that already has a schema with the same name.
 
-### Edit a schema
+## Edit a schema
 
 1. On the **Schema Management** page, select the schema you want to edit.
 2. On the schema details card, click the edit icon.
@@ -85,7 +87,7 @@ The `nsf` database file and schema are added to the schema list.
 
 4. Click **Save**. 
 
-### List available forms
+## List available forms
 
 1. Select a schema from the list of schemas to load the details.
 2. Select **Database Forms** from the menu bar to show the list of all the forms for the selected database schema.
@@ -94,7 +96,7 @@ The `nsf` database file and schema are added to the schema list.
       <!--![List Forms](../../assets/images/ListOfForms1.png)-->
 
 
-#### Configure a form
+## Configure a form
 
 **To configure a specific form or forms**
 
@@ -126,7 +128,7 @@ The selected form is now moved under **Unconfigured Forms**.
     Clicking **Unconfigure All** removes all configurations you have made to each of the forms.
 
 
-### Change form configuration
+## Change form configuration
 
 1. Select a configured form. This loads the `default` Access Mode for the form.
       
@@ -142,7 +144,7 @@ The selected form is now moved under **Unconfigured Forms**.
 !!!note
     You can click the trash can icon corresponding to the field to remove the field from the form. 
 
-#### Add a mode
+## Add a mode
 
 1. Select a configured form. This loads the `default` Access Mode for the form.
 1. Click **Add Mode**.
@@ -154,7 +156,7 @@ The selected form is now moved under **Unconfigured Forms**.
 4. Click **Save**.
 
 
-#### Clone a mode 
+## Clone a mode 
 
 Use **Clone Mode** to add a new mode based on an existing mode in the same schema.
 
@@ -169,7 +171,7 @@ Use **Clone Mode** to add a new mode based on an existing mode in the same schem
 
       ![clone list](../../assets/images/cloneList.png)
 
-#### Compare modes
+## Compare modes
 
 Use this function to see the differences between the modes of a selected form. To use this function, you must have at least two modes in your selected form.
 
@@ -190,7 +192,7 @@ Use this function to see the differences between the modes of a selected form. T
     - Click the close icon to close the **Mode Compare - <form name\>** page.    
 
 
-### List available database views
+## List available database views
 
 1. Select a schema from the list of schemas to load the details.
 2. Select **Database Views** from the menu bar. This lists all the views for the selected schema.
@@ -203,7 +205,7 @@ Use this function to see the differences between the modes of a selected form. T
       **Deactivating All** will remove all configurations you have made to each of the Forms.-->
 
 
-#### Activate a view
+## Activate a view
 
 **To activate a specific view or views**:
 
@@ -222,11 +224,11 @@ Use this function to see the differences between the modes of a selected form. T
 !!!note
     Clicking **Deactivate All** removes all configurations you have made to each of the views.
 
-#### Edit a view
+## Edit a view
 
 - See [Edit a database view of a schema](../../howto/database/editviewcolumn.md) for more information. 
 
-### List available database agents
+## List available database agents
 
 1. Select a schema from the list of schemas to load the details.
 2. Select **Database Agents** from the menu bar. This lists all the Agents for the selected database.
@@ -237,7 +239,7 @@ Use this function to see the differences between the modes of a selected form. T
 <!--4. Click **Activate All** if you'd like to quickly enable all Agents to be available in this schema. Click **Deactivate All** to disable all Agents in this schema.-->
 
 
-#### Activate an agent
+## Activate an agent
 
 **To activate a specific agent or agents**
 
@@ -253,7 +255,7 @@ Use this function to see the differences between the modes of a selected form. T
 !!! tip
       Clicking **Deactivate All** deactivates all active agents. On the **Reset ALL Agents** dialog, click **Yes** to confirm the deactivation of all agents.
 
-### View Source
+## View Source
 
 The Source tab allows you to view the database schema details in JSON format. 
 
