@@ -38,7 +38,7 @@ Provides information related to the [installation and configuration of Domino RE
 - [Scopes](usingdominorestapi/scopes.md)
 - [RichText](usingdominorestapi/richtext.md)
 - [Metrics](usingdominorestapi/metrics.md)
-- [Using Web UI](usingdominorestapi/administrationui.md)
+<!-- [Using Web UI](usingdominorestapi/administrationui.md) -->
 - [Using Domino Console](usingdominorestapi/console.md)
 - [Reserved Form Modes](usingdominorestapi/modenames.md)
 
