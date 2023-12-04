@@ -11,8 +11,9 @@ The procedure guides you on using symlink with Domino 14 and Domino REST API in 
 ### For Windows
 
 1. Open the **Command Prompt** app.
-2. Enter the `mklink`<space>(link)<space>(target). The `link` must be located where your **Domino Server** is installed, and the `target` is the Domino program location to which you want to create a link.
+2. Enter the `mklink` space (`link`) space (`target`). The `link` must be located where your **Domino Server** is installed, and the `target` is the Domino program location to which you want to create a link.
 
+```
      mklink c:\domino\jvm\bin\nskn50en.dll c:\domino\nskn50en.dll
      mklink c:\domino\jvm\bin\nsen50en.dll c:\domino\nsen50en.dll 
-
+```
