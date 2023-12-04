@@ -43,10 +43,17 @@ Click **Database Management - Rest API** in the landing page. This opens the **S
 
       ![Create Database Configuration](../assets/images/createSchema.png){: style="height:70%;width:70%"}
 
-2. Under **Available Databases**, select `Demo.nsf`.
+3. In the **Create Schema** dialog:
+
+      1. Select `Demo.nsf` from the **Import Into Database** drop-down list. 
+      2. Select an **Icon**.
+	3. Enter a **Schema Name** and a **Schema Description**. 
+      5. Click **Save Schema**. 
+
+<!--2. Under **Available Databases**, select `Demo.nsf`.
 3. Under **Add New Schema**, fill up the form and then click **Add**.
 
-      ![Configure New Schema](../assets/images/ConfigureNewSchema.png)
+      ![Configure New Schema](../assets/images/ConfigureNewSchema.png)-->
 
 This creates a schema that defines what views, folders, document, and agents you can access through the Domino REST API.
 
@@ -87,13 +94,22 @@ This page allows you to set various configurations to your schema.
 ## Manage database forms
 
 1. Click **Database Forms** from the menu bar. This lists all the forms available for the schema.
+2. Select the form that you want to configure, and then click the corresponding **Active** option under **Status**.
+
+      ![List Forms](../assets/images/ListOfForms2.png)
+
+<!-- prettier-ignore -->
+!!!tip
+     Clicking the **Inactive** option corresponding to a form unconfigures the form. In the **Reset Form** dialog, click **Yes** to unconfigure the form.
+
+<!--1. Click **Database Forms** from the menu bar. This lists all the forms available for the schema.
 1. From the available forms under **Unconfigured Forms**, select the form that you would like to configure. 
 2. Click the toggle in the form card of the selected form.
 3. In the **Configure** dialog, click **Yes** to configure the form with default settings.
 
 The selected form is now listed under **Configured Forms**.
 
-![List Forms](../assets/images/ListOfForms2.png)
+![List Forms](../assets/images/ListOfForms2.png)-->
 
 **To make changes to the configured form:**
 
