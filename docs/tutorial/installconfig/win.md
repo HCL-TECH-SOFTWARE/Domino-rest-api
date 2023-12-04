@@ -28,6 +28,9 @@ java -jar restapiInstall.jar ^
  -a
 ```
 
+!!!note
+    In case of any error, you need to see this link: How to symbolically linked (symlink) Domino 14 and Domino REST API.
+
 ## All parameters
 
 --8<-- "installparameters.md"
@@ -98,3 +101,5 @@ The installer conducts a series of actions:
 For more information, see [Deploy HCL Domino REST API to HCL Notes Client](../../howto/install/notesclient.md) for additional steps required to use the Notes client.
 
 --8<-- "iskeeprunning.md"
+
+!!!note
