@@ -66,11 +66,14 @@ This creates a schema that defines what views, folders, document, and agents you
 To set up a scope:
 
 1. Go back to the landing page by clicking **Overview**.
+
+      ![Overview](../assets/images/overview.png)
+
 2. Click **Database Management - Activation**. This opens the **Scope Management** page.
 
       ![Scope Management Page](../assets/images/ScopeManagement.png)
 
-3. Click **Add Scope**. This opens a menu as shown below:
+3. Click **Add Scope**. This opens a pane as shown below:
 
       ![Add scope Menu](../assets/images/AddNewScope.png)
 
@@ -113,12 +116,12 @@ The selected form is now listed under **Configured Forms**.
 
 **To make changes to the configured form:**
 
-1. Select the form to load the **Access Mode** page for the form.
-2. Under **Show fields from**, which shows the fields that can be added to the form, hover over a field item and click the **+** icon. This adds the field in the form. Repeat this for all the fields to be added.
+1. Click the pencil icon corresponding to the configured form that you want to edit to load the form **Access Mode** page.
+2. Under **Show fields from**, hover over a field item and click the **+** icon to add the field in the form. Repeat this for all the fields you want to add.
 
       ![Access Mode](../assets/images/AccessMode1.png)
 
-3. Set the Read or Write access formula for each of the fields in the Form.
+3. Set the Read or Write access formula for each of the fields in the form.
 4. Click **Save**.
 
 ## Manage database views
