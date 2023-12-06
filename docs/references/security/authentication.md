@@ -128,6 +128,7 @@ By default, Domino REST API will expect that incoming tokens contain a Domino-fo
   }
 }
 ```
+ To know more about `oidc` and `oidc-idpcat` configuration see [oidc and oidc-idpcat](../../references/security/oicd.md).
 
 ## Name resolution
 
