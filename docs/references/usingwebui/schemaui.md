@@ -30,7 +30,7 @@ You can add a schema by [creating your own schema](#create-a-schema) or [importi
 
 3. In the **Create Schema** dialog:
 
-      1. Select a database from the **Import Into Database** drop-down list. 
+      1. Select a database from the **Database** drop-down list. 
          
          You can also enter the database name in the **Import Into Database** field to filter the list of available databases based on the entered database name.
 
@@ -148,6 +148,7 @@ The selected form is now moved under **Unconfigured Forms**.
 
 ## Change form configuration
 
+1. Click the pencil icon corresponding to the configured form that you want to edit to load the form **Access Mode** page showing the `default` access mode.
 1. Select a configured form. This loads the `default` Access Mode for the form.
       
       ![Access Mode](../../assets/images/AccessMode.png)
@@ -160,7 +161,8 @@ The selected form is now moved under **Unconfigured Forms**.
 4. Click **Save**.
 
 !!!note
-    You can click the trash can icon corresponding to the field to remove the field from the form. 
+    - You can click the trash can icon corresponding to the field to remove the field from the form. 
+    - Click the **Multi-Value** toggle to the on position to specify a **Field Group**. The Multi-Value toggle isn't clickable to the off position if a field group is specified.
 
 ## Add a mode
 

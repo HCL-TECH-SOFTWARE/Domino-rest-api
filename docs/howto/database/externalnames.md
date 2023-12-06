@@ -1,6 +1,6 @@
 # Use external names in schema definitions
 
-The external name allows you to specify the name of the matching configured forms used in the KEEP service URL. The **customer** is one of the configured forms that can deliver the same data using multiple cases from different clients and schemas. If no other schema mode is identified, the data will be sent and received using the default mode.
+The external name allows you to specify the name of the matching configured forms used in the Domino REST API service URL. **Customer** is one of the configured forms that can deliver the same data using multiple cases from different clients and schemas. Data is sent and received using the default mode if no schema mode is identified.
 
 ## About this task
 
@@ -14,13 +14,19 @@ The procedures guide you on using external names in schema definitions and in te
 ## Procedure
 
 1. Log in to HCL Domino REST API.
-2. Choose the **Database Management REST API** option.
-3. Under the **Schema Management** page, turn on the **only show schemas configured with scope** toggle.
-4. Choose the **default** schema.
-5. Under the **Database Form** tab, choose **Customer** configured form.
-6. Click **Add Mode**. This opens the dialog for creating a new mode.
-      
-      The default mode will be used if no added mode exists for this configured form (i.e, customer).
+2. Click **Database Management - REST API** option.
+3. On the **Schema Management** page, click the **Only show schemas configured with scopes** toggle to the on position. 
+4. Select a schema.
+5. Under the **Database Forms** tab, click the pencil icon corresponding to the configured form that you want to use. This loads the form **Access Mode** page showing the `default` access mode.
+6. Click **Add Mode**. 
+7. Enter a name in the **Add New Mode** dialog and click **Save**. The new mode is shown and also selectable from the Mode drop-down list. 
+
+<!--with field items shown in the left pane coming from the `default` mode-->
+
+8. Hover over each field that you want to add to the new mode under Show fields from and click the **+** icon to add fields to the new mode.
+9. Select an added field and modify the Field Name of that field under Field Setting.  
+10. Click Save. 
+
 
 7. Enter the new mode name (i.e. test) and click **_Save_**. The new mode will be available. The customer fields can be seen in the left pane.
 
@@ -49,27 +55,28 @@ The image below is the **test** mode.
 
 ![test External Name](../../assets/images/SchemaExternalname2.png)
 
-## How to test external names result in Postman
+## Test external names result in Postman
 
-### Pre-requisite
+### Prerequisite
 
-- Configured postman
+- Configured Postman
 
-### Procedure:
+### Procedure
 
-1. Modify the schema mode according the mode you have defined in the service URL by using the `GET` command:
+- Modify the schema mode according the mode you have defined in the service URL by using the `GET` command.
 
-2. When you are using the **default** mode, change the `mode=default`.
+      - When using the **default** mode, set `mode` to `default`:
 
       > {{HOST}}/document/{{UNID_0}}?dataSource=demo&<mark style="background-color: #FFFF00">mode=default</mark>&meta=false
+            
 
-3. When you are using the **test** mode, change the `mode=test`.
+      - When using the **test** mode, set  `mode` to `test`:
 
       > {{HOST}}/document/{{UNID_0}}?dataSource=demo&<mark style="background-color: #FFFF00">mode=test</mark>&meta=false
 
 It retrieves the same data result but a different field name translation. The same thing happens if you want to edit the data. It's delivered to the field name of a different schema mode.
 
-### Expected Result
+### Expected result
 
 Default (mode)
 

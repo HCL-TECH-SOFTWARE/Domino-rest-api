@@ -7,7 +7,25 @@ The section provides the information related to Domino REST API.
     - Items marked in <span style="color:red">**red**</span> are API changes that may impact your applications and should be reviewed before upgrading.
     - Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](deprecated.md).
 
-???+ info "v1.0.8 - What's new or changed"
+???+ info "v1.0.9 - What's new or changed"
+    ## v1.0.9 - _What's new or changed_
+
+    *Release date: December 14, 2023*
+
+    **New**
+
+    **Improvements**
+
+    **Resolved Issues**
+
+    **Others**
+
+    - Implemented various documentation updates.
+    - Docker image version for docker compose .env file (CONTAINER_IMAGE) is *domino-rest-api:1.0.9*.
+    - Docker image version for docker compose .env file from Harbor is *hclcr.io/domino/restapi:1.0.9*.
+
+
+??? info "v1.0.8 - What's new or changed"
     ## v1.0.8 - _What's new or changed_
 
     *Release date: November 14, 2023*

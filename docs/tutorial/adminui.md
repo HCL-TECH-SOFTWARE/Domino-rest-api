@@ -45,7 +45,7 @@ Click **Database Management - Rest API** in the landing page. This opens the **S
 
 3. In the **Create Schema** dialog:
 
-      1. Select `Demo.nsf` from the **Import Into Database** drop-down list. 
+      1. Select `Demo.nsf` from the **Database** drop-down list. 
       2. Select an **Icon**.
 	3. Enter a **Schema Name** and a **Schema Description**. 
       5. Click **Save Schema**. 
@@ -116,7 +116,7 @@ The selected form is now listed under **Configured Forms**.
 
 **To make changes to the configured form:**
 
-1. Click the pencil icon corresponding to the configured form that you want to edit to load the form **Access Mode** page.
+1. Click the pencil icon corresponding to the configured form that you want to edit to load the form **Access Mode** page showing the `default` access mode.
 2. Under **Show fields from**, hover over a field item and click the **+** icon to add the field in the form. Repeat this for all the fields you want to add.
 
       ![Access Mode](../assets/images/AccessMode1.png)
