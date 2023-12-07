@@ -1,14 +1,14 @@
-# Configure webAuthn with KEEP and Domino 14
+# Configure WebAuthn with Domino REST API and Domino 14
 
-The webAuthn by default is configured in `config.json` located in the `keeponfig.d`. 
+The WebAuthn by default is configured in `config.json` located in the `keeponfig.d`. 
 
 ## About this task
 
-The procedure guides you to log in to both KEEP and Domino 14 using the same passkey.
+The procedure guides you to log in to both Domino REST API and Domino 14 using the same passkey.
 
 ## Prerequisites
 
-- You must be an administrator in KEEP WebUI.
+- You must be an administrator in Domino REST API WebUI
 
 - The passkey had been created by the administrator of Domino and saved as a passkey.nsf
 
@@ -27,7 +27,7 @@ The procedure guides you to log in to both KEEP and Domino 14 using the same pas
         }
     }
     ```
-3. Change the value of the `rpId` parameter with the same URL configured in the passkey.nsf of Domino. 
+3. Change the value of the `rpId` parameter with the same URL configured in the Domino directory. 
 
     ```json
         {
@@ -44,7 +44,7 @@ The procedure guides you to log in to both KEEP and Domino 14 using the same pas
     | :-------------- | :-----------------------------------|
     | `attestation`   |Can be one of "none", "indirect", "direct", or "enterprise"  |
     | `rpName`| It is a name that the user might see when logging in, depending on their user interface. The default setting is "Domino REST API IdP", whereas the core Domino HTTP stack uses the name of the website document, which could be viewed as "Production Servers" or any other chosen name.  |
-    | `rpId`| The `rpId` is a single value only. It is important to connect it with Domino. Given the scenario where there is a single value present and multiple websites hosted by Domino, the usefulness of this will vary depending on the user's requirements. In the default case, if the user has "domino.somecompany.com" as their server and DRAPI is listening on the same hostname (although ports may differ), they can sign in with Passkey in DRAPI and apply the same stored key on Domino HTTP, and vice versa. See [Passkey authentication](https://help.hcltechsw.com/domino/14.0.0/admin/conf_dominopasskeyauth.html) of HCL Domino. |
+    | `rpId`| The `rpId` is a single value only. It is important to connect it with Domino. Given the scenario where there is a single value present and multiple websites hosted by Domino, the usefulness of this will vary depending on the user's requirements. In the default case, if the user has "domino.somecompany.com" as their server and DRAPI is listening on the same hostname (although ports may differ), they can sign in with Passkey in Domino REST API and apply the same stored key on Domino HTTP, and vice versa. See [Passkey authentication](https://help.hcltechsw.com/domino/14.0.0/admin/conf_dominopasskeyauth.html) of HCL Domino. |
 
 4. Save the file in `.json` format inside the `keepconfig.d` directory.
 
@@ -55,4 +55,4 @@ The procedure guides you to log in to both KEEP and Domino 14 using the same pas
 
 !!!note
     - If you disable the `webAuthnActive` in the settings you won't be able to use the passkey.
-    - The actual keys in the webAuthn are stored in each user's device and Domino and KEEP store the public-key part to verify it. 
+    - The actual WebAuthn keys are stored in each user's device. Domino and Domino REST API store only the public-key part to verify it. 
