@@ -5,6 +5,7 @@
 Topics to guide you in completing goals and tasks about Identity Provider in relation to Domino REST API:
 
 - [Configure Active Directory as IdP](configuringAD.md)
+- [Configure OIDC-idpcat authentication](configureidp.md)
 - [Configure certificates](configuringCertificates.md)
 - [Configure an identity provider](configuringIdentityProvider.md)
 - [Configure Keycloak](configuringKeycloak.md)
