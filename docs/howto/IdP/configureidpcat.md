@@ -4,6 +4,11 @@
 
 The procedure guides you on configuring oidc-idpcat in Domino REST API. 
 
+## Prerequisite
+
+- You have created an  `idpcat.nsf` on your Domino Server. Refer to  [Creating and replicating the IdP Catalog](https://help.hcltechsw.com/domino/14.0.0/admin/secu_creating_the_idp_catalog.html?hl=idp%2Ccatalog).
+- [Configuring trusted OIDC providers](https://help.hcltechsw.com/domino/14.0.0/admin/secu_config_http_bearer_auth_t.html?hl=idp%2Ccatalog).
+
 ## Procedure
 
 1.	Create a JSON file using a text editor.
