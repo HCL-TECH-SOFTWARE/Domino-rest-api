@@ -3,6 +3,7 @@ title: Security
 nav:
   - index.md
   - authentication.md
+  - oidc.md
   - jwt.md
   - configurationParameters.md
   - encryption.md
