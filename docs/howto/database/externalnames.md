@@ -1,17 +1,19 @@
 # Use external names in schema definitions
 
-The external name allows you to specify the name of the matching configured forms used in the Domino REST API service URL. **Customer** is one of the configured forms that can deliver the same data using multiple cases from different clients and schemas. Data is sent and received using the default mode if no schema mode is identified.
+External names enable you to specify the names of the matching configured forms used in the Domino REST API service URL. **Customer** is one of the configured forms that can deliver the same data using multiple cases from different clients and schemas. Data is sent and received using the `default` mode if no schema mode is identified.
 
 ## About this task
 
 The procedures guide you on using external names in schema definitions and in testing external name results in Postman.
 
-## Prerequisite
+## Use external name
+
+### Prerequisite
 
 - You must have credentials to use the service user interface.
 - Configured schema and scopes
 
-## Procedure
+### Procedure
 
 1. Log in to HCL Domino REST API.
 2. Click **Database Management - REST API** option.
@@ -19,16 +21,16 @@ The procedures guide you on using external names in schema definitions and in te
 4. Select a schema.
 5. Under the **Database Forms** tab, click the pencil icon corresponding to the configured form that you want to use. This loads the form **Access Mode** page showing the `default` access mode.
 6. Click **Add Mode**. 
-7. Enter a name in the **Add New Mode** dialog and click **Save**. The new mode is shown and also selectable from the Mode drop-down list. 
+7. Enter a name in the **Add New Mode** dialog and click **Save**. The new mode is shown and also selectable from the **Mode** drop-down list. 
+8. For every field under **Show fields from** that you want to add to the new mode, hover over that field and click the **+** icon to add the field to the new mode.
+9. For every added field to the new mode that you want to use an external name, select that field and enter a name in the **Field Name** under **Field Setting**. 
 
-<!--with field items shown in the left pane coming from the `default` mode-->
+      The name you entered for the field in the new mode is used as a translation for the name of the same field in the `default` mode. When using the new mode to create, get, or update data through the API, the field in the new mode will refer to the field name in the `default` mode. This is the case regardless of which mode is being used.
 
-8. Hover over each field that you want to add to the new mode under Show fields from and click the **+** icon to add fields to the new mode.
-9. Select an added field and modify the Field Name of that field under Field Setting.  
-10. Click Save. 
+10. Click **Save**. 
 
 
-7. Enter the new mode name (i.e. test) and click **_Save_**. The new mode will be available. The customer fields can be seen in the left pane.
+<!--7. Enter the new mode name (i.e. test) and click **_Save_**. The new mode will be available. The customer fields can be seen in the left pane.
 
       The new mode will be added on the schema **Mode** dropdown menu. Click the dropdown menu to see the schema modes.
 
@@ -41,19 +43,19 @@ The procedures guide you on using external names in schema definitions and in te
       
       The field name you change will be used as the translation for the **default** field name on the mode you created. When using this new schema mode to create, get, or update data through API, this field will refer to the default customer field name. This is the case regardless of which mode is being used.
 
-10. Click **Save**. You can add more fields to your new mode using the fields in the **default** mode.
+10. Click **Save**. You can add more fields to your new mode using the fields in the **default** mode.-->
 
-## Expected result
+### Expected result
 
-The image below is the **default** mode.
+The following image shows the **default** mode with the field `email` selected and having the field name `email`. 
 
 ![Default External Name](../../assets/images/SchemaExternalname1.png)
 
-The service UI will return the field names you put in the new test mode.
-
-The image below is the **test** mode.
+The following image shows the new mode named **test** with the field `email` selected and having the changed field name `Sulatroniko`.
 
 ![test External Name](../../assets/images/SchemaExternalname2.png)
+
+The service UI will return the field names you put in the new test mode.
 
 ## Test external names result in Postman
 
@@ -78,11 +80,11 @@ It retrieves the same data result but a different field name translation. The sa
 
 ### Expected result
 
-Default (mode)
+`default` mode
 
 ```json
 {
-  "Email": "mbranthwaite0@nba.com",
+  "email": "mbranthwaite0@nba.com",
   "first_name": "Madisons",
   "last_name": "Branthwaite",
   "Pet": "Black-capped chickadee",
@@ -90,7 +92,7 @@ Default (mode)
 }
 ```
 
-test (mode)
+`test` mode
 
 ```json
 {

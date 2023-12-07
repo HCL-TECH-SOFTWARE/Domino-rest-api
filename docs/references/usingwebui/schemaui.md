@@ -148,31 +148,35 @@ The selected form is now moved under **Unconfigured Forms**.
 
 ## Change form configuration
 
-1. Click the pencil icon corresponding to the configured form that you want to edit to load the form **Access Mode** page showing the `default` access mode.
-1. Select a configured form. This loads the `default` Access Mode for the form.
+1. On the **Database Forms** tab, click the pencil icon corresponding to the configured form that you want to edit to load the form **Access Mode** page showing the `default` access mode.
       
-      ![Access Mode](../../assets/images/AccessMode.png)
+      [![Access Mode](../../assets/images/AccessMode.png)](../../assets/images/AccessMode.png){: target="_blank" rel="noopener noreferrer"}
 
-2. Under **Show fields from**, which shows the fields that can be added to the form, hover over a field item and click the **+** icon. This adds the field in the form. Repeat this for all the fields to be added.
+2. Under **Show fields from**, hover over a field item and click the **+** icon. This adds the field in the form. Repeat this for all the fields to be added.
 
-      You can also click **Add All** if you want to add all the available fields to the form. 
+      ![Add field](../../assets/images/addfield.png){: style="height:70%;width:70%"}
 
-3. Set the Read or Write access formula for each of the fields in the Form.
+3. Set the read or write access formula for each of the fields in the form.
 4. Click **Save**.
 
-!!!note
-    - You can click the trash can icon corresponding to the field to remove the field from the form. 
-    - Click the **Multi-Value** toggle to the on position to specify a **Field Group**. The Multi-Value toggle isn't clickable to the off position if a field group is specified.
+!!!tip
+    - Click **Add All Fields** icon to add all the available fields to the form.
+    - Enter a custom field name in the **Add Custom Field** and click the **+** icon to add a custom field to the form.
+    - Click the trash can icon corresponding to a field to remove the field from the form.
+    - Click **Batch Delete** to remove all the added fields from the form.
+    - Click the **Multi-Value** toggle to the on position to specify a **Field Group**. The **Multi-Value** toggle isn't clickable to the off position if a field group is specified.
 
 ## Add a mode
 
-1. Select a configured form. This loads the `default` Access Mode for the form.
-1. Click **Add Mode**.
-2. In the **Add New Mode** dialog, enter the name of the new mode and click **Save**. The new mode has been added to the `Mode`list
-      
-      ![mode list](../../assets/images/modeList.png)
+1. On the **Database Forms** tab, click the pencil icon corresponding to the configured form that you want to add a mode.The form **Access Mode** page opens showing the `default` access mode. 
+2. Click **Add Mode**.
+2. In the **Add New Mode** dialog, enter the name of the new mode and click **Save**. The new mode has been added to the `Mode`list.
 
-3. Add fields.
+      The following image shows an example of the added mode, which is the `dql`.
+      
+      [![mode list](../../assets/images/modeList.png)](../../assets/images/modelist.png){: target="_blank" rel="noopener noreferrer"}
+
+3. Add fields and set the read or write access formula for each of the added fields. 
 4. Click **Save**.
 
 
@@ -180,22 +184,22 @@ The selected form is now moved under **Unconfigured Forms**.
 
 Use **Clone Mode** to add a new mode based on an existing mode in the same schema.
 
-1. Select a configured form. This loads the `default` Access Mode for the form.
+1. On the **Database Forms** tab, click the pencil icon corresponding to the configured form that you want to clone a mode. The form **Access Mode** page opens showing the `default` access mode.
 2. From the **Mode** dropdown list, choose the mode you want to clone, for example the `default` mode.
 3. Click **Clone Mode**.
 4. In the **Clone <mode name\>** dialog, enter the name of the mode and click **Save**. 
 
-      The new mode cloned from an existing mode is now available. You can remove or add fields to the new mode.
+      The new mode cloned from an existing mode is now available. You can remove or add fields to the new mode and read or write access formula for each of the fields.
 
 6. Click **Save**.
 
-      ![clone list](../../assets/images/cloneList.png)
+      <!--![clone list](../../assets/images/cloneList.png)-->
 
 ## Compare modes
 
 Use this function to see the differences between the modes of a selected form. To use this function, you must have at least two modes in your selected form.
 
-1. Select a configured form. This loads the `default` Access Mode for the form.
+1. On the **Database Forms** tab, click the pencil icon corresponding to the configured form that you want to compare the modes. The form **Access Mode** page opens showing the `default` access mode.
 2. Click **Open Mode Compare**. The **Mode Compare - <form name\>** page opens.
 3. Select the modes to compare from the drop-down lists in the comparison columns. The comparison result is displayed. 
 
