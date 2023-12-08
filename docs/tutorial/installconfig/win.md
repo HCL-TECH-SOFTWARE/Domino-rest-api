@@ -29,7 +29,8 @@ java -jar restapiInstall.jar ^
 ```
 
 !!!note
-    In case of any error, you need to see this link: How to symbolically linked (symlink) Domino 14 and Domino REST API.
+    !!!note "Domino REST API and Domino 14"
+    The Domino REST API installer starting with v1.0.9 has a workaround for an issue between Domino REST API and Domino 14.0 on Windows, for more information or if you receive an error during installation, please see [Domino 14 and Domino Rest API](../../howto/install/symlink.md)
 
 ## All parameters
 

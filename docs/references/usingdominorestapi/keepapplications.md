@@ -48,7 +48,7 @@ Check the details in [Security Configuration](../security/index.md).
 
 ### Server based applications
 
-In the Admin UI (or the [Admin API](administrationui.md)), we can define an "application" which consists of:
+In the Admin UI (or the [Admin API](../../references/usingwebui/index.md)), we can define an "application" which consists of:
 
 ![Application](../../assets/images/Application.png)
 

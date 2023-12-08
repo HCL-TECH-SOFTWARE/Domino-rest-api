@@ -20,4 +20,4 @@ A JSON file containing the Source text is downloaded to your default download lo
 <!--The export button downloads the Source text in .json format with a filename *selected schema*.json (e.g,reportschema.json).--> 
 
 !!!tip
-    For information on importing a schema, see [Import a schema](../../references/usingdominorestapi/administrationui.md#import-a-schema).
+    For information on importing a schema, see [Import a schema](../../references/usingwebui/schemaui.md#import-a-schema).
