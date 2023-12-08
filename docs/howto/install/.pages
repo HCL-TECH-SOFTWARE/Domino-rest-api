@@ -1,9 +1,8 @@
 nav:
     - index.md
     - Installation and configuration: tutorial/installconfig/index.html
-    - symlink.md
     - checksettings.md
     - modifyconfig.md
     - notesclient.md
     - uninstall.md
-    - passkey.md
+    - passkey.mid
