@@ -182,7 +182,7 @@ The `OIDC idpcat` support lets you use providers configured in `idpcat.nsf` ("Id
 
 - [Configuring trusted OIDC providers](https://help.hcltechsw.com/domino/14.0.0/admin/secu_config_http_bearer_auth_t.html?hl=idp%2Ccatalog)
 
-The configuration is as follows:
+The configuration is as follows in Domino REST API:
 
 ```json
 {
@@ -215,11 +215,11 @@ The configuration is as follows:
 
 !!!note
     - You can use `oidc-idpcat` authentication in the same places that "JWT" config blocks were used previously, just with some coordination with core Domino.
-    - "JWT" will work the same on Domino 14. There's no conflict if DRAPI and Domino have completely-distinct authentication providers.
+    - "JWT" will work the same on Domino 14. There's no conflict if Domino REST API and Domino have completely-distinct authentication providers.
     - "oidc-idpcat" comes into play if you:
         
-        - Want both DRAPI and core Domino to use the same provider.
-        - You're on Domino 14+. There's no harm if you use "jwt" or "oidc" without configuring Domino, or even if they happen to point to the same location.
+        - Want both Domino REST API and core Domino to use the same provider.
+        - You're on Domino 14 or greater. There's no harm if you use "jwt" or "oidc" without configuring Domino, or even if they happen to point to the same location.
 
 ### Differences between `oidc` and `oidc-idpcat`
 
@@ -229,9 +229,9 @@ In general, `oidc` and `oidc-idpcat` achieve the same goal, which is to use a co
 - Since Domino handles contacting the OIDC provider and caching keys, you benefit from that shared cache as well as shared diagnostics (for example, using notes.ini options for extra logging on the console).
 
 !!!note
-    In general, you'd use any of these ("jwt", "oidc", "oidc-idpcat") when you either want to or have to have an external identity provider like Keycloak or Azure AD and have those tokens be usable for DRAPI API calls. Using either "jwt"-with-providerUrl or either of the "oidc" ones will let Keep use standard OIDC endpoints to handle key lookup, avoiding the need to copy and paste signer keys into the DRAPI config.
+    In general, you'd use any of these ("jwt", "oidc", "oidc-idpcat") when you either want to or have to have an external identity provider like Keycloak or Azure AD and have those tokens be usable for Domino REST API calls. Using either "jwt"-with-providerUrl or either of the "oidc" ones will let Domino REST API use standard OIDC endpoints to handle key lookup, avoiding the need to copy and paste signer keys into the Domino REST API config.
 
-Check  [Configuring `oidc-idpcat` with Domino 14](../../howto/IdP/configureidpcat.md)
+Check [Configuring `oidc-idpcat` with Domino 14](../../howto/IdP/configureidpcat.md)
 
 ## Domino REST API and OAuth
 
