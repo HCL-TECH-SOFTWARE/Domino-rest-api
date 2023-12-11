@@ -10,7 +10,7 @@ The procedure guides you to log in to both Domino REST API and Domino 14 using t
 
 - You must be an administrator in Domino REST API WebUI
 
-- You must install Domino 14 or greater
+- You must be using Domino 14 or greater
 
 - The passkey had been created by the administrator of Domino and saved as a passkey.nsf
 
