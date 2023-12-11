@@ -3,7 +3,7 @@
 !!!warning
     - This experimental feature is not essential for you to gain recognition. Exercise caution when attempting this. Proficiency in HTML, CSS, and Javascript is essential for this role. It's important to have an excellent understanding of the screen's structure and build.
 
-The oAuth consent screen makes use of [Mustache](https://www.badocseldung.com/mustache) to populate the variables within {{ }}.
+The oAuth consent screen makes use of [Mustache](https://mustache.github.io/) to populate the variables within {{customs}}.
 
 ## About this task
 
@@ -14,7 +14,7 @@ The procedure guides you to customized your oAuth consent screen  with Domino RE
 - You must know about `oauth.nsf` and configure Domino REST API.
 - You must add `OAuthAdmin` role for the ACL entry that gives your server manager access to the `oauth.nsf`
 - You must be proficient in using the HTML, CSS and Javascript
-- You must know how to configure and understand the architecture of oAuth consent screen
+- You must know how to configure and understand the structure of oAuth consent screen
 
 
 ## Procedure
@@ -39,7 +39,7 @@ The procedure guides you to customized your oAuth consent screen  with Domino RE
     }
     ```
 
-3.	Change the value of the `alternateConsentDir` parameter to your preferred file location where your html file is located.
+3.	Change the value of the `alternateConsentDir` parameter to your preferred file location where your .html file is located.
 In the example, the file location is D:customOAuthscreen/html. 
 
     ```json
@@ -56,7 +56,7 @@ In the example, the file location is D:customOAuthscreen/html.
     }
     ``` 
     !!!note
-        The `alternateConsentDir` is the directory where you configure your oAuth consent screen. Using the html file located in this directory, this will customize the oAuth consent screen according to your design.
+        The `alternateConsentDir` is the directory where you configure your oAuth consent screen. Using the .html file located in this directory, it customizes the oAuth consent screen according to your design.
 
 4.	Save the JSON file in the `keepconfig.d` directory.
 
@@ -66,7 +66,7 @@ In the example, the file location is D:customOAuthscreen/html.
 5.	Restart Domino REST API on all servers.
 
 !!!tip "Support"
-    If you encounter any issues with the oAuth consent screen, you can revert back to the default settings by removing the `alternateConsentDir` in the `oauth.json` configuration. 
+   If you encounter any issues with the oAuth consent screen, you can revert to the default settings by removing the `alternateConsentDir` in the `oauth.json` configuration. 
 
 
 
