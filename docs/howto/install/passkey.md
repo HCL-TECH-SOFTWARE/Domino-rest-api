@@ -57,6 +57,9 @@ You have now logged in to the **Domino REST API Admin UI**.
 
 ### To log in to Admin UI with passkey
 
+!!!note
+    See [Configure WebAuthn with Domino REST API and Domino 14](../../howto/install/webauthn.md) to use the same passkey.
+
 1. Open the **Domino REST API Admin UI** sign-in page in your browser.
 2. Click **Log in with Passkey**
 

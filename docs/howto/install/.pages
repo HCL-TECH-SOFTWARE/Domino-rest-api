@@ -7,3 +7,4 @@ nav:
     - uninstall.md
     - passkey.md
     - symlink.md
+    - webauthn.md
