@@ -1,6 +1,10 @@
 # Use external names in schema definitions
 
-External names enable you to specify the names of the matching configured forms used in the Domino REST API service URL. **Customer** is one of the configured forms that can deliver the same data using multiple cases from different clients and schemas. Data is sent and received using the `default` mode if no schema mode is identified.
+<!--External names enable you to specify the names of the matching configured forms used in the Domino REST API service URL. **Customer** is one of the configured forms that can deliver the same data using multiple cases from different clients and schemas. Data is sent and received using the `default` mode if no schema mode is identified.-->
+
+External names allow you to work with fields in configured forms by providing external or specific names for fields. 
+
+For example, if the field name on the form or document is `date`, you can set its `ExternalName` to `orderDate` to be specific. If you get that document, the resulting field in the JSON will be `orderDate`. If you update that field by specifying `orderDate = “2023/12/6”`, it would write the date back to the document as `date` even if you specified the field based on its external name.  
 
 ## About this task
 

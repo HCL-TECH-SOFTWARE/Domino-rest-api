@@ -5,7 +5,7 @@ The section provides the information related to Domino REST API.
 <!-- prettier-ignore -->
 !!! note "Important"
     - Items marked in <span style="color:red">**red**</span> are API changes that may impact your applications and should be reviewed before upgrading.
-    - Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](deprecated.md).
+    - Always be aware of features that have been deprecated in the current and future releases by checking [deprecated features](deprecated.md).
 
 ???+ info "v1.0.9 - What's new or changed"
     ## v1.0.9 - _What's new or changed_
@@ -14,12 +14,40 @@ The section provides the information related to Domino REST API.
 
     **New**
 
+    - Added full support for Domino 14.
+    
+        To utilize the newer JVM functionality provided by Domino 14, we  now provide both a Domino 12 and a Domino 14 installer, as well as Docker images for both platforms.
+ 
+        Older versions of the Domino REST API will run on Domino 14, but may have issues with certain endpoints. It is suggested that you follow the following steps to upgrade your Domino 12 server with the Domino REST API to Domino 14:
+ 
+        1. Stop your Domino 12 server.
+        2. Remove `restapi` from the `ServerTasks` line in `notes.ini`.
+        3. Upgrade your Domino 12 server to Domino 14.
+        4. Start your Domino 14 server.
+        5. Stop your Domino 14 server.
+        6. Install the Domino 14 version of the Domino REST API.
+        7. Start Domino.
+
+    - Added endpoint `POST v1/query/qrp/json` to perform a DQL query to get back QueryResultsProcessor JSON results. For an example of usage, see *Swagger UI*. 
+
     **Improvements**
+
+    - Added a new option on the `GET v1/lists` endpoint by adding a filter parameter to return a list of available views containing the case-insensitive filter text.
+    - Added warnings to the `POST setup-v1/schema` endpoint if design elements specified in the schema are not found in the database.
+    - Added a new option to the`POST setup-v1/schema` endpoint by enabling the setting of `dryRun=true` to get the response and verify there are no warnings without creating the schema.
+    - Enabled retrieval of the document's parent UNID in the response (@parentDocument) when retrieving view contents via `GET v1/lists/{name}` endpoint by setting `metaAdditional=true`.
+    - Updated the access-control-allow-methods with the correct set of allowed methods.
 
     **Resolved Issues**
 
+    - Shared Fields, Shared Actions and Item Definitions were not returned when retrieving them from the `GET setup-v1/design/{DesignType}/{DesignName}` endpoint.
+    - Access-control-allow-headers were not being set in the CORS response.
+    - A returned field specified as Rich Text in the Form and Schema was not actually Rich Text on the document. 
+    - Views or Folders were retrieved even if the column was defined as *Show Responses only*.
+
     **Others**
 
+    - Removed the use of `dataSource` or a path to an NSF in the `dataSource` parameter by most `admin-v1` endpoints. See [Deprecated features](deprecated.md) for more information and recommendation.
     - Implemented various documentation updates.
     - Starting this release, there will be two installer jar files:
         - For Domino 14: *restapiInstall-r14.jar*
