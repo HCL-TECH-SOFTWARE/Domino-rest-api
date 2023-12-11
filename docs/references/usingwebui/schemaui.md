@@ -174,7 +174,7 @@ The selected form is now moved under **Unconfigured Forms**.
 
       The following image shows an example of the added mode, which is the `dql`.
       
-      [![mode list](../../assets/images/modeList.png)](../../assets/images/modelist.png){: target="_blank" rel="noopener noreferrer"}
+      [![mode list](../../assets/images/modeList.png)](../../assets/images/modeList.png){: target="_blank" rel="noopener noreferrer"}
 
 3. Add fields and set the read or write access formula for each of the added fields. 
 4. Click **Save**.
