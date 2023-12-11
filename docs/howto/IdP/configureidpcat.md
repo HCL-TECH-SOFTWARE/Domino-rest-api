@@ -1,13 +1,14 @@
-# Configure oidc-idpcat use with Domino 14
+# Configure Domino REST API on using Domino's IdP Provider in Domino 14 or greater
 
 ## About this task
 
-The procedure guides you on configuring oidc-idpcat in Domino REST API. 
+The procedure guides you on how to configure Domino REST API to use the same IdP Provider as Domino.
 
 ## Prerequisite
 
 - You have created an  `idpcat.nsf` on your Domino Server. Refer to  [Creating and replicating the IdP Catalog](https://help.hcltechsw.com/domino/14.0.0/admin/secu_creating_the_idp_catalog.html?hl=idp%2Ccatalog).
 - [Configuring trusted OIDC providers](https://help.hcltechsw.com/domino/14.0.0/admin/secu_config_http_bearer_auth_t.html?hl=idp%2Ccatalog).
+- You must be using Domino 14 or greater
 
 ## Procedure
 
