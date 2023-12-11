@@ -1,7 +1,9 @@
 # Configure oAuth consent screen
 
 !!!warning
-    This experimental feature is not essential for you to gain recognition. Exercise caution when attempting this. Proficiency in HTML, CSS, and Javascript is essential for this role. It's important to have an excellent understanding of the screen's structure and build. 
+    - This experimental feature is not essential for you to gain recognition. Exercise caution when attempting this. Proficiency in HTML, CSS, and Javascript is essential for this role. It's important to have an excellent understanding of the screen's structure and build.
+
+The oAuth consent screen makes use of [Mustache](https://www.badocseldung.com/mustache) to populate the variables within {{ }}.
 
 ## About this task
 
@@ -9,23 +11,25 @@ The procedure guides you to customized your oAuth consent screen  with Domino RE
 
 ## Prerequisites
 
-- You must know how to configure and understand the architecture of oAuth consent screen.
+- You must know about `oauth.nsf` and configure Domino REST API.
+- You must add `OAuthAdmin` role for the ACL entry that gives your server manager access to the `oauth.nsf`
+- You must be proficient in using the HTML, CSS and Javascript
+- You must know how to configure and understand the architecture of oAuth consent screen
 
 
 ## Procedure
 
-1. Deploy oauth.nsf and configure Domino REST API to recognize that file.
-2. Add OAuthAdmin role for the ACL entry that gives your server manager access to the oauth.nsf.
-    To deploy and configure the NSF, place the following in the domino data directory (you may need to create the keepconfig.d folder if it doesn't already exist):
+!!! warning "Caution"
+     This is subject to change. Consult Domino REST API documentation (or code, or experts) for the latest steps. Currently, these general steps must be performed:
 
-    [data folder]/oauth.nsf
-    [data folder]/keepconfig.d/oauth.json
-    An example of oauth.json is shown below. Expiration times can be adjusted. Make sure to replace the Domino REST API URL to match your Domino REST API host (a fictitious Quickstart Domino REST API url is shown in this example.).
+1.	Create a JSON file using a text editor.
+2.	Copy the JSON object to the JSON file.
 
+    ```json
     {
     "oauth": {
         "active": true,
-        ""
+        "alternateConsentDir": "directory",
         "database": "oauth.nsf",
         "url": "http://yourquickstarthost-qs-keep-8880.qs.hcllabs.net",
         "authCodeExpiresIn": 120,
@@ -33,6 +37,36 @@ The procedure guides you to customized your oAuth consent screen  with Domino RE
         "refreshTokenExpiresIn": 525600
     }
     }
-Note
+    ```
 
-If you are using Domino+Domino REST API docker image, the oauth.nsf should already be "deployed" in the image but may not be fully configured. If for some reason you need to create oauth.nsf, see Set up oauth.nsf.
+3.	Change the value of the `alternateConsentDir` parameter to your preferred file location where your html file is located.
+In the example, the file location is D:customOAuthscreen/html. 
+
+    ```json
+    {
+    "oauth": {
+        "active": true,
+        "alternateConsentDir": "D:customOAuthscreen/html",
+        "database": "oauth.nsf",
+        "url": "http://yourquickstarthost-qs-keep-8880.qs.hcllabs.net",
+        "authCodeExpiresIn": 120,
+        "accessTokenExpiresIn": 3600,
+        "refreshTokenExpiresIn": 525600
+    }
+    }
+    ``` 
+    !!!note
+        The `alternateConsentDir` is the directory where you configure your oAuth consent screen. Using the html file located in this directory, this will customize the oAuth consent screen according to your design.
+
+4.	Save the JSON file in the `keepconfig.d` directory.
+
+    !!!tip
+        Use a filename for the JSON file that reveals its purpose. To learn more on how JSON files in `keepconfig.d` are processed, see [Understanding configuration](../production/configparam.md#understanding-configuration).
+
+5.	Restart Domino REST API on all servers.
+
+!!!tip "Support"
+    If you encounter any issues with the oAuth consent screen, you can revert back to the default settings by removing the `alternateConsentDir` in the `oauth.json` configuration. 
+
+
+
