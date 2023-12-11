@@ -8,6 +8,20 @@
 
 ### Download Domino REST API
 
+<!-- prettier-ignore -->
+!!!note
+    **Starting Domino REST API version 1.0.9**, there will be four install files available for download. There will be two install files for Domino 12 and two install files for Domino 14. **For example**:
+
+    For Domino 12
+
+    - `Domino_REST_API_V1.0.9_R12_Docker.tar.gz`
+    - `Domino_REST_API_V1.0.9_R12_Installer.tar.gz`
+    
+    For Domino 14
+
+    - `Domino_REST_API_V1.0.9_R14_Docker.tar.gz`
+    - `Domino_REST_API_V1.0.9_R14_Installer.tar.gz`
+
 #### via HCL Software License and Download Portal (Flexnet)
 
 **Option 1**

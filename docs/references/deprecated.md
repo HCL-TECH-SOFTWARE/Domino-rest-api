@@ -1,6 +1,6 @@
 # Deprecated features
 
-The following features are deprecated from this and earlier releases. 
+The following features are deprecated from this and future releases. 
 
 ## v1.0.9
 

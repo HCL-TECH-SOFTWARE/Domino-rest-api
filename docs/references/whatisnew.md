@@ -21,8 +21,18 @@ The section provides the information related to Domino REST API.
     **Others**
 
     - Implemented various documentation updates.
-    - Docker image version for docker compose .env file (CONTAINER_IMAGE) is *domino-rest-api:1.0.9*.
-    - Docker image version for docker compose .env file from Harbor is *hclcr.io/domino/restapi:1.0.9*.
+    - Starting this release, there will be two installer jar files:
+        - For Domino 14: *restapiInstall-r14.jar*
+        - For Domino 12: *restapiInstall-r12.jar*
+     
+    - Docker image version for docker compose .env file (CONTAINER_IMAGE):
+        - For Domino 14: *domino-rest-api:1.0.9-r14*
+        - For Domino 12: *domino-rest-api:1.0.9-r12*  
+        
+    - Docker image version for docker compose .env file from Harbor:
+        - For Domino 14: *hclcr.io/domino/restapi:1.0.9-r14*
+        - For Domino 12: *hclcr.io/domino/restapi:1.0.9-r12* 
+        
 
 
 ??? info "v1.0.8 - What's new or changed"
