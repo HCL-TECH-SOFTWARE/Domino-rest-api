@@ -1,4 +1,4 @@
-# Configure Domino REST API on using Domino's IdP Provider in Domino 14 or greater
+# Configure Domino REST API to use Domino's IdP Provider in Domino 14 or greater
 
 ## About this task
 
