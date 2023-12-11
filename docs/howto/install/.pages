@@ -7,3 +7,4 @@ nav:
     - notesclient.md
     - uninstall.md
     - passkey.md
+    - webauthn.md
