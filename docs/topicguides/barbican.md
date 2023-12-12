@@ -75,4 +75,4 @@ This assigning of access to documents to different users, based on their roles, 
 
 ### Further readings
 
-Check the pages about the [Admin UI](../references/usingdominorestapi/administrationui.md) and go through the [Tutorials](../tutorial/index.md).
+Check the pages about the [Admin UI](../references/usingwebui/index.md) and go through the [Tutorials](../tutorial/index.md).
