@@ -8,19 +8,19 @@ The procedure guides you on how to check the Domino REST API settings.
 
 ## Prerequisite
 
-- You must have access to **Management console** (Port 8889).
+- You must have access to the **Management console** (Port 8889).
 
 ## Procedure
 
 <!-- prettier-ignore -->
-!!! note
-        Make sure the **Management console** is secure. For more information, see [Functional Accounts](../../references/functionalUsers.md).
+!!!note
+    Make sure the **Management console** is secure. For more information, see [Functional Accounts](../../references/functionalUsers.md).
 
 1. Log in to the **Management console** (Port 8889).
    ![Management console](../../assets/images/mngmntconsole.png)
 
     <!-- prettier-ignore -->
     !!! note  
-        Take note that credentials for the management console are not managed by the configured IdP, but are derived from the [configuration of functional accounts](../../references/functionalUsers.md).
+         The credentials for the management console aren't managed by the configured IdP but derived from the [configuration of functional accounts](../../references/functionalUsers.md).
 
 2. Click **Config**. The config tab opens showing the Domino REST API settings in JSON. 
