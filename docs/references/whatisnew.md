@@ -5,7 +5,7 @@ The section provides the information related to Domino REST API.
 <!-- prettier-ignore -->
 !!! note "Important"
     - Items marked in <span style="color:red">**red**</span> are API changes that may impact your applications and should be reviewed before upgrading.
-    - Always be aware of features that have been deprecated in the current and future releases by checking [deprecated features](deprecated.md).
+    - Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](deprecated.md).
 
 ???+ info "v1.0.9 - What's new or changed"
     ## v1.0.9 - _What's new or changed_
