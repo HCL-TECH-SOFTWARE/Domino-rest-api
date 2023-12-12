@@ -28,6 +28,10 @@ java -jar restapiInstall.jar ^
  -a
 ```
 
+!!!note
+    !!!note "Domino REST API and Domino 14"
+    The Domino REST API installer starting with v1.0.9 has a workaround for an issue between Domino REST API and Domino 14.0 on Windows, for more information or if you receive an error during installation, please see [Domino 14 and Domino Rest API](../../howto/install/symlink.md)
+
 ## All parameters
 
 --8<-- "installparameters.md"
@@ -98,3 +102,5 @@ The installer conducts a series of actions:
 For more information, see [Deploy HCL Domino REST API to HCL Notes Client](../../howto/install/notesclient.md) for additional steps required to use the Notes client.
 
 --8<-- "iskeeprunning.md"
+
+!!!note
