@@ -15,11 +15,11 @@ Run a custom NodeJS application that interacts with the Domino Rest API
 
 ## Steps
 
-1. Download and unzip the [apps-src.zip](../downloads/apps-src.zip) from the `source for all apps` in a folder.
+1. Download and unzip the [apps-src.zip](../downloads/apps-src.zip) from the `source for all apps` in a folder. The `apps-src.zip` contains 3 independent folder. In this activity will going to use the `DominoOAuth` folder.
 2. Open your IDE (vs code, etc)
-3. From your IDE, open the folder `src`.
-4. Inside the folder, open the `DominoOAuth`.
-5. Edit the `package.json`- on the scripts type in the `"start": "node app.js"`
+3. Open the folder `src`&rarr;`DominoOAuth`.
+4. From the `DominoOAuth` folder,inside your IDE, select `package.json`
+5. Edit the `package.json`.
 6. Edit the `setup.json` and add the values from **Lab05-Create Application** and also add values from the **Lab-04-Scope**.
 
     !!!note

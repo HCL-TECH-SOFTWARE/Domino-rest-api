@@ -8,16 +8,16 @@ You can create a browser single page application using just 3 files
 
 ## Prerequisites
 
-- Lab 05 completed
+- Lab 06 completed
 - Domino running
 - Internet connection
 
 ## Steps
 
-- create a new directory `[notesdata]/keepweb.d/approvalspa`
+- Create a new directory `[notesdata]/keepweb.d/approvalspa`
 - Download [SPA-source.zip](../downloads/SPA-source.zip)
-- Unzip the content into `approvalspa`
-- reload the landing page
+- Unzip the content into `approvalspa` folder.
+- Reload the landing page
 
 ## How to check
 

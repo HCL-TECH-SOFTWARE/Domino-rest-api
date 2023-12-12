@@ -19,8 +19,8 @@ We use an example that could be some scheduled process to ETL data
 2. Open your IDE (vscode, eclipse). The user needs to make the project folder to be the current or root folder whenever they used it with the user's IDE.
 
     **Using the IDE VSCode**
-    a. Navigate to File menu&rarr;Open Folder&rarr; and select the `src` folder from the unzipped `apps-src.zip.`. There are three folders included inside the `src` folder. 
-    b. Choose `JavaETL` folder and locate the `config.json` file.
+    a. Navigate to File menu&rarr;Open Folder&rarr; and select the `src`&rarr;`JavaETL` folder. 
+    b. Inside the `JavaETL` folder, locate the `config.json` file.
     c. Edit `config.json` and click **save**.
 
     **Using the IDE Eclipse**
