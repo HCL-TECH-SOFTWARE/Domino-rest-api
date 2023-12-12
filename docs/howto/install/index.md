@@ -11,4 +11,4 @@ Topics to guide you in completing goals and tasks related to installation, confi
 - [Installation on an HCL Notes Client](notesclient.md)
 - [Remove Domino REST API from Domino server or Notes Client](uninstall.md)
 - [Use passkey to login to Admin UI](passkey.md)
-- [Configure oAuth consent screen](oauthoscreen.md)
+- [Customize oAuth consent screen](oauthoscreen.md) (experimental)
