@@ -24,9 +24,9 @@ We use an example that could be some scheduled process to ETL data
     c. Edit `config.json` and click **save**.
 
     **Using the IDE Eclipse**
-    a. Navigate to File menu&rarr;Import&rarr; and select the `src` folder from the unzipped `apps-src.zip.`. There are three folders included inside the `src` folder. 
-    b. Choose `JavaETL` folder&rarr;target folder and locate the `config.json` file.
-    c. Edit `config.json` and click **save**. 
+    a. Navigate to File menu&rarr;Open File&rarr; and select the `src`&rarr;`JavaETL` folder. 
+    b. Inside the `JavaETL` folder, locate the `config.json` file.
+    c. Edit `config.json` and click **save**.
 
 3. From your **Terminal**, choose and select the folder where your project is located, (e.g, JavaETL) and run `mvn clean install` (optional) and `java -jar target/etl.jar`.
 
