@@ -3,7 +3,7 @@
 !!!warning
     - This experimental feature is not essential for you to gain recognition. Exercise caution when attempting this. Proficiency in HTML, CSS, and Javascript is essential for this role. It's important to have an excellent understanding of the screen's structure and build.
 
-The oAuth consent screen makes use of [Mustache](https://mustache.github.io/) to populate the variables within {{customs}}.
+The oAuth consent screen makes use of [Mustache](https://www.baeldung.com/mustache/) to populate the variables within {{customs}}. For more information see this link: [Mustache](https://mustache.github.io/).
 
 ## About this task
 
