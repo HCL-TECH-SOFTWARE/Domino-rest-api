@@ -6,10 +6,7 @@ nav:
     - notesclient.md
     - uninstall.md
     - passkey.md
-<<<<<<< HEAD
-    - webauthn.md
-    - oauthoscreen.md
-=======
     - symlink.md
     - webauthn.md
->>>>>>> 93c43b4f00b597f0dd979abab687697ef5dc8105
+    - oauthoscreen.md
+
