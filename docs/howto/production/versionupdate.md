@@ -5,10 +5,10 @@ The procedure guides you on how to update your installed Domino REST API to the 
 
 ## Prerequisite
 
-- When updating installed Domino REST API on Linux, Mac, or Windows, download the latest release version of the Domino REST API multi-platform installer from [HCL Software License and Download Portal](https://hclsoftware.flexnetoperations.com/) (Flexnet).
+- When updating installed Domino REST API on Linux, Mac, or Windows, [download the latest release version of the Domino REST API multi-platform installer](../../tutorial/installconfig/index.md#download-domino-rest-api). <!--from [HCL Software License and Download Portal](https://hclsoftware.flexnetoperations.com/) (Flexnet).-->
 - When updating Domino REST API running with Docker image:
 
-    - Download the docker image of the latest release version of Domino REST API from [HCL Software License and Download Portal](https://hclsoftware.flexnetoperations.com/) (Flexnet).
+    - [Download the docker image of the latest release version of Domino REST API](../../tutorial/installconfig/index.md#download-domino-rest-api) <!--from [HCL Software License and Download Portal](https://hclsoftware.flexnetoperations.com/) (Flexnet)-->.
 
     **OR**
 
@@ -24,7 +24,7 @@ Follow the procedure based on the installation option you used when installing t
 ### Docker
 
 1. Remove the existing docker container.
-2. If using the docker image from *HCL Software License and Download Portal (Flexnet)*, load the docker image using the following command: 
+2. If using the docker image from *HCL Software License and Download Portal (Flexnet)* or *My HCLSoftware Portal*, load the docker image using the following command: 
     
     ```bash
 	docker load -i [name_of_tar_file].tar
@@ -36,7 +36,7 @@ Follow the procedure based on the installation option you used when installing t
 
 3.	Take note of the image name.
 
-    - When using the docker image from *HCL Software License and Download Portal (Flexnet)*, take note of the image name that was output after being loaded. The image name is also indicated in the [What’s New](../../references/whatisnew.md) for each version of the Domino REST API and marked *Docker image version for docker compose .env file (CONTAINER_IMAGE)*.
+    - When using the docker image from *HCL Software License and Download Portal (Flexnet)* or *My HCLSoftware Portal*, take note of the image name that was output after being loaded. The image name is also indicated in the [What’s New](../../references/whatisnew.md) for each version of the Domino REST API and marked *Docker image version for docker compose .env file (CONTAINER_IMAGE)*.
   	
         !!!example "Example loaded image name" 
             - From earlier releases: `docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.10.0`
