@@ -10,7 +10,7 @@ This guide allows new users with working experience in HCL Notes and HCL Domino 
 
 ## Downloading Domino REST API
 
-Log in to [Flexnet](https://hclsoftware.flexnetoperations.com/) to and download Domino REST API.
+Log in to [Flexnet](https://hclsoftware.flexnetoperations.com/) and download Domino REST API.
 
 ## Let's connect
 

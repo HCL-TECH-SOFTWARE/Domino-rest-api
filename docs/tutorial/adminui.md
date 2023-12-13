@@ -43,10 +43,17 @@ Click **Database Management - Rest API** in the landing page. This opens the **S
 
       ![Create Database Configuration](../assets/images/createSchema.png){: style="height:70%;width:70%"}
 
-2. Under **Available Databases**, select `Demo.nsf`.
+3. In the **Create Schema** dialog:
+
+      1. Select `Demo.nsf` from the **Database** drop-down list. 
+      2. Select an **Icon**.
+	3. Enter a **Schema Name** and a **Schema Description**. 
+      5. Click **Save Schema**. 
+
+<!--2. Under **Available Databases**, select `Demo.nsf`.
 3. Under **Add New Schema**, fill up the form and then click **Add**.
 
-      ![Configure New Schema](../assets/images/ConfigureNewSchema.png)
+      ![Configure New Schema](../assets/images/ConfigureNewSchema.png)-->
 
 This creates a schema that defines what views, folders, document, and agents you can access through the Domino REST API.
 
@@ -59,11 +66,14 @@ This creates a schema that defines what views, folders, document, and agents you
 To set up a scope:
 
 1. Go back to the landing page by clicking **Overview**.
+
+      ![Overview](../assets/images/overview.png)
+
 2. Click **Database Management - Activation**. This opens the **Scope Management** page.
 
       ![Scope Management Page](../assets/images/ScopeManagement.png)
 
-3. Click **Add Scope**. This opens a menu as shown below:
+3. Click **Add Scope**. This opens a pane as shown below:
 
       ![Add scope Menu](../assets/images/AddNewScope.png)
 
@@ -87,22 +97,31 @@ This page allows you to set various configurations to your schema.
 ## Manage database forms
 
 1. Click **Database Forms** from the menu bar. This lists all the forms available for the schema.
+2. Select the form that you want to configure, and then click the corresponding **Active** option under **Status**.
+
+      ![List Forms](../assets/images/ListOfForms2.png)
+
+<!-- prettier-ignore -->
+!!!tip
+     Clicking the **Inactive** option corresponding to a form unconfigures the form. In the **Reset Form** dialog, click **Yes** to unconfigure the form.
+
+<!--1. Click **Database Forms** from the menu bar. This lists all the forms available for the schema.
 1. From the available forms under **Unconfigured Forms**, select the form that you would like to configure. 
 2. Click the toggle in the form card of the selected form.
 3. In the **Configure** dialog, click **Yes** to configure the form with default settings.
 
 The selected form is now listed under **Configured Forms**.
 
-![List Forms](../assets/images/ListOfForms2.png)
+![List Forms](../assets/images/ListOfForms2.png)-->
 
 **To make changes to the configured form:**
 
-1. Select the form to load the **Access Mode** page for the form.
-2. Under **Show fields from**, which shows the fields that can be added to the form, hover over a field item and click the **+** icon. This adds the field in the form. Repeat this for all the fields to be added.
+1. On the **Database Forms** tab, click the pencil icon corresponding to the configured form that you want to edit to load the form **Access Mode** page showing the `default` access mode.
+2. Under **Show fields from**, hover over a field item and click the **+** icon to add the field in the form. Repeat this for all the fields you want to add.
 
-      ![Access Mode](../assets/images/AccessMode1.png)
+      [![Access Mode](../assets/images/AccessMode1.png)](../assets/images/AccessMode1.png){: target="_blank" rel="noopener noreferrer"}
 
-3. Set the Read or Write access formula for each of the fields in the Form.
+3. Set the Read or Write access formula for each of the fields in the form.
 4. Click **Save**.
 
 ## Manage database views

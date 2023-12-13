@@ -28,14 +28,24 @@ You can add a schema by [creating your own schema](#create-a-schema) or [importi
 
       ![Create a schema ](../../assets/images/createSchema.png){: style="height:80%;width:80%"}   
 
-3. Under **Available Databases**, select a database from the list of databases available to the Domino REST API.
+3. In the **Create Schema** dialog:
+
+      1. Select a database from the **Database** drop-down list. 
+         
+         You can also enter the database name in the **Import Into Database** field to filter the list of available databases based on the entered database name.
+
+      2. Select an **Icon**.
+	3. Enter a **Schema Name** and a **Schema Description**. 
+      5. Click **Save Schema**. 
+
+<!--3. Under **Available Databases**, select a database from the list of databases available to the Domino REST API.
 
       ![Create Database Form](../../assets/images/AddSchemaForm.PNG)
 
       You can search for a database by clicking **Search Databases** and entering the database name. This filters the list of available databases based on the entered database name. Click the clear icon to remove the entered database name. 
 
 4. Under **Add New Schema**, enter details in the **Schema Name** and **Description**, and then select the **Formula Engine** and **Schema Icon** for the schema you want to create.
-5. Click **Add**.
+5. Click **Add**.-->
 
 ### Import a schema <!--to a database-->
 
@@ -87,24 +97,29 @@ The `nsf` database file and schema are added to the schema list.
 
 4. Click **Save**. 
 
-## List available forms
+## List available database forms
 
 1. Select a schema from the list of schemas to load the details.
 2. Select **Database Forms** from the menu bar to show the list of all the forms for the selected database schema.
 
-      ![Database Schema](../../assets/images/insideSchema.png)
-      <!--![List Forms](../../assets/images/ListOfForms1.png)-->
+      <!--![Database Schema](../../assets/images/insideSchema.png)-->
+      ![List Forms](../../assets/images/ListOfForms1.png)
 
 
 ## Configure a form
 
 **To configure a specific form or forms**
 
-1. From the available forms under **Unconfigured Forms**, select the form that you would like to configure. 
+- Select the form that you want to activate, and then click the corresponding **Active** option under **Status**.
+
+!!!tip
+    Clicking the **Inactive** option corresponding to a form unconfigures the form. In the **Reset Form** dialog, click **Yes** to unconfigure the form.
+
+<!--1. From the available forms under **Unconfigured Forms**, select the form that you would like to configure. 
 2. Click the toggle in the form card of the selected form.
 3. In the **Configure** dialog, click **Yes**. 
 
-The selected form is now configured with default settings and listed under **Configured Forms**.
+The selected form is now configured with default settings and listed under **Configured Forms**.-->
 
 **To configure all forms**
 
@@ -112,7 +127,10 @@ The selected form is now configured with default settings and listed under **Con
 
 All forms are now configured with default settings and listed under **Configured Forms**.
 
-**To unconfigure a form**
+!!!tip
+    Clicking **Unconfigure All** unconfigures all configured forms and removes all configurations you have made to each of the forms. In the confirmation dialog, click **Yes** to unconfigure all configured forms.
+
+<!--**To unconfigure a form**
 
 1. From the available forms under **Configured Forms**, select the form that you would like to unconfigure.
 2. Click the toggle in the form card of the selected form.
@@ -125,34 +143,40 @@ The selected form is now moved under **Unconfigured Forms**.
 - Click **Unconfigure All**.
 
 !!!note
-    Clicking **Unconfigure All** removes all configurations you have made to each of the forms.
+    Clicking **Unconfigure All** removes all configurations you have made to each of the forms.-->
 
 
 ## Change form configuration
 
-1. Select a configured form. This loads the `default` Access Mode for the form.
+1. On the **Database Forms** tab, click the pencil icon corresponding to the configured form that you want to edit to load the form **Access Mode** page showing the `default` access mode.
       
-      ![Access Mode](../../assets/images/AccessMode.png)
+      [![Access Mode](../../assets/images/AccessMode.png)](../../assets/images/AccessMode.png){: target="_blank" rel="noopener noreferrer"}
 
-2. Under **Show fields from**, which shows the fields that can be added to the form, hover over a field item and click the **+** icon. This adds the field in the form. Repeat this for all the fields to be added.
+2. Under **Show fields from**, hover over a field item and click the **+** icon. This adds the field in the form. Repeat this for all the fields to be added.
 
-      You can also click **Add All** if you want to add all the available fields to the form. 
+      ![Add field](../../assets/images/addfield.png){: style="height:70%;width:70%"}
 
-3. Set the Read or Write access formula for each of the fields in the Form.
+3. Set the read or write access formula for each of the fields in the form.
 4. Click **Save**.
 
-!!!note
-    You can click the trash can icon corresponding to the field to remove the field from the form. 
+!!!tip
+    - Click **Add All Fields** icon to add all the available fields to the form.
+    - Enter a custom field name in the **Add Custom Field** and click the **+** icon to add a custom field to the form.
+    - Click the trash can icon corresponding to a field to remove the field from the form.
+    - Click **Batch Delete** to remove all the added fields from the form.
+    - Click the **Multi-Value** toggle to the on position to specify a **Field Group**. The **Multi-Value** toggle isn't clickable to the off position if a field group is specified.
 
 ## Add a mode
 
-1. Select a configured form. This loads the `default` Access Mode for the form.
-1. Click **Add Mode**.
-2. In the **Add New Mode** dialog, enter the name of the new mode and click **Save**. The new mode has been added to the `Mode`list
-      
-      ![mode list](../../assets/images/modeList.png)
+1. On the **Database Forms** tab, click the pencil icon corresponding to the configured form that you want to add a mode.The form **Access Mode** page opens showing the `default` access mode. 
+2. Click **Add Mode**.
+2. In the **Add New Mode** dialog, enter the name of the new mode and click **Save**. The new mode has been added to the `Mode`list.
 
-3. Add fields.
+      The following image shows an example of the added mode, which is the `dql`.
+      
+      [![mode list](../../assets/images/modeList.png)](../../assets/images/modeList.png){: target="_blank" rel="noopener noreferrer"}
+
+3. Add fields and set the read or write access formula for each of the added fields. 
 4. Click **Save**.
 
 
@@ -160,22 +184,22 @@ The selected form is now moved under **Unconfigured Forms**.
 
 Use **Clone Mode** to add a new mode based on an existing mode in the same schema.
 
-1. Select a configured form. This loads the `default` Access Mode for the form.
+1. On the **Database Forms** tab, click the pencil icon corresponding to the configured form that you want to clone a mode. The form **Access Mode** page opens showing the `default` access mode.
 2. From the **Mode** dropdown list, choose the mode you want to clone, for example the `default` mode.
 3. Click **Clone Mode**.
 4. In the **Clone <mode name\>** dialog, enter the name of the mode and click **Save**. 
 
-      The new mode cloned from an existing mode is now available. You can remove or add fields to the new mode.
+      The new mode cloned from an existing mode is now available. You can remove or add fields to the new mode and read or write access formula for each of the fields.
 
 6. Click **Save**.
 
-      ![clone list](../../assets/images/cloneList.png)
+      <!--![clone list](../../assets/images/cloneList.png)-->
 
 ## Compare modes
 
 Use this function to see the differences between the modes of a selected form. To use this function, you must have at least two modes in your selected form.
 
-1. Select a configured form. This loads the `default` Access Mode for the form.
+1. On the **Database Forms** tab, click the pencil icon corresponding to the configured form that you want to compare the modes. The form **Access Mode** page opens showing the `default` access mode.
 2. Click **Open Mode Compare**. The **Mode Compare - <form name\>** page opens.
 3. Select the modes to compare from the drop-down lists in the comparison columns. The comparison result is displayed. 
 
@@ -199,12 +223,6 @@ Use this function to see the differences between the modes of a selected form. T
 
       ![List Views](../../assets/images/ListOfViews1.png)
 
-<!--3. Click **Activate All** if you'd like to quickly enable all Views to be available in this schema. Click **Deactivate All** to disable all Views in this schema. 
-
-      !!!warning "Important"
-      **Deactivating All** will remove all configurations you have made to each of the Forms.-->
-
-
 ## Activate a view
 
 **To activate a specific view or views**:
@@ -219,10 +237,7 @@ Use this function to see the differences between the modes of a selected form. T
 - Click **Activate All**.
 
 !!!tip
-    Clicking **Deactivate All** deactivates all active views. On the **Reset ALL View Columns** dialog, click **Yes** to confirm deactivation of all views. 
-
-!!!note
-    Clicking **Deactivate All** removes all configurations you have made to each of the views.
+    Clicking **Deactivate All** deactivates all active views and removes all configurations you have made to each of the views. On the **Reset ALL View Columns** dialog, click **Yes** to confirm deactivation of all views. 
 
 ## Edit a view
 
