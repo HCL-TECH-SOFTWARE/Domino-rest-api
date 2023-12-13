@@ -16,7 +16,9 @@ We use an example that could be some scheduled process to ETL data
 ## Steps
 
 1. Download and unzip the [apps-src.zip](../downloads/apps-src.zip) from the `source for all apps` in a folder. This folder includes all of the source projects that the user may work with whenever he would like to. 
-2. Open your IDE (vscode, eclipse). There are three  The user needs to make the project folder to be the current or root folder whenever they used it with the user's IDE.
+2. Open your IDE (vscode, eclipse). 
+
+    There are three folder to work with inside the `src`. There are two javascript and one java folder for to work with.  The user needs to make the project folder to be the current or root folder whenever they used it with the user's IDE. Since it is java application, we use the `JavaETL` folder
 
     **Using the IDE VSCode**
     a. Navigate to File menu&rarr;Open Folder&rarr; and select the `src`&rarr;`JavaETL` folder. 
