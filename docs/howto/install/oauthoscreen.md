@@ -16,7 +16,7 @@ They are located inside the jar or the container and need to be [extracted](http
 
 The most likely change might be adjustment of the CSS values. You must do this in a CSS file. The [CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) will not entertain inline styles. Host your custom CSS in `keepweb.d`, so it is accessible on the same host.
 
-The HTML file uses the [Mustache](https://mustache.github.io/) templating system to fill in the values for the current consent request. In a nutshell: Mustache variables look like this: `{{ customs }}`. A good introduction tutorial [can be found here](https://www.baeldung.com/mustache/).
+The HTML file uses the [Mustache](https://mustache.github.io/) templating system to fill in the values for the current consent request. In a nutshell: Mustache variables look like this: **&#123;&#123;&nbsp;&#125;&#125;**. A good introduction tutorial [can be found here](https://www.baeldung.com/mustache/).
 
 ## About this task
 
@@ -61,7 +61,7 @@ The HTML file contains only HTML and links to CSS and JavaScript. It does not co
 - error DIV: usually hidden, shows up when things go wrong
 - `splashScreen` : The initial screen shown while consent is checking if there is an active user session or an existing consent
 - `loginScreen` : Initially hidden, shows up when user needs to login
-- `consentScreen` : Initiallt hidden, shows up when user needs to provide their consent. Contains `{{ mustache }}` variables
+- `consentScreen` : Initially hidden, shows up when user needs to provide their consent. Contains `{{ mustache }}` variables
 
 ### List of Mustache variables
 
