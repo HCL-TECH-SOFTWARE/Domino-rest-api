@@ -8,3 +8,5 @@ nav:
     - passkey.md
     - symlink.md
     - webauthn.md
+    - oauthoscreen.md
+
