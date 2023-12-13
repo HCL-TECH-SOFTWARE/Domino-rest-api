@@ -14,10 +14,10 @@ You can create a browser single page application using just 3 files
 
 ## Steps
 
-- create a new directory `[notesdata]/keepweb.d/approvalspa`
+- Create a new directory `[notesdata]/keepweb.d/approvalspa`
 - Download [SPA-source.zip](../downloads/SPA-source.zip)
 - Unzip the content into `approvalspa`
-- reload the landing page
+- Reload the landing page
 
 ## How to check
 
