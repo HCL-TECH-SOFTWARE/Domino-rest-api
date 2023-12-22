@@ -1,6 +1,6 @@
-# Windows
+<!--# Windows-->
 
-## Install on Windows
+# Install on Windows
 
 <!-- prettier-ignore -->
 !!! caution

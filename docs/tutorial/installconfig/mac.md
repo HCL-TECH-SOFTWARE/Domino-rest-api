@@ -1,6 +1,6 @@
-# Mac
+<!--# Mac-->
 
-## Install on macOS
+# Install on macOS
 
 <!-- prettier-ignore -->
 !!! caution

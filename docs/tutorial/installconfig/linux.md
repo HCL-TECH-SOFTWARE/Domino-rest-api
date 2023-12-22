@@ -1,6 +1,6 @@
-# Linux
+<!--# Linux-->
 
-## Install on Linux Domino Server
+# Install on Linux Domino Server
 
 - On Linux, the installer installs the Domino REST APIs for use with an HCL Domino server.
 - It's **strongly** recommended to use the default directories on Linux.
