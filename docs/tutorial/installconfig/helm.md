@@ -1,5 +1,5 @@
 <!--# Install Volt MX Go via installers-->
-# Install Domino REST API using Helm Charts
+# Run Domino REST API using Helm Charts
 
 The procedure guides you on running Domino REST API using helm charts on a Kubernetes platform, such as OpenShift.
 
@@ -22,7 +22,7 @@ You need to set up Helm with the details necessary to authenticate with the HCL 
 
 
     !!!note
-        Use the **CLI secret** value you saved from [obtaining authentication token from HCL Container Repository](obtainauthenticationtoken.md) as your authentication token or password.
+        Use the **CLI secret** value you saved from [obtaining authentication token from HCL Container Repository](../../howto/install/obtainauthenticationtoken.md) as your authentication token or password.
 
     If you get an error message similar to the following:
 
@@ -128,10 +128,9 @@ cd ~/drapi
 
         You can read more about these options at [https://kubernetes.io/docs/concepts/services-networking/service/](https://kubernetes.io/docs/concepts/services-networking/service/){: target="_blank" rel="noopener noreferrer"}.
 
+6. Save the file and exit. 
 
 <!--5. **(Optional)** If you would like to configure Ingress for Domino REST API, proceed to [Configure Kubernetes Ingress for Domino REST API](../howto/drapiingress.md).-->
-
-6. Save the file and exit.
 
 ## Deploy Domino REST API
 
@@ -163,8 +162,5 @@ cd ~/drapi
 
 3. Once you see the READY column showing 3/3, press `Ctrl-c` to cancel the command.
 
-<!--## Additional information
 
-- To know how to manually update your Domino container if you obtain a new version of *FirstTouchRecipes.nsf*, see [Update FirstTouchRecipes.nsf](../howto/FTnsfupdate.md).
-- To know more about Domino server processes within a Domino container, see [Interacting with Domino server process within Domino container](../topicguides/dominoserver.md).-->
 

@@ -12,10 +12,9 @@ The binary images and Helm charts for Domino REST API are pulled from the HCL Co
 
     ![user profile](../../assets/images/harborproject.png)
 
-5. On the **User Profile** dialog, copy the value of the **CLI secret** by clicking the copy icon.
+4. On the **User Profile** dialog, copy the value of the **CLI secret** by clicking the copy icon.
 
     ![user profile dialog](../../assets/images/userprofile.png)
 
-6. Save the **CLI secret** value as you will use it as your authentication token or password when using Docker or Helm CLI to access HCL Container Repository.
-
-7. Take note of exactly how your email address is written in the **User Profile** dialog as authentication is case sensitive on the user email.
+5. Save the **CLI secret** value as you will use it as your authentication token or password when using Docker or Helm CLI to access HCL Container Repository.
+6. Take note of exactly how your email address is written in the **User Profile** dialog as authentication is case sensitive on the user email.
