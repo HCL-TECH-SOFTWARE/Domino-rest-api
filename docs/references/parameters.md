@@ -40,6 +40,16 @@ A configuration can have the following top-level properties. These properties ar
 | webAuthnActive           | Boolean                                           | Set to `true` to enable WebAuthn to be active.                                                                                                                                                                                             |
 | jwt                      | [JWT parameters](#jwt-parameters)                 | Parameters for enabling Domino REST API to accept JWT tokens from external providers                                                                                                                                                       |
 
+## Backpressure handling Parameters
+
+These parameters control the flow of requests to Domino, to shape acceptable load
+
+| Property                  | Type | Description                                                               |
+| :------------------------ | :--- | :------------------------------------------------------------------------ |
+| concurrentRequestMaxCount | int  | How many request con concurrently be open to Domino core `-1` = unlimited |
+| concurrentRequestDelay    | int  | Number of milli seconds to retry an operation (default = `42`)            |
+| concurrentRequestRetries  | int  | number of retries before rejecting a request" (default = `100`)           |
+
 ## Prometheus Parameters
 
 | Property         | Type    | Description                        |
