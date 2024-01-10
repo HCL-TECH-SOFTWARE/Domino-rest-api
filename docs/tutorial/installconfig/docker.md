@@ -30,7 +30,11 @@ Running Domino REST API with a Docker image requires the following:
     Download the image as an archive file from [HCL Software License and Download Portal (Flexnet)](https://hclsoftware.flexnetoperations.com/) or [My HCLSoftware Portal](https://my.hcltechsw.com/). For more information, see [Download Domino REST API](index.md#download-domino-rest-api).
 
     !!!warning "Important"
-        This prerequisite is only needed if you would use the docker image from **HCL Software License and Download Portal (Flexnet)** or **My HCLSoftware Portal**. If you would use the docker image from [HCL Container Repository (Harbor)](https://hclcr.io/){: target="_blank"}, you just need to take note of the image name of the latest docker image version for docker compose .env file from Harbor indicated in [What's New](../../references/whatisnew.md) for each version of Domino REST API.
+        <!-- This prerequisite is only needed if you would use the Docker image from **HCL Software License and Download Portal (Flexnet)** or **My HCLSoftware Portal**.--> 
+        
+        - If using a Docker image from [HCL Container Repository (Harbor)](https://hclcr.io/){: target="_blank"}, take note of the image name of the latest Docker image version from Harbor indicated in [What's New](../../references/whatisnew.md), update the CONTAINER_IMAGE variable in the [.env file](#update-env-file), and then [execute docker-compose](#run-domino-rest-api).
+
+        - If prompted for access to HCL Container Repository (Harbor), [obtain your HCL Container Repository username and password](../../howto/install/obtainauthenticationtoken.md), and then sign-in using `docker login hclcr.io` command and the obtained credentials.  
 
 - **Docker compose file** 
 
@@ -84,7 +88,7 @@ After loading the image, note the image name that was output. You need the image
 
 !!!example "Example loaded image name"
     - From earlier releases: `docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.10.0`
-    - Startig v1.0.7 release: `domino-rest-api:1.0.7`
+    - Starting v1.0.7 release: `domino-rest-api:1.0.7`
     
 
 **For docker image from HCL Container Repository (Harbor)**
@@ -134,6 +138,7 @@ docker-compose up
 !!! note
     - Start in the directory where the files `server.id` and `docker-compose.yml` are located.
     - The setup can take a few minutes, depending on your hardware and the network speed to your primary server.
+    - If prompted for access credentials to HCL Container Repository (Harbor), see [Obtain authentication token from HCL Container Repository](../../howto/install/obtainauthenticationtoken.md).
 
 <!-- prettier-ignore -->
 !!! tip

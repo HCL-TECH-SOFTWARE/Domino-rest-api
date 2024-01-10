@@ -2,7 +2,7 @@
 
 ## About this procedure
 
-The binary images and Helm charts for Domino REST API are pulled from the HCL Container Repository. This requires you to get your authentication token from the HCL Container Repository. This procedure guides you on how to obtain your authentication token.
+The container images <!--and Helm charts-->for Domino REST API can be pulled from the HCL Container Repository. This requires you to get your authentication token from the HCL Container Repository. This procedure guides you on how to obtain your authentication token or password.
 
 ## To obtain your authentication token
 
@@ -17,4 +17,4 @@ The binary images and Helm charts for Domino REST API are pulled from the HCL Co
     ![user profile dialog](../../assets/images/userprofile.png)
 
 5. Save the **CLI secret** value as you will use it as your authentication token or password when using Docker or Helm CLI to access HCL Container Repository.
-6. Take note of exactly how your email address is written in the **User Profile** dialog as authentication is case sensitive on the user email.
+6. Take note of exactly how your email address or username is written in the **User Profile** dialog as authentication is case sensitive on the user email.

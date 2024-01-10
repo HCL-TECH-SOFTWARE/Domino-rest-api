@@ -58,9 +58,12 @@ Follow the procedure based on the installation option you used when installing t
     docker-compose up
     ```
 
+    !!!note
+        If prompted for access to HCL Container Repository (Harbor), [obtain your HCL Container Repository username and password](../../howto/install/obtainauthenticationtoken.md), and then sign-in using `docker login hclcr.io` command and the obtained credentials. 
+
 6.	[Validate that an instance is successfully running on a container](../../tutorial/installconfig/docker.md#validation).
 
-### Helm
+<!--### Helm
 
 1. Run the following to recreate the temporary directory to download the helm charts and make it the current directory:
 
@@ -140,7 +143,7 @@ Follow the procedure based on the installation option you used when installing t
     ```
     kubectl get pods -o wide -w
     ```
-
+-->
 ### Linux
 
 !!!note

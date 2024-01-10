@@ -10,7 +10,7 @@
 
 ## Install on a Windows Domino Server
 
-## Prerequisite
+### Prerequisite
 
 - Domino must be [installed](https://www.hcltechsw.com/domino).
 - Domino REST API installer needs to be run as administrator.
@@ -28,16 +28,15 @@ java -jar restapiInstall.jar ^
  -a
 ```
 
-!!!note
-    !!!note "Domino REST API and Domino 14"
-    The Domino REST API installer starting with v1.0.9 has a workaround for an issue between Domino REST API and Domino 14.0 on Windows, for more information or if you receive an error during installation, please see [Domino 14 and Domino Rest API](../../howto/install/symlink.md)
+!!!note "Domino REST API and Domino 14" 
+    The Domino REST API installer starting with v1.0.9 has a workaround for an issue between Domino REST API and Domino 14.0 on Windows. For more information or if you receive an error during installation, see [Domino 14 and Domino Rest API](../../howto/install/symlink.md).
 
-## All parameters
+### All parameters
 
 --8<-- "installparameters.md"
 
 
-The installer adds the `restapi` task to the automatically starting tasks. If opted out using `-n` you must manually add the `KeepInstallDir` key into your `notes.ini` and then can subsequently issue `load restapi` manually in the Domino console.
+The installer adds the `restapi` task to the automatically starting tasks. If opted out using `-n`, you must manually add the `KeepInstallDir` key into your `notes.ini` and then can subsequently issue `load restapi` manually in the Domino console.
 
 For more information, see [Domino REST API task](../../references/usingdominorestapi/restapitask.md).
 
@@ -103,4 +102,4 @@ For more information, see [Deploy HCL Domino REST API to HCL Notes Client](../..
 
 --8<-- "iskeeprunning.md"
 
-!!!note
+
