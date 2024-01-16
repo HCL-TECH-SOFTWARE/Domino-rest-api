@@ -58,8 +58,92 @@ Follow the procedure based on the installation option you used when installing t
     docker-compose up
     ```
 
+    !!!note
+        If prompted for access to HCL Container Repository (Harbor), [obtain your HCL Container Repository username and password](../../howto/install/obtainauthenticationtoken.md), and then sign-in using `docker login hclcr.io` command and the obtained credentials. 
+
 6.	[Validate that an instance is successfully running on a container](../../tutorial/installconfig/docker.md#validation).
 
+<!--### Helm
+
+1. Run the following to recreate the temporary directory to download the helm charts and make it the current directory:
+
+    **Command**:
+    ```
+    mkdir ~/<new directory name>
+    cd ~/<new directory name>
+    ```
+
+    **Example**:
+
+    ```
+    mkdir ~/drapi108
+    cd ~/drapi108
+    ```
+    In the example above, you create a new directory *drapi108* that will contain the new helm charts. Creating the new directory allows you to differentiate and compare the helm charts from different Domino REST API release versions.
+
+2. Configure Helm to pull from HCL Container Repository.
+
+    You will need your email and authentication token used with the HCL Container Repository.
+
+    1. Run the following command to check if *hclcr* is already defined:
+
+        ```
+        helm repo list
+        ```
+
+    2. If *hclcr* is already defined, proceed to **Download Domino REST Helm chart** step. Otherwise, run the following command to set up Helm.
+
+        ```
+        helm repo add hclcr https://hclcr.io/chartrepo/domino --username <your hclcr username> --password <your hclcr password>
+        ```
+
+        Example
+        ```
+        helm repo add hclcr https://hclcr.io/chartrepo/domino --username user.name@example.com --password xx3ds2w
+        ```
+
+3. Download Domino REST API Helm chart.
+
+    1. Run the following command to make sure that the chart information for the repositories is up-to-date.
+
+        ```
+        helm repo update
+        ```
+
+    2. Run the following command to download the chart:
+
+        ```
+        helm pull hclcr/restapi
+        ```
+
+        The file drapi-1.n.n.tgz is downloaded, wherein 1.n.n represents the version number such as 1.0.7.
+
+    3. Run the following commands to unpack the chart and make the DRAPI directory your current directory:
+
+        ```
+        tar -xzvf drapi-1.n.n.tgz
+        cd drapi
+        ```
+
+        !!!note
+            The Domino REST API chart name has a version string in the filename. The helm pull command will pull down the latest version of the charts. Ensure your tar command uses the correct matching file names.
+
+4. Update the `values.yaml` file of the target upgrade version with custom settings you want to apply from the `values.yaml` file of your current installation.
+
+5. Within the directory containing the new Domino REST API charts, run the following command:
+
+    ```
+    helm upgrade domino . -f values.yaml
+    ```
+
+    This upgrades the program executables and reuses the existing databases and all the configuration stored on /local/notesdata within the Domino container.
+
+6. Run the following command to wait for the Domino pod to be running and in the ready state:
+
+    ```
+    kubectl get pods -o wide -w
+    ```
+-->
 ### Linux
 
 !!!note

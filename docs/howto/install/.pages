@@ -9,4 +9,5 @@ nav:
     - symlink.md
     - webauthn.md
     - oauthoscreen.md
+    - obtainauthenticationtoken.md
 

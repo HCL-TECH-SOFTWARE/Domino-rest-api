@@ -4,6 +4,7 @@ nav:
     - index.md
     - System requirements: https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789
     - docker.md
+    #- helm.md
     - linux.md
     - mac.md
     - win.md

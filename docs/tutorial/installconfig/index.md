@@ -76,6 +76,7 @@ Domino REST API can be installed on:
 - Domino Server on [Windows](../installconfig/win.md)
 - Domino Server on [Linux](../installconfig/linux.md)
 - Domino Server on [Docker or Kubernetes](../installconfig/docker.md)
+<!-- Domino Server on [Kubernetes](../installconfig/helm.md)-->
 
 All platforms use a Java-based installer, except Kubernetes or Docker, which uses a container (colloquial referred to as Docker) image. You can download the installer and the Docker image from your Flexnet account. For any questions, contact your HCL reseller.
 
