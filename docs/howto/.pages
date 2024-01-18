@@ -1,9 +1,9 @@
 nav:
     - index.md
     - Installation: install
-    - Web: web
-    - IdP: IdP
+    - Configured Domino Rest API IDP: configuredrapiidp.md
     - Production: production
     - Database: database
     - VoltMX: VoltMX
     - Code examples: codesamples
+
