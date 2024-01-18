@@ -1,12 +1,12 @@
-Configure Domino Rest API IDP
+# Configure Domino Rest API IdP
 
 --8<-- "keepmngtURLcaution1.md"
 
 ## About this task
 
-Domino REST API implements what essentially amounts to an OAuth2 Provider (called `IDP-lite`) and Volt MX Foundry implements an Integration Service adapter for OAuth2 providers. The following is a guide for creating a Foundry Identity Service using Domino REST API's OAuth provider.
+Domino REST API implements what essentially amounts to an OAuth2 Provider. The following is a guide for setting up Domino REST API's OAuth provider.
 
-## Set up Domino REST API
+## Procedure
 
 <!-- prettier-ignore -->
 !!! warning "Caution"
@@ -37,6 +37,6 @@ An example of `oauth.json` is shown below. Expiration times can be adjusted. Mak
 
 <!-- prettier-ignore -->
 !!! note
-      If you are using Domino+Domino REST API docker image, the `oauth.nsf` should already be "deployed" in the image but may not be fully configured. If for some reason you need to create `oauth.nsf`, see [Set up oauth.nsf](../howto/VoltMX/setupoauthnsf.md).
+      If you are using Domino+Domino REST API docker image, the `oauth.nsf` should already be "deployed" in the image but may not be fully configured. If for some reason you need to create `oauth.nsf`, see [Set up oauth.nsf](../VoltMX/setupoauthnsf.md).
 
 

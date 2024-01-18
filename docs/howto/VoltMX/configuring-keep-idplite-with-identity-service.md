@@ -1,14 +1,10 @@
 # Configure Domino REST API IDP with Volt MX Foundry Identity Service
 
 ## Prerequisite
-- The view should be in Active status. For more information, see Activate a view.
-
+- You must first set up the Domino Rest API IdP.
 
 
 ## Create Foundry Identity Service
-
-
-
 Some things to note when creating an identity service in Volt MX Foundry using Domino REST API IDP-lite (also refer to the screenshot below):
 
 1. Create a new Identity service in the Foundry browser console by filling in the fields:
