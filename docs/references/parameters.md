@@ -157,6 +157,27 @@ This is the verticle for managing WebHandlers. `worker`, `threadPoolName`, `thre
 | iss             | String  | Identifies the principal that issued the JWT. The value is a case-sensitive string containing a string or URI value.                                                            |
 | aud             | String  | Identifies the recipient that the JWT is intended for. When configuring Azure Active Directory as an IdP, the value of this parameter is the Application ID URI you configured. |
 
+
+## oAuth Parameters
+| oAuth API request Parameters     |Type | Description                          |
+| ----------- | --------------------------| ------------------------------------ |
+| client_id      | String | Auto-generated unique ID of the client application requesting the access token.(mandatory)  |
+| client_secret  | String  | A secret string that is shared between the instance and the OAuth application to authorize the exchange of information. |
+| username    | String  |Username that grants permission to request access tokens. This parameter is necessary for access token requests when using the "password" grant type. |
+| password    | String | The user account's password, which grants permission for the access token request. This parameter is necessary for access token requests when using the "password" grant type.|
+| grant_type    | Boolean |The credentials used to authorize a request for an access token. This parameter requires one of the following values:<br> **• password:** User credentials are required to allow access token requests. Use the username and password fields to specify the user credentials. <br>**• refresh_token:** The refresh_token authorizes the access token request. The refresh token can be specified in the refresh_token a choice.<br/><br/>  |
+| refresh_token    | String | The current refresh token that grants authorization for the request of an access token. This parameter is necessary for access token requests that use a grant_type of refresh_token. |
+
+| oAuth response Parameters     |Type | Description                          |
+| ----------- | ----------------| ------------------------------------ |
+| scope      | String |Level of access provided by the access token. The scope is always user account, implying that the access token possesses the same privileges as the user account that granted the token authorization. As an example, when Maria grants authorization to an application by entering login credentials, the resulting access token allows the bearer of the token to have the same access privileges as Maria.  |
+| token_type   | String    | The token issued by the request is of the kind specified in the OAuth RFC. When an access token is in possession, it may be used to access a protected resource without requiring the provision of a cryptographic key since the token type is always bearer. Refer to [RFC6750](https://datatracker.ietf.org/doc/html/rfc6750) for further details on the utilization of bearer tokens in OAuth 2.0.|
+| refresh_token  | int  | The duration of the access token in seconds. |
+| expires_in    | String |The refresh token's value. |
+| access_token    | String | Access requests conducted during the expiry period always return the current access token. |
+| format   | String | The format in which the response is displayed. This value is always represented using JSON. |
+
+
 ## Remarks
 
 ### Named elements vs. arrays
