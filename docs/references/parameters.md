@@ -162,10 +162,10 @@ This is the verticle for managing WebHandlers. `worker`, `threadPoolName`, `thre
 | oAuth API request Parameters     |Type | Description                          |
 | ----------- | --------------------------| ------------------------------------ |
 | client_id      | String | Auto-generated unique ID of the client application requesting the access token.(mandatory)  |
-| client_secret  | String  | A secret string that is shared between the instance and the OAuth application to authorize the exchange of information. |
+| client_secret  | String  | A secret string that is shared between the instance and the OAuth application to authorize the exchange of information. (mandatory)|
 | username    | String  |Username that grants permission to request access tokens. This parameter is necessary for access token requests when using the "password" grant type. |
 | password    | String | The user account's password, which grants permission for the access token request. This parameter is necessary for access token requests when using the "password" grant type.|
-| grant_type    | Boolean |The credentials used to authorize a request for an access token. This parameter requires one of the following values:<br> **• password:** User credentials are required to allow access token requests. Use the username and password fields to specify the user credentials. <br>**• refresh_token:** The refresh_token authorizes the access token request. The refresh token can be specified in the refresh_token a choice.<br/><br/>  |
+| grant_type    | Boolean |The credentials used to authorize a request for an access token. This parameter requires one of the following values:<br> **• password:** User credentials are required to allow access token requests. Use the username and password fields to specify the user credentials. <br>**• refresh_token:** The refresh_token authorizes the access token request. The refresh token can be specified in the refresh_token a choice. (mandatory) <br/><br/>  |
 | refresh_token    | String | The current refresh token that grants authorization for the request of an access token. This parameter is necessary for access token requests that use a grant_type of refresh_token. |
 
 | oAuth response Parameters     |Type | Description                          |
@@ -175,7 +175,7 @@ This is the verticle for managing WebHandlers. `worker`, `threadPoolName`, `thre
 | refresh_token  | int  |The refresh token's value. |
 | expires_in    | String |The duration of the access token in seconds.  |
 | access_token    | String | Access requests conducted during the expiry period always return the current access token. |
-| format   | String | The format in which the response is displayed. This value is always represented using JSON. |
+| format   | String | The format in which the response is displayed. This value is always represented using JSON. (optional) |
 
 
 ## Remarks
