@@ -172,8 +172,8 @@ This is the verticle for managing WebHandlers. `worker`, `threadPoolName`, `thre
 | ----------- | ----------------| ------------------------------------ |
 | scope      | String |Level of access provided by the access token. The scope is always user account, implying that the access token possesses the same privileges as the user account that granted the token authorization. As an example, when Maria grants authorization to an application by entering login credentials, the resulting access token allows the bearer of the token to have the same access privileges as Maria.  |
 | token_type   | String    | The token issued by the request is of the kind specified in the OAuth RFC. When an access token is in possession, it may be used to access a protected resource without requiring the provision of a cryptographic key since the token type is always bearer. Refer to [RFC6750](https://datatracker.ietf.org/doc/html/rfc6750) for further details on the utilization of bearer tokens in OAuth 2.0.|
-| refresh_token  | int  | The duration of the access token in seconds. |
-| expires_in    | String |The refresh token's value. |
+| refresh_token  | int  |The refresh token's value. |
+| expires_in    | String |The duration of the access token in seconds.  |
 | access_token    | String | Access requests conducted during the expiry period always return the current access token. |
 | format   | String | The format in which the response is displayed. This value is always represented using JSON. |
 
