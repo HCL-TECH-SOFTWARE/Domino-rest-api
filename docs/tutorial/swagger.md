@@ -19,31 +19,41 @@ The [SwaggerUI](https://github.com/swagger-api/swagger-ui) is an OpenSource comp
 3. Create the JWT token for authorization.
 
       1. Go to and expand **authentication**, and then go to and expand the **POST /auth** endpoint. 
-	2. In the **Request body**, update the `username` and `password`, and then click **Execute**. When your credentials are valid, the returned JSON has the JWT token in the `bearer` element.
+	2. In the **Request body**, update the `username` and `password`, and then click **Execute**.
+           ![Swagger login](../assets/images/ApiSwaggerLogin.png)   
+
+          When your credentials are valid, the returned JSON has the JWT token in the `bearer` element.
+
 	3. Copy the JWT token. 
 
-      ![Swagger login](../assets/images/ApiSwaggerLogin.png)
+          ![Bearer](../assets/images/Bearer.png)
 
 4. Scroll back up and click **Authorize**.
+
+      ![Authorized](../assets/images/authorized.png)
+
 5. In the **Available authorizations** dialog, paste the JWT token in the **Value** field under **jwt (http, Bearer)**, and then click **Authorize**.
 
       ![JwtToken1](../assets/images/TokenJwt1.png)
 
 6. Go to and expand **data**, and then go to and expand the **POST /document** endpoint.
+
+     ![Data Document](../assets/images/data.png) 
+
 7. In the **Request body**, enter all the mandatory field values as shown below, and then click **Execute**.
 
-   ```json
-   {
+    ```json
+    {
      "Form": "Customer",
      "Color": "Red",
      "Pet": "Hamster",
      "email": "me@donotreply.com",
      "first_name": "John",
      "last_name": "Doe"
-   }
-   ```
+    }
+    ```
 
-   ![SwaggerAPI](../assets/images/ApiSwagger.png)
+    ![SwaggerAPI](../assets/images/ApiSwagger.png)
 
    Observe what happens when you supply less fields.
 
