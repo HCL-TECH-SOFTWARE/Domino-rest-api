@@ -69,7 +69,7 @@ Validation rule allow to ensure business rules to be enforce regardless of clien
 
 Let's take a simple example of the approval workflow, where the requestor submits an expense report for approval to understand this better.
 
-The requestor has read and write access to the subject, body and amount fields of the expense report. She fills in the details and the request when goes to the approver. The approver has different access rights to the different fields of the same form. She only has read access to the subject, body and amount fields but read as well as write access for updating the approval status. Now, let us add an auditor in the same scenario. The auditor has only read access to subject, body, amount and approval status field. She, however, has read and write access to fill in the audit status, which are non-editable for either the requestor or the approver.
+The requestor has read and write access to the subject, body and amount fields of the expense report. She fills in the details and the request then goes to the approver. The approver has different access rights to the different fields of the same form. She only has read access to the subject, body and amount fields but read as well as write access for updating the approval status. Now, let us add an auditor in the same scenario. The auditor has only read access to subject, body, amount and approval status field. She, however, has read and write access to fill in the audit status, which are non-editable for either the requestor or the approver.
 
 This assigning of access to documents to different users, based on their roles, can easily be done using Form Modes. Managing the Form Modes can be done via the Project Domino REST API Admin GUI.
 
