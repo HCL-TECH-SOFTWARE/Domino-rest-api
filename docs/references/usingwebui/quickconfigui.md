@@ -4,7 +4,7 @@ The **Quick Config** enables you to create a schema and a scope at the same time
 
 **To quick configure a schema and a scope**:
 
-1. Click **Quick Config** from the side navigation pane. The **Quick config** pane opens.
+1. Click **Quick Config** from the side navigation pane. The **Quick Config** pane opens.
 
     ![Quick Config](../../assets/images/quickconfig1.png)
 
