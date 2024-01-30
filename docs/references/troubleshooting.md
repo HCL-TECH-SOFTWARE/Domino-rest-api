@@ -63,23 +63,3 @@ This setting can get reset each time you start Notes depending upon your organiz
 ## Logging
 
 Domino REST API logging of info and errors are stored in the `domino-keep.log` file located in your Notes Data's `IBM_TECHNICAL_SUPPORT` directory. This log file is a rolling file and will get moved to a new file with a date stamp if the Domino REST API is restarted or the file is larger for 10 MB. Thirty days of logs are retained.
-
-Make sure that the `KeepLogConfigfile` are located within your using operating system within the `notes.ini`.
-
-You can find the `log4j2.properties` file in the `keep-core jar` located in your Rest API directory.
-For example, extract the contents of the `keep-core-1.28.2.jar` file and include the `log4j2.properties` file.
-
-Make any changes you want to that file and add the `notes.ini` settings below. Put the file in a place that your Domino server can view.
-
-**Configuration settings:**
-
-- **Windows:** KeepLogConfigFile=C:\path\to\log4j2.properties
-- **Linux:** KeepLogConfigFile=/path/to/log4j2.properties 
-
-Just a few things to keep in mind: 
-
-- The "jar" component is included in your Java installation. If your path doesn't lead there, you'll need to indicate the directory to your `java\bin folder`.
-- Make sure to specify the version of your `keep-core file`, as it may differ from the one shown in the example.
-- Make sure to remove the `log4j2.properties` file from your Rest API directory to avoid potential issues with upgrades.
-- The `log4j.properites` file for the Domino REST API may undergo changes without prior notice. If you observe any differences in the logging behavior after a recent upgrade, it is recommended to extract and review the updated `log4j` file.
-- Check out the [Log4J documentation](https://logging.apache.org/log4j/log4j-2.0-beta7/manual/appenders.html) for details on the available settings.
