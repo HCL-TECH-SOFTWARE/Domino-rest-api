@@ -154,16 +154,16 @@ The selected form is now moved under **Unconfigured Forms**.
 
 2. Under **Show fields from**, hover over a field item and click the **+** icon. This adds the field in the form. Repeat this for all the fields to be added.
 
-      ![Add field](../../assets/images/addfield.png){: style="height:70%;width:70%"}
+      [![Add field](../../assets/images/addfield.png){: style="height:60%;width:60%"}](../../assets/images/addfield1.png){: target="_blank" rel="noopener noreferrer"}
+     
 
 3. Set the read or write access formula for each of the fields in the form.
 4. Click **Save**.
 
 !!!tip
     - Click **Add All Fields** icon to add all the available fields to the form.
-    - Enter a custom field name in the **Add Custom Field** and click the **+** icon to add a custom field to the form.
-    - Click the trash can icon corresponding to a field to remove the field from the form.
-    - Click **Batch Delete** to remove all the added fields from the form.
+    - Enter a custom field name in the **Add custom field** and click the **+** icon to add a custom field to the form.
+    - Click **Delete Multiple** to enable the removal of all or selected fields from the form.
     - Click the **Multi-Value** toggle to the on position to specify a **Field Group**. The **Multi-Value** toggle isn't clickable to the off position if a field group is specified.
 
 ## Add a mode
