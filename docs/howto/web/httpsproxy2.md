@@ -115,7 +115,7 @@ server {
     # All the rest is Domino Port 81
     # Remember: index.html still gets served by nginx
     location / {
-        proxy_pass http://127.0.0.1:81/;
+        proxy_pass http://127.0.0.1:81;
     }
 
     location /metrics {
