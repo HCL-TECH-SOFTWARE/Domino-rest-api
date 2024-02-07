@@ -226,5 +226,3 @@ All values can be [over written](https://vertx.io/docs/vertx-config/java/#_overl
 ```
 
 To make an NSF file or directory, defined in the JSON object, available in the list of databases available when you define a schema in the **Admin UI**, see [Enable excluded database files and directories](../howto/database/excludeddb.md).
-
-oAuth Parameters

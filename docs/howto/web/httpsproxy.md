@@ -46,7 +46,7 @@ server {
      proxy_set_header X-Forwarded-Proto $scheme;
      proxy_set_header X-Forwarded-Host $host;
      proxy_set_header X-Forwarded-Port $server_port;
-     proxy_pass http://127.0.0.1:81/;
+     proxy_pass http://127.0.0.1:81;
  }
 
 
@@ -73,7 +73,7 @@ server {
      proxy_set_header X-Forwarded-Proto $scheme;
      proxy_set_header X-Forwarded-Host $host;
      proxy_set_header X-Forwarded-Port $server_port;
-     proxy_pass http://127.0.0.1:8880/;
+     proxy_pass http://127.0.0.1:8880;
  }
 
 
@@ -100,7 +100,7 @@ server {
      proxy_set_header X-Forwarded-Proto $scheme;
      proxy_set_header X-Forwarded-Host $host;
      proxy_set_header X-Forwarded-Port $server_port;
-     proxy_pass http://127.0.0.1:3001/;
+     proxy_pass http://127.0.0.1:3001;
  }
 
 
@@ -127,7 +127,7 @@ server {
      proxy_set_header X-Forwarded-Proto $scheme;
      proxy_set_header X-Forwarded-Host $host;
      proxy_set_header X-Forwarded-Port $server_port;
-     proxy_pass http://127.0.0.1:3000/;
+     proxy_pass http://127.0.0.1:3000;
  }
 
     listen [::]:80;
