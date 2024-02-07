@@ -66,23 +66,23 @@ Domino REST API logging of info and errors are stored in the `domino-keep.log` f
 
 ### Provide your own logging configuration
 
-This guides you on how to make your own logging configuration. This guide will show you how to create your own logging configuration. The purpose of this is to ensure that the logging level for the Domino Rest API is kept specifically for the `DEBUG` and `TRACE` levels and other errors.
+ This guide will show you how to create your own logging configuration. The purpose of this is to ensure that the logging level for the Domino Rest API is kept specifically for the `DEBUG` and `TRACE` levels and other errors.
 
 1. Open the `notes.ini` file. You may refer to [Editing NOTES.INI file](https://help.hcltechsw.com/domino/10.0.1/admin/conf_editingthenotesinifile_c.html).
 2. You can add the `KeepLogConfigFile` parameters with the following settings and save. The `KeepLogConfigFile` option can be added to `notes.ini` to edit the log configuration file.
 
     **Configuration settings:**
 
-    - **Windows:** KeepLogConfigFile=C:\path\to\log4j2.properties
-    - **Linux:** KeepLogConfigFile=/path/to/log4j2.properties 
+    - **Windows:** `KeepLogConfigFile=C:\path\to\log4j2.properties`
+    - **Linux:** `KeepLogConfigFile=/path/to/log4j2.properties` 
 
-   !!! note
-       - You can find the `log4j2.properties` file in the `keep-core jar` located in your Rest API directory.
-       - For example, extract the contents of the `keep-core-1.28.2.jar` file and include the `log4j2.properties` file.
+!!!note
+    - You can find the `log4j2.properties` file in the `keep-core jar` located in your Rest API directory.
+    - For example, extract the contents of the `keep-core-1.28.2.jar` file and include the `log4j2.properties` file.
 
 Just a few things to keep in mind: 
 
-- The "jar" component is included in your Java installation. If your path doesn't lead there, you'll need to indicate the directory to your `java\bin folder`.
+- The "`jar`" component is included in your Java installation. If your path doesn't lead there, you'll need to indicate the directory to your `java\bin folder`.
 - Make sure to specify the version of your `keep-core file`, as it may differ from the one shown in the example.
 - Make sure to remove the `log4j2.properties` file from your Rest API directory to avoid potential issues with upgrades.
 - The `log4j.properites` file for the Domino REST API may undergo changes without prior notice. If you observe any differences in the logging behavior after a recent upgrade, it is recommended to extract and review the updated `log4j` file.
