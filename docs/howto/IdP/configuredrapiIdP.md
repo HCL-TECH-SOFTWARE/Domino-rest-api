@@ -13,9 +13,9 @@ Domino REST API implements what essentially amounts to an OAuth2 Provider. The f
      This is subject to change. Consult Domino REST API documentation (or code, or experts) for the latest steps. Currently, these general steps must be performed:
 
 1. Deploy `oauth.nsf` and configure Domino REST API to recognize that file.
-1. Add `OAuthAdmin` role for the ACL entry that gives your server manager access to the `oauth.nsf`.
+2. Add `OAuthAdmin` role for the ACL entry that gives your server manager access to the `oauth.nsf`.
 
-To deploy and configure the NSF, place the following in the domino data directory (you may need to create the keepconfig.d folder if it doesn't already exist):
+To deploy and configure the NSF, place the following in the domino data directory (you may need to create the `keepconfig.d` folder if it doesn't already exist):
 
 - [data folder]/oauth.nsf
 - [data folder]/keepconfig.d/oauth.json
