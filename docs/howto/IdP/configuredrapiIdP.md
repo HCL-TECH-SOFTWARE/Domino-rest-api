@@ -37,7 +37,7 @@ An example of `oauth.json` is shown below. Expiration times can be adjusted. Mak
 | Property         | Values Description                                                              |
 | :----------------| :------------------------------------------------------------------------ |
 | `active`         | Required. This is a boolean value indicating if the provided token is now active. If the token was issued by this authorization server, it was not revoked by the user, and it had not expired, the value should be "true". |
-|  `database`      | The database where the authorization details is stored.|
+|  `database`      | The `nsf` file where the authorization details is stored.|
 |  `url`                | Server URL|
 |  `authCodeExpiresIn`  | The code expiration timestamp, in seconds. |
 |  `accessTokenExpiresIn` | The access_token expiration timestamp, in seconds.|
