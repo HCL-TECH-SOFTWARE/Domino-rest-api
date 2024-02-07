@@ -63,17 +63,22 @@ This setting can get reset each time you start Notes depending upon your organiz
 ## Logging
 
 Domino REST API logging of info and errors are stored in the `domino-keep.log` file located in your Notes Data's `IBM_TECHNICAL_SUPPORT` directory. This log file is a rolling file and will get moved to a new file with a date stamp if the Domino REST API is restarted or the file is larger for 10 MB. Thirty days of logs are retained.
-Make sure that the `KeepLogConfigfile` are located within your using operating system within the `notes.ini`.
 
-You can find the `log4j2.properties` file in the `keep-core jar` located in your Rest API directory.
-For example, extract the contents of the `keep-core-1.28.2.jar` file and include the `log4j2.properties` file.
+### Provide your own logging configuration
 
-Make any changes you want to that file and add the `notes.ini` settings below. Put the file in a place that your Domino server can view.
+This guides you on how to make your own logging configuration. This guide will show you how to create your own logging configuration. The purpose of this is to ensure that the logging level for the Domino Rest API is kept specifically for the `DEBUG` and `TRACE` levels and other errors.
 
-**Configuration settings:**
+1. Open the `notes.ini` file. You may refer to [Editing NOTES.INI file](https://help.hcltechsw.com/domino/10.0.1/admin/conf_editingthenotesinifile_c.html).
+2. You can add the `KeepLogConfigFile` parameters with the following settings and save. The `KeepLogConfigFile` option can be added to `notes.ini` to edit the log configuration file.
 
-- **Windows:** KeepLogConfigFile=C:\path\to\log4j2.properties
-- **Linux:** KeepLogConfigFile=/path/to/log4j2.properties 
+    **Configuration settings:**
+
+    - **Windows:** KeepLogConfigFile=C:\path\to\log4j2.properties
+    - **Linux:** KeepLogConfigFile=/path/to/log4j2.properties 
+
+   !!! note
+       - You can find the `log4j2.properties` file in the `keep-core jar` located in your Rest API directory.
+       - For example, extract the contents of the `keep-core-1.28.2.jar` file and include the `log4j2.properties` file.
 
 Just a few things to keep in mind: 
 
