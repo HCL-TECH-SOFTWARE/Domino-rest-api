@@ -2,8 +2,7 @@
    The API uses JWT Bearer tokens for verification, but because the access tokens come from different token servers, the validation of the tokens needs to be changed. 
 
 
-## Procedure:
-
+## Procedure
 
 1. Login into the Management console (Port 8889).
 
@@ -12,7 +11,7 @@
     - for example: MultiDomain
 
 3. Click **Create IdP certificate**.
-4.  Domino REST API generates 4 files in this server's `[notesdata]/keepconfig.d` directory:
+4. Domino REST API generates 4 files in this server's `[notesdata]/keepconfig.d` directory:
 
     - MultiDomain.cert.pem
     - MultiDomain.json
