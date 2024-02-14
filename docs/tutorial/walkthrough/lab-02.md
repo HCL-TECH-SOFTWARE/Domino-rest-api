@@ -17,19 +17,19 @@
 ## Steps in creating a schema and scope in Quick Config
 
 1. Log in to Admin UI.
-2. Click on Quick Config.
+2. Click on **Quick Config**.
 
-  ![Quick config](img/AdminUIExpanded.png)
+    ![Quick config](img/AdminUIExpanded.png){: style="height:80%;width:80%"}
 
 3.  Fill in the form.
 
-  - Schema: default
-  - Scope: approvals
-  - description & icon: at your discretion
+    - **Schema Name**: default
+    - **Scope Name**: approvals
+    - **Description & Schema Icon**: at your discretion
 
-  ![Quick config](img/QuickConfig.png)
+    ![Quick config](img/QuickConfig.png){: style="height:80%;width:80%"}
 
-4. Click Add.
+4. Click **Add**.
 
 ### Alternative steps
 
@@ -49,9 +49,9 @@
 
 In the Admin UI you will find one entry each for schema and scope:
 
-![Scope available](img/scopeAvailable.png)
+![Scope available](img/scopeAvailable.png){: style="height:70%;width:70%"}
 
-![Schema available](img/schemaAvailable.png)
+![Schema available](img/schemaAvailable.png){: style="height:70%;width:70%"}
 
 ### URLs to check
 
@@ -67,6 +67,6 @@ In the Admin UI you will find one entry each for schema and scope:
 - Use POSTMAN to create a second quick config using recipe.nsf
 - Open Domino Designer to check resources
 
-  ![Schema in Designer](img/schemaInDesigner.png)
+  ![Schema in Designer](img/schemaInDesigner.png){: style="height:70%;width:70%"}
 
-  ![Schema in Designer](img/schemaInDesigner2.png)
+  ![Schema in Designer](img/schemaInDesigner2.png){: style="height:70%;width:70%"}

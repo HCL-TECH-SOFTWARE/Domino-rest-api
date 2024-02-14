@@ -2,13 +2,13 @@
 
 The configuration is assembled from JSON files and a few selected environment parameters. We use those environment parameters because they're a commonly used way to configure instances in virtual environments such as Docker, IBM Cloud, and Kubernetes.
 
-The Domino REST API ships with default settings in internal files `config.json` and `security.json`. **These are internal files, not subject to user modifications**.
+The Domino REST API ships with default settings in internal files `config.json` and `security.json`. **These are internal files and not subject to user modifications**.
 
 !!! warning "CaSe SeNsItIvE"
 
     Parameters are **case sensitive**
 
-To alter a parameter either set an environment parameter, if one exists (there aren't that many) or create a JSON file in `keepconfig.d` following the how-to guide [Modify configuration of Domino REST API](../howto/install/modifyconfig.md).
+To alter a parameter, either set an environment parameter, if one exists (there aren't that many) or create a JSON file in `keepconfig.d` by following the the steps in [Modify configuration of Domino REST API](../howto/install/modifyconfig.md).
 
 ## Environment
 
@@ -20,7 +20,7 @@ A configuration can have the following top-level properties. These properties ar
 
 | Property                 | Type                                              | Description                                                                                                                                                                                                                                |
 | :----------------------- | :------------------------------------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| MANAGEMENTPORT           | int (0 to 65353)                                  | (default 8889) Commands regarding the runtime, e.g. config and shutdown, should only be exposed to an admin network workstation.                                                                                                           |
+| MANAGEMENTPORT           | int (0 to 65353)                                  | (default 8889) Commands regarding the runtime, for example config and shutdown, should only be exposed to an admin network workstation.                                                                                                           |
 | METRICSPORT              | int (0 to 65353)                                  | (default 8890) Port for Prometheus metrics.                                                                                                                                                                                                |
 | Firehoseport             | int (0 to 65353)                                  | (default 42424) Port for Firehose to successfully deliver data to custom HTTP endpoints.                                                                                                                                                   |
 | PORT                     | int (0 to 65353)                                  | (default 8880) The port for regular API access.                                                                                                                                                                                            |
@@ -89,7 +89,7 @@ Here is a JSON representation of the resource:
 
 | Property                  | Type             | Description                                                                                                                                                                                 |
 | :------------------------ | :--------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| disabledMetricsCategories | Array of Strings | Specified in the [MetricsDomain Java class](https://github.com/vert-x3/vertx-micrometer-metrics/blob/master/src/main/java/io/vertx/micrometer/MetricsDomain.java), e.g. `vertx.http.server` |
+| disabledMetricsCategories | Array of Strings | Specified in the [MetricsDomain Java class](https://github.com/vert-x3/vertx-micrometer-metrics/blob/master/src/main/java/io/vertx/micrometer/MetricsDomain.java), for example `vertx.http.server` |
 | enabled                   | Boolean          | Whether metrics are enabled on the Vert.x instance.                                                                                                                                         |
 | jvmMetricsEnabled         | Boolean          | Whether JVM metrics are collected.                                                                                                                                                          |
 | labels                    | Array of Strings | List of labels to enable / disable.                                                                                                                                                         |
@@ -102,7 +102,7 @@ Verticles defines a separate unit of work for particular tags. For the Rest API 
 
 | Property       | Type    | Description                                                                                                                                                                                                                                                                                                                       |
 | :------------- | :------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| active         | Boolean | Whether to load this verticle. This can be used to limit available operations. E.g. on an external facing server set all but the [`basis`](https://redocly.github.io/redoc/?url=https://opensource.hcltechsw.com/Domino-rest-api/assets/downloads/openapi.basis.json) API to false                                                |
+| active         | Boolean | Whether to load this verticle. This can be used to limit available operations. For example, on an external facing server set all but the [`basis`](https://redocly.github.io/redoc/?url=https://opensource.hcltechsw.com/Domino-rest-api/assets/downloads/openapi.basis.json) API to false                                                |
 | className      | String  | Class to use for the verticle. Typically this is `com.hcl.domino.keep.verticles.DominoDefaultVerticle`, unless you need to extend that class.                                                                                                                                                                                     |
 | tags           | Object  | Tags from OpenAPI specs to allocate to this verticle and the package in which to find the NSFHandlers.                                                                                                                                                                                                                            |
 | instances      | int     | Relevant only for RestAPI verticle, loads multiple instances that each use a thread pool. You will need to be aware of the number of cores available and scalability, see the [Vert.x documentation](https://vertx.io/docs/vertx-core/java/#_specifying_number_of_verticle_instances).                                            |
