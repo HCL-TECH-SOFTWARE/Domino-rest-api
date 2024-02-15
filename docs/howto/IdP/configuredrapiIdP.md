@@ -16,12 +16,13 @@ Domino REST API implements an OAuth2 Provider. The following is a guide for sett
 2. Add `OAuthAdmin` role for the ACL entry.
 
     Be sure to thoroughly examine the ACL:
-        - All servers involved must have `Editor` access and the `OAuthAdmin` role assigned.
-        - Admins who require troubleshooting capabilities should be granted `Editor` access and the `OAuthAdmin` role. It is important to exercise caution when granting such high levels of access.
-        - [Enforce a consistent ACL]([link](https://help.hcltechsw.com/domino/14.0.0/admin/conf_enforcingaconsistentaccesscontrollist_t.html?hl=consistent%2Cacl))
-        - Access to anonymous users must be restricted.
-        - The default setting should be set to `Author` with the ability to create but not delete. It is possible to use in your corporate standard by using a `group` instead of the `default` entry.
-        - Replicate the database to all participating servers.
+
+      - All servers involved must have `Editor` access and the `OAuthAdmin` role assigned.
+      - Admins who require troubleshooting capabilities should be granted `Editor` access and the `OAuthAdmin` role. It is important to exercise caution when granting such high levels of access.
+      - [Enforce a consistent ACL]([link](https://help.hcltechsw.com/domino/14.0.0/admin/conf_enforcingaconsistentaccesscontrollist_t.html?hl=consistent%2Cacl))
+      - Access to anonymous users must be restricted.
+      - The default setting should be set to `Author` with the ability to create but not delete. It is possible to use in your corporate standard by using a `group` instead of the `default` entry.
+      - Replicate the database to all participating servers.
 
 
 
