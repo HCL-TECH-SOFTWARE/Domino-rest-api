@@ -15,13 +15,14 @@ Domino REST API implements an OAuth2 Provider. The following is a guide for sett
 1. Configure Domino REST API to recognize that `oauth.nsf` file . The DominoIDP uses the database `oauth.nsf` to store consent and refresh information. Ensure that it exists and create it if missing based on the template `oauth.nsf`. See [Set up `oauth.nsf`](../../howto/VoltMX/setupoauthnsf.md)
 2. Add `OAuthAdmin` role for the ACL entry.
 
-   Be sure to thoroughly examine the ACL:
-    - All servers involved must have `Editor` access and the `OAuthAdmin` role assigned.
-    - Admins who require troubleshooting capabilities should be granted `Editor` access and the `OAuthAdmin` role. It is important to exercise caution when granting such high levels of access.
-    - [Enforce a consistent ACL]([link](https://help.hcltechsw.com/domino/14.0.0/admin/conf_enforcingaconsistentaccesscontrollist_t.html?hl=consistent%2Cacl))
-    - Access to anonymous users must be restricted.
-    - The default setting should be set to `Author` with the ability to create but not delete. It is possible to use in your corporate standard by using a `group` instead of the `default` entry.
-    - Replicate the database to all participating servers.
+    Be sure to thoroughly examine the ACL:
+        - All servers involved must have `Editor` access and the `OAuthAdmin` role assigned.
+        - Admins who require troubleshooting capabilities should be granted `Editor` access and the `OAuthAdmin` role. It is important to exercise caution when granting such high levels of access.
+        - [Enforce a consistent ACL]([link](https://help.hcltechsw.com/domino/14.0.0/admin/conf_enforcingaconsistentaccesscontrollist_t.html?hl=consistent%2Cacl))
+        - Access to anonymous users must be restricted.
+        - The default setting should be set to `Author` with the ability to create but not delete. It is possible to use in your corporate standard by using a `group` instead of the `default` entry.
+        - Replicate the database to all participating servers.
+
 
 
 In the domino data directory, add the following files to configure the `NSF`, (if the `keepconfig.d` folder doesn't already exist, you may need to create it):
