@@ -6,7 +6,7 @@ Postman is a collaborative platform for designing and building APIs. It contains
 
 ## Installation and configuration
 
-After Postman is up and running, it needs to be configured to run the Domino REST APIs. This involves importing two sets of files- Collections and Environments.
+After Postman is up and running, it needs to be configured to run the Domino REST APIs. This involves importing two sets of files - Collections and Environments.
 
 ## Collections
 
@@ -28,21 +28,21 @@ After Postman is up and running, it needs to be configured to run the Domino RES
 
 ## Authentication
 
-Nearly all the Domino REST APIs fail if your login credentials are not authenticated. Logging in with valid authentication is the first step. There are a couple of approaches:
+Nearly all the Domino REST APIs fail if your login credentials aren't authenticated. Logging in with valid authentication is the first step. There are a couple of approaches:
 
 1. Expand **Project Domino REST API \ authentication** in the left nav.
 
 2. Select **Admin Login** and open up the Body section. You will see this:
 
-![Auth Example](../../assets/images/AuthExample.png)
+    ![Auth Example](../../assets/images/AuthExample.png)
 
-Set the password to **password** and user name to **John Doe** and then click **Send** to be logged in. Another approach is to access through Environment variables **AdminPassword** and **AdminName**.
+3. Set the `password` to **password** and `username` to **John Doe** and then click **Send** to be logged in. Another approach is to access through Environment variables **AdminPassword** and **AdminName**.
 
 ## Environment Variables
 
-In some of the Domino REST APIs, you see fields surrounded by double brackets like **\{\{HOST}}** or **\{\{AdminName}}**. These fields represent user inputs and should generally not be hard coded. For Domino REST API, the environment variables are packaged in the relevant environment you imported in.
+In some Domino REST APIs, you see fields surrounded by double brackets like **\{\{HOST}}** or **\{\{AdminName}}**. These fields represent user inputs and should generally not be hard coded. For Domino REST API, the environment variables are packaged in the relevant environment you imported in.
 
-1. Click the **eyeball icon** to the right of the environment box:
+- Click the **eyeball icon** to the right of the environment box:
 
 ![Postman Env](../../assets/images/PostmanEnv.png)
 
@@ -54,17 +54,17 @@ There are a number of tutorials on the Postman application. This section gives a
 
 ![Postman UI](../../assets/images/PostmanUI.png)
 
-## Top Navigation
+## Top navigation
 
 The black banner at the top of the screen contains product-wide features. In the upper left corner, you'll see **New** for creating new Postman objects and **Import** for importing Postman Collections. The **Runner** button lets you run a series of APIs without having to click on each one individually. In the upper right corner, are Postman's settings under the **wrench icon**.
 
-## Left Navigation
+## Left navigation
 
 The left navigation contains a **History** tab that acts much like a browser history. It lists a history of the APIs you have run. The **Collections** tab is where you'll find the Domino REST API Collection.
 
 ## Content
 
-The upper half of the main content section contains a description of the **request** you are about to send. It can be edited in place prior to making the request. The bottom half of the screen is reserved for the **response** to your request.
+The upper half of the main content section contains a description of the **request** you are about to send. It can be edited in place before making the request. The bottom half of the screen is reserved for the **response** to your request.
 
 ## References
 

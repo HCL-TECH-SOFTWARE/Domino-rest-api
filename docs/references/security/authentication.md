@@ -114,7 +114,7 @@ All elements need to be present. “Audience” must be set to “Domino” and 
 
 ### Distinguished Names
 
-By default, Domino REST API will expect that incoming tokens contain a Domino-format distinguished name (e.g. "CN=John Doe/O=SomeOrg") in either the `CN` or `sub` claims of the token payload. This can be configured in Domino REST API's JWT configuration to use an alternative property and to accept LDAP-format (e.g. "cn=John Doe,o=SomeOrg") names:
+By default, Domino REST API will expect that incoming tokens contain a Domino-format distinguished name, for example `CN=John Doe/O=SomeOrg`, in either the `CN` or `sub` claims of the token payload. This can be configured in Domino REST API's JWT configuration to use an alternative property and to accept LDAP-format, for example `cn=John Doe,o=SomeOrg` names:
 
 ```json
 {
@@ -168,9 +168,9 @@ The "oidc" is similar to "oidc-idpcat" or "jwt," are main configuration block. I
 | Items           | Description     |
 | :-------------- | :-----------------------------------|
 |`active`|**Optional**, and can be useful for setting to false to temporarily disable something without deleting the config entirely. |
-| `providerURL`| It is the OIDC-provider-specific URL. It's in a form common for Keycloak, but Azure and others look different.|
-| `clientId`| It is the configured client ID from the OIDC provider, generally created as part of setting up Domino/DRAPI as a legal client in the config. |
-|`clientSecret`| It is the generated client secret from the OIDC provider, usually a randomly-generated hex string. | 
+| `providerURL`| It's the OIDC-provider-specific URL. It's in a form common for Keycloak, but Azure and others look different.|
+| `clientId`| It's the configured client ID from the OIDC provider, generally created as part of setting up Domino/DRAPI as a legal client in the config. |
+|`clientSecret`| It's the generated client secret from the OIDC provider, usually a randomly-generated hex string. | 
 |`userIdentifier` and `userIdentifierInLdapFormat`| **Optional**| 
 
 
@@ -205,9 +205,9 @@ The configuration is as follows in Domino REST API:
 | Items           | Description                          |
 | :-------------- | :-----------------------------------|
 | `active`   | **Optional** - Can be useful for setting to `false` to temporarily disable something without deleting the config entirely. |
-| `providerURL`| It is the OIDC-provider-specific URL. It's in a form common for Keycloak, but Azure and others look different.|
-| `scope`| It is the configured client ID from the OIDC provider, generally created as part of setting up Domino/DRAPI as a legal client in the config. |
-|`aud`| It is the generated client secret from the OIDC provider, usually a randomly-generated hex string. | 
+| `providerURL`| It's the OIDC-provider-specific URL. It's in a form common for Keycloak, but Azure and others look different.|
+| `scope`| It's the configured client ID from the OIDC provider, generally created as part of setting up Domino/DRAPI as a legal client in the config. |
+|`aud`| It's the generated client secret from the OIDC provider, usually a randomly-generated hex string. | 
 |`additionalClientIds`| **Optional** - Can be a string or array of strings of client IDs beyond the one configured in `idpcat.nsf` that will be considered valid.| 
 |`userIdentifier` and `userIdentifierInLdapFormat`| **Optional**| 
 |`microsoft`| **Optional** - Can be used to enable MS-Azure-specific workarounds internally| 
@@ -215,7 +215,7 @@ The configuration is as follows in Domino REST API:
 
 !!!note
     - You can use `oidc-idpcat` authentication in the same places that "JWT" config blocks were used previously, just with some coordination with core Domino.
-    - "JWT" will work the same on Domino 14. There's no conflict if Domino REST API and Domino have completely-distinct authentication providers.
+    - "JWT" will work the same on Domino 14. There's no conflict if Domino REST API and Domino have completely distinct authentication providers.
     - "oidc-idpcat" comes into play if you:
         
         - Want both Domino REST API and core Domino to use the same provider.
@@ -231,7 +231,7 @@ In general, `oidc` and `oidc-idpcat` achieve the same goal, which is to use a co
 !!!note
     In general, you'd use any of these ("jwt", "oidc", "oidc-idpcat") when you either want to or have to have an external identity provider like Keycloak or Azure AD and have those tokens be usable for Domino REST API calls. Using either "jwt"-with-providerUrl or either of the "oidc" ones will let Domino REST API use standard OIDC endpoints to handle key lookup, avoiding the need to copy and paste signer keys into the Domino REST API config.
 
-Check [Configuring `oidc-idpcat` with Domino 14](../../howto/IdP/configureidpcat.md)
+Check [Configuring `oidc-idpcat` with Domino 14](../../howto/IdP/configureidpcat.md).
 
 ## Domino REST API and OAuth
 

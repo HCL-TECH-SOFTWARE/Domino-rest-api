@@ -10,7 +10,7 @@ The loose connection between document and form establishes an even looser connec
 
 Since items can be created, updated, and deleted through code (C, LotusScript, Java, @Formula, JavaScript, XPages, REST, DIOOP, gRPC), a document can have more, less, differently types items than fields on the document. This bond gets further loosened through the ability of computing names of subforms (shared sets of fields) at runtime based on conditions of the document or the cycle of the moon. There is no guarantee, just a possibility, that 2 documents with the same form item, have the same set of items.
 
-Notes forms and views don't have unique names, there can be 10 folders with the name "Test" and a form and a subform. Often this views or forms are used to separate Notes client from WebUI behavior. Forms and views can have one or more aliases and can be hidden (only accessible programmatically ). View are like folders with a fixed query attached. A column in a view can carry more than one data type and more than one document type. Views/Folders can be sorted by columns when specified in the design and can be organized into hierarchies.
+Notes forms and views don't have unique names, there can be 10 folders with the name "Test" and a form and a subform. Often this views or forms are used to separate Notes client from WebUI behavior. Forms and views can have one or more aliases and can be hidden (only accessible programmatically). View are like folders with a fixed query attached. A column in a view can carry more than one data type and more than one document type. Views/Folders can be sorted by columns when specified in the design and can be organized into hierarchies.
 
 _There is plenty of documentation on details_, look it up if so desired.
 

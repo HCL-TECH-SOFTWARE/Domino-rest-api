@@ -14,7 +14,7 @@ Domino REST API supports metrics produced by [MicroMeter](https://micrometer.io)
 }
 ```
 
-When **jvmMetricsEnabled** is set to true, more metrics data is collected and it will impact the performance.Don't configure this unless you need to troubleshoot.
+When **jvmMetricsEnabled** is set to true, more metrics data is collected and it will impact the performance. Don't configure this unless you need to troubleshoot.
 {: .alert .alert-danger}
 
 ### Metrics collected

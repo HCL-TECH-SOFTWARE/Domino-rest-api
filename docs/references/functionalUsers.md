@@ -79,7 +79,7 @@ In each of the sections you specify a user object in the same way:
 
 ## Obtain salted passwords
 
-The management endpoint (Port 8889) has, besides others, a utility function to salt and encrypt passwords. To access the management endpoint, you need to have a salted password already. To solve this paradoxon, create a file `tempmanagement.json` in your `keepconfig.d` directory and copy in the following content:
+The management endpoint (Port 8889) has, besides others, a utility function to salt and encrypt passwords. To access the management endpoint, you need to have a salted password already. To solve this, create a file `tempmanagement.json` in your `keepconfig.d` directory and copy in the following content:
 
 ```json
 {

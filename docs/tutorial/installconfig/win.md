@@ -29,7 +29,7 @@ java -jar restapiInstall.jar ^
 ```
 
 !!!note "Domino REST API and Domino 14" 
-    The Domino REST API installer starting with v1.0.9 has a workaround for an issue between Domino REST API and Domino 14.0 on Windows. For more information or if you receive an error during installation, see [Domino 14 and Domino Rest API](../../howto/install/symlink.md).
+    The Domino REST API installer starting with v1.0.9 has a workaround for an issue between Domino REST API and Domino 14.0 on Windows. For more information or if you receive an error during installation, see [Create symlink for Domino 14 and Domino Rest API](../../howto/install/symlink.md).
 
 ### All parameters
 

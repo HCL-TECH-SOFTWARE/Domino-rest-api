@@ -10,7 +10,7 @@ If the planned application is mobile, desktop (including Excel), or just uses a 
 
 ![Local applications](../assets/images/access/LocalApp.png)
 
-If the planned application is a web application (build using ReactJS, Angular etc), you can host the static application files in `keepweb.d` directory or your Domino server of choice.
+If the planned application is a web application, build using ReactJS, Angular, etc, you can host the static application files in `keepweb.d` directory or your Domino server of choice.
 
 ![Domino REST API Properties](../assets/images/access/WebApp-local.png)
 

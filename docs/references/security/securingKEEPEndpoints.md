@@ -20,9 +20,9 @@ The Domino REST API configuration includes the Domino REST API binary directory,
 
 ![The call hierarchy](../../assets/images/ActualConfiguration.png)
 
-Examples of the default configuration settings are here, [config.json](../parameters.md). Whenever you do a new Domino REST API install, these settings and the projectkeep.jar file are overwritten, but any change made in `keepconfig.d` stays untouched.
+Examples of the default configuration settings are here, [config.json](../parameters.md). Whenever you do a new Domino REST API install, these settings and the `projectkeep.jar` file are overwritten, but any change made in `keepconfig.d` stays untouched.
 
-So it is necessary that your configuration changes reside in the `keepconfig.d` directory so that they persist when you reinstall or update your Domino REST API version.
+So it's necessary that your configuration changes reside in the `keepconfig.d` directory so that they persist when you reinstall or update your Domino REST API version.
 
 ### Endpoint auth
 

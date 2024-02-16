@@ -50,7 +50,7 @@ Check the details in [Security Configuration](../security/index.md).
 
 In the Admin UI (or the [Admin API](../../references/usingwebui/index.md)), we can define an "application" which consists of:
 
-![Application](../../assets/images/Application.png)
+[![Application](../../assets/images/Application.png){: style="height:80%;width:80%"}](../../assets/images/Application.png){: target="_blank" rel="noopener noreferrer"}
 
 1. Application Name.
 2. Application Description.
@@ -64,7 +64,7 @@ In the Admin UI (or the [Admin API](../../references/usingwebui/index.md)), we c
 When creating a new Application, you will need to enter the Application Name and Description as well as one or more Callback URLs and Scopes, this provides access to Domino REST API schema that the application wants to get data from.
 
 When the application presents AppID and ClientSecret in the header of a request, it can access the databases,
-even when they are not defined as "Open Access". This information is required for an application to use an OAuth flow to gain access to data. Thus, an application server can have more access than a browser application.
+even when they're not defined as "Open Access". This information is required for an application to use an OAuth flow to gain access to data. Thus, an application server can have more access than a browser application.
 
 Domino REST API offers an OAuth/OICD controlled access.
 
