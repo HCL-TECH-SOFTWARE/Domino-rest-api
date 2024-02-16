@@ -13,18 +13,20 @@ The procedures guide you on configuring Azure Active Directory as an IdP. Azure 
 
 1. Navigate to the [Azure Portal](https://portal.azure.com){: target="\_blank"} to login, and then select **App registrations**.
 
-   ![Azure landing page](../../assets/images/configuringAD-01.png)
+      ![Azure landing page](../../assets/images/configuringAD-01.png)
 
 2. Select **New registration**.
 
-   ![Azure app registration](../../assets/images/configuringAD-02.png)
+      ![Azure app registration](../../assets/images/configuringAD-02.png)
 
 3. Enter a **Name**, select a supported account type (in most cases **Single tenant** will do), enter local redirect URL (so you can develop your app), and then click **Register**.
 
-   !!!tip
-   If you aren't sure about the redirect URL, use `http://localhost:8080/redirect`. You can change this later on in **Authentication** in the application page.
+      ![Azure app registration](../../assets/images/configuringAD-03.png){: style="height:90%;width:90%"}
 
-   ![Azure app registration](../../assets/images/configuringAD-03.png){: style="height:90%;width:90%"}
+!!!tip
+    If you aren't sure about the redirect URL, use `http://localhost:8080/redirect`. You can change this later on in **Authentication** in the application page.
+
+
 
 ### Add credentials
 
@@ -34,32 +36,33 @@ The next step is to add the client credentials. Your application will need the *
 
 1. Select **Certificates & secrets** &rarr; **Client secrets** &rarr; **New client secret**.
 
-   ![Azure app registration](../../assets/images/configuringAD-05.png){: style="height:90%;width:90%"}
+      ![Azure app registration](../../assets/images/configuringAD-05.png){: style="height:90%;width:90%"}
 
 2. Add a description, select an expiration for your client secret, and then click **Add**.
 
-   ![Azure app registration](../../assets/images/configuringAD-06.png){: style="height:90%;width:90%"}
+      ![Azure app registration](../../assets/images/configuringAD-06.png){: style="height:90%;width:90%"}
 
 3. Copy the secret's value for use in your client application code.
 
-   !!!note
-   The secret value is only shown once and never displayed again after you leave this page.
-
-   ![Azure app registration](../../assets/images/configuringAD-07.png){: style="height:90%;width:90%"}
+      ![Azure app registration](../../assets/images/configuringAD-07.png){: style="height:90%;width:90%"}
+      
+!!!note
+    The secret value is only shown once and never displayed again after you leave this page.
+ 
 
 ### API definition
 
 1. Select **Expose an API**.
 2. Select **Add** next to the **Application ID URI**. The URI must start with `api://`. You can overwrite the UUID with some clear text name.
 
-   ![Azure app registration](../../assets/images/configuringAD-08.png){: style="height:90%;width:90%"}
+      ![Azure app registration](../../assets/images/configuringAD-08.png){: style="height:90%;width:90%"}
 
 3. Select **Add a scope**.
 4. Specify the scope's attributes in the **Add a scope** pane.
 
-   Ensure admins and users can consent and that the scope is set to **Enabled**. For more information about scopes in Domino REST API, see [scopes reference](../../references/usingdominorestapi/scopes.md) and [scope topic guide](../../topicguides/understanding.md#databases-schemas-and-scopes).
+      Ensure admins and users can consent and that the scope is set to **Enabled**. For more information about scopes in Domino REST API, see [scopes reference](../../references/usingdominorestapi/scopes.md) and [scope topic guide](../../topicguides/understanding.md#databases-schemas-and-scopes).
 
-   ![Azure app registration](../../assets/images/configuringAD-09.png){: style="height:70%;width:70%"}
+      ![Azure app registration](../../assets/images/configuringAD-09.png){: style="height:70%;width:70%"}
 
 5. Click **Add scope**.
 6. Repeat the steps for adding a scope for each scope that your need to add.
@@ -71,16 +74,16 @@ The next step is to add the client credentials. Your application will need the *
 1. Select **API permissions**. The **API permissions** screen, which has `User.Read` preconfigured, opens.
 2. Click **Add a permission**.
 
-   ![Azure app registration](../../assets/images/configuringAD-11.png){: style="height:90%;width:90%"}
+      ![Azure app registration](../../assets/images/configuringAD-11.png){: style="height:90%;width:90%"}
 
 3. Select **APIs my organization uses**.
 4. Start typing the name of your application, and then select it.
 
-   ![Azure app registration](../../assets/images/configuringAD-12.png){: style="height:90%;width:90%"}
+      ![Azure app registration](../../assets/images/configuringAD-12.png){: style="height:90%;width:90%"}
 
 5. Under **Select permissions**, select the scopes you have created earlier and the click **Add permissions**.
 
-   ![Azure app registration](../../assets/images/configuringAD-13.png){: style="height:90%;width:90%"}
+      ![Azure app registration](../../assets/images/configuringAD-13.png){: style="height:90%;width:90%"}
 
 After adding permissions, you should see the selected permissions under **Configured permissions**.
 
@@ -90,7 +93,7 @@ After adding permissions, you should see the selected permissions under **Config
 
 1. Under **Manage**, select **Owners** and then select **Add owners**.
 
-   ![Azure app registration](../../assets/images/configuringAD-15.png){: style="width:90%"}
+      ![Azure app registration](../../assets/images/configuringAD-15.png){: style="width:90%"}
 
 2. Search for and select the user account that you want to be an owner of the application, and then click **Select**.
 
@@ -117,11 +120,11 @@ After change:
 
 1. From the app's **Overview** page, select **Endpoints**.
 
-   ![Azure app registration](../../assets/images/configuringAD-18.png){: style="height:90%;width:90%"}
+      ![Azure app registration](../../assets/images/configuringAD-18.png){: style="height:90%;width:90%"}
 
 2. Take note of the following URLs.
 
-   ![Azure app registration](../../assets/images/configuringAD-19.png){: style="height:90%;width:90%"}
+      ![Azure app registration](../../assets/images/configuringAD-19.png){: style="height:90%;width:90%"}
 
 All URLs are retrievable by accessing the _OpenID Connect_ metadata document, colloquially referred to as `.well-known`. These are the ones involved:
 
@@ -133,30 +136,30 @@ All URLs are retrievable by accessing the _OpenID Connect_ metadata document, co
 
 1. Create a [json](https://www.json.org/json-en.html) file in the directory `[notesdata]/keepconfig.d`.
 
-   You can choose the filename as long as you limit yourself to numbers and ASCII letters (`[0-9a-zA-Z]+`). We suggest `AzureAD01.json`, the same value you use in the json data below.
+      You can choose the filename as long as you limit yourself to numbers and ASCII letters (`[0-9a-zA-Z]+`). We suggest `AzureAD01.json`, the same value you use in the json data below.
 
 2. Add the following content to the json file.
 
-   ```json
-   {
-     "jwt": {
-       "AzureAD01": {
-         "active": true,
-         "providerUrl": "https://login.microsoftonline.com/[your-tennantid-here]/v2.0/.well-known/openid-configuration",
-         "aud": "[your application id-here]",
-         "iss": "https://sts.windows.net/[your-tennantid-here]/",
-         "algorithm": "RS256"
-       }
-     }
-   }
-   ```
+      ```json
+      {
+        "jwt": {
+          "AzureAD01": {
+            "active": true,
+            "providerUrl": "https://login.microsoftonline.com/[your-tennantid-here]/v2.0/.well-known/openid-configuration",
+            "aud": "[your application id-here]",
+            "iss": "https://sts.windows.net/[your-tennantid-here]/",
+            "algorithm": "RS256"
+          }
+        }
+      }
+      ```
 
-   Remarks:
+      Remarks:
 
-   - The `AzureAD01` isn't a fixed value. Pick anything that makes it clear for you. We strongly suggest to use the value as the filename too.
-   - The `aud` parameter is the Application ID or the URI configured in [Expose an API](#api-definition) (e.g. `api://dominorest`).
-   - The `iss` parameter is different from what the `openid-configuration` reports. The URL changed from `https://login.microsoftonline.com/[your-tennantid-here]/v2.0` to `https://sts.windows.net/[your-tennantid-here]/`, so you need to specify it here.
-   - Currently, Azure AD doesn't return the `alg` claim in the `jwks_uri`, you have to specify it here.
+      - The `AzureAD01` isn't a fixed value. Pick anything that makes it clear for you. We strongly suggest to use the value as the filename too.
+      - The `aud` parameter is the Application ID or the URI configured in [Expose an API](#api-definition) (e.g. `api://dominorest`).
+      - The `iss` parameter is different from what the `openid-configuration` reports. The URL changed from `https://login.microsoftonline.com/[your-tennantid-here]/v2.0` to `https://sts.windows.net/[your-tennantid-here]/`, so you need to specify it here.
+      - Currently, Azure AD doesn't return the `alg` claim in the `jwks_uri`, you have to specify it here.
 
 3. Restart Domino REST API.
 
@@ -170,12 +173,12 @@ All URLs are retrievable by accessing the _OpenID Connect_ metadata document, co
 
 ## Test the application
 
-1.  Go to [Downloads](../../references/downloads.md#azure-ad), and then download the `AzureTester.zip` file.
+1. Go to [Downloads](../../references/downloads.md#azure-ad), and then download the `AzureTester.zip` file.
 
     The file contains an [expressJS](https://expressjs.com/) application and related static files (HTML/CSS/JS).
 
-2.  Extract the zip file.
-3.  Navigate to the directory and run the web server using the following command:
+2. Extract the zip file.
+3. Navigate to the directory and run the web server using the following command:
 
     !!! note "NodeJS required"
 
@@ -190,7 +193,7 @@ All URLs are retrievable by accessing the _OpenID Connect_ metadata document, co
 
         Do **NOT** use this code in production.
 
-4.  Open the URL [http://localhost:8080/](http://localhost:8080/) and fill in the form details. You will find most of the values in the overview page of the Azure application registration. You should see a page like this:
+4. Open the URL [http://localhost:8080/](http://localhost:8080/) and fill in the form details. You will find most of the values in the overview page of the Azure application registration. You should see a page like this:
 
     ![Azure app registration](../../assets/images/configuringAD-20.png){: style="height:70%;width:70%"}
 
@@ -203,7 +206,7 @@ Azure redirects you to the `/redirect` URL. Typically, this page would auto proc
 
 ![Azure app registration](../../assets/images/configuringAD-21.png){: style="height:70%;width:70%"}
 
-Check the results
+Check the results:
 
 ![Azure app registration](../../assets/images/configuringAD-22.png){: style="height:70%;width:70%"}
 

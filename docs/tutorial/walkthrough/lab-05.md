@@ -26,7 +26,7 @@ Configure credentials, so an application can login _on your behalf_ with a limit
     !!! note "Scopes need to exist"
         You can specify one or more scopes that don't exist (yet). Just make sure they do once the application shall be used.
 
-3. Click Add. The app save in the app list.
+3. Click **Add**. The app save in the app list.
 
 Alternative `POST` to `/api/setup-v1/admin/application`
 
@@ -45,7 +45,7 @@ Alternative `POST` to `/api/setup-v1/admin/application`
 
 ### Generate Application Secret
 
-1. Click the **generate application secret** icon. 
+1. Click the **Generate Application Secret** icon. 
 
     ![Create a secret](img/Secret01.png)
 
@@ -55,7 +55,7 @@ Alternative `POST` to `/api/setup-v1/admin/application`
     ![See secret](img/Secret02.png)
 
     !!!note
-        Write or note the app secret and app id.
+        Write or note the App Secret and App Id.
 
 
 Alternative `POST` to `/api/setup-v1/admin/application/{{CLIENT_ID}}/secret?force=true`

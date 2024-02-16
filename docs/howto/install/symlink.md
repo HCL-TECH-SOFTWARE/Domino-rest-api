@@ -1,4 +1,4 @@
-# Domino 14 and Domino REST API
+# Create symlink for Domino 14 and Domino REST API
 
 When using Domino 14.0 with Domino REST API on Windows, 2 files need to be symbolically linked (symlink) to the `(DominoDir)\jvm\bin` directory.
 

@@ -35,19 +35,19 @@ curl --location --request POST "http://localhost:8880/api/v1/auth" \
 
     The command above is one line. To make it more readable it is broken
     into multiple lines using the "continuation character". On macOS/Linux
-    that is `\`, on Windows `^`
+    that is `\`, on Windows `^`.
 
 Alternative type `keep login`
 
 You will, on successful login, receive a JSON response we can verify on [jwt.io](https://jwt.io/).
 
-![Successful local login](img/localLogin.png)
+![Successful local login](img/localLogin.png){: style="height:80%;width:80%"}
 
 ### 2. Login using the OpenAPI UI
 
-The second tile on the landing page provides access to the openAPI UI (a.k.a Swagger)
+The second tile on the landing page provides access to the openAPI UI (a.k.a Swagger).
 
-![Access to Swagger](img/swagger1.png)
+![Access to Swagger](img/swagger1.png){: style="height:80%;width:80%"}
 
 Check you have the correct port, protocol and host. For a local installation, this is the set-up:
 
@@ -57,23 +57,23 @@ Check you have the correct port, protocol and host. For a local installation, th
 | protocol | http           |
 | host     | localhost      |
 
-![Access to Swagger](img/swagger2.png)
+![Access to Swagger](img/swagger2.png){: style="height:80%;width:80%"}
 
 Scroll down to `authentication`, expand `authLogin`, and click try it out. Fill in username and password.
 
-![Access to Swagger](img/swagger3.png)
+![Access to Swagger](img/swagger3.png){: style="height:80%;width:80%"}
 
 The resulting bearer needs to be copied into form behind the button. [Access to Swagger](img/swagger4.png).
 
-![Access to Swagger](img/swagger5.png)
+![Access to Swagger](img/swagger5.png){: style="height:80%;width:80%"}
 
 ### 3. Login Admin UI
 
-![Admin Login](img/AdminLogin.png)
+![Admin Login](img/AdminLogin.png){: style="height:80%;width:80%"}
 
 A successful login shows the Admin UI.
 
-![Admin UI](img/AdminUI.png)
+![Admin UI](img/AdminUI.png){: style="height:80%;width:80%"}
 
 ### 4. Login using Postman
 

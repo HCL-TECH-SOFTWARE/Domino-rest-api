@@ -43,8 +43,8 @@ A database can expose different sets of information based on different schema.
 
     Set formula for write access to `@false`
 
-    !!! danger 
-        "Don't forget to save".
+    !!! warning "Important" 
+        Don't forget to save.
 
 8. On the **Databse Views**, the view `(TrainingApprovals)`, and `PendingApprovals` must set to `active`.
 
@@ -54,15 +54,15 @@ A database can expose different sets of information based on different schema.
 1. Click **Scopes** from the navigation pane.
 2. Click **Add Scope**, on the **Scope Management**
 3. Select the schema `training` from the `ApprovalCentral.nsf` from  the **Available Schema**
-4. Fill in Scope Name as `trainingcorp`. Fill the Description.
+4. Fill in **Scope Name** as `trainingcorp`. Fill the **Description**.
   
-   Server and  Maximum Level Access, leave it as it is. 
+    Leave the **Server** and **Maximum Level Access** as they are. 
 
 5. Click **Add**. It will be added to your scopes list.
 
     ![Added scope](img/AddScope.png)
 
-alternative `POST` to `/api/setup-v1/admin/scope`
+Alternative `POST` to `/api/setup-v1/admin/scope`
 
 ```json
 {

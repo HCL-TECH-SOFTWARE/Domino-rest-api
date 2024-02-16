@@ -1,4 +1,4 @@
-# OpenAPI Definitions and specifications
+# OpenAPI definitions and specifications
 
 The Domino REST API is driven by multiple OpenAPI 3.0.2 specifications. Every Domino server is surfacing the specifications according to its configuration. Additionally each configured access to a database (referred to as scope) is available on your server.
 

@@ -6,10 +6,10 @@ The Domino REST API provides extensive configuration capabilities to cater to di
 
 ## What you will learn
 
-- FineTune KEEP configuration
+- Fine tune KEEP configuration
 - Switch on/off API endpoints
 
-![KEEP configuration](img/ActualConfiguration.svg)
+![KEEP configuration](img/ActualConfiguration.svg){: style="height:80%;width:80%"}
 
 ## Prerequisites
 

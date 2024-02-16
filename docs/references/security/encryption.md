@@ -19,7 +19,7 @@ If you create your own CA, you must:
 - Create the private key and root certificate.
 - Create an intermediate key and certificate.
 - Create certificates for your servers.
-- Convert them if necessary (e.g. for import in Java Keystore JKS).
+- Convert them if necessary, for example for import in Java KeyStore.
 - Make the public key of the root and intermediate certificates available.
 - Import these certificates in all browsers and runtimes used for testing.
 
@@ -31,7 +31,7 @@ Again: **It's generally better to use [LetsEncrypt](https://letsencrypt.org/)**.
 
 Domino REST API uses JWT for authentication. When you get started with Domino REST API, you probably log in with a Domino username and password. Domino REST API, out of the box, uses an ephemeral symmetric encryption key to sign requests. Since you can't see the key or share it, this configuration is reasonably secure. When you restart Domino REST API, a new key is used.
 
-To use a key that can be deployed to an external identity provider (IdP) or used to send requests to the Domino ID vault service, you must generate a public/private key pair and configure the [security](index.md) settings. Never share the private key!
+To use a key that can be deployed to an external identity provider (IdP) or used to send requests to the Domino ID vault service, you must generate a public/private key pair and configure the [security](index.md) settings. **Never share the private key**.
 
 Use the [OpenSSL](https://www.openssl.org/) tool to generate a key. The key is an [RSA](<https://en.wikipedia.org/wiki/RSA_(cryptosystem)>) key:
 
@@ -99,18 +99,18 @@ The 4 files get created in your `keepconfig.d` directory. Distribute them to all
 
 ## Example of how to create and set up Domino REST API on multiple Domino servers to use the same JWT keys
 
-- Login into the Management console (Port 8889).
-- Type a name you want to call this certificate into the "Certificate Name". No spaces or special characters.
+- Log in to the Management console (Port 8889).
+- Type a name you want to call this certificate into the **Certificate Name**. There should be no spaces or special characters.
 
-  - for example: MultiDomain
+    - for example: MultiDomain
 
-- Click "Create IdP certificate".
-- Domino REST API generates 4 files in this server's [Notesdata]/keepconfig.d directory:
+- Click **Create IdP Certificate**.
+- Domino REST API generates 4 files in this server's `[notesdata]/keepconfig.d` directory:
 
-  - MultiDomain.cert.pem
-  - MultiDomain.json
-  - MultiDomain.private.key.pem
-  - MultiDomain.public.key.pem
+    - MultiDomain.cert.pem
+    - MultiDomain.json
+    - MultiDomain.private.key.pem
+    - MultiDomain.public.key.pem
 
-- Copy these 4 files to your other Domino servers into the [notesdata]/keepconfig.d directory.
-- Restart Domino REST API on all servers with this new configuration and you are they will now share the same JWT keys.
+- Copy these 4 files to your other Domino servers into the `[notesdata]/keepconfig.d` directory.
+- Restart Domino REST API on all servers with this new configuration and they will now share the same JWT keys.

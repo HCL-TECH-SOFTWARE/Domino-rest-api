@@ -13,14 +13,14 @@
 
 ## Steps
 
-![config stack](img/ActualConfiguration.svg)
+![config stack](img/ActualConfiguration.svg){: style="height:80%;width:80%"}
 
 - Create a JSON file in `keepconfig.d` with any name, such as `portmagic.json`.
 - Add the content like below:
 
 !!! danger "[supersecret] isn't a good password"
 
-    You have to promise never to use that in production ore externally reachable servers
+    You have to promise never to use that in production or externally reachable servers:
 
     `FA1D8FC7DAA715F20A3C19F62451DCD011483EFBABE46A1C03F2CF0702365726:0A2AC2338974379073BEF880B2EA9E4FE86651974C83D3958DB73C81047CF3815456678A3EE206975CE17B7874589478A2FC92DCDF2C1794087AED94BF8FD4CA`
 

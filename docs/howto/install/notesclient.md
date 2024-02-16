@@ -1,4 +1,4 @@
-# Deployment to HCL Notes Client
+# Deploy to HCL Notes Client
 
 <!-- prettier-ignore -->
 !!! danger "**Domino REST API on Notes Client**"

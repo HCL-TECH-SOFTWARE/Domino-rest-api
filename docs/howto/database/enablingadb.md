@@ -1,16 +1,16 @@
 # Enable a database
 
-The Domino REST API does not expose any database to HTTP(S) by default. Enabling a database for REST access requires some configuration first:
+The Domino REST API doesn't expose any database to HTTP(S) by default. Enabling a database for REST access requires some configuration first:
 
 ![From DB to schema to scope](../../assets/images/KeepAPISteps.png)
 
 1. **Create a Domino REST API Schema** in the NSF database to be enabled. A database can have one or more Domino REST API schemas for different access needs. A Domino REST API schema is stored as JSON file in the database's design file resources.
 
-![Domino Designer with Domino REST API](../../assets/images/KeepSchemaFileResource1.png)
+    ![Domino Designer with Domino REST API](../../assets/images/KeepSchemaFileResource1.png)
 
-![Domino Designer with Domino REST API](../../assets/images/KeepSchemaFileResource2.png)
+    ![Domino Designer with Domino REST API](../../assets/images/KeepSchemaFileResource2.png)
 
-A brave developer could use Domino designer to create or update one. The rest (pun intended) use the API or the **Schema and Scope Management UI** (colloquially known as the AdminUI).
+    A brave developer could use Domino designer to create or update one. The rest use the API or the **Schema and Scope Management UI**, also known as the AdminUI.
 
 2. **Link a schema to a scope** The scope configuration is stored in the `KeepConfig.nsf` database. This separation of `scope` and `schema` means multiple scopes can link to a single schema. You use the scope name when performing all CRUD operations, it's the value to the query param `dataSource`. You can create the scope using the API or the AdminUI.
 
@@ -18,9 +18,9 @@ A brave developer could use Domino designer to create or update one. The rest (p
 
 ## The Domino REST API Schema
 
-The schema defines what views, folders, document and agents can be accessed through the Domino REST API. Access to documents is controlled by accessing their `Form` item and use the value to lookup access definitions, called `Mode` in Domino REST API's lingo that define the item names and properties accessible read- or writable.
+The schema defines what views, folders, document, and agents can be accessed through the Domino REST API. Access to documents is controlled by accessing their `Form` item and use the value to lookup access definitions, called `Mode` in Domino REST API's lingo that define the item names and properties accessible read- or writable.
 
-Since the exact terminology is long winded and colloquially often no distinction is made between document/item and form/field, the short version is: The Domino REST API schema controls access to forms and fields.
+Since the exact terminology is long winded and colloquially often no distinction is made between document/item and form/field, the short version is that the *Domino REST API schema controls access to forms and fields*.
 
 ![From DB to schema to scope](../../assets/images/KeepSchemaToApp.png)
 
@@ -38,13 +38,13 @@ The high level entry contains a few properties and the collection of forms, view
 
 | Entry                       | Description                                                                              |
 | --------------------------- | ---------------------------------------------------------------------------------------- |
-| **schemaName**              | internal name, matches the JSON file name in Domino design                               |
+| **schemaName**              | internal name, matches the JSON filename in Domino design                               |
 | **description**             | visible in AdminUI                                                                       |
 | **nsfPath**                 | path to nsf relative to data directory                                                   |
 | **iconName**                | name of the icon (fixed set) used in the UI. Alternative `icon` can contain a Base64 svg |
 | **isActive**                | Can the API be used now                                                                  |
 | **requireRevisionToUpdate** | Measure to prevent overwrite conflicts                                                   |
-| **allowDecryption**         | When also the user hass the permission, decrypt documents                                |
+| **allowDecryption**         | When also the user has the permission, decrypt documents                                |
 | **formulaEngine**           | domino (current only option)                                                             |
 | **openAccess**              | true - allow access when user has $DATA scope, false: require exact scope                |
 | **allowCode**               | Run supplied external code                                                               |
@@ -64,7 +64,7 @@ Views will show all columns contained
 
 ### Agents
 
-An array of agent names that can be called from the REST endpoint. The API doesn't check if the agent is suitable for being called individually, it is the developers responsibility to ensure this.
+An array of agent names that can be called from the REST endpoint. The API doesn't check if the agent is suitable for being called individually, it's the developers responsibility to ensure this.
 
 ### Forms & Mode
 
@@ -89,7 +89,7 @@ The form array has Form entries with 2 elements:
 
 ## Access formulas
 
-The avalability of access formulas follows typical Notes development pattern where actions are rendered based on Formula conditions (a.k.a HideWhen formula). Typically those formula include references the user name, role or group membership and item values like `Status` or `Approver`
+The availability of access formulas follows typical Notes development pattern where actions are rendered based on Formula conditions (a.k.a HideWhen formula). Typically, those formula include references to the user name, role, or group membership and item values like `Status` or `Approver`
 
 ## Domino REST API Fields
 
@@ -111,7 +111,7 @@ We follow the ideas proposed by [JSON schema](https://json-schema.org) with the 
 
 ## FieldGroups
 
-A typical Notes constuct are documents containing a group of multi value fields, where values with the same index position form a record. On the REST API that is an odd construction. A document might get returned like this:
+A typical Notes construct are documents containing a group of multi value fields, where values with the same index position form a record. On the REST API that's an odd construction. A document might get returned like this:
 
 ![Domino REST API Fields](../../assets/images/SampleJsonNoFieldGroup.png)
 
@@ -121,7 +121,7 @@ By assigning the fields `Name`, `age` and `fruit` the **fieldGroup** `LostBoys`,
 
 ### Form aliases
 
-The form aliases object allows to specify additional values in the form item to be mapped to the form configuration in the schema. The AdminUI will use form alias information extracted from the database design, but the API is not bound to these settings
+The form aliases object allows to specify additional values in the form item to be mapped to the form configuration in the schema. The AdminUI will use form alias information extracted from the database design, but the API isn't bound to these settings
 
 ### Sample Schema
 
@@ -132,7 +132,7 @@ The form aliases object allows to specify additional values in the form item to 
 Follow the tutorial for instructions on how to do this using [AdminUI](../../tutorial/adminui.md) or [Postman or curl](../../tutorial/postmancurl.md).
 
 It's worth noting that all the actions that you can do using the Admin UI can also be done using Postman, curl, or any similar tool.
-Below are some examples to perform additional actions for database and application management, like adding a database, listing views, agents and forms, listing and adding application.
+Below are some examples to perform additional actions for database and application management, like adding a database, listing views, agents, and forms, and listing and adding application.
 
 A group of API requests is known as a collection. Each collection may have subfolders and multiple requests. Request URL or the endpoint is used to identify the link to where the API will communicate with.
 
@@ -508,7 +508,7 @@ curl --location --request POST 'localhost:8880/api/setup-v1/admin/scope' \
 
 ### List available views
 
-To list the views available through this scope, run the following command. Find the applicable Request URL from the OpenAPI Specification document.Execute. For `GET` request, body is not needed.
+To list the views available through this scope, run the following command. Find the applicable Request URL from the OpenAPI Specification document. Execute. For `GET` request, body isn't needed.
 
 ![ListViews](../../assets/images/listviews.png)
 
@@ -525,7 +525,7 @@ curl --location --request GET 'localhost:8880/api/v1/lists?dataSource=demo' \
 
 ### Retrieve documents from the Customers view
 
-Find the applicable Request URL from the OpenAPI Specification document. Execute. For `GET` request, body is not needed.
+Find the applicable Request URL from the OpenAPI Specification document. Execute. For `GET` request, body isn't needed.
 
 ![RetrieveView](../../assets/images/retrieveview.png)
 
@@ -543,7 +543,7 @@ curl --location -g --request GET 'localhost:8880/api/v1/lists/Customers?dataSour
 
 ### List available agents
 
-To list the agents, run the following command. Find the applicable Request URL from the OpenAPI Specification document. Execute. For `GET` request, body is not needed.
+To list the agents, run the following command. Find the applicable Request URL from the OpenAPI Specification document. Execute. For `GET` request, body isn't needed.
 
 ![ListAgents](../../assets/images/listagents.png)
 
@@ -559,7 +559,7 @@ curl --location --request GET 'localhost:8880/api/setup-v1/design/agents?dataSou
 
 ### List available forms
 
-To list the forms available through this scope, run the following command. Find the applicable Request URL from the OpenAPI Specification document.Execute. For `GET` request, body is not needed.
+To list the forms available through this scope, run the following command. Find the applicable Request URL from the OpenAPI Specification document. Execute. For `GET` request, body isn't needed.
 
 ![ListForms](../../assets/images/ListForms.png)
 
@@ -600,7 +600,7 @@ curl --location --request POST 'localhost:8880/api/v1/document?dataSource=demo' 
 
 ### Retrieving a document
 
-Find the applicable Request URL from the OpenAPI Specification document.Execute. For `GET` request, body isn't needed.
+Find the applicable Request URL from the OpenAPI Specification document. Execute. For `GET` request, body isn't needed.
 
 <!-- prettier-ignore -->
 !!! tip "Document UniversalID (unid)"
@@ -611,7 +611,7 @@ Find the applicable Request URL from the OpenAPI Specification document.Execute.
 <!-- prettier-ignore -->
 !!! tip "Postman Variables"
     In the image above `{{UNID_0}}` is a Postman Environment Variable that automatically got created if you ran the `Create Document` Postman test. This is a feature built into the Postman collection we provided.
-    If you are not using Postman, replace that with the `unid` of the document you'd like to retrieve.
+    If you aren't using Postman, replace that with the `unid` of the document you'd like to retrieve.
 
 <details>
 <summary>cURL code snippet</summary>
@@ -629,7 +629,7 @@ curl --location -g --request GET 'localhost:8880/api/v1/document/$Unid/default?d
 
 ### List available applications
 
-To live the available applications, run the following command. Find the applicable Request URL from the OpenAPI Specification document.Execute. For `GET` request, body is not needed.
+To live the available applications, run the following command. Find the applicable Request URL from the OpenAPI Specification document. Execute. For `GET` request, body isn't needed.
 
 ![ListApplications](../../assets/images/ListApplications.png)
 

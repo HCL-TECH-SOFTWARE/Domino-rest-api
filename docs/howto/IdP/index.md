@@ -4,9 +4,9 @@
 
 Topics to guide you in completing goals and tasks about Identity Provider in relation to Domino REST API:
 
-
+- [Configure Domino Rest API IdP](configuredrapiIdP.md)
 - [Configure Domino REST API to use Domino's IdP Provider in Domino 14 or greater](configureidpcat.md)
-- [Configure Active Directory as IdP](configuringAD.md)
+- [Configure Azure Active Directory as IdP](configuringAD.md)
 - [Configure certificates](configuringCertificates.md)
 - [Configure an identity provider](configuringIdentityProvider.md)
 - [Configure Keycloak](configuringKeycloak.md)
