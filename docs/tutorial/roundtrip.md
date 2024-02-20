@@ -1,13 +1,13 @@
 # Setup Office Round Trip Experience
 
-Microsoft Office Round Trip Experience is a feature of the Domino REST API that enhances the functionality of Office files attached to Domino documents. This feature allows developers to enhance user functionality by enabling them to easily launch attachments from the Domino platform using popular Office Document applications such as MS-Word, MS-Excel, and MS-Powerpoint. Users can seamlessly read, edit, and save these attachments without any extra effort. 
+Microsoft Office Round Trip Experience is a feature that is included in the core functionality of the Domino REST API that is responsible for Office files that are attached to Domino documents. This makes editing documents easier by opening Office files directly in their native applications and saving changes back to the Domino server where they were attached.
 
-It is meant to improve how attachments run in Domino documents. Instead of needing to detach, modify locally, and reattach documents, this URL link enables users to interact with documents directly from within their Domino apps.
+Now, you only need to click the "**Save**" button once to do everything. No more downloading, editing, and uploading again.
 
 ## Prerequisite
 
-- You must install the MS Office app or use the Office 365.
-- You must need to run your Domino in HTTPs. 
+- Make sure your computer has Microsoft Office installed or can access Office 365.
+- You must need to run your Domino REST API in HTTPs. 
 
 
 ## Open and edit office documents
