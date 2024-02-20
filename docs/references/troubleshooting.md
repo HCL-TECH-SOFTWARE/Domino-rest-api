@@ -82,4 +82,41 @@ This setting can get reset each time you start Notes depending upon your organiz
 
 ## Logging
 
-Info and error logs are stored in the `domino-keep.log` file located in your Notes Data's `IBM_TECHNICAL_SUPPORT` directory. This log file is a rolling file and gets moved to a new file with a date stamp if Domino REST API is restarted or the file becomes larger for 10 MB. Thirty days of logs are retained.
+The Domino REST API uses the [Apache log4j2](https://logging.apache.org/log4j/2.x/) logging framework. By default logs are stored in the file domino-keep.log in the sub directory IBM_TECHNICAL_SUPPORT of your Notes Domino data directory.
+
+The log files are set to periodically roll over on a daily basis or when they reach a size of 10MB. Logs are kept for a period of 30 days.
+
+The default `log4j2.properties` file controls all of this. If you're looking to make changes to the logging, such as modifying the file name, adjusting the logging destination (like sending it to a log analyzer), or modifying the log level, there are options available. You can set your own logging parameters.
+
+Familiarity with [Apache log4j2](https://logging.apache.org/log4j/2.x/) is strongly recommended. The configuration has two steps:
+
+   - Specify the location of the configuration file for `Notes/Domino` (you can choose any name other than `log4j2.properties` that you prefer).
+   - Provide the file.
+    
+It is possible to have several configuration files, but only one will be active at any given time.
+
+### Provide your own logging configuration
+
+ This guide will show you how to create your own logging configuration. The purpose is to change the logging configuration to your needs. Typically that would be to (temporarily) adjust logging levels like `DEBUG` and `TRACE` or to integrate tools like [LogStash.](https://www.elastic.co/guide/en/logstash/current/logging.html#log4j2)
+
+1. Open the `notes.ini` file. You may refer to [Editing NOTES.INI file](https://help.hcltechsw.com/domino/12.0.0/admin/conf_editingthenotesinifile_c.html).
+2. You can add the `KeepLogConfigFile` parameters with the following settings and save. The `KeepLogConfigFile` option can be added to `notes.ini` to edit the log configuration file.
+
+    **Configuration settings:**
+
+    - **Windows:** `KeepLogConfigFile=C:\path\to\log4j2.properties`
+    - **Linux:** `KeepLogConfigFile=/path/to/log4j2.properties` 
+
+!!!note
+    - You can find the default `log4j2.properties` file inside the file `keep-core jar`.
+    - For example, extract the contents of the `keep-core-1.28.2.jar` file and include the `log4j2.properties` file.
+
+Just a few things to keep in mind: 
+
+- The "`jar`" component is included in your Java installation. If your path doesn't lead there, you'll need to indicate the directory to your `java\bin folder`.
+- Make sure to specify the version of your `keep-core file`, as it may differ from the one shown in the example.
+- Make sure to remove the `log4j2.properties` file from your Rest API directory to avoid potential issues with upgrades.
+- The `log4j.properites` file for the Domino REST API may undergo changes without prior notice. If you observe any differences in the logging behavior after a recent upgrade, it is recommended to extract and review the updated `log4j` file.
+- Check out the [Log4J documentation](https://logging.apache.org/log4j/log4j-2.0-beta7/manual/appenders.html) for details on the available settings.
+
+
