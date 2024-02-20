@@ -82,11 +82,11 @@ This setting can get reset each time you start Notes depending upon your organiz
 
 ## Logging
 
-The Domino REST API uses the [Apache log4j2](https://logging.apache.org/log4j/2.x/) logging framework. By default logs are stored in the file domino-keep.log in the sub directory IBM_TECHNICAL_SUPPORT of your Notes Domino data directory.
+The Domino REST API uses the [Apache log4j2](https://logging.apache.org/log4j/2.x/) logging framework. By default logs are stored in the file `domino-keep.log` in the sub directory `IBM_TECHNICAL_SUPPORT` of your `Notes/Domino` data directory.
 
-The log files are set to periodically roll over on a daily basis or when they reach a size of 10MB. Logs are kept for a period of 30 days.
+The log files are set to periodically roll over on a daily basis or when they reach a size of 10MB. Logs are kept for a period of **30 days.**
 
-The default `log4j2.properties` file controls all of this. If you're looking to make changes to the logging, such as modifying the file name, adjusting the logging destination (like sending it to a log analyzer), or modifying the log level, there are options available. You can set your own logging parameters.
+The default `log4j2.properties` file controls all of this. If you're looking to make changes to the logging, such as modifying the file name, adjusting the logging destination (like sending it to a log analyzer), or modifying the log level, you can set your own logging parameters.
 
 Familiarity with [Apache log4j2](https://logging.apache.org/log4j/2.x/) is strongly recommended. The configuration has two steps:
 
