@@ -14,13 +14,49 @@ The section provides the information related to Domino REST API.
 
     **New**
 
+    - Added `POST v1/profiledocument` endpoint to create and update an existing profile document. 
+        
+    !!!warning "Important" 
+	    A POST request replaces all fields listed in your schema. Ensure to include all the fields in the POST request body and the corresponding values you want to retain and overwrite.
+
+    - Added `DELETE v1/profiledocument` endpoint to delete a profile document as long as the schema allows it.
+    - Added `GET setup-v1/admin/purge` endpoint to discover scopes that no longer have a valid schema because the schema no longer exists, the schema has invalid JSON, a corrupted NSF, or the NSF no longer exists.
+    - Added  `POST setup-v1/admin/purge` endpoint to specify the schema and scope information to remove using the GET setup-v1/admin/purge endpoint response.
+    - Added Microsoft Office round-trip editing capability to simplify document editing experience by launching Office documents directly into their native applications and saving changes back to the server. For more information, see [Setup Office Round Trip Experience](../tutorial/roundtrip.md).
+
     **Improvements**
 
+    - <span style="color:red">The **`GET v1/profiledocument` endpoint has been updated**. Previously, this endpoint returned the complete profile document by default, but starting this release, you must define a schema to get a Profile document. The need for the schema also applies to the new `POST v1/profiledocument` and `DELETE v1/profiledocument` endpoints.</span> 
+ 
+        <span style="color:red">Profile documents do not always have a Form associated with them. In such cases, you must create a schema for the Form named "Profile" (case sensitive). Profile documents without a Form will look for the "Profile" schema and return the error "No form and mode configuration found for Profile/default" if the schema doesn't exist.</span>
+ 
+        <span style="color:red">The easiest way to create the "Profile" schema is to create a Form named "Profile" in the database containing all fields you need to retrieve or update and then add the Form Schema. Alternatively, you can create the schema programmatically by following the steps:</span>
+
+        1. Call the `GET setup-v1/schema` endpoint to get the schema where you want to add the "Profile" form.
+        2. Copy the response to a text editor, and modify it by adding the "Profile" form and the fields required using other Form schemas as a guide.
+        3. Update the whole schema using the `POST setup-v1/schema` endpoint. 
+ 
+        <span style="color:red">Make sure to save a copy of the `GET setup-v1/schema` response in case you need to revert to the previous version. In a future release, you will be able to add a Form schema for a form that doesn't exist in the database and will be able to add the Profile using this method.</span> 
+ 
+        !!!note
+            The `GET v1/profiledocument` endpoint no longer creates a profile document. Instead, use the `POST v1/profiledocument` endpoint to create one.
+
+    - Reduced heap memory used by Domino REST API.
+    - Added option to use a named key when using the `v1/profiledocument` endpoints.
+    - Added the date time attributes of a **datetime** field when executing the `setup-v1/design/forms/{designName}` endpoint.
+
     **Resolved Issues**
+
+    - Passkey on **Admin UI** didn't work on newer versions of Safari.
+    - The `setup-v1/design/{designType}/{designName}` endpoint returned shared libraries.
 
     **Others**
 
     - Implemented documentation updates.
+    - Installer jar files:
+	    - For Domino 14: *restapiInstall-r14.jar*
+	    - For Domino 12: *restapiInstall-r12.jar*
+
     - Docker image version for docker compose .env file (CONTAINER_IMAGE):
         - For Domino 14: *domino-rest-api:1.0.10-r14*
         - For Domino 12: *domino-rest-api:1.0.10-r12*  
@@ -51,7 +87,7 @@ The section provides the information related to Domino REST API.
         6. Install the Domino 14 version of the Domino REST API.
         7. Start Domino.
 
-    - Added endpoint `POST v1/query/qrp/json` to perform a DQL query to get back QueryResultsProcessor JSON results. For an example of usage, see *Swagger UI*. 
+    - Added `POST v1/query/qrp/json` endpoint to perform a DQL query to get back QueryResultsProcessor JSON results. For an example of usage, see *Swagger UI*. 
 
     **Improvements**
 
@@ -63,7 +99,7 @@ The section provides the information related to Domino REST API.
 
     **Resolved Issues**
 
-    - Shared Fields, Shared Actions and Item Definitions were not returned when retrieving them from the `GET setup-v1/design/{DesignType}/{DesignName}` endpoint.
+    - Shared Fields, Shared Actions and Item Definitions were not returned when retrieving them from the `GET setup-v1/design/{designType}/{designName}` endpoint.
     - Access-control-allow-headers were not being set in the CORS response.
     - A returned field specified as Rich Text in the Form and Schema was not actually Rich Text on the document. 
     - Views or Folders were retrieved even if the column was defined as *Show Responses only*.
