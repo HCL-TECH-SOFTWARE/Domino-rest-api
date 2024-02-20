@@ -36,13 +36,13 @@ The section provides the information related to Domino REST API.
         2. Copy the response to a text editor, and modify it by adding the "Profile" form and the fields required using other Form schemas as a guide.
         3. Update the whole schema using the `POST setup-v1/schema` endpoint. 
  
-        <span style="color:red">Make sure to save the initial schema in case you need to revert to the correct version. In a future release, you can add a Form schema for a form that doesn't exist in the database.</span> 
+        <span style="color:red">Make sure to save a copy of the `GET setup-v1/schema` response in case you need to revert to the previous version. In a future release, you will be able to add a Form schema for a form that doesn't exist in the database and will be able to add the Profile using this method.</span> 
  
         !!!note
             The `GET v1/profiledocument` endpoint no longer creates a profile document. Instead, use the `POST v1/profiledocument` endpoint to create one.
 
     - Reduced heap memory used by Domino REST API.
-    - Added option to use a named key when using the `v1/profiledocument` endpoint.
+    - Added option to use a named key when using the `v1/profiledocument` endpoints.
     - Added the date time attributes of a **datetime** field when executing the `setup-v1/design/forms/{designName}` endpoint.
 
     **Resolved Issues**
