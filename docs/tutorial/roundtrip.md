@@ -34,7 +34,7 @@ Now, you only need to click the "**Save**" button once to do everything. No more
     |:-----|:--------|
     |(office scheme name)| Here is a list of scheme names that have been implemented in Microsoft Office applications. Once Microsoft Office is installed, the operating system registers each scheme name to be managed by the corresponding Office product. <br></br> <br>ms-word:</br><br>ms-powerpoint:</br><br>ms-excel:</br><br>ms-visio:</br><br>ms-access:</br>|
     | office command argument (optional) | Executing this command will prompt the program to open the document specified by the URI in a mode that only allows reading or viewing.  <br></br> <br> ofv - to view the document </br> <br>ofe - to edit the document</br>|
-    |Domino Rest API hostname| It is the Domino REST API where your Domino document is attached. Note: This feature works only for HTTPS or HTTP.  |
+    |Domino REST API hostname| It is the Domino REST API where your Domino document is attached. Note: This feature works only for HTTPS or HTTP.  |
     | dataSource | It is the Domino database where your current document is uploaded or attached.|
     | document UNID| The Universal ID in which the document is attached or uploaded.|
     | filename | It is the name of the the file that ends in  Office extension. |
@@ -50,13 +50,13 @@ Now, you only need to click the "**Save**" button once to do everything. No more
     Example link:
     [ms-word:ofv|u|whitepalace.keepproject.io:8880/api/webdav-v1/attachmentdb/2D88CDF9549379C700258A9F002797CA/sample.docx](ms-word:ofv|u|whitepalace.keepproject.io:8880/api/webdav-v1/attachmentdb/2D88CDF9549379C700258A9F002797CA/sample.docx)
 
-3. The **Office Form Base Authentication (OFBA)** page will appear. **Provide** your login details for the Domino Rest API. If your credentials are incorrect, the MS Office will restrict you from opening the document.
+3. The **Office Form Base Authentication (OFBA)** page will appear. **Provide** your login details for the Domino REST API. If your credentials are incorrect, the MS Office will restrict you from opening the document.
     
     !!!info
         One way to handle authentication is by using Office Forms Based Authentication [(OFBA)](https://learn.microsoft.com/en-us/openspecs/sharepoint_protocols/ms-ofba/30c7bbe9-b284-421f-b866-4e7ed4866027), which includes a link to the format [Office URI schemes](https://learn.microsoft.com/en-us/office/client-developer/office-uri-schemes). This is necessary since browsers and office applications do not currently support cookie and header sharing.
 
     !!!note
-        - For the Office Form Base Authentication to work, your Domino Rest API must be connected to and running on HTTPs.
+        - For the Office Form Base Authentication to work, your Domino REST API must be connected to and running on HTTPs.
         - If the command argument is `ofe`, this will open and and lets you edit the document.
         - If the command argument is `ofv`, this will let you open and read only the document.
     
@@ -71,7 +71,7 @@ Now, you only need to click the "**Save**" button once to do everything. No more
 
     ![alt text](../assets/images/rtmodify.png)
 
-    Try to open the link again, enter your **OFBA** or your **Domino Rest API credentials**. The document has been modified.
+    Try to open the link again, enter your **OFBA** or your **Domino REST API credentials**. The document has been modified.
 
     ![alt text](../assets/images/rtsave.png)
 
