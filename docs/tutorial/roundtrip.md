@@ -15,7 +15,6 @@ Now, you only need to click the "**Save**" button once to do everything.
 1. **Attach** files in your documents on your Domino server. In order to use the "*office round trip experience*", you must attach any MS Office Word, Powerpoint or Excel or CSV or any file that runs in Microsoft Office.
 
 2. After attaching the file, those Office attachments will be accessible using the following format:
-
     ```
     (office scheme name):(optional office command argument)|u|(DRAPI+ HTTPs hostname)/api/webdav-v1/(dataSource)/(document UNID)/(filename)
     ```
