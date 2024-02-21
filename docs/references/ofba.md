@@ -3,12 +3,12 @@
 Here are the file formats often used by various applications within the Microsoft Office suite and Office 365 apps. Office Form-Based Authentication can access these file types through the Domino REST API to open and modify office documents.
 
 
- ### Generic
+## Generic
      
     csv=ms-excel:ofv|u|%s,ms-excel:ofe|u|%s
      
 
- ### Microsoft Word
+## Microsoft Word
       
     doc=ms-word:ofv|u|%s,ms-word:ofe|u|%s
     docm=ms-word:ofv|u|%s,ms-word:ofe|u|%s
@@ -18,7 +18,7 @@ Here are the file formats often used by various applications within the Microsof
     dotx=ms-word:ofv|u|%s,ms-word:ofe|u|%s
      
 
- ### Microsoft Powerpoint
+## Microsoft Powerpoint
      
     pot=ms-powerpoint:ofv|u|%s,ms-powerpoint:ofe|u|%s
     potm=ms-powerpoint:ofv|u|%s,ms-powerpoint:ofe|u|%s
@@ -33,7 +33,7 @@ Here are the file formats often used by various applications within the Microsof
     sldx=ms-powerpoint:ofv|u|%s,ms-powerpoint:ofe|u|%s
      
 
- ### Microsoft Excel
+## Microsoft Excel
      
     xla=ms-excel:ofv|u|%s,ms-excel:ofe|u|%s
     xlam=ms-excel:ofv|u|%s,ms-excel:ofe|u|%s
@@ -48,7 +48,7 @@ Here are the file formats often used by various applications within the Microsof
     xlw=ms-excel:ofv|u|%s,ms-excel:ofe|u|%s
      
 
- ### Microsoft Visio
+## Microsoft Visio
      
     vdx=ms-visio:ofv|u|%s,ms-visio:ofe|u|%s
     vsd=ms-visio:ofv|u|%s,ms-visio:ofe|u|%s
@@ -59,7 +59,7 @@ Here are the file formats often used by various applications within the Microsof
     vsx=ms-visio:ofv|u|%s,ms-visio:ofe|u|%s
     vtx=ms-visio:ofv|u|%s,ms-visio:ofe|u|%s
      
- ### Microsoft Access
+## Microsoft Access
      
     accda=ms-access:ofv|u|%s,ms-access:ofe|u|%s
     accdb=ms-access:ofv|u|%s,ms-access:ofe|u|%s
@@ -72,19 +72,19 @@ Here are the file formats often used by various applications within the Microsof
     mdb=ms-access:ofv|u|%s,ms-access:ofe|u|%s
     
 
- ### Microsoft Project
+## Microsoft Project
      
     mpd=ms-project:ofv|u|%s,ms-project:ofe|u|%s
     mpp=ms-project:ofv|u|%s,ms-project:ofe|u|%s
     mpt=ms-project:ofv|u|%s,ms-project:ofe|u|%s
      
 
- ### Microsoft Publisher
+## Microsoft Publisher
      
     pub=ms-publisher:ofv|u|%s,ms-publisher:ofe|u|%s
      
 
- ### Microsoft InfoPath
+## Microsoft InfoPath
      
     xsn=ms-infopath:ofv|u|%s,ms-infopath:ofe|u|%s
     xsf=ms-infopath:ofv|u|%s,ms-infopath:ofe|u|%s
