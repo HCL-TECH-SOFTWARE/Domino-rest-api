@@ -74,4 +74,4 @@ Now, you only need to click the "**Save**" button once to do everything. No more
     ![alt text](../assets/images/rtsave.png)
 
 !!!tip "Microsoft Office Round Trip edit"
-    This feature enables you to access compatible file formats, particularly those commonly used in Microsoft office settings, using their respective native applications. This speeds up the process of downloading. When saving the file, it is sent back to the document on the server. No need to download and reattach again the document.
+    This feature enables you to access compatible file formats, particularly those commonly used in Microsoft office settings, using their respective native applications. When saving the file, it is sent back to the document on the server. No need to download and reattach again the document.
