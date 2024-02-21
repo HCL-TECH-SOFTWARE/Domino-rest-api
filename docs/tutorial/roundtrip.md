@@ -50,13 +50,13 @@ Now, you only need to click the "**Save**" button once to do everything.
     Example link:
     [ms-word:ofv|u|whitepalace.keepproject.io:8880/api/webdav-v1/attachmentdb/2D88CDF9549379C700258A9F002797CA/sample.docx](ms-word:ofv|u|whitepalace.keepproject.io:8880/api/webdav-v1/attachmentdb/2D88CDF9549379C700258A9F002797CA/sample.docx)
 
-3. The **Office Forms Base Authentication (OFBA)** page will appear. **Provide** your login details for the Domino REST API. If your credentials are incorrect, the MS Office will restrict you from opening the document.
+3. The **Office Forms Based Authentication (OFBA)** page will appear. **Provide** your login details for the Domino REST API. If your credentials are incorrect, the MS Office will restrict you from opening the document.
     
     !!!info
         One way to handle authentication is by using Office Forms Based Authentication [(OFBA)](https://learn.microsoft.com/en-us/openspecs/sharepoint_protocols/ms-ofba/30c7bbe9-b284-421f-b866-4e7ed4866027), which includes a link to the format [Office URI schemes](https://learn.microsoft.com/en-us/office/client-developer/office-uri-schemes). This is necessary since browsers and office applications do not currently support cookie and header sharing.
 
     !!!note
-        - For the Office Form Base Authentication to work, your Domino REST API must be connected to and running on HTTPs.
+        - For the Office Forms Based Authentication to work, your Domino REST API must be connected to and running on HTTPs.
         - If the command argument is `ofe`, this will open and and lets you edit the document.
         - If the command argument is `ofv`, this will let you open and read only the document.
     
