@@ -19,7 +19,6 @@ Now, you only need to click the "**Save**" button once to do everything.
     (office scheme name):(optional office command argument)|u|(DRAPI+ HTTPs hostname)/api/webdav-v1/(dataSource)/(document UNID)/(filename)
     ```
     Example:
-
     [ms-word:ofv|u|whitepalace.keepproject.io:8880/api/webdav-v1/attachmentdb/2D88CDF9549379C700258A9F002797CA/sample.docx](ms-word:ofv|u|whitepalace.keepproject.io:8880/api/webdav-v1/attachmentdb/2D88CDF9549379C700258A9F002797CA/sample.docx)
     
     ![alt text](../assets/images/rtlink.png)
