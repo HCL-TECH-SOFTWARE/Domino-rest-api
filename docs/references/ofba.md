@@ -1,7 +1,6 @@
 # Extensions used to open the Microsoft Office in OFBA
  
-Here are the file formats often used by various applications within the Microsoft Office suite and Office 365 apps. Office Form-Based Authentication can access these file types through the Domino REST API to open and modify office documents.
-
+Here are the file formats often used by various applications within the Microsoft Office suite and Office 365 apps. Office Forms Based Authentication can access these file types through the Domino REST API to open and modify office documents.
 
 ## Generic
      
