@@ -23,7 +23,7 @@ By default the ports are set in Domino REST API as specified in the documentatio
         "MANAGMENTPORT": 8889,
         "METRICSPORT": 8890,
         "HEALTHCHECKPORT": 8886,
-        "FIREHOSEPORT": 42424,
+        "FIREHOSEPORT": 42424
         }
     ``` 
 
