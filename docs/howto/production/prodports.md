@@ -17,16 +17,13 @@ By default the ports are set in Domino REST API as specified in the documentatio
     - "METRICSPORT" for the Metrics port
     - "HEALTHCHECKPORT" for the Health Check port
 
-
     ```json    
         {
         "PORT": 8857,
         "MANAGMENTPORT": 8889,
         "METRICSPORT": 8890,
         "HEALTHCHECKPORT": 8886,
-        "FIREHOSEPORT": 42424, {
-        "active": true
-        },
+        "FIREHOSEPORT": 42424
         }
     ``` 
 
