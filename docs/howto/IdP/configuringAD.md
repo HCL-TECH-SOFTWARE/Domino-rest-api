@@ -157,7 +157,7 @@ All URLs are retrievable by accessing the _OpenID Connect_ metadata document, co
       Remarks:
 
       - The `AzureAD01` isn't a fixed value. Pick anything that makes it clear for you. We strongly suggest to use the value as the filename too.
-      - The `aud` parameter is the Application ID or the URI configured in [Expose an API](#api-definition) (e.g. `api://dominorest`).
+      - The `aud` parameter is the Application ID in [Expose an API](#api-definition) (the `id` parameter in the manifest, **not** the Application ID URI).
       - The `iss` parameter is different from what the `openid-configuration` reports. The URL changed from `https://login.microsoftonline.com/[your-tennantid-here]/v2.0` to `https://sts.windows.net/[your-tennantid-here]/`, so you need to specify it here.
       - Currently, Azure AD doesn't return the `alg` claim in the `jwks_uri`, you have to specify it here.
 
