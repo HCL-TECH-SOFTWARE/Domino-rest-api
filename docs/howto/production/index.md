@@ -11,4 +11,5 @@ Topics to guide you in completing configuration goals and tasks in relation to d
 - [Configuring HTTPS](httpsprod.md)
 - [JWT multi server](jwtmultiserver.md)
 - [Configuring Ports](prodports.md)
+- [Setup Office Round Trip Experience](roundtrip.md)
 - [Update Domino REST API](versionupdate.md)
