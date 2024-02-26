@@ -23,7 +23,7 @@ This tutorial includes multiple sections. You will see how to add a database to 
 
 Additional tutorials are available [here](https://opensource.hcltechsw.com/domino-keep-tutorials/). For more information, see the descriptions below: <!--and also [can be found here](https://opensource.hcltechsw.com/domino-keep-tutorials/):-->
 
-For new features, please see the [Office Round Trip Experience with Domino Documents](../tutorial/roundtrip.md)
+<!--For new features, please see the [Office Round Trip Experience with Domino Documents](../tutorial/roundtrip.md)-->
 
 ### Notes and Domino Developers
 
