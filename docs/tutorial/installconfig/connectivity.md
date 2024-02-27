@@ -3,7 +3,7 @@
 Once your REST API is up and running, check that communication works as expeceted. We will use the following name in this page:
 
 - Fully qualified domain name ([FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)): `domino.acme.com`
-- Domino server fullt qualified name: `CN=tango/OU=servers/O=ACME Inc`
+- Domino server fully qualified name: `CN=tango/OU=servers/O=ACME Inc`
 - Domino server common name: `tango`
 
 Replace these names with the ones matching your installation.
