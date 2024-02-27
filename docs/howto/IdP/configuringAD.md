@@ -158,7 +158,7 @@ All URLs are retrievable by accessing the _OpenID Connect_ metadata document, co
 
       - The `AzureAD01` isn't a fixed value. Pick anything that makes it clear for you. We strongly suggest to use the value as the filename too.
       - The `aud` parameter is the Application ID in [Expose an API](#api-definition) (the `id` parameter in the manifest, **not** the Application ID URI).
-      - The `iss` parameter might be different from what the `openid-configuration` reports. So compare the values. We have seen the URL changed from `https://login.microsoftonline.com/[your-tennantid-here]/v2.0` to `https://sts.windows.net/[your-tennantid-here]/`, if that is so you need to specify it here.
+      - The `iss` parameter might be different from what the `openid-configuration` reports. So compare the values. We've seen the URL changed from `https://login.microsoftonline.com/[your-tennantid-here]/v2.0` to `https://sts.windows.net/[your-tennantid-here]/`, if that's so you need to specify it here.
       - Currently, Azure AD doesn't return the `alg` claim in the `jwks_uri`, you have to specify it here.
 
 3. Restart Domino REST API.
@@ -210,15 +210,15 @@ Check the results:
 
 ![Azure app registration](../../assets/images/configuringAD-22.png){: style="height:70%;width:70%"}
 
-## Trouble shooting
+## Troubleshooting
 
 A few tips to troubleshoot the setup when the goalpost has been moved:
 
-- Grab the JWT token and paste it at the [JWT.io](https://jwt.io) website to decode the JSON payload
-- When your corporate policy prohibits that, take the string between the two `.` and send it through a Base64 decoder: `echo [the string] | base64 --decode` (optional `| jq`)
-- Compare the `iss` from the JWT with the `issuer` from the `openid-configuration` endpoint. If they don't match, you need to add `iss` to the configuration file
-- Compare the `aud` value from the JWT token with the `aud` value of the configuration file. Adjust if different
-- Check the `scp`, Microsoft's "alternative" to `scope`, does it have the expected values matching the settings in the application configuration (Admin UI)?
+- Grab the JWT token and paste it at the [JWT.io](https://jwt.io) website to decode the JSON payload.
+- If your corporate policy prohibits that, then extract the string between the two `.` from your JWT token and send it through a Base64 decoder: `echo [the string] | base64 --decode | jq`. Kindly note that `| jq` is optional.
+- Compare the `iss` value from the JWT token with the `issuer` value from the `openid-configuration` endpoint. If they don't match, you need to add the `iss` to the configuration file.
+- Compare the `aud` value from the JWT token with the `aud` value of the configuration file. Adjust if different.
+- Check the `scp`, which is Microsoft's "alternative" to `scope`, and make sure it has the expected values matching the settings in the application configuration in the Admin UI.
 
 ## Let's connect
 
