@@ -6,6 +6,10 @@ After installation the Domino REST API will run on port 8880 with http and a tra
 
 The headlines link to details for each task. Feedback is welcome.
 
+## [Check connectivity](./connectivity.md)
+
+First order after your installation is to ensure connectivity works. There are a few moving parts, check it carefully
+
 ## [Securing ports](../installconfig/configuringPorts.md)
 
 A production environment must encrypt the communication between any client and the Domino REST API Server. We use multiple ports, learn how to secure them.
