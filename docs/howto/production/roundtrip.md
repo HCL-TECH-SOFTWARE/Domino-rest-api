@@ -60,7 +60,7 @@ The procedure guides you on how to setup and use the Microsoft Office Round Trip
     !!!info
         The authentication is based on the [Office Forms Based Authentication (OFBA)](https://learn.microsoft.com/en-us/openspecs/sharepoint_protocols/ms-ofba/30c7bbe9-b284-421f-b866-4e7ed4866027){: target="_blank" rel="noopener noreferrer"} protocol. This is necessary since browsers and office applications don't currently support cookie and header sharing.
 
-    The MS Office file attachment is now opened in the applicable MS Office application. In the following image, you will see an opened MS Word document as an example.
+    The MS Office file attachment is now opened in the applicable MS Office application. In the following image, you see an opened MS Word document as an example.
 
     ![Example of opened Microsoft Word attachment](../../assets/images/rtmodify.png)
 
@@ -71,7 +71,7 @@ The procedure guides you on how to setup and use the Microsoft Office Round Trip
 
     As an example, the content of the opened MS Word document is changed from *Nothing to see here* to *Hello Sprint playback 114!!*.   
 
-5. Save your changes, and close the MS Office application. You have now edited the attachment without downloading it and reattaching it again the Domino document.
+5. Save your changes, and close the MS Office application. You have now edited the attachment without downloading it and reattaching it again to the Domino document.
 
 **To verify your updates to the MS Office file attachment**
 
