@@ -36,7 +36,9 @@ The following are settings that can be set in the notes.ini
 | **RESERVED**            |             | Only use when directed by support                                                                 |
 | `KeepLogConfigFile`     | optional    | Path to an alternate [Log4j2](https://logging.apache.org/log4j/2.x/index.html) configuration file |
 | `KeepCurlLogging`       | optional    | default `false`, prints curl commands to console                                                  |
-| `KeepAddinDebug`        | optional    | default `false`, prints debug statements for th restapi task                                      |
+| `KeepAddinLogging`        | optional    | default `false`, prints debug statements for the restapi task                                      |
+| `KeepJavaHeapInMB`        | optional    | Amount of heap memory in Megabytes that should be allocated to Domino REST API.                                     |
+
 
 !!! danger "Keep the KeepManagementURL parameter current"
 
