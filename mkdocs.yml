@@ -44,7 +44,7 @@ markdown_extensions:
 
 # Copyright
 copyright: >-
-  Copyright &copy; 2023, HCL Technologies Limited | <a href="https://www.hcl-software.com/legal/privacy" target="_blank">Privacy Statement</a> | <a href="https://www.hcl-software.com/legal/terms-use" target="_blank">Terms of Use</a> <br/>
+  Copyright &copy; 2024 HCL Technologies Limited | <a href="https://www.hcl-software.com/legal/privacy" target="_blank">Privacy Statement</a> | <a href="https://www.hcl-software.com/legal/terms-use" target="_blank">Terms of Use</a> <br/>
   <a href="#__consent">Change cookie settings</a>
 
 extra:
