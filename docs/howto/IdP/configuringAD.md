@@ -216,9 +216,9 @@ A few tips to troubleshoot the setup when the goalpost has been moved:
 
 - Grab the JWT token and paste it at the [JWT.io](https://jwt.io) website to decode the JSON payload.
 - If your corporate policy prohibits that, then extract the string between the two `.` from your JWT token and send it through a Base64 decoder: `echo [the string] | base64 --decode | jq`. Kindly note that `| jq` is optional.
-- Compare the `iss` value from the JWT token with the `issuer` value from the `openid-configuration` endpoint. If they don't match, you need to add the `iss` to the configuration file.
-- Compare the `aud` value from the JWT token with the `aud` value of the configuration file. Adjust if different.
-- Check the `scp`, which is Microsoft's "alternative" to `scope`, and make sure it has the expected values matching the settings in the application configuration in the Admin UI.
+- Compare the `iss` value from the JWT token with the `issuer` value from the `openid-configuration` endpoint. If they don't match, you need to add the `iss` to the JSON configuration file you created or edited in `keepconfig.d`.
+- Compare the `aud` value from the JWT token with the `aud` value of the configuration file. Adjust the configuration file if different.
+- Check the `scp`, which is Microsoft's "alternative" to `scope`, and make sure it has the expected values matching the settings in the application configuration in the Admin UI. Adjust the scope in the DRAPI application (AdminUI) or your AzureAD IdP settings.
 
 ## Let's connect
 
