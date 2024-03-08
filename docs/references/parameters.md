@@ -38,7 +38,9 @@ A configuration can have the following top-level properties. These properties ar
 | ⁠showPreviewFeatures     | Boolean                                           | True to allow preview access to new features, endpoints, or APIs                                                                                                                                                                           |
 | bodyHandler              | [bodyHandler parameters](#bodyhandler-parameters) | Handles HTTP file uploads and used to limit body sizes                                                                                                                                                                                     |
 | webAuthnActive           | Boolean                                           | Set to `true` to enable WebAuthn to be active.                                                                                                                                                                                             |
-| jwt                      | [JWT parameters](#jwt-parameters)                 | Parameters for enabling Domino REST API to accept JWT tokens from external providers                                                                                                                                                       |
+| jwt                      | [JWT parameters](#jwt-parameters)                 | Parameters for enabling Domino REST API to accept JWT tokens from external providers     |
+| LandingPageRedirect  | String                | Alternative landing page for those who prefer a different layout than the tiled landing page. Ensure the URL provided is valid and complete.|
+
 
 ## Backpressure handling Parameters
 
