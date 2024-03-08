@@ -16,7 +16,13 @@ Personal Information Management such as mail calendar, contact, notebook/journal
 
 #### PKS
 Security certificates used for SSL encryption.
+
 #### keepconfig.d
+
 Directory where you can modify some of Domino REST API's settings. Located in your Domino data directory for all platforms. For example, in Linux, it's in **`/local/notesdata/keepconfig.d`**. In Windows, it's in **`C:\Domino\Data\keepconfig.d`**.
+
+#### domino-keep.log
+
+The default file for storing logs. It's stored in the subdirectory `IBM_TECHNICAL_SUPPORT` of your `Notes/Domino` data directory. For more information, see [Logging](../troubleshooting.md#logging).
 
 
