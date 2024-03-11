@@ -85,6 +85,5 @@ plugins:
   - tags
   - git-revision-date-localized:
       type: date
-      fallback_to_build_date: true
   - markdownextradata:
       data: docs/assets/variable
