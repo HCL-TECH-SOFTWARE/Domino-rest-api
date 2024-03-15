@@ -231,7 +231,7 @@ In general, `oidc` and `oidc-idpcat` achieve the same goal, which is to use a co
 !!!note
     In general, you'd use any of these ("jwt", "oidc", "oidc-idpcat") when you either want to or have to have an external identity provider like Keycloak or Azure AD and have those tokens be usable for Domino REST API calls. Using either "jwt"-with-providerUrl or either of the "oidc" ones will let Domino REST API use standard OIDC endpoints to handle key lookup, avoiding the need to copy and paste signer keys into the Domino REST API config.
 
-Check [Configuring `oidc-idpcat` with Domino 14](../../howto/IdP/configureidpcat.md).
+Check [Configure Domino REST API to use an OIDC provider](../../howto/IdP/configureoidc.md).
 
 ## Domino REST API and OAuth
 

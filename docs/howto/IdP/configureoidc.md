@@ -1,14 +1,8 @@
-# Configure Domino REST API to use Domino's IdP Provider in Domino 14 or greater
+# Configure Domino REST API to use an OIDC provider
 
 ## About this task
 
-The procedure guides you on how to configure Domino REST API to use the same IdP Provider as Domino.
-
-## Prerequisite
-
-- You have created an `idpcat.nsf` on your Domino Server. For more information, see [Creating and replicating the IdP Catalog](https://help.hcltechsw.com/domino/14.0.0/admin/secu_creating_the_idp_catalog.html?hl=idp%2Ccatalog){: target="_blank" rel="noopener noreferrer"}.
-- You have [configured a trusted OIDC provider](https://help.hcltechsw.com/domino/14.0.0/admin/secu_config_http_bearer_auth_t.html?hl=idp%2Ccatalog){: target="_blank" rel="noopener noreferrer"}.
-- You must be using Domino 14 or greater.
+The procedure guides you on how to configure Domino REST API to use an **OpenID Connect (OIDC)** provider for authentication.
 
 ## Procedure
 
@@ -28,7 +22,7 @@ The procedure guides you on how to configure Domino REST API to use the same IdP
         }
     ```
 
-3.	Change the value of the `providerUrl` parameter the same url when you configured  in `idpcat.nsf` ("IdP Catalog") Domino 14.
+3.	Set the values of the `providerUrl`, `clientId`, and `clientSecret` parameters to the values from your identity provider (e.g. Keycloak).
 
     ``` json
         "oidc": {
