@@ -1,5 +1,8 @@
 # Use passkey to log in to Admin UI
 
+!!!caution "Important"
+    This feature is only applicable if your host is using HTTPS. 
+
 ## About this task
 The procedures guide you in using a passkey to log in to **Admin UI**. The procedures involve:
 
@@ -31,8 +34,8 @@ Passkeys are better options to passwords as they use public key cryptography to 
 
 1. Open the **Domino REST API Admin UI** sign-in page in your browser.
 
-    !!!tip
-        For example, open *http://restapi.myhost.com:8880/admin/ui* in your browser, and replace the host with your Domino REST API's host.
+    <!--!!!tip
+        For example, open *http://restapi.myhost.com:8880/admin/ui* in your browser, and replace the host with your Domino REST API's host.-->
 
 2. Enter your username and password.
 3. Click **Sign up with Passkey**.
