@@ -123,27 +123,27 @@ The new form is now added to the list of forms and has an **Active** status.
 !!!note
       The form created using this feature can't be deactivated and can only be deleted. To delete the form, click the menu icon beside the form's status and select **Delete**. In the **WARNING: Deleting Custom Form** dialog, click **Yes** to confirm. 
 
-## Configure a form
+## Activate a form
 
-**To configure a specific form or forms**
+**To activate a specific form or forms**
 
 - Select the form that you want to activate, click the corresponding menu icon beside the form's status, and then select **Activate**.
 
-The configured form now has an **Active** status. 
+The activated form now has an **Active** status. 
 
 !!!tip
-    Clicking the menu icon and selecting **Deactivate** corresponding to a form unconfigures the form. In the **Reset Form** dialog, click **Yes** to confirm. The form now has an **Inactive** status.
+    Clicking the menu icon and selecting **Deactivate** corresponding to a form deactivates the form. In the **Reset Form** dialog, click **Yes** to confirm. The form now has an **Inactive** status.
 
 
-**To configure all forms**
+**To activate all forms**
 
 - Click **Activate All**.
 
-All forms are now configured with default settings and have **Active** status.
+All forms are now activated with default settings and have **Active** status.
 
 !!!tip
-    - Clicking **Deactivate All** unconfigures all configured forms and removes all the configurations you have made to each of the forms. In the confirmation dialog, click **Yes** to confirm. All forms now have an **Inactive** status.
-    - Clicking **Deactivate All** won't unconfigure forms created using the **Add New Form Schema** feature.  
+    - Clicking **Deactivate All** deactivates all active forms and removes all the configurations you have made to each of the forms. In the confirmation dialog, click **Yes** to confirm. All forms now have an **Inactive** status.
+    - Clicking **Deactivate All** won't deactivate forms created using the [Add New Form Schema](#add-new-form-schema) feature.  
 
 ## Change form configuration
 
