@@ -103,48 +103,47 @@ The `nsf` database file and schema are added to the schema list.
 2. Select **Database Forms** from the menu bar to show the list of all the forms for the selected database schema.
 
       <!--![Database Schema](../../assets/images/insideSchema.png)-->
-      ![List Forms](../../assets/images/ListOfForms1.png)
+      ![List Forms](../../assets/images/ListOfForms2.png)
 
 
-## Configure a form
-
-**To configure a specific form or forms**
-
-- Select the form that you want to activate, and then click the corresponding **Active** option under **Status**.
+## Add new form schema
 
 !!!tip
-    Clicking the **Inactive** option corresponding to a form unconfigures the form. In the **Reset Form** dialog, click **Yes** to unconfigure the form.
+     The **Add New Form Schema** feature enables the creation of a new custom form through which you can set up a schema. The feature doesn't create a new form on the backend, so it won't exist in the database. Everything related to the new form is contained within the schema. Therefore, if you delete the form, it's only removed from the list of forms on the **Database Forms** tab.
 
-<!--1. From the available forms under **Unconfigured Forms**, select the form that you would like to configure. 
-2. Click the toggle in the form card of the selected form.
-3. In the **Configure** dialog, click **Yes**. 
+1. Click **Add New Form Schema**.
+2. On the **Add New Form Schema** dialog, enter your schema name and click **Create**.
+3. On the **Schema Management - <schema name\>** page, select a form from the **Show fields from** dropdown field to display the fields of the selected form. You can also select **All Fields** from the dropdown field to display all the fields from all the available forms. 
+4. Select the fields that you want to add to the mode.
+5. Configure the **Field Setting** and **Mode Formula Settings** as needed for each added field. 
+6. Click **Save**.
 
-The selected form is now configured with default settings and listed under **Configured Forms**.-->
-
-**To configure all forms**
-
-- Click **Configure All**.
-
-All forms are now configured with default settings and listed under **Configured Forms**.
-
-!!!tip
-    Clicking **Unconfigure All** unconfigures all configured forms and removes all configurations you have made to each of the forms. In the confirmation dialog, click **Yes** to unconfigure all configured forms.
-
-<!--**To unconfigure a form**
-
-1. From the available forms under **Configured Forms**, select the form that you would like to unconfigure.
-2. Click the toggle in the form card of the selected form.
-3. In the **Unconfigure Form** dialog, click **Yes**. 
-
-The selected form is now moved under **Unconfigured Forms**. 
-
-**To unconfigure all forms**
-
-- Click **Unconfigure All**.
+The new form is now added to the list of forms and has an **Active** status. 
 
 !!!note
-    Clicking **Unconfigure All** removes all configurations you have made to each of the forms.-->
+      The form created using this feature can't be deactivated and can only be deleted. To delete the form, click the menu icon beside the form's status and select **Delete**. In the **WARNING: Deleting Custom Form** dialog, click **Yes** to confirm. 
 
+## Activate a form
+
+**To activate a specific form or forms**
+
+- Select the form that you want to activate, click the corresponding menu icon beside the form's status, and then select **Activate**.
+
+The activated form now has an **Active** status. 
+
+!!!tip
+    Clicking the menu icon and selecting **Deactivate** corresponding to a form deactivates the form. In the **Reset Form** dialog, click **Yes** to confirm. The form now has an **Inactive** status.
+
+
+**To activate all forms**
+
+- Click **Activate All**.
+
+All forms are now activated with default settings and have **Active** status.
+
+!!!tip
+    - Clicking **Deactivate All** deactivates all active forms and removes all the configurations you have made to each of the forms. In the confirmation dialog, click **Yes** to confirm. All forms now have an **Inactive** status.
+    - Clicking **Deactivate All** won't deactivate forms created using the [Add New Form Schema](#add-new-form-schema) feature.  
 
 ## Change form configuration
 

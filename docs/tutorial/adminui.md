@@ -97,13 +97,13 @@ This page allows you to set various configurations to your schema.
 ## Manage database forms
 
 1. Click **Database Forms** from the menu bar. This lists all the forms available for the schema.
-2. Select the form that you want to configure, and then click the corresponding **Active** option under **Status**.
+2. Select the form that you want to activate, click the corresponding menu icon beside the form's status, and then select **Activate**.
 
       ![List Forms](../assets/images/ListOfForms2.png)
 
 <!-- prettier-ignore -->
 !!!tip
-     Clicking the **Inactive** option corresponding to a form unconfigures the form. In the **Reset Form** dialog, click **Yes** to unconfigure the form.
+     Clicking the menu icon and selecting **Deactivate** corresponding to a form deactivates the form. In the **Reset Form** dialog, click **Yes** to confirm.
 
 <!--1. Click **Database Forms** from the menu bar. This lists all the forms available for the schema.
 1. From the available forms under **Unconfigured Forms**, select the form that you would like to configure. 
@@ -133,7 +133,7 @@ The selected form is now listed under **Configured Forms**.
 
 <!-- prettier-ignore -->
 !!!tip
-     Clicking the **Inactive** option corresponding to a view deactivates the view. On the **Reset Views Columns** dialog, click **Yes** to confirm deactivation of the view.
+    Clicking the **Inactive** option corresponding to a view deactivates the view. On the **Reset Views Columns** dialog, click **Yes** to confirm deactivation of the view.
 
 ## Manage database agents
 

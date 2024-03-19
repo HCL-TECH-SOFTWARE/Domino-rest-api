@@ -1,13 +1,43 @@
 # What's new
 
-The section provides the information related to Domino REST API.
+The section provides information on the latest features, improvements, and resolved issues related to Domino REST API.
 
 <!-- prettier-ignore -->
 !!! note "Important"
     - Items marked in <span style="color:red">**red**</span> are API changes that may impact your applications and should be reviewed before upgrading.
     - Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](deprecated.md).
 
-???+ info "v1.0.10 - What's new or changed"
+<!--
+???+ info "v1.0.11 - What's new or changed"
+    ## v1.0.11 - _What's new or changed_
+
+    *Release date: March 28, 2024*
+
+    **New**
+
+    - Added **Add New Form Schema** feature that enables the creation of a new custom form through which you can set up a schema. For more information, see [Add new form schema](usingwebui/schemaui.md#add-new-form-schema).
+
+    **Improvements**
+
+    **Resolved issues**
+
+    **Others**
+
+    - Implemented documentation updates.
+    - Installer jar files:
+	    - For Domino 14: *restapiInstall-r14.jar*
+	    - For Domino 12: *restapiInstall-r12.jar*
+
+    - Docker image version for docker compose .env file (CONTAINER_IMAGE):
+        - For Domino 14: *domino-rest-api:1.0.11-r14*
+        - For Domino 12: *domino-rest-api:1.0.11-r12*  
+        
+    - Docker image version for docker compose .env file from Harbor:
+        - For Domino 14: *hclcr.io/domino/restapi:1.0.11-r14*
+        - For Domino 12: *hclcr.io/domino/restapi:1.0.11-r12* 
+-->
+
+??? info "v1.0.10 - What's new or changed"
     ## v1.0.10 - _What's new or changed_
 
     *Release date: February 22, 2024*
