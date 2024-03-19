@@ -15,6 +15,8 @@ The section provides information on the latest features, improvements, and resol
 
     **New**
 
+    - Added **Add New Form Schema** feature that enables the creation of a new custom form through which you can set up a schema. For more information, see [Add new form schema](usingwebui/schemaui.md#add-new-form-schema).
+
     **Improvements**
 
     **Resolved issues**
