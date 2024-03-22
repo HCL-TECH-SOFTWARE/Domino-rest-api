@@ -7,23 +7,42 @@ The section provides information on the latest features, improvements, and resol
     - Items marked in <span style="color:red">**red**</span> are API changes that may impact your applications and should be reviewed before upgrading.
     - Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](deprecated.md).
 
-<!--
+
 ???+ info "v1.0.11 - What's new or changed"
     ## v1.0.11 - _What's new or changed_
 
     *Release date: March 28, 2024*
 
     **New**
-
-    - Added **Add New Form Schema** feature that enables the creation of a new custom form through which you can set up a schema. For more information, see [Add new form schema](usingwebui/schemaui.md#add-new-form-schema).
+    
+    - Added the **Add New Form Schema** button on the **Database Forms** page to allow the creation of a Form schema for a form that does not exist in the design of the database. This is useful for the profile document update introduced in the v1.0.10 release and can also be used to add or retrieve documents when no form exists in the design. For more information, see [Add new form schema](usingwebui/schemaui.md#add-new-form-schema).
+    - Added OData support for queries using `$select`.
+    - Added OData support for the **ne** (not equal) operator in a filter.
 
     **Improvements**
 
+    - Provides column hidden metadata when using the `v1/lists` endpoint and setting the value of the **columns** parameter to *true*.
+    - Provides additional field metadata specifying if a **datetime** form field shows a date, a time, or both when retrieving a list of fields from the `setup-v1/design/forms/{formName}` endpoint.
+    - Sets the field type correctly, depending how the field is defined on the form, when adding a **datetime** field to a Form schema in the Admin UI. The field type is set to:
+    
+        - *date-time* when the **datetime** field with date and time is selected.
+        - *date* when the **datetime** field with only date is selected.
+        - *string* when the **datetime** field with only time is selected.  
+
+    - Changed the **Inactive-Active** toggle for activating a form on the **Database Forms** page to a 3-dot icon menu that displays available options when clicked.
+    - Added an **Activate Form** dialog to get user confirmation for activating an inactive form when the user clicks the edit icon corresponding to an inactive form.
+    - Enhanced processing speed for retrieving a list of schemas with a large number of schemas.
+
     **Resolved issues**
+
+    - The error “badly formatted directory string”  was produced when creating a certificate via the **Management** page.
+    - Trace logging did not work on Windows. 
+    - A different form was shown to be activated when activating a form that has been searched.  
 
     **Others**
 
     - Implemented documentation updates.
+    - The terms *Configure* and *Unconfigure* in relation to database forms have been changed to *Activate* and *Deactivate*, respectively.
     - Installer jar files:
 	    - For Domino 14: *restapiInstall-r14.jar*
 	    - For Domino 12: *restapiInstall-r12.jar*
@@ -35,7 +54,7 @@ The section provides information on the latest features, improvements, and resol
     - Docker image version for docker compose .env file from Harbor:
         - For Domino 14: *hclcr.io/domino/restapi:1.0.11-r14*
         - For Domino 12: *hclcr.io/domino/restapi:1.0.11-r12* 
--->
+
 
 ??? info "v1.0.10 - What's new or changed"
     ## v1.0.10 - _What's new or changed_
