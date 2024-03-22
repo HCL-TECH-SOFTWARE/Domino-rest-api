@@ -33,7 +33,7 @@ The section provides information on the latest features, improvements, and resol
     - Added an **Activate Form** dialog to get user confirmation for activating an inactive form when the user clicks the edit icon corresponding to an inactive form.
     - Enhanced processing speed for retrieving a list of schemas with a large number of schemas.
 
-    **Resolved issues**
+    **Resolved Issues**
 
     - The error “badly formatted directory string”  was produced when creating a certificate via the **Management** page.
     - Trace logging did not work on Windows. 
