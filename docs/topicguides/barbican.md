@@ -6,7 +6,7 @@ The Barbican in Domino REST API decides what a given user can read from or write
 
 - Documents can only be read when they have a `Form` item that is configured in `keepconfig` to allow access.
 - Only the fields that are configured can be created, read, or updated.
-- _Exception_: If NO fields are configured in `keepconfig`, all fields on the form can be accessed. As a best practice, define fields to constitute the schema for the document at this mode. A warning is logged to the console, if fields are not set. On write access, this ensures unexpected fields are not submitted.
+- _Exception_: If NO fields are configured in `keepconfig`, no fields on the form can be accessed. As a best practice, define fields to constitute the schema for the document at this mode. A warning is logged to the console, if fields are not set. On write access, this ensures unexpected fields are not submitted.
 - An item in a document can be accessed only if there is a matching field on the form or a field configured in `keepconfig`.
 
 ![Field Access in Barbican](../assets/images/Barbican-filter.png)
