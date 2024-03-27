@@ -11,7 +11,7 @@ The section provides information on the latest features, improvements, and resol
 ???+ info "v1.0.11 - What's new or changed"
     ## v1.0.11 - _What's new or changed_
 
-    *Release date: March 28, 2024*
+    *Release date: March 27, 2024*
 
     **New**
     
