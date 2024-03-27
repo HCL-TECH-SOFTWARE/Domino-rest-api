@@ -1,0 +1,25 @@
+@startjson
+{
+    "modeName": "default",
+    "computeWithForm": false,
+    "strictInput": true,
+    "allowAnyField" : false,
+    "onLoad": "",
+    "onSave": "@SetField(\"Status\";\"Submitted\")",
+    "readAccessFields":  [ "Approver", "Subject", "Requestor", "DueDate", "Status", "Body" ],
+    "readAccessFormula": "@IsMember(\"[RaiseRequest]\"; @UserNamesList)",
+    "writeAccessFields": [ "Approver", "Subject", "Requestor", "DueDate", "Status", "Body" ],
+    "writeAccessFormula": "Status==\"\"",
+    "deleteAccessFormula": "@False",
+    "validationRules": [
+        {
+            "formula": "@IsMember(status;\"Submitted\":\"Approved\":\"Rejected\")",
+            "message": "Status must be either 'Submitted','Approved' or 'Rejected'"
+        },
+        {
+            "formula": "DueDate < @Today",
+            "message": "You can't backdate requests"
+        }
+    ]
+}
+@endjson

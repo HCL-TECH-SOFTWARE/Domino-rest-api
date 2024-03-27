@@ -1,0 +1,70 @@
+pre {
+  word-break: break-all;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+header {
+    background-color: #4051b5;
+  }
+footer {
+    background-color: #000000;
+  }
+  
+/*.md-search__inner {
+    background-color: #1d2123;
+  }
+nav.md-tabs {
+    background-color: #000000;
+  }
+.md-header__title {
+    background-color: #000000;
+  }
+.md-header {
+    background-color: #000000;
+  }
+*/
+
+@font-face {
+  font-family: 'HCLTech Roobert';
+  src: url(../fonts/HCLTechRoobert-Regular.otf);
+}
+
+:root {
+  --md-text-font: "HCLTech Roobert"; 
+}
+
+:root {
+  --md-code-font: "Courier";
+}
+
+:root > * {
+  --md-code-hl-string-color: #475156;
+}
+
+.md-typeset h1{
+  font-family:"HCLTech Roobert";
+}
+
+.md-typeset h2{
+  font-family:"HCLTech Roobert";
+}
+.md-typeset h3{
+  font-family:"HCLTech Roobert";
+}
+.md-typeset h4{
+  font-family:"HCLTech Roobert";
+}
+.md-typeset h5{
+  font-family:"HCLTech Roobert";
+  text-transform: capitalize;
+  font-size: medium;
+  color: #5b666d;
+}
+.md-typeset h6{
+  font-family:"HCLTech Roobert";
+}
+
+tr.lostLinkItem:nth-child(even) {
+  background-color: #eeeeee;
+}

@@ -1,0 +1,20 @@
+@startuml HttpLaunchFlow
+start
+:CorsLookup route;
+:Static & default routes;
+floating note: Errors, API list,\nlanding page
+:WebJar routes;
+floating note: e.g. Admin client, SwaggerUI
+:OAuthRoutes;
+floating note: if enabled in config\n- off by default
+fork
+:OpenAPI1;
+floating note: from config\nincl. security
+fork again
+:OpenAPI2;
+fork again
+:OpenAPI3;
+endfork
+:Load HTTP server 8880;
+stop
+@enduml

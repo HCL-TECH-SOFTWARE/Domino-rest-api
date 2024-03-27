@@ -1,0 +1,490 @@
+{
+  "serverSetup": {
+    "server": {
+      "type": "first",
+      "name": "domino.restapi.local",
+      "domainName": "Engage",
+      "title": "Engage 2023 Server",
+      "password": null,
+      "minPasswordLength": 0,
+      "serverTasks": "replica,router,update,amgr,adminp,http,restapi"
+    },
+    "network": {
+      "hostName": "domino.restapi.local",
+      "enablePortEncryption": false,
+      "enablePortCompression": false
+    },
+    "org": {
+      "orgName": "FactoryTour",
+      "certifierPassword": "domino4ever"
+    },
+    "admin": {
+      "firstName": "Doctor",
+      "lastName": "Notes",
+      "password": "supersecret",
+      "IDFilePath": "/local/notesdata/dnotes.id"
+    },
+    "notesINI": {
+      "Create_R85_log": "1",
+      "LOG_REPLICATION": "0",
+      "LOG_SESSIONS": "0",
+      "HTTPPublicURLs": "/iwaredir.nsf/*:/.well-known*",
+      "ENABLE_SNI": "1",
+      "ADMIN_CLIENT_SKIP_DOMINO": "1",
+      "EVENT_POOL_SIZE": "41943040",
+      "SETUPLEAVESERVERTASKS": "1",
+      "NSF_BUFFER_POOL_SIZE_MB": "256",
+      "FT_FLY_INDEX_OFF": "1",
+      "UPDATE_FULLTEXT_THREAD": "1",
+      "FTG_USE_SYS_MEMORY": "1",
+      "CertMgr_ACCEPT_TOU": "1",
+      "CERTSTORE_CACHELOG": "1",
+      "CREATE_R12_DATABASES": "1",
+      "KeepInstallDir": "/opt/hcl/keep",
+      "KeepLogConfigFile": "/local/notesdata/IBM_TECHNICAL_SUPPORT/log4j2-trace.properties",
+      "KeepLaunchWaitSecs": "5",
+      "SERVER_MAX_POKE_TRIES": "60",
+      "SERVER_POKE_RETRY_DELAY": "2000"
+    },
+    "security": {
+      "ACL": {
+        "prohibitAnonymousAccess": true,
+        "addLocalDomainAdmins": true
+      }
+    },
+    "registerUsers": {
+      "defaults": {
+        "saveIDToPersonDocument": false,
+        "mailTemplatePath": "mail12.ntf",
+        "password": "default-super-secret-user-password",
+        "enableFullTextIndex": true,
+        "certificateExpirationMonths": 42,
+        "setInternetPassword": true
+      },
+      "users": [
+        {
+          "firstName": "Kambei",
+          "lastName": "Manager",
+          "shortName": "kmanager",
+          "saveIDToPersonDocument": false,
+          "internetAddress": "kmanager@restapi.local",
+          "IDFilePath": "kmanager.id",
+          "password": "supersecret",
+          "mailFilePath": "mail/kmanager.nsf",
+          "enableFullTextIndex": true
+        },
+        {
+          "firstName": "Kikuchiyo",
+          "lastName": "Designer",
+          "shortName": "kdesigner",
+          "saveIDToPersonDocument": false,
+          "internetAddress": "kdesigner@restapi.local",
+          "IDFilePath": "kdesigner.id",
+          "password": "supersecret",
+          "mailFilePath": "mail/kdesigner.nsf",
+          "enableFullTextIndex": true
+        },
+        {
+          "firstName": "Shichirōji",
+          "lastName": "Editor",
+          "shortName": "seditor",
+          "saveIDToPersonDocument": false,
+          "internetAddress": "seditor@restapi.local",
+          "IDFilePath": "seditor.id",
+          "password": "supersecret",
+          "mailFilePath": "mail/seditor.nsf",
+          "enableFullTextIndex": true
+        },
+        {
+          "firstName": "Katsushirō",
+          "lastName": "Editor",
+          "shortName": "keditor",
+          "saveIDToPersonDocument": false,
+          "internetAddress": "keditor@restapi.local",
+          "IDFilePath": "keditor.id",
+          "password": "supersecret",
+          "mailFilePath": "mail/keditor.nsf",
+          "enableFullTextIndex": true
+        },
+        {
+          "firstName": "Heihachi",
+          "lastName": "Author",
+          "shortName": "hauthor",
+          "saveIDToPersonDocument": false,
+          "internetAddress": "hauthor@restapi.local",
+          "IDFilePath": "hauthor.id",
+          "password": "supersecret",
+          "mailFilePath": "mail/hauthor.nsf",
+          "enableFullTextIndex": true
+        },
+        {
+          "firstName": "Kyūzō",
+          "lastName": "Author",
+          "shortName": "kauthor",
+          "saveIDToPersonDocument": false,
+          "internetAddress": "kauthor@restapi.local",
+          "IDFilePath": ".kauthorid",
+          "password": "supersecret",
+          "mailFilePath": "mail/kauthor.nsf",
+          "enableFullTextIndex": true
+        },
+        {
+          "firstName": "Gorōbei",
+          "lastName": "Reader",
+          "shortName": "greader",
+          "saveIDToPersonDocument": false,
+          "internetAddress": "greader@restapi.local",
+          "IDFilePath": "greader.id",
+          "password": "supersecret",
+          "mailFilePath": "mail/greader.nsf",
+          "enableFullTextIndex": true
+        },
+        {
+          "firstName": "User",
+          "lastName": "Default",
+          "shortName": "udefault",
+          "saveIDToPersonDocument": false,
+          "internetAddress": "udefault@restapi.local",
+          "IDFilePath": "udefault.id",
+          "password": "supersecret",
+          "mailFilePath": "mail/udefault.nsf",
+          "enableFullTextIndex": true
+        },
+        {
+          "firstName": "User",
+          "lastName": "NoAccess",
+          "shortName": "unoaccess",
+          "saveIDToPersonDocument": false,
+          "internetAddress": "unoaccess@restapi.local",
+          "IDFilePath": "unoaccess.id",
+          "password": "supersecret",
+          "mailFilePath": "mail/unoaccess.nsf",
+          "enableFullTextIndex": true
+        }
+      ]
+    }
+  },
+  "IDVault": {
+    "name": "O=Engage_vault",
+    "description": "Engage Lab Vault",
+    "IDFile": "vault.id",
+    "IDPassword": "domino4ever8",
+    "path": "IBM_ID_VAULT/Engage_vault.nsf",
+    "passwordReset": {
+      "helpText": "Pray hard for a password reset. Good luck!"
+    },
+    "securitySettingsPolicy": {
+      "name": "DominoLab Vault Security Settings Policy",
+      "description": "DominoLab Vault Security Settings"
+    },
+    "masterPolicy": {
+      "description": "DominoLab Vault Master Policy Description"
+    }
+  },
+  "appConfiguration": {
+    "databases": [
+      {
+        "filePath": "names.nsf",
+        "action": "update",
+        "documents": [
+          {
+            "action": "update",
+            "findDocument": {
+              "Type": "Server",
+              "ServerName": "CN=domino.restapi.local/O=Domino4Ever"
+            },
+            "items": {
+              "AutomationComment": "ServerAutoConfigured",
+              "LdISite": "1",
+              "HTTP_SSLKeyFile": "keydirfile.kyr",
+              "HTTP_MaxActiveThreads": 40,
+              "HTTP_HomeURL": "homepage.nsf",
+              "FullAdmin": "LocalDomainAdmins",
+              "CreateAccess": ["LocalDomainAdmins", "LocalDomainServers"],
+              "ReplicaAccess": ["LocalDomainAdmins", "LocalDomainServers"],
+              "UnrestrictedList": ["LocalDomainAdmins", "LocalDomainServers"],
+              "OnBehalfOfLst": ["LocalDomainAdmins", "LocalDomainServers"],
+              "RestrictedList": ["LocalDomainAdmins", "LocalDomainServers"],
+              "PrivateList": ["LocalDomainAdmins", "LocalDomainServers"],
+              "TRANSLOG_AutoFixup": "",
+              "TRANSLOG_MaxSize": 512,
+              "TRANSLOG_Path": "/local/translog",
+              "TRANSLOG_Performance": "2",
+              "TRANSLOG_Status": "1",
+              "TRANSLOG_Style": "0",
+              "TRANSLOG_UseAll": "0",
+              "HTTP_EnableSessionAuth": "1",
+              "HTTP_TCPNP": "1",
+              "HTTP_AllowAnonymous": "1",
+              "HTTP_NormalMode": "1",
+              "HTTP_Port": "8080",
+              "HTTP_SSLMode": "0",
+              "HTTP_SSLAnonymous": "1",
+              "HTTP_SSLCert": "1",
+              "HTTP_SSLBearerToken": "1",
+              "HTTP_SSLPort": "8443",
+              "SMTPListenerEnabled": "0",
+              "Router_PortStatus": "2",
+              "LDAP_SSLStatus": "1",
+              "IMAP_SSLStatus": "1",
+              "POP3_SSLStatus": "1",
+              "HTTP_EnforceAccess": "1",
+              "LDAP_EnforceAccess": "1",
+              "IMAP_EnforceAccess": "1",
+              "POP3_EnforceAccess": "1",
+              "NSDEnbld": "1",
+              "FREnbld": "1",
+              "FltRcvryNot": "LocalDomainAdmins",
+              "ServerBuildNumber": "12.0",
+              "MajVer": 12,
+              "SSLCipherList": [
+                "C030",
+                "9F",
+                "C02F",
+                "9E",
+                "C028",
+                "6B",
+                "C027",
+                "67"
+              ],
+              "SSLCipherSupportedList": [
+                "C030",
+                "9F",
+                "C02F",
+                "9E",
+                "C028",
+                "6B",
+                "C027",
+                "67"
+              ]
+            }
+          },
+          {
+            "action": "create",
+            "computeWithForm": true,
+            "items": {
+              "Form": "ServerConfig",
+              "UseAsDefault": "1",
+              "ServerName": "*",
+              "SMTP_NegotiatedSSL": "1",
+              "ILEnforce": "1",
+              "ILLockIP": "0",
+              "ILCountAgainstIP": "0",
+              "ILLogLockouts": "1",
+              "ILLogFailures": "1",
+              "ILMaxTries": 7,
+              "ILExpMinutes": 10,
+              "ILExpNum": 10,
+              "ILTimeFormat": ",minutes",
+              "ILClearNum": 10,
+              "ILClearMinutes": 10,
+              "ILTimeFormat2": ",minutes",
+              "PwdCheckInVault": "2",
+              "DCLoc": "CN=HCL Notes/O=Domino Fault Reports",
+              "DCMsgSize": 50,
+              "DCNSDSize": 40,
+              "DCDO": 10000,
+              "FAEnabled": "1",
+              "FADBs": "1"
+            }
+          },
+          {
+            "action": "create",
+            "computeWithForm": true,
+            "items": {
+              "Form": "WebSite",
+              "AutomationComment": "Default Website",
+              "WSIsDflt": "1",
+              "ISiteAdrs": ["127.0.0.1", "domino.restapi.local"],
+              "ISiteName": "e2eTestDefaultSite",
+              "ISiteOrg": "FactoryTour",
+              "WSHostingSrvrs": "*",
+              "TCPAnonymous": "0",
+              "TCPNameAndPwd": "1",
+              "SSLAnonymous": "0",
+              "SSLNameAndPwd": "1",
+              "SSLKeyFile": "keyfile.kyr",
+              "SSLCipherList": [
+                "C030",
+                "9F",
+                "C02F",
+                "9E",
+                "C028",
+                "6B",
+                "C027",
+                "67"
+              ],
+              "HTTP_EnableSessionAuth": "1"
+            }
+          },
+          {
+            "action": "create",
+            "computeWithForm": true,
+            "items": {
+              "Form": "Domain",
+              "DomainType": "GlobalDomain",
+              "GlobalDomainTasks": "SMTP",
+              "DomainName": "AutoTestingGlobalDomain",
+              "NotesDomainList": "HCLFT",
+              "LocalPrimaryInternetDomain": "domino.restapi.local",
+              "LocalInternetDomainAliases": "notes.alias"
+            }
+          },
+          {
+            "action": "create",
+            "computeWithForm": true,
+            "items": {
+              "Form": "Group",
+              "ListName": "E2EManagers",
+              "ListDescription": "Manager access for Demo.nsf",
+              "Members": [
+                "CN=Doctor Notes/O=Domino4Ever",
+                "CN=Kambei Manager/O=Domino4Ever"
+              ]
+            }
+          },
+          {
+            "action": "create",
+            "computeWithForm": true,
+            "items": {
+              "Form": "Group",
+              "ListName": "E2EDesigners",
+              "ListDescription": "Designer access for Demo.nsf",
+              "Members": ["CN=Kikuchiyo Designer/O=Domino4Ever"]
+            }
+          },
+          {
+            "action": "create",
+            "computeWithForm": true,
+            "items": {
+              "Form": "Group",
+              "ListName": "E2EEditorsNoDelete",
+              "ListDescription": "Editor access for Demo.nsf (no delete)",
+              "Members": ["CN=Katsushirō Editor/O=Domino4Ever"]
+            }
+          },
+          {
+            "action": "create",
+            "computeWithForm": true,
+            "items": {
+              "Form": "Group",
+              "ListName": "E2EEditors",
+              "ListDescription": "Editor access for Demo.nsf",
+              "Members": ["CN=Shichirōji Editor/O=Domino4Ever"]
+            }
+          },
+          {
+            "action": "create",
+            "computeWithForm": true,
+            "items": {
+              "Form": "Group",
+              "ListName": "E2EAuthors",
+              "ListDescription": "Author access for Demo.nsf",
+              "Members": ["CN=Heihachi Author/O=Domino4Ever"]
+            }
+          },
+          {
+            "action": "create",
+            "computeWithForm": true,
+            "items": {
+              "Form": "Group",
+              "ListName": "E2EAuthorsNoCreate",
+              "ListDescription": "Author access for Demo.nsf (no create)",
+              "Members": ["CN=Kyūzō Author/O=Domino4Ever"]
+            }
+          },
+          {
+            "action": "create",
+            "computeWithForm": true,
+            "items": {
+              "Form": "Group",
+              "ListName": "E2EReaders",
+              "ListDescription": "Reader access for Demo.nsf",
+              "Members": ["CN=Gorōbei Reader/O=Domino4Ever"]
+            }
+          },
+          {
+            "action": "create",
+            "computeWithForm": true,
+            "items": {
+              "Form": "Group",
+              "ListName": "LocalKeepAdmins",
+              "ListDescription": "Users of E2E to be LocalKeepAdmins",
+              "Members": ["CN=Doctor Notes/O=Domino4Ever"]
+            }
+          },
+          {
+            "action": "update",
+            "findDocument": {
+              "Form": "Group",
+              "ListName": "LocalDomainAdmins"
+            },
+            "computeWithForm": true,
+            "items": {
+              "Members": ["CN=Doctor Notes/O=Domino4Ever"]
+            }
+          }
+        ]
+      },
+      {
+        "action": "create",
+        "filePath": "domcfg.nsf",
+        "title": "Domino Web Server Configuration",
+        "templatePath": "domcfg5.ntf",
+        "signUsingAdminp": true,
+        "documents": [
+          {
+            "action": "create",
+            "items": {
+              "Form": "LoginMap",
+              "LF_LoginForm": "DWALoginForm",
+              "LF_LoginFormDB": "iwaredir.nsf",
+              "LF_ServerType": "0",
+              "LF_IP": "",
+              "$PublicAccess": "1"
+            }
+          }
+        ]
+      },
+      {
+        "action": "create",
+        "filePath": "iwaredir.nsf",
+        "title": "Redirect",
+        "templatePath": "iwaredir.ntf",
+        "signUsingAdminp": true,
+        "documents": [
+          {
+            "action": "create",
+            "computeWithForm": true,
+            "items": {
+              "Form": "AutoLogin",
+              "ServerNameSelect": "1",
+              "RedirectMessageWebView": "Redirecting...",
+              "$LANGUAGE": "en",
+              "$ServerSettingsTable": "Select",
+              "EnableUltraliteRadioButton": "0",
+              "MobileAgentKeywords": "ipod,iphone,android,ipad",
+              "SSLPort": "443",
+              "RedirectionTime": "1",
+              "RedirectionMessageText": "Redirecting...",
+              "WMRGlobalProfileURL": "/",
+              "ServerNameChange": "0",
+              "ForceSSL": "1",
+              "OmitProtocol": "0",
+              "UseHomeMailServer": "0",
+              "LoginOptions": "0",
+              "EncryptPassword": "0",
+              "WebMailRedirectEnableDebug": "0",
+              "WebMailRedirectProfileEnable": "0",
+              "WMRVersion": "650",
+              "WMRAttachmentNames": "BLANK",
+              "MailServerDomainName": "",
+              "RevProxyServerName": "",
+              "ForcePath": ""
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
