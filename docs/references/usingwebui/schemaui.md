@@ -2,9 +2,9 @@
 
 Select **Database Management - REST API** from the home page or **Schemas** from the side navigation pane to access the **Schema Management** page.
 
-## List available database schemas
+## View available database schemas
 
-Click the **Schemas** navigation pane and the  **Schema Management** page shows the list of all available schemas.
+The **Schema Management** page shows the available schemas.
 
 ![List Database](../../assets/images/ListSchemas.PNG)
 

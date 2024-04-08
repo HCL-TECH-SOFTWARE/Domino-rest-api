@@ -20,6 +20,8 @@ The section provides information on the latest features, improvements, and resol
 
     **Resolved Issues**
 
+    - 
+
     **Others**
 
     - Implemented documentation updates.

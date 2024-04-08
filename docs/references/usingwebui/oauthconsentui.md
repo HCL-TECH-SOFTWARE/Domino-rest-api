@@ -1,66 +1,64 @@
 # OAuth Consents
 
-Allows the current user to view and revoke available OAuth consents. 
+Select **Consents** from the side navigation pane to access the **OAuth Consents** page, which allows the current user to view and revoke available OAuth consents. 
 
-### View OAuth consent list
+## View OAuth consents
 
-<!--
-
-To view the OAuth consent list:
-
-- Click **OAuth Consents** from the navigation pane to open the **OAuth Consents** page.
- 
-    !!!tip
-        Clicking the **Go to Applications** icon on the **OAuth Consents** page returns you to the **Application Management** page. 
- 
-- Click **OAuth Consents** on the **Application Management** page to open the **OAuth Consents** dialog. 
-
--->
-
-Click **OAuth Consents** from the navigation pane. 
-
-![oAuth Consent](../../assets/images/oauthConsentIcon.png){: style="height:80%;width:80%"}
-
-This opens the **OAuth Consents** pane. 
-
-![Revoke](../../assets/images/oauthConsent.png){: style="height:80%;width:80%"}
+The **OAuth Consents** page shows available OAuth consents. 
 
 !!!note
     Users logged into the AdminUI that are in the `LocalKeepAdmins` group or are Managers in the `oauth.nsf` ACL will see all user consents and can revoke them as well.
 
-### View OAuth consent details
-
-Click **View** corresponding to a user in the list to show OAuth consent details, such as scope, app name, URL.
-
-![View Consent](../../assets/images/viewConsent.png){: style="height:80%;width:80%"}
-
-
-<!--
-
-The **OAuth Consents** page and the **OAuth Consents** dialog show the same information, such as authorized users, the name of their applications if available, and corresponding expiration details.
+[![OAuth Consent page](../../assets/images/oauthConsent.png)](../../assets/images/oauthConsent.png){: target="_blank" rel="noopener noreferrer"}
 
 !!!tip
-    - Click the expand arrow icon corresponding to an authorized user to show the callback URL and scope names of the user’s application. Click the collapse arrow icon to hide the details. 
-    - Click the Expand all arrow icon to show the callback URL and scope names of the applications of all the users. Click the Collapse all arrow icon to hide the application details for all users. 
-    - Select the number of rows displayed per page to regulate the number of displayed users per page. Click the pagination icons to move between pages.    
+    - Use the **Search User** or **Search App Name** search fields to search a specific OAuth consent.
+    - Use the **User** and **App Name** sorting arrow icons to sort the OAuth consents by user or app name in an alphabetical or reverse alphabetical order. 
+    - Click the **Go to Applications** icon on the upper right side of the **OAuth Consents** page to return to the **Application Management** page.
+    - Set the number of OAuth consents displayed on the page by selecting a value from **Rows per page**.
+    - Use the pagination arrows to move back and forth between pages. 
 
+## View OAuth consent details
 
--->
+**To show details of a specific OAuth consent**
 
-### Revoke authorized user
+- Click the expand arrow icon corresponding to a user in the list to show OAuth consent details, such as scope and URL.
 
-1. Click **Revoke** corresponding to a user in the list that you want the authorization revoked.
+!!!tip
+    Clicking the collapse arrow icon corresponding to the user in the list with shown OAuth consent details hides the shown details. 
+
+**To show details of all OAuth consents**
+
+- Click **Expand all** to show details of all the OAuth consents.
+
+!!!tip
+    Clicking **Collapse all** hides the details of all the OAuth consents. 
+
+## Filter OAuth consents
+
+You can use the filter function to filter which OAuth consents to display.
+
+**To use the filter**
+
+1. Click **All filters**. This opens the **Filter** pane.
+2. Use any or all the filters as needed, and then click **Show Results**. 
+
+For more information on the filters, refer to the following table:
+
+|Filter|Description
+|:----|:----|
+|Status| Select **All** to display active and expired OAuth consents.<br/><br/>Select **Active** to show only active OAuth consents.|
+|App name|Click the toggle to show only consents with application.|
+|Expiration|Select **All** to display all OAuth consents regardless of expiration.<br/><br/>Select **None** to display OAuth consents without expiration.<br/><br/>Select **Custom** and then select a specific expiration date from the date picker to show only OAuth consents with expiration matching the selected expiration date.|
+|Token Expiration|Select All to display all OAuth consents regardless of token expiration.<br/><br/>Select **None** to display OAuth consents without token expiration.<br/><br/>Select **Custom** and then select a specific token expiration date from the date picker to show only OAuth consents with token expiration matching the selected token expiration date.|
+|Scopes|Select the scopes to show only OAuth consents with scopes matching the selected scopes.|
+
+!!!tip
+    Click **Reset** to clear all filters. 
+
+## Revoke authorized user
+
+1. Click **Revoke** corresponding to the authorized user in the list that you want the authorization revoked.
 2. In the **Revoke Consent** dialog, click **Yes**. 
 
-![Revoke](../../assets/images/revokeConsent.png){: style="height:80%;width:80%"}
-
 The user is now removed from the authorized users list.
-
-<!--
-
-To revoke an authorized user:
-
-Click **Revoke** corresponding to the authorized user that you want the authorization revoked.
-Click **Yes** in the **Revoke consent** dialog.
-
--->
