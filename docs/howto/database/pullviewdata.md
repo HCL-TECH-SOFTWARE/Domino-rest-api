@@ -8,7 +8,7 @@ The procedure guides you in adjusting the number of view entries or documents yo
 
 ### Using `count` parameter
 
-To adjust the number of entries or documents you can retrieve from a view, use the `count` parameter. Add the `count` parameter to your API request and specify a value to set how many entries are to be returned. 
+To adjust the number of entries or documents you can retrieve from a view, use the `count` parameter. A default of 1000 entries is returned if the `count` parameter is not specified. Add the `count` parameter to your API request and specify a value to set how many entries are to be returned. 
 
 For example, to retrieve all the entries from a view that has 1350 entries, set the value of the `count` parameter to 1350 or more to retrieve all view entries.
 
