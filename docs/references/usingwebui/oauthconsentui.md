@@ -16,7 +16,7 @@ The **OAuth Consents** page shows available OAuth consents.
     - Use the **User** and **App Name** sorting arrow icons to sort the OAuth consents by user or app name in an alphabetical or reverse alphabetical order. 
     - Click the **Go to Applications** icon on the upper right side of the **OAuth Consents** page to return to the **Application Management** page.
     - Set the number of OAuth consents displayed on the page by selecting a value from **Rows per page**.
-    - Use the pagination arrows to move back and forth between pages. 
+    - Use the pagination arrows to move back and forth through pages. 
 
 ## View OAuth consent details
 
