@@ -17,7 +17,7 @@ The section provides information on the latest features, improvements, and resol
 
     **Improvements**
 
-    - Implemented UI/UX enhancements in the [Application Management](./usingwebui/appui.md) and [OAuth Consents](./usingwebui/oauthconsentui.md) pages in the **Admin UI**. 
+    - Implemented UI/UX enhancements in the [OAuth Consents](./usingwebui/oauthconsentui.md) page in the **Admin UI**. 
 
     **Resolved Issues**
 
