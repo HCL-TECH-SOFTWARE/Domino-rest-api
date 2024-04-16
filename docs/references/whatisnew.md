@@ -7,7 +7,6 @@ The section provides information on the latest features, improvements, and resol
     - Items marked in <span style="color:red">**red**</span> are API changes that may impact your applications and should be reviewed before upgrading.
     - Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](deprecated.md).
 
-<!--
 
 ???+ info "v1.0.12 - What's new or changed"
     ## v1.0.12 - _What's new or changed_
@@ -17,6 +16,8 @@ The section provides information on the latest features, improvements, and resol
     **New**
 
     **Improvements**
+
+    - Implemented UI/UX enhancements in the [Application Management](./usingwebui/appui.md) and [OAuth Consents](./usingwebui/oauthconsentui.md) pages in the **Admin UI**. 
 
     **Resolved Issues**
 
@@ -37,10 +38,8 @@ The section provides information on the latest features, improvements, and resol
         - For Domino 14: *hclcr.io/domino/restapi:1.0.12-r14*
         - For Domino 12: *hclcr.io/domino/restapi:1.0.12-r12* 
 
--->
 
-
-???+ info "v1.0.11 - What's new or changed"
+??? info "v1.0.11 - What's new or changed"
     ## v1.0.11 - _What's new or changed_
 
     *Release date: March 27, 2024*
