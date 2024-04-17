@@ -10,7 +10,11 @@ The Domino REST API doesn't expose any database to HTTP(S) by default. Enabling 
 
     ![Domino Designer with Domino REST API](../../assets/images/KeepSchemaFileResource2.png)
 
-    A brave developer could use Domino designer to create or update one. The rest use the API or the **Schema and Scope Management UI**, also known as the AdminUI.
+    Most people will use [**Schema and Scope Management UI**](../../references/usingwebui/schemaui.md), also known as the **AdminUI**, to modify the schema. This can also be done through the API. 
+   
+    A brave developer could use Domino designer to create or update the schema. If you manually modify your schema make sure to refresh the schema cache, see [**Domino REST API task**](../../references/usingdominorestapi/restapitask.md#domino-rest-api-task-commands) for details. 
+
+
 
 2. **Link a schema to a scope** The scope configuration is stored in the `KeepConfig.nsf` database. This separation of `scope` and `schema` means multiple scopes can link to a single schema. You use the scope name when performing all CRUD operations, it's the value to the query param `dataSource`. You can create the scope using the API or the AdminUI.
 
