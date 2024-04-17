@@ -10,9 +10,9 @@ The Domino REST API doesn't expose any database to HTTP(S) by default. Enabling 
 
     ![Domino Designer with Domino REST API](../../assets/images/KeepSchemaFileResource2.png)
 
-    Use the [**Schema and Scope Management UI**](../../references/usingwebui/schemaui.md), also known as the **AdminUI**, to modify the schema. This can also be done through the API. 
+    Most people will use [**Schema and Scope Management UI**](../../references/usingwebui/schemaui.md), also known as the **AdminUI**, to modify the schema. This can also be done through the API. 
    
-    Most people could use Domino designer to create or update the schema. If you manually modify your schema make sure to refresh the schema cache, see [**Domino REST API task**](../../references/usingdominorestapi/restapitask.md#domino-rest-api-task-commands) for details. 
+    A brave developer  could use Domino designer to create or update the schema. If you manually modify your schema make sure to refresh the schema cache, see [**Domino REST API task**](../../references/usingdominorestapi/restapitask.md#domino-rest-api-task-commands) for details. 
 
 
 
