@@ -1,22 +1,29 @@
 # Richtext extension
-As of KEEP version 1.30.1-SNAPSHOT, you can now add additional richtext processors for KEEP.
+
+Customers or users who prefer using richtext as their data type are able to use this feature of the KEEP. Users will be able to adjust it to meet their own needs, resulting in a better representation of their richtext.
+
+
+## Extending KEEP richtext
+
+As of `KEEP version 1.30.1-SNAPSHOT`, you can now add additional richtext processors for KEEP.
 
 ## Built in richtext processors
 There has been no change for the existing processors, namely:
-    -mime
-    - html
-    - markdown
-    - plain
+
+  - mime
+  - html
+  - markdown
+  - plain
 
 ## Setting up extending richtext
 There are quite a number of things we should setup first before we can make an extension.
 
-1. Install KEEP core jar
-2. Find keep-core-<version>.jar file and do a Maven install on it.
-
-``` mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -Dfile=<path-to-keep-core-jar> ```
-
-This will add in KEEP core to your local Maven M2 repository.
+1. Install `KEEP-core.jar`. This can be found on the root directory of the KEEP installation.
+2. Find `keep-core-<version>.jar` file on the KEEP core and do a **Maven** install on it.
+      ``` 
+      mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -Dfile=<path-to-keep-core-jar> 
+      ```
+This will add in `keep-core-<version>.jar` to your local Maven M2 repository.
 
 ## Create an extension helper
 For this step, we need to create an extension helper. The goal would be that this helper will generate a single JAR file containing all the stuff we need to depend on.
@@ -27,69 +34,81 @@ In this case, extending richtext will need three dependencies:
 2. Vert.X core
 3. Domino JNX API
 
-Create a new folder and create a pom.xml with the following content:
-```
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+## Procedure
 
-  <modelVersion>4.0.0</modelVersion>
+1. Create a new folder. Any folder name will do and can be placed in any directory.
+2. Create within the folder a `pom.xml` with the following content:
 
-  <groupId>com.hcl.domino.extension.helper</groupId>
-  <artifactId>keep-richtext-extension-helper</artifactId>
-  <version>1.0</version>
-  <name>Helper for KEEP richtext extension</name>
-  <description>Don't try this at home</description>
+    ```xml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <project xmlns="http://maven.apache.org/POM/4.0.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-  <dependencies>
-    <dependency>
-      <groupId>com.hcl.domino.keep</groupId>
-      <artifactId>keep-core</artifactId>
-      <version>1.30.1-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>io.vertx</groupId>
-      <artifactId>vertx-core</artifactId>
-      <version>4.5.4</version>
-    </dependency>
-    <dependency>
-      <groupId>com.hcl.domino</groupId>
-      <artifactId>domino-jnx-api</artifactId>
-      <version>1.36.0</version>
-    </dependency>
-  </dependencies>
+      <modelVersion>4.0.0</modelVersion>
 
-</project>
-```
-Save the pom.xml and do:
+      <groupId>com.hcl.domino.extension.helper</groupId>
+      <artifactId>keep-richtext-extension-helper</artifactId>
+      <version>1.0</version>
+      <name>Helper for KEEP richtext extension</name>
+      <description>Don't try this at home</description>
 
-``` mvn clean install```
+      <dependencies>
+        <dependency>
+          <groupId>com.hcl.domino.keep</groupId>
+          <artifactId>keep-core</artifactId>
+          <version>1.30.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+          <groupId>io.vertx</groupId>
+          <artifactId>vertx-core</artifactId>
+          <version>4.5.4</version>
+        </dependency>
+        <dependency>
+          <groupId>com.hcl.domino</groupId>
+          <artifactId>domino-jnx-api</artifactId>
+          <version>1.36.0</version>
+        </dependency>
+      </dependencies>
 
-This will create a keep-richtext-extension-helper-1.0.jar inside the target directory, as well as add this JAR file to your local Maven M2 repository, so we can now depend on this JAR file for our richtext extension project.
+    </project>
+    ```
+  2. **Save** the `pom.xml` and do:
+      ``` 
+      mvn clean install
+      ```
+Executing this command will generate a `keep-richtext-extension-helper-1.0.jar` file in the target directory. Additionally, it will include this JAR file in your local Maven M2 repository, allowing us to use it as a requirement for our richtext extension project.
+ 
 
 ## Extending richtext
-1. Set up richtext extension project.
-2. Finally, we can now start creating our very own richtext extension. To do this, we should first generate a new Maven project. We can do this easily by doing:
 
-mvn archetype:generate -DgroupId=com.example -DartifactId=richtext-extension -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
-This will create a folder named richtext-extension, with src directory and pom.xml file inside.
+1. Create a new project for the richtext extension.
+2. Begin developing our custom `richtext extension`. In order to accomplish this, we must initially create a new Maven project. We can simply achieve this by doing:
 
-Open up pom.xml and change maven.compiler.source and maven.compiler.target to 1.8. Also, inside dependencies, we can then add in the JAR file created by our extension helper earlier:
+      ```
+      mvn archetype:generate -DgroupId=com.example -DartifactId=richtext-extension -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+      ```
 
-<dependency>
-  <groupId>com.hcl.domino.extension.helper</groupId>
-  <artifactId>keep-richtext-extension-helper</artifactId>
-  <version>1.0</version>
-  <scope>provided</scope>
-</dependency>
-Click save after adding that depedency in. Take note of the scope here, we set it to provided because we want this dependency to not be compiled together with our richtext extension, because in the end, we will be putting the extension JAR alongside the KEEP JARs. The KEEP JARs will contain all the dependencies that our extension JAR will need.
+This command will generate a directory called `richtext-extension`, including a `src` folder and a `pom.xml` file.
+
+a. Open the `pom.xml` file and change the settings of `maven.compiler.source` and `maven.compiler.target` to `1.8`. Furthermore, under the dependencies section, we may include the JAR file that was generated by our extension helper earlier:
+
+```xml
+    <dependency>
+    <groupId>com.hcl.domino.extension.helper</groupId>
+    <artifactId>keep-richtext-extension-helper</artifactId>
+    <version>1.0</version>
+    <scope>provided</scope>
+    </dependency>
+```
+b. Click **save** after adding that dependency in. Take note of the **`scope`** here, we set it to **`provided`** because we want this dependency to not be compiled together with our richtext extension, because in the end, we will be putting the extension JAR alongside the KEEP JARs. The KEEP JARs will contain all the dependencies that our extension JAR will need.
 
 ## Creating your very own richtext processor
-Now, what's left is to create our very own richtext processor. Any class will do, as long as it implements RichtextProcessor.
+Now, what's left is to create our very own richtext processor. Any class will do, as long as it implements `RichtextProcessor.`
 
-As of this writing, RichtextProcessor has three methods, two of which that needs to be overwritten. These methods are:
+As of this writing, `RichtextProcessor` has three methods, two of which that needs to be overwritten. These methods are:
 
+```java
 /**
  * Get the name of the richtext processor. This should equate to the value of
  * {@code richTextAs} query parameter (case insensitive), and will be used to
@@ -119,8 +138,10 @@ JsonObject process(DominoClient client, Document doc, String itemName);
 default int getPriority() {
   return 0;
 }
+```
 An example richtext processor would be:
 
+```java
 package com.example;
 
 import com.hcl.domino.DominoClient;
@@ -145,31 +166,40 @@ public class AlwaysHelloRichtextProcessor implements RichtextProcessor {
   }
 
 }
-Then, we need to create a file inside src/main/resources/META-INF/services with file name com.hcl.domino.keep.info.richtext.spi.RichtextProcessor.
+```
+Then we must create a file within the `src/main/resources/META-INF/services` directory. The file should be named `com.hcl.domino.keep.info.richtext.spi.RichtextProcessor.`
 
-Edit this file and add in all the richtext extension you made, for example:
+Edit this file ` com.hcl.domino.keep.info.richtext.spi.RichtextProcessor` and include all the richtext extensions you created, such as:
 
-com.example.AlwaysHelloRichtextProcessor
-com.example.MyOwnRichtextProcessor
-Please bear in mind that all classes you declared in this file must exists and implements the RichtextProcessor class. Otherwise, an error will occur once we try loading this with KEEP.
+  ```
+  com.example.AlwaysHelloRichtextProcessor
+  com.example.MyOwnRichtextProcessor
+  ```
 
-Applying the richtext extension
-After you're done creating your own richtext extension, it is finally time to use it. First, create the richtext extension JAR via:
+It is important to note that all classes declared in this file must exist and implement the `RichtextProcessor` class. Otherwise, an error will be triggered when attempting to load this using KEEP.
 
-mvn clean package
-This will create a JAR file inside the target directory with the name richtext-extension-1.0-SNAPSHOT.jar. Copy this JAR file and paste it into where your KEEP JARs are at (REST API directory).
+## Applying the richtext extension
 
-If you want to try this out with your debug or non-debug container, you can paste the JAR in /opt/hcl/keep.
+Once you have finished creating your own richtext extension, it is time to use it. To begin, create the JAR file for the richtext extension by following these steps:
 
-Trying it out
-To try it out, you can call any API that has a richTextAs query parameter, and set its value to your processor name.
+  ```
+  mvn clean package
+  ```
 
-For example, if you use the AlwaysHelloRichtextProcessor, since its getProcessorName method returns alwayshello, if you do an API and set richTextAs=alwayshello, you should get the following JSON value for the richtext fields:
+This will create a JAR file inside the target directory with the name `richtext-extension-1.0-SNAPSHOT.jar`. Copy this JAR file and paste it into where your KEEP JARs are at (REST API directory).
 
+If you want to try this out with your debug or non-debug container, you can paste the JAR in `/opt/hcl/keep.`
+
+#### Trying it out
+
+To try it out, you can call any API that has a `richTextAs` query parameter, and set its value to your processor name.
+
+For example, if you use the `AlwaysHelloRichtextProcessor`, since its `getProcessorName` method returns` alwayshello`, if you do an API and set `richTextAs=alwayshello`, you should get the following JSON value for the richtext fields:
+
+```json
 {
   "type": "text/plain",
   "encoding": "plain",
   "content": "Hello!"
 }
-## Example richtext extension repository
-If you want a reference repository for this, please refer to this repository. It follows all the steps this documentation did so far and also has more richtext processor examples.
+```
