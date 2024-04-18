@@ -1,6 +1,6 @@
 # Richtext extension
 
-Richtext extension is for customers or users that prefers to have/use their own implementation of richtext processor. Users will be able to adjust it to meet their own needs, resulting in a better representation of their richtext.
+Richtext extension is for customers or users that prefers to have or use their own implementation of richtext processor. Users will be able to adjust it to meet their own needs, resulting in a better representation of their richtext.
 
 
 ## Extending KEEP richtext
