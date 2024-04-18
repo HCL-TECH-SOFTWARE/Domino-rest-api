@@ -5,7 +5,7 @@ Richtext extension is for customers or users that prefers to have/use their own 
 
 ## Extending KEEP richtext
 
-As of `KEEP version v1.0.12-SNAPSHOT`, you can now add additional richtext processors for KEEP.
+As of KEEP version `1.0.12-SNAPSHOT`, you can now add additional richtext processors for KEEP.
 
 ## Built in richtext processors
 There has been no change for the existing processors, namely:
