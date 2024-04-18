@@ -21,6 +21,7 @@ The section provides information on the latest features, improvements, and resol
 
     **Resolved Issues**
 
+    - Java crashed when quitting Domino REST API v1.0.11 from Domino. 
     - When editing a view schema in Domino REST API, the external name of the view was blank when the column title of that view in the Domino database was in Japanese characters.   
 
     **Others**

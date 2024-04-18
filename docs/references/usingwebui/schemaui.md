@@ -106,8 +106,8 @@ The `nsf` database file and schema are added to the schema list.
 The new form is now added to the list of forms and has an **Active** status. 
 
 !!!note
-     - The form created using this feature can't be deactivated and can only be deleted. To delete the form, click the menu icon beside the form's status and select **Delete**. In the **WARNING: Deleting Custom Form** dialog, click **Yes** to confirm.
-     - You can identify a custom form by the marker beside the form name and by the *custom form* text below the form name.    
+     The form created using this feature can't be deactivated and can only be deleted. To delete the form, click the menu icon beside the form's status and select **Delete**. In the **WARNING: Deleting Custom Form** dialog, click **Yes** to confirm.
+     <!-- You can identify a custom form by the marker beside the form name and by the *custom form* text below the form name.-->    
 
 ## Activate a form
 
