@@ -57,6 +57,7 @@ The `oauth.nsf` database exists in your Domino data directory. The Domino IdP us
         !!!note
             You need to create the `keepconfig.d` directory if not yet existing. 
 
+    6. Restart Domino REST API.
 
 2. Add the `OAuthAdmin` role for the ACL entry.
 

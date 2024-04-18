@@ -5,7 +5,7 @@
 The procedures guide you in editing a database view of a schema so you can:
 
 - select the columns you want to include in the view 
-- edit the external name of the selected columns
+- edit the external name of each selected column
 - reset an edited view to its initial state
  
 ## Prerequisite
@@ -17,14 +17,10 @@ The procedures guide you in editing a database view of a schema so you can:
 ### To edit a view
  
 1. Log in to the Domino REST API Admin UI and click **Database Management - REST API**.
-2. On the **Schema Management** page, select a schema.
+2. Select a schema on the **Schema Management** page.
 3. Click **Database Views** from the menu bar. 
 4. Click the pencil icon corresponding to the name of the view you want to edit. The **Edit (view name) Columns** page opens. 
-    
-    !!!note
-        The selected view should be in **Active** status.
-
-5. From the left pane, select the names of the columns that you want to include in the view. The column names appear in the right pane. 
+5. From the left pane, select the columns that you want to include in the view. The names of the selected columns should appear in the right pane under **Column Name**. 
 
     !!!tip
 	    - The order in which you select the names of the columns corresponds to the order of the columns.
@@ -33,9 +29,11 @@ The procedures guide you in editing a database view of a schema so you can:
 
     ![Edit view name column](../../assets/images/editviewcolumn.png)
 
-6.  **(Optional)** Edit the external name of a selected column.
-	1. If the selected column has no existing external name, enter a name in the **Name** field under **External Name**.
-	2. If the selected column has an existing external name, delete the name and enter a new name in the **Name** field under **External Name**.
+6.  **(Optional)** Set the external name of a selected column by entering a name in the corresponding text field under **External Name**.
+
+    !!!note
+        The text field under **External Name** corresponding to a selected column shows the column name, the column title, or the set external name of the column in a read-only format. 
+
 7. Click **Save**. A notification informs you that the schema has been successfully updated.   
 
 ### Expected result 
@@ -51,10 +49,6 @@ The procedures guide you in editing a database view of a schema so you can:
 2. On the **Schema Management** page, select a schema.
 3. Click **Database Views** from the menu bar. 
 4. Click the pencil icon corresponding to the name of an edited view you want to reset. The **Edit (view name) Columns** page opens. 
-    
-    !!!note
-        The selected view should be in **Active** status.
-
 5. Click **Reset**. A confirmation dialog appears.
 6. Click **Yes**. A notification informs you that the schema has been successfully updated.
 
