@@ -21,7 +21,9 @@ There are quite a number of things we should setup first before we can make an e
 1. Install KEEP using the KEEP installer.
 2. The user should find the `keep-core-<version>.jar`in their **REST API install directory** and do a **Maven** install on it.
        
-      ![](mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -Dfile=<path-to-keep-core-jar>)
+  ```
+  mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -Dfile=<path-to-keep-core-jar>
+  ```
       
 This will add in **KEEP Core** to your local Maven M2 repository.
 
@@ -84,9 +86,9 @@ Executing this command will generate a `keep-richtext-extension-helper-1.0.jar` 
 
 1. Create a new project for the richtext extension. In order to accomplish this, we must initially create a new Maven project. We can simply achieve this by doing:
 
-      
-      ![](mvn archetype:generate -DgroupId=com.example -DartifactId=richtext-extension -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false)
-      
+```      
+mvn archetype:generate -DgroupId=com.example -DartifactId=richtext-extension -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+```      
 
 This command will generate a directory called `richtext-extension`, including a `src` folder and a `pom.xml` file.
 
