@@ -5,7 +5,7 @@ Richtext extension is for customers or users that prefers to have or use their o
 
 ## Extending KEEP richtext
 
-As of KEEP version `1.0.12-SNAPSHOT`, you can now add additional richtext processors for KEEP.
+As of KEEP version `1.0.12`, you can now add additional richtext processors for KEEP.
 
 ## Built in richtext processors
 There has been no change for the existing processors, namely:
@@ -59,17 +59,17 @@ In this case, extending richtext will need three dependencies:
         <dependency>
           <groupId>com.hcl.domino.keep</groupId>
           <artifactId>keep-core</artifactId>
-          <version>1.30.1-SNAPSHOT</version>
+          <version>1.0.12</version>
         </dependency>
         <dependency>
           <groupId>io.vertx</groupId>
           <artifactId>vertx-core</artifactId>
-          <version>4.5.4</version>
+          <version>4.5.7</version>
         </dependency>
         <dependency>
           <groupId>com.hcl.domino</groupId>
           <artifactId>domino-jnx-api</artifactId>
-          <version>1.36.0</version>
+          <version>1.41.0</version>
         </dependency>
       </dependencies>
 
@@ -189,13 +189,11 @@ Once you have finished creating your own richtext extension, it is time to use 
 
 This will create a JAR file inside the target directory with the name `richtext-extension-1.0-SNAPSHOT.jar`. Copy this JAR file and paste it into where your KEEP JARs are at (REST API directory).
 
-
-
 #### Trying it out
 
 To try it out, you can call any API that has a `richTextAs` query parameter, and set its value to your processor name.
 
-For example, if you use the `AlwaysHelloRichtextProcessor`, since its `getProcessorName` method returns`alwayshello`, if you do an API and set `richTextAs=alwayshello`, you should get the following JSON value for the richtext fields:
+For example, if you use the `AlwaysHelloRichtextProcessor`, since its `getProcessorName` method returns `alwayshello`, if you do an API and set `richTextAs=alwayshello`, you should get the following JSON value for the richtext fields:
 
 ```json
 {
