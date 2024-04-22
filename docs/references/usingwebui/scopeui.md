@@ -2,6 +2,14 @@
 
 Select **Database Management - Activation** from the home page or **Scopes** from the side navigation pane to access the **Scope Management** page.
 
+## View available scopes
+
+The **Scope Management** page shows the available scopes.
+
+![Scopes](../../assets/images/Scopes.png)
+
+You can arrange the scopes in **Stack View**, **Card View**, **Alphabetical View**, or **NSF View**. There is also a provision to search through the list either via **Scope Name** or **NSF Name**.
+
 ## Add a scope
 
 !!!tip

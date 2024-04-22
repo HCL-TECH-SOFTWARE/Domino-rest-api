@@ -22,7 +22,8 @@ Once the restapi task is loaded in the Domino console, you can use the following
 | `tell restapi [show] info`                           | Show loaded components (geek stuff).                                                                |
 | `tell restapi [show] config`                         | Show current configuration.                                                                         |
 | `tell restapi [show] status`                         | Show version information and state.                                                                 |
-| `tell restapi reload cache [database] [application]` | Reload Domino REST API's database and application cache.<br>Leave off optional parameters for both. |
+| `tell restapi refresh cache [database] [application] ` | Refreshes Domino REST API's database and application cache.
+Leave off optional parameters for both. |
 
 The following are settings that can be set in the notes.ini
 

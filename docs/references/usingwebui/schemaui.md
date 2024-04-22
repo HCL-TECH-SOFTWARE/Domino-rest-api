@@ -2,9 +2,9 @@
 
 Select **Database Management - REST API** from the home page or **Schemas** from the side navigation pane to access the **Schema Management** page.
 
-## List available database schemas
+## View available database schemas
 
-Click the **Schemas** navigation pane and the  **Schema Management** page shows the list of all available schemas.
+The **Schema Management** page shows the available schemas.
 
 ![List Database](../../assets/images/ListSchemas.PNG)
 
@@ -38,26 +38,12 @@ You can add a schema by [creating your own schema](#create-a-schema) or [importi
 	3. Enter a **Schema Name** and a **Schema Description**. 
       5. Click **Save Schema**. 
 
-<!--3. Under **Available Databases**, select a database from the list of databases available to the Domino REST API.
-
-      ![Create Database Form](../../assets/images/AddSchemaForm.PNG)
-
-      You can search for a database by clicking **Search Databases** and entering the database name. This filters the list of available databases based on the entered database name. Click the clear icon to remove the entered database name. 
-
-4. Under **Add New Schema**, enter details in the **Schema Name** and **Description**, and then select the **Formula Engine** and **Schema Icon** for the schema you want to create.
-5. Click **Add**.-->
-
-### Import a schema <!--to a database-->
+### Import a schema 
 
 Use this option if you want to import a new schema from a JSON file produced by [exporting database schema as JSON file](../../howto/database/exportsourcejson.md).
 
-<!--Use this option if you have a schema that you want to share across multiple databases or even into the same database. Follow the procedure of exporting a schema here [Export database schema as JSON file ](../../howto/database/exportsourcejson.md).-->
-
 1. On the **Schema management page**, click **Add Schema**.
 2. In the **Add New Schema** dialog, click **Import Schema**.
-      
-      <!--![import schema](../../assets/images/importSchema.png)-->
-
 3. Select the JSON database file and click **Open**. The JSON database file is the exported file from another database or within your server.
 
 4. In the **Import Schema** dialog:
@@ -102,7 +88,6 @@ The `nsf` database file and schema are added to the schema list.
 1. Select a schema from the list of schemas to load the details.
 2. Select **Database Forms** from the menu bar to show the list of all the forms for the selected database schema.
 
-      <!--![Database Schema](../../assets/images/insideSchema.png)-->
       ![List Forms](../../assets/images/ListOfForms2.png)
 
 
@@ -121,7 +106,8 @@ The `nsf` database file and schema are added to the schema list.
 The new form is now added to the list of forms and has an **Active** status. 
 
 !!!note
-      The form created using this feature can't be deactivated and can only be deleted. To delete the form, click the menu icon beside the form's status and select **Delete**. In the **WARNING: Deleting Custom Form** dialog, click **Yes** to confirm. 
+     The form created using this feature can't be deactivated and can only be deleted. To delete the form, click the menu icon beside the form's status and select **Delete**. In the **WARNING: Deleting Custom Form** dialog, click **Yes** to confirm.
+     <!-- You can identify a custom form by the marker beside the form name and by the *custom form* text below the form name.-->    
 
 ## Activate a form
 
@@ -132,8 +118,7 @@ The new form is now added to the list of forms and has an **Active** status.
 The activated form now has an **Active** status. 
 
 !!!tip
-    Clicking the menu icon and selecting **Deactivate** corresponding to a form deactivates the form. In the **Reset Form** dialog, click **Yes** to confirm. The form now has an **Inactive** status.
-
+    Clicking the menu icon and selecting **Deactivate** corresponding to a form deactivates the form. In the **Reset Form** dialog, click **Yes** to confirm. The form now has an **Inactive** status. 
 
 **To activate all forms**
 
@@ -147,9 +132,12 @@ All forms are now activated with default settings and have **Active** status.
 
 ## Change form configuration
 
-1. On the **Database Forms** tab, click the pencil icon corresponding to the configured form that you want to edit to load the form **Access Mode** page showing the `default` access mode.
+1. On the **Database Forms** tab, click the pencil icon corresponding to the activated form that you want to edit to load the form **Access Mode** page showing the `default` access mode.
       
       [![Access Mode](../../assets/images/AccessMode.png)](../../assets/images/AccessMode.png){: target="_blank" rel="noopener noreferrer"}
+
+      !!!note
+          Clicking the pencil icon corresponding to an inactive form shows the **Activate Form** dialog, which requires you to confirm the activation of the form. If you click **OK**, the form is activated, and you are directed to the form **Access Mode** page. 
 
 2. Under **Show fields from**, hover over a field item and click the **+** icon. This adds the field in the form. Repeat this for all the fields to be added.
 
@@ -167,7 +155,7 @@ All forms are now activated with default settings and have **Active** status.
 
 ## Add a mode
 
-1. On the **Database Forms** tab, click the pencil icon corresponding to the configured form that you want to add a mode.The form **Access Mode** page opens showing the `default` access mode. 
+1. On the **Database Forms** tab, click the pencil icon corresponding to the activated form that you want to add a mode.The form **Access Mode** page opens showing the `default` access mode. 
 2. Click **Add Mode**.
 2. In the **Add New Mode** dialog, enter the name of the new mode and click **Save**. The new mode has been added to the `Mode`list.
 
@@ -183,7 +171,7 @@ All forms are now activated with default settings and have **Active** status.
 
 Use **Clone Mode** to add a new mode based on an existing mode in the same schema.
 
-1. On the **Database Forms** tab, click the pencil icon corresponding to the configured form that you want to clone a mode. The form **Access Mode** page opens showing the `default` access mode.
+1. On the **Database Forms** tab, click the pencil icon corresponding to the activated form that you want to clone a mode. The form **Access Mode** page opens showing the `default` access mode.
 2. From the **Mode** dropdown list, choose the mode you want to clone, for example the `default` mode.
 3. Click **Clone Mode**.
 4. In the **Clone <mode name\>** dialog, enter the name of the mode and click **Save**. 
@@ -198,7 +186,7 @@ Use **Clone Mode** to add a new mode based on an existing mode in the same schem
 
 Use this function to see the differences between the modes of a selected form. To use this function, you must have at least two modes in your selected form.
 
-1. On the **Database Forms** tab, click the pencil icon corresponding to the configured form that you want to compare the modes. The form **Access Mode** page opens showing the `default` access mode.
+1. On the **Database Forms** tab, click the pencil icon corresponding to the activated form that you want to compare the modes. The form **Access Mode** page opens showing the `default` access mode.
 2. Click **Open Mode Compare**. The **Mode Compare - <form name\>** page opens.
 3. Select the modes to compare from the drop-down lists in the comparison columns. The comparison result is displayed. 
 
@@ -247,11 +235,7 @@ Use this function to see the differences between the modes of a selected form. T
 1. Select a schema from the list of schemas to load the details.
 2. Select **Database Agents** from the menu bar. This lists all the Agents for the selected database.
 
-
       ![List Agents](../../assets/images/ListOfAgents.png)
-
-<!--4. Click **Activate All** if you'd like to quickly enable all Agents to be available in this schema. Click **Deactivate All** to disable all Agents in this schema.-->
-
 
 ## Activate an agent
 
