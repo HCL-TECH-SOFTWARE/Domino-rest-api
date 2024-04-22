@@ -77,7 +77,7 @@ The form array has Form entries with 2 elements:
 - **formName**: Ideally the value stored in "`Form`" items. Alias resolution provided by `formAliases` element
 - **formModes**: Named schema for a form defining fields and access conditions. A form needs at least one FormMode to make documents available on Domino REST API. There are three mode names with special meaning:
   - **default** : The first (and last) formMode in a Domino REST API schema
-  - **odata** : The mode used when accessing Domino REST API's ODATA endpoints
+  - **odata** : The mode used when accessing Domino REST API's OData endpoints
   - **dql** : The mode used when executing a DQL query
 
 ![Schema component View](../../assets/images/SchemaFormMode.png)

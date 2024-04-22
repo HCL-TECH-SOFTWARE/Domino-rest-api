@@ -12,7 +12,7 @@ When data is queried by [DQL](https://help.hcltechsw.com/dom_designer/12.0.1/bas
 
 ## odata
 
-The `odata` mode lets you define the data that comes through OData endpoints. The API support the OData standard [Open Data Protocol(oData)](https://www.odata.org). If a form doesn't have an `odata` mode, then an OData won't return any data for that form.
+The `odata` mode lets you define the data that comes through OData endpoints. The API support the OData standard [Open Data Protocol(OData)](https://www.odata.org). If a form doesn't have an `odata` mode, then an OData won't return any data for that form.
 
 ## raw
 

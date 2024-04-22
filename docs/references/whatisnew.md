@@ -15,14 +15,26 @@ The section provides information on the latest features, improvements, and resol
 
     **New**
 
+    - Added `GET v1/richtextprocessors` endpoint to return a list of the available methods of returning Rich Text.
+    - Added `POST v1/run/agentWithContext` endpoint to specify an array of UNIDs to run an agent on. 
+
+        !!!note
+            The agent must use `NotesSession.DocumentContext` to access the document.
+
     **Improvements**
 
-    - Implemented UI/UX enhancements in the [OAuth Consents](./usingwebui/oauthconsentui.md) page in the **Admin UI**. 
+    - Extended how Rich Text is processed. For more information, see [Richtext extension](richtextension.md).
+    - Improved OData filter processing by adding support for `in`, `contains`, `startswith`, and `endswith` clauses.
+    - Enhanced user experience by allowing user to activate a form and bringing user directly into form edit mode by clicking the pencil icon corresponding to an inactive form in the **Database Form** tab in the **Admin UI** and confirming form activation.
+    - Implemented UI/UX enhancements in the [OAuth Consents](./usingwebui/oauthconsentui.md) page in the **Admin UI**.
+    - Enhanced the PIM Swagger documentation. 
 
     **Resolved Issues**
 
-    - Java crashed when quitting Domino REST API v1.0.11 from Domino. 
-    - When editing a view schema in Domino REST API, the external name of the view was blank when the column title of that view in the Domino database was in Japanese characters.   
+    - An intermittent issue occurred where deleting a schema might have caused other schemas not to load or be created for that same database.
+    - Running `tell restapi quit` might have crashed the Domino server.
+    - An issue occurred with `pim-v1/attachments/{unid}/{attachmentName}` where deleting the attachment did not remove the attachment's icon.
+    - The **External Name** field in the **Admin UI** was blank when editing a View and the column title has DBCS characters.
 
     **Others**
 

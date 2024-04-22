@@ -24,7 +24,7 @@ Domino REST API moves access control out of the code and into the configuration.
 
 For example, in the case of an expense report filed by an employee, the approver and the employee can only edit the fields that correspond to their role. An approver might be able to approve and add a remark only and an employee might be able to provide a subject, description, and cost only.
 
-This granular access managed through configurations is what makes Domino REST API unique!
+This granular access managed through configurations is what makes Domino REST API unique.
 
 Also, in Domino REST API, we built modern REST APIs that are designed to bring Notes and Domino forward in the current market. Domino REST API adds OpenAPI specified REST APIs to Domino and allows the latter to talk to any server or client over http, https, or http/2. Using Domino REST API, any application that talks https can access the data from a Domino database, hence extending the availability of this data beyond the Notes client.
 
@@ -53,7 +53,7 @@ Domino REST API is designed to work with:
 - Browser-based applications hosted on Domino REST API or elsewhere, written in HTML and JavaScript, for example [ReactJS](https://reactjs.org/), [VueJS](https://vuejs.org/), [Svelte](https://svelte.dev/), [Angular](https://angular.io/), [VanillaJS](http://vanilla-js.com/) etc.
 - Application-server-based applications, for example [NodeJS](https://nodejs.org/en/), [HCL DX](https://www.hcltechsw.com/dx), [Spring](https://spring.io/projects/spring-framework), [SpringBoot](https://spring.io/projects/spring-boot), [Vaadin](https://vaadin.com), [Vert.x](https://vertx.io), [Quarkus](https://quarkus.io), [PHP](https://www.php.net/), [Wordpress](https://wordpress.com/).
 - Command Line Interfaces (CLI), starting with but not limited to [curl](../references/usertools/curl.md).
-- [OData](https://www.odta.org) aware applications (e.g. SAP, Salesforce, Microsoft Excel, [Tableau](https://help.tableau.com/current/pro/desktop/en-us/examples_odata.htm) etc).
+- [OData](https://www.odata.org) aware applications (e.g. SAP, Salesforce, Microsoft Excel, [Tableau](https://help.tableau.com/current/pro/desktop/en-us/examples_odata.htm) etc).
 - LowCode environments like [HCL Volt MX](https://www.hcltechsw.com/volt-mx), [NodeRED](https://nodered.org/) or others.
 
 ### Domino REST API is secure
