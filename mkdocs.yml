@@ -10,6 +10,7 @@ theme:
   language: en
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.indexes
     - navigation.top
     - navigation.instant
@@ -48,7 +49,7 @@ copyright: >-
   <a href="#__consent">Change cookie settings</a>
 
 extra:
-  productversion: 1.0.11
+  productversion: 1.0.12
   flexnet_url: "https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/entitledDownloadFile.action?downloadPkgId=HCL%20Domino%20REST%20API%20Early%20Access%20Release"
   social:
     - icon: fontawesome/brands/github
