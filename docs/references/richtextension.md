@@ -153,7 +153,7 @@ There are four built-in incoming richtext processors:
     import io.vertx.core.json.JsonObject;
 
     /**
-     * Always saves "hi" as a text/plain mime regardless of what's inside the richtext JSON
+     * Always saves "Hi!" as a text/plain mime regardless of what's inside the richtext JSON
      */
     public class AlwaysHiIncomingRichtextProcessor implements IncomingRichtextProcessor {
 
@@ -224,7 +224,7 @@ There are four built-in outgoing richtext processors:
     import io.vertx.core.json.JsonObject;
 
     /**
-     * Always returns "hello" in the response.
+     * Always returns "Hello!" in the content of the richtext JSON response.
      */
     public class AlwaysHelloRichtextProcessor implements OutgoingRichtextProcessor {
 
