@@ -134,10 +134,9 @@ All forms are now activated with default settings and have **Active** status.
 
 1. On the **Database Forms** tab, click the pencil icon corresponding to the activated form that you want to edit to load the form **Access Mode** page showing the `default` access mode.
       
-      [![Access Mode](../../assets/images/AccessMode.png)](../../assets/images/AccessMode.png){: target="_blank" rel="noopener noreferrer"}
+      [![Access Mode](../../assets/images/AccessMode.png)](../../assets/images/AccessMode.png){: target="_blank" rel="noopener noreferrer"} 
 
-      !!!note
-          Clicking the pencil icon corresponding to an inactive form shows the **Activate Form** dialog, which requires you to confirm the activation of the form. If you click **OK**, the form is activated, and you are directed to the form **Access Mode** page. 
+      Clicking the pencil icon corresponding to an inactive form shows the **Activate Form** dialog, which requires you to confirm the activation of the form. If you click **OK**, the form is activated, and you are directed to the form **Access Mode** page.
 
 2. Under **Show fields from**, hover over a field item and click the **+** icon. This adds the field in the form. Repeat this for all the fields to be added.
 

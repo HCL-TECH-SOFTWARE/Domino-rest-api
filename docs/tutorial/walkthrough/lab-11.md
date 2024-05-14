@@ -17,7 +17,7 @@ The Domino REST API provides extensive configuration capabilities to cater to di
 
 ## Steps
 
-All configuration settings are kept in JSON files you place in `keepcofig.d` Files are loaded in alphabetical order. When you have conflicting entries, the last one wins. After a change the REST API needs to be reloaded.
+All configuration settings are kept in JSON files you place in `keepcofig.d`. Files are loaded in alphabetical order. When you have conflicting entries, the last one wins. After a change the REST API needs to be reloaded.
 
 ### Update CORS settings
 
