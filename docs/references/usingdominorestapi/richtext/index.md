@@ -6,7 +6,7 @@
 
     The container formats today that resemble these capabilities are [ECMA-376 (ISO/IEC-29500)](https://www.ecma-international.org/publications-and-standards/standards/ecma-376/) (a.k.a Office Open XML), [ISO/IEC 26300:2006](http://www.oasis-open.org/committees/download.php/19274/OpenDocument-v1.0ed2-cs1.pdf) (a.k.a Open Document Format), which are both XML based and [MIME (RFC 1341)](https://datatracker.ietf.org/doc/html/rfc1341) which is widely used in eMail. The XML formats, mainly used in word processors aren't native to the web, while MIME doesn't prescribe (it is **multipurpose** after all) its content parts **and** isn't native to web browsers.
 
-### Define RichText
+## Define RichText
 
 Any field you want to access in Domino REST API needs to be defined [in a schema](../../howto/database/enablingadb.md), using the correct data format.
 
@@ -20,7 +20,7 @@ Any field you want to access in Domino REST API needs to be defined [in a schema
 
 This enables the correct, within the means of the API, processing of RichText for both read and write.
 
-### Reading RichText
+## Reading RichText
 
 There are 6 ways to retrieve RichText:
 
@@ -40,8 +40,9 @@ By default, the following APIs return RichText as MIME, but you can specify a di
 - `/bulk/update`
 - `/lists/{name}` (when using the `documents=true` parameter)
 
-The request response may include the parameters identified in the parameters table below.  
-### Writing RichText
+The request response may include the parameters identified in the parameters table below.
+
+## Writing RichText
 
 <!-- prettier-ignore -->
 !!! note
