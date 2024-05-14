@@ -132,20 +132,29 @@ All forms are now activated with default settings and have **Active** status.
 
 ## Change form configuration
 
-1. On the **Database Forms** tab, click the pencil icon corresponding to the activated form that you want to edit to load the form **Access Mode** page showing the `default` access mode.
-      
-      [![Access Mode](../../assets/images/AccessMode.png)](../../assets/images/AccessMode.png){: target="_blank" rel="noopener noreferrer"}
+1. On the **Database Forms** tab, click the pencil icon corresponding to the activated form that you want to edit.
 
-      !!!note
-          Clicking the pencil icon corresponding to an inactive form shows the **Activate Form** dialog, which requires you to confirm the activation of the form. If you click **OK**, the form is activated, and you are directed to the form **Access Mode** page. 
+    ![dbforms](../../assets/images/dbforms.png){: target="_blank" rel="noopener noreferrer"}
+    
+    !!!note
+        Clicking the pencil icon corresponding to an inactive form shows the **Activate Form** dialog, which requires you to confirm the activation of the form. If you click **OK**, the form is activated, and you are directed to the form **Access Mode** page. 
 
-2. Under **Show fields from**, hover over a field item and click the **+** icon. This adds the field in the form. Repeat this for all the fields to be added.
+2. The **Access Mode** page opens showing the `default` access mode.
+
+    ![Access mode](../../assets/images/AccessMode.png){: target="_blank" rel="noopener noreferrer"}
+
+3. Under **Show fields from**, hover over a field item and click the **+** icon. This adds the field in the form. Repeat this for all the fields to be added.
 
       [![Add field](../../assets/images/addfield.png){: style="height:60%;width:60%"}](../../assets/images/addfield1.png){: target="_blank" rel="noopener noreferrer"}
      
 
-3. Set the read or write access formula for each of the fields in the form.
-4. Click **Save**.
+4. Set the read or write access formula for each of the fields in the form.
+
+5. Below the **Mode Formula Settings**, click the pencil icon to edit the `@True` or `@False` options and click **Save**.
+
+    ![Formula Settings](../../assets/images/modeformula.png){: target="_blank" rel="noopener noreferrer"}
+
+5. Click **Save**.
 
 !!!tip
     - Click **Add All Fields** icon to add all the available fields to the form.
