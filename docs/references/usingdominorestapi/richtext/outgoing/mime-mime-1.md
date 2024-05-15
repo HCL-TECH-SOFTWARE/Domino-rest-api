@@ -49,5 +49,3 @@ this is the attachment text
 
 --XXXXboundary text--
 ```
-
-It returns `1:1`.

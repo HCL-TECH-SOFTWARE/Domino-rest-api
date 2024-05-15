@@ -54,7 +54,7 @@ Extending richtext needs the following dependencies:
         <dependency>
           <groupId>com.hcl.domino.keep</groupId>
           <artifactId>keep-core</artifactId>
-          <version>1.0.12</version>
+          <version>1.0.14</version>
         </dependency>
         <dependency>
           <groupId>io.vertx</groupId>

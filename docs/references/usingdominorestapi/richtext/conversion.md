@@ -2,6 +2,9 @@
 
 Here are the tables that specifies how incoming and outgoing RichTexts are converted.
 
+!!!note
+    All incoming and outgoing conversions shown here are the default processes. See [Extending RichText](../../../references/richtextension.md) for instructions on extending RichText processing.
+
 ## Incoming RichTexts
 
 Incoming RichTexts are the RichText JSON specified on the request body as the value of a RichText field.
@@ -10,6 +13,10 @@ The following table is a matrix for submitted types together with its supported 
 
 !!!note
     `createAdditional` is an optional property in the RichText JSON which you can specify what **alternative** types to create additionally from the original content. This will save a `multipart/alternative` MIME that contains the original content type along with the specified types in the `createAdditional` property.<br/><br/>
+    Currently available values for `createAdditional` are:<br/>
+    - plain<br/>
+    - html<br/>
+    <br/>
     Refer to the table for each submitted type's supported `createAdditional` switches.
 
 | Submitted type        | createAdditional | Stored as                                                               | Example                                           |
@@ -23,6 +30,9 @@ The following table is a matrix for submitted types together with its supported 
 | text/markdown         | plain            | multipart/alternative<br>- text/markdown<br>- text/plain                | [Example](./incoming/text-markdown+plain.md)      |
 | text/markdown         | html             | multipart/alternative<br>- text/markdown<br>- text/html                 | [Example](./incoming/text-markdown+html.md)       |
 | text/markdown         | plain, html      | multipart/alternative<br>- text/markdown<br>- text/plain<br>- text/html | [Example](./incoming/text-markdown+plain+html.md) |
+
+!!!warning
+    Updating the RichText field in Notes client may alter what Domino REST API has stored in it. For example, a stored `multipart/alternative` will get overwritten if the RichText field is updated using the Notes client.
 
 ## Outgoing RichTexts
 

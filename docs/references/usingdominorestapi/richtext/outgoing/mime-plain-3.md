@@ -41,4 +41,5 @@ We should get the following in the RichText field response:
 }
 ```
 
-If there's no `text/plain` part in the multipart MIME, it will then try to find the first `text/html` part and convert it to plain.
+!!!note
+    Since there's no `text/plain` part in the stored multipart MIME, it fallsback to find a `text/html` part and convert it to plain, then return it as a response.

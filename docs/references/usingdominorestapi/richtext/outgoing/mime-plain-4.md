@@ -36,4 +36,5 @@ We should get the following in the RichText field response:
 }
 ```
 
-If there's no `text/plain` part in the multipart MIME, and no `text/html` part, it will then try to find the first `text/markdown` part and convert it to plain.
+!!!note
+    Since there's no `text/plain` part in the stored multipart MIME, and no `text/html` part to fallback to, it then checks for a `text/markdown` part and convert it to plain, then return it as a response.

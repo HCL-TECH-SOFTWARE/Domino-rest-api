@@ -12,7 +12,7 @@ This is a multipart message in MIME format.
 --XXXXboundary text
 Content-Type: text/markdown
 
-**this is the body text**
+**this is the markdown text**
 
 --XXXXboundary text
 Content-Type: text/plain;
@@ -32,8 +32,9 @@ We should get the following in the RichText field response:
 {
   "type": "text/html",
   "encoding": "PLAIN",
-  "content": "<p><strong>this is the body text</strong></p>\n"
+  "content": "<p><strong>this is the markdown text</strong></p>\n"
 }
 ```
 
-If there's no `text/html` part in the multipart MIME, it will then try to find the first `text/markdown` part and convert it to HTML.
+!!!note
+    Since there's no `text/html` part in the stored multipart MIME, it fallsback to find a `text/markdown` part and convert it to HTML, then return it as a response.

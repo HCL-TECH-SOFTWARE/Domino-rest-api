@@ -9,16 +9,16 @@ Content-Type: multipart/alternative;
 --XXXXboundary text
 Content-Type: text/markdown
 
-**this is the body text**
+**this is the markdown text**
 --XXXXboundary text
 Content-Type: text/html
 
-<p><strong>this is the body text</strong></p>
+<p><strong>this is the html text</strong></p>
 
 --XXXXboundary text
 Content-Type: text/plain
 
-this is the body text
+this is the plain text
 --XXXXboundary text--
 ```
 
@@ -30,8 +30,9 @@ We should get the following in the RichText field response:
 {
   "type": "text/markdown",
   "encoding": "PLAIN",
-  "content": "**this is the body text**"
+  "content": "**this is the markdown text**"
 }
 ```
 
-It returned only the first `text/markdown` part it sees in the multipart MIME.
+!!!note
+    Since, we have a `text/markdown` part in the stored multipart MIME, it gets that and returned it as a response.

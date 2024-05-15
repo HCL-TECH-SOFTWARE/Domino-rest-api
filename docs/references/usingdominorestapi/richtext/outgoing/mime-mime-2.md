@@ -45,5 +45,3 @@ Content-Type: text/html
 
 --XXXXboundary text--
 ```
-
-It returns `1:1`.

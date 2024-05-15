@@ -37,4 +37,5 @@ We should get the following in the RichText field response:
 }
 ```
 
-Since the multipart has no `text/plain`, and also has no `text/html` and `text/markdown` to fallback to, it then returned a plain conversion of the MIME parts.
+!!!note
+    Since there's no `text/html` part in the stored multipart MIME, and also has no `text/html` and `text/markdown` part to fallback to, it then returned a plain conversion of all MIME parts.
