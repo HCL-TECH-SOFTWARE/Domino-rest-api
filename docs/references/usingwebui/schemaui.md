@@ -106,8 +106,8 @@ The `nsf` database file and schema are added to the schema list.
 The new form is now added to the list of forms and has an **Active** status. 
 
 !!!note
-     The form created using this feature can't be deactivated and can only be deleted. To delete the form, click the menu icon beside the form's status and select **Delete**. In the **WARNING: Deleting Custom Form** dialog, click **Yes** to confirm.
-     <!-- You can identify a custom form by the marker beside the form name and by the *custom form* text below the form name.-->    
+     - The form created using this feature can't be deactivated and can only be deleted. To delete the form, click the menu icon beside the form's status and select **Delete**. In the **WARNING: Deleting Custom Form** dialog, click **Yes** to confirm.
+     - You can identify a custom form by the marker beside the form name and by the *custom form* text below the form name.    
 
 ## Activate a form
 
@@ -134,32 +134,38 @@ All forms are now activated with default settings and have **Active** status.
 
 1. On the **Database Forms** tab, click the pencil icon corresponding to the activated form that you want to edit.
 
-    ![dbforms](../../assets/images/dbforms.png){: target="_blank" rel="noopener noreferrer"}
+    [![dbforms](../../assets/images/dbforms.png)](../../assets/images/dbforms.png){: target="_blank" rel="noopener noreferrer"}
     
     !!!note
         Clicking the pencil icon corresponding to an inactive form shows the **Activate Form** dialog, which requires you to confirm the activation of the form. If you click **OK**, the form is activated, and you are directed to the form **Access Mode** page. 
 
-2. The **Access Mode** page opens showing the `default` access mode.
+    The **Access Mode** page opens showing the `default` access mode.
 
-    ![Access mode](../../assets/images/AccessMode.png){: target="_blank" rel="noopener noreferrer"}
+    [![Access mode](../../assets/images/AccessMode.png)](../../assets/images/AccessMode.png){: target="_blank" rel="noopener noreferrer"}
 
-3. Under **Show fields from**, hover over a field item and click the **+** icon. This adds the field in the form. Repeat this for all the fields to be added.
+2. Under **Show fields from**, hover over a field item and click the **+** icon. This adds the field in the form. Repeat this for all the fields to be added.
 
       [![Add field](../../assets/images/addfield.png){: style="height:60%;width:60%"}](../../assets/images/addfield1.png){: target="_blank" rel="noopener noreferrer"}
      
 
-4. Set the read or write access formula for each of the fields in the form.
+3. Set the read or write access of each field in the form in **Field Setting**.
 
-5. Below the **Mode Formula Settings**, click the pencil icon to edit the `@True` or `@False` options and click **Save**.
+4. Under **Mode Formula Settings**, click the pencil icon corresponding to a mode formula. A dialog opens.
 
-    ![Formula Settings](../../assets/images/modeformula.png){: target="_blank" rel="noopener noreferrer"}
+      The following image shows the opened **Formula for Delete Access** dialog.  
 
-5. Click **Save**.
+      [![Formula Settings](../../assets/images/modeformula.png)](../../assets/images/modeformula.png){: target="_blank" rel="noopener noreferrer"}
+
+5. In the text field in the dialog, edit the `@True` or `@False` entry and click **Save** to close the dialog.
+
+6. Click **Save**.
 
 !!!tip
     - Click **Add All Fields** icon to add all the available fields to the form.
+    - Click **Refresh List of Fields** icon to refresh the list of avaialble fields.
+    - Use the **Search Field** search box to search for a field by field name.  
     - Enter a custom field name in the **Add custom field** and click the **+** icon to add a custom field to the form.
-    - Click **Delete Multiple** to enable the removal of all or selected fields from the form.
+    - Click **Delete Fields**, select the fields to remove, and then click **Remove** to remove the selected fields from the form.
     - Click the **Multi-Value** toggle to the on position to specify a **Field Group**. The **Multi-Value** toggle isn't clickable to the off position if a field group is specified.
 
 ## Add a mode
@@ -174,7 +180,6 @@ All forms are now activated with default settings and have **Active** status.
 
 3. Add fields and set the read or write access formula for each of the added fields. 
 4. Click **Save**.
-
 
 ## Clone a mode 
 

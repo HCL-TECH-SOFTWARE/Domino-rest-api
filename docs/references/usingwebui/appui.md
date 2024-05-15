@@ -40,19 +40,7 @@ The **Application Management** page shows the available applications in a table 
 
       ![Edit Application](../../assets/images/EditApplication.png){: style="height:80%;width:80%"}
 
-<!-- ## Filter applications
-
-You can use the filter function to filter which applications to display.
-
-**To use the filter**
-
-1. Click the filter icon. 
-
-
--->
-
-
-
+<!--
 ## Filter applications
 
 You can use the filter function to filter which applications to display.
@@ -72,7 +60,7 @@ For more information on the filters, refer to the following table:
 
 !!!tip
     Click **Reset** in the **Filter** pane to clear all filters. 
-
+-->
 
 ## Access OAuth Consents
 
