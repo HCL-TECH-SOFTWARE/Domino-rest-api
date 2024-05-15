@@ -4,7 +4,7 @@ Select **Application Management - OAUTH** from the home page or **Applications**
 
 ## View available applications
 
-The **Application Management** page shows the list of all available applications.
+The **Application Management** page shows all available applications.
 
 ![List Applications](../../assets/images/ListOfApplications.png){: style="height:80%;width:80%"}
 
@@ -13,10 +13,10 @@ The **Application Management** page shows the available applications in a table 
 
 !!!tip
     - Click the play button to launch the application.
-    - Click the edit icon to update the details of the application.
-    - Click the delete icon to delete the application. 
-    - Click **Click to Generate App Secret** to generate an app secret. 
-    - Use the **Search Application** search field to search for an application by name. 
+    - Click the Edit Application icon to update the details of the application.
+    - Click the Delete Application icon to delete the application. 
+    - Click **Click to Generate Secret** to generate an app secret. 
+    - Use the **Search App Name** search field to search for an application by name. 
     - Set the number of applications displayed on the page by selecting a value from **Rows per page**.
     - Use the pagination arrows to move back and forth through pages.
 
@@ -50,6 +50,29 @@ You can use the filter function to filter which applications to display.
 
 
 -->
+
+
+
+## Filter applications
+
+You can use the filter function to filter which applications to display.
+
+**To use the filter**
+
+1. Click the filter icon. This opens the **Filter** pane.
+2. Use any or all the filters as needed, and then click **Show Results**. 
+
+For more information on the filters, refer to the following table:
+
+|Filter|Description
+|:----|:----|
+|Status| Select **All** to display active and inactive applications.<br/><br/>Select **Active** to show only active applications.<br/><br/>Select **Inactive** to show only inactive applications.|
+|App secret|Select **All** to display all applications.<br/><br/>Select **Generated** to show only applications with an app secret.<br/><br/>Select **Not Generated** to show only applications without a generated app secret.|
+
+
+!!!tip
+    Click **Reset** in the **Filter** pane to clear all filters. 
+
 
 ## Access OAuth Consents
 
