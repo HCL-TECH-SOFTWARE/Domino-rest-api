@@ -20,6 +20,24 @@ The **Application Management** page shows the available applications in a table 
     - Set the number of applications displayed on the page by selecting a value from **Rows per page**.
     - Use the pagination arrows to move back and forth through pages.
 
+## Add an application
+
+1. On the **Application Management** page, click **Add Application**.
+2. Under **Add New Application**, fill in the form and click **Add**.
+
+      ![Application Form](../../assets/images/AddApplicationForm.png){: style="height:80%;width:80%"}
+
+      When adding a scope, select the scope from the **Scope** drop-down list and click the **Add Scope** icon.
+      
+      **When your app accesses endpoints that run write operations in the `/setup-v1/` URL path, make sure to add the `$SETUP` scope aside from the `$DATA` scope** to enhance access control in relation to the app inheriting a user's access rights when the user grants app access. 
+
+The new application is now shown in the **Application Management** page.
+
+## Generate app secret
+
+- For applications without a configured app secret, click the **Click to Generate Secret** text.
+- For applications with a configured app secret, click the **Click to Generate Secret** icon.
+
 -->
 
 
@@ -33,6 +51,8 @@ The **Application Management** page shows the available applications in a table 
 
       ![Application Form](../../assets/images/AddApplicationForm.png){: style="height:80%;width:80%"}
       
+      When adding a scope, select the scope from the Scope drop-down list and click the Add Scope icon. 
+
       **When your app accesses endpoints that run write operations in the `/setup-v1/` URL path, make sure to add the `$SETUP` scope aside from the `$DATA` scope** to enhance access control in relation to the app inheriting a user's access rights when the user grants app access. 
 
 
