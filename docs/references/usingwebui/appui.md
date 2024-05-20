@@ -12,7 +12,6 @@ The **Application Management** page shows all available applications.
     - Click the play button to launch the application.
     - Click the **Edit Application** icon to update the details of the application.
     - Click the **Delete Application** icon to delete the application. 
-    - Click **Click to Generate Secret** to generate an app secret. 
     - Use the **Search App Name** search field to search for an application by name. 
     - Set the number of applications displayed on the page by selecting a value from **Rows per page**.
     - Use the pagination arrows to move back and forth through pages.
@@ -30,7 +29,7 @@ The **Application Management** page shows all available applications.
 
 The new application is now shown in the **Application Management** page.
 
-## Generate app secret
+## Generate an app secret
 
 - For applications without a configured app secret, click the **Click to Generate Secret** text.
 - For applications with a configured app secret, click the **Click to Generate Secret** icon&nbsp;![app secret icon](../../assets/images/appsecreticon.png){: style="height:2%;width:2%"}.
