@@ -131,7 +131,7 @@ The installer requires a series of parameters:
 |  4   | Extraction of Domino REST API binaries and JARs failed.        |
 |  5   | Creation of start script/cmd failed.                           |
 |  6   | Update of `notes.ini` failed.                                  |
-|  7   | Upgrade aborted by user or something went wrong when trying to upgrade Domino REST API.</br></br>To address the issue, make sure to type **A** before pressing **[Enter]** to proceed with the upgrade.|
+|  7   | Upgrade aborted by user (either T&C not accepted or missed the final **A** before proceeding with the upgrade).</br></br>To address the issue, make sure to accept the T&C and to type **A** before pressing **[Enter]** to proceed with the upgrade.|
 
 <!-- prettier-ignore -->
 !!! tip
