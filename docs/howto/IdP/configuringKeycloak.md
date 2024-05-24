@@ -27,25 +27,72 @@ We will create a realm, an user, two clients (one for a SPA, one for a server ba
 
 ## Procedure
 
-Login to Keycloak. Click on the down angle next to the `Master`, add a new realm. In our example _Trantor_.
+1. Login to Keycloak. 
+2. Click the `Master` dropdown and click **Creater Realm**. 
 
-![Keycloak Realm](../../assets/images/Keycloak-01.png){: style="height:70%;width:70%"}
+    ![alt text](../../assets/images/keycloak1.png)
+  
+    a. Fill in the **Realm Name**. For example **Ameca**.
 
-Fill in the minimum information.
+      ![alt text](../../assets/images/keyname.png)
+    
+    b. Click **Create**.
 
-![Keycloak Realm](../../assets/images/Keycloak-02.png){: style="height:70%;width:70%"}
+3. Click **Realm settings**. 
 
-Now create a user. In a production environment you probably would connect to an existing LDAP or Active Directory server. Check the documentation for details about that.
+    a. Fill in the minimum information. Always check your **Realm name**.
 
-![Keycloak User](../../assets/images/Keycloak-03.png){: style="height:80%;width:80%"}
+      ![alt text](../../assets/images/keyrealmset.png)
 
-To make it compatible with Domino and Domino REST API, we need the X500 style **distinguished name** of the user. This name can be in either "LDAP" format (comma-delimited) or "Domino" format (slash-delimited). We maintain that as the attribute `dominoDN`. In your environment it might have a different name, which you later need to use in the mapper.
+    b. Click **Save**.
 
-![Keycloak User](../../assets/images/Keycloak-04.png)
+4. Click **Users**.
 
-Next step is to create a client scope named `keep-common` which will contain the settings that are common to all clients (a.k.a apps) accessing Domino REST API.
+    ![alt text](../../assets/images/keyusers.png)
+    
+    1. Click **Create a new user**. In a production environment you probably would connect to an existing LDAP or Active Directory server. Check the documentation for details about that.
 
-![Keycloak Client scope](../../assets/images/Keycloak-05.png)
+    2. Fill in the minimum information.
+
+          ![alt text](../../assets/images/keyuser1.png)
+
+    3. Click **Create**. The user has been created.
+
+          ![alt text](../../assets/images/keyuserdetail.png)
+
+    4. Click the **Attributes** tab.
+
+        ![alt text](../../assets/images/keyuserdetail.png)
+    
+        **Note:** To make it compatible with Domino and Domino REST API, you need the X500 style **distinguished name** of the user. This name can be in either "LDAP" format (comma-delimited) or "Domino" format (slash-delimited).
+              
+          1. Fill in the `Key` field. For example,`dominoDN`. In your environment it might have a different name, which you later need to use in the mapper.
+
+          2. Fill in the `value` field.
+
+             ![alt text](../../assets/images/keyuserattr.png)  
+
+5. Create client scope. Named it as `keepcommon`, which will contain the settings that are common to all clients (a.k.a apps) accessing Domino REST API.
+
+    ![alt text](../../assets/images/keyclientscope.png)
+
+    1. Fill in the name. Named it as `keepcommon`, which will contain the settings that are common to all clients (a.k.a apps) accessing Domino REST API. 
+
+    2. Enter *Description*.
+
+    3. Change the *Type* field into `Default`.
+
+    4. Turn `On` the toggle on *Display on Consent screen* field.
+    5. Turn `Off` toggle on *Include in token scope* field.
+
+    6. Click *Save*. Once you save, there are two additonal tab that's been added.
+    
+      ![alt text](../../assets/images/keyclientscopename.png)
+
+    7. Click the **Mappers** tab.
+    
+
+
 
 Next step is to add two mappers for `aud` and for the distinguished name. Here, the name is mapped to the standard claim `sub`, but it can be mapped to a different name if desired.
 
