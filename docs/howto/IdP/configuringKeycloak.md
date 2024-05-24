@@ -82,28 +82,62 @@ We will create a realm, an user, two clients (one for a SPA, one for a server ba
 
     3. Change the *Type* field into `Default`.
 
-    4. Turn `On` the toggle on *Display on Consent screen* field.
-    5. Turn `Off` toggle on *Include in token scope* field.
-
+    4. Turn `On` the toggle on *Display on Consent screen*. 
+    5. Turn `Off` toggle on *Include in token scope*.
     6. Click *Save*. Once you save, there are two additonal tab that's been added.
     
       ![alt text](../../assets/images/keyclientscopename.png)
 
-    7. Click the **Mappers** tab.
+    7. Click the **Mappers** tab, and click **Configure a new mapper**.
+        
+      ![alt text](../../assets/images/keycmapper.png)
+
+       Add two mappers for `aud` and for the distinguished name. Here, the name is mapped to the standard claim `sub`, but it can be mapped to a different name if desired.
+
+       Mapper-1
+
+          1. Click the **Audience** mapping in the list.
+          2. Fill in the name, for example `keep-audience`.
+          3. Fill in the *Included Custom Audience* with `Domino`.
+          4. Turn `off` the toggle on *Add to ID token*. 
+          5. Turn `on` toggle on *Add to access token*.
+          6. Click **Save**.
+
+             ![alt text](../../assets/images/keymapper1.png)
+
+       Mapper-1
+
+          1. Click the **User Attribute** mapping in the list.
+          2. Fill in the name, for example `keep-subject`.
+          3. Fill in the *User Attribute*
+          3. Fill in the *Token Claim Name* with `sub`.
+          4. Choose `string`from the dropdown menu of *Claim JSON Type*
+          5. Turn `on` toggle on *Add to access token*.
+          6. Click **Save**.
+
+             ![alt text](../../assets/images/keymapper2.png)    
+
+6. Click **Client** and click **Create client**.    
+
+    ![alt text](../../assets/images/keycreateclient.png)
+
+    The example below is for an application server that can present a client id and a client secret. An example for a SPA (that can't keep a secret) follows further down.
+
+    1. Fill in *Client type* and *Client ID*, and click **Next**. 
+
+       ![alt text](../../assets/images/keyclientid.png)
+
+    2. Turn `on` toggle for *Client authentication*.
+
+      ![alt text](../../assets/images/keycauthen.png)       
     
+    3. Click **Save**. This save hav
+
+    4. On *Access setting* tab, fill in the *Valid redirect URIs* with URI of your current application and click *Save*.
+
+       ![alt text](../../assets/images/keyURI.png)
 
 
-
-Next step is to add two mappers for `aud` and for the distinguished name. Here, the name is mapped to the standard claim `sub`, but it can be mapped to a different name if desired.
-
-![Keycloak Mapper Audience](../../assets/images/Keycloak-06a.png)
-![Keycloak Mapper Subject](../../assets/images/Keycloak-06b.png)
-
-Next create a client. The example below is for an application server that can present a client id and a client secret. An example for a SPA (that can't keep a secret) follows further down.
-
-![Keycloak Client 1/3](../../assets/images/Keycloak-07a.png)
-![Keycloak Client 2/3](../../assets/images/Keycloak-07b.png)
-![Keycloak Client 3/3](../../assets/images/Keycloak-07c.png)
 
 Next step is to assign the client the common client scopes `keep-common` and `offline_access` (this one for the refresh token). Remove the **Assigned Optional Client Scopes** first, so they become available in **Available Client Scopes**.
 
