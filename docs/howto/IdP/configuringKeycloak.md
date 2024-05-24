@@ -131,11 +131,12 @@ We will create a realm, an user, two clients (one for a SPA, one for a server ba
 
       ![alt text](../../assets/images/keycauthen.png)       
     
-    3. Click **Save**. This save hav
+    3. Click **Save**. When you save it, this produces more tabs about your **client**.
 
-    4. On *Access setting* tab, fill in the *Valid redirect URIs* with URI of your current application and click *Save*.
+    4. On **Settings tab* &rarr *Access setting* tab, fill in the *Valid redirect URIs* with URI of your current application and click *Save*.
 
        ![alt text](../../assets/images/keyURI.png)
+
 
 
 
