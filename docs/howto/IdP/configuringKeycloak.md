@@ -154,43 +154,39 @@ The configuration so far will identify a user presenting the access token to Dom
       2. On your dedicated scope, click **Configure a new mapper**. The Mapper for the client is individual per application (client).
       3. Click client mapping, for example, `Harcoded claim`. Fill in the fields of the `Hardcoded claim`.
       
-            1. Fill in the *Name*.
-            2. Fill in the *Token Claim Name*.
-            3. Fill in the *Claim Value*.
-            4. Turn `on` toggle for *Add to access token *.
-            5. Turn `off` toggle for *includeInAccessTokenResponse.label*.
-            6. Click *Save*.
-            
-                ![alt text](../../assets/images/keyclientmap.png)
+          1. Fill in the *Name*.
+          2. Fill in the *Token Claim Name*.
+          3. Fill in the *Claim Value*.
+          4. Turn `on` toggle for *Add to access token *.
+          5. Turn `off` toggle for *includeInAccessTokenResponse.label*.
+          6. Click *Save*.
+          
+             ![alt text](../../assets/images/keyclientmap.png)
       
       4. Go back again to **Client scopes**, check your dedicated scope name, for example `SpecialKeepDemo-dedicated`, and click **Evaluate**.
       
-            ![alt text](../../assets/images/keyevalscope.png)
+          ![alt text](../../assets/images/keyevalscope.png)
 
       5. Fill in the `User`. 
 
       In the **Effective protocol mappers**, `keepcommon` from the common clients scopes are declare here, since they're `Default` from the *Assigned type*.
 
-      In the **Effective role scope mappings**, `offline_access` from the common clients scopes are declare here, since they're `Default` from the *Assigned type*.    
-      
-      In the **Generated Access Token**, you can verify that an access token has all the required attributes:      
-      
-      
-      7. hh
+      ![alt text](../../assets/images/keyprotmap.png)
 
-           
+      In the **Effective role scope mappings**, `offline_access` from the common clients scopes are declare here, since they're `Default` from the *Assigned type*.
 
+      ![alt text](../../assets/images/keyrolescope.png)
 
+      In the **Generated Access Token**, you can verify that an access token has all the required attributes:
 
-Finally we can verify that an access token has all the required attributes:
+      ![alt text](../../assets/images/keyaccesstoken.png)
 
-![Keycloak Application scope](../../assets/images/Keycloak-08c.png){: style="height:80%;width:80%"}
 
 ## SPA applications
 
 An SPA (Single Page App) or a mobile client can't keep a client secret. For those, the use of Proof Key for Code Exchange (PKCE) (defined in [RFC 7636](https://tools.ietf.org/html/rfc7636)) is recommended (read [this intro](https://auth0.com/docs/flows/authorization-code-flow-with-proof-key-for-code-exchange-pkce) for details). The only difference in Keycloak is to specify the client `Access Type` as public.
 
-![Keycloak Application scope](../../assets/images/Keycloak-08d.png){: style="height:60%;width:60%"}
+![alt text](../../assets/images/keypkce.png)
 
 !!!warning "Important"
     It's **SECURITY**, so learn about [Keycloak](https://www.keycloak.org/guides#getting-started/)!
@@ -206,7 +202,7 @@ You can find the full explanation [here](./configuringIdentityProvider.md). For 
 {
   "jwt": {
     "Trantor": {
-      "providerUrl": "https://trantor.keycloak.yours/auth/realms/Trantor"
+      "providerUrl": "https://ameca.keycloak.yours/auth/realms/ameca"
     }
   }
 }
