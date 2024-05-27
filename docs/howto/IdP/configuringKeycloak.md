@@ -50,7 +50,7 @@ We will create a realm, an user, two clients (one for a SPA, one for a server ba
 
     ![alt text](../../assets/images/keyusers.png)
     
-    1. Click **Create a new user**. In a production environment you probably would connect to an existing LDAP or Active Directory server. Check the documentation for details about that.
+    1. Click **Create a new user**. In a production environment you probably would connect to an existing LDAP or Active Directory server. 
 
     2. Fill in the minimum information.
 
@@ -72,7 +72,7 @@ We will create a realm, an user, two clients (one for a SPA, one for a server ba
 
              ![alt text](../../assets/images/keyuserattr.png)  
 
-5. Create client scope. Named it as `keepcommon`, which will contain the settings that are common to all clients (a.k.a apps) accessing Domino REST API.
+5. Create client scope. 
 
     ![alt text](../../assets/images/keyclientscope.png)
 
@@ -148,7 +148,7 @@ The configuration so far will identify a user presenting the access token to Dom
 !!! note
     It's best practice to give an external application as little as possible access so it can function. So think twice before allowing any of the uppercase general scopes.
 
-1. Click **Clients** and click your *Client ID*.
+1. Go to **Clients** and click your *Client ID*.
 
       1. Go to **Client scopes** and click your dedicated scope name, for example `SpecialKeepDemo-dedicated`. 
       2. On your dedicated scope, click **Configure a new mapper**. The Mapper for the client is individual per application (client).
@@ -184,7 +184,7 @@ The configuration so far will identify a user presenting the access token to Dom
 
 ## SPA applications
 
-An SPA (Single Page App) or a mobile client can't keep a client secret. For those, the use of Proof Key for Code Exchange (PKCE) (defined in [RFC 7636](https://tools.ietf.org/html/rfc7636)) is recommended (read [this intro](https://auth0.com/docs/flows/authorization-code-flow-with-proof-key-for-code-exchange-pkce) for details). The only difference in Keycloak is to specify the client `Access Type` as public.
+An SPA (Single Page App) or a mobile client can't keep a client secret. For those, the use of Proof Key for Code Exchange (PKCE) (defined in [RFC 7636](https://tools.ietf.org/html/rfc7636)) is recommended (read [this intro](https://auth0.com/docs/flows/authorization-code-flow-with-proof-key-for-code-exchange-pkce) for details). The only difference in Keycloak is to toggle `off` the **Client Authentication**.
 
 ![alt text](../../assets/images/keypkce.png)
 
