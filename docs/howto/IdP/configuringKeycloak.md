@@ -77,45 +77,42 @@ We will create a realm, an user, two clients (one for a SPA, one for a server ba
     ![alt text](../../assets/images/keyclientscope.png)
 
     1. Fill in the name. Named it as `keepcommon`, which will contain the settings that are common to all clients (a.k.a apps) accessing Domino REST API. 
-
     2. Enter *Description*.
-
     3. Change the *Type* field into `Default`.
-
     4. Turn `On` the toggle on *Display on Consent screen*. 
     5. Turn `Off` toggle on *Include in token scope*.
     6. Click *Save*. Once you save, there are two additonal tab that's been added.
     
-      ![alt text](../../assets/images/keyclientscopename.png)
+         ![alt text](../../assets/images/keyclientscopename.png)
 
     7. Click the **Mappers** tab, and click **Configure a new mapper**.
-        
-      ![alt text](../../assets/images/keycmapper.png)
-
-       Add two mappers for `aud` and for the distinguished name. Here, the name is mapped to the standard claim `sub`, but it can be mapped to a different name if desired.
-
-       Mapper-1
-
+    
+          ![alt text](../../assets/images/keycmapper.png)
+          
+          Add two mappers for `aud` and for the distinguished name. Here, the name is mapped to the standard claim `sub`, but it can be mapped to a different name if desired.
+          
+          Mapper-1
+          
           1. Click the **Audience** mapping in the list.
           2. Fill in the name, for example `keep-audience`.
           3. Fill in the *Included Custom Audience* with `Domino`.
           4. Turn `off` the toggle on *Add to ID token*. 
           5. Turn `on` toggle on *Add to access token*.
           6. Click **Save**.
+          
+          ![alt text](../../assets/images/keymapper1.png)
 
-             ![alt text](../../assets/images/keymapper1.png)
-
-       Mapper-1
-
+          Mapper-2
+          
           1. Click the **User Attribute** mapping in the list.
           2. Fill in the name, for example `keep-subject`.
-          3. Fill in the *User Attribute*
-          3. Fill in the *Token Claim Name* with `sub`.
-          4. Choose `string`from the dropdown menu of *Claim JSON Type*
-          5. Turn `on` toggle on *Add to access token*.
-          6. Click **Save**.
-
-             ![alt text](../../assets/images/keymapper2.png)    
+          3. Fill in the *User Attribute*.
+          4. Fill in the *Token Claim Name* with `sub`.
+          5. Choose `string`from the dropdown menu of *Claim JSON Type*.
+          6. Turn `on` toggle on *Add to access token*.
+          7. Click **Save**.
+          
+          ![alt text](../../assets/images/keymapper2.png)    
 
 6. Click **Client** and click **Create client**.    
 
@@ -124,25 +121,24 @@ We will create a realm, an user, two clients (one for a SPA, one for a server ba
     The example below is for an application server that can present a client id and a client secret. An example for a SPA (that can't keep a secret) follows further down.
 
     1. Fill in *Client type* and *Client ID*, and click **Next**. 
-
-       ![alt text](../../assets/images/keyclientid.png)
+    
+          ![alt text](../../assets/images/keyclientid.png)
 
     2. Turn `on` toggle for *Client authentication*.
-
-      ![alt text](../../assets/images/keycauthen.png)       
+    
+          ![alt text](../../assets/images/keycauthen.png)       
     
     3. Click **Save**. When you save it, this produces more tabs about your **client**.
 
-    4. On **Settings tab* &rarr *Access setting* tab, fill in the *Valid redirect URIs* with URI of your current application and click *Save*.
+    4. On **Settings tab** &rarr; *Access setting* tab, fill in the *Valid redirect URIs* with URI of your current application and click *Save*.
+    
+          ![alt text](../../assets/images/keyURI.png)
 
-       ![alt text](../../assets/images/keyURI.png)
+    !!!note
+        - On **Client scopes tab**, automatic it creates a client scope dedicated to the client name. Check the client scope-dedicated, for example `SpecialKeepDemo-dedicated`. 
+        - Check all the *Assigned client scope* and choose from the *Assigned type* as ***Optional***. Check the `keepcommon` and `offline-access` and choose `Default` as the *Assigned type*.
 
-
-
-
-Next step is to assign the client the common client scopes `keep-common` and `offline_access` (this one for the refresh token). Remove the **Assigned Optional Client Scopes** first, so they become available in **Available Client Scopes**.
-
-![Keycloak Client 3/3](../../assets/images/Keycloak-08a.png)
+        ![alt text](../../assets/images/keycscopes.png)
 
 ## Application specific scopes
 
