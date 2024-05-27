@@ -23,7 +23,7 @@ Listing only relevant concepts:
 
 Not listed: Users
 
-We will create a realm, an user, two clients (one for a SPA, one for a server based app), a client scope for shared settings and a few mappers.
+You will create a realm, an user, two clients (one for a SPA, one for a server based app), a client scope for shared settings and a few mappers.
 
 ## Procedure
 
@@ -142,7 +142,7 @@ We will create a realm, an user, two clients (one for a SPA, one for a server ba
 
 ## Application specific scopes
 
-The configuration so far will identify a user presenting the access token to Domino REST API, but not yet provide any access. We need to specify what scopes this application will be allowed to access. We can use any of the global scopes `MAIL`, `$DATA` or `$DECRYPT` or, preferably, a lowercase database alias. Multiple scopes are separated using a space.
+The configuration so far will identify a user presenting the access token to Domino REST API, but not yet provide any access. You need to specify what scopes this application will be allowed to access. You can use any of the global scopes `MAIL`, `$DATA` or `$DECRYPT` or, preferably, a lowercase database alias. Multiple scopes are separated using a space.
 
 <!-- prettier-ignore -->
 !!! note
@@ -213,7 +213,7 @@ where:
 | key         | explanation                                                                                                                   |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | jwt         | Indicates that the config belongs to JWT                                                                                      |
-| Trantor     | The sample Keycloak realm name. It must be unique in the jwt key. Replace it with your choosen realm                          |
+| Trantor     | The sample Keycloak realm name. It must be unique in the jwt key. Replace it with your chosen realm                          |
 | providerUrl | Points to Keycloak's endpoint with the public key. Note that the last segment is the realm name. The string is case sensitive |
 
 !!! note
