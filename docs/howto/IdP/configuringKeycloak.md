@@ -28,7 +28,7 @@ You will create a realm, an user, two clients (one for a SPA, one for a server b
 ## Procedure
 
 1. Login to Keycloak. 
-2. Click the `Master` dropdown and click **Creater Realm**. 
+2. Click the `Master` dropdown and click **Create Realm**. 
 
     ![alt text](../../assets/images/keycloak1.png)
   
