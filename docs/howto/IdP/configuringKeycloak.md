@@ -134,52 +134,56 @@ You will create a realm, an user, two clients (one for a SPA, one for a server b
     
           ![alt text](../../assets/images/keyURI.png)
 
-    !!!note
-        - On **Client scopes tab**, automatic it creates a client scope dedicated to the client name. Check the client scope-dedicated, for example `SpecialKeepDemo-dedicated`. 
-        - Check all the *Assigned client scope* and choose from the *Assigned type* as ***Optional***. Check the `keepcommon` and `offline-access` and choose `Default` as the *Assigned type*.
-
-        ![alt text](../../assets/images/keycscopes.png)
-
 ## Application specific scopes
 
-The configuration so far will identify a user presenting the access token to Domino REST API, but not yet provide any access. You need to specify what scopes this application will be allowed to access. You can use any of the global scopes `MAIL`, `$DATA` or `$DECRYPT` or, preferably, a lowercase database alias. Multiple scopes are separated using a space.
-
+The configuration so far will identify a user presenting the access token to Domino REST API, but not yet provide any access. You need to specify what scopes this application will be allowed to access. You can use any of the global scopes `$MAIL`, `$DATA` or `$DECRYPT` or, preferably, a lowercase database alias. Multiple scopes are separated using a space.
 <!-- prettier-ignore -->
 !!! note
-    It's best practice to give an external application as little as possible access so it can function. So think twice before allowing any of the uppercase general scopes.
+    It's best practice to give an external application as little as possible access so it can function. So think twice before allowing any of the global scopes.
 
-1. Go to **Clients** and click your *Client ID*.
+1. Click the **Client Scopes** and click **Create client scope**. 
 
-      1. Go to **Client scopes** and click your dedicated scope name, for example `SpecialKeepDemo-dedicated`. 
-      2. On your dedicated scope, click **Configure a new mapper**. The Mapper for the client is individual per application (client).
-      3. Click client mapping, for example, `Harcoded claim`. Fill in the fields of the `Hardcoded claim`.
+      ![alt text](../../assets/images/keyclientscopes1.png)
+ 
+      1. Fill in the *Name* of the client scope. For example **App-Scope**.
+      2. Choose the **Default** as *Type*.
+      3. Click **Save**. You can create more global scopes on your realm's client scopes.
       
-          1. Fill in the *Name*.
-          2. Fill in the *Token Claim Name*.
-          3. Fill in the *Claim Value*.
-          4. Turn `on` toggle for *Add to access token *.
-          5. Turn `off` toggle for *includeInAccessTokenResponse.label*.
-          6. Click *Save*.
-          
-             ![alt text](../../assets/images/keyclientmap.png)
+          ![alt text](../../assets/images/keyclientscopes2.png)
+
+      4. Go to the **Mappers** tab of **Apps-Scope** client scope.
+
+      5. Click **Add Mapper** &rarr; **by Configuration**.
+      6. Select **Hardcoded Claim**.
+      7. Fill in the *Name*.
+      8. Fill in the *Token Claim Name*. For example, **ClaimName.value**.
+      9. Fill in the *Claim value* with the scopes or global scopes. Multiple scopes are separated using a space.
+      10. Click **Save**.
+
+      ![alt text](../../assets/images/keymapper.png)
+
+6. Go and click  **Clients**.
+7. Select your *Client ID*. For example, **SpecialKeepDemo**.
+
+      ![alt text](../../assets/images/keyclientsco.png)
+
+8. Click the **Client scopes** tab and click **Add client scope**.
+
+      ![alt text](../../assets/images/keyaddcscopes.png)
+
+      1. Check **App-Scope** client scope.
+      2. Click **Add** and choose **Default**.
       
-      4. Go back again to **Client scopes**, check your dedicated scope name, for example `SpecialKeepDemo-dedicated`, and click **Evaluate**.
+          ![alt text](../../assets/images/keyappscope.png)
+            
+          The **App-scope** is now on the list of **SpecialKeepDemo** client scopes.
       
-          ![alt text](../../assets/images/keyevalscope.png)
+      3. Click **Client scopes** tab &rarr; **Evaluate** tab.
+      4. . Fill in the username of the *User*. 
+      5. Go and click **Generated access token**.
 
-      5. Fill in the `User`. 
+          ![alt text](../../assets/images/keyaccesstoken.png) 
 
-      In the **Effective protocol mappers**, `keepcommon` from the common clients scopes are declare here, since they're `Default` from the *Assigned type*.
-
-      ![alt text](../../assets/images/keyprotmap.png)
-
-      In the **Effective role scope mappings**, `offline_access` from the common clients scopes are declare here, since they're `Default` from the *Assigned type*.
-
-      ![alt text](../../assets/images/keyrolescope.png)
-
-      In the **Generated Access Token**, you can verify that an access token has all the required attributes:
-
-      ![alt text](../../assets/images/keyaccesstoken.png)
 
 
 ## SPA applications
@@ -202,7 +206,7 @@ You can find the full explanation [here](./configuringIdentityProvider.md). For 
 {
   "jwt": {
     "Trantor": {
-      "providerUrl": "https://ameca.keycloak.yours/auth/realms/ameca"
+      "providerUrl": "https://ameca.keycloak.yours/auth/realms/Ameca"    
     }
   }
 }
@@ -219,3 +223,69 @@ where:
 !!! note
 
     Keycloak's `providerUrl` is different from the general IdP practise to use `/.well-known/openid-configuration`, mainly since Keycloak can handle multiple realms, the well-known approach can't handle. Hence you need ro use `/auth/realms/[RealmName]`
+
+
+## Expected result
+
+### Test Application specific scopes result in Postman
+
+#### Prerequisite
+
+- Configured Postman
+- configured Keycloak
+
+#### Procedure
+
+1. Modify the token endpoint of via POST with this `{{server}}/realms/{{realm}}/protocol/openid-connect/token`
+      
+      - server: Your Keycloak server.
+      - realm: Your realm name, for example Ameca.
+
+2. In the `Body`, provide the `client_id`, `client_secret`, `grant_type`, `user_name` and `password` from your Keycloak.
+3. Click **Send**.
+
+The result must have an access token, which must be tested int [jwt](https://jwt.io/) to return the same result in Keycloak.
+
+![alt text](../../assets/images/keyacctoken.png)
+
+**JWT**
+
+You can use the [official JWT site](https://jwt.io/) to decode and inspect the encoded token.
+
+```bash
+eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJkbVlLaWIzQnJodnJPVnVRc2ljcXdPVzcwX2N2MDJ1ekZFV091WC1uN3ZVIn0.eyJleHAiOjE3MTcxNzQ4MzQsImlhdCI6MTcxNzE3NDUzNCwianRpIjoiN2FmYTMxNmMtOGFjOC00ODMzLTkwN2YtMjUwNDM3MTY3ODNiIiwiaXNzIjoiaHR0cHM6Ly9kaWdpLXFzLWtleWNsb2FrLnFzLmhjbGxhYnMubmV0L3JlYWxtcy9BbWVjYSIsImF1ZCI6IkRvbWlubyIsInN1YiI6ImNkNGVhYTk4LTY3N2MtNGM2Mi1iZTU0LTdlOTBiZWUxMjQ0NyIsInR5cCI6IkJlYXJlciIsImF6cCI6IlNwZWNpYWxLZWVwRGVtbyIsInNlc3Npb25fc3RhdGUiOiI3MDA0Y2M2Yy1hMThkLTQ3YzUtODJiNC0wOGJlNjhiNTdiM2MiLCJzY29wZSI6IkFwcC1TY29wZSBvZmZsaW5lX2FjY2VzcyIsInNpZCI6IjcwMDRjYzZjLWExOGQtNDdjNS04MmI0LTA4YmU2OGI1N2IzYyIsIkNsYWltTmFtZS52YWx1ZSI6ImRlbW8gJERBVEEifQ.hRjB9EzKXNrWI8h1rQS8_xkPfrl99BWTyE5xBf6V-wVUKNIBsCC8wP1aFlPHQefciuUVM13XKIE6shC9LIBRiAQE4crKgZlxWL8tVZ4I4wUr2SqYwbZ5z9okMn6FCuDdyNRDbC8HXpFas6fcfYd3JU6k-ea8YmhdndW-mQ98kJbOL98H30ATIbYJh6u1wqed989E4aSToghLNZmtMChMlNd921QNdpr5_r6ZSLk4A7nOfjtz9fl0lXpxZ83NBiM9Y5-TWgq1wvNbbP9hLq9_Rf5CDX_KLb6ocQMvcNvdh_w4cGQJ7q5wzu4OmiF_tllU8q5A4wGQOGGMuZjWUV-QOw
+```
+
+When decoded, this translates to:
+
+HEADER: ALGORITHM & TOKEN TYPE
+
+```json
+{
+  "alg": "RS256",
+  "typ": "JWT",
+  "kid": "dmYKib3BrhvrOVuQsicqwOW70_cv02uzFEWOuX-n7vU"
+}
+```
+
+PAYLOAD: DATA
+```json
+{
+  "exp": 1717174834,
+  "iat": 1717174534,
+  "jti": "7afa316c-8ac8-4833-907f-25043716783b",
+  "iss": "https://digi-qs-keycloak.qs.hcllabs.net/realms/Ameca",
+  "aud": "Domino",
+  "sub": "cd4eaa98-677c-4c62-be54-7e90bee12447",
+  "typ": "Bearer",
+  "azp": "SpecialKeepDemo",
+  "session_state": "7004cc6c-a18d-47c5-82b4-08be68b57b3c",
+  "scope": "App-Scope offline_access",
+  "sid": "7004cc6c-a18d-47c5-82b4-08be68b57b3c",
+  "ClaimName.value": "demo $DATA"
+}
+```
+
+which has the same result in the Keycloak **generated access token**.
+
+![alt text](../../assets/images/keyresult.png)
