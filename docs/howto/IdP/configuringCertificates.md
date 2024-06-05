@@ -75,5 +75,6 @@ To get valid certificates, use any of the following approaches:
 ```
 
 ## Configure a certificate for HTTPS
+When configuring TLS, you can use JSON values or [environment variables](../../references/parameters.md#environment). You can use either of the two. When using both, the environment variable will take priority.
 
 --8<-- "tlssettings.md"
