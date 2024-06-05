@@ -21,7 +21,7 @@ Passkeys are better options to passwords as they use public key cryptography to 
 - Your Mac has a Touch ID sensor.
 
 !!!note 
-    Passkeys from iCloud Keychain aren't yet available in Chrome on macOS.
+    Chrome supports passkeys on iCloud Keychain starting in Chrome 118, on macOS 13.5 or later. For more information, see [Chrome for Developers blog post](https://developer.chrome.com/blog/passkeys-on-icloud-keychain){: target="_blank" rel="noopener noreferrer"}.
 
 ### For Windows
 
@@ -33,28 +33,21 @@ Passkeys are better options to passwords as they use public key cryptography to 
 ### To sign up with passkey
 
 1. Open the **Domino REST API Admin UI** sign-in page in your browser.
-
-    <!--!!!tip
-        For example, open *http://restapi.myhost.com:8880/admin/ui* in your browser, and replace the host with your Domino REST API's host.-->
-
-2. Enter your username and password.
-3. Click **Sign up with Passkey**.
+2. Enter your **Username** and **Password**, and then click **Sign up with Passkey**. 
 
     ![Sign up with passkey](../../assets/images/signuppasskey.png){: style="height:60%;width:60%"}
-
-    If you are using Safari on Mac, a **Sign In** dialog appears.
-
-    ![Sign In dialog](../../assets/images/macsigninpasskey.png){: style="height:60%;width:60%"}
     
-    If you are using Chrome on a Windows machine, a **Windows Security** dialog appears.
+    A dialog opens. The following image shows an example of the dialog opened in Chrome on macOS. 
 
-    ![Sign In dialog](../../assets/images/winsecpasskey.png)
+    ![Create a passkey dialog](../../assets/images/passkeydialog.png){: style="height:60%;width:60%"}          
 
-4. Set up your passkey.
+3. Choose how you want to create a passkey from the available options in the dialog and follow the succeeding instructions to complete the process. 
+
+<!--4. Set up your passkey.
     
     - For Mac, continue with **Touch ID** by scanning your fingerprint using the Touch ID sensor.
 
-    - For Windows, select the **Windows Hello** option that you have set up. As an example shown in the above image, signing in with a PIN option is set so enter your PIN.
+    - For Windows, select the **Windows Hello** option that you have set up. As an example shown in the above image, signing in with a PIN option is set so enter your PIN.-->
 
 You have now logged in to the **Domino REST API Admin UI**.
 
@@ -64,14 +57,16 @@ You have now logged in to the **Domino REST API Admin UI**.
     See [Configure WebAuthn with Domino REST API and Domino 14](../../howto/install/webauthn.md) to use the same passkey.
 
 1. Open the **Domino REST API Admin UI** sign-in page in your browser.
-2. Click **Log in with Passkey**
+2. Click **Log in with Passkey**.
 
     ![Log in with passkey](../../assets/images/loginpasskey.png){: style="height:60%;width:60%"}
 
-3. Use your passkey.
+3. Follow the instructions to use your passkey. The instructions vary depending on what you have chosen on how to create the passkey. 
+
+<!--Follow the succeeding instruction to use your passkey. The instruction varies depending on what you chose to create the passkey. 
 
     - For Mac, continue with Touch ID by scanning your fingerprint using the Touch ID sensor.
-    - For Windows, select the **Windows Hello** option that you have set up. As an example shown in the above image, signing in with a PIN option is set so enter your PIN.
+    - For Windows, select the **Windows Hello** option that you have set up. As an example shown in the above image, signing in with a PIN option is set so enter your PIN.-->
 
 You have now logged in to the **Domino REST API Admin UI**.
 
@@ -83,3 +78,5 @@ You have now logged in to the **Domino REST API Admin UI**.
     ![Clear passkey](../../assets/images/clearpasskey.png){: style="height:60%;width:60%"}
 
 Passkey is cleared and you now need to enter your username and password to log in to the **Domino REST API Admin UI**.
+
+

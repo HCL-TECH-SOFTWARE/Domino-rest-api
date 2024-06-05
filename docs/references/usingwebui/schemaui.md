@@ -32,7 +32,7 @@ You can add a schema by [creating your own schema](#create-a-schema) or [importi
 
       1. Select a database from the **Database** drop-down list. 
          
-         You can also enter the database name in the **Import Into Database** field to filter the list of available databases based on the entered database name.
+         You can also enter the database name in the **Database** field to filter the list of available databases.
 
       2. Select an **Icon**.
 	3. Enter a **Schema Name** and a **Schema Description**. 
@@ -59,11 +59,11 @@ The `nsf` database file and schema are added to the schema list.
 ## Edit a schema
 
 1. On the **Schema Management** page, select the schema you want to edit.
-2. On the schema details card, click the edit icon.
+2. In the schema details card, click the edit icon.
 
       ![Edit icon](../../assets/images/editschema.png)
 
-3. On the **Edit Schema** dialog:
+3. In the **Edit Schema** dialog:
       
       - You can select a new icon from the drop-down icon list.
       - You can update the description of the schema in the **Description**. 
@@ -97,7 +97,7 @@ The `nsf` database file and schema are added to the schema list.
      The **Add New Form Schema** feature enables the creation of a new custom form through which you can set up a schema. The feature doesn't create a new form on the backend, so it won't exist in the database. Everything related to the new form is contained within the schema. Therefore, if you delete the form, it's only removed from the list of forms on the **Database Forms** tab.
 
 1. Click **Add New Form Schema**.
-2. On the **Add New Form Schema** dialog, enter your schema name and click **Create**.
+2. In the **Add New Form Schema** dialog, enter your schema name and click **Create**.
 3. On the **Schema Management - <schema name\>** page, select a form from the **Show fields from** dropdown field to display the fields of the selected form. You can also select **All Fields** from the dropdown field to display all the fields from all the available forms. 
 4. Select the fields that you want to add to the mode.
 5. Configure the **Field Setting** and **Mode Formula Settings** as needed for each added field. 
