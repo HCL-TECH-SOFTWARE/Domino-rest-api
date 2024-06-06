@@ -21,7 +21,7 @@ Some things to note when creating an identity service in Volt MX Foundry using D
       - **IMPORTANT** - make sure to select **Form Param** under **Advanced**. <!--{: .alert .alert-danger}-->
       - Take note of the **Callback URL**.
 
-      Pause here for a moment (don't save yet), and complete the steps for [setting up Domino REST API databases and applications](#domino-rest-api-application-and-database-setup).
+      Pause here for a moment (don't save yet), and complete the steps for [setting up Domino REST API application and database](#set-up-domino-rest-api-application-and-database).
 
       - **Scope** = database `name` (API Name) for the database added in the next step; if more than one database, you should be able to enter a list of database names; check Domino REST API documentation to see how the names are delimited (perhaps a comma or space, but to Domino REST API it simple, just enter one db name if uncertain about how to specify multiple).
       - **Client ID** = `App id` from the application created in the next section below.
