@@ -36,7 +36,7 @@ Provides information related to the [installation and configuration of Domino RE
 - [DataFormats](usingdominorestapi/dataformats.md)
 - [Form and Alias handling](usingdominorestapi/formnames.md)
 - [Scopes](usingdominorestapi/scopes.md)
-- [RichText](usingdominorestapi/richtext.md)
+- [Rich Text](usingdominorestapi/richtext/index.md)
 - [Metrics](usingdominorestapi/metrics.md)
 <!-- [Using Web UI](usingdominorestapi/administrationui.md) -->
 - [Using Domino Console](usingdominorestapi/console.md)
@@ -66,7 +66,7 @@ To learn more information about parameters used in configuration, see [Configura
 
 ## Troubleshooting
 
-For addressing common errors in installing and running the Domino RESt API service, see [Troubleshooting](troubleshooting.md)
+For addressing common errors in installing and running the Domino REST API service, see [Troubleshooting](troubleshooting.md)
 
 ## Quick reference
 

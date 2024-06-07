@@ -1,14 +1,14 @@
-# RichText and the Domino REST API
+# Rich Text and the Domino REST API
 
 <!-- prettier-ignore -->
 !!! info "Background"
-    [RichText (RTF)](https://en.wikipedia.org/wiki/Rich_Text_Format) was specified by Microsoft in 1987. Notes/Domino uses a similar specification. It's essentially a container format designed to host [plain text](https://www.youtube.com/watch?v=_mZBa3sqTrI), formatted text, images, attachments, embedded objects and layout information. It's [white space sensitive](https://twitter.com/jordwalke/status/1272431278868987904), a fancy term for being able to "format" something by hitting the space key repeatedly.
+    [Rich Text (RTF)](https://en.wikipedia.org/wiki/Rich_Text_Format) was specified by Microsoft in 1987. Notes/Domino uses a similar specification. It's essentially a container format designed to host [plain text](https://www.youtube.com/watch?v=_mZBa3sqTrI), formatted text, images, attachments, embedded objects and layout information. It's [white space sensitive](https://twitter.com/jordwalke/status/1272431278868987904), a fancy term for being able to "format" something by hitting the space key repeatedly.
 
     The container formats today that resemble these capabilities are [ECMA-376 (ISO/IEC-29500)](https://www.ecma-international.org/publications-and-standards/standards/ecma-376/) (a.k.a Office Open XML), [ISO/IEC 26300:2006](http://www.oasis-open.org/committees/download.php/19274/OpenDocument-v1.0ed2-cs1.pdf) (a.k.a Open Document Format), which are both XML based and [MIME (RFC 1341)](https://datatracker.ietf.org/doc/html/rfc1341) which is widely used in eMail. The XML formats, mainly used in word processors aren't native to the web, while MIME doesn't prescribe (it is **multipurpose** after all) its content parts **and** isn't native to web browsers.
 
-## Define RichText
+## Define Rich Text
 
-Any field you want to access in Domino REST API needs to be defined [in a schema](../../howto/database/enablingadb.md), using the correct data format.
+Any field you want to access in Domino REST API needs to be defined [in a schema](../../../howto/database/enablingadb.md), using the correct data format.
 
 ```json
 {
@@ -18,20 +18,20 @@ Any field you want to access in Domino REST API needs to be defined [in a schema
 }
 ```
 
-This enables the correct, within the means of the API, processing of RichText for both read and write.
+This enables the correct, within the means of the API, processing of Rich Text for both read and write.
 
-## Reading RichText
+## Reading Rich Text
 
-There are 6 ways to retrieve RichText:
+There are 6 ways to retrieve Rich Text:
 
 - as part of the regular `/document/{unid}` URL or a list operation using `&documents=true`
 - using the `/query` URL
 - using the `/richtext/markdown/{unid}` endpoint that returns markdown, which is quite lossy but easy to digest
-- Using the `/richtext/mime/{unid}` endpoint that returns a [MIME](https://datatracker.ietf.org/doc/html/rfc1341) representation of a Notes RichText
+- Using the `/richtext/mime/{unid}` endpoint that returns a [MIME](https://datatracker.ietf.org/doc/html/rfc1341) representation of a Notes Rich Text
 - Using the `/bulk/unid` URL
 - Using `/richtext/plain/{unid}` endpoint that returns a stream of plain unformatted text
 
-By default, the following APIs return RichText as MIME, but you can specify a different format by using the `richTextAs=` URL parameter. The valid formats are `html`, `mime`, `md`, and `plain`.
+By default, the following APIs return Rich Text as MIME, but you can specify a different format by using the `richTextAs=` URL parameter. The valid formats are `html`, `mime`, `md`, and `plain`.
 
 - `/document/{unid}`
 - `/query`
@@ -40,14 +40,14 @@ By default, the following APIs return RichText as MIME, but you can specify a di
 - `/bulk/update`
 - `/lists/{name}` (when using the `documents=true` parameter)
 
-The request response may include the parameters identified in the parameters table below.
+The request response may include the parameters identified in the table below.
 
-## Writing RichText
+## Writing Rich Text
 
 <!-- prettier-ignore -->
 !!! note
-    **There is no RichText on the web**.
-    Domino REST API does **NOT** attempt to write back data in the original Lotus Notes (ca 1989) RichText format, but will use [MIME](https://datatracker.ietf.org/doc/html/rfc1341) with multipart content. 
+    **There is no Rich Text on the web**.
+    Domino REST API does **NOT** attempt to write back data in the original Lotus Notes (ca 1989) Rich Text format, but will use [MIME](https://datatracker.ietf.org/doc/html/rfc1341) with multipart content. 
     The Notes client can process and render this for display, but can't edit it without first converting it. Try to avoid editing on both sides.
 
 A submission to a RichText field as part of a `POST /document/{unid}` needs to look like this:

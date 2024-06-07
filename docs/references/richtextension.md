@@ -1,12 +1,12 @@
-# Richtext extension
+# Rich Text extension
 
-Richtext extension is for customers or users that prefer to have or use their own implementation of richtext processor. Users will be able to adjust it to meet their own needs, resulting in a better representation of their richtext.
+Rich Text extension is for customers or users that prefer to have or use their own implementation of Rich Text processor. Users will be able to adjust it to meet their own needs, resulting in a better representation of their Rich Text.
 
-## Extend Domino REST API richtext
+## Extend Domino REST API Rich Text
 
-Starting Domino REST API version `1.0.12`, you can now add richtext processors for Domino REST API.
+Starting Domino REST API version `1.0.12`, you can now add Rich Text processors for Domino REST API.
 
-## Built-in richtext processors
+## Built-in Rich Text processors
 
 There has been no change for the existing processors, namely:
 
@@ -15,9 +15,9 @@ There has been no change for the existing processors, namely:
 - markdown
 - plain
 
-## Set up extending richtext
+## Set up extending Rich Text
 
-There are a number of things you should setup before you can create an extension.
+There are a number of things you should set up before you can create an extension.
 
 ### Install KEEP core jar
 
@@ -32,9 +32,9 @@ This adds **KEEP Core** to your local Maven M2 repository.
 
 ### Create an extension helper
 
-The goal is to create an extension helper that generates a single JAR file containing all the dependencies needed in extending richtext.
+The goal is to create an extension helper that generates a single JAR file containing all the dependencies needed in extending Rich Text.
 
-Extending richtext needs the following dependencies:
+Extending Rich Text needs the following dependencies:
 
 - KEEP core
 - Vert.X core
@@ -86,13 +86,13 @@ Extending richtext needs the following dependencies:
     mvn clean install
     ```
 
-    Executing the command generates a `keep-richtext-extension-helper-1.0.jar` file in the target directory. It will include this JAR file in your local Maven M2 repository, allowing you to use it as a dependency for your richtext extension project.
+    Executing the command generates a `keep-richtext-extension-helper-1.0.jar` file in the target directory. It will include this JAR file in your local Maven M2 repository, allowing you to use it as a dependency for your Rich Text extension project.
 
-## Extend richtext
+## Extend Rich Text
 
-### Set up richtext extension project
+### Set up Rich Text extension project
 
-1. Create a new project for the richtext extension by creating a new Maven project using the following command:
+1. Create a new project for the Rich Text extension by creating a new Maven project using the following command:
 
     ```shell
     mvn archetype:generate -DgroupId=com.example -DartifactId=richtext-extension -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
@@ -115,38 +115,38 @@ Extending richtext needs the following dependencies:
 4. Save the `pom.xml` after adding the dependency.
 
 !!!note
-    The **`scope`** is set to **`provided`** because you don't want the dependency be compiled together with your richtext extension as you will be putting the extension JAR alongside the KEEP JARs. The KEEP JARs will contain all the dependencies that your extension JAR will need.
+    The **`scope`** is set to **`provided`** because you don't want the dependency to be compiled together with your Rich Text extension as you will be putting the extension JAR alongside the KEEP JARs. The KEEP JARs contain all the dependencies that your extension JAR needs.
 
-### Creating your own richtext processors
+### Creating your own Rich Text processors
 
-We have 2 different interfaces that we can implement to create our very own richtext processor, `IncomingRichtextProcessor` and `OutgoingRichtextProcessor`.
+There are 2 different interfaces that you can implement to create your own Rich Text processor, `IncomingRichtextProcessor` and `OutgoingRichtextProcessor`.
 
-#### Incoming richtext processor
+#### Incoming Rich Text processor
 
-This processes how the incoming richtext JSON is saved in the richtext field. This processor makes use of the `type` property in richtext JSON to determine what incoming richtext processor to use.
+This processes how the incoming Rich Text JSON is saved in the Rich Text field. This processor makes use of the `type` property in Rich Text JSON to determine what incoming Rich Text processor to use.
 
-##### Built-in incoming richtext processors
+##### Built-in incoming Rich Text processors
 
-There are four built-in incoming richtext processors:
+There are four built-in incoming Rich Text processors:
 
-1. `multipart/mixed` - used by default if `type` in richtext JSON doesn't equate to any existing richtext processors.
+1. `multipart/mixed` - used by default if `type` in Rich Text JSON doesn't equate to any existing Rich Text processor.
 2. `text/plain`
 3. `text/markdown`
 4. `text/html`
 
-##### Creating your own incoming richtext processor
+##### Creating your own incoming Rich Text processor
 
 1. Create a class that implements `IncomingRichtextProcessor`.
 
-    Currently, `IncomingRichtextProcessor` has three methods. Two of which has default implementations.
+    Currently, `IncomingRichtextProcessor` has three methods. Two of which have default implementations.
 
-    `getProcessorName` is an abstract method that should return a `String` that represents the name of this incoming richtext processor. It checks this against the `type` property of a richtext JSON to determine if this incoming processor should be used.
+    `getProcessorName` is an abstract method that should return a `String` that represents the name of the incoming Rich Text processor. It checks this against the `type` property of a Rich Text JSON to determine if this incoming processor should be used.
 
-    `process` is a method that has a default implementation. By default, it checks if the incoming `content` of the richtext JSON looks like a mime, it directly returns it as a `Buffer`, if not, it manually constructs a mime using the richtext JSON properties, and return the constructed mime as a `Buffer`. You are also free to override this method and control how you want to save the incoming richtext.
+    `process` is a method that has a default implementation. By default, it checks if the incoming `content` of the Rich Text JSON looks like a mime and directly returns it as a `Buffer`. If not, it manually constructs a mime using the Rich Text JSON properties, and return the constructed mime as a `Buffer`. You are also free to override this method and control how you want to save the incoming Rich Text.
 
-    `getPriority` is a default method that returns `0`. You can leave this method be, unless you have an incoming richtext processor that has the same return value of `getProcessorName` with other existing incoming richtext processors. The higher the number, the higher the priority.
+    `getPriority` is a default method that returns `0`. You can leave this method be, unless you have an incoming Rich Text processor that has the same return value of `getProcessorName` with other existing incoming Rich Text processors. The higher the number, the higher the priority.
 
-    An example incoming richtext processor would be:
+    An example incoming Rich Text processor will be:
 
     ```java
     package com.example;
@@ -162,7 +162,7 @@ There are four built-in incoming richtext processors:
     import io.vertx.core.json.JsonObject;
 
     /**
-     * Always saves "Hi!" as a text/plain mime regardless of what's inside the richtext JSON
+     * Always saves "Hi!" as a text/plain mime regardless of what's inside the Rich Text JSON
      */
     public class AlwaysHiIncomingRichtextProcessor implements IncomingRichtextProcessor {
 
@@ -187,41 +187,41 @@ There are four built-in incoming richtext processors:
 
 2. Create a file within the `src/main/resources/META-INF/services` directory and name the file `com.hcl.domino.keep.info.richtext.spi.IncomingRichtextProcessor`.
 
-3. Edit the file `com.hcl.domino.keep.info.richtext.spi.IncomingRichtextProcessor` and include all the richtext extensions you created, such as:
+3. Edit the file `com.hcl.domino.keep.info.richtext.spi.IncomingRichtextProcessor` and include all the Rich Text extensions you created, such as:
 
     ```text
     com.example.AlwaysHiIncomingRichtextProcessor
     ```
 
 !!!warning "Important"
-    All classes declared in this file must exist and implement the `IncomingRichtextProcessor` class. Otherwise, an error will be triggered when attempting to load this using Domino REST API.
+    All classes declared in this file must exist and implement the `IncomingRichtextProcessor` class. Otherwise, an error occurs when attempting to load this using Domino REST API.
 
-#### Outgoing richtext processor
+#### Outgoing Rich Text processor
 
-This processes how the saved data in a richtext field is shown when returned as a response to a GET request. This processor bases on the value `richTextAs` query parameter to know which outgoing richtext processor to use.
+This processes how the saved data in a Rich Text field is shown when returned as a response to a GET request. This processor bases on the value `richTextAs` query parameter to know which outgoing Rich Text processor to use.
 
-##### Built-in outgoing richtext processors
+##### Built-in outgoing Rich Text processors
 
-There are four built-in outgoing richtext processors:
+There are four built-in outgoing Rich Text processors:
 
 1. `mime`
 2. `plain`
 3. `markdown`
 4. `html`
 
-##### Creating your own outgoing richtext processor
+##### Creating your own outgoing Rich Text processor
 
 1. Create a class that implements `OutgoingRichtextProcessor`.
 
     Currently, `OutgoingRichtextProcessor` has three methods. One of which has default implementations.
 
-    `getProcessorName` is an abstract method that should return a `String` that represents the name of this incoming richtext processor. It checks this against the `richTextAs` query parameter of the GET request to know which outgoing richtext processor to use.
+    `getProcessorName` is an abstract method that should return a `String` that represents the name of this incoming Rich Text processor. It checks this against the `richTextAs` query parameter of the GET request to know which outgoing Rich Text processor to use.
 
-    `process` is an abstract method that can be overwritten to specify how to represent the richtext content in the response.
+    `process` is an abstract method that can be overwritten to specify how to represent the Rich Text content in the response.
 
-    `getPriority` is a default method that returns `0`. You can leave this method be, unless you have an outgoing richtext processor that has the same return value of `getProcessorName` with other existing outgoing richtext processors. The higher the number, the higher the priority.
+    `getPriority` is a default method that returns `0`. You can leave this method be, unless you have an outgoing Rich Text processor that has the same return value of `getProcessorName` with other existing outgoing Rich Text processors. The higher the number, the higher the priority.
 
-    An example outgoing richtext processor would be:
+    An example outgoing Rich Text processor would be:
 
     ```java
     package com.example;
@@ -233,7 +233,7 @@ There are four built-in outgoing richtext processors:
     import io.vertx.core.json.JsonObject;
 
     /**
-     * Always returns "Hello!" in the content of the richtext JSON response.
+     * Always returns "Hello!" in the content of the Rich Text JSON response.
      */
     public class AlwaysHelloRichtextProcessor implements OutgoingRichtextProcessor {
 
@@ -255,18 +255,18 @@ There are four built-in outgoing richtext processors:
 
 2. Create a file within the `src/main/resources/META-INF/services` directory and name the file `com.hcl.domino.keep.info.richtext.spi.OutgoingRichtextProcessor`.
 
-3. Edit the file `com.hcl.domino.keep.info.richtext.spi.OutgoingRichtextProcessor` and include all the richtext extensions you created, such as:
+3. Edit the file `com.hcl.domino.keep.info.richtext.spi.OutgoingRichtextProcessor` and include all the Rich Text extensions you created, such as:
 
     ```text
     com.example.AlwaysHelloRichtextProcessor
     ```
 
 !!!warning "Important"
-    All classes declared in this file must exist and implement the `OutgoingRichtextProcessor` class. Otherwise, an error will be triggered when attempting to load this using Domino REST API.
+    All classes declared in this file must exist and implement the `OutgoingRichtextProcessor` class. Otherwise, an error occurs when attempting to load this using Domino REST API.
 
-### Apply the richtext extension
+### Apply the Rich Text extension
 
-Once you have finished creating your richtext extensions, it's time to use it. Create the JAR file for the richtext extension by running the following command:
+Once you have finished creating your Rich Text extensions, it's time to use it. Create the JAR file for the Rich Text extension by running the following command:
 
   ```shell
   mvn clean package
@@ -276,9 +276,9 @@ This creates a JAR file inside the target directory with the name `richtext-exte
 
 ### Try it out
 
-#### Try the incoming richtext processor
+#### Try the incoming Rich Text processor
 
-First, we need to create a form, and it has to have a richtext field in it. An example response body would be:
+Create a form that has a Rich Text field in it. An example response body would be:
 
 ```json
 {
@@ -293,11 +293,11 @@ First, we need to create a form, and it has to have a richtext field in it. An e
 }
 ```
 
-Notice that the `type` in the richtext JSON is set to the name of our own incoming richtext processor `alwayshi`.
+Notice that the `type` in the Rich Text JSON is set to the name of your own incoming Rich Text processor `alwayshi`.
 
-Before executing the request, you should set the value of `richTextAs` query parameter to `plain` so we can verify the value of the richtext field in plain text.
+Before executing the request, you should set the value of `richTextAs` query parameter to `plain` so you can verify the value of the Rich Text field in plain text.
 
-After executing the request, you should get the following JSON for the richtext field:
+After executing the request, you should get the following JSON for the Rich Text field:
 
 ```json
 {
@@ -307,11 +307,11 @@ After executing the request, you should get the following JSON for the richtext 
 }
 ```
 
-#### Try the outgoing richtext processor
+#### Try the outgoing Rich Text processor
 
 To try it out, you can call any API that has a `richTextAs` query parameter, and set its value to your processor name.
 
-For example, if you use the `AlwaysHelloRichtextProcessor`, since its `getProcessorName` method returns `alwayshello`, if you do an API and set `richTextAs=alwayshello`, you should get the following JSON value for the richtext fields:
+For example, if you use the `AlwaysHelloRichtextProcessor`, since its `getProcessorName` method returns `alwayshello`, if you do an API and set `richTextAs=alwayshello`, you should get the following JSON value for the Rich Text fields:
 
 ```json
 {

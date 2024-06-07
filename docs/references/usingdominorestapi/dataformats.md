@@ -54,7 +54,7 @@ Domino Documents might or might not contain expected items and those items might
 | Authors      | String      |      |        |      |          |
 | RichText[^3] | Object      |      |        |      |          |
 
-[^3]: RichText is always returned as JSON object. For more information, see [RichText](./richtext.md).
+[^3]: RichText is always returned as JSON object. For more information, see [Rich Text](./richtext/index.md).
 
 ### Multi Values, Domino to JSON
 
