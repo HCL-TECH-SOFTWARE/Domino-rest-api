@@ -25,7 +25,7 @@ The procedure guides you on how to setup and use the Microsoft Office Round Trip
     - Manually creating the link to access the attached file using the following format.
 
         ```
-        <scheme name>:<command name>|u|<DRAPI HTTPs hostname>/api/webdav-v1/<dataSource>/<document UNID>/<filename>
+        <scheme name>:<command name>|u|<DRAPI HTTPs hostname>/api/webdav-v1/attachment/<dataSource>/<document UNID>/<filename>
         ```
 
         |Property|Description|
@@ -38,7 +38,7 @@ The procedure guides you on how to setup and use the Microsoft Office Round Trip
         | filename | Filename of the Microsoft Office file attached to the Domino document.|
 
         **Example link**:</br>
-        `ms-word:ofv|u|whitepalace.keepproject.io:8880/api/webdav-v1/attachmentdb/2D88CDF9549379C700258A9F002797CA/sample.docx`
+        `ms-word:ofv|u|whitepalace.keepproject.io:8880/api/webdav-v1/attachment/attachmentdb/2D88CDF9549379C700258A9F002797CA/sample.docx`
 
         !!!info
             The link format is based on the [Office URI Schemes](https://learn.microsoft.com/en-us/office/client-developer/office-uri-schemes){: target="_blank" rel="noopener noreferrer"}.
@@ -60,8 +60,8 @@ The procedure guides you on how to setup and use the Microsoft Office Round Trip
             {
             "filename": "document.docx",
             "urls": [
-                "ms-word:ofv|u|http://localhost:8880/api/webdav-v1/dataSource/documentUNID/document.docx",
-                "ms-word:ofe|u|http://localhost:8880/api/webdav-v1/dataSource/documentUNID/document.docx"
+                "ms-word:ofv|u|http://localhost:8880/api/webdav-v1/attachment/dataSource/documentUNID/document.docx",
+                "ms-word:ofe|u|http://localhost:8880/api/webdav-v1/attachment/dataSource/documentUNID/document.docx"
                     ]
             },
             {
