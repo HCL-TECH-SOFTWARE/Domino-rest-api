@@ -14,10 +14,25 @@ The section provides information on the latest features, improvements, and resol
 
     **New**
 
+    - Preview: **Virtual Spreadsheet**  
+
+        The **Virtual Spreadsheet** feature allows you to open up and edit view entries using Microsoft Excel [^1]. This feature uses the round trip editing feature of Domino REST API for Microsoft Office applications. For more information, see [Set up Virtual Spreadsheet](#).
+
+        [^1]: Microsoft and Excel are registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.
+
+    - Added ability for a third-party Rich Text processor to process incoming Rich Text.  For more information, see [Incoming Rich Text Processor](#). 
+
     **Improvements**
+    
+    - Added support for `contains`, `startswith`, and `endswith` in OData functions.
+    - Added the `includeAttachmentMetadata` parameter to the `GET v1/attachmentnames` endpoint to output the attachment file size, created date, and modified date.
+    - Added an array that contains the top-level child document UNIDs to the `@meta` object in the response of the `GET v1/document/{unid}` and `GET v1/docmeta/{unid}` endpoints.
+    - Uses the correct mail template based on the Domino version when creating a second calendar using the `POST pim-v1/calendar` endpoint.
     - Implemented UI/UX enhancements in the [Application Management](./usingwebui/appui.md) page in the **Admin UI**.
 
     **Resolved Issues**
+
+    - The `POST v1/run/formula` endpoint did not allow the formula to run unless the user was in the server config *allow run formula agents*.
 
     **Others**
     
