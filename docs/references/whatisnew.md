@@ -7,8 +7,51 @@ The section provides information on the latest features, improvements, and resol
     - Items marked in <span style="color:red">**red**</span> are API changes that may impact your applications and should be reviewed before upgrading.
     - Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](deprecated.md).
 
+???+ info "v1.0.14 - What's new or changed"
+    ## v1.0.14 - _What's new or changed_
 
-???+ info "v1.0.12 - What's new or changed"
+    *Release date: June 13, 2024*
+
+    **New**
+
+    - Preview: **Virtual Spreadsheet**  
+
+        The **Virtual Spreadsheet** feature allows you to open up and edit view entries using Microsoft Excel [^1]. This feature uses the round trip editing feature of Domino REST API for Microsoft Office applications. For more information, see [Set up Virtual Spreadsheet](#).
+
+        [^1]: Microsoft and Excel are registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.
+
+    - Added ability for a third-party Rich Text processor to process incoming Rich Text.  For more information, see [Incoming Rich Text Processor](#). 
+
+    **Improvements**
+    
+    - Added support for `contains`, `startswith`, and `endswith` in OData functions.
+    - Added the `includeAttachmentMetadata` parameter to the `GET v1/attachmentnames` endpoint to output the attachment file size, created date, and modified date.
+    - Added an array that contains the top-level child document UNIDs to the `@meta` object in the response of the `GET v1/document/{unid}` and `GET v1/docmeta/{unid}` endpoints.
+    - Uses the correct mail template based on the Domino version when creating a second calendar using the `POST pim-v1/calendar` endpoint.
+    - Implemented UI/UX enhancements in the [Application Management](./usingwebui/appui.md) page in the **Admin UI**.
+
+    **Resolved Issues**
+
+    - The `POST v1/run/formula` endpoint did not allow the formula to run unless the user was in the server config *allow run formula agents*.
+
+    **Others**
+    
+    - Implemented documentation updates.
+    - Installer jar files:
+	    - For Domino 14: *restapiInstall-r14.jar*
+	    - For Domino 12: *restapiInstall-r12.jar*
+
+    - Docker image version for docker compose .env file (CONTAINER_IMAGE):
+        - For Domino 14: *domino-rest-api:1.0.14-r14*
+        - For Domino 12: *domino-rest-api:1.0.14-r12*  
+        
+    - Docker image version for docker compose .env file from Harbor:
+        - For Domino 14: *hclcr.io/domino/restapi:1.0.14-r14*
+        - For Domino 12: *hclcr.io/domino/restapi:1.0.14-r12*
+
+
+
+??? info "v1.0.12 - What's new or changed"
     ## v1.0.12 - _What's new or changed_
 
     *Release date: April 25, 2024*
