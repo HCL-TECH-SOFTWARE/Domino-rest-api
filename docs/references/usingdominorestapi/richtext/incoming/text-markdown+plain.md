@@ -1,12 +1,12 @@
-# Incoming text/markdown +plain Example
+# Example: Incoming text/markdown + plain
 
-Let's say we want to save the following `text/markdown` content in a richtext field:
+Let's say you want to save the following `text/markdown` content in a `richtext` field:
 
 ```text
 **this is the body text**
 ```
 
-Additionally, let's say we also want to create a `plain` alternative of the `text/markdown` content. We then use the following RichText JSON:
+Additionally, let's say you also want to create a `plain` alternative of the `text/markdown` content. You then use the following Rich Text JSON:
 
 ```json
 {

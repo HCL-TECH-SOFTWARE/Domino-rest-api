@@ -1,6 +1,6 @@
-# Outgoing MIME Content as Plain Example 5
+# Example 5: Outgoing MIME content as plain
 
-Let's say we want to retrieve the following MIME content as plain:
+Let's say you want to retrieve the following MIME content as plain:
 
 ```text
 MIME-Version: 1.0
@@ -25,9 +25,9 @@ Content-Disposition: attachment;
 --XXXXboundary text--
 ```
 
-We then set the value of `richTextAs` query parameter to `plain`, and retrieve the document that contains it.
+Set the value of `richTextAs` query parameter to `plain`, and retrieve the document that contains it.
 
-We should get the following in the RichText field response:
+You should get the following in the `richtext` field response:
 
 ```json
 {
@@ -38,4 +38,4 @@ We should get the following in the RichText field response:
 ```
 
 !!!note
-    Since there's no `text/html` part in the stored multipart MIME, and also has no `text/html` and `text/markdown` part to fallback to, it then returned a plain conversion of all MIME parts.
+    Since there's no `text/html` part in the stored multipart MIME and no `text/html` and `text/markdown` parts to fall back to, it returns a plain conversion of all MIME parts.

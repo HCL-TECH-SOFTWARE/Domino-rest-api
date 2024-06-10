@@ -16,11 +16,11 @@ The section provides information on the latest features, improvements, and resol
 
     - Preview: **Virtual Spreadsheet**  
 
-        The **Virtual Spreadsheet** feature allows you to open up and edit view entries using Microsoft Excel [^1]. This feature uses the round trip editing feature of Domino REST API for Microsoft Office applications. For more information, see [Set up Virtual Spreadsheet](#).
+        The **Virtual Spreadsheet** feature allows you to open up and edit view entries using Microsoft Excel [^1]. This feature uses the round trip editing feature of Domino REST API for Microsoft Office applications. For more information, see [Set up Virtual Spreadsheet](../howto/production/virtualsheet.md).
 
         [^1]: Microsoft and Excel are registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.
 
-    - Added ability for a third-party Rich Text processor to process incoming Rich Text.  For more information, see [Incoming Rich Text Processor](#). 
+    - Added ability for a third-party Rich Text processor to process incoming Rich Text. For more information, see [Incoming Rich Text Processor](../references/richtextension.md#incoming-rich-text-processor). 
 
     **Improvements**
     
@@ -293,7 +293,7 @@ The section provides information on the latest features, improvements, and resol
     - `POST v1/run/agent` did not run when using the agent's alias.
     - `POST v1/run/agent` did not run in the user's context when the agent is set to *Run as Web User*.
     - Calling `POST /attachments/{unid}` multiple times did not render the attachments correctly in Notes.
-    - `POST v1/query` wasn't returning Rich Text fields as plain when `richTextAs=plain` was set.
+    - `POST v1/query` wasn't returning `richtext` fields as plain when `richTextAs=plain` was set.
 
     **Others**
     
@@ -308,7 +308,7 @@ The section provides information on the latest features, improvements, and resol
 
     **New**
 
-    - Added endpoint `GET v1/richtext/plain/{unid}` to retrieve just plain text from a rich text field.
+    - Added endpoint `GET v1/richtext/plain/{unid}` to retrieve just plain text from a `richtext` field.
     - Added endpoint `POST v1/bulk/etag` to give an entity tag (ETag) to specified documents. The endpoint is also useful in finding if a doc has been updated or deleted.
     - Added endpoint `POST v1/bulk/folder` to add or remove documents to or from folders.
     - Added endpoint `GET v1/logout` for OIDC compliance. `POST v1/logout` is still recommended as a browser's PREFETCH could potentially cause issues.
@@ -347,7 +347,7 @@ The section provides information on the latest features, improvements, and resol
     - Introduced `$SETUP` scope that can be added to an application, which needs access to `$SETUP` endpoints. For more information, see [Scopes](../references/usingdominorestapi/scopes.md).
     - Added `ftSearchQuery` to the `GET v1/lists/{name}` endpoint to filter a view based on a full text search query.
     - Added column multi-value delimiter and column position when retrieving information about views utilizing the `GET v1/lists?columns=true` endpoint. 
-    - Enabled retrieval of Rich Text embedded images by the `GET v1/attachments/{unid}/{attachmentName}` endpoint. When retrieving the html of a Rich Text field, embedded images come back in an <img> tag such as `<img src="/test.nsf/0/a0286fbd3bdc1d5bc12222d5006ac837/Photo/0.84?OpenElement&FieldElemFormat=gif">`. Use base64 encoding to encode the image src URL and pass that in as the `attachmentName`. 
+    - Enabled retrieval of Rich Text embedded images by the `GET v1/attachments/{unid}/{attachmentName}` endpoint. When retrieving the html of a `richtext` field, embedded images come back in an <img> tag such as `<img src="/test.nsf/0/a0286fbd3bdc1d5bc12222d5006ac837/Photo/0.84?OpenElement&FieldElemFormat=gif">`. Use base64 encoding to encode the image src URL and pass that in as the `attachmentName`. 
 
     **Improvements**
 
@@ -382,7 +382,7 @@ The section provides information on the latest features, improvements, and resol
 
     - Refined Rich Text MIME representation and Rich Text Markdown representation.
     - An error message now appears when deleting an ACL role using `admin-v1/acl/roles/{rolename}` while a member in the ACL still has that role.
-    - Returns the rendered Markdown as HTML when retrieving a document where the Rich Text representation is HTML and the Rich Text field contains Markdown. 
+    - Returns the rendered Markdown as HTML when retrieving a document where the Rich Text representation is HTML and the `richtext` field contains Markdown. 
     - Searches for the text/markdown MIME part of the document and returns it if existing when retrieving a document where the Rich Text representation is Markdown but stored as MIME.
     - Updated the **Database Views** activation page in **Schema Management** for better user experience.   
  
@@ -414,7 +414,7 @@ The section provides information on the latest features, improvements, and resol
     **Resolved issues**
 
     -  A page in the **Admin UI** may time out while bringing up a list of databases if there are a lot of databases.
-    - The `/attachments/{unid}` endpoint in `api/v1` didn't honor the `fieldName=` parameter. This parameter specifies the Rich Text field to attach to, instead, it attached to the document.
+    - The `/attachments/{unid}` endpoint in `api/v1` didn't honor the `fieldName=` parameter. This parameter specifies the `richtext` field to attach to, instead, it attached to the document.
     
     **Others**
 

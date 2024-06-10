@@ -1,6 +1,6 @@
-# Incoming multipart/alternative Example
+# Example: Incoming multipart/alternative 
 
-Let's say we want to save the following `multipart/alternative` MIME in a richtext field:
+Let's say you want to save the following `multipart/alternative` MIME in a `richtext` field:
 
 ```text
 MIME-Version: 1.0
@@ -22,7 +22,7 @@ Content-Type: text/html
 --XXXXboundary text--
 ```
 
-We first convert it to `BASE64` encoding and use that as the `content` in the following RichText JSON:
+You first convert it to `BASE64` encoding and use that as the `content` in the following Rich Text JSON:
 
 ```json
 {
@@ -32,7 +32,7 @@ We first convert it to `BASE64` encoding and use that as the `content` in the fo
 }
 ```
 
-Using the mentioned RichText JSON, it will then save the following MIME:
+Using the mentioned Rich Text JSON, it will then save the following MIME:
 
 ```text
 MIME-Version: 1.0
@@ -54,4 +54,4 @@ Content-Type: text/html
 --XXXXboundary text--
 ```
 
-The saved MIME is the `1:1` version of the MIME we want to save.
+The saved MIME is the `1:1` version of the MIME you want to save.

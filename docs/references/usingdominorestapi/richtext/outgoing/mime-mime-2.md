@@ -1,6 +1,6 @@
-# Outgoing MIME Content as MIME Example 2
+# Example 2: Outgoing MIME content as MIME
 
-Let's say we want to retrieve the following MIME content as MIME:
+Let's say you want to retrieve the following MIME content as MIME:
 
 ```text
 MIME-Version: 1.0
@@ -22,9 +22,9 @@ Content-Type: text/html
 --XXXXboundary text--
 ```
 
-We then set the value of `richTextAs` query parameter to `mime` (or leave it as blank because it'll be `mime` by default), and retrieve the document that contains it.
+You then set the value of `richTextAs` query parameter to `mime`, or leave it as blank because it'll be `mime` by default, and retrieve the document that contains it.
 
-We should get a `multipart/mixed` MIME with its `content` encoded in `BASE64` in the RichText field response. Decoding it should yield the following:
+You should get a `multipart/mixed` MIME with its `content` encoded in `BASE64` in the `richtext` field response. Decoding it should yield the following:
 
 ```text
 MIME-Version: 1.0

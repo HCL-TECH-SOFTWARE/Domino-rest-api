@@ -1,12 +1,12 @@
-# Outgoing RichText Content as MIME Example
+# Example: Outgoing Rich Text content as MIME 
 
-Let's say we want to retrieve the following RichText content as MIME:
+Let's say you want to retrieve the following Rich Text content as MIME:
 
-![Example RichText content](../../../../assets/images/ExampleRichtextContent.png)
+![Example Rich Text content](../../../../assets/images/ExampleRichtextContent.png)
 
-We then set the value of `richTextAs` query parameter to `mime` (or leave it as blank because it'll be `mime` by default), and retrieve the document that contains it.
+You set the value of `richTextAs` query parameter to `mime`, or leave it blank since it'll be `mime` by default, and retrieve the document that contains it.
 
-We should get a `multipart/mixed` MIME with its `content` encoded in `BASE64` in the RichText field response. Decoding it should yield the following:
+You should get a `multipart/mixed` MIME with its `content` encoded in `BASE64` in the `richtext` field response. Decoding it should yield the following:
 
 ```text
 MIME-Version: 1.0

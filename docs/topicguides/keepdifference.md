@@ -4,7 +4,7 @@ The audience for this chapter are mostly experienced Notes and Domino developers
 
 ## Recap on Notes' uniqueness
 
-A Notes document contains items. Those items can have different data types, including some unique to Notes like Reader or Author (for declarative security) or RichText (a catch it all). The correct name is `item` not `field` - later more on this. An item can have a single value or multiple values. There is a loose connection to a Notes form, created by the value of an item with the name `form`. The connection is loose, since the value of that item can be overwritten or the item being absent.
+A Notes document contains items. Those items can have different data types, including some unique to Notes like Reader or Author (for declarative security) or Rich Text (a catch it all). The correct name is `item` not `field` - later more on this. An item can have a single value or multiple values. There is a loose connection to a Notes form, created by the value of an item with the name `form`. The connection is loose, since the value of that item can be overwritten or the item being absent.
 
 The loose connection between document and form establishes an even looser connection between `items` in the document and `fields` in the form. When a document only is created or updated through the Notes, Domino, or XPages that don't have trigger code (onButton, on Save etc), the link is strong and field data type matches item data type.
 
@@ -27,4 +27,4 @@ We don't try to boil the ocean, but follow Antoine de Saint-Exupéry who proclai
 - When you have multiple forms with the same name, the AdminUI will pick one, we don't guarantee which one.
 - Same applies for views: we pick the first we find. Unique aliases or names help to avoid ambiguity.
 - When an item name is not specified in the configuration, you can't read or write it.
-- We translate RichText to HTML/MIME. This is one way. We don't translate MIME back to RichText.
+- We translate Rich Text to HTML/MIME. This is one way. We don't translate MIME back to Rich Text.

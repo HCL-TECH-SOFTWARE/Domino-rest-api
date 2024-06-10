@@ -1,4 +1,4 @@
-# RichText
+# Rich Text
 
 ## Incoming
 
@@ -18,10 +18,10 @@
 
 | Content  | RichTextAs= | Result          | How                                                                             |
 | -------- | ----------- | --------------- | ------------------------------------------------------------------------------- |
-| RichText | mime        | multipart/mixed | 1:1                                                                             |
-| RichText | html        | text/html       | toMime                                                                          |
-| RichText | plain       | text/plain      | extractText call                                                                |
-| RichText | markdown    | text/markdown   | toMime -> MD conversion                                                         |
+| Rich Text | mime        | multipart/mixed | 1:1                                                                             |
+| Rich Text | html        | text/html       | toMime                                                                          |
+| Rich Text | plain       | text/plain      | extractText call                                                                |
+| Rich Text | markdown    | text/markdown   | toMime -> MD conversion                                                         |
 | mime     | mime        | multipart/mixed | 1:1                                                                             |
 | mime     | html        | text/html       | extract text/html, fallback text/markdown -> flexmark                           |
 | mime     | plain       | text/plain      | extract text/plain, fallback text/html -> JSoup fallback extract md -> Flexmark |

@@ -1,12 +1,12 @@
-# Incoming text/markdown Example
+# Example: Incoming text/markdown
 
-Let's say we want to save the following `text/markdown` content in a richtext field:
+Let's say you want to save the following `text/markdown` content in a `richtext` field:
 
 ```text
 **this is the body text**
 ```
 
-We use that as the `content` in the following RichText JSON:
+You use that as the `content` in the following Rich Text JSON:
 
 ```json
 {

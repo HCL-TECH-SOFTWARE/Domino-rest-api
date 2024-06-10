@@ -54,13 +54,13 @@ Domino provides its own source of identity, the Domino directory. However this i
 - Each OAuth app can store multiple scopes it wants to access. Created by admin, not by the calling application.
 - In the OAuth cycle, if an application requests an undefined scope or an unknown callback, the request gets denied.
 
-## RichText
+## Rich Text
 
-Before [diving into details](../references/usingdominorestapi/richtext.md), a quick trip down the IT history lane. [RichText (RTF)](https://en.wikipedia.org/wiki/Rich_Text_Format) was specified by Microsoft in 1987. Notes/Domino uses a similar specification. It's essentially a container format designed to host [plain text](https://www.youtube.com/watch?v=_mZBa3sqTrI), formatted text, images, attachments, embedded objects and layout information. It's [white space sensitive](https://twitter.com/jordwalke/status/1272431278868987904), a fancy term for: being able to "format" something by hitting the space key repeatedly.
+Before [diving into details](../references/usingdominorestapi/richtext/index.md), a quick trip down the IT history lane. [Rich Text (RTF)](https://en.wikipedia.org/wiki/Rich_Text_Format) was specified by Microsoft in 1987. Notes/Domino uses a similar specification. It's essentially a container format designed to host [plain text](https://www.youtube.com/watch?v=_mZBa3sqTrI), formatted text, images, attachments, embedded objects and layout information. It's [white space sensitive](https://twitter.com/jordwalke/status/1272431278868987904), a fancy term for: being able to "format" something by hitting the space key repeatedly.
 
 The container formats today that resemble these capabilities are [ECMA-376 (ISO/IEC-29500)](https://www.ecma-international.org/publications-and-standards/standards/ecma-376/) (a.k.a Office Open XML), [ISO/IEC 26300:2006](http://www.oasis-open.org/committees/download.php/19274/OpenDocument-v1.0ed2-cs1.pdf) (a.k.a Open Document Format), which are both XML based and [MIME (RFC 1341)](https://datatracker.ietf.org/doc/html/rfc1341) which is widely used in eMail. The XML formats, mainly used in word processors aren't native to the web, while MIME doesn't prescribe (it's **multipurpose** after all) its content parts **and** isn't native to web browsers.
 
-Based on this mismatch of source and target environment we designed your option [dealing with RichText](../references/usingdominorestapi/richtext.md) in Domino REST API.
+Based on this mismatch of source and target environment we designed your option [dealing with Rich Text](../references/usingdominorestapi/richtext/index.md) in Domino REST API.
 
 ## Roles
 

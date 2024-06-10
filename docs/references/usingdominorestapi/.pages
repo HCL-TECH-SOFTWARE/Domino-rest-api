@@ -9,7 +9,7 @@ nav:
   - dataformats.md
   - formnames.md
   - scopes.md
-  - RichText: richtext
+  - Rich Text: richtext
   - metrics.md
   - console.md
   - modenames.md
