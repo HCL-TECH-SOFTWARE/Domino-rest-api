@@ -1,6 +1,6 @@
-# Outgoing MIME Content as HTML Example 4
+# Example 4: Outgoing MIME content as HTML
 
-Let's say we want to retrieve the following MIME content as HTML:
+Let's say you want to retrieve the following MIME content as HTML:
 
 ```text
 MIME-Version: 1.0
@@ -24,9 +24,9 @@ this is the attachment text
 --XXXXboundary text--
 ```
 
-We then set the value of `richTextAs` query parameter to `html`, and retrieve the document that contains it.
+You then set the value of `richTextAs` query parameter to `html`, and retrieve the document that contains it.
 
-We should get the following in the RichText field response:
+You should get the following in the `richtext` field response:
 
 ```json
 {
@@ -37,4 +37,4 @@ We should get the following in the RichText field response:
 ```
 
 !!!note
-    Since there's no `text/html` part in the stored multipart MIME, and also has no `text/markdown` part to fallback to, it then returned an HTML conversion of all MIME parts.
+    Since there's no `text/html` part in the stored multipart MIME and no `text/markdown` part to fall back to, it then returns an HTML conversion of all MIME parts.

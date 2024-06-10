@@ -1,12 +1,12 @@
-# Incoming text/html Example
+# Example: Incoming text/html
 
-Let's say we want to save the following `text/html` content in a richtext field:
+Let's say you want to save the following `text/html` content in a `richtext` field:
 
 ```text
 <b>this is the body text</b>
 ```
 
-We use that as the `content` in the following RichText JSON:
+You use that as the `content` in the following Rich Text JSON:
 
 ```json
 {

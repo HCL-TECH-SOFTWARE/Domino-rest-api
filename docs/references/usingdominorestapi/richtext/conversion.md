@@ -7,7 +7,7 @@ Here are the tables that specify how incoming Rich Text and outgoing Rich Text a
 
 ## Incoming Rich Text
 
-Incoming Rich Text is the Rich Text JSON specified on the request body as the value of a Rich Text field.
+Incoming Rich Text is the Rich Text JSON specified on the request body as the value of a `richtext` field.
 
 The following table is a matrix for submitted types together with its supported `createAdditional` switches and how it's stored as.
 
@@ -28,20 +28,20 @@ The following table is a matrix for submitted types together with its supported 
 | text/markdown         | plain, html      | - multipart/alternative<br>- text/markdown<br>- text/plain<br>- text/html | [Example](./incoming/text-markdown+plain+html.md) |
 
 !!!warning
-    Updating the Rich Text field in Notes client may alter what Domino REST API has stored in it. For example, a stored `multipart/alternative` gets overwritten if the Rich Text field is updated using the Notes client.
+    Updating the `richtext` field in Notes client may alter what Domino REST API has stored in it. For example, a stored `multipart/alternative` gets overwritten if the `richtext` field is updated using the Notes client.
 
 ## Outgoing Rich Text
 
-Outgoing Rich Text is how the value of the Rich Text field is shown in the response body.
+Outgoing Rich Text is how the value of the `richtext` field is shown in the response body.
 
-The following table shows the content of the Rich Text field, its different `richTextAs` values, and their corresponding results.
+The following table shows the content of the `richtext` field, its different `richTextAs` values, and their corresponding results.
 
 | Content  | richTextAs | Result type     | Notes                                                          | Example                                                                                                                                                                                                             |
 |----------|------------|-----------------|----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| RichText | mime       | multipart/mixed |                                                                | [Example](./outgoing/richtext-mime.md)                                                                                                                                                                              |
-| RichText | html       | text/html       |                                                                | [Example](./outgoing/richtext-html.md)                                                                                                                                                                              |
-| RichText | plain      | text/plain      |                                                                | [Example](./outgoing/richtext-plain.md)                                                                                                                                                                             |
-| RichText | markdown   | text/markdown   |                                                                | [Example](./outgoing/richtext-markdown.md)                                                                                                                                                                          |
+| Rich Text | mime       | multipart/mixed |                                                                | [Example](./outgoing/richtext-mime.md)                                                                                                                                                                              |
+| Rich Text | html       | text/html       |                                                                | [Example](./outgoing/richtext-html.md)                                                                                                                                                                              |
+| Rich Text | plain      | text/plain      |                                                                | [Example](./outgoing/richtext-plain.md)                                                                                                                                                                             |
+| Rich Text | markdown   | text/markdown   |                                                                | [Example](./outgoing/richtext-markdown.md)                                                                                                                                                                          |
 | MIME     | mime       | multipart/mixed |                                                                | [Example 1](./outgoing/mime-mime-1.md)<br>[Example 2](./outgoing/mime-mime-2.md)                                                                                                                                    |
 | MIME     | html       | text/html       | Fallbacks:<br/>- text/markdown &rarr; html                          | [Example 1](./outgoing/mime-html-1.md)<br>[Example 2](./outgoing/mime-html-2.md)<br>[Example 3](./outgoing/mime-html-3.md)<br>[Example 4](./outgoing/mime-html-4.md)                                                |
 | MIME     | markdown   | text/markdown   | Fallbacks:<br/>- text/html &rarr; markdown                          | [Example 1](./outgoing/mime-markdown-1.md)<br>[Example 2](./outgoing/mime-markdown-2.md)<br>[Example 3](./outgoing/mime-markdown-3.md)<br>[Example 4](./outgoing/mime-markdown-4.md)                                |

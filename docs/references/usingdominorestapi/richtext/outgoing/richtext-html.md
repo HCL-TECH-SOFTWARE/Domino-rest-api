@@ -1,12 +1,12 @@
-# Outgoing RichText Content as HTML Example
+# Exaple: Outgoing Rich Text content as HTML
 
-Let's say we want to retrieve the following RichText content as HTML:
+Let's say you want to retrieve the following Rich Text content as HTML:
 
-![Example RichText content](../../../../assets/images/ExampleRichtextContent.png)
+![Example Rich Text content](../../../../assets/images/ExampleRichtextContent.png)
 
-We then set the value of `richTextAs` query parameter to `html`, and retrieve the document that contains it.
+Set the value of `richTextAs` query parameter to `html`, and retrieve the document that contains it.
 
-We should get the following in the RichText field response:
+You should get the following in the `richtext` field response:
 
 ```json
 {

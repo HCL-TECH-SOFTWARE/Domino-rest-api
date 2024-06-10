@@ -1,4 +1,4 @@
-# Setup Office Round Trip Experience
+# Set up Office Round Trip Experience
 
 Microsoft Office Round Trip Experience is a feature included in Domino REST API that simplifies editing of a supported Microsoft Office file attached to a Domino document. The feature enables you to access, edit, and save the changes to the attached file using the applicable Microsoft Office application without having to download and re-attach the file to the Domino document. 
 

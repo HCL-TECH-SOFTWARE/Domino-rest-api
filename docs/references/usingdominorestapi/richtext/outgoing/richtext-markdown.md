@@ -1,12 +1,12 @@
-# Outgoing RichText Content as markdown Example
+# Example: Outgoing Rich Text content as Markdown
 
-Let's say we want to retrieve the following RichText content as markdown:
+Let's say you want to retrieve the following Rich Text content as Markdown:
 
-![Example RichText content](../../../../assets/images/ExampleRichtextContent.png)
+![Example Rich Text content](../../../../assets/images/ExampleRichtextContent.png)
 
-We then set the value of `richTextAs` query parameter to `markdown`, and retrieve the document that contains it.
+Set the value of `richTextAs` query parameter to `markdown`, and retrieve the document that contains it.
 
-We should get the following in the RichText field response:
+You should get the following in the `richtext` field response:
 
 ```json
 {

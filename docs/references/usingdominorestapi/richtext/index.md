@@ -6,7 +6,7 @@
 
     The container formats today that resemble these capabilities are [ECMA-376 (ISO/IEC-29500)](https://www.ecma-international.org/publications-and-standards/standards/ecma-376/) (a.k.a Office Open XML), [ISO/IEC 26300:2006](http://www.oasis-open.org/committees/download.php/19274/OpenDocument-v1.0ed2-cs1.pdf) (a.k.a Open Document Format), which are both XML based and [MIME (RFC 1341)](https://datatracker.ietf.org/doc/html/rfc1341) which is widely used in eMail. The XML formats, mainly used in word processors aren't native to the web, while MIME doesn't prescribe (it is **multipurpose** after all) its content parts **and** isn't native to web browsers.
 
-## Define Rich Text
+## Defining Rich Text
 
 Any field you want to access in Domino REST API needs to be defined [in a schema](../../../howto/database/enablingadb.md), using the correct data format.
 
@@ -50,7 +50,7 @@ The request response may include the parameters identified in the table below.
     Domino REST API does **NOT** attempt to write back data in the original Lotus Notes (ca 1989) Rich Text format, but will use [MIME](https://datatracker.ietf.org/doc/html/rfc1341) with multipart content. 
     The Notes client can process and render this for display, but can't edit it without first converting it. Try to avoid editing on both sides.
 
-A submission to a RichText field as part of a `POST /document/{unid}` needs to look like this:
+A submission to a `richtext` field as part of a `POST /document/{unid}` needs to look like this:
 
 ```json
 {
@@ -129,7 +129,7 @@ Posting this to e.g. a Teamroom database would look like this:
 </details>
 ### Flat JSON submissions (a.k.a Inception mode)
 
-If your consuming service can't deal with the RichText JSON structure, you can wrap the JSON structure into a Base64 encoded String.
+If your consuming service can't deal with the Rich Text JSON structure, you can wrap the JSON structure into a Base64 encoded String.
 
 So you have the `content` element, which most likely is already Base64 encoded wrapped a second time into Base64. To clarify, you start with:
 

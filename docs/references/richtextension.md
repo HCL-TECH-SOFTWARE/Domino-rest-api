@@ -123,16 +123,16 @@ There are 2 different interfaces that you can implement to create your own Rich 
 
 #### Incoming Rich Text processor
 
-This processes how the incoming Rich Text JSON is saved in the Rich Text field. This processor makes use of the `type` property in Rich Text JSON to determine what incoming Rich Text processor to use.
+This processes how the incoming Rich Text JSON is saved in the `richtext` field. This processor makes use of the `type` property in Rich Text JSON to determine what incoming Rich Text processor to use.
 
 ##### Built-in incoming Rich Text processors
 
 There are four built-in incoming Rich Text processors:
 
-1. `multipart/mixed` - used by default if `type` in Rich Text JSON doesn't equate to any existing Rich Text processor.
-2. `text/plain`
-3. `text/markdown`
-4. `text/html`
+- `multipart/mixed` - used by default if `type` in Rich Text JSON doesn't equate to any existing Rich Text processor.
+- `text/plain`
+- `text/markdown`
+- `text/html`
 
 ##### Creating your own incoming Rich Text processor
 
@@ -198,16 +198,16 @@ There are four built-in incoming Rich Text processors:
 
 #### Outgoing Rich Text processor
 
-This processes how the saved data in a Rich Text field is shown when returned as a response to a GET request. This processor bases on the value `richTextAs` query parameter to know which outgoing Rich Text processor to use.
+This processes how the saved data in a `richtext` field is shown when returned as a response to a GET request. This processor uses the value of the `richTextAs` query parameter to know which outgoing Rich Text processor to use.
 
 ##### Built-in outgoing Rich Text processors
 
 There are four built-in outgoing Rich Text processors:
 
-1. `mime`
-2. `plain`
-3. `markdown`
-4. `html`
+- `mime`
+- `plain`
+- `markdown`
+- `html`
 
 ##### Creating your own outgoing Rich Text processor
 
@@ -278,7 +278,7 @@ This creates a JAR file inside the target directory with the name `richtext-exte
 
 #### Try the incoming Rich Text processor
 
-Create a form that has a Rich Text field in it. An example response body would be:
+Create a form that has a `richtext` field in it. An example response body would be:
 
 ```json
 {
@@ -295,9 +295,9 @@ Create a form that has a Rich Text field in it. An example response body would b
 
 Notice that the `type` in the Rich Text JSON is set to the name of your own incoming Rich Text processor `alwayshi`.
 
-Before executing the request, you should set the value of `richTextAs` query parameter to `plain` so you can verify the value of the Rich Text field in plain text.
+Before executing the request, you should set the value of `richTextAs` query parameter to `plain` so you can verify the value of the `richtext` field in plain text.
 
-After executing the request, you should get the following JSON for the Rich Text field:
+After executing the request, you should get the following JSON for the `richtext` field:
 
 ```json
 {
@@ -311,7 +311,7 @@ After executing the request, you should get the following JSON for the Rich Text
 
 To try it out, you can call any API that has a `richTextAs` query parameter, and set its value to your processor name.
 
-For example, if you use the `AlwaysHelloRichtextProcessor`, since its `getProcessorName` method returns `alwayshello`, if you do an API and set `richTextAs=alwayshello`, you should get the following JSON value for the Rich Text fields:
+For example, if you use the `AlwaysHelloRichtextProcessor`, since its `getProcessorName` method returns `alwayshello`, if you do an API and set `richTextAs=alwayshello`, you should get the following JSON value for the `richtext` fields:
 
 ```json
 {

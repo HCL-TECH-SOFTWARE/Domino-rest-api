@@ -60,7 +60,7 @@ Before [diving into details](../references/usingdominorestapi/richtext/index.md)
 
 The container formats today that resemble these capabilities are [ECMA-376 (ISO/IEC-29500)](https://www.ecma-international.org/publications-and-standards/standards/ecma-376/) (a.k.a Office Open XML), [ISO/IEC 26300:2006](http://www.oasis-open.org/committees/download.php/19274/OpenDocument-v1.0ed2-cs1.pdf) (a.k.a Open Document Format), which are both XML based and [MIME (RFC 1341)](https://datatracker.ietf.org/doc/html/rfc1341) which is widely used in eMail. The XML formats, mainly used in word processors aren't native to the web, while MIME doesn't prescribe (it's **multipurpose** after all) its content parts **and** isn't native to web browsers.
 
-Based on this mismatch of source and target environment we designed your option [dealing with RichText](../references/usingdominorestapi/richtext/index.md) in Domino REST API.
+Based on this mismatch of source and target environment we designed your option [dealing with Rich Text](../references/usingdominorestapi/richtext/index.md) in Domino REST API.
 
 ## Roles
 
