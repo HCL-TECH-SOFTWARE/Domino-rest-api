@@ -25,15 +25,18 @@ The procedure guides you on how to set up and use the Virtual Spreadsheet featur
         - To get a list of your views from your target schema, see [List available database views](../../references/usingwebui/schemaui.md#list-available-database-views).
         - You can set up the view schema however you wish as Virtual Spreadsheet respects the configured view schema.
 
-2. Based on your chosen view, set up a [`vsheet`](../../references/usingdominorestapi/modenames.md#vsheet) mode in the form that includes your chosen view. 
+2. Create a [`vsheet`](../../references/usingdominorestapi/modenames.md#vsheet) mode for each form that your view exposes by following the steps for [adding a mode](../../references/usingwebui/schemaui.md#add-a-mode).
 
-    You can use the `GET /design/{designType}` or `GET /design/{designType}/{designName}` endpoint to identify the form from the response. Make sure to set the value of the `designType` parameter to *views*. For example, if your view's `selectionFormula` states `Form = 'Customers'...` in the response, then you must add the `vsheet` mode to the `Customers` form.
+    If you aren't sure which form or forms are available in the view, you may use the view's selection formula. To do this:
 
-    To set up the `vsheet` mode, follow the steps for [adding a mode](../../references/usingwebui/schemaui.md#add-a-mode).
-    
-    <!--To do this, you can go into the Admin UI and going in the **Database Forms** section. Find the form in there and click the edit icon. Inside the form configuration page, click the `Add Mode` button and save a mode named `vsheet`.-->
+    - You can use the Domino Designer to open the view and look at its selection formula.
+    - You can use the `GET /design/{designType}/{designName}` endpoint by setting `designType` parameter to *views* and `designName` parameter to your view name, and then find the `selectionFormula` in the response. 
 
-    Once `vsheet` mode is created, it's recommended to add all the fields from the form in the `vsheet` mode. This way, you can make sure that each field is available for update using the Virtual Spreadsheet.
+        For example, if your view's selection formula states `SELECT Form = 'Customers' | Form = 'Leads'`, both the `Customers` form and the `Leads` form need to have the `vsheet` mode.  
+
+    If your selection formula doesn't contain a form name, determine which forms are available in the view and add the `vsheet` mode to those forms.
+
+    Once the `vsheet` mode is created, it's recommended to add all the fields from the form in the `vsheet` mode. This way, you can make sure that each field is available for update using the Virtual Spreadsheet.
 
 3. Form the MS Office Excel URI scheme you need to open the virtual spreadsheet using the following format:
 
@@ -41,10 +44,10 @@ The procedure guides you on how to set up and use the Virtual Spreadsheet featur
 
     | Property             | Description                                                                                                                             |
     |----------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-    | command name         | Describes the action that the application should perform.<br><br>ofv - to view the file attachment<br>ofe - to edit the file attachment |
+    | command name         | Describes the action that the application should perform.<br><br>ofv - to view the spreadsheet<br>ofe - to edit the spreadsheet |
     | DRAPI HTTPs hostname | Domino REST API HTTPS hostname.                                                                                                         |
     | dataSource           | Domino database where your view is in.                                                                                                  |
-    | view name            | A URL encoded name of your view.                                                                                                        |
+    | view name            | URL encoded name of your view.                                                                                                        |
 
     **Example link**:
     `ms-excel:ofe|u|https://whitepalace.projectkeep.io:8880/api/webdav-v1/view/sales/Customers.xlsx`
