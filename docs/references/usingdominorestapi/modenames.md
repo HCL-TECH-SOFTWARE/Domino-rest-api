@@ -18,7 +18,7 @@ The `odata` mode lets you define the data that comes through OData endpoints. Th
 
 Needed for `/api/v1/raw` endpoint. The endpoint `/api/v1/raw` will only return data when the mode `raw` exists for the form requested and the user has the permission, expressed in the @formula of the raw mode definition. Typically you want to restrict raw access to admin and support users.
 
-# vsheet
+## vsheet
 
 The [Virtual Spreadsheet feature](../../howto/production/virtualsheet.md) uses the `vsheet` mode to save the changes made on each view entry to its respective document. It's recommended that this mode contains all fields that the form has. The Virtual Spreadsheet feature won't be able to save any changes without this mode.
 
