@@ -284,32 +284,3 @@ which has the same result in the Keycloak **generated access token**.
 
 ![alt text](../../assets/images/keyresult.png)
 
-
-    7. Click the **Mappers** tab, and click **Configure a new mapper**.
-    
-          ![alt text](../../assets/images/keycmapper.png)
-          
-          Add two mappers for `aud` and for the distinguished name. Here, the name is mapped to the standard claim `sub`, but it can be mapped to a different name if desired.
-          
-          Mapper-1
-          
-          1. Click the **Audience** mapping in the list.
-          2. Fill in the name, for example `keepaudience`.
-          3. Fill in the *Included Custom Audience*, for example `Domino`.
-          4. Turn `off` the toggle on *Add to ID token*. 
-          5. Turn `on` toggle on *Add to access token*.
-          6. Click **Save**.
-          
-          ![alt text](../../assets/images/keymapper1.png)
-
-          Mapper-2
-          
-          1. Click the **User Attribute** mapping in the list.
-          2. Fill in the name, for example `keepsubject`.
-          3. Fill in the *User Attribute*.
-          4. Fill in the *Token Claim Name* with `sub`.
-          5. Choose `String`from the dropdown menu of *Claim JSON Type*.
-          6. Turn `on` toggle on *Add to access token*.
-          7. Click **Save**.
-          
-          ![alt text](../../assets/images/keymapper2.png)    
