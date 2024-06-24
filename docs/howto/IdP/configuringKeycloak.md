@@ -21,7 +21,7 @@ Listing only relevant concepts:
 
 ## Procedure
 
-You will create a realm, a user, client scopes, and  client.
+You creates a realm, a user, client scopes, and client.
 
 1. Login to Keycloak. 
 2. Click the `Master` dropdown and click **Create Realm**. 
@@ -178,8 +178,7 @@ You will create a realm, a user, client scopes, and  client.
          ![alt text](../../assets/images/keyevaluate.png)
 
 
-          
-
+      
 ## SPA applications
 
 An SPA (Single Page App) or a mobile client can't keep a client secret. For those, the use of Proof Key for Code Exchange (PKCE) (defined in [RFC 7636](https://tools.ietf.org/html/rfc7636)) is recommended (read [this intro](https://auth0.com/docs/flows/authorization-code-flow-with-proof-key-for-code-exchange-pkce) for details). The only difference in Keycloak is to toggle `off` the **Client Authentication**.
