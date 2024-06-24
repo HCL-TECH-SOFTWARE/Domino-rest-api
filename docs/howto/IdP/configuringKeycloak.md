@@ -1,10 +1,8 @@
 # Configure Keycloak
 
---8<-- "keepmngtURLcaution1.md"
-
 [Keycloak](https://www.keycloak.org/) is an Open Source Identity and Access Management sponsored by [RedHat](https://www.redhat.com/en).
 
-Keycloak can be used to produce JWT Access Token for Domino REST API. Keycloak has many features like in its default configuration, Use Federation, Identity Brokering or Social Login. Those are topics not covered here, you want to consult a [Keycloak Tutorial](https://duckduckgo.com/?q=keycloak+tutorial&ia=web) or the [Keycloak documentation](https://www.keycloak.org/documentation) to learn more. This page focuses on the settings required for Domino REST API.
+Keycloak can be used to produce JWT Access Token for Domino REST API. Keycloak has many features like default configuration, use federation, identity brokering or social login. Those are topics not covered here, you want to consult a [Keycloak Tutorial](https://duckduckgo.com/?q=keycloak+tutorial&ia=web) or the [Keycloak documentation](https://www.keycloak.org/documentation) to learn more. This page focuses on the settings required for Domino REST API.
 
 ## About this task
 
@@ -21,170 +19,166 @@ Listing only relevant concepts:
 - **Client Scopes**: Attributes and properties available and/or assigned to client entries.
 - **Mapper**: Configuration entry to determine what information is available in a client scope.
 
-Not listed: Users
-
-You will create a realm, an user, two clients (one for a SPA, one for a server based app), a client scope for shared settings and a few mappers.
-
 ## Procedure
+
+You will create a realm, a user, client scopes, and  client.
 
 1. Login to Keycloak. 
 2. Click the `Master` dropdown and click **Create Realm**. 
 
-    ![alt text](../../assets/images/keycloak1.png)
+      ![alt text](../../assets/images/keyrealm.png)
   
     a. Fill in the **Realm Name**. For example **Ameca**.
 
-      ![alt text](../../assets/images/keyname.png)
-    
     b. Click **Create**.
+ 
 
+      ![alt text](../../assets/images/keyrealmname.png)
+    
 3. Click **Realm settings**. 
 
-    a. Fill in the minimum information. Always check your **Realm name**.
-
-      ![alt text](../../assets/images/keyrealmset.png)
+    a. Fill in the fields. Mandatory fields are those fields with red asterisk (<span style="color: red;">*</span>).
 
     b. Click **Save**.
+    
+      ![alt text](../../assets/images/keyrealmgen.png)
+
+    c. Go and click **User Profile** tab.
+    d. Click **Create Attribute**.
+          
+          1. Turn `on` the *Required* field.
+          2. Check the *Who can view** option on *Permission*.
+          3. Click **Create**. 
+
+              ![alt text](../../assets/images/keyattr.png)
+
+          The attributes has been added to the list of user profile attribute.
+
+              ![alt text](../../assets/images/keyuserproattr.png)
 
 4. Click **Users**.
-
-    ![alt text](../../assets/images/keyusers.png)
     
     1. Click **Create a new user**. In a production environment you probably would connect to an existing LDAP or Active Directory server. 
 
-    2. Fill in the minimum information.
+          ![alt text](../../assets/images/keyusers.png)
 
-          ![alt text](../../assets/images/keyuser1.png)
+    2. Fill in the fields. Mandatory fields are those fields with red asterisk (<span style="color: red;">*</span>). You can see here the user profile **attribute**'s tab you created on the **Realm Settings**.
+
 
     3. Click **Create**. The user has been created.
 
           ![alt text](../../assets/images/keyuserdetail.png)
 
-    4. Click the **Attributes** tab.
+5. Create client scopes.
 
-        ![alt text](../../assets/images/keyuserdetail.png)
+    You create a client scope named `demo` which contains the settings that are common to all clients (a.k.a apps) accessing Domino Rest API.
+
+    ![alt text](../../assets/images/keynewscope1.png)
     
-        **Note:** To make it compatible with Domino and Domino REST API, you need the X500 style **distinguished name** of the user. This name can be in either "LDAP" format (comma-delimited) or "Domino" format (slash-delimited).
-              
-          1. Fill in the `Key` field. For example,`dominoDN`. In your environment it might have a different name, which you later need to use in the mapper.
-
-          2. Fill in the `value` field.
-
-             ![alt text](../../assets/images/keyuserattr.png)  
-
-5. Create client scope. 
-
-    ![alt text](../../assets/images/keyclientscope.png)
-
-    1. Fill in the name. Named it as `keepcommon`, which will contain the settings that are common to all clients (a.k.a apps) accessing Domino REST API. 
+    1. Fill in the client scope name. Named it as `demo`.
     2. Enter *Description*.
-    3. Change the *Type* field into `Default`.
-    4. Turn `On` the toggle on *Display on Consent screen*. 
-    5. Turn `Off` toggle on *Include in token scope*.
-    6. Click *Save*. Once you save, there are two additonal tab that's been added.
+    3. Turn `On` the toggle on *Display on Consent screen*. 
+    4. Turn `Off` toggle on *Include in token scope*.
+    7. Click *Save*.
     
-         ![alt text](../../assets/images/keyclientscopename.png)
+        ![alt text](../../assets/images/keyscopename1.png)
 
-    7. Click the **Mappers** tab, and click **Configure a new mapper**.
+    The configuration so far will identify a user presenting the access token to Domino REST API, but not yet provide any access. You need to specify what scopes this application will be allowed to access. You can use one or more (lowercase) scopes or some of the special scopes MAIL, $DATA or $DECRYPT.  Multiple scopes are separated using a space.
+
+    ![alt text](../../assets/images/keynewscope2.png)
+
+    1. Fill in the client scope name. Named it as `$DATA`.
+    2. Enter *Description*.
+    3. Turn `On` the toggle on *Display on Consent screen*. 
+    4. Turn `Off` toggle on *Include in token scope*.
+    7. Click *Save*.
     
-          ![alt text](../../assets/images/keycmapper.png)
-          
-          Add two mappers for `aud` and for the distinguished name. Here, the name is mapped to the standard claim `sub`, but it can be mapped to a different name if desired.
-          
-          Mapper-1
-          
-          1. Click the **Audience** mapping in the list.
-          2. Fill in the name, for example `keep-audience`.
-          3. Fill in the *Included Custom Audience* with `Domino`.
+        ![alt text](../../assets/images/keyscopename2.png) 
+
+6. Click **Client** and click **Create client**.    
+
+    ![alt text](../../assets/images/keycreateclient.png)
+
+    1. Fill in *Client type* and *Client ID*, for example, **thespian** is your client and Click **Next**. 
+
+          ![alt text](../../assets/images/keyclientid.png)
+
+    2. On the **Capability config**, turn `off` the *Client Authentication* and click **Next**. When it's ON, the OIDC type is set to confidential access type. When it's OFF, it's set to public access type. 
+    
+          ![alt text](../../assets/images/keyconfig.png)
+
+    4. On **Login Settings**, no need to indicate the *Valid redirect URI's* and click **Save**.
+    
+          ![alt text](../../assets/images/keyURI.png)
+
+7. On the saved client's ID, for example **thespian**, click **Clients scopes** tab.
+
+    1. Click the **thespian-dedicated**. This is the client's dedicated scope once the client is created.
+
+    !![alt text](../../assets/images/keydedicated.png)
+
+    2. Click **Configure new mapper** or if there are existing mapper, click **Add mappers** &rarr; **by Configuration**. You need to add few mappers on your dedicated scope.
+
+      In this example, you need to have 2 **Audience** mappers and 1 **User Atrribute**.
+
+      ![alt text](../../assets/images/keynewmapper.png)
+
+      Mapper-1 as **Audience** mapper
+
+          1. Click **Audience** mapping in the list.
+          2. Fill in the name, for example `Domino`.
+          3. Fill in the *Included Custom Audience*, for example `Domino`.
           4. Turn `off` the toggle on *Add to ID token*. 
           5. Turn `on` toggle on *Add to access token*.
           6. Click **Save**.
           
           ![alt text](../../assets/images/keymapper1.png)
 
-          Mapper-2
+      Mapper-2 as **Audience** mapper
+
+          1. Click **Audience** mapping in the list.
+          2. Fill in the name, for example `dummy`.
+          3. Fill in the *Included Custom Audience*, for example `https://dummy.restapiexample.com/`.
+          4. Turn `off` the toggle on *Add to ID token*. 
+          5. Turn `on` toggle on *Add to access token*.
+          6. Click **Save**.
           
+          ![alt text](../../assets/images/keymapper2.png)  
+
+      Mapper-3 as **User Attribute** mapper      
+
           1. Click the **User Attribute** mapping in the list.
-          2. Fill in the name, for example `keep-subject`.
-          3. Fill in the *User Attribute*.
-          4. Fill in the *Token Claim Name* with `sub`.
-          5. Choose `string`from the dropdown menu of *Claim JSON Type*.
+          2. Fill in the mapper name, for example `DominoNameAttr`.
+          3. Fill in the *User Attribute*, as `CN`.
+          4. Fill in the *Token Claim Name* as `CN`.
+          5. Choose `String`from the dropdown menu of *Claim JSON Type*.
           6. Turn `on` toggle on *Add to access token*.
           7. Click **Save**.
           
-          ![alt text](../../assets/images/keymapper2.png)    
+          ![alt text](../../assets/images/keymapper3.png)         
 
-6. Click **Client** and click **Create client**.    
+    3. Click the **Client details**.
 
-    ![alt text](../../assets/images/keycreateclient.png)
+          ![alt text](../../assets/images/keycdetails.png)
 
-    The example below is for an application server that can present a client id and a client secret. An example for a SPA (that can't keep a secret) follows further down.
+       The **Assign Type** of all scopes must be **Optional** except your `email` scope.
+          
+    4. Click the **Add client scope**. 
 
-    1. Fill in *Client type* and *Client ID*, and click **Next**. 
+          ![alt text](../../assets/images/keyaddscopes.png)   
     
-          ![alt text](../../assets/images/keyclientid.png)
+    5. Check the name of the client scopes you would like to add on your **thespian** client scope, for example `demo` and `$DATA`, and click **Add** and choose **Default** option.
 
-    2. Turn `on` toggle for *Client authentication*.
-    
-          ![alt text](../../assets/images/keycauthen.png)       
-    
-    3. Click **Save**. When you save it, this produces more tabs about your **client**.
+          ![alt text](../../assets/images/keycommon.png)
 
-    4. On **Settings tab** &rarr; *Access setting* tab, fill in the *Valid redirect URIs* with URI of your current application and click *Save*.
-    
-          ![alt text](../../assets/images/keyURI.png)
+    6. Click **Client Scope** &rarr; **Evaluate** tab.
+    7. Fill in *Users*.
+    8. Click **Generated access token**.
 
-## Application specific scopes
-
-The configuration so far will identify a user presenting the access token to Domino REST API, but not yet provide any access. You need to specify what scopes this application will be allowed to access. You can use any of the global scopes `$MAIL`, `$DATA` or `$DECRYPT` or, preferably, a lowercase database alias. Multiple scopes are separated using a space.
-<!-- prettier-ignore -->
-!!! note
-    It's best practice to give an external application as little as possible access so it can function. So think twice before allowing any of the global scopes.
-
-1. Click the **Client Scopes** and click **Create client scope**. 
-
-      ![alt text](../../assets/images/keyclientscopes1.png)
- 
-      1. Fill in the *Name* of the client scope. For example **App-Scope**.
-      2. Choose the **Default** as *Type*.
-      3. Click **Save**. You can create more global scopes on your realm's client scopes.
-      
-          ![alt text](../../assets/images/keyclientscopes2.png)
-
-      4. Go to the **Mappers** tab of **Apps-Scope** client scope.
-
-      5. Click **Add Mapper** &rarr; **by Configuration**.
-      6. Select **Hardcoded Claim**.
-      7. Fill in the *Name*.
-      8. Fill in the *Token Claim Name*. For example, **ClaimName.value**.
-      9. Fill in the *Claim value* with the scopes or global scopes. Multiple scopes are separated using a space.
-      10. Click **Save**.
-
-      ![alt text](../../assets/images/keymapper.png)
-
-6. Go and click  **Clients**.
-7. Select your *Client ID*. For example, **SpecialKeepDemo**.
-
-      ![alt text](../../assets/images/keyclientsco.png)
-
-8. Click the **Client scopes** tab and click **Add client scope**.
-
-      ![alt text](../../assets/images/keyaddcscopes.png)
-
-      1. Check **App-Scope** client scope.
-      2. Click **Add** and choose **Default**.
-      
-          ![alt text](../../assets/images/keyappscope.png)
-            
-          The **App-scope** is now on the list of **SpecialKeepDemo** client scopes.
-      
-      3. Click **Client scopes** tab &rarr; **Evaluate** tab.
-      4. . Fill in the username of the *User*. 
-      5. Go and click **Generated access token**.
-
-          ![alt text](../../assets/images/keyaccesstoken.png) 
+         ![alt text](../../assets/images/keyevaluate.png)
 
 
+          
 
 ## SPA applications
 
@@ -205,7 +199,7 @@ You can find the full explanation [here](./configuringIdentityProvider.md). For 
 ```json
 {
   "jwt": {
-    "Trantor": {
+    "Ameca": {
       "providerUrl": "https://ameca.keycloak.yours/auth/realms/Ameca"    
     }
   }
@@ -217,7 +211,7 @@ where:
 | key         | explanation                                                                                                                   |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | jwt         | Indicates that the config belongs to JWT                                                                                      |
-| Trantor     | The sample Keycloak realm name. It must be unique in the jwt key. Replace it with your chosen realm                          |
+| Ameca     | The sample Keycloak realm name. It must be unique in the jwt key. Replace it with your chosen realm                          |
 | providerUrl | Points to Keycloak's endpoint with the public key. Note that the last segment is the realm name. The string is case sensitive |
 
 !!! note
@@ -289,3 +283,33 @@ PAYLOAD: DATA
 which has the same result in the Keycloak **generated access token**.
 
 ![alt text](../../assets/images/keyresult.png)
+
+
+    7. Click the **Mappers** tab, and click **Configure a new mapper**.
+    
+          ![alt text](../../assets/images/keycmapper.png)
+          
+          Add two mappers for `aud` and for the distinguished name. Here, the name is mapped to the standard claim `sub`, but it can be mapped to a different name if desired.
+          
+          Mapper-1
+          
+          1. Click the **Audience** mapping in the list.
+          2. Fill in the name, for example `keepaudience`.
+          3. Fill in the *Included Custom Audience*, for example `Domino`.
+          4. Turn `off` the toggle on *Add to ID token*. 
+          5. Turn `on` toggle on *Add to access token*.
+          6. Click **Save**.
+          
+          ![alt text](../../assets/images/keymapper1.png)
+
+          Mapper-2
+          
+          1. Click the **User Attribute** mapping in the list.
+          2. Fill in the name, for example `keepsubject`.
+          3. Fill in the *User Attribute*.
+          4. Fill in the *Token Claim Name* with `sub`.
+          5. Choose `String`from the dropdown menu of *Claim JSON Type*.
+          6. Turn `on` toggle on *Add to access token*.
+          7. Click **Save**.
+          
+          ![alt text](../../assets/images/keymapper2.png)    
