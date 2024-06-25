@@ -47,7 +47,7 @@ You creates a realm, a user, client scopes, and client.
     d. Click **Create Attribute**.
           
       1. Turn `on` the *Required* field.
-      2. Check the *Who can view** option on *Permission*.
+      2. Check the *Who can view* option on *Permission*.
       3. Click **Create**. 
 
       ![alt text](../../assets/images/keyattr.png)
@@ -62,7 +62,7 @@ You creates a realm, a user, client scopes, and client.
     
         ![alt text](../../assets/images/keyusers.png)
 
-    2. Fill in the fields. Mandatory fields are those fields with red asterisk (*). You can see here the user profile **attribute** you created on the **Realm Settings**.
+    2. Fill in the fields. Mandatory fields are those fields with red asterisk (`*`). You can see here the user profile **attribute** you created on the **Realm Settings**.
 
     3. Click **Create**. The user has been created.
     
@@ -92,7 +92,7 @@ You creates a realm, a user, client scopes, and client.
     2. Enter *Description*.
     3. Turn `On` the toggle on *Display on Consent screen*. 
     4. Turn `Off` toggle on *Include in token scope*.
-    7. Click *Save*.
+    5. Click *Save*.
     
         ![alt text](../../assets/images/keyscopename2.png) 
 
@@ -116,67 +116,67 @@ You creates a realm, a user, client scopes, and client.
 
     1. Click the **thespian-dedicated**. This is the client's dedicated scope once the client is created.
 
-    !![alt text](../../assets/images/keydedicated.png)
+        ![alt text](../../assets/images/keydedicated.png)
 
     2. Click **Configure new mapper** or if there are existing mapper, click **Add mappers** &rarr; **by Configuration**. You need to add few mappers on your dedicated scope.
-
-      In this example, you need to have 2 **Audience** mappers and 1 **User Atrribute**.
-
-      ![alt text](../../assets/images/keynewmapper.png)
-
-      Mapper-1 as **Audience** mapper
-
-          1. Click **Audience** mapping in the list.
-          2. Fill in the name, for example `Domino`.
-          3. Fill in the *Included Custom Audience*, for example `Domino`.
-          4. Turn `off` the toggle on *Add to ID token*. 
-          5. Turn `on` toggle on *Add to access token*.
-          6. Click **Save**.
-          
-          ![alt text](../../assets/images/keymapper1.png)
-
-      Mapper-2 as **Audience** mapper
-
-          1. Click **Audience** mapping in the list.
-          2. Fill in the name, for example `dummy`.
-          3. Fill in the *Included Custom Audience*, for example `https://dummy.restapiexample.com/`.
-          4. Turn `off` the toggle on *Add to ID token*. 
-          5. Turn `on` toggle on *Add to access token*.
-          6. Click **Save**.
-          
-          ![alt text](../../assets/images/keymapper2.png)  
-
-      Mapper-3 as **User Attribute** mapper      
-
-          1. Click the **User Attribute** mapping in the list.
-          2. Fill in the mapper name, for example `DominoNameAttr`.
-          3. Fill in the *User Attribute*, as `CN`.
-          4. Fill in the *Token Claim Name* as `CN`.
-          5. Choose `String`from the dropdown menu of *Claim JSON Type*.
-          6. Turn `on` toggle on *Add to access token*.
-          7. Click **Save**.
-          
-          ![alt text](../../assets/images/keymapper3.png)         
-
-    3. Click the **Client details**.
-
-          ![alt text](../../assets/images/keycdetails.png)
-
-       The **Assign Type** of all scopes must be **Optional** except your `email` scope.
-          
-    4. Click the **Add client scope**. 
-
-          ![alt text](../../assets/images/keyaddscopes.png)   
     
-    5. Check the name of the client scopes you would like to add on your **thespian** client scope, for example `demo` and `$DATA`, and click **Add** and choose **Default** option.
+        In this example, you need to have 2 **Audience** mappers and 1 **User Atrribute**.
+        
+        ![alt text](../../assets/images/keynewmapper.png)
 
-          ![alt text](../../assets/images/keycommon.png)
+        Mapper-1 as **Audience** mapper
+        
+        1. Click **Audience** mapping in the list.
+        2. Fill in the name, for example `Domino`.
+        3. Fill in the *Included Custom Audience*, for example `Domino`.
+        4. Turn `off` the toggle on *Add to ID token*. 
+        5. Turn `on` toggle on *Add to access token*.
+        6. Click **Save**.
+        
+        ![alt text](../../assets/images/keymapper1.png)
+        
+        Mapper-2 as **Audience** mapper
 
-    6. Click **Client Scope** &rarr; **Evaluate** tab.
-    7. Fill in *Users*.
-    8. Click **Generated access token**.
+        1. Click **Audience** mapping in the list.
+        2. Fill in the name, for example `dummy`.
+        3. Fill in the *Included Custom Audience*, for example `https://dummy.restapiexample.com/`.
+        4. Turn `off` the toggle on *Add to ID token*. 
+        5. Turn `on` toggle on *Add to access token*.
+        6. Click **Save**.
+          
+        ![alt text](../../assets/images/keymapper2.png)  
+        
+        Mapper-3 as **User Attribute** mapper
+        
+        1. Click the **User Attribute** mapping in the list.
+        2. Fill in the mapper name, for example `DominoNameAttr`.
+        3. Fill in the *User Attribute*, as `CN`.
+        4. Fill in the *Token Claim Name* as `CN`.
+        5. Choose `String`from the dropdown menu of *Claim JSON Type*.
+        6. Turn `on` toggle on *Add to access token*.
+        7. Click **Save**.
+        
+        ![alt text](../../assets/images/keymapper3.png)         
 
-         ![alt text](../../assets/images/keyevaluate.png)
+8. Click the **Client details**.
+
+    ![alt text](../../assets/images/keycdetails.png)
+    
+    The **Assign Type** of all scopes must be **Optional** except your `email` scope.
+          
+    1. Click the **Add client scope**. 
+    
+        ![alt text](../../assets/images/keyaddscopes.png)   
+    
+    2. Check the name of the client scopes you would like to add on your **thespian** client scope, for example `demo` and `$DATA`, and click **Add** and choose **Default** option.
+    
+        ![alt text](../../assets/images/keycommon.png)
+
+    3. Click **Client Scope** &rarr; **Evaluate** tab.
+    4. Fill in *Users*.
+    5. Click **Generated access token**.
+    
+        ![alt text](../../assets/images/keyevaluate.png)
 
 
       
