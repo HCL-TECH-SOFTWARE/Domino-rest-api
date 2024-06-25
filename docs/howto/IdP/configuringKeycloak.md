@@ -108,7 +108,7 @@ You creates a realm, a user, client scopes, and client.
     
           ![alt text](../../assets/images/keyconfig.png)
 
-    3. On **Login Settings**, no need to indicate the *Valid redirect URI's* and click **Save**.
+    3. On **Login Settings**, and click **Save**.
     
           ![alt text](../../assets/images/keyURI.png)
 
