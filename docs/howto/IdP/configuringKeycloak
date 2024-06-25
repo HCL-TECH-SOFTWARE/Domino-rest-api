@@ -68,9 +68,9 @@ In this example, you willl learn and create a realm, a user, client scopes, and 
     
         ![alt text](../../assets/images/keyuserdetail.png)
 
-5. Create client scopes.
+5. Go and click **Client scopes**.
 
-    Create a client scope named `demo` which contains the settings that are common to all clients (a.k.a apps) accessing Domino Rest API.
+    Click **Create client scope**. Create a client scope named `demo` which contains the settings that are common to all clients (a.k.a apps) accessing Domino Rest API.
 
     ![alt text](../../assets/images/keynewscope1.png)
     
@@ -84,7 +84,7 @@ In this example, you willl learn and create a realm, a user, client scopes, and 
 
     The configuration so far will identify a user presenting the access token to Domino REST API, but not yet provide any access. You need to specify what scopes this application will be allowed to access. You can use one or more (lowercase) scopes or some of the special scopes MAIL, $DATA or $DECRYPT.  Multiple scopes are separated using a space.
 
-    Create another specific client scope, like **$DATA**.
+    Click **Create client scope**. Create another specific client scope, like **$DATA**.
 
     ![alt text](../../assets/images/keynewscope2.png)
 
