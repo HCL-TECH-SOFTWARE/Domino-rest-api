@@ -158,11 +158,13 @@ In this example, you willl learn and create a realm, a user, client scopes, and 
         
         ![alt text](../../assets/images/keymapper3.png)         
 
-8. Click the **Client details**.
+8. Click the **Client details**. 
 
     ![alt text](../../assets/images/keycdetails.png)
-    
-    The **Assign Type** of all scopes must be **Optional** except your `email` scope.
+
+    1. Change **Assign Type** of all scopes to **Optional** except your `email` scope.
+
+        ![alt text](../../assets/images/keyoptional.png)
           
     1. Click the **Add client scope**. 
     
