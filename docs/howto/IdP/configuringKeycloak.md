@@ -6,7 +6,7 @@ Keycloak can be used to produce JWT Access Token for Domino REST API. Keycloak h
 
 ## About this task
 
-This section describes key concepts and provides the steps required to configure Keycloak successfully for Domino REST API (it can be used for classic Domino SAML as well).
+This section describes key concepts and provides the steps required to configure Keycloak successfully for Domino REST API.
 
 ## Keycloak concepts
 
@@ -21,7 +21,7 @@ Listing only relevant concepts:
 
 ## Procedure
 
-You creates a realm, a user, client scopes, and client.
+In this example, you willl learn and create a realm, a user, client scopes, and client inside the Keycloak app.
 
 1. Login to Keycloak. 
 2. Click the `Master` dropdown and click **Create Realm**. 
@@ -244,11 +244,7 @@ The result must have an access token, which must be tested int [jwt](https://jwt
 
 **JWT**
 
-You can use the [official JWT site](https://jwt.io/) to decode and inspect the encoded token.
-
-```bash
-eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJkbVlLaWIzQnJodnJPVnVRc2ljcXdPVzcwX2N2MDJ1ekZFV091WC1uN3ZVIn0.eyJleHAiOjE3MTcxNzQ4MzQsImlhdCI6MTcxNzE3NDUzNCwianRpIjoiN2FmYTMxNmMtOGFjOC00ODMzLTkwN2YtMjUwNDM3MTY3ODNiIiwiaXNzIjoiaHR0cHM6Ly9kaWdpLXFzLWtleWNsb2FrLnFzLmhjbGxhYnMubmV0L3JlYWxtcy9BbWVjYSIsImF1ZCI6IkRvbWlubyIsInN1YiI6ImNkNGVhYTk4LTY3N2MtNGM2Mi1iZTU0LTdlOTBiZWUxMjQ0NyIsInR5cCI6IkJlYXJlciIsImF6cCI6IlNwZWNpYWxLZWVwRGVtbyIsInNlc3Npb25fc3RhdGUiOiI3MDA0Y2M2Yy1hMThkLTQ3YzUtODJiNC0wOGJlNjhiNTdiM2MiLCJzY29wZSI6IkFwcC1TY29wZSBvZmZsaW5lX2FjY2VzcyIsInNpZCI6IjcwMDRjYzZjLWExOGQtNDdjNS04MmI0LTA4YmU2OGI1N2IzYyIsIkNsYWltTmFtZS52YWx1ZSI6ImRlbW8gJERBVEEifQ.hRjB9EzKXNrWI8h1rQS8_xkPfrl99BWTyE5xBf6V-wVUKNIBsCC8wP1aFlPHQefciuUVM13XKIE6shC9LIBRiAQE4crKgZlxWL8tVZ4I4wUr2SqYwbZ5z9okMn6FCuDdyNRDbC8HXpFas6fcfYd3JU6k-ea8YmhdndW-mQ98kJbOL98H30ATIbYJh6u1wqed989E4aSToghLNZmtMChMlNd921QNdpr5_r6ZSLk4A7nOfjtz9fl0lXpxZ83NBiM9Y5-TWgq1wvNbbP9hLq9_Rf5CDX_KLb6ocQMvcNvdh_w4cGQJ7q5wzu4OmiF_tllU8q5A4wGQOGGMuZjWUV-QOw
-```
+You can use the [official JWT site](https://jwt.io/) to decode and inspect the encoded token. Copy the access token from Postman and paste it inside the **Encoded** box.
 
 When decoded, this translates to:
 
@@ -258,25 +254,28 @@ HEADER: ALGORITHM & TOKEN TYPE
 {
   "alg": "RS256",
   "typ": "JWT",
-  "kid": "dmYKib3BrhvrOVuQsicqwOW70_cv02uzFEWOuX-n7vU"
+  "kid": "dtzYxf0a22BPo_M4A72PAJS8cAHUjFDFGKVqmzpu3po"
 }
 ```
 
 PAYLOAD: DATA
 ```json
 {
-  "exp": 1717174834,
-  "iat": 1717174534,
-  "jti": "7afa316c-8ac8-4833-907f-25043716783b",
-  "iss": "https://digi-qs-keycloak.qs.hcllabs.net/realms/Ameca",
-  "aud": "Domino",
-  "sub": "cd4eaa98-677c-4c62-be54-7e90bee12447",
+  "exp": 1719281929,
+  "iat": 1719281629,
+  "jti": "e708dfd3-8218-450b-a98e-00e23af649ff",
+  "iss": "http://localhost:8080/realms/Ameca",
+  "aud": [
+    "Domino",
+    "https://dummy.restapiexample.com/"
+  ],
   "typ": "Bearer",
-  "azp": "SpecialKeepDemo",
-  "session_state": "7004cc6c-a18d-47c5-82b4-08be68b57b3c",
-  "scope": "App-Scope offline_access",
-  "sid": "7004cc6c-a18d-47c5-82b4-08be68b57b3c",
-  "ClaimName.value": "demo $DATA"
+  "azp": "thespian",
+  "sid": "1dbc900a-c490-47ef-a242-67be3a1aa250",
+  "scope": "$DATA email demo",
+  "email_verified": true,
+  "CN": "CN=Harry Chen/O=Ameca",
+  "email": "harrychen@ameca.org"
 }
 ```
 
