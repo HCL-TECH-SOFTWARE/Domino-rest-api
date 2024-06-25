@@ -46,32 +46,31 @@ You creates a realm, a user, client scopes, and client.
     c. Go and click **User Profile** tab.
     d. Click **Create Attribute**.
           
-          1. Turn `on` the *Required* field.
-          2. Check the *Who can view** option on *Permission*.
-          3. Click **Create**. 
+      1. Turn `on` the *Required* field.
+      2. Check the *Who can view** option on *Permission*.
+      3. Click **Create**. 
 
-              ![alt text](../../assets/images/keyattr.png)
+      ![alt text](../../assets/images/keyattr.png)
 
-          The attributes has been added to the list of user profile attribute.
+      The attributes has been added to the list of user profile attribute.
 
-              ![alt text](../../assets/images/keyuserproattr.png)
+      ![alt text](../../assets/images/keyuserproattr.png)
 
 4. Click **Users**.
     
     1. Click **Create a new user**. In a production environment you probably would connect to an existing LDAP or Active Directory server. 
+    
+        ![alt text](../../assets/images/keyusers.png)
 
-          ![alt text](../../assets/images/keyusers.png)
-
-    2. Fill in the fields. Mandatory fields are those fields with red asterisk (<span style="color: red;">*</span>). You can see here the user profile **attribute**'s tab you created on the **Realm Settings**.
-
+    2. Fill in the fields. Mandatory fields are those fields with red asterisk (*). You can see here the user profile **attribute** you created on the **Realm Settings**.
 
     3. Click **Create**. The user has been created.
-
-          ![alt text](../../assets/images/keyuserdetail.png)
+    
+        ![alt text](../../assets/images/keyuserdetail.png)
 
 5. Create client scopes.
 
-    You create a client scope named `demo` which contains the settings that are common to all clients (a.k.a apps) accessing Domino Rest API.
+    Create a client scope named `demo` which contains the settings that are common to all clients (a.k.a apps) accessing Domino Rest API.
 
     ![alt text](../../assets/images/keynewscope1.png)
     
@@ -79,11 +78,13 @@ You creates a realm, a user, client scopes, and client.
     2. Enter *Description*.
     3. Turn `On` the toggle on *Display on Consent screen*. 
     4. Turn `Off` toggle on *Include in token scope*.
-    7. Click *Save*.
+    5. Click *Save*.
     
         ![alt text](../../assets/images/keyscopename1.png)
 
     The configuration so far will identify a user presenting the access token to Domino REST API, but not yet provide any access. You need to specify what scopes this application will be allowed to access. You can use one or more (lowercase) scopes or some of the special scopes MAIL, $DATA or $DECRYPT.  Multiple scopes are separated using a space.
+
+    Create another specific client scope, like **$DATA**.
 
     ![alt text](../../assets/images/keynewscope2.png)
 
@@ -95,11 +96,11 @@ You creates a realm, a user, client scopes, and client.
     
         ![alt text](../../assets/images/keyscopename2.png) 
 
-6. Click **Client** and click **Create client**.    
+6. Go to **Client** and click **Create client**.    
 
     ![alt text](../../assets/images/keycreateclient.png)
 
-    1. Fill in *Client type* and *Client ID*, for example, **thespian** is your client and Click **Next**. 
+    1. Fill in *Client type* and *Client ID*, for example, **thespian** and Click **Next**. 
 
           ![alt text](../../assets/images/keyclientid.png)
 
@@ -107,7 +108,7 @@ You creates a realm, a user, client scopes, and client.
     
           ![alt text](../../assets/images/keyconfig.png)
 
-    4. On **Login Settings**, no need to indicate the *Valid redirect URI's* and click **Save**.
+    3. On **Login Settings**, no need to indicate the *Valid redirect URI's* and click **Save**.
     
           ![alt text](../../assets/images/keyURI.png)
 
