@@ -230,7 +230,7 @@ where:
 
 #### Procedure
 
-1. Modify the token endpoint of via GET with this `{{server}}/realms/{{realm}}/protocol/openid-connect/token`
+1. Modify the token endpoint of via POST with this `{{server}}/realms/{{realm}}/protocol/openid-connect/token`
       
       - server: Your Keycloak server.
       - realm: Your realm name, for example Ameca.
