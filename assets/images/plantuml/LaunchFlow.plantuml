@@ -1,0 +1,28 @@
+@startuml LaunchFlow
+start
+group static boot
+:static settings;
+:Launch.runVerticle;
+:Launch.loadConfig;
+floating note: Overlay composition\n of settings
+:Launch.runVerticleWithConfig;
+end group
+group verticle.start(startpromise)
+:(validateStartupEnvironment);
+floating note: DOMINO DATA DIRECTORY!
+:ManagementServer 8889;
+:MetricsServer 8890;
+floating note: TLS from config
+:Template extraction;
+floating note: KeepConfig, KeepAgents
+:Domino heartbeat session;
+:Initialize JWT manager;
+:Load API list;
+floating note:OpenAPI specifications\nloaded here core, admin, pim ...
+:Database service verticle;
+:Load configured verticles;
+floating note: HTTP, Database (mulitple)\nCalls start  & listenerStart\n-> Threading out
+:FlightControllers;
+end group
+stop
+@enduml

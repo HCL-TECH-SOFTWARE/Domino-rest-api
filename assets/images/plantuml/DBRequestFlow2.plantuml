@@ -1,0 +1,27 @@
+@startuml DBRequestFlow2
+start
+card subscribe {
+    : hasUserRequiredScopes;
+    : getActualDatabaseName;
+}
+card  continueWithActualDbFileName {
+    : preflight;
+    note: async execution without DominoClient
+}
+card continueAfterCompletedPreflight {
+    : Metrics-Timer;
+    #Orange : DominoThreadContext;
+    #Orange : KeeepJnxSession;
+}
+
+card #lemonchiffon executeDominoOperation {
+    : secondaryDB;
+    note: Used in PIM for Calendars
+    #Orange : Access control check;
+    #Orange : DbRequestParameters;
+    #Orange : process;
+    note: This where the\nactual processing happens\nwith the DbRequestParameters
+    #Red : ... emit(results);
+}
+end
+@enduml

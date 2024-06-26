@@ -1,0 +1,27 @@
+@startuml FactorySetup
+
+package domino-jnx {
+    interface DominoClient
+    interface DominoProcess
+}
+
+package keep-core {
+    enum KeepFactorySource
+    interface KeepFactory
+    KeepFactorySource - KeepFactory
+}
+
+note top of KeepFactorySource : This singleton contains\nthe actual KeepFactory in use
+
+note top of KeepFactory: Interface with complete\nimplementation of all methods
+
+package keep-core-test {
+    class ModuleKeepFactory implements KeepFactory
+    class MockKeepFactory implements KeepFactory
+    class ForDbTestsKeepFactory implements KeepFactory
+}
+
+KeepFactory - DominoClient
+KeepFactory - DominoProcess
+
+@enduml
