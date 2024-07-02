@@ -41,12 +41,6 @@ Note: The screenshots were captured using the Keycloak version 25.0.
 
     a. Fill in the fields applicable to your project. Mandatory fields are those fields with red asterisk (<span style="color: red;">*</span>).
 
-      For example:
-
-       Display name: Humanoid Robots
-       
-       HTML Display name: < h1 >Humanoid Robots < /h >
-
     b. Click **Save**.
     
       ![alt text](../../assets/images/keyrealmgen.png)
