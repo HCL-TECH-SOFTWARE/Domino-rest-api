@@ -1,6 +1,6 @@
 # Configure Keycloak
 
-[Keycloak](https://www.keycloak.org/) is an Open Source Identity and Access Management sponsored by [RedHat](https://www.redhat.com/en).
+[Keycloak](https://www.keycloak.org/) is an Open Source Identity and Access Management solution sponsored by [RedHat](https://www.redhat.com/en).
 
 Keycloak can be used to produce JWT Access Token for Domino REST API. Keycloak has many features like default configuration, use federation, identity brokering or social login. Those are topics not covered here, you want to consult a [Keycloak Tutorial](https://duckduckgo.com/?q=keycloak+tutorial&ia=web) or the [Keycloak documentation](https://www.keycloak.org/documentation) to learn more. This page focuses on the settings required for Domino REST API.
 
@@ -10,7 +10,7 @@ This section describes key concepts and provides the steps required to configure
 
 ## Keycloak concepts
 
-Listing only relevant concepts:
+Only concepts relevant to Domino REST API are listed:
 
 ![Keycloak concepts](../../assets/images/KeycloakConcepts.png)
 
@@ -21,10 +21,12 @@ Listing only relevant concepts:
 
 ## Procedure
 
-In this example, you willl learn and create a realm, a user, client scopes, and client inside the Keycloak app.
+In this example, you will learn and create a realm, a user, client scopes, and client inside the Keycloak app.
+
+Note: The screenshots were captured using the Keycloak version 25.0.
 
 1. Login to Keycloak. 
-2. Click the `Master` dropdown and click **Create Realm**. 
+2. Click the **Keycloak** dropdown menu the top left corner, then click **Create Realm**. 
 
       ![alt text](../../assets/images/keyrealm.png)
   
@@ -37,18 +39,20 @@ In this example, you willl learn and create a realm, a user, client scopes, and 
     
 3. Click **Realm settings**. 
 
-    a. Fill in the fields. Mandatory fields are those fields with red asterisk (<span style="color: red;">*</span>).
+    a. Fill in the fields that are applicable on your. Mandatory fields are those fields with red asterisk (<span style="color: red;">*</span>).
 
     b. Click **Save**.
     
       ![alt text](../../assets/images/keyrealmgen.png)
 
-    c. Go and click **User Profile** tab.
+    c. Click **User Profile** tab.
+
     d. Click **Create Attribute**.
-          
-      1. Turn `on` the *Required* field.
-      2. Check the *Who can view* option on *Permission*.
-      3. Click **Create**. 
+
+      1. Fill in the fields that are applicable on your. Mandatory fields are those fields with red asterisk (<span style="color: red;">*</span>).    
+      2. Set *Required field* toggle to `on` position.
+      3. Under **Permission** section, select the *User* checkbox for the *Who can view?* option.
+      4. Click **Create**. 
 
       ![alt text](../../assets/images/keyattr.png)
 
@@ -58,11 +62,11 @@ In this example, you willl learn and create a realm, a user, client scopes, and 
 
 4. Click **Users**.
     
-    1. Click **Create a new user**. In a production environment you probably would connect to an existing LDAP or Active Directory server. 
+    1. Click **Create new user**, if there are no existing users. Otherwise, click **Add user**, if there are existing users.
     
         ![alt text](../../assets/images/keyusers.png)
 
-    2. Fill in the fields. Mandatory fields are those fields with red asterisk (`*`). You can see here the user profile **attribute** you created on the **Realm Settings**.
+    2. Fill in the mandatory fields with red asterisk(`*`), as minimum requirements to save. You can see here the user profile **attribute** you created on the **Realm Settings**. For example, *Domino common name*.
 
     3. Click **Create**. The user has been created.
     
@@ -74,11 +78,11 @@ In this example, you willl learn and create a realm, a user, client scopes, and 
 
     ![alt text](../../assets/images/keynewscope1.png)
     
-    1. Fill in the client scope name. Named it as `demo`.
-    2. Enter *Description*.
-    3. Turn `On` the toggle on *Display on Consent screen*. 
-    4. Turn `Off` toggle on *Include in token scope*.
-    5. Click *Save*.
+    1. Fill in the client scope name. Named it as `demo`.         
+    2. Fill in *Description*.
+    3. Set *Display on consent screen* toggle to `on` position.
+    4. Set *Include in token scope* toggle to `on` position.
+    5. Click **Save**.
     
         ![alt text](../../assets/images/keyscopename1.png)
 
@@ -89,14 +93,14 @@ In this example, you willl learn and create a realm, a user, client scopes, and 
     ![alt text](../../assets/images/keynewscope2.png)
 
     1. Fill in the client scope name. Named it as `$DATA`.
-    2. Enter *Description*.
-    3. Turn `On` the toggle on *Display on Consent screen*. 
-    4. Turn `Off` toggle on *Include in token scope*.
-    5. Click *Save*.
+    2. Fill in *Description*.
+    3. Set *Display on consent screen* toggle to `on` position.
+    4. Set *Include in token scope* toggle to `on` position.
+    5. Click **Save**.
     
         ![alt text](../../assets/images/keyscopename2.png) 
 
-6. Go to **Client** and click **Create client**.    
+6. Go to **Client**, then click **Create client**.    
 
     ![alt text](../../assets/images/keycreateclient.png)
 
@@ -108,7 +112,7 @@ In this example, you willl learn and create a realm, a user, client scopes, and 
     
           ![alt text](../../assets/images/keyconfig.png)
 
-    3. On **Login Settings**, and click **Save**.
+    3. On **Login Settings**, click **Save**.
     
           ![alt text](../../assets/images/keyURI.png)
 
@@ -129,9 +133,8 @@ In this example, you willl learn and create a realm, a user, client scopes, and 
         1. Click **Audience** mapping in the list.
         2. Fill in the name, for example `Domino`.
         3. Fill in the *Included Custom Audience*, for example `Domino`.
-        4. Turn `off` the toggle on *Add to ID token*. 
-        5. Turn `on` toggle on *Add to access token*.
-        6. Click **Save**.
+        4. Set *Add to access token* toggle to `on` position. 
+        5. Click **Save**.
         
         ![alt text](../../assets/images/keymapper1.png)
         
@@ -140,9 +143,8 @@ In this example, you willl learn and create a realm, a user, client scopes, and 
         1. Click **Audience** mapping in the list.
         2. Fill in the name, for example `dummy`.
         3. Fill in the *Included Custom Audience*, for example `https://dummy.restapiexample.com/`.
-        4. Turn `off` the toggle on *Add to ID token*. 
-        5. Turn `on` toggle on *Add to access token*.
-        6. Click **Save**.
+        4. Set *Add to access token* toggle to `on` position. 
+        5. Click **Save**.
           
         ![alt text](../../assets/images/keymapper2.png)  
         
@@ -153,7 +155,7 @@ In this example, you willl learn and create a realm, a user, client scopes, and 
         3. Fill in the *User Attribute*, as `CN`.
         4. Fill in the *Token Claim Name* as `CN`.
         5. Choose `String`from the dropdown menu of *Claim JSON Type*.
-        6. Turn `on` toggle on *Add to access token*.
+        6. Set *Add to access token* toggle to `on` position. 
         7. Click **Save**.
         
         ![alt text](../../assets/images/keymapper3.png)         
