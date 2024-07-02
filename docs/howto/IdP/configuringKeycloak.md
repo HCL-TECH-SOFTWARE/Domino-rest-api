@@ -39,7 +39,7 @@ Note: The screenshots were captured using the Keycloak version 25.0.
     
 3. Click **Realm settings**. 
 
-    a. Fill in the fields that are applicable on your. Mandatory fields are those fields with red asterisk (<span style="color: red;">*</span>).
+    a. Fill in the fields that are applicable based on your project. Mandatory fields are those fields with red asterisk (<span style="color: red;">*</span>).
 
     b. Click **Save**.
     
