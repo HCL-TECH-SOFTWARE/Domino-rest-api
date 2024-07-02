@@ -57,7 +57,7 @@ Note: The screenshots were captured using the Keycloak version 25.0.
 
       ![alt text](../../assets/images/keyattr.png)
 
-      The attributes has been added to the list of user profile attribute.
+      The new user profile attribute has been added.
 
       ![alt text](../../assets/images/keyuserproattr.png)
 
@@ -80,7 +80,7 @@ Note: The screenshots were captured using the Keycloak version 25.0.
     ![alt text](../../assets/images/keynewscope1.png)
     
     1. Fill in the client scope name. Named it as `demo`.         
-    2. Fill in *Description*.
+    2. Fill in *Description*. For example *demo for all demo*.          
     3. Set *Display on consent screen* toggle to `on` position.
     4. Set *Include in token scope* toggle to `on` position.
     5. Click **Save**.
