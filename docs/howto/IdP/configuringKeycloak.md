@@ -26,7 +26,7 @@ In this example, you will learn and create a realm, a user, client scopes, and c
 Note: The screenshots were captured using the Keycloak version 25.0.
 
 1. Login to Keycloak. 
-2. Click the **Keycloak** dropdown menu the top left corner, then click **Create Realm**. 
+2. Click the **Keycloak** dropdown menu at the top left corner, then click **Create Realm**. 
 
       ![alt text](../../assets/images/keyrealm.png)
   
