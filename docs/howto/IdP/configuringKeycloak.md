@@ -49,7 +49,8 @@ Note: The screenshots were captured using the Keycloak version 25.0.
 
     d. Click **Create Attribute**.
 
-      1. Fill in the fields applicable to your project. Mandatory fields are those fields with red asterisk (<span style="color: red;">*</span>).    
+      1. Fill in the fields applicable to your project. Mandatory fields are those fields with red asterisk (<span style="color: red;">*</span>).
+      2. Fill in the *Attribute name*. For example `CN`    
       2. Set *Required field* toggle to `on` position.
       3. Under **Permission** section, select the *User* checkbox for the *Who can view?* option.
       4. Click **Create**. 
