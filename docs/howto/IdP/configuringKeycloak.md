@@ -57,9 +57,6 @@ Note: The screenshots were captured using the Keycloak version 25.0.
 
       ![alt text](../../assets/images/keyattr.png)
 
-      The new user profile attribute has been added.
-
-      ![alt text](../../assets/images/keyuserproattr.png)
 
 4. Click **Users**.
     
