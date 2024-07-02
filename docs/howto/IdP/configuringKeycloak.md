@@ -21,7 +21,7 @@ Only concepts relevant to Domino REST API are listed:
 
 ## Procedure
 
-In this example, you will learn and create a realm, a user, client scopes, and client inside the Keycloak app.
+In this example, you will learn and create a realm, a user, client scopes, client and client scope mappers inside the Keycloak app.
 
 Note: The screenshots were captured using the Keycloak version 25.0.
 
@@ -56,7 +56,6 @@ Note: The screenshots were captured using the Keycloak version 25.0.
       4. Click **Create**. 
 
       ![alt text](../../assets/images/keyattr.png)
-
 
 4. Click **Users**.
     
