@@ -63,12 +63,12 @@ Extending Rich Text needs the following dependencies:
         <dependency>
           <groupId>com.hcl.domino.keep</groupId>
           <artifactId>keep-core</artifactId>
-          <version>1.0.14</version>
+          <version>1.31.2</version>
         </dependency>
         <dependency>
           <groupId>io.vertx</groupId>
           <artifactId>vertx-core</artifactId>
-          <version>4.5.7</version>
+          <version>4.5.8</version>
         </dependency>
         <dependency>
           <groupId>com.hcl.domino</groupId>
