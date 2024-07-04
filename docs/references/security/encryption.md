@@ -54,7 +54,8 @@ The parameter `-name secp521r1` defines the **ES512** encryption algorithm. Don'
 The required key is an ES512 elliptic-curve as described above. Keep the private key safe and configure it in [security](./index.md). The public key must be imported into the ID vault. Check the documentation there.
 
 ```bash
-openssl ecparam -genkey -name secp521r1 -noout -out privatekey.pem
+openssl ecparam -genkey -name secp521r1 -noout -out privatekey_ec.pem
+openssl pkcs8 -topk8 -nocrypt -in privatekey_ec.pem -out privatekey.pem
 openssl ec -in privatekey.pem -pubout -out publickey.pem
 ```
 
