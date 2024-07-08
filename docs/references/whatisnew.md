@@ -7,6 +7,23 @@ The section provides information on the latest features, improvements, and resol
     - Items marked in <span style="color:red">**red**</span> are API changes that may impact your applications and should be reviewed before upgrading.
     - Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](deprecated.md).
 
+<!--
+???+ info "v1.0.15 - What's new or changed"
+    ## v1.0.15 - _What's new or changed_
+
+    *Release date: July XX, 2024*
+
+    **New**
+
+    **Improvements**
+
+    - Added option of selecting additional modes when executing [Quick Config](../references/usingwebui/quickconfigui.md). 
+
+    **Resolved Issues**
+
+    **Others**
+-->
+
 ???+ info "v1.0.14 - What's new or changed"
     ## v1.0.14 - _What's new or changed_
 
