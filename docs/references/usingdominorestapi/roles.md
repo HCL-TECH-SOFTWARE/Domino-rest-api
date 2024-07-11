@@ -19,7 +19,7 @@ This role configures Volt MX's foundry middleware to interact with Domino REST A
 
 ## VoltMX developer
 
-This role develops applications leveraging Domino REST API Endpoints, VoltMX services with the VoltMX Iris IDE. Needs to be able to read data from a Domino REST API scope, so minimum access is `Reader`. When the application wants to update data in Notes, higher access will be required.
+This role develops applications leveraging Domino REST API Endpoints, VoltMX services with the VoltMX Iris IDE. When the application wants to update data in Notes or create a schema in your database, you need to have a _Designer_ or higher access role. When you're accessing only the `KeepConfig.nsf` to read data in Domino REST API, you need to have a minimum of a `Reader` role.
 
 You are not limited to Domino and VoltMX specific roles. Classical development is possible too!
 
