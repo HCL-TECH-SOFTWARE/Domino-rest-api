@@ -2,7 +2,7 @@
 
 [Keycloak](https://www.keycloak.org/) is an Open Source Identity and Access Management solution sponsored by [RedHat](https://www.redhat.com/en).
 
-Keycloak can be used to produce JWT Access Token for Domino REST API. Keycloak has many features like default configuration, user federation, identity brokering and social login. Those are topics not covered here, you want to consult a [Keycloak Tutorial](https://duckduckgo.com/?q=keycloak+tutorial&ia=web) or the [Keycloak documentation](https://www.keycloak.org/documentation) to learn more. This page focuses on the settings required for Domino REST API.
+Keycloak can be used to produce JWT Access Token for Domino REST API. Keycloak has many features like default configuration, user federation, identity brokering and social login. Those are topics not covered here. Consult the [Keycloak Tutorial](https://duckduckgo.com/?q=keycloak+tutorial&ia=web) or the [Keycloak documentation](https://www.keycloak.org/documentation) to learn more. This page focuses on the settings required for Domino REST API.
 
 ## About this task
 
@@ -35,11 +35,15 @@ Note: The screenshots were captured using the Keycloak version 25.0.
 
     2. Click **Create**.
     
-    ![Click Create](../../assets/images/keyrealmname.png)
+       ![Click Create](../../assets/images/keyrealmname.png)
 
 3. Click **Realm settings**.
 
     1. Fill in the fields applicable to your project. Mandatory fields are those fields with red asterisk (<span style="color: red;">\*</span>).
+
+        _Display name_: `Humanoid Robots`.
+
+        _HTML Display Name_: `<h1> Humanoid Robots </h1>`
 
     2. Click **Save**.
     
@@ -54,12 +58,14 @@ Note: The screenshots were captured using the Keycloak version 25.0.
           1. Fill in the fields applicable to your project. Mandatory fields are those fields with red asterisk (<span style="color: red;">\*</span>).
           
           2. Fill in the _Attribute name_. For example `CN`
+
+          3. Fill in the _Display Name_. For example `Domino common name`
               
-          3. Set _Required field_ toggle to `on` position.
+          4. Set _Required field_ toggle to `on` position.
             
-          4. Under **Permission** section, select the _User_ checkbox for the _Who can view?_ option.
+          5. Under **Permission** section, select the _User_ checkbox for the _Who can view?_ option.
             
-          5. Click **Create**.
+          6. Click **Create**.
             
           ![Attribute general settings](../../assets/images/keyattr.png)
 
@@ -71,27 +77,49 @@ Note: The screenshots were captured using the Keycloak version 25.0.
            
        2. Fill in the mandatory fields with red asterisk(`*`), as minimum requirements to save. You can see here the user profile **attribute** you created on the **Realm Settings**. For example, _Domino common name_. For a direct access grant you must have first name, last name and eMail, even if they're not marked mandatory.
 
+           Fill in the following:
+
+           _Username_: `harrychen`.
+
+           _Email_: `harrychen@ameca.org`
+
+           _First name_: `Harry`
+
+           _Last Name_: `Chen`
+
+           _Domino common name_: `CN=Harry Chen/O=Ameca`
+
        3. Click **Create**. The user has been created.
     
            ![Keycloak user details](../../assets/images/keyuserdetail.png)
 
-           You need configure [User credentials](https://www.keycloak.org/docs/latest/server_admin/#ref-user-credentials_server_administration_guide). In the simples case that's username and password and could be a social or federated login. Check [Keycloak](https://www.keycloak.org/docs/latest/server_admin/#ref-user-credentials_server_administration_guide) for details
+       4. On your user details, for example user `harrychen`, click the **Credential** tab.
+       
+           You need configure [User credentials](https://www.keycloak.org/docs/latest/server_admin/#ref-user-credentials_server_administration_guide). For this example we are using username and password but this could be a social or federated login.Check [Keycloak](https://www.keycloak.org/docs/latest/server_admin/#ref-user-credentials_server_administration_guide) for details.
 
-           ![Credential screen](https://www.keycloak.org/docs/latest/server_admin/images/user-credentials.png)
+           1. Click **Set password**.
+           
+               ![User Credential](../../assets/images/keycredential.png)   
 
-5. Create **client scopes**.
+           2. Fill in the _Password_ and _New password confirmation_ with same phrases.
+           3. Set _Display on consent screen_ toggle to `off` position.
+           4. Click **Save**.
+           
+               ![alt text](../../assets/images/keysavecredl.png)
+
+5. Click **Client scopes**.
 
     Each DRAPI scope in Domino, that you want to make accessible in Keycloak, will need a client scope in Keycloak. This includes all named scopes (the lowercase ones), and the [special scopes](../../references/usingdominorestapi/scopes.md) like `$DATA` or `MAIL`.
 
-    Creating a client scope does not automatically expose it, for that we will assign it to one or more clients. In this example we create a client scope named `demo`.
+    Click **Create client scope**. Creating a client scope doesn't automatically expose it, for that, assign it to one or more clients. In this example, create a client scope named `demo`.
 
     ![Keycloak create scope](../../assets/images/keynewscope1.png)
 
-    1. Fill in the client scope name. Named it as `demo`.
-    2. Fill in _Description_. For example _demo applicaton from Domino_.
+    1. Fill in the client scope name. For example, `demo`.
+    2. Fill in _Description_. For example `demo for all demo`.
     3. Set _Display on consent screen_ toggle to `on` position.
     4. Set _Include in token scope_ toggle to `on` position.
-    5. Click **Save**.
+    5. Click **Save**.                  
     
         ![saving client scope screen](../../assets/images/keyscopename1.png)
 
@@ -101,27 +129,35 @@ Note: The screenshots were captured using the Keycloak version 25.0.
 
     ![create clients scope screen](../../assets/images/keynewscope2.png)
 
-    1. Fill in the client scope name. Named it as `$DATA`.
-    2. Fill in _Description_.
+    1. Fill in the client scope name. For example, `$DATA`.
+    2. Fill in _Description_. For example `all data for database`.
     3. Set _Display on consent screen_ toggle to `on` position.
     4. Set _Include in token scope_ toggle to `on` position.
     5. Click **Save**.
     
         ![saving new client scope screen](../../assets/images/keyscopename2.png)
 
-6. Go to **Client**, then click **Create client**.
+6. Click **Clients**, and then click **Create client**.
 
     ![create client screen](../../assets/images/keycreateclient.png)
 
-    1. Fill in _Client type_ and _Client ID_, for example, **thespian** and Click **Next**.
+    1. On the **General Setting** section, fill in the following fields:
+    
+        _Client ID_: `thespian`.
+
+        _Name_: `thespian`.
+        
+        _Description_: `ameca's client`
+        
+        Click **Next**.
     
         ![general settings screen](../../assets/images/keyclientid.png)
 
-    2. On the **Capability config**, turn `off` the _Client Authentication_ and click **Next**. When it's ON, the OIDC type is set to confidential access type. When it's OFF, it's set to public access type. Confidential is used when an application server, using client_id and client_secret accesses DRAPI, while public access is for situations where you can't have a client secret like a single page app or a mobile app accessing the API directly,
+    2. On the **Capability config** section, turn `off` the _Client Authentication_ and click **Next**. When it's ON, the OIDC type is set to confidential access type. When it's OFF, it's set to public access type. Confidential is used when an application server, using client_id and client_secret accesses DRAPI, while public access is for situations where you can't have a client secret like a single page app or a mobile app accessing the API directly,
     
         ![Capability config screen](../../assets/images/keyconfig.png)
 
-    3. On **Login Settings**, click **Save**.
+    3. On **Login Settings** section, click **Save**.
     
         ![login settings and save screen](../../assets/images/keyURI.png)
 
@@ -131,9 +167,9 @@ Note: The screenshots were captured using the Keycloak version 25.0.
        
            ![Add client scope screen](../../assets/images/keydedicated.png)
            
-       2. Click **Configure new mapper** or if there are existing mapper, click **Add mappers** &rarr; **by Configuration**. You need to add few mappers on your dedicated scope.
+       2. Click **Configure new mapper** or if there are existing mappers, click **Add mappers** &rarr; **by Configuration**. You need to add few mappers inside the dedicated client scope.
        
-       In this example, you need to have 2 **Audience** mappers and 1 **User Atrribute**.
+       In this example, you need to have 2 **Audience** mappers and 1 **User Atrribute**, inside the **thespian-dedicated** client scope.
        
        ![add a new new mapper screen](../../assets/images/keynewmapper.png)
        
@@ -173,19 +209,19 @@ Note: The screenshots were captured using the Keycloak version 25.0.
 
        ![Client details](../../assets/images/keycdetails.png)
        
-       The **Assign Type** of all scopes must be **Optional** except your `email` scope.
+       1. Set **Assign Type** of all scopes to  **Optional**, except your `email` scope.
        
-       1. Click the **Add client scope**.
+       2. Click the **Add client scope**.
        
           ![add client scope screen](../../assets/images/keyaddscopes.png)
             
-       2. Check the name of the client scopes you would like to add on your **thespian** client scope, for example `demo` and `$DATA`, and click **Add** and choose **Default** option.
+       3. Check the name of the client scopes you would like to add on your **thespian** client scope, for example `demo` and `$DATA`, and click **Add** and choose **Default** option.
        
           ![add client scopes to client ](../../assets/images/keycommon.png)
 
-       3. Click **Client Scope** &rarr; **Evaluate** tab.
-       4. Fill in _Users_.
-       5. Click **Generated access token**.
+       4. Click **Client Scope** &rarr; **Evaluate** tab.
+       5. Fill in or select applicable _Users_.
+       6. Click **Generated access token**.
        
           ![generate access token screen](../../assets/images/keyevaluate.png)
 
