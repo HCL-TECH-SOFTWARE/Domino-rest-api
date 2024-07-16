@@ -16,9 +16,9 @@ Only concepts relevant to Domino REST API are listed:
 
 - **Realm**: The starting point for Keycloak identity management, contains all other elements.
 - **Client**: Each accessing application, client app, Single Page App or server app will have a client entry. The client entry contains application Id and, if required, the application secret. Furthermore it has mapper and client scopes assigned to it.
-- **Client Scopes**: Each scope in DRAPI will have a client scope in Keycloak, so the Keycloak admin can assign them to clients
+- **Client Scopes**: Each scope in Domino REST API will have a client scope in Keycloak, so the Keycloak admin can assign them to clients
 - **Mapper**: Configuration entry to determine what information is available in a client and/or Client scope. Each Client has a default entry for Mappers independent from assigned Client Scopes
-- **Users**: Standard attributes assigned to users like username, firstname, lastname, email, credentials as well as any custom attributes. DRAPI e.g. can use `CN` for the Domino style name
+- **Users**: Standard attributes assigned to users like username, firstname, lastname, email, credentials as well as any custom attributes. Domino REST API, for example, use `CN` for the Domino style name.
 
 ## Procedure
 
@@ -109,7 +109,7 @@ Note: The screenshots were captured using the Keycloak version 25.0.
 
 5. Click **Client scopes**.
 
-    Each DRAPI scope in Domino, that you want to make accessible in Keycloak, will need a client scope in Keycloak. This includes all named scopes (the lowercase ones), and the [special scopes](../../references/usingdominorestapi/scopes.md) like `$DATA` or `MAIL`.
+    Each Domino REST API scope in Domino, that you want to make accessible in Keycloak, will need a client scope in Keycloak. This includes all named scopes (the lowercase ones), and the [special scopes](../../references/usingdominorestapi/scopes.md) like `$DATA` or `MAIL`.
 
     Click **Create client scope**. Creating a client scope doesn't automatically expose it, for that, assign it to one or more clients. In this example, create a client scope named `demo`.
 
@@ -153,7 +153,7 @@ Note: The screenshots were captured using the Keycloak version 25.0.
     
         ![general settings screen](../../assets/images/keyclientid.png)
 
-    2. On the **Capability config** section, turn `off` the _Client Authentication_ and click **Next**. When it's ON, the OIDC type is set to confidential access type. When it's OFF, it's set to public access type. Confidential is used when an application server, using client_id and client_secret accesses DRAPI, while public access is for situations where you can't have a client secret like a single page app or a mobile app accessing the API directly,
+    2. On the **Capability config** section, turn `off` the _Client Authentication_ and click **Next**. When it's ON, the OIDC type is set to confidential access type. When it's OFF, it's set to public access type. Confidential is used when an application server, using client_id and client_secret accesses Domino REST API, while public access is for situations where you can't have a client secret like a single page app or a mobile app accessing the API directly,
     
         ![Capability config screen](../../assets/images/keyconfig.png)
 
