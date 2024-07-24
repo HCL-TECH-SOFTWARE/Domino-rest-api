@@ -2,7 +2,6 @@
 
 This tutorial shows how to use the Admin UI to configure and use a database for Domino REST API. Download the database `Demo.nsf` from [Resources](../references/downloads.md) and follow along. Anything you can do with the Admin UI you can also do using Postman, curl, SwaggerUI, or similar tools. See how to do each of the tasks in this tutorial using [Postman and Curl](./postmancurl.md) and using [SwaggerUI](./swagger.md).
 
-<!-- prettier-ignore -->
 !!! note
     The screenshots may vary. The screenshots are based on latest Domino REST API snapshots. Make sure you're up-to-date.
 
@@ -37,7 +36,6 @@ Click **Database Management - Rest API** in the landing page. This opens the **S
 1. In the **Schema Management** page, click **Add Schema**. 
 
       ![Add schema](../assets/images/addSchema.png)
-      <!--![Add Schema Menu](../assets/images/AddNewSchema.png)-->
 
 2. In the **Add New Schema** dialog, click **Create Schema**.
 
@@ -50,11 +48,6 @@ Click **Database Management - Rest API** in the landing page. This opens the **S
 	3. Enter a **Schema Name** and a **Schema Description**. 
       5. Click **Save Schema**. 
 
-<!--2. Under **Available Databases**, select `Demo.nsf`.
-3. Under **Add New Schema**, fill up the form and then click **Add**.
-
-      ![Configure New Schema](../assets/images/ConfigureNewSchema.png)-->
-
 This creates a schema that defines what views, folders, document, and agents you can access through the Domino REST API.
 
 <!-- prettier-ignore -->
@@ -62,8 +55,6 @@ This creates a schema that defines what views, folders, document, and agents you
     If the **Only show schemas configured with scopes** toggle is turned on, you can't see the created schema because it doesn't have a scope yet.
 
 ## Create a scope
-
-To set up a scope:
 
 1. Go back to the landing page by clicking **Overview**.
 
@@ -78,13 +69,22 @@ To set up a scope:
       ![Add scope Menu](../assets/images/AddNewScope.png)
 
 4. Under **Available Schema**, click `Demo.nsf`. This shows a list of schemas that uses `Demo.nsf` as a database.
-5. Select the schema you created earlier, and then fill out the form in **Add New Scope**.
+5. Select the schema you created earlier.
+6. Under **Add New Scope**, fill in the form and click **Add**.
 
-      ![Configure New Scope](../assets/images/ConfigureNewScope.png)
+      For the **Server** field, enter the name of the server the scope is available on, or leave it blank for the current server. The value of the entered name must be either the server's hierarchical name or in canonical format. See the following examples for reference:
 
-6. Click **Add**. This creates a scope.
+      - MyServer/MyOrg
+      - CN=MyServer/O=MyOrg
 
-You can use this to access a schema via the Domino REST API. One NSF can be made available under more than one scope, such as with different security settings.
+      For the **Maximum Access Level**, the default is **Editor**. You can set it to another value to set the scope's maximum access anyone using the scope has.
+
+![Configure New Scope](../assets/images/ConfigureNewScope.png)
+
+!!!note
+    The **Maximum Access Level** prevents an app that has inherited a user's access rights when the user grants the app access from unauthorized altering of schemas or access control lists.  To know more about what each access level allows and to whom the access level is assigned, see [Access levels in the ACL](https://help.hcltechsw.com/domino/14.0.0/admin/conf_accesslevelsintheacl_c.html).
+
+You can use the scope to access a schema via the Domino REST API. One NSF can be made available under more than one scope, such as with different security settings.
 
 ## Manage created schema
 
@@ -104,15 +104,6 @@ This page allows you to set various configurations to your schema.
 <!-- prettier-ignore -->
 !!!tip
      Clicking the menu icon and selecting **Deactivate** corresponding to a form deactivates the form. In the **Reset Form** dialog, click **Yes** to confirm.
-
-<!--1. Click **Database Forms** from the menu bar. This lists all the forms available for the schema.
-1. From the available forms under **Unconfigured Forms**, select the form that you would like to configure. 
-2. Click the toggle in the form card of the selected form.
-3. In the **Configure** dialog, click **Yes** to configure the form with default settings.
-
-The selected form is now listed under **Configured Forms**.
-
-![List Forms](../assets/images/ListOfForms2.png)-->
 
 **To make changes to the configured form:**
 

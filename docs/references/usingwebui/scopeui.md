@@ -22,12 +22,18 @@ You can arrange the scopes in **Stack View**, **Card View**, **Alphabetical View
 2. Under **Available Schema**, select the schema that the scope will belong to.
 3. Under **Add New Scope**, fill in the form and click **Add**.
 
+    - For the **Server** field, enter the name of the server the scope is available on, or leave it blank for the current server. The value of the entered name must be either the server's hierarchical name or in canonical format. See the following examples for reference:
+
+        - MyServer/MyOrg
+        - CN=MyServer/O=MyOrg
+
+    - For the **Maximum Access Level**, the default is **Editor**. You can set it to another value to set the scope's maximum access anyone using the scope has. 
+
 ![Configure Database](../../assets/images/AddNewDatabase.png)
 
 !!!note
-    You can set the **Maximum Access Level** of the scope to control the maximum access anyone using the scope should have. This prevents an app, which has inherited a user's access rights when the user grants app access, from unauthorized altering of schemas or access control lists. By default, the set maximum access level is **Editor**. To know more about what each access level allows and to whom the access level is assigned, see [Access levels in the ACL](https://help.hcltechsw.com/domino/12.0.2/admin/conf_accesslevelsintheacl_c.html){: target="_blank" rel="noopener noreferrer"}.     
-
-
+    The **Maximum Access Level** prevents an app that has inherited a user's access rights when the user grants the app access from unauthorized altering of schemas or access control lists.  To know more about what each access level allows and to whom the access level is assigned, see [Access levels in the ACL](https://help.hcltechsw.com/domino/14.0.0/admin/conf_accesslevelsintheacl_c.html).
+   
 ## Edit a scope
 
 1. On the **Scope Management** page, click the scope that you want to edit. 
@@ -36,7 +42,6 @@ You can arrange the scopes in **Stack View**, **Card View**, **Alphabetical View
 
 !!!note
     You can only edit the **Description**, **Server**, **Maximum Access Level**, and **Scope Icon**. 
-
 
 ## Delete a scope
 
