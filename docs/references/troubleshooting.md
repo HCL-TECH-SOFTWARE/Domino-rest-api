@@ -2,11 +2,9 @@
 
 This reference intends to guide you in addressing common errors in installing and running the Domino REST API service. Common errors and their corresponding resolutions are described below:
 
-<!-- ## Troubleshooting common errors with the installing and running the Domino REST API service -->
-
 ## Domino Not Running (First-Time Setup)
 
-If Domino isn't up and running, see [Troubleshooting one-touch Domino Setup](https://help.hcltechsw.com/domino/12.0.0/admin/inst_onetouch_troubleshooting.html){: target="_blank" rel="noopener noreferrer"}.
+If Domino isn't up and running, see [Troubleshooting one-touch Domino Setup](https://help.hcltechsw.com/domino/12.0.0/admin/inst_onetouch_troubleshooting.html).
 
 ## REST API not responding
 

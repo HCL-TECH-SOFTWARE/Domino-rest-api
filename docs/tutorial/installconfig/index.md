@@ -26,7 +26,7 @@
 
 **Option 1**
 
-1. Go to [HCL Software License and Download Portal](https://hclsoftware.flexnetoperations.com/){: target="_blank" rel="noopener noreferrer"}.
+1. Go to [HCL Software License and Download Portal](https://hclsoftware.flexnetoperations.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"}.
 2. On the sign in page, enter your username and click **Next**. The **License & Download Portal** home page opens.
 3. In the **Your Downloads** pane, scroll to find and then select **HCL Domino**. The **Download Packages** page opens.
 4. On the **New Versions** tab, select the HCL Domino REST API version that you want to download.
@@ -36,7 +36,7 @@
 
 **Option 2**
 
-1. Go to [HCL Software License and Download Portal](https://hclsoftware.flexnetoperations.com/){: target="_blank" rel="noopener noreferrer"}.
+1. Go to [HCL Software License and Download Portal](https://hclsoftware.flexnetoperations.com/"Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"}.
 2. On the sign in page, enter your username and click **Next**. The **License & Download Portal** home page opens.
 1. Go to **Downloads** &rarr; **Search Downloads**.
 2. On the **Download Search** page, enter `HCL Domino REST API` in the **Search for** field, and then click **Search**.
@@ -47,7 +47,7 @@
 
 #### via My HCLSoftware Portal
 
-1. Go to [My HCLSoftware Portal](https://my.hcltechsw.com/){: target="_blank" rel="noopener noreferrer"}.
+1. Go to [My HCLSoftware Portal](https://my.hcltechsw.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"}.
 2. On the landing page, click **Sign in**.
 3. On the sign in page, login using your credentials. 
 4. On the **Software Downloads** page, click **HCL Domino**. 

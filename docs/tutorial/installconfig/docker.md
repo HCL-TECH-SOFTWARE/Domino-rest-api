@@ -78,7 +78,7 @@ A Domino server uses one persistent volume to store its data. This volume also s
 
 **For docker image from Flexnet or My HCLSoftware Portal**
 
-Load the docker image that you've downloaded from [prerequisites](#prerequisites). Make sure you [extract the tar.gz file](https://linuxize.com/post/how-to-extract-unzip-tar-gz-file/){: target="_blank" rel="noopener noreferrer"} first. 
+Load the docker image that you've downloaded from [prerequisites](#prerequisites). Make sure you [extract the tar.gz file](https://linuxize.com/post/how-to-extract-unzip-tar-gz-file/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"} first. 
 
 ```bash
 docker load -i [name_of_tar_file].tar

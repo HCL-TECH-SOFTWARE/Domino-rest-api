@@ -110,7 +110,7 @@ This page allows you to set various configurations to your schema.
 1. On the **Database Forms** tab, click the pencil icon corresponding to the configured form that you want to edit to load the form **Access Mode** page showing the `default` access mode.
 2. Under **Show fields from**, hover over a field item and click the **+** icon to add the field in the form. Repeat this for all the fields you want to add.
 
-      [![Access Mode](../assets/images/AccessMode1.png)](../assets/images/AccessMode1.png){: target="_blank" rel="noopener noreferrer"}
+      [![Access Mode](../assets/images/AccessMode1.png)](../assets/images/AccessMode1.png "Click to open in a new tab"){: target="_blank" rel="noopener noreferrer"}
 
 3. Set the Read or Write access formula for each of the fields in the form.
 4. Click **Save**.

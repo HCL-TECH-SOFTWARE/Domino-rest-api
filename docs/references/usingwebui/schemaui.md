@@ -134,18 +134,18 @@ All forms are now activated with default settings and have **Active** status.
 
 1. On the **Database Forms** tab, click the pencil icon corresponding to the activated form that you want to edit.
 
-    [![dbforms](../../assets/images/dbforms.png)](../../assets/images/dbforms.png){: target="_blank" rel="noopener noreferrer"}
+    [![dbforms](../../assets/images/dbforms.png)](../../assets/images/dbforms.png "Click to open in a new tab"){: target="_blank" rel="noopener noreferrer"}
     
     !!!note
         Clicking the pencil icon corresponding to an inactive form shows the **Activate Form** dialog, which requires you to confirm the activation of the form. If you click **OK**, the form is activated, and you are directed to the form **Access Mode** page. 
 
     The **Access Mode** page opens showing the `default` access mode.
 
-    [![Access mode](../../assets/images/AccessMode.png)](../../assets/images/AccessMode.png){: target="_blank" rel="noopener noreferrer"}
+    [![Access mode](../../assets/images/AccessMode.png)](../../assets/images/AccessMode.png "Click to open in a new tab"){: target="_blank" rel="noopener noreferrer"}
 
 2. Under **Show fields from**, hover over a field item and click the **+** icon. This adds the field in the form. Repeat this for all the fields to be added.
 
-      [![Add field](../../assets/images/addfield.png){: style="height:60%;width:60%"}](../../assets/images/addfield1.png){: target="_blank" rel="noopener noreferrer"}
+      [![Add field](../../assets/images/addfield.png){: style="height:60%;width:60%"}](../../assets/images/addfield1.png "Click to open in a new tab"){: target="_blank" rel="noopener noreferrer"}
      
 
 3. Set the read or write access of each field in the form in **Field Setting**.
@@ -154,7 +154,7 @@ All forms are now activated with default settings and have **Active** status.
 
       The following image shows the opened **Formula for Delete Access** dialog.  
 
-      [![Formula Settings](../../assets/images/modeformula.png)](../../assets/images/modeformula.png){: target="_blank" rel="noopener noreferrer"}
+      [![Formula Settings](../../assets/images/modeformula.png)](../../assets/images/modeformula.png "Click to open in a new tab"){: target="_blank" rel="noopener noreferrer"}
 
 5. In the text field in the dialog, edit the `@True` or `@False` entry and click **Save** to close the dialog.
 
@@ -176,7 +176,7 @@ All forms are now activated with default settings and have **Active** status.
 
       The following image shows an example of the added mode, which is the `dql`.
       
-      [![mode list](../../assets/images/modeList.png)](../../assets/images/modeList.png){: target="_blank" rel="noopener noreferrer"}
+      [![mode list](../../assets/images/modeList.png)](../../assets/images/modeList.png "Click to open in a new tab"){: target="_blank" rel="noopener noreferrer"}
 
 3. Add fields and set the read or write access formula for each of the added fields. 
 4. Click **Save**.

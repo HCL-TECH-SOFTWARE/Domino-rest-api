@@ -41,9 +41,9 @@ Note: The screenshots were captured using the Keycloak version 25.0.
 
     1. Fill in the fields applicable to your project. Mandatory fields are those fields with red asterisk (<span style="color: red;">\*</span>).
 
-        _Display name_: `Humanoid Robots`.
+        **Display name**: `Humanoid Robots`.
 
-        _HTML Display Name_: `<h1> Humanoid Robots </h1>`
+        **HTML Display Name**: `<h1> Humanoid Robots </h1>`
 
     2. Click **Save**.
     
@@ -57,13 +57,13 @@ Note: The screenshots were captured using the Keycloak version 25.0.
           
           1. Fill in the fields applicable to your project. Mandatory fields are those fields with red asterisk (<span style="color: red;">\*</span>).
           
-          2. Fill in the _Attribute name_. For example `CN`
+          2. Fill in the **Attribute name**. For example `CN`
 
-          3. Fill in the _Display Name_. For example `Domino common name`
+          3. Fill in the **Display Name**. For example `Domino common name`
               
-          4. Set _Required field_ toggle to `on` position.
+          4. Set **Required field** toggle to `On` position.
             
-          5. Under **Permission** section, select the _User_ checkbox for the _Who can view?_ option.
+          5. Under **Permission** section, select the **User** checkbox for the **Who can view?** option.
             
           6. Click **Create**.
             
@@ -79,15 +79,15 @@ Note: The screenshots were captured using the Keycloak version 25.0.
 
            Fill in the following:
 
-           _Username_: `harrychen`.
+           **Username**: `harrychen`.
 
-           _Email_: `harrychen@ameca.org`
+           **Email**: `harrychen@ameca.org`
 
-           _First name_: `Harry`
+           **First name**: `Harry`
 
-           _Last Name_: `Chen`
+           **Last Name**: `Chen`
 
-           _Domino common name_: `CN=Harry Chen/O=Ameca`
+           **Domino common name**: `CN=Harry Chen/O=Ameca`
 
        3. Click **Create**. The user has been created.
     
@@ -95,17 +95,17 @@ Note: The screenshots were captured using the Keycloak version 25.0.
 
        4. On your user details, for example user `harrychen`, click the **Credential** tab.
        
-           You need configure [User credentials](https://www.keycloak.org/docs/latest/server_admin/#ref-user-credentials_server_administration_guide). For this example we are using username and password but this could be a social or federated login.Check [Keycloak](https://www.keycloak.org/docs/latest/server_admin/#ref-user-credentials_server_administration_guide) for details.
+           You need configure [User credentials](https://www.keycloak.org/docs/latest/server_admin/#ref-user-credentials_server_administration_guide). For this example we are using username and password but this could be a social or federated login. Check [Keycloak](https://www.keycloak.org/docs/latest/server_admin/#ref-user-credentials_server_administration_guide) for details.
 
            1. Click **Set password**.
            
                ![User Credential](../../assets/images/keycredential.png)   
 
-           2. Fill in the _Password_ and _New password confirmation_ with same phrases.
-           3. Set _Display on consent screen_ toggle to `off` position.
+           2. Fill in the **Password** and **New password confirmation** with same phrases.
+           3. Set **Display on consent screen** toggle to `off` position.
            4. Click **Save**.
            
-               ![alt text](../../assets/images/keysavecredl.png)
+               ![Setting user credentials](../../assets/images/keysavecredl.png)
 
 5. Click **Client scopes**.
 
@@ -116,9 +116,9 @@ Note: The screenshots were captured using the Keycloak version 25.0.
     ![Keycloak create scope](../../assets/images/keynewscope1.png)
 
     1. Fill in the client scope name. For example, `demo`.
-    2. Fill in _Description_. For example `demo for all demo`.
-    3. Set _Display on consent screen_ toggle to `on` position.
-    4. Set _Include in token scope_ toggle to `on` position.
+    2. Fill in **Description**. For example `demo for all demo`.
+    3. Set **Display on consent screen** toggle to `On` position.
+    4. Set **Include in token scope** toggle to `On` position.
     5. Click **Save**.                  
     
         ![saving client scope screen](../../assets/images/keyscopename1.png)
@@ -130,9 +130,9 @@ Note: The screenshots were captured using the Keycloak version 25.0.
     ![create clients scope screen](../../assets/images/keynewscope2.png)
 
     1. Fill in the client scope name. For example, `$DATA`.
-    2. Fill in _Description_. For example `all data for database`.
-    3. Set _Display on consent screen_ toggle to `on` position.
-    4. Set _Include in token scope_ toggle to `on` position.
+    2. Fill in **Description**. For example `all data for database`.
+    3. Set **Display on consent screen** toggle to `On` position.
+    4. Set **Include in token scope** toggle to `On` position.
     5. Click **Save**.
     
         ![saving new client scope screen](../../assets/images/keyscopename2.png)
@@ -143,17 +143,17 @@ Note: The screenshots were captured using the Keycloak version 25.0.
 
     1. On the **General Setting** section, fill in the following fields:
     
-        _Client ID_: `thespian`.
+        **Client ID**: `thespian`.
 
-        _Name_: `thespian`.
+        **Name**: `thespian`.
         
-        _Description_: `ameca's client`
+        **Description**: `ameca's client`
         
         Click **Next**.
     
         ![general settings screen](../../assets/images/keyclientid.png)
 
-    2. On the **Capability config** section, turn `off` the _Client Authentication_ and click **Next**. When it's ON, the OIDC type is set to confidential access type. When it's OFF, it's set to public access type. Confidential is used when an application server, using client_id and client_secret accesses Domino REST API, while public access is for situations where you can't have a client secret like a single page app or a mobile app accessing the API directly,
+    2. On the **Capability config** section, turn `off` the **Client Authentication** and click **Next**. When it's ON, the OIDC type is set to confidential access type. When it's OFF, it's set to public access type. Confidential is used when an application server, using client_id and client_secret accesses Domino REST API, while public access is for situations where you can't have a client secret like a single page app or a mobile app accessing the API directly,
     
         ![Capability config screen](../../assets/images/keyconfig.png)
 
@@ -177,8 +177,8 @@ Note: The screenshots were captured using the Keycloak version 25.0.
 
        1. Click **Audience** mapping in the list.
        2. Fill in the name, for example `Domino`.
-       3. Fill in the _Included Custom Audience_, for example `Domino`.
-       4. Set _Add to access token_ toggle to `on` position.
+       3. Fill in the **Included Custom Audience**, for example `Domino`.
+       4. Set **Add to access token** toggle to `On` position.
        5. Click **Save**.
 
            ![Mapper-1](../../assets/images/keymapper1.png)
@@ -187,8 +187,8 @@ Note: The screenshots were captured using the Keycloak version 25.0.
 
        1. Click **Audience** mapping in the list.
        2. Fill in the name, for example `dummy`.
-       3. Fill in the _Included Custom Audience_, for example `https://dummy.restapiexample.com/`.
-       4. Set _Add to access token_ toggle to `on` position.
+       3. Fill in the **Included Custom Audience**, for example `https://dummy.restapiexample.com/`.
+       4. Set **Add to access token** toggle to `On` position.
        5. Click **Save**.
 
            ![Mapper-2](../../assets/images/keymapper2.png)
@@ -197,10 +197,10 @@ Note: The screenshots were captured using the Keycloak version 25.0.
 
        1. Click the **User Attribute** mapping in the list.
        2. Fill in the mapper name, for example `DominoNameAttr`.
-       3. Fill in the _User Attribute_, as `CN`.
-       4. Fill in the _Token Claim Name_ as `CN`.
-       5. Choose `String`from the dropdown menu of _Claim JSON Type_.
-       6. Set _Add to access token_ toggle to `on` position.
+       3. Fill in the **User Attribute**, as `CN`.
+       4. Fill in the **Token Claim Name** as `CN`.
+       5. Choose `String`from the dropdown menu of **Claim JSON Type**.
+       6. Set **Add to access token** toggle to `On` position.
        7. Click **Save**.
        
            ![Mapper-3](../../assets/images/keymapper3.png)
@@ -220,7 +220,7 @@ Note: The screenshots were captured using the Keycloak version 25.0.
           ![add client scopes to client ](../../assets/images/keycommon.png)
 
        4. Click **Client Scope** &rarr; **Evaluate** tab.
-       5. Fill in or select applicable _Users_.
+       5. Fill in or select applicable **Users**.
        6. Click **Generated access token**.
        
           ![generate access token screen](../../assets/images/keyevaluate.png)
