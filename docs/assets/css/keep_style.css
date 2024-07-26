@@ -59,10 +59,11 @@ nav.md-tabs {
   font-family:"HCLTech Roobert";
   text-transform: capitalize;
   font-size: medium;
-  color: #5b666d;
+  color: #000000;
 }
 .md-typeset h6{
   font-family:"HCLTech Roobert";
+  color: #000000;
 }
 
 tr.lostLinkItem:nth-child(even) {
@@ -74,3 +75,80 @@ The css is for changing opacity of image on hover to indicate that the image can
 p a img:hover{
   opacity: .6;
 }
+
+/*
+  the following css is for increasing the font size and changing the font and font color of the copyright
+
+  the css includes making the color of the link white and changing the font weight and text decoration on hover
+  */
+
+  .md-copyright {
+    font-family:"HCLTech Roobert";
+    font-size: 15px;
+    color: #FFFFFF;
+  }
+  
+  .md-copyright a:link {
+    color: #FFFFFF;
+  }
+
+  .md-copyright a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .md-copyright div a:link {
+    color: #FFFFFF;
+  }
+  
+  .md-copyright div {
+    color: #FFFFFF;
+  }
+  
+  .md-copyright div a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+   /*
+  the following css is for increasing the font size of the admonition
+  */
+
+  .admonition p{
+    font-size:medium
+  }
+
+  .admonition ul{
+    font-size:medium
+  }
+
+  .admonition ol{
+    font-size:medium
+  }
+
+   /*
+  the following css is for the color and font size of the footer
+  */
+
+  .footnote ol li p{
+    font-size:110%;
+    color: #000000;
+  }
+
+  /*
+  the following css is for increasing the font size in tables
+  */
+  table td{
+    font-size: medium;
+  }
+
+  table th{
+    font-size: medium;
+  }
+  /*
+  the following css is for the links in the page
+  */
+  
+  p a:hover{
+    text-decoration: underline;
+  }
