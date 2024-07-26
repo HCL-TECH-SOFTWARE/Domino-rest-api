@@ -8,7 +8,7 @@ title: Downloads
 
 Download from:
 
-- [HCL Software License & Download Portal (Flexnet)](https://hclsoftware.flexnetoperations.com/){: target="_blank"}
+- [HCL Software License & Download Portal](https://hclsoftware.flexnetoperations.com/){: target="_blank"}
 - [My HCLSoftware Portal](https://my.hcltechsw.com/){: target="_blank"}
 
 ## Presentations

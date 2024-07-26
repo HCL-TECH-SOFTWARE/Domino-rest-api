@@ -22,7 +22,11 @@
     - `Domino_REST_API_V1.0.9_R14_Docker.tar.gz`
     - `Domino_REST_API_V1.0.9_R14_Installer.tar.gz`
 
-#### via HCL Software License and Download Portal (Flexnet)
+!!!warning "Important"
+    - For **Domino customers**, download the Domino REST API via the [My HCLSoftware Portal](#via-my-hclsoftware-portal). 
+    - For **Volt MX Go customers**, download the Domino REST API via [HCL Software License and Download Portal](#via-hcl-software-license-and-download-portal) or via [My HCLSoftware Portal](#via-my-hclsoftware-portal).
+
+#### via HCL Software License and Download Portal
 
 **Option 1**
 
@@ -78,7 +82,7 @@ Domino REST API can be installed on:
 - Domino Server on [Docker or Kubernetes](../installconfig/docker.md)
 <!-- Domino Server on [Kubernetes](../installconfig/helm.md)-->
 
-All platforms use a Java-based installer, except Kubernetes or Docker, which uses a container (colloquial referred to as Docker) image. You can download the installer and the Docker image from your Flexnet account. For any questions, contact your HCL reseller.
+All platforms use a Java-based installer, except Kubernetes or Docker, which uses a container (colloquial referred to as Docker) image. You can download the installer and the Docker image from your HCL Software License and Download Portal or My HCLSoftware Portal account. For any questions, contact your HCL reseller.
 
 !!! warning "You did shut down Domino, did you?"
 
