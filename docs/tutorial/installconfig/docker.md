@@ -27,7 +27,7 @@ Running Domino REST API with a Docker image requires the following:
 
 - **Domino REST API Docker image**. 
 
-    Download the image as an archive file from [HCL Software License and Download Portal (Flexnet)](https://hclsoftware.flexnetoperations.com/) or [My HCLSoftware Portal](https://my.hcltechsw.com/). For more information, see [Download Domino REST API](index.md#download-domino-rest-api).
+    Download the image as an archive file from [HCL Software License and Download Portal](https://hclsoftware.flexnetoperations.com/) or [My HCLSoftware Portal](https://my.hcltechsw.com/). For more information, see [Download Domino REST API](index.md#download-domino-rest-api).
 
     !!!warning "Important"
         <!-- This prerequisite is only needed if you would use the Docker image from **HCL Software License and Download Portal (Flexnet)** or **My HCLSoftware Portal**.--> 
@@ -76,7 +76,7 @@ A Domino server uses one persistent volume to store its data. This volume also s
 
 ## Load Docker image
 
-**For docker image from Flexnet or My HCLSoftware Portal**
+**For docker image from HCL Software License and Download Portal or My HCLSoftware Portal**
 
 Load the docker image that you've downloaded from [prerequisites](#prerequisites). Make sure you [extract the tar.gz file](https://linuxize.com/post/how-to-extract-unzip-tar-gz-file/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"} first. 
 
@@ -110,7 +110,7 @@ Depending on the compose file you choose, a different set of variables needs to 
 | Variable | Example | Remarks |
 | :---- | :---- | :---- |
 | CONTAINER_HOSTNAME | domino.acme.com | Pro tip: use something.local for local testing|
-| CONTAINER_IMAGE | docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.10.0 (example name for docker image from Flexnet or My HCLSoftware Portal from earlier release)</br></br>domino-rest-api:1.0.7 (example name for docker image from Flexnet or My HCLSoftware Portal starting v1.0.7 release)</br></br>hclcr.io/domino/restapi:1.0.6 (example name for docker image from Harbor)| <!--**Check** carefully for the current image name! `:latest` most likely need to be replaced.--> For docker image downloaded from Flexnet or My HCLSoftware Portal, update based on the name of the loaded image, such as the example shown above, or use `docker images ls` to see the exact image name. <br><br>For docker image downloaded from Harbor, update based on the image name of the latest docker image version for docker compose .env file from Harbor indicated in [What's New](../../references/whatisnew.md). |
+| CONTAINER_IMAGE | docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.10.0 (example name for docker image from HCL Software License and Download Portal or My HCLSoftware Portal from earlier release)</br></br>domino-rest-api:1.0.7 (example name for docker image from HCL Software License and Download Portal or My HCLSoftware Portal starting v1.0.7 release)</br></br>hclcr.io/domino/restapi:1.0.6 (example name for docker image from Harbor)| <!--**Check** carefully for the current image name! `:latest` most likely need to be replaced.--> For docker image downloaded from HCL Software License and Download Portal or My HCLSoftware Portal, update based on the name of the loaded image, such as the example shown above, or use `docker images ls` to see the exact image name. <br><br>For docker image downloaded from Harbor, update based on the image name of the latest docker image version for docker compose .env file from Harbor indicated in [What's New](../../references/whatisnew.md). |
 | CONTAINER_NAME | domino-keep-test02 | |
 | CONTAINER_VOLUMES | domino_keep_notesdata | no spaces or special characters |
 | SERVERSETUP_ADMIN_CN | Peter Parker | |

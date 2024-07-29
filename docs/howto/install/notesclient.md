@@ -12,7 +12,7 @@ The procedure guides you to try the Domino REST API with a sample demo Notes dat
 ## Prerequisites
 
 - HCL Notes Desktop Client installed.
-- Domino REST API installed using the `restapiInstall.jar` from Flexnet.
+- Domino REST API installed using the `restapiInstall.jar` from My HCLSoftware Portal or HCL Software License and Download Portal.
 
     --8<-- "jarfilename.md"
 
