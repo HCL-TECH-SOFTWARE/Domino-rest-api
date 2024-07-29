@@ -18,10 +18,14 @@ See the menu on the left for the sequence.
     - a remote server (note: you need OS access there)
     - in a virtual machine
     - in a (Docker) container using the the Domino REST API Container image
+
 - [Postman](https://www.postman.com) installed
+
 - [CURL](https://curl.se) installed
 - An IDE, like Eclipse or Visual Studio Code, installed
+
 - [NodeJS](https://nodejs.org/en/) (LTS Version) if you want to complete the JavaScript exercises
+
 - [JDK](https://jdk.java.net) (>= 8) if you want to complete the Java exercises
 - Internet connection
 - Optional (but you want out of curiosity): Domino Designer installed

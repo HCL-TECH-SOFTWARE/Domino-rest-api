@@ -10,6 +10,7 @@ Four ways to login to the REST API
 
 - Lab 0 completed
 - Domino with REST running
+
 - downloaded `keep` or `keep.cmd` [from here](downloadindex.md)
 
 ## Steps in logging in to the REST API
@@ -78,6 +79,7 @@ A successful login shows the Admin UI.
 ### 4. Login using Postman
 
 - Download Import the Postman [collection](../downloads/dachnug2023.postman_collection.json) and [environment](../downloads/dachnug2023.postman_environment.json)
+
 - Open the Lab1 folder, execute the first entry labeled "Login"
 
 The successful login shows the bearer token and 4 passed tests
@@ -87,12 +89,15 @@ The successful login shows the bearer token and 4 passed tests
 ## How to check
 
 - All methods return the bearer token. Copy the token and paste it in the [JWT Token checker](https://jwt.io/)
+
 - Each token has a different start/end time
 
 ## Things to explore
 
 - [Official Domino REST API documentation](https://opensource.hcltechsw.com/Domino-rest-api/index.html)
+
 - [Discord discussion](https://discord.com/invite/jmRHpDRnH4)
+
 - Call the `/api` endpoint using curl.
 - Check the different OpenAPI collections in the swagger UI.
 - Check what happens when invalid credentials are provided.

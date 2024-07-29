@@ -27,22 +27,21 @@ Running Domino REST API with a Docker image requires the following:
 
 - **Domino REST API Docker image**. 
 
-    Download the image as an archive file from [HCL Software License and Download Portal](https://hclsoftware.flexnetoperations.com/) or [My HCLSoftware Portal](https://my.hcltechsw.com/). For more information, see [Download Domino REST API](index.md#download-domino-rest-api).
+    Download the image as an archive file from [HCL Software License and Download Portal](https://hclsoftware.flexnetoperations.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"} or [My HCLSoftware Portal](https://my.hcltechsw.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"}. For more information, see [Download Domino REST API](index.md#download-domino-rest-api).
 
-    !!!warning "Important"
-        <!-- This prerequisite is only needed if you would use the Docker image from **HCL Software License and Download Portal (Flexnet)** or **My HCLSoftware Portal**.--> 
+    !!!warning "Important" 
         
-        - If using a Docker image from [HCL Container Repository (Harbor)](https://hclcr.io/){: target="_blank"}, take note of the image name of the latest Docker image version from Harbor indicated in [What's New](../../references/whatisnew.md), update the CONTAINER_IMAGE variable in the [.env file](#update-env-file), and then [execute docker-compose](#run-domino-rest-api).
+        - If using a Docker image from [HCL Container Repository (Harbor)](https://hclcr.io/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"}, take note of the image name of the latest Docker image version from Harbor indicated in [What's New](../../references/whatisnew.md), update the CONTAINER_IMAGE variable in the [.env file](#update-env-file), and then [execute docker-compose](#run-domino-rest-api).
 
         - If prompted for access to HCL Container Repository (Harbor), [obtain your HCL Container Repository username and password](../../howto/install/obtainauthenticationtoken.md), and then sign-in using `docker login hclcr.io` command and the obtained credentials.  
 
 - **Docker compose file** 
 
-    Download the file from [Downloadable resources](../../references/downloads.md). Select the matching one for either a standalone primary or an additional server.
+    Download the file from [downloadable resources](../../references/downloads.md). Select the matching one for either a standalone primary or an additional server.
 
 - **`.env` file**. 
 
-    Download the `sample.env` from [Downloadable resources](../../references/downloads.md). **Rename the file to `.env`**<!--, and **update** the `.env` file with your values-->.
+    Download the `sample.env` from [downloadable resources](../../references/downloads.md). **Rename the file to `.env`**<!--, and **update** the `.env` file with your values-->.
 
 - A valid **Domino server id**, when you want to run an additional server in your existing domain.
 
@@ -100,10 +99,10 @@ Take note of the image name of the latest docker image version for docker compos
 
 ## Update .env file
 
-Depending on the compose file you choose, a different set of variables needs to be replaced. If a variable isn't in the compose file, you don't need it. We keep the variable names in sync with [One-touch Domino setup](https://help.hcltechsw.com/domino/12.0.0/admin/wn_one-touch_domino_setup.html), thus in the compose file you will find gems like `SERVERSETUP_SERVER_NAME: "${SERVERSETUP_SERVER_NAME}"`. This makes naming of variables consistent.
+Depending on the compose file you choose, a different set of variables needs to be replaced. If a variable isn't in the compose file, you don't need it. We keep the variable names in sync with [One-touch Domino setup](https://help.hcl-software.com/domino/14.0.0/admin/inst_onetouch.html), thus in the compose file you will find gems like `SERVERSETUP_SERVER_NAME: "${SERVERSETUP_SERVER_NAME}"`. This makes naming of variables consistent.
 
 !!!tip
-    Refer also to the official [List of One-touch environment variables](https://help.hcltechsw.com/domino/12.0.0/admin/inst_onetouch_preparing_sysenv.html) for reference.
+    Refer also to the official [List of One-touch environment variables](https://help.hcltechsw.com/domino/14.0.0/admin/inst_onetouch_preparing_sysenv.html) for reference.
 
 **To update the variables in the compose file, update the variables in the `.env` file with your values**. Replace all values after the equal `=` sign. Refer to the table below for guidance on the variables, their example values, and additional information. 
 
@@ -138,6 +137,7 @@ docker-compose up
 !!! note
     - Start in the directory where the files `server.id` and `docker-compose.yml` are located.
     - The setup can take a few minutes, depending on your hardware and the network speed to your primary server.
+    
     - If prompted for access credentials to HCL Container Repository (Harbor), see [Obtain authentication token from HCL Container Repository](../../howto/install/obtainauthenticationtoken.md).
 
 <!-- prettier-ignore -->
@@ -180,7 +180,8 @@ On this foundation, the GitHub.com hosted [Domino Docker](https://github.com/HCL
 Installation steps are as follows:
 
 1. Clone the [domino-docker](https://github.com/HCL-TECH-SOFTWARE/domino-container) repository: `git clone https://github.com/HCL-TECH-SOFTWARE/domino-container`
-2. Change into the installations directory: `cd start_script`
+
+2. Change into the installation directory: `cd start_script`
 3. Run the installer: `./install_domino_container` 
 
     !!!note

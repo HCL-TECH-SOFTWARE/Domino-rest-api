@@ -17,6 +17,7 @@ Passkeys are better options to passwords as they use public key cryptography to 
 ### For Mac
 
 - You have [set up iCloud Keychain](https://support.apple.com/en-ph/guide/mac-help/mh43699/13.0/mac/13.0) to create a passkey.
+
 - You have an Apple ID to set up iCloud Keychain.
 - Your Mac has a Touch ID sensor.
 
@@ -26,6 +27,7 @@ Passkeys are better options to passwords as they use public key cryptography to 
 ### For Windows
 
 - You have set up [Windows Hello](https://support.microsoft.com/en-us/windows/learn-about-windows-hello-and-set-it-up-dae28983-8242-bb2a-d3d1-87c9d265a5f0) as Chrome on Windows stores passkeys in Windows Hello.
+
 - Your Windows machine supports the Windows Hello options.     
 
 ## Procedures

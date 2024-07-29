@@ -146,9 +146,34 @@ p a img:hover{
     font-size: medium;
   }
   /*
-  the following css is for the links in the page
+  the following css is for underlining the links in the page when hovered to provide a visual indication
   */
   
   p a:hover{
     text-decoration: underline;
   }
+
+  /*
+  the following css is for increasing the font size of the details tag, used in the whats new and for expandable tips and notes
+  */
+
+  details.info{
+    font-size: medium;
+  }
+
+  details.note{
+    font-size: medium;
+  }
+  /*
+  the following css is for underlining the link in the table
+  */
+  table td a:hover{
+    text-decoration: underline;
+  }
+  /*
+  the following css is for underlining the link in the h2 tag used in the Post Installation task topic
+  */
+  h2 a:hover{
+    text-decoration: underline;
+  }
+
