@@ -12,5 +12,6 @@ Topics to guide you in completing configuration goals and tasks in relation to d
 - [JWT multi server](jwtmultiserver.md)
 - [Configuring Ports](prodports.md)
 - [Setup Office Round Trip Experience](roundtrip.md)
+- [Setup External Idp for Office Round Trip Experience](roundtripidp.md)
 - [Setup Virtual Spreadsheet](virtualsheet.md)
 - [Update Domino REST API](versionupdate.md)
