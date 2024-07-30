@@ -43,7 +43,8 @@ A JWT is a string with a fixed structure. It's composed of 3 strings in [Base64]
     JWT are not encrypted, so they are not suitable to carry confidential information.
 
 - The signature "only" guarantees that the token hasn't been altered since signing.
-- For verification, you need access to the public key of the signer. For more information, see [OAuth](#oauth). 
+- For verification, you need access to the public key of the signer. For more information, see [OAuth](#oauth).
+
 - The actual information could be anything JSON, but has defined elements like issue date and expiry when used as access token.
 
 There is [more to learn about JWT](https://jwt.io/), including an easy tool to check.
@@ -79,7 +80,9 @@ OAuth is an open and complex standard. To use its Authorization capabilities for
 Certificates (nothing new to Notes people, we had them in the `notes.id` for decades) in the internet world come in three flavors:
 
 - Issued by a recognized certificate authority [CA](https://en.wikipedia.org/wiki/Certificate_authority) like [LetsEncypt](https://letsencrypt.org)
+
 - Issued by a private or unrecognized CA
+
 - [Self signed](https://en.wikipedia.org/wiki/Self-signed_certificate)
 
 !!! tip "Don't self sign"
@@ -121,6 +124,9 @@ The [OpenAPI specification](https://www.openapis.org/) describes in a standardiz
 There is a rich eco system of tooling that allows to produce or consume OpenAPI specifications, here's just a small selection:
 
 - UI to read and try the specs: [Swagger UI](https://swagger.io/tools/swagger-ui/) and [ReDoc](https://redocly.com/reference/)
+
 - UI to create and edit: [Apicurio Studio](https://www.apicur.io/studio/) and [Swagger Editor](https://swagger.io/tools/swagger-editor/)
+
 - Tools to [generate code](https://swagger.io/tools/swagger-codegen/) from a spec
+
 - Libraries that consume a spec, create routes and enforce the defined constrains. For example [Java](https://vertx.io/docs/vertx-openapi/java/), [NodeJS](https://www.npmjs.com/package/express-openapi-validator), [Python](https://pypi.org/project/openapi-core/). There are many more.

@@ -19,7 +19,9 @@ For HTTPS traffic, JKS, PEM, and PFX certificate formats are supported. For publ
 To get valid certificates, use any of the following approaches:
 
 - Use [Let's Encrypt](https://letsencrypt.org/) with either [Domino cert manager](https://help.hcltechsw.com/domino/12.0.2/admin/secu_le_using_certificate_manager.html) or a proxy, such as [nginx](../web/index.md).
+
 - Ask your infrastructure, security or networking team (if you have one) for valid certificates.
+
 - <!--Wanting the first two options,-->On your own risk: Create your [own certificates using OpenSSL](https://gist.github.com/fntlnz/cf14feb5a46b2eda428e000157447309).
 
 !!! note

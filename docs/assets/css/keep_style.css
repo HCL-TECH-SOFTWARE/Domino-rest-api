@@ -146,13 +146,13 @@ p a img:hover{
     font-size: medium;
   }
   /*
-  the following css is for underlining the links in the page when hovered to provide a visual indication
+  the following css is for making the links in the page bold when hovered to provide a visual indication
   */
   
   p a:hover{
-    text-decoration: underline;
+    font-weight: bold;
   }
-
+  
   /*
   the following css is for increasing the font size of the details tag, used in the whats new and for expandable tips and notes
   */
@@ -165,15 +165,15 @@ p a img:hover{
     font-size: medium;
   }
   /*
-  the following css is for underlining the link in the table
+  the following css is for making the link in the table bold
   */
   table td a:hover{
-    text-decoration: underline;
+    font-weight: bold;
   }
   /*
-  the following css is for underlining the link in the h2 tag used in the Post Installation task topic
+  the following css is for making the link in the h2 tag, used in the Post Installation task topic, bold
   */
   h2 a:hover{
-    text-decoration: underline;
+    font-weight: bold;
   }
 

@@ -232,7 +232,7 @@ An SPA (Single Page App) or a mobile client can't keep a client secret. For thos
 ![Spa app screen](../../assets/images/keypkce.png)
 
 !!!warning "Important"
-It's **SECURITY**, so learn about [Keycloak](https://www.keycloak.org/guides#getting-started/)!
+    It's **SECURITY**, so learn about [Keycloak](https://www.keycloak.org/guides#getting-started/)!
 
 ## Configure the Domino REST API
 

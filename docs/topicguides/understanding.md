@@ -46,7 +46,9 @@ Domino provides its own source of identity, the Domino directory. However this i
 - A database contains 1:n schema files in its design file resources.
 - Each schema contains 0:n form definitions. 0 if you only want to read view/folder data.
 - Each form definition contains 1:n modes. The first mode is called `default`, which is used on document creation.
+
 - When using [ODATA](https://www.odata.org) access, a mode `odata` is required.
+
 - The field definitions are based on JSON schema.
 - Each schema in an NSF database can be mapped to one or more scopes in the directory.
 - The scope is the name used in `?dataSource=` as public access name. You shouldn't change scope names after they get used. However, you can change which schema they map to any time.

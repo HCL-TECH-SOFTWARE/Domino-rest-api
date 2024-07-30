@@ -50,10 +50,15 @@ Domino REST API caters to Domino mail as well as Domino applications, irrespecti
 Domino REST API is designed to work with:
 
 - Desktop applications with direct access to the Domino server, written in any language, for example Java, C#, Rust, [Electron](https://www.electronjs.org/), [Jupyter](https://jupyter.org/), [Python](https://www.python.org/) etc.
+
 - Browser-based applications hosted on Domino REST API or elsewhere, written in HTML and JavaScript, for example [ReactJS](https://reactjs.org/), [VueJS](https://vuejs.org/), [Svelte](https://svelte.dev/), [Angular](https://angular.io/), [VanillaJS](http://vanilla-js.com/) etc.
+
 - Application-server-based applications, for example [NodeJS](https://nodejs.org/en/), [HCL DX](https://www.hcltechsw.com/dx), [Spring](https://spring.io/projects/spring-framework), [SpringBoot](https://spring.io/projects/spring-boot), [Vaadin](https://vaadin.com), [Vert.x](https://vertx.io), [Quarkus](https://quarkus.io), [PHP](https://www.php.net/), [Wordpress](https://wordpress.com/).
+
 - Command Line Interfaces (CLI), starting with but not limited to [curl](../references/usertools/curl.md).
+
 - [OData](https://www.odata.org) aware applications (e.g. SAP, Salesforce, Microsoft Excel, [Tableau](https://help.tableau.com/current/pro/desktop/en-us/examples_odata.htm) etc).
+
 - LowCode environments like [HCL Volt MX](https://www.hcltechsw.com/volt-mx), [NodeRED](https://nodered.org/) or others.
 
 ### Domino REST API is secure
