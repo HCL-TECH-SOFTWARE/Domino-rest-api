@@ -79,7 +79,7 @@ p a img:hover{
 /*
   the following css is for increasing the font size and changing the font and font color of the copyright
 
-  the css includes making the color of the link white and changing the font weight and text decoration on hover
+  the css includes making the color of the link white and changing the font weight on hover
   */
 
   .md-copyright {
@@ -94,7 +94,6 @@ p a img:hover{
 
   .md-copyright a:hover {
     font-weight: bold;
-    text-decoration: underline;
   }
 
   .md-copyright div a:link {
@@ -107,7 +106,6 @@ p a img:hover{
   
   .md-copyright div a:hover {
     font-weight: bold;
-    text-decoration: underline;
   }
 
    /*
@@ -165,13 +163,13 @@ p a img:hover{
     font-size: medium;
   }
   /*
-  the following css is for making the link in the table bold
+  the following css is for making the link in the table bold when hovered
   */
   table td a:hover{
     font-weight: bold;
   }
   /*
-  the following css is for making the link in the h2 tag, used in the Post Installation task topic, bold
+  the following css is for making the link in the h2 tag, used in the Post Installation task topic, bold when hovered
   */
   h2 a:hover{
     font-weight: bold;

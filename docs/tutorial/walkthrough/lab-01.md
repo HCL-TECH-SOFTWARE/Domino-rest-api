@@ -21,8 +21,8 @@ The database `KeepConfig.nsf` uses the group `LocalKeepAdmins` for access contro
 
 !!! danger "Use your own credentials"
 
-    The steps below use "KEEP Admin" and "passw0rd" as credentials
-    Replace those with the admin user on your Domino server
+    The steps below use "KEEP Admin" and "passw0rd" as credentials.
+    Replace those with the admin user on your Domino server.
 
 ### 1. Login using the command line
 

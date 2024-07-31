@@ -128,6 +128,7 @@ All forms are now activated with default settings and have **Active** status.
 
 !!!tip
     - Clicking **Deactivate All** deactivates all active forms and removes all the configurations you have made to each of the forms. In the confirmation dialog, click **Yes** to confirm. All forms now have an **Inactive** status.
+
     - Clicking **Deactivate All** won't deactivate forms created using the [Add New Form Schema](#add-new-form-schema) feature.  
 
 ## Change form configuration
@@ -242,7 +243,7 @@ Use this function to see the differences between the modes of a selected form. T
 
 ## Edit a view
 
-- See [Edit a database view of a schema](../../howto/database/editviewcolumn.md) for more information. 
+See [Edit a database view of a schema](../../howto/database/editviewcolumn.md) for more information. 
 
 ## List available database agents
 
