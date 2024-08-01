@@ -41,7 +41,7 @@ The procedure guides you on how to setup and use the Microsoft Office Round Trip
         `ms-word:ofv|u|whitepalace.keepproject.io:8880/api/webdav-v1/attachment/attachmentdb/2D88CDF9549379C700258A9F002797CA/sample.docx`
 
         !!!info
-            The link format is based on the [Office URI Schemes](https://learn.microsoft.com/en-us/office/client-developer/office-uri-schemes){: target="_blank" rel="noopener noreferrer"}.
+            The link format is based on the [Office URI Schemes](https://learn.microsoft.com/en-us/office/client-developer/office-uri-schemes).
 
     **OR**
 
@@ -82,14 +82,12 @@ The procedure guides you on how to setup and use the Microsoft Office Round Trip
 
     ![Open MS Office application](../../assets/images/SaveMSW.png){: style="height:70%;width:70%"}
 
-    <!--![alt text](../assets/images/rtprompt.png)-->
-
 3. In the login dialog, enter your Domino REST API login credentials and click **Login**. 
 
     ![Login dialog](../../assets/images/ofbalogin.png)
 
     !!!info
-        The authentication is based on the [Office Forms Based Authentication (OFBA)](https://learn.microsoft.com/en-us/openspecs/sharepoint_protocols/ms-ofba/30c7bbe9-b284-421f-b866-4e7ed4866027){: target="_blank" rel="noopener noreferrer"} protocol. This is necessary since browsers and office applications don't currently support cookie and header sharing.
+        The authentication is based on the [Office Forms Based Authentication (OFBA)](https://learn.microsoft.com/en-us/openspecs/sharepoint_protocols/ms-ofba/30c7bbe9-b284-421f-b866-4e7ed4866027) protocol. This is necessary since browsers and office applications don't currently support cookie and header sharing.
 
     The MS Office file attachment is now opened in the applicable MS Office application. In the following image, you see an opened MS Word document as an example.
 

@@ -28,6 +28,7 @@ Domino REST API provides metrics in Prometheus format on Port 8890. When you don
 To make all ports accessible on Port 443, an https proxy server (Ingress on Kubernetes) can be used. This documentation provides two examples:
 
 - [Proxy using multiple sub-domains](../../howto/web/httpsproxy.md)
+
 - [Proxy using URL path access](../../howto/web/httpsproxy2.md)
 
 Alternatively you can configure the Ports directly for TLS. The ports don't change like the web default settings (80 for http, 443 for https), they just start to require https, e.g. `https://yourserver.com:8880`

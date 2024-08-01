@@ -59,12 +59,119 @@ nav.md-tabs {
   font-family:"HCLTech Roobert";
   text-transform: capitalize;
   font-size: medium;
-  color: #5b666d;
+  color: #000000;
 }
 .md-typeset h6{
   font-family:"HCLTech Roobert";
+  color: #000000;
 }
 
 tr.lostLinkItem:nth-child(even) {
   background-color: #eeeeee;
 }
+/*
+The css is for changing opacity of image on hover to indicate that the image can be opened in a new tab
+*/
+p a img:hover{
+  opacity: .6;
+}
+
+/*
+  the following css is for increasing the font size and changing the font and font color of the copyright
+
+  the css includes making the color of the link white and changing the font weight on hover
+  */
+
+  .md-copyright {
+    font-family:"HCLTech Roobert";
+    font-size: 15px;
+    color: #FFFFFF;
+  }
+  
+  .md-copyright a:link {
+    color: #FFFFFF;
+  }
+
+  .md-copyright a:hover {
+    font-weight: bold;
+  }
+
+  .md-copyright div a:link {
+    color: #FFFFFF;
+  }
+  
+  .md-copyright div {
+    color: #FFFFFF;
+  }
+  
+  .md-copyright div a:hover {
+    font-weight: bold;
+  }
+
+   /*
+  the following css is for increasing the font size of the admonition
+  */
+
+  .admonition p{
+    font-size:medium
+  }
+
+  .admonition ul{
+    font-size:medium
+  }
+
+  .admonition ol{
+    font-size:medium
+  }
+
+   /*
+  the following css is for the color and font size of the footer
+  */
+
+  .footnote ol li p{
+    font-size:110%;
+    color: #000000;
+  }
+
+  /*
+  the following css is for increasing the font size in tables
+  */
+  table td{
+    font-size: medium;
+  }
+
+  table th{
+    font-size: medium;
+  }
+  /*
+  the following css is for making the links in the page bold when hovered to provide a visual indication
+  */
+  
+  p a:hover{
+    font-weight: bold;
+  }
+  
+  /*
+  the following css is for increasing the font size of the details tag, used in the whats new and for expandable tips and notes
+  */
+
+  details.info{
+    font-size: medium;
+  }
+
+  details.note{
+    font-size: medium;
+  }
+  /*
+  the following css is for making the link in the table bold when hovered
+  */
+  table td a:hover{
+    font-weight: bold;
+  }
+  /*
+  the following css is for making the link in the h2 tag, used in the Post Installation task topic, bold when hovered
+  */
+  h2 a:hover{
+    font-weight: bold;
+  }
+

@@ -13,6 +13,7 @@
 ### Prerequisite
 
 - Domino must be [installed](https://www.hcltechsw.com/domino).
+
 - Domino REST API installer needs to be run as administrator.
 
 To install, follow the example below:

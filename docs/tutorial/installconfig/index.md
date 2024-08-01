@@ -26,32 +26,10 @@
     - For **Domino customers**, download the Domino REST API via the [My HCLSoftware Portal](#via-my-hclsoftware-portal). 
     - For **Volt MX Go customers**, download the Domino REST API via [HCL Software License and Download Portal](#via-hcl-software-license-and-download-portal) or via [My HCLSoftware Portal](#via-my-hclsoftware-portal).
 
-#### via HCL Software License and Download Portal
-
-**Option 1**
-
-1. Go to [HCL Software License and Download Portal](https://hclsoftware.flexnetoperations.com/){: target="_blank" rel="noopener noreferrer"}.
-2. On the sign in page, enter your username and click **Next**. The **License & Download Portal** home page opens.
-3. In the **Your Downloads** pane, scroll to find and then select **HCL Domino**. The **Download Packages** page opens.
-4. On the **New Versions** tab, select the HCL Domino REST API version that you want to download.
-5. On the **Software Terms and Conditions** page, click **I agree** for the **EULA Agreement**.
-6. On the **Downloads** page, select the files to download and then click **Download Selected Files**, or click the file name of the file you want to download in the **File Name** column. 
-
-
-**Option 2**
-
-1. Go to [HCL Software License and Download Portal](https://hclsoftware.flexnetoperations.com/){: target="_blank" rel="noopener noreferrer"}.
-2. On the sign in page, enter your username and click **Next**. The **License & Download Portal** home page opens.
-1. Go to **Downloads** &rarr; **Search Downloads**.
-2. On the **Download Search** page, enter `HCL Domino REST API` in the **Search for** field, and then click **Search**.
-3. Select the HCL Domino REST API version that you want to download from the search result.
-5. On the **Software Terms and Conditions** page, click **I agree** for the **EULA Agreement**.
-6. On the **Downloads** page, select the files to download and then click **Download Selected Files**, or click the file name of the file you want to download in the **File Name** column. 
-
-
 #### via My HCLSoftware Portal
 
-1. Go to [My HCLSoftware Portal](https://my.hcltechsw.com/){: target="_blank" rel="noopener noreferrer"}.
+1. Go to [My HCLSoftware Portal](https://my.hcltechsw.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"}.
+
 2. On the landing page, click **Sign in**.
 3. On the sign in page, login using your credentials. 
 4. On the **Software Downloads** page, click **HCL Domino**. 
@@ -59,6 +37,28 @@
 6. Under **All Releases**, click the release version that you want to download. 
 7. Under **Downloads**, click the download icon corresponding to the file that you want to download. 
 
+#### via HCL Software License and Download Portal
+
+**Option 1**
+
+1. Go to [HCL Software License and Download Portal](https://hclsoftware.flexnetoperations.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"}.
+
+2. On the sign in page, enter your username and click **Next**. The **License & Download Portal** home page opens.
+3. In the **Your Downloads** pane, scroll to find and then select **HCL Domino**. The **Download Packages** page opens.
+4. On the **New Versions** tab, select the HCL Domino REST API version that you want to download.
+5. On the **Software Terms and Conditions** page, click **I agree** for the **EULA Agreement**.
+6. On the **Downloads** page, select the files to download and then click **Download Selected Files**, or click the file name of the file you want to download in the **File Name** column. 
+
+**Option 2**
+
+1. Go to [HCL Software License and Download Portal](https://hclsoftware.flexnetoperations.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"}.
+
+2. On the sign in page, enter your username and click **Next**. The **License & Download Portal** home page opens.
+1. Go to **Downloads** &rarr; **Search Downloads**.
+2. On the **Download Search** page, enter `HCL Domino REST API` in the **Search for** field, and then click **Search**.
+3. Select the HCL Domino REST API version that you want to download from the search result.
+5. On the **Software Terms and Conditions** page, click **I agree** for the **EULA Agreement**.
+6. On the **Downloads** page, select the files to download and then click **Download Selected Files**, or click the file name of the file you want to download in the **File Name** column. 
 
 <!-- prettier-ignore -->
 !!! tip
@@ -76,9 +76,13 @@
 Domino REST API can be installed on:
 
 - Notes Client on [macOS](../installconfig/mac.md)
+
 - Notes Client on [Windows](../installconfig/win.md)
+
 - Domino Server on [Windows](../installconfig/win.md)
+
 - Domino Server on [Linux](../installconfig/linux.md)
+
 - Domino Server on [Docker or Kubernetes](../installconfig/docker.md)
 <!-- Domino Server on [Kubernetes](../installconfig/helm.md)-->
 
@@ -107,9 +111,9 @@ The installer requires a series of parameters:
 
 ### Explanation of parameters
 
-| Short | Full parameter              | Mandatory | Description                                                                                                                                                                                                                                                                                |
-| :---: | --------------------------- | :-------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `-d`  | `--dataDir=<dataDir>`       |     ✓     | Directory of your HCL Notes or Domino data.                                                                                                                                                                                                                                                |
+| Short | Full parameter | Mandatory | Description |
+| :---: | ----- | :-------: | ----- |
+| `-d`  | `--dataDir=<dataDir>`       |     ✓     | Directory of your HCL Notes or Domino data. |
 | `-i`  | `--ini=<notesIni>`          |     ✓     | HCL Notes/Domino notes.ini file.                                                                                                                                                                                                                                                           |
 | `-r`  | `--restapiDir=<restapiDir>` |     ✓     | Directory to install the Domino REST API files into.                                                                                                                                                                                                                                       |
 | `-p`  | `--programDir=<programDir>` |     ✓     | Directory where HCL Notes or Domino is installed.                                                                                                                                                                                                                                          |
@@ -175,6 +179,9 @@ Follow this [guide](../../howto/install/uninstall.md) to remove Domino REST API 
 ## What to read next
 
 - Complete the [walkthrough tutorial](../walkthrough/index.md).
+
 - Learn about the [OpenAPI Swagger UI](../swagger.md).
+
 - [Understanding configuration](../../references/understandingconfig.md), Once you are ready to tweak the default configuration, you need to understand how.
+
 - [Hosting static applications](../../references/hostingstatic.md), often referred to as Single Page Applications (SPA) or browser apps. The [tutorial](../walkthrough/index.md) has [an example](../walkthrough/lab-07.md).

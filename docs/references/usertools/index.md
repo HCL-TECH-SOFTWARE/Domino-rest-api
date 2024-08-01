@@ -23,8 +23,12 @@ We use [Markdown](https://en.wikipedia.org/wiki/Markdown) to render this documen
 Images used here are created in multiple ways:
 
 - [OmniGraffle](https://www.omnigroup.com/omnigraffle/) (Mac)
+
 - [SmartDraw](https://www.smartdraw.com/) (Browser and Windows)
+
 - [PlantUML](https://plantuml.com/) rendering text into images (using this [VSCode plugin](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml))
+
 - Occasionally [Balsamiq](https://balsamiq.com/) for Wireframes
+
 - [GIMP](https://www.gimp.org/) to postprocess screenshots if needed
 - ... and a few others

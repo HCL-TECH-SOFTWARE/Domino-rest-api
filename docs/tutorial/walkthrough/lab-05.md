@@ -45,7 +45,7 @@ Alternative `POST` to `/api/setup-v1/admin/application`
 
 ### Generate Application Secret
 
-1. Click the **Generate Application Secret** icon. 
+1. Click **Click to Generate Secret**. 
 
     ![Create a secret](img/Secret01.png)
 
@@ -78,7 +78,9 @@ Alternative `POST` to `/api/setup-v1/admin/application/{{CLIENT_ID}}/secret?forc
 ## Things to explore
 
 - [Official Domino REST API documentation](https://opensource.hcltechsw.com/Domino-rest-api/index.html)
+
 - [Discord discussion](https://discord.com/invite/jmRHpDRnH4)
+
 - Explore creating / retrieving app in Postman.
 - Reset the secret.
 - Do the OAuth dance in Postman.

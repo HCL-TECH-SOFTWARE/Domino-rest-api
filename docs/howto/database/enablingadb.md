@@ -62,7 +62,7 @@ The high level entry contains a few properties and the collection of forms, view
 ### Views
 
 An array of entries describing name, alias(es), if any and UNID of the view design element.
-Views will show all columns contained
+Views will show all columns contained.
 
 ![Schema component View](../../assets/images/SchemaView.png)
 
@@ -150,341 +150,337 @@ To add a database schema, run the following command. Find the applicable Request
 
 ![Add database](../../assets/images/adddatabaseschema.png)
 
-<details>
-<summary><b>cURL code snippet</b></summary>
-
-```bash
-curl --location --request POST 'localhost:8880/api/setup-v1/schema?nsfPath=Demo.nsf&configName=demo' \
---header 'Authorization: Bearer $Bearer' \
---header 'Content-Type: application/json' \
---data-raw '
-{
-    "apiName": "demo",
-    "name": "demo",
-    "description": "Demo database",
-    "nsfPath": "Demo.nsf",
-    "icon": "Base64 stuff, preferably SVG",
-    "iconName": "mountain",
-    "isActive": true,
-    "requireRevisionToUpdate": false,
-    "formulaEngine": "domino",
-    "openAccess": true,
-    "allowCode": true,
-    "dqlAccess": true,
-    "dqlFormula": {
-        "formulaType": "domino",
-        "formula": "@True"
-    },
-    "views": [
-        {
-            "name": "Customers",
-            "alias": [
-                "Customers"
-            ],
-            "unid": "86C72C1BF64B6DF04825847100373215"
+???note "cURL code snippet"
+    ```bash
+    curl --location --request POST 'localhost:8880/api/setup-v1/schema?nsfPath=Demo.nsf&configName=demo' \
+    --header 'Authorization: Bearer $Bearer' \
+    --header 'Content-Type: application/json' \
+    --data-raw '
+    {
+        "apiName": "demo",
+        "name": "demo",
+        "description": "Demo database",
+        "nsfPath": "Demo.nsf",
+        "icon": "Base64 stuff, preferably SVG",
+        "iconName": "mountain",
+        "isActive": true,
+        "requireRevisionToUpdate": false,
+        "formulaEngine": "domino",
+        "openAccess": true,
+        "allowCode": true,
+        "dqlAccess": true,
+        "dqlFormula": {
+            "formulaType": "domino",
+            "formula": "@True"
         },
-        {
-            "name": "MarketingInfo",
-            "alias": [
-                "MarketingInfo"
-            ],
-            "unid": "10EA9EC66EA748BC4825851100420810"
-        },
-        {
-            "name": "ChineseCustomers",
-            "alias": [
-                "ChineseCustomers"
-            ],
-            "unid": "3FE5CD63E179F21600258680006DB25B"
-        },
-        {
-            "name": "($All)",
-            "alias": [
-                "($All)"
-            ],
-            "unid": "0E35D520A1EBBB5B48258435003E8284"
-        },
-        {
-            "name": "Samples",
-            "alias": [
-                "Samples"
-            ],
-            "unid": "5318911D496571410025860D00544B17"
-        }
-    ],
-    "forms": [
-        {
-            "formName": "Customer",
-            "formModes": [
-                {
-                    "modeName": "default",
-                    "fields": [
-                        {
-                            "name": "Form",
-                            "type": "string",
-                            "readOnly": true,
-                            "fieldGroup" : "thing",
-                            "multivalue" : true
+        "views": [
+            {
+                "name": "Customers",
+                "alias": [
+                    "Customers"
+                ],
+                "unid": "86C72C1BF64B6DF04825847100373215"
+            },
+            {
+                "name": "MarketingInfo",
+                "alias": [
+                    "MarketingInfo"
+                ],
+                "unid": "10EA9EC66EA748BC4825851100420810"
+            },
+            {
+                "name": "ChineseCustomers",
+                "alias": [
+                    "ChineseCustomers"
+                ],
+                "unid": "3FE5CD63E179F21600258680006DB25B"
+            },
+            {
+                "name": "($All)",
+                "alias": [
+                    "($All)"
+                ],
+                "unid": "0E35D520A1EBBB5B48258435003E8284"
+            },
+            {
+                "name": "Samples",
+                "alias": [
+                    "Samples"
+                ],
+                "unid": "5318911D496571410025860D00544B17"
+            }
+        ],
+        "forms": [
+            {
+                "formName": "Customer",
+                "formModes": [
+                    {
+                        "modeName": "default",
+                        "fields": [
+                            {
+                                "name": "Form",
+                                "type": "string",
+                                "readOnly": true,
+                                "fieldGroup" : "thing",
+                                "multivalue" : true
+                            },
+                            {
+                                "name": "Pet",
+                                "type": "string"
+                            },
+                            {
+                                "name": "color",
+                                "type": "string"
+                            },
+                            {
+                                "name": "email",
+                                "type": "string"
+                            },
+                            {
+                                "name": "employee_count",
+                                "type": "integer"
+                            },
+                            {
+                                "name": "first_name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "last_name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "hobbies",
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "name": "Owner",
+                                "type": "string",
+                                "format": "authors"
+                            },
+                            {
+                                "name": "Body",
+                                "type": "object",
+                                "format": "richtext"
+                            }
+                        ],
+                        "required": [
+                            "Form",
+                            "email",
+                            "first_name"
+                        ],
+                        "readAccessFormula": {
+                            "formulaType": "domino",
+                            "formula": "@True"
                         },
-                        {
-                            "name": "Pet",
-                            "type": "string"
+                        "writeAccessFormula": {
+                            "formulaType": "domino",
+                            "formula": "@True"
                         },
-                        {
-                            "name": "color",
-                            "type": "string"
+                        "deleteAccessFormula": {
+                            "formulaType": "domino",
+                            "formula": "@False"
                         },
-                        {
-                            "name": "email",
-                            "type": "string"
+                        "computeWithForm": false
+                    },
+                    {
+                        "modeName": "dql",
+                        "fields": [
+                            {
+                                "name": "Form",
+                                "type": "string",
+                                "readOnly": true
+                            },
+                            {
+                                "name": "Pet",
+                                "type": "string"
+                            },
+                            {
+                                "name": "color",
+                                "type": "string"
+                            },
+                            {
+                                "name": "email",
+                                "type": "string"
+                            },
+                            {
+                                "name": "first_name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "last_name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "hobbies",
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ],
+                        "required": [
+                            "Form",
+                            "email",
+                            "first_name"
+                        ],
+                        "readAccessFormula": {
+                            "formulaType": "domino",
+                            "formula": "@True"
                         },
-                        {
-                            "name": "employee_count",
-                            "type": "integer"
+                        "writeAccessFormula": {
+                            "formulaType": "domino",
+                            "formula": "@True"
                         },
-                        {
-                            "name": "first_name",
-                            "type": "string"
+                        "deleteAccessFormula": {
+                            "formulaType": "domino",
+                            "formula": "@False"
                         },
-                        {
-                            "name": "last_name",
-                            "type": "string"
+                        "computeWithForm": false
+                    }
+                ]
+            },
+            {
+                "formName": "Marketing",
+                "formModes": [
+                    {
+                        "modeName": "default",
+                        "fields": [
+                            {
+                                "name": "Form",
+                                "type": "string",
+                                "readOnly": true
+                            },
+                            {
+                                "name": "Assets",
+                                "type": "string"
+                            },
+                            {
+                                "name": "Country",
+                                "type": "string"
+                            },
+                            {
+                                "name": "FullName",
+                                "type": "string"
+                            },
+                            {
+                                "name": "Industry",
+                                "type": "string"
+                            },
+                            {
+                                "name": "Newsletter",
+                                "type": "string"
+                            },
+                            {
+                                "name": "email",
+                                "type": "string"
+                            },
+                            {
+                                "name": "gender",
+                                "type": "string",
+                                "writeOnly": true
+                            }
+                        ],
+                        "readAccessFormula": {
+                            "formulaType": "domino",
+                            "formula": "@True"
                         },
-                        {
-                            "name": "hobbies",
-                            "type": "array",
-                            "items": {
+                        "writeAccessFormula": {
+                            "formulaType": "domino",
+                            "formula": "@True"
+                        },
+                        "deleteAccessFormula": {
+                            "formulaType": "domino",
+                            "formula": "@False"
+                        },
+                        "computeWithForm": false
+                    }
+                ]
+            },
+            {
+                "formName": "SampleForm",
+                "formModes": [
+                    {
+                        "modeName": "default",
+                        "fields": [
+                            {
+                                "name": "Color",
+                                "type": "string"
+                            },
+                            {
+                                "name": "Form",
+                                "type": "string"
+                            },
+                            {
+                                "name": "Shape",
+                                "type": "string"
+                            },
+                            {
+                                "name": "Taste",
                                 "type": "string"
                             }
+                        ],
+                        "readAccessFormula": {
+                            "formulaType": "domino",
+                            "formula": "@True"
                         },
-                        {
-                            "name": "Owner",
-                            "type": "string",
-                            "format": "authors"
+                        "writeAccessFormula": {
+                            "formulaType": "domino",
+                            "formula": "@True"
                         },
-                        {
-                            "name": "Body",
-                            "type": "object",
-                            "format": "richtext"
-                        }
-                    ],
-                    "required": [
-                        "Form",
-                        "email",
-                        "first_name"
-                    ],
-                    "readAccessFormula": {
-                        "formulaType": "domino",
-                        "formula": "@True"
+                        "deleteAccessFormula": {
+                            "formulaType": "domino",
+                            "formula": "@False"
+                        },
+                        "computeWithForm": false
                     },
-                    "writeAccessFormula": {
-                        "formulaType": "domino",
-                        "formula": "@True"
-                    },
-                    "deleteAccessFormula": {
-                        "formulaType": "domino",
-                        "formula": "@False"
-                    },
-                    "computeWithForm": false
-                },
-                {
-                    "modeName": "dql",
-                    "fields": [
-                        {
-                            "name": "Form",
-                            "type": "string",
-                            "readOnly": true
-                        },
-                        {
-                            "name": "Pet",
-                            "type": "string"
-                        },
-                        {
-                            "name": "color",
-                            "type": "string"
-                        },
-                        {
-                            "name": "email",
-                            "type": "string"
-                        },
-                        {
-                            "name": "first_name",
-                            "type": "string"
-                        },
-                        {
-                            "name": "last_name",
-                            "type": "string"
-                        },
-                        {
-                            "name": "hobbies",
-                            "type": "array",
-                            "items": {
+                    {
+                        "modeName": "odata",
+                        "fields": [
+                            {
+                                "name": "Color",
+                                "type": "string"
+                            },
+                            {
+                                "name": "Form",
+                                "type": "string"
+                            },
+                            {
+                                "name": "Shape",
+                                "type": "string"
+                            },
+                            {
+                                "name": "Taste",
                                 "type": "string"
                             }
-                        }
-                    ],
-                    "required": [
-                        "Form",
-                        "email",
-                        "first_name"
-                    ],
-                    "readAccessFormula": {
-                        "formulaType": "domino",
-                        "formula": "@True"
-                    },
-                    "writeAccessFormula": {
-                        "formulaType": "domino",
-                        "formula": "@True"
-                    },
-                    "deleteAccessFormula": {
-                        "formulaType": "domino",
-                        "formula": "@False"
-                    },
-                    "computeWithForm": false
-                }
-            ]
-        },
-        {
-            "formName": "Marketing",
-            "formModes": [
-                {
-                    "modeName": "default",
-                    "fields": [
-                        {
-                            "name": "Form",
-                            "type": "string",
-                            "readOnly": true
+                        ],
+                        "readAccessFormula": {
+                            "formulaType": "domino",
+                            "formula": "@True"
                         },
-                        {
-                            "name": "Assets",
-                            "type": "string"
+                        "writeAccessFormula": {
+                            "formulaType": "domino",
+                            "formula": "@True"
                         },
-                        {
-                            "name": "Country",
-                            "type": "string"
+                        "deleteAccessFormula": {
+                            "formulaType": "domino",
+                            "formula": "@False"
                         },
-                        {
-                            "name": "FullName",
-                            "type": "string"
-                        },
-                        {
-                            "name": "Industry",
-                            "type": "string"
-                        },
-                        {
-                            "name": "Newsletter",
-                            "type": "string"
-                        },
-                        {
-                            "name": "email",
-                            "type": "string"
-                        },
-                        {
-                            "name": "gender",
-                            "type": "string",
-                            "writeOnly": true
-                        }
-                    ],
-                    "readAccessFormula": {
-                        "formulaType": "domino",
-                        "formula": "@True"
-                    },
-                    "writeAccessFormula": {
-                        "formulaType": "domino",
-                        "formula": "@True"
-                    },
-                    "deleteAccessFormula": {
-                        "formulaType": "domino",
-                        "formula": "@False"
-                    },
-                    "computeWithForm": false
-                }
-            ]
-        },
-        {
-            "formName": "SampleForm",
-            "formModes": [
-                {
-                    "modeName": "default",
-                    "fields": [
-                        {
-                            "name": "Color",
-                            "type": "string"
-                        },
-                        {
-                            "name": "Form",
-                            "type": "string"
-                        },
-                        {
-                            "name": "Shape",
-                            "type": "string"
-                        },
-                        {
-                            "name": "Taste",
-                            "type": "string"
-                        }
-                    ],
-                    "readAccessFormula": {
-                        "formulaType": "domino",
-                        "formula": "@True"
-                    },
-                    "writeAccessFormula": {
-                        "formulaType": "domino",
-                        "formula": "@True"
-                    },
-                    "deleteAccessFormula": {
-                        "formulaType": "domino",
-                        "formula": "@False"
-                    },
-                    "computeWithForm": false
-                },
-                {
-                    "modeName": "odata",
-                    "fields": [
-                        {
-                            "name": "Color",
-                            "type": "string"
-                        },
-                        {
-                            "name": "Form",
-                            "type": "string"
-                        },
-                        {
-                            "name": "Shape",
-                            "type": "string"
-                        },
-                        {
-                            "name": "Taste",
-                            "type": "string"
-                        }
-                    ],
-                    "readAccessFormula": {
-                        "formulaType": "domino",
-                        "formula": "@True"
-                    },
-                    "writeAccessFormula": {
-                        "formulaType": "domino",
-                        "formula": "@True"
-                    },
-                    "deleteAccessFormula": {
-                        "formulaType": "domino",
-                        "formula": "@False"
-                    },
-                    "computeWithForm": false
-                }
-            ]
+                        "computeWithForm": false
+                    }
+                ]
+            }
+        ],
+        "formAliases": {
+            "Entry": "Entry",
+            "SampleEntry": "SampleEntry",
+            "Customer": "Customer"
         }
-    ],
-    "formAliases": {
-        "Entry": "Entry",
-        "SampleEntry": "SampleEntry",
-        "Customer": "Customer"
     }
-}
-'
-```
-
-</details>
+    '
+    ```
 
 ### Add a database scope
 
@@ -492,23 +488,19 @@ To add a database scope, run the following command. Find the applicable Request 
 
 ![Adddatabase](../../assets/images/adddatabasescope.png)
 
-<details>
-<summary><b>cURL code snippet</b></summary>
-
-```bash
-curl --location --request POST 'localhost:8880/api/setup-v1/admin/scope' \
---header 'Authorization: Bearer $Bearer' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "apiName": "demo",
-    "schemaName": "demo",
-    "nsfPath": "Demo.nsf",
-    "isActive": true
-}
-'
-```
-
-</details>
+???note "cURL code snippet"
+    ```bash
+    curl --location --request POST 'localhost:8880/api/setup-v1/admin/scope' \
+    --header 'Authorization: Bearer $Bearer' \
+    --header 'Content-Type: application/json' \
+    --data-raw '{
+        "apiName": "demo",
+        "schemaName": "demo",
+        "nsfPath": "Demo.nsf",
+        "isActive": true
+    }
+    '
+    ```
 
 ### List available views
 
@@ -516,16 +508,13 @@ To list the views available through this scope, run the following command. Find 
 
 ![ListViews](../../assets/images/listviews.png)
 
-<details>
-<summary><b>cURL code snippet</b></summary>
 
-```bash
-curl --location --request GET 'localhost:8880/api/v1/lists?dataSource=demo' \
---header 'Authorization: Bearer $Bearer' \
---header 'Accept: application/json'
-```
-
-</details>
+???note "cURL code snippet"
+    ```bash
+    curl --location --request GET 'localhost:8880/api/v1/lists?dataSource=demo' \
+    --header 'Authorization: Bearer $Bearer' \
+    --header 'Accept: application/json'
+    ```
 
 ### Retrieve documents from the Customers view
 
@@ -533,17 +522,13 @@ Find the applicable Request URL from the OpenAPI Specification document. Execute
 
 ![RetrieveView](../../assets/images/retrieveview.png)
 
-<details>
-<summary>cURL code snippet</summary>
-
-```bash
-curl --location -g --request GET 'localhost:8880/api/v1/lists/Customers?dataSource=demo' \
---header 'Authorization: Bearer $Bearer' \
---header 'Content-Type: application/json' \
---data-raw ''
-```
-
-</details>
+???note "cURL code snippet"
+    ```bash
+    curl --location -g --request GET 'localhost:8880/api/v1/lists/Customers?dataSource=demo' \
+    --header 'Authorization: Bearer $Bearer' \
+    --header 'Content-Type: application/json' \
+    --data-raw ''
+    ```
 
 ### List available agents
 
@@ -551,15 +536,11 @@ To list the agents, run the following command. Find the applicable Request URL f
 
 ![ListAgents](../../assets/images/listagents.png)
 
-<details>
-<summary>cURL code snippet</summary>
-
-```bash
-curl --location --request GET 'localhost:8880/api/setup-v1/design/agents?dataSource=demo' \
---header 'Authorization: Bearer $Bearer '
-```
-
-</details>
+???note "cURL code snippet"
+    ```bash
+    curl --location --request GET 'localhost:8880/api/setup-v1/design/agents?dataSource=demo' \
+    --header 'Authorization: Bearer $Bearer '
+    ```
 
 ### List available forms
 
@@ -567,15 +548,11 @@ To list the forms available through this scope, run the following command. Find 
 
 ![ListForms](../../assets/images/ListForms.png)
 
-<details>
-<summary>cURL code snippet</summary>
-
-```bash
-curl --location --request GET 'localhost:8880/api/setup-v1/design/forms?dataSource=demo' \
---header 'Authorization: Bearer $Bearer '
-```
-
-</details>
+???note "cURL code snippet"
+    ```bash
+    curl --location --request GET 'localhost:8880/api/setup-v1/design/forms?dataSource=demo' \
+    --header 'Authorization: Bearer $Bearer '
+    ```
 
 ### Creating a document
 
@@ -583,24 +560,20 @@ Find the applicable Request URL from the OpenAPI Specification document. In Post
 
 ![Create document](../../assets/images/CreateDocument.png)
 
-<details>
-<summary>cURL code snippet</summary>
-
-```bash
-curl --location --request POST 'localhost:8880/api/v1/document?dataSource=demo' \
---header 'Authorization: Bearer $Bearer' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "first_name": "Madison",
-    "last_name": "Branthwaite",
-    "email": "mbranthwaite0@nba.com",
-    "Color": "Puce",
-    "Pet": "Black-capped chickadee",
-    "Form": "Customer"
-}'
-```
-
-</details>
+???note "cURL code snippet"
+    ```bash
+    curl --location --request POST 'localhost:8880/api/v1/document?dataSource=demo' \
+    --header 'Authorization: Bearer $Bearer' \
+    --header 'Content-Type: application/json' \
+    --data-raw '{
+        "first_name": "Madison",
+        "last_name": "Branthwaite",
+        "email": "mbranthwaite0@nba.com",
+        "Color": "Puce",
+        "Pet": "Black-capped chickadee",
+        "Form": "Customer"
+    }'
+    ```
 
 ### Retrieving a document
 
@@ -617,19 +590,13 @@ Find the applicable Request URL from the OpenAPI Specification document. Execute
     In the image above `{{UNID_0}}` is a Postman Environment Variable that automatically got created if you ran the `Create Document` Postman test. This is a feature built into the Postman collection we provided.
     If you aren't using Postman, replace that with the `unid` of the document you'd like to retrieve.
 
-<details>
-<summary>cURL code snippet</summary>
-
-Replace `$Unid` below with the unid you'd like to retrieve.
-
-```bash
-curl --location -g --request GET 'localhost:8880/api/v1/document/$Unid/default?db=demo' \
---header 'Authorization: Bearer $Bearer' \
---header 'Content-Type: application/json' \
---data-raw ''
-```
-
-</details>
+???note "cURL code snippet"
+    ```bash
+    curl --location -g --request GET 'localhost:8880/api/v1/document/$Unid/default?db=demo' \
+    --header 'Authorization: Bearer $Bearer' \
+    --header 'Content-Type: application/json' \
+    --data-raw ''
+    ```
 
 ### List available applications
 
@@ -637,23 +604,19 @@ To live the available applications, run the following command. Find the applicab
 
 ![ListApplications](../../assets/images/ListApplications.png)
 
-<details>
-<summary>cURL code snippet</summary>
-
-```bash
-curl --location --request GET 'localhost:8880/api/setup-v1/admin/applications/all' \
---header 'Authorization: Bearer $Bearer ' \
---header 'Content-Type: application/json' \
---data-raw '{
-   "appName": "My Second Application",
-   "databasesRequested": [
-     "keepconfig",
-     "demo"
-    ]
-}'
-```
-
-</details>
+???note "cURL code snippet"
+    ```bash
+    curl --location --request GET 'localhost:8880/api/setup-v1/admin/applications/all' \
+    --header 'Authorization: Bearer $Bearer ' \
+    --header 'Content-Type: application/json' \
+    --data-raw '{
+       "appName": "My Second Application",
+       "databasesRequested": [
+         "keepconfig",
+         "demo"
+        ]
+    }'
+    ```
 
 ### Add an application
 
@@ -661,29 +624,26 @@ To add an application, run the following command. Find the applicable Request UR
 
 ![AddApplicationPostman](../../assets/images/createapplication.PNG)
 
-<details>
-<summary>cURL code snippet</summary>
+???note "cURL code snippet"
+    ```bash
+    curl --location --request POST 'localhost:8880/api/setup-v1/admin/application' \
+    --header 'Authorization: Bearer $Bearer ' \
+    --header 'Content-Type: application/json' \
+    --data-raw '{
+      "client_name": "My App",
+      "client_uri": "https://www.projectcastle.io/coolapp",
+      "contacts": [
+        "admin@projectcastle.io"
+      ],
+      "description": "Super cool demo App",
+      "logo_uri": "https://www.projectcastle.io/castle.jpg",
+      "redirect_uris": [
+        "http://localhost/callback",
+        "https://domino.projectcastle.io/identity",
+        "https://www.projectcastle.io/oauth"
+      ],
+      "scope": "demo $DECRYPT",
+      "status": "isActive"
+    }'
+    ```
 
-```bash
-curl --location --request POST 'localhost:8880/api/setup-v1/admin/application' \
---header 'Authorization: Bearer $Bearer ' \
---header 'Content-Type: application/json' \
---data-raw '{
-  "client_name": "My App",
-  "client_uri": "https://www.projectcastle.io/coolapp",
-  "contacts": [
-    "admin@projectcastle.io"
-  ],
-  "description": "Super cool demo App",
-  "logo_uri": "https://www.projectcastle.io/castle.jpg",
-  "redirect_uris": [
-    "http://localhost/callback",
-    "https://domino.projectcastle.io/identity",
-    "https://www.projectcastle.io/oauth"
-  ],
-  "scope": "demo $DECRYPT",
-  "status": "isActive"
-}'
-```
-
-</details>

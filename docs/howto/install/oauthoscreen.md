@@ -25,7 +25,8 @@ Steps to be taken to alter the look & feel of the consent screen
 ## Prerequisites
 
 - You must be proficient in using the HTML, CSS, CSP and Javascript
-- You must understand [Mustache](https://mustache.github.io/)
+
+- You must understand [Mustache](https://mustache.github.io/).
 - You must understand the URLs of the Domino REST API and the difference between a file location and its URL
 
 !!! error "Content Security Policy in place!"

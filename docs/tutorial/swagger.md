@@ -60,6 +60,7 @@ The [SwaggerUI](https://github.com/swagger-api/swagger-ui) is an OpenSource comp
 ## List views with SwaggerUI
 
 1. Follow the authorization steps in [Create a document with SwaggerUI](#create-a-document-with-swaggerui).
+
 2. Go to and expand **data**, and then go to and expand the **GET /lists** endpoint.
 3. In the **dataSource**, enter the scope name, and then click **Execute**.   
 
