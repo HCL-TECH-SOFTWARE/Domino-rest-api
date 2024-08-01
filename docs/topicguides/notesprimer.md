@@ -101,7 +101,7 @@ There is [much to learn](https://www.cloudflare.com/learning/ssl/how-does-public
 
 Any application available on the intranet or internet needs secure communication. The standard means for that is [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security) - Transport-Layer-Security. Colloquially, the term [SSL](https://www.rfc-editor.org/rfc/rfc6101) is used with [cert vendors](https://www.digicert.com/what-is-an-ssl-certificate), but implementation is almost always TLS - and should be. SSL is considered compromisable.
 
-Obtaining a valid certificate used to be a huge headache, but with the availability of [LetsEncrypt](https://letsencrypt.org) it's now easy for internet facing systems. Domino has [built-in support](https://help.hcltechsw.com/domino/12.0.2/admin/secu_le_managing-certs_from_LE.html) to use LetsEncrypt.
+Obtaining a valid certificate used to be a huge headache, but with the availability of [LetsEncrypt](https://letsencrypt.org) it's now easy for internet facing systems. Domino has [built-in support](https://help.hcl-software.com/domino/14.0.0/admin/secu_le_managing-certs_from_LE.html) to use LetsEncrypt.
 
 !!! tip "Use a wildcard cert for internal systems"
 
