@@ -68,10 +68,10 @@ The upper half of the main content section contains a description of the **reque
 
 ## References
 
-Postman Homepage: <https://www.postman.com/>
+- [Postman Homepage](https://www.postman.com/)
 
-Postman Learning Center: <https://learning.postman.com/>
+- [Postman Learning Center](https://learning.postman.com/)
 
-Postman Key Concepts: <https://learning.postman.com/concepts/>
+- [Postman Key Concepts](https://learning.postman.com/concepts/)
 
-Short Postman Tutorial: <https://www.youtube.com/watch?v=t5n07Ybz7yI>
+- [The Basics of Using Postman for API Testing](https://www.youtube.com/watch?v=t5n07Ybz7yI)

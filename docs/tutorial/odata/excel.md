@@ -7,7 +7,7 @@ This means that the data in a Notes database can be displayed in something as si
 !!! note "Windows only"
     OData for Excel is only available in the Windows version of Excel
 
-1. Open Microsoft Excel and create a Blank Workbook.
+1. Open Microsoft Excel[^1] and create a Blank Workbook.
 2. Select **Data** &rarr; **Get Data** &rarr; **From Other Sources** &rarr; **From ODataFeed**.
 
       ![FromODataFeed](../../assets/images/FromODataFeed.png)
@@ -27,3 +27,5 @@ This means that the data in a Notes database can be displayed in something as si
 The Excel sheet is a live document. Any update to the Notes database is seen when you click **Refresh**.
 
 At the moment, only basic authentication is supported.
+
+[^1]: Microsoft and Excel are registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.

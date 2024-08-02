@@ -37,7 +37,7 @@ The Domino REST API configuration allows you to fine tune access permissions. Do
 - Decrypt encrypted items, if the user has a suitable key.
 - Specify which views to expose on the API.
 - Specify which agents to expose on the API.
-- Specify which forms to expose on the API.
-  Here, [the Barbican's capabilities](barbican.md) is used to tailor field access based on document data and current user, allowing for API-based data integrity.
+
+- Specify which forms to expose on the API. Here, [the Barbican's capabilities](barbican.md) is used to tailor field access based on document data and current user, allowing for API-based data integrity.
 
 ![Domino REST API Properties](../assets/images/access/KEEPproperties.png)

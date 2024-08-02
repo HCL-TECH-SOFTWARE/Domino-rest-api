@@ -42,12 +42,14 @@ The credentials for the management endpoint are **deliberately NOT** retrieved f
 - How to handle HTTPS (via proxy or let Domino REST API handle it):
 
     - For configuring HTTPS via proxy, see the example under [HTTPS via Proxy](../../howto/web/httpsproxy.md).
+    
     - Domino REST API supports three different types of certificates: PEM, JKS, and PKS.
 
 - How to handle JWT authentication token:
 
     - Single server built-in, where each server issues and uses their own JWT token.
     - Multi-server built-in, where a multi-server environment reacts to the same JWT token.
+    
     - External identify provider, for example, Active Directory, [Keycloak](https://www.keycloak.org/), etc.
 
 - Domino REST API can access encrypted resources when Domino's ID vault is deployed and the [KEEP SAML](../../howto/IdP/keepsaml.md) configuration is set up correctly.

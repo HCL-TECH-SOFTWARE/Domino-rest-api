@@ -12,6 +12,7 @@
 
 - Lab 01 completed
 - Your Domino server running
+
 - Database [ApprovalCentral.nsf](../downloads/ApprovalCentral.zip) deployed to your server.
 
 ## Steps in creating a schema and scope in Quick Config
@@ -62,7 +63,9 @@ In the Admin UI you will find one entry each for schema and scope:
 ## Things to explore
 
 - [Official Domino REST API documentation](https://opensource.hcltechsw.com/Domino-rest-api/index.html)
+
 - [Discord discussion](https://discord.com/invite/jmRHpDRnH4)
+
 - Check the SwaggerUI for the new entry
 - Use POSTMAN to create a second quick config using recipe.nsf
 - Open Domino Designer to check resources

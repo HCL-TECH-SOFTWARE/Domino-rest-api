@@ -157,6 +157,22 @@ This is the verticle for managing WebHandlers. `worker`, `threadPoolName`, `thre
 | keyFile         | String  | Path to the JWT public key                                                                                                                                                      |
 | iss             | String  | Identifies the principal that issued the JWT. The value is a case-sensitive string containing a string or URI value.                                                            |
 | aud             | String  | Identifies the recipient that the JWT is intended for. When configuring Azure Active Directory as an IdP, the value of this parameter is the Application ID URI you configured. |
+<!-- For 1.1 release
+
+| ofba | [JWT OFBA parameters](#jwt-ofba-parameters) | Parameters for enabling this external IdP to use for OFBA. |-->
+
+<!-- For 1.1 release
+
+## JWT OFBA parameters
+
+| Property           | Type             | Description                                                                    |
+|--------------------|------------------|--------------------------------------------------------------------------------|
+| active             | Boolean          | Set to `true` to enable the use of external IdP in OFBA.                       |
+| client_id          | String           | External IdP client ID to use for OFBA.                                        |
+| scope              | Array of Strings | List of scope names to use for OFBA.                                           |
+| application_id_uri | String           | An optional property. Required when external IdP is **Azure**. End with a `/`. |
+
+-->
 
 ## Remarks
 

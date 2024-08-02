@@ -5,14 +5,13 @@ The procedure guides you on how to update your installed Domino REST API to the 
 
 ## Prerequisite
 
-- When updating installed Domino REST API on Linux, Mac, or Windows, [download the latest release version of the Domino REST API multi-platform installer](../../tutorial/installconfig/index.md#download-domino-rest-api). 
+- When updating installed Domino REST API on Linux, Mac, or Windows, [download the latest release version of the Domino REST API multi-platform installer](../../tutorial/installconfig/index.md#download-domino-rest-api).
+
 - When updating Domino REST API running with Docker image:
 
     - [Download the docker image of the latest release version of Domino REST API](../../tutorial/installconfig/index.md#download-domino-rest-api).
 
-    **OR**
-
-    - Take note of the latest Docker image version for docker compose `.env` file from Harbor in [What’s New](../../references/whatisnew.md).
+    - You can also take note of the latest Docker image version for docker compose `.env` file from Harbor in [What’s New](../../references/whatisnew.md).
 
 ## Procedure
 
@@ -32,6 +31,7 @@ Follow the procedure based on the installation option you used when installing t
 
     !!!note
         - Make sure you [extract the tar.gz file](https://linuxize.com/post/how-to-extract-unzip-tar-gz-file/) first.
+        
         - This step isn't applicable if using the docker image from Harbor. 
 
 3.	Take note of the image name.

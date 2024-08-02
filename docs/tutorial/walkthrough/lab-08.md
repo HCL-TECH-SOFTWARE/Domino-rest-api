@@ -16,6 +16,7 @@ We use an example that could be some scheduled process to ETL data
 ## Steps
 
 1. Download and unzip the [apps-src.zip](../downloads/apps-src.zip) from the `source for all apps` in a folder. This folder includes all the source projects that the user may work with whenever he would like to. 
+
 2. Open your IDE such as VS Code, Eclipse. 
 
     There are three folders to work with inside the `src`. There are two JavaScript folders and one Java folder to work with. The user needs to make the project folder to be the current or root folder whenever they use it with the user's IDE. Since it's Java application, use the `JavaETL` folder.
@@ -41,5 +42,7 @@ File sample.csv created training requests
 ## Things to explore
 
 - [Official Domino REST API documentation](https://opensource.hcltechsw.com/Domino-rest-api/index.html)
+
 - [Discord discussion](https://discord.com/invite/jmRHpDRnH4)
+
 - Modify app to upload data.

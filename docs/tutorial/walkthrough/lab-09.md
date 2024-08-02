@@ -65,10 +65,13 @@ Navigate to the new URLs, you should be prompted with basic auth. Password is `s
 ![Ports in use](img/PortUse.png)
 
 - Healthcheck: [http://localhost:8886/health](http://localhost:8886/health)
+
 - Metrics: [http://localhost:8890/metrics](http://localhost:8890/metrics)
+
 - Management UI: [http://localhost:8889/](http://localhost:8889/)
 
 ## Things to explore
 
 - [Official Domino REST API documentation](https://opensource.hcltechsw.com/Domino-rest-api/index.html)
+
 - [Discord discussion](https://discord.com/invite/jmRHpDRnH4)

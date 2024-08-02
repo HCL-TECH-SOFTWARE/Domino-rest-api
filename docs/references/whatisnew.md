@@ -5,6 +5,7 @@ The section provides information on the latest features, improvements, and resol
 <!-- prettier-ignore -->
 !!! note "Important"
     - Items marked in <span style="color:red">**red**</span> are API changes that may impact your applications and should be reviewed before upgrading.
+    
     - Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](deprecated.md).
 
 ???+ info "v1.0.14 - What's new or changed"
@@ -28,6 +29,7 @@ The section provides information on the latest features, improvements, and resol
     - Added the `includeAttachmentMetadata` parameter to the `GET v1/attachmentnames` endpoint to output the attachment file size, created date, and modified date.
     - Added an array that contains the top-level child document UNIDs to the `@meta` object in the response of the `GET v1/document/{unid}` and `GET v1/docmeta/{unid}` endpoints.
     - Uses the correct mail template based on the Domino version when creating a second calendar using the `POST pim-v1/calendar` endpoint.
+    
     - Implemented UI/UX enhancements in the [Application Management](./usingwebui/appui.md) page in the **Admin UI**.
 
     **Resolved Issues**
@@ -67,8 +69,10 @@ The section provides information on the latest features, improvements, and resol
     **Improvements**
 
     - Extended how Rich Text is processed. For more information, see [Richtext extension](richtextension.md).
+    
     - Improved OData filter processing by adding support for `in`, `contains`, `startswith`, and `endswith` clauses.
     - Enhanced user experience by allowing user to activate a form and bringing user directly into form edit mode by clicking the pencil icon corresponding to an inactive form in the **Database Form** tab in the **Admin UI** and confirming form activation.
+    
     - Implemented UI/UX enhancements in the [OAuth Consents](./usingwebui/oauthconsentui.md) page in the **Admin UI**.
     - Enhanced the PIM Swagger documentation. 
 
@@ -103,6 +107,7 @@ The section provides information on the latest features, improvements, and resol
     **New**
     
     - Added the **Add New Form Schema** button on the **Database Forms** page in the **Admin UI** to allow the creation of a Form schema for a form that does not exist in the design of the database. This is useful for the profile document update introduced in the v1.0.10 release and can also be used to add or retrieve documents when no form exists in the design. For more information, see [Add new form schema](usingwebui/schemaui.md#add-new-form-schema).
+    
     - Added OData support for queries using `$select`.
     - Added OData support for the **ne** (not equal) operator in a filter.
 
@@ -158,6 +163,7 @@ The section provides information on the latest features, improvements, and resol
     - Added `DELETE v1/profiledocument` endpoint to delete a profile document as long as the schema allows it.
     - Added `GET setup-v1/admin/purge` endpoint to discover scopes that no longer have a valid schema because the schema no longer exists, the schema has invalid JSON, a corrupted NSF, or the NSF no longer exists.
     - Added  `POST setup-v1/admin/purge` endpoint to specify the schema and scope information to remove using the GET setup-v1/admin/purge endpoint response.
+    
     - Added Microsoft Office round-trip editing capability to simplify document editing experience by launching Office documents directly into their native applications and saving changes back to the server. For more information, see [Setup Office Round Trip Experience](../howto/production/roundtrip.md).
 
     **Improvements**
@@ -243,6 +249,7 @@ The section provides information on the latest features, improvements, and resol
     **Others**
 
     - Removed the use of `dataSource` or a path to an NSF in the `dataSource` parameter by most `admin-v1` endpoints. See [Deprecated features](deprecated.md) for more information and recommendation.
+    
     - Implemented various documentation updates.
     - Starting this release, there will be two installer jar files:
         - For Domino 14: *restapiInstall-r14.jar*
@@ -279,12 +286,15 @@ The section provides information on the latest features, improvements, and resol
 
     - Added endpoint `GET v1/attachmentnames/{unid}` to return a list of attachments attached to this document.
     - Added endpoint `GET v1/preview` to list endpoints that are marked as preview, may be considered beta endpoints.
+    
     - Added ability to view and revoke OAuth consents in the AdminUI via the [OAuth Consents](../references/usingwebui/oauthconsentui.md#oauth-consents) pane.
     
     **Improvements**
 
     - Added the ability to [clone form modes](../references/usingwebui/schemaui.md#clone-a-mode) and [compare form modes](../references/usingwebui/schemaui.md#compare-modes) in the AdminUI.
+    
     - Added the ability to [export a schema](../howto/database/exportsourcejson.md) and [import a schema](../references/usingwebui/schemaui.md#import-a-schema) in the AdminUI.
+    
     - Added search feature in **Schema Management** to easily look for forms, views, and agents.  
     - Added ability to configure or unconfigure all database forms at the same time.
     
@@ -312,7 +322,9 @@ The section provides information on the latest features, improvements, and resol
     - Added endpoint `POST v1/bulk/etag` to give an entity tag (ETag) to specified documents. The endpoint is also useful in finding if a doc has been updated or deleted.
     - Added endpoint `POST v1/bulk/folder` to add or remove documents to or from folders.
     - Added endpoint `GET v1/logout` for OIDC compliance. `POST v1/logout` is still recommended as a browser's PREFETCH could potentially cause issues.
+    
     - Added support for [Azure Active Directory as an IdP](../howto/IdP/configuringAD.md).
+    
     - Added ability to directly [edit a schema JSON](../howto/database/editsourcejson.md) in the **Admin UI**.
     - Added the ability to specify multiple filter keys for `GET v1/lists/{name}`.
     - Added the ability to filter by top-level category in `GET v1/lists/{name}`.
@@ -343,8 +355,11 @@ The section provides information on the latest features, improvements, and resol
     **New**
 
     - HCL Domino REST API now supports WebAuthn allowing users to [log in to the **Admin UI** using a passkey](../howto/install/passkey.md).
+    
     - Introduced access control for scopes via maximum access level to control the maximum access anyone using a scope might have. For example, if a scope's maximum access level is Editor and you are a Manager, the API runs as Editor. This feature doesn't increase a user's access level. The default for existing scopes is Editor.
+    
     - Introduced `$SETUP` scope that can be added to an application, which needs access to `$SETUP` endpoints. For more information, see [Scopes](../references/usingdominorestapi/scopes.md).
+    
     - Added `ftSearchQuery` to the `GET v1/lists/{name}` endpoint to filter a view based on a full text search query.
     - Added column multi-value delimiter and column position when retrieving information about views utilizing the `GET v1/lists?columns=true` endpoint. 
     - Enabled retrieval of Rich Text embedded images by the `GET v1/attachments/{unid}/{attachmentName}` endpoint. When retrieving the html of a `richtext` field, embedded images come back in an <img> tag such as `<img src="/test.nsf/0/a0286fbd3bdc1d5bc12222d5006ac837/Photo/0.84?OpenElement&FieldElemFormat=gif">`. Use base64 encoding to encode the image src URL and pass that in as the `attachmentName`. 
@@ -450,6 +465,7 @@ The section provides information on the latest features, improvements, and resol
     **New**
 
     - Added ability to view the Domino Server console live as well as send commands from the Domino REST API management page if using admin credentials. See [Domino Console Configuration](../references/usingdominorestapi/console.md) for more information.
+    
     - Added ability to send Domino Server console commands via API if using admin credentials.
     - Added ability to view the schema json within the Admin UI.
     - Added ability for customers to use a different name for fields (like an alias) in a schema,  good for obfuscating field names or for descriptive naming.
@@ -486,6 +502,7 @@ The section provides information on the latest features, improvements, and resol
     **New**
 
     - The installer now has an upgrade option. Please see the [installation instructions](../tutorial/installconfig/index.md) for more information.
+    
     - A Quick Config option is now available to the Admin UI (lightning bolt on the left side). This feature creates a populated Schema and Scope based on the database you choose.
         - The Schema is configured with all visible Forms and Views.
         - All non-system fields are added to the Forms.

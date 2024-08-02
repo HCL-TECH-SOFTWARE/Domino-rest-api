@@ -22,13 +22,13 @@ The Domino REST API doesn't have an uninstaller. If you'd like to remove it from
 
             - **Windows** - `C:\Program Files\HCL\Domino`
 
-            - **linux** - `/opt/hcl/domino/notes/latest/linux`
+            - **Linux** - `/opt/hcl/domino/notes/latest/linux`
 
         - *Domino Data directory* refers to where databases are typically stored. For example:
 
             - **Windows** - `C:\Program Files\HCL\Domino\Data`
 
-            - **linux** - `/local/notesdata`
+            - **Linux** - `/local/notesdata`
     - Take note of where *Domino REST API* is installed by noting the value of the setting `KeepInstallDir=` in the `notes.ini`.
 
 ### Procedure

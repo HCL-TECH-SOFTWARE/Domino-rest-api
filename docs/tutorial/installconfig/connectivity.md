@@ -3,6 +3,7 @@
 Once your REST API is up and running, check that communication works as expeceted. We will use the following name in this page:
 
 - Fully qualified domain name ([FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)): `domino.acme.com`
+
 - Domino server fully qualified name: `CN=tango/OU=servers/O=ACME Inc`
 - Domino server common name: `tango`
 
@@ -61,6 +62,7 @@ Allow access, by firewall rule or [ssh tunnel](https://www.ssh.com/academy/ssh/t
 
 - Port 8889 - Management console: create certs for JWT, salt & encode passwords, review the actual configuration - trained admins from a secure network only
 - Port 8886 - Health check: Typically used in Kubernetes environments. Only the server running system mangment/monitoring should have access
+
 - Port 8890 - Metrics data in [Prometheus](https://prometheus.io/) format. Thus only the Prometheus server should have access. Used for dashboards with e.g. [Grafana](https://grafana.com/)
 
 ## Let's connect

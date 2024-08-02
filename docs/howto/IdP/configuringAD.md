@@ -157,7 +157,9 @@ All URLs are retrievable by accessing the _OpenID Connect_ metadata document, co
       Remarks:
 
       - The `AzureAD01` isn't a fixed value. Pick anything that makes it clear for you. We strongly suggest to use the value as the filename too.
+
       - The `aud` parameter is the Application ID in [Expose an API](#api-definition) (the `id` parameter in the manifest, **not** the Application ID URI).
+
       - The `iss` parameter might be different from what the `openid-configuration` reports. So compare the values. We've seen the URL changed from `https://login.microsoftonline.com/[your-tennantid-here]/v2.0` to `https://sts.windows.net/[your-tennantid-here]/`, if that's so you need to specify it here.
       - Currently, Azure AD doesn't return the `alg` claim in the `jwks_uri`, you have to specify it here.
 
@@ -215,6 +217,7 @@ Check the results:
 A few tips to troubleshoot the setup when the goalpost has been moved:
 
 - Grab the JWT token and paste it at the [JWT.io](https://jwt.io) website to decode the JSON payload.
+
 - If your corporate policy prohibits that, then extract the string between the two `.` from your JWT token and send it through a Base64 decoder: `echo [the string] | base64 --decode | jq`. Kindly note that `| jq` is optional.
 - Compare the `iss` value from the JWT token with the `issuer` value from the `openid-configuration` endpoint. If they don't match, you need to add the `iss` to the JSON configuration file you created or edited in `keepconfig.d`.
 - Compare the `aud` value from the JWT token with the `aud` value of the configuration file. Adjust the configuration file if different.

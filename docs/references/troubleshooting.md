@@ -2,11 +2,9 @@
 
 This reference intends to guide you in addressing common errors in installing and running the Domino REST API service. Common errors and their corresponding resolutions are described below:
 
-<!-- ## Troubleshooting common errors with the installing and running the Domino REST API service -->
-
 ## Domino Not Running (First-Time Setup)
 
-If Domino isn't up and running, see [Troubleshooting one-touch Domino Setup](https://help.hcltechsw.com/domino/12.0.0/admin/inst_onetouch_troubleshooting.html){: target="_blank" rel="noopener noreferrer"}.
+If Domino isn't up and running, see [Troubleshooting one-touch Domino Setup](https://help.hcltechsw.com/domino/14.0.0/admin/inst_onetouch_troubleshooting.html).
 
 ## REST API not responding
 
@@ -99,7 +97,8 @@ It's possible to have several configuration files, but only one will be active a
 
  This guide shows you how to create your own logging configuration. The purpose is to change the logging configuration to your needs. Typically, that would be to temporarily adjust logging levels like `DEBUG` and `TRACE` or to integrate tools like [LogStash](https://www.elastic.co/guide/en/logstash/current/logging.html#log4j2).
 
-1. Open the `notes.ini` file. You may refer to [Editing NOTES.INI file](https://help.hcltechsw.com/domino/12.0.0/admin/conf_editingthenotesinifile_c.html).
+1. Open the `notes.ini` file. You may refer to [Editing NOTES.INI file](https://help.hcltechsw.com/domino/14.0.0/admin/conf_editingthenotesinifile_c.html).
+
 2. You can add the `KeepLogConfigFile` parameters with the following settings and save. The `KeepLogConfigFile` option can be added to `notes.ini` to edit the log configuration file.
 
     **Configuration settings:**
@@ -117,6 +116,7 @@ Just a few things to keep in mind:
 - Make sure to specify the version of your `keep-core file`, as it may differ from the one shown in the example.
 - Make sure to remove the `log4j2.properties` file from your Rest API directory to avoid potential issues with upgrades.
 - The `log4j.properites` file for the Domino REST API may undergo changes without prior notice. If you observe any differences in the logging behavior after a recent upgrade, it's recommended to extract and review the updated `log4j` file.
+
 - Check out the [Log4J documentation](https://logging.apache.org/log4j/log4j-2.0-beta7/manual/appenders.html) for details on the available settings.
 
 

@@ -17,6 +17,7 @@ hide:
 !!!tip
 
     - For the latest release information about {{ variable.drapi }}, see [What's new](references/whatisnew.md).
+
     - To know features that have been deprecated in the current and earlier releases, see [deprecated features](references/deprecated.md).
 
 ## TL/TR
@@ -24,9 +25,13 @@ hide:
 !!!tip
 
     - Get a first idea what you are dealing with by [Understanding how the Domino REST API works](topicguides/understanding.md)
+
     - If you want to start quickly, go to [Quickstart](tutorial/quickstart.md).
+
     - For installation information, see [Installation and configuration](tutorial/installconfig/index.md).
+
     - For everything that admin needs to know, use the [Admin cheat sheet](references/admincheatsheet.md).
+    
     - Trouble running the Domino REST API? Use the [Troubleshooting guide](references/troubleshooting.md).
 
 ---

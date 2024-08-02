@@ -164,7 +164,11 @@ Focusing on Maven-based builds allows us to run builds both locally and on our C
 To familiarize yourself with Domino REST API's functionality, you should read the following pages:
 
 - [Domino REST API Overview](../topicguides/introducingrestapi.md)
+
 - [OpenAPI specification](https://swagger.io/specification/)
+
 - [The EventBus](eventbus.md)
+
 - [The Barbican](barbican.md)
+
 - [OData](../tutorial/odata/excel.md)
