@@ -1,6 +1,6 @@
 # Configure WebAuthn with Domino REST API and Domino 14 or greater
 
-The WebAuthn by default is configured in `config.json` located in the `keeponfig.d`. 
+WebAuthn (Passkey) authentication is enabled by default and can be configured to integrate with the Passkey support in Domino 14 via JSON files in `keepconfig.d`. 
 
 ## About this task
 
@@ -16,12 +16,11 @@ The procedure guides you to log in to both Domino REST API and Domino 14 using t
 
 ## Procedure
     
-1. Create a JSON file using text/code app such as VSCode, notepad, notepad++, etc.
-2. Copy the JSON object named `webAuthnActive` to the JSON file.
+1. Create a JSON file using text/code app such as VS Code, Notepad, Notepad++, etc.
+2. Copy the JSON object named `webauthn` to the JSON file.
 
     ```json
     {
-        "webAuthnActive": true,
         "webauthn": {
             "attestation": "direct",
             "rpName": "Keep RP",
@@ -29,7 +28,7 @@ The procedure guides you to log in to both Domino REST API and Domino 14 using t
         }
     }
     ```
-3. Change the value of the `rpId` parameter with the same URL configured in the Domino directory. 
+3. Change the value of the `rpId` parameter with the same URL configured in the Domino Directory. 
 
     ```json
         {
@@ -56,5 +55,5 @@ The procedure guides you to log in to both Domino REST API and Domino 14 using t
 5. Restart Domino REST API on all servers with this new configuration.
 
 !!!note
-    - If you disable the `webAuthnActive` in the settings you won't be able to use the passkey.
+    - If you disable the `webAuthnActive` in the settings you won't be able to use passkey authentication.
     - The actual WebAuthn keys are stored in each user's device. Domino and Domino REST API store only the public-key part to verify it. 

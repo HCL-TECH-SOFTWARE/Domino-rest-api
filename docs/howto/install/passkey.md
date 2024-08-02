@@ -1,4 +1,4 @@
-# Use passkey to log in to Admin UI
+# Use WebAuthn (Passkey) to log in to Admin UI
 
 !!!caution "Important"
     This feature is only applicable if your host is using HTTPS. 
@@ -10,23 +10,27 @@ The procedures guide you in using a passkey to log in to **Admin UI**. The proce
 - logging in to Admin UI using a passkey
 - clearing the passkey
 
-Passkeys are better options to passwords as they use public key cryptography to create secure experiences. Passkeys allow sign-in to websites without remembering and managing passwords by using a biometric sensor, PIN, or pattern. For more information, see [passkey.org](https://passkey.org/){: target="_blank" rel=”noopener noreferrer”}.
+Passkeys are better options to passwords as they use public key cryptography to create secure experiences. Passkeys allow sign-in to websites without remembering and managing passwords by using a biometric sensor, PIN, or pattern. For more information, see [passkey.org](https://passkey.org/){: target="_blank" rel="noopener noreferrer"}.
 
 ## Prerequisites
 
-### For Mac
+### For Mac Using Keychain
 
-- You have [set up iCloud Keychain](https://support.apple.com/en-ph/guide/mac-help/mh43699/13.0/mac/13.0){: target="_blank" rel=”noopener noreferrer”} to create a passkey.
+- You have [set up iCloud Keychain](https://support.apple.com/en-ph/guide/mac-help/mh43699/13.0/mac/13.0){: target="_blank" rel="noopener noreferrer"} to create a passkey.
 - You have an Apple ID to set up iCloud Keychain.
-- Your Mac has a Touch ID sensor.
+- Your Mac has a Touch ID sensor, you have a connected iPhone or iPad, or you have an external security key.
 
 !!!note 
     Chrome supports passkeys on iCloud Keychain starting in Chrome 118, on macOS 13.5 or later. For more information, see [Chrome for Developers blog post](https://developer.chrome.com/blog/passkeys-on-icloud-keychain){: target="_blank" rel="noopener noreferrer"}.
 
 ### For Windows
 
-- You have set up [Windows Hello](https://support.microsoft.com/en-us/windows/learn-about-windows-hello-and-set-it-up-dae28983-8242-bb2a-d3d1-87c9d265a5f0){: target="_blank" rel=”noopener noreferrer”} as Chrome on Windows stores passkeys in Windows Hello.
-- Your Windows machine supports the Windows Hello options.     
+- You have set up [Windows Hello](https://support.microsoft.com/en-us/windows/learn-about-windows-hello-and-set-it-up-dae28983-8242-bb2a-d3d1-87c9d265a5f0){: target="_blank" rel="noopener noreferrer"} as Chrome on Windows stores passkeys in Windows Hello.
+- Your Windows machine supports the Windows Hello options.
+
+### Other Passkey Managers
+
+Some third-party password managers, such as [1Password](https://1password.com/product/passkeys) support Passkeys as well. Refer to their documentation for details on configuration and requirements.
 
 ## Procedures
 
