@@ -1,0 +1,8 @@
+@startuml DBVerticleFlow
+start
+:Load tags;
+:Determine Package;
+:Load Eventbus Consumers;
+note: Listens on EventBus
+end
+@enduml
