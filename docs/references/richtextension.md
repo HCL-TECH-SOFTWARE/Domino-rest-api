@@ -19,74 +19,17 @@ There has been no change for the existing processors, namely:
 
 There are a number of things you should set up before you can create an extension.
 
-### Install KEEP core jar
+### Install KEEP core and extension JARs
 
 1. Install Domino REST API using the Domino REST API installer.
-2. Find the `keep-core-<version>.jar`in the **Domino REST API install directory** and do a **Maven** install using the following command:
+2. Find `keep-core-<version>.jar` and `keep-extension-<version>.jar` in the **Domino REST API install directory** and do a **Maven** install using the following command:
 
   ```shell
-  mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -Dfile=<path-to-keep-core-jar>
+  mvn install:install-file -Dfile=<path-to-keep-core-jar>
+  mvn install:install-file -Dfile=<path-to-keep-extension-jar>
   ```
 
-This adds **KEEP Core** to your local Maven M2 repository.
-
-### Create an extension helper
-
-The goal is to create an extension helper that generates a single JAR file containing all the dependencies needed in extending Rich Text.
-
-Extending Rich Text needs the following dependencies:
-
-- KEEP core
-- Vert.X core
-- Domino JNX API
-
-**To create an extension helper**:
-
-1. Create a new folder. Any folder name will do and can be placed in any directory.
-2. Create a `pom.xml` file in the created folder. The file should have the following content:
-
-    ```xml
-    <?xml version="1.0" encoding="UTF-8"?>
-    <project xmlns="http://maven.apache.org/POM/4.0.0"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
-      <modelVersion>4.0.0</modelVersion>
-
-      <groupId>com.hcl.domino.extension.helper</groupId>
-      <artifactId>keep-richtext-extension-helper</artifactId>
-      <version>1.0</version>
-      <name>Helper for KEEP richtext extension</name>
-      <description>Don't try this at home</description>
-
-      <dependencies>
-        <dependency>
-          <groupId>com.hcl.domino.keep</groupId>
-          <artifactId>keep-core</artifactId>
-          <version>1.31.2</version>
-        </dependency>
-        <dependency>
-          <groupId>io.vertx</groupId>
-          <artifactId>vertx-core</artifactId>
-          <version>4.5.8</version>
-        </dependency>
-        <dependency>
-          <groupId>com.hcl.domino</groupId>
-          <artifactId>domino-jnx-api</artifactId>
-          <version>1.41.0</version>
-        </dependency>
-      </dependencies>
-
-    </project>
-    ```
-
-3. Save the `pom.xml` and execute the following command:
-
-    ```shell
-    mvn clean install
-    ```
-
-    Executing the command generates a `keep-richtext-extension-helper-1.0.jar` file in the target directory. It will include this JAR file in your local Maven M2 repository, allowing you to use it as a dependency for your Rich Text extension project.
+This adds **KEEP Core** and the extension module to your local Maven M2 repository.
 
 ## Extend Rich Text
 
@@ -105,9 +48,9 @@ Extending Rich Text needs the following dependencies:
 
     ```xml
     <dependency>
-      <groupId>com.hcl.domino.extension.helper</groupId>
-      <artifactId>keep-richtext-extension-helper</artifactId>
-      <version>1.0</version>
+      <groupId>com.hcl.domino.keep</groupId>
+      <artifactId>keep-extension</artifactId>
+      <version>1.33.0</version> <!-- your Keep version -->
       <scope>provided</scope>
     </dependency>
     ```
