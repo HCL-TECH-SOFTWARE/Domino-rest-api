@@ -18,14 +18,19 @@ To use a Domino database in Domino REST API, it must be configured for use in th
 For more information on logging in to the Domino REST API Admin UI:
 
 - see [Login](../../tutorial/adminui.md#login)
+
 - see [Use passkey to login to Admin UI](../../howto/install/passkey.md)
 
 From the Admin UI, you can access the following:
 
 - [Schema Management](schemaui.md)
+
 - [Scope Management](scopeui.md)
+
 - [Quick Config](quickconfigui.md)
+
 - [Application Management](appui.md)
+
 - [OAuth Consents](oauthconsentui.md)
 
 <!--## Database Management - REST API

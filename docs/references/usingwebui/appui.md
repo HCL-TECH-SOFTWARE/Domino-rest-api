@@ -6,7 +6,7 @@ Select **Application Management - OAUTH** from the home page or **Applications**
 
 The **Application Management** page shows all available applications.
 
-![List Applications](../../assets/images/ListOfApplications.png)
+![List of Applications](../../assets/images/ListOfApplications.png)
 
 !!!tip
     - Click the play button to launch the application.

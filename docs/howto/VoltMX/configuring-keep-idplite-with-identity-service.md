@@ -1,18 +1,21 @@
-# Configure Domino REST API IDP with Volt MX Foundry Identity Service
+# Configure Domino REST API IdP with Volt MX Foundry Identity Service
 
 --8<-- "keepmngtURLcaution1.md"
 
 ## About this task
+
 Domino REST API implements what essentially amounts to an OAuth2 Provider DominoIDP and Volt MX Foundry implements an Integration Service adapter for OAuth2 providers. The following is a guide for creating a Foundry Identity Service using Domino REST API's OAuth provider.
 
 ## Prerequisite
-- You must first set up the [Domino Rest API IdP](../../howto/IdP/configuredrapiIdP.md)
+
+You must first set up the [Domino Rest API IdP](../../howto/IdP/configuredrapiIdP.md).
 
 
 ## Create Foundry Identity Service
-Some things to note when creating an identity service in Volt MX Foundry using Domino REST API IDP-lite (also refer to the screenshot below):
 
-1. Create a new Identity service in the Foundry browser console by filling in the fields:
+Some things to note when creating an identity service in Volt MX Foundry using Domino REST API IdP (also refer to the screenshot below):
+
+1. Create a new Identity Service in the Foundry browser console by filling in the fields:
 
       - **Type of identity** = OAuth 2.0
       - **Grant Type** = Authorization Code
@@ -41,8 +44,8 @@ From the Domino REST API Admin browser client:
 !!! note
     When you create the application, you'll need the callback URL [defined earlier](#create-foundry-identity-service).
 
-![Domino REST API create application](../../assets/images/keep-create-application.png)
+![Domino REST API create application](../../assets/images/keep-create-application.png){: style="height:80%;width:80%"}
 
-The App id (Client ID) is available any time you view a created application. The secret is shown only when the secret is created the first time. If you forget the secret, generate a new one by clicking the circular arrow as indicated in the following image:
+The App ID (Client ID) is available any time you view a created application. The secret is shown only when the secret is created the first time. If you forget the secret, generate a new one by clicking the circular arrow as indicated in the following image:
 
 ![Domino REST API application id and secret](../../assets/images/keep-application-id-and-secret.png)

@@ -13,19 +13,19 @@ The Barbican in Domino REST API decides what a given user can read from or write
 
 The Barbican functions as the schema definition for the Domino REST API.
 
-### Reading documents
+## Reading documents
 
 ![Reading documents in Barbican](../assets/images/Barbican-read.png){: .scale-img-eighty-percent }
 
-### Updating documents
+## Updating documents
 
 ![Updating documents in Barbican](../assets/images/Barbican-write.png){: .scale-img-eighty-percent }
 
-### Creating documents
+## Creating documents
 
 ![Creating documents in Barbican](../assets/images/Barbican-create.png){: .scale-img-eighty-percent }
 
-### Form Modes
+## Form Modes
 
 Form Modes are used to manage access to documents. Domino REST API only allows access to documents that have a `Form` item. The content of the Form item determines the form definition used to decide access.
 
@@ -58,7 +58,7 @@ Using a configuration, rather than code in an individual application shifts pres
 
 Validation rule allow to ensure business rules to be enforce regardless of client (other application, web app, mobile app, curl). Domino REST API used the [`@Formula` language](https://help.hcltechsw.com/dom_designer/12.0.0/basic/H_NOTES_FORMULA_LANGUAGE.html) for them
 
-| Field   | Example                                                    | Purpose                             |
+| Field | Example                                                    | Purpose                             |
 | ------- | ---------------------------------------------------------- | ----------------------------------- |
 | formula | @IsMember(status;\"Submitted\":\"Approved\":\"Rejected\")  | `@Formula` with a true/false result |
 |         | DueDate < @Today                                           |
@@ -73,6 +73,6 @@ The requestor has read and write access to the subject, body, and amount fields 
 
 This assigning of access to documents to different users, based on their roles, can easily be done using Form Modes. Managing the Form Modes can be done via the Project Domino REST API Admin GUI.
 
-### Further readings
+## Further readings
 
 Check the pages about the [Admin UI](../references/usingwebui/index.md) and go through the [Tutorials](../tutorial/index.md).

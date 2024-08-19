@@ -48,23 +48,29 @@ Check the details in [Security Configuration](../security/index.md).
 
 ### Server based applications
 
-In the Admin UI (or the [Admin API](../../references/usingwebui/index.md)), we can define an "application" which consists of:
+In the Admin UI or the [Admin API](../../references/usingwebui/index.md), you can define an "application" which consists of:
 
-[![Application](../../assets/images/Application.png){: style="height:80%;width:80%"}](../../assets/images/Application.png){: target="_blank" rel="noopener noreferrer"}
+<!--[![Application](../../assets/images/Application.png)](../../assets/images/Application.png "CLick to open in a new tab"){: target="_blank" rel="noopener noreferrer"}-->
 
-1. Application Name.
-2. Application Description.
-3. AppID otherwise known as the Application ID.
-4. Edit this Application.
-5. Generate Application Secret.
-6. If shown, notifies that a Client Secret has already been generated for this Application.
-7. Delete this application.
-8. Launch this application.
+![List of Applications](../../assets/images/ListOfApplications.png)
 
-When creating a new Application, you will need to enter the Application Name and Description as well as one or more Callback URLs and Scopes, this provides access to Domino REST API schema that the application wants to get data from.
+- App Name or Application Name
+- Application description
+- App ID or Application ID
+- App Secret
 
-When the application presents AppID and ClientSecret in the header of a request, it can access the databases,
-even when they're not defined as "Open Access". This information is required for an application to use an OAuth flow to gain access to data. Thus, an application server can have more access than a browser application.
+In the Admin UI, you can also:
+
+- Edit an application.
+- Generate or regenerate an application secret.
+- Delete an application.
+- Launch an application.
+
+For more information, see [Application Management](../usingwebui/appui.md).
+
+When creating a new Application, enter the application name, application description, the callback URL or URLs, and one or more scopes. The scope provides access to Domino REST API schema that the application wants to get data from.
+
+When the application presents App ID and App Secret in the header of a request, it can access the databases, even when they're not defined as "Open Access". This information is required for an application to use an OAuth flow to gain access to data. Thus, an application server can have more access than a browser application.
 
 Domino REST API offers an OAuth/OICD controlled access.
 

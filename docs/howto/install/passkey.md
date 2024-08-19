@@ -10,22 +10,24 @@ The procedures guide you in using a passkey to log in to **Admin UI**. The proce
 - logging in to Admin UI using a passkey
 - clearing the passkey
 
-Passkeys are better options to passwords as they use public key cryptography to create secure experiences. Passkeys allow sign-in to websites without remembering and managing passwords by using a biometric sensor, PIN, or pattern. For more information, see [passkey.org](https://passkey.org/){: target="_blank" rel=”noopener noreferrer”}.
+Passkeys are better options to passwords as they use public key cryptography to create secure experiences. Passkeys allow sign-in to websites without remembering and managing passwords by using a biometric sensor, PIN, or pattern. For more information, see [passkey.org](https://passkey.org/).
 
 ## Prerequisites
 
 ### For Mac
 
-- You have [set up iCloud Keychain](https://support.apple.com/en-ph/guide/mac-help/mh43699/13.0/mac/13.0){: target="_blank" rel=”noopener noreferrer”} to create a passkey.
+- You have [set up iCloud Keychain](https://support.apple.com/en-ph/guide/mac-help/mh43699/13.0/mac/13.0) to create a passkey.
+
 - You have an Apple ID to set up iCloud Keychain.
 - Your Mac has a Touch ID sensor.
 
 !!!note 
-    Chrome supports passkeys on iCloud Keychain starting in Chrome 118, on macOS 13.5 or later. For more information, see [Chrome for Developers blog post](https://developer.chrome.com/blog/passkeys-on-icloud-keychain){: target="_blank" rel="noopener noreferrer"}.
+    Chrome supports passkeys on iCloud Keychain starting in Chrome 118, on macOS 13.5 or later. For more information, see [Chrome for Developers blog post](https://developer.chrome.com/blog/passkeys-on-icloud-keychain).
 
 ### For Windows
 
-- You have set up [Windows Hello](https://support.microsoft.com/en-us/windows/learn-about-windows-hello-and-set-it-up-dae28983-8242-bb2a-d3d1-87c9d265a5f0){: target="_blank" rel=”noopener noreferrer”} as Chrome on Windows stores passkeys in Windows Hello.
+- You have set up [Windows Hello](https://support.microsoft.com/en-us/windows/learn-about-windows-hello-and-set-it-up-dae28983-8242-bb2a-d3d1-87c9d265a5f0) as Chrome on Windows stores passkeys in Windows Hello.
+
 - Your Windows machine supports the Windows Hello options.     
 
 ## Procedures
@@ -43,12 +45,6 @@ Passkeys are better options to passwords as they use public key cryptography to 
 
 3. Choose how you want to create a passkey from the available options in the dialog and follow the succeeding instructions to complete the process. 
 
-<!--4. Set up your passkey.
-    
-    - For Mac, continue with **Touch ID** by scanning your fingerprint using the Touch ID sensor.
-
-    - For Windows, select the **Windows Hello** option that you have set up. As an example shown in the above image, signing in with a PIN option is set so enter your PIN.-->
-
 You have now logged in to the **Domino REST API Admin UI**.
 
 ### To log in to Admin UI with passkey
@@ -62,11 +58,6 @@ You have now logged in to the **Domino REST API Admin UI**.
     ![Log in with passkey](../../assets/images/loginpasskey.png){: style="height:60%;width:60%"}
 
 3. Follow the instructions to use your passkey. The instructions vary depending on what you have chosen on how to create the passkey. 
-
-<!--Follow the succeeding instruction to use your passkey. The instruction varies depending on what you chose to create the passkey. 
-
-    - For Mac, continue with Touch ID by scanning your fingerprint using the Touch ID sensor.
-    - For Windows, select the **Windows Hello** option that you have set up. As an example shown in the above image, signing in with a PIN option is set so enter your PIN.-->
 
 You have now logged in to the **Domino REST API Admin UI**.
 

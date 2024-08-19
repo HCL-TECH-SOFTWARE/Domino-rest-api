@@ -17,6 +17,7 @@ Provides the minimum [system requirements for Domino REST API](https://support.h
 Provides information related to the [installation and configuration of Domino REST API](../tutorial/installconfig/index.md).
 
 - [Functional accounts](functionalUsers.md)
+
 - [Understanding configuration](understandingconfig.md)
 
 ## OpenAPI
@@ -29,35 +30,55 @@ Provides information related to the [installation and configuration of Domino RE
 ## Using Domino REST API
 
 - [Overview](usingdominorestapi/index.md)
+
 - [Domino REST API CLI](usingdominorestapi/keepcli.md)
+
 - [Domino REST API task](usingdominorestapi/restapitask.md)
+
 - [Domino REST API roles](usingdominorestapi/roles.md)
+
 - [Domino REST API Applications](usingdominorestapi/keepapplications.md)
+
 - [DataFormats](usingdominorestapi/dataformats.md)
+
 - [Form and Alias handling](usingdominorestapi/formnames.md)
+
 - [Scopes](usingdominorestapi/scopes.md)
+
 - [Rich Text](usingdominorestapi/richtext/index.md)
+
 - [Metrics](usingdominorestapi/metrics.md)
-<!-- [Using Web UI](usingdominorestapi/administrationui.md) -->
+
 - [Using Domino Console](usingdominorestapi/console.md)
+
 - [Reserved Form Modes](usingdominorestapi/modenames.md)
 
 ## Security
 
 - [Security overview](security/index.md)
+
 - [Auth\*](security/authentication.md)
+
+- [JSON Web Token configuration](security/jwt.md)
+
 - [Configuration parameters](security/configurationParameters.md)
-- [config.json](parameters.md)
+
 - [Encryption keys](security/encryption.md)
+
 - [Set up oauth.nsf](../howto/VoltMX/setupoauthnsf.md)
+
 - [Custom Identity Provider](security/customIdp.md)
+
 - [Securing Domino REST API endpoints](security/securingKEEPEndpoints.md)
 
 ## User tools
 
 - [Overview](usertools/index.md)
+
 - [curl](usertools/curl.md)
+
 - [Postman](usertools/postman.md)
+
 - [Swagger UI](usertools/swagger.md)
 
 ## Configuration parameters 
@@ -71,6 +92,7 @@ For addressing common errors in installing and running the Domino REST API servi
 ## Quick reference
 
 - [Standards](quickreference/standards.md) used by Domino REST API
+
 - [Glossary](quickreference/glossary.md)
 
 ## Downloads
@@ -80,6 +102,12 @@ For scripts, Postman collections, sample databases, and more, see [Downloads](do
 ## Admin cheat sheet
 
 For information that administrator users need to know, see [Admin cheat sheet](admincheatsheet.md).
+
+## Extensions
+
+- [Extensions to open Microsoft Office in OFBA](ofba.md)
+
+- [Rich Text extensions](richtextension.md)
 
 ## Deprecated features
 

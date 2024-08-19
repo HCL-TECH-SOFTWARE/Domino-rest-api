@@ -22,32 +22,32 @@ The basic layout of a curl command is:
 
 The list of command options that you include in the command largely controls its behavior. To see all the options, use **curl --help**. Below are some commonly-used options.
 
-| Command Option                   | Description                                                           |
-| :------------------------------- | :-------------------------------------------------------------------- |
-| **-d, --data \<data\>**          | HTTP POST data (i.e. the data payload for a post request)             |
-| **-i, --include**                | Include response headers in the output                                |
-| **-I, --head**                   | Show document info only (i.e. just the header)                        |
-| **-K, --config \<file\>**        | Read config from a file (i.e. get options from a file)                |
-| **-o, --output \<file\>**        | Write response to a file instead of stdout                            |
-| **-O, --remote-name**            | Write output to a file named as the remote file (i.e download a file) |
-| **-u, --user \<user:password\>** | Server user and password (authentication)                             |
-| **-v, --verbose**                | Make the operation more talkative                                     |
-| **-X, --request \<command\>**    | Specify request command to use (i.e. a PUT command is: -X PUT)        |
+| Command Option               | Description                                                           |
+| :--------------------------- | :-------------------------------------------------------------------- |
+| -d, --data \<data\>          | HTTP POST data (that is the data payload for a post request)          |
+| -i, --include                | Include response headers in the output                                |
+| -I, --head                   | Show document info only (that is just the header)                     |
+| -K, --config \<file\>        | Read config from a file (that is to get options from a file)          |
+| -o, --output \<file\>        | Write response to a file instead of stdout                            |
+| -O, --remote-name            | Write output to a file named as the remote file (that is to download a file) |
+| -u, --user \<user:password\> | Server user and password (authentication)                             |
+| -v, --verbose                | Make the operation more talkative                                     |
+| -X, --request \<command\>    | Specify request command to use (that is a PUT command is: -X PUT)        |
 
 ## Learning curl
 
 curl can be used against the Domino REST APIs to practice. However, there is also the JSONPlaceholder site (in the Resources below) that provides a safe online REST API site full of fake data that can be used to test your curl skills.
 
-## Resources to learn curl:
+## Resources to learn curl
 
-curl Home Page: <https://curl.haxx.se/>
+- [curl Home Page](https://curl.se/)
 
-curl Documentation Page: <https://curl.haxx.se/docs/>
+- [curl Documentation Page](https://curl.se/docs/)
 
-Basic curl Tutorial: <https://www.youtube.com/watch?v=iLVoA1DTE60>
+- [Basic cURL Tutorial](https://www.youtube.com/watch?v=7XUibDYw4mc)
 
-Another curl Tutorial: <https://www.youtube.com/watch?v=7XUibDYw4mc>
+- [Testing APIs with the cURL Command](https://www.youtube.com/watch?v=iLVoA1DTE60)
 
-JSONPlaceholder (fake data): <https://jsonplaceholder.typicode.com/>
+- [JSONPlaceholder (fake data)](https://jsonplaceholder.typicode.com/)
 
-Postman Homepage: <https://www.postman.com/>
+- [Postman Homepage](https://www.postman.com/)

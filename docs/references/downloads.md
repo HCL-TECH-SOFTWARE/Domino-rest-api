@@ -8,17 +8,20 @@ title: Downloads
 
 Download from:
 
-- [HCL Software License & Download Portal (Flexnet)](https://hclsoftware.flexnetoperations.com/){: target="_blank"}
+- [HCL Software License & Download Portal](https://hclsoftware.flexnetoperations.com/){: target="_blank"}
+
 - [My HCLSoftware Portal](https://my.hcltechsw.com/){: target="_blank"}
 
 ## Presentations
 
-- [Engage 2022 Presentation](../assets/downloads/De22%20Project%20KEEP.pdf){: download="Engage 2022 Presentation"}
+[Engage 2022 Presentation](../assets/downloads/De22%20Project%20KEEP.pdf){: download="Engage 2022 Presentation"}
 
 ## Docker
 
 - [Docker compose file for primary server](../assets/downloads/docker-compose-primary.yml){: download="docker-compose-primary.yml"}
+
 - [Docker compose file for additional servers](../assets/downloads/docker-compose-secondary.yml){: download="docker-compose-secondary.yml"}
+
 - [Docker compose `sample.env` file](../assets/downloads/sample.env)
 
     <!-- prettier-ignore -->
@@ -28,7 +31,9 @@ Download from:
 ## Postman
 
 - [Domino REST API Postman collection](../assets/downloads/Domino%20REST%20API%20Postman%20Collection.json){: download="Domino REST API Postman collection"} to exercise Domino REST APIs for configuring and consuming databases.
+
 - [Domino REST API Postman environment](../assets/downloads/Domino%20REST%20API%20Postman%20Environment.json){: download="Domino REST API Postman environment"} for both collections.
+
 - [Demo.nsf](../assets/downloads/Demo.nsf) - Demo database for the Postman and Tutorial examples.
 
 The following scripts are for reference only. They have been superseded by the scripts provided by the installer, so there's no need beyond satisfying curiosity to download them.
@@ -36,6 +41,7 @@ The following scripts are for reference only. They have been superseded by the s
 ## Mac
 
 - [Shell script](../assets/downloads/macClient.sh) to start Domino REST API on MacOS.
+
 - Modify the script and replace all instances in the Shell script before using as follows:
 
     - programDir with the directory Notes is located in
@@ -45,6 +51,7 @@ The following scripts are for reference only. They have been superseded by the s
 ## Windows
 
 - [Command file](../assets/downloads/winClient.cmd) to start Domino REST API on a Windows client.
+
 - Modify the script and replace all instances in the Command file before using as follows:
 
     - programDir with the directory Notes is located in

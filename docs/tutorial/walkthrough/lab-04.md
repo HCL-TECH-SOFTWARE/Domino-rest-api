@@ -87,5 +87,6 @@ Alternative `POST` to `/api/setup-v1/admin/scope`
 ## Things to explore
 
 - [Official Domino REST API documentation](https://opensource.hcltechsw.com/Domino-rest-api/index.html)
+
 - [Discord discussion](https://discord.com/invite/jmRHpDRnH4)
 - Login with a limited scope and try to access the other scope's data.

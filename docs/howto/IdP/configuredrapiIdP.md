@@ -11,7 +11,8 @@ Domino REST API implements an OAuth2 provider. The following is a guide for sett
 The `oauth.nsf` database exists in your Domino data directory. The Domino IdP uses the `oauth.nsf` to store content and refresh information.
 
 !!! note
-      - If you are using Domino+Domino REST API docker image, the `oauth.nsf` should already be in the image but may not be fully configured. 
+      - If you are using Domino+Domino REST API docker image, the `oauth.nsf` should already be in the image but may not be fully configured.
+
       - If for some reason you need to create the `oauth.nsf`, see [Set up oauth.nsf](../../howto/VoltMX/setupoauthnsf.md), and save it in your Domino data directory.
 
 
@@ -65,7 +66,8 @@ The `oauth.nsf` database exists in your Domino data directory. The Domino IdP us
 
     - By default, the configured access level is `Author` with the capability to create information but unable to remove it. 
     - All servers involved must have at least an `Editor` access level and the `OAuthAdmin` role assigned. If you **DON'T** have this role, you'll only see your documents or records.
-    - Administrators requiring troubleshooting capabilities should have `Editor` access level and the `OAuthAdmin` role assigned. 
+    - Administrators requiring troubleshooting capabilities should have `Editor` access level and the `OAuthAdmin` role assigned.
+     
     - [Enforce a consistent ACL](https://help.hcltechsw.com/domino/14.0.0/admin/conf_enforcingaconsistentaccesscontrollist_t.html?hl=consistent%2Cacl).
     - Ensure the database is copied to all servers involved.
 
