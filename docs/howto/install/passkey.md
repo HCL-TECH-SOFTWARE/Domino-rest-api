@@ -14,7 +14,7 @@ Passkeys are better options to passwords as they use public key cryptography to 
 
 ## Prerequisites
 
-### For Mac Using Keychain
+### For Mac using Keychain
 
 - You have [set up iCloud Keychain](https://support.apple.com/en-ph/guide/mac-help/mh43699/13.0/mac/13.0) to create a passkey.
 
