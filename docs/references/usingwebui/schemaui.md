@@ -168,6 +168,8 @@ All forms are now activated with default settings and have **Active** status.
     - Enter a custom field name in the **Add custom field** and click the **+** icon to add a custom field to the form.
     - Click **Delete Fields**, select the fields to remove, and then click **Remove** to remove the selected fields from the form.
     - Click the **Multi-Value** toggle to the on position to specify a **Field Group**. The **Multi-Value** toggle isn't clickable to the off position if a field group is specified.
+    - Click the **Encrypt** toggle to the on position to ...
+    - Click the **Sign Document** toggle to the on position to ...
 
 ## Add a mode
 
