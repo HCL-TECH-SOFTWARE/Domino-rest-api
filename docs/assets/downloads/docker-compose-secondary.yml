@@ -43,6 +43,7 @@ services:
       SERVERSETUP_SECURITY_ACL_ADDLOCALDOMAINADMINS: "true"
       SERVERSETUP_SERVER_SERVERTASKS: replica,router,update,amgr,adminp,http,restapi
       KEEP_LAUNCH_TYPE: task
+      KeepInstallDir: /opt/hcl/keep
       LANG: "en_US.UTF-8"
     cap_add:
       - SYS_PTRACE
