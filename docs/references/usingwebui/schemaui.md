@@ -272,17 +272,17 @@ See [Edit a database view of a schema](../../howto/database/editviewcolumn.md) f
 
 ## View Source
 
-The Source tab allows you to view the database schema details in JSON format. 
+The **Source** tab allows you to view the database schema details in JSON format. 
 
 1. Select a schema from the list of schemas to load the schema details.
 2. Select **Source** from the menu bar to show the details for the selected schema in the following view mode:
       
-      - **Text Mode** - shows the text view of the details of the selected schema in JSON format
-      - **Styled Object** - shows the collapsible view of the details of the selected schema in JSON format 
+      - **Text View** - shows the text view of the details of the selected schema in JSON format
+      - **Tree View** - shows the collapsible view of the details of the selected schema in JSON format 
 
 
 !!!note
-      - The database schema JSON details are editable in the **Styled Object** view mode. For more information, see [Edit database schema JSON](../../howto/database/editsourcejson.md).
+      - The database schema JSON details are editable in the **Tree View** mode. For more information, see [Edit database schema JSON](../../howto/database/editsourcejson.md).
       
       - To export the schema in a .json file, see [Export schema as JSON file](../../howto/database/exportsourcejson.md).
 
