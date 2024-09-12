@@ -9,20 +9,26 @@ The section provides information on the latest features, improvements, and resol
     - Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](deprecated.md).
 
 <!--
-???+ info "v1.0.15 - What's new or changed"
-    ## v1.0.15 - _What's new or changed_
+???+ info "v1.1 - What's new or changed"
+    ## v1.1 - _What's new or changed_
 
-    *Release date: July XX, 2024*
+    *Release date: September 30, 2024*
 
     **New**
 
+    - Added support for using external IdP for Office Round Trip Experience. For more information, see [Setup external IdP for Office Round Trip Experience](../howto/production/roundtripidp.md). 
+
     **Improvements**
 
-    - Added option of selecting additional modes when executing [Quick Config](../references/usingwebui/quickconfigui.md). 
+    - Added option of selecting additional modes when executing [Quick Config](../references/usingwebui/quickconfigui.md).
+    
+    - Implemented UI enhancements to the **Source** tab under **Schema Management** in the **Admin UI**. 
 
     **Resolved Issues**
 
     **Others**
+
+    - Updated [Edit database schema JSON](../howto/database/editsourcejson.md) and [Export schema as JSON file](../howto/database/exportsourcejson.md) based on the UI enhahcements to the **Source** tab under **Schema Management**.  
 -->
 
 ???+ info "v1.0.14 - What's new or changed"

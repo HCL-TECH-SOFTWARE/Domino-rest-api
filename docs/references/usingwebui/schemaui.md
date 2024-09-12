@@ -100,7 +100,7 @@ The `nsf` database file and schema are added to the schema list.
 2. In the **Add New Form Schema** dialog, enter your schema name and click **Create**.
 3. On the **Schema Management - <schema name\>** page, select a form from the **Show fields from** dropdown field to display the fields of the selected form. You can also select **All Fields** from the dropdown field to display all the fields from all the available forms. 
 4. Select the fields that you want to add to the mode.
-5. Configure the **Field Setting** and **Mode Formula Settings** as needed for each added field. 
+5. Configure the **Field Setting** and **Mode Settings** as needed for each added field. 
 6. Click **Save**.
 
 The new form is now added to the list of forms and has an **Active** status. 
@@ -151,7 +151,7 @@ All forms are now activated with default settings and have **Active** status.
 
 3. Set the read or write access of each field in the form in **Field Setting**.
 
-4. Under **Mode Formula Settings**, click the pencil icon corresponding to a mode formula. A dialog opens.
+4. Under **Mode Settings**, click the pencil icon corresponding to a mode formula. A dialog opens.
 
       The following image shows the opened **Formula for Delete Access** dialog.  
 
@@ -168,12 +168,12 @@ All forms are now activated with default settings and have **Active** status.
     - Enter a custom field name in the **Add custom field** and click the **+** icon to add a custom field to the form.
     - Click **Delete Fields**, select the fields to remove, and then click **Remove** to remove the selected fields from the form.
     - Click the **Multi-Value** toggle to the on position to specify a **Field Group**. The **Multi-Value** toggle isn't clickable to the off position if a field group is specified.
-    - Click the **Encrypt** toggle to the on position to ...
-    - Click the **Sign Document** toggle to the on position to ...
+    - Click the **Encrypt** toggle in **Field Setting** to the on position to enable encryption.
+    - Click the **Sign Document** toggle in **Mode Settings** to the on position to enable this feature.
 
 ## Add a mode
 
-1. On the **Database Forms** tab, click the pencil icon corresponding to the activated form that you want to add a mode.The form **Access Mode** page opens showing the `default` access mode. 
+1. On the **Database Forms** tab, click the pencil icon corresponding to the activated form that you want to add a mode. The form **Access Mode** page opens showing the `default` access mode. 
 2. Click **Add Mode**.
 2. In the **Add New Mode** dialog, enter the name of the new mode and click **Save**. The new mode has been added to the `Mode`list.
 

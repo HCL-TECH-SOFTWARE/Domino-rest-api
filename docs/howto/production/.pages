@@ -8,6 +8,6 @@ nav:
     - jwtmultiserver.md
     - prodports.md
     - roundtrip.md
-#    - roundtripidp.md
+    - roundtripidp.md
     - virtualsheet.md
     - versionupdate.md
