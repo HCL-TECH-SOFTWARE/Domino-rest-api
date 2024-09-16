@@ -14,14 +14,14 @@ The procedure guides you on exporting the database schema in JSON format from th
 
 1. Go to the **Source** tab, and then click the **Download** icon.
 
-=== "From Text View"
+    === "From Text View"
 
-    ![Export Source](../../assets/images/exportjson.png)
+        ![Export Source](../../assets/images/exportjson.png)
 
 
-=== "From Tree View"
+    === "From Tree View"
 
-    ![Export Source](../../assets/images/exportjson1.png)
+        ![Export Source](../../assets/images/exportjson1.png)
 
 2. In the dialog indicating that the schema has been downloaded as `schema.json`, click **OK**.
 
