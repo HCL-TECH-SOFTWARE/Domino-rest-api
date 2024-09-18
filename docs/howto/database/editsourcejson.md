@@ -32,8 +32,9 @@ The procedures guide you in editing the database schema JSON in the **Tree View*
 
     ![Insert Object](../../assets/images/insertjsonobject1.png)
  
-    !!!tip
-        The available value **Types** are *String*, *Boolean*, *Number*, *Array*, and *Object*.
+    !!!note
+        - The available value **Types** are *String*, *Boolean*, *Number*, *Array*, and *Object*.
+        - If you are adding an *Array* or an *Object*, you must enter a key-value pair in the **Value** text box.
 
 3. Click **Insert**. The added JSON object is placed at the end of the list. 
 
@@ -68,6 +69,9 @@ The procedures guide you in editing the database schema JSON in the **Tree View*
 2. Select **Add**. 
 
 3. Enter a **Key**, select a **Type**, and then enter a **Value**.
+
+    !!!note
+        If you are adding an *Array* or an *Object*, you must enter a key-value pair in the **Value** text box.
 
 4. Click **Insert**. The added JSON object is placed at the end of the list of JSON objects. 
 
@@ -108,7 +112,7 @@ The procedures guide you in editing the database schema JSON in the **Tree View*
 
 3. Update the **Key**, **Type**, and **Value** as required.
 
-3. Click **Insert**. The added JSON object is placed at the end of the list. 
+3. Click **Insert**. 
 
 4. Click the **Save** icon to save the changes.
 

@@ -67,15 +67,16 @@ The `nsf` database file and schema are added to the schema list.
       
       - You can select a new icon from the drop-down icon list.
       - You can update the description of the schema in the **Description**. 
-      - You can update the configuration by clicking the toggles to enable or disable the configuration settings. For more information, see *Configuration Settings* table. 
+      - You can update the configuration by clicking the toggles to enable or disable the configuration settings. For more information, refer to the following table: 
 
       |Configuration setting|Description|
       |----|----|
       |DQL Access|Enable the setting to allows DQL queries to run against the elements of the schema. A mode named `dql` must be created on each form specifying the fields allowed for that form.|
       |In $DATA Scope|Enable the setting to make schema available in the system `$DATA` scope. Disable the setting to limit access to the schema to those with the specific scope. |
       |Enable Code|*feature under development*|
-      |Allow Decryption|*feature under development*|
       |Require Revision|Enable the setting to require the provision of the correct revision version of the document to update the document through an update endpoint.|
+
+      <!--|Allow Decryption|*feature under development*|-->
 
       - You can enter a valid Notes formula in **DQL Formula** to limit DQL usage. The formula must evaluate to `@TRUE` for DQL to be allowed. The default is `@TRUE`, which means no limitations.
 
