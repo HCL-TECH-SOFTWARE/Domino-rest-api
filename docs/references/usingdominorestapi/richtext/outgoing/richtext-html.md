@@ -1,4 +1,4 @@
-# Exaple: Outgoing Rich Text content as HTML
+# Example: Outgoing Rich Text content as HTML
 
 Let's say you want to retrieve the following Rich Text content as HTML:
 
