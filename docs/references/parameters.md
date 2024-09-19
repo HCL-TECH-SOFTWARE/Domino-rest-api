@@ -39,7 +39,7 @@ A configuration can have the following top-level properties. These properties ar
 | webAuthnActive           | Boolean                                           | Set to `true` to enable WebAuthn to be active.                                                                                                                                                                                             |
 | jwt                      | [JWT parameters](#jwt-parameters)                 | Parameters for enabling Domino REST API to accept JWT tokens from external providers     |
 | LandingPageRedirect  | String                | Alternative landing page for those who prefer a different layout than the tiled landing page. Ensure the URL provided is valid and complete.|
-
+| TokenCookie | Boolean | (default `false`) Set to `true` to allow Domino REST API to send back JWT as cookie named `KeepToken`. The cookie expiry is the same as the JWT expiry, it will also immediately expire when logout is called. |
 
 ## Backpressure handling Parameters
 

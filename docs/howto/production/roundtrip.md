@@ -1,30 +1,30 @@
 # Set up Office Round Trip Experience
 
-Microsoft Office Round Trip Experience is a feature included in Domino REST API that simplifies editing of a supported Microsoft Office file attached to a Domino document. The feature enables you to access, edit, and save the changes to the attached file using the applicable Microsoft Office application without having to download and re-attach the file to the Domino document. 
+Microsoft Office Round Trip Experience is a feature included in Domino REST API that simplifies editing of a supported Microsoft Office file attached to a Domino document. The feature enables you to access, edit, and save the changes to the attached file using the applicable Microsoft Office application without having to download and re-attach the file to the Domino document.
 
-## About this task 
+## About this task
 
-The procedure guides you on how to setup and use the Microsoft Office Round Trip Experience feature included in Domino REST API. 
+The procedure guides you on how to setup and use the Microsoft Office Round Trip Experience feature included in Domino REST API.
 
 ## Prerequisite
 
 - Make sure your computer has Microsoft Office installed or can access Office 365.
-- You must run your Domino REST API in HTTPs. 
+- You must run your Domino REST API in HTTPs.
 
 ## Procedures
 
 ### Add an MS Office attachment and create a link
 
-1. Add a Microsoft Office file as an attachment to a Domino document. 
+1. Add a Microsoft Office file as an attachment to a Domino document.
 
     !!!tip
         You can use the `POST /attachments/{unid}` endpoint in the [OpenAPI UI](../../tutorial/swagger.md) to add the file as attachment.
 
 2. Create a link to access the attached file. You can do this by either:
-    
+
     - Manually creating the link to access the attached file using the following format.
 
-        ```
+        ```text
         <scheme name>:<command name>|u|<DRAPI HTTPs hostname>/api/webdav-v1/attachment/<dataSource>/<document UNID>/<filename>
         ```
 
@@ -48,11 +48,11 @@ The procedure guides you on how to setup and use the Microsoft Office Round Trip
     - Using the `GET /attachmentnames/{unid}` endpoint to retrieve URLs to access the attached files.
 
         !!!caution "Important"
-            Make sure to set the value of the `includeProtocolUrl` query parameter to `true` to include the attachment URLs in the query response. 
+            Make sure to set the value of the `includeProtocolUrl` query parameter to `true` to include the attachment URLs in the query response.
 
-        The query response shows the filenames of the attachments and the URLs of the attachments with supported file extensions. There are two URLs for each attachment, one for viewing as indicated by the `ofv` command name and one for editing as indicated by the `ofe` command name included in the URLs. Attachments with unsupported file extensions will have no URLs. 
+        The query response shows the filenames of the attachments and the URLs of the attachments with supported file extensions. There are two URLs for each attachment, one for viewing as indicated by the `ofv` command name and one for editing as indicated by the `ofe` command name included in the URLs. Attachments with unsupported file extensions will have no URLs.
 
-        The query response example below shows the attachment file named `document.docx` has two URLs, as the file extension `.docx` is supported. However, no URLs are available for the attachment file named `sample.png` as the file extension `.png` isn't yet supported.   
+        The query response example below shows the attachment file named `document.docx` has two URLs, as the file extension `.docx` is supported. However, no URLs are available for the attachment file named `sample.png` as the file extension `.png` isn't yet supported.
 
         ```json
         {
@@ -72,33 +72,35 @@ The procedure guides you on how to setup and use the Microsoft Office Round Trip
         } 
         ```
 
-
 ### To access and edit the MS Office file attachment
 
 1. Open the created link to the MS Office file attachment in a web browser.
-2. In the Open MS Office application dialog, click Open. 
+2. In the Open MS Office application dialog, click **Open**.
 
     The following image shows an example of the **Open Microsoft Word** dialog when trying to open a Microsoft Word attachment.
 
     ![Open MS Office application](../../assets/images/SaveMSW.png){: style="height:70%;width:70%"}
 
-3. In the login dialog, enter your Domino REST API login credentials and click **Login**. 
+3. In the login dialog, enter your Domino REST API login credentials and click **Login**.
 
     ![Login dialog](../../assets/images/ofbalogin.png)
 
     !!!info
         The authentication is based on the [Office Forms Based Authentication (OFBA)](https://learn.microsoft.com/en-us/openspecs/sharepoint_protocols/ms-ofba/30c7bbe9-b284-421f-b866-4e7ed4866027) protocol. This is necessary since browsers and office applications don't currently support cookie and header sharing.
 
+    !!!note
+        You might see a different login dialogue with less functionality for OFBA when doing this on **Windows**. This is because some Microsoft applications in **Windows** still use **Internet Explorer**, and a lot of the functionalities we use in the original login dialogue is unsupported in it.
+
     The MS Office file attachment is now opened in the applicable MS Office application. In the following image, you see an opened MS Word document as an example.
 
     ![Example of opened Microsoft Word attachment](../../assets/images/rtmodify.png)
 
-4. Edit the attachment. 
+4. Edit the attachment.
 
     !!!note
         Editing is only possible if the specified command name in the created link is `ofe`.
 
-    As an example, the content of the opened MS Word document is changed from *Nothing to see here* to *Hello Sprint playback 114!!*.   
+    As an example, the content of the opened MS Word document is changed from *Nothing to see here* to *Hello Sprint playback 114!!*.
 
 5. Save your changes, and close the MS Office application. You have now edited the attachment without downloading it and reattaching it again to the Domino document.
 
@@ -111,7 +113,6 @@ The procedure guides you on how to setup and use the Microsoft Office Round Trip
     As an example, the following image shows that the content of the edited Microsoft Word attachment has been updated.  
 
     ![Example of edited content](../../assets/images/rtsave.png)
-
 
 ## Additional information
 
