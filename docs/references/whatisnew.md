@@ -8,7 +8,7 @@ The section provides information on the latest features, improvements, and resol
     
     - Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](deprecated.md).
 
-<!--
+
 ???+ info "v1.1 - What's new or changed"
     ## v1.1 - _What's new or changed_
 
@@ -16,22 +16,49 @@ The section provides information on the latest features, improvements, and resol
 
     **New**
 
-    - Added support for using external IdP for Office Round Trip Experience. For more information, see [Setup external IdP for Office Round Trip Experience](../howto/production/roundtripidp.md). 
+    - Added support for using external IdP for Office Round Trip Experience. For more information, see [Setup external IdP for Office Round Trip Experience](../howto/production/roundtripidp.md).
+
+    - Added `DELETE v1/nameddocument` endpoint to delete a named document.
+    - Added `GET v1/nameddocument` endpoint to retrieve a named document using the appropriate name.
+    - Added `GET v1/nameddocumentlist` endpoint to retrieve a list of named documents.
+    - Added `POST v1/nameddocument` endpoint to create and update a named document. 
+        
+        !!!warning "Important" 
+            A POST request replaces all fields listed in your schema. Ensure to include all the fields in the POST request body and the corresponding values you want to retain and overwrite. 
+ 
 
     **Improvements**
 
-    - Added option of selecting additional modes when executing [Quick Config](../references/usingwebui/quickconfigui.md).
+    - Added an option of selecting additional modes when executing [Quick Config](../references/usingwebui/quickconfigui.md).
     
     - Implemented UI enhancements to the **Source** tab under **Schema Management** in the **Admin UI**. 
 
+    - Added an option for exporting database schema as JSON file by copying the schema and then creating a JSON file containing the copied schema. For more information, see [Export database schema as JSON file](../howto/database/exportsourcejson.md#to-create-a-json-file). 
+
     **Resolved Issues**
+
+    - The `GET admin-v1/access/users` endpoint returned a **404 No users found with requested name** error when the value entered for the query parameter `startsWith` included a slash character.
+    - Swedish characters were not correctly encoded and displayed in the response body when Office Round Trip Experience with RichText content was attempted using `POST /v1/document` endpoint.
+    - Issues were encountered when logging in with MS-OFBA via Internet Explorer 8, as some login functions were not supported by the web browser.
 
     **Others**
 
-    - Updated [Edit database schema JSON](../howto/database/editsourcejson.md) and [Export schema as JSON file](../howto/database/exportsourcejson.md) based on the UI enhahcements to the **Source** tab under **Schema Management**.  
--->
+    - Updated [Edit database schema JSON](../howto/database/editsourcejson.md) and [Export schema as JSON file](../howto/database/exportsourcejson.md) based on the UI enhahcements to the **Source** tab under **Schema Management**.
+    
+    - Installer jar files:
+	    - For Domino 14: *restapiInstall-r14.jar*
+	    - For Domino 12: *restapiInstall-r12.jar*
 
-???+ info "v1.0.14 - What's new or changed"
+    - Docker image version for docker compose .env file (CONTAINER_IMAGE):
+        - For Domino 14: *domino-rest-api:1.1.0-r14*
+        - For Domino 12: *domino-rest-api:1.1.0-r12*  
+        
+    - Docker image version for docker compose .env file from Harbor:
+        - For Domino 14: *hclcr.io/domino/restapi:1.1.0-r14*
+        - For Domino 12: *hclcr.io/domino/restapi:1.1.0-r12*  
+
+
+??? info "v1.0.14 - What's new or changed"
     ## v1.0.14 - _What's new or changed_
 
     *Release date: June 13, 2024*
@@ -91,7 +118,7 @@ The section provides information on the latest features, improvements, and resol
 
     **Improvements**
 
-    - Extended how Rich Text is processed. For more information, see [Richtext extension](richtextension.md).
+    - Extended how Rich Text is processed. For more information, see [Rich Text extension](richtextension.md).
     
     - Improved OData filter processing by adding support for `in`, `contains`, `startswith`, and `endswith` clauses.
     - Enhanced user experience by allowing user to activate a form and bringing user directly into form edit mode by clicking the pencil icon corresponding to an inactive form in the **Database Form** tab in the **Admin UI** and confirming form activation.
