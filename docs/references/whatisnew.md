@@ -26,6 +26,11 @@ The section provides information on the latest features, improvements, and resol
         !!!warning "Important" 
             A POST request replaces all fields listed in your schema. Ensure to include all the fields in the POST request body and the corresponding values you want to retain and overwrite. 
  
+    - Added `GET v1/richtext/{richTextAs}/{unid}` endpoint that returns a stream of data from a Rich Text field based on the specified format. The endpoint is usable for all Rich Text processors and combines the functionalities of the following endpoints:
+
+        - `GET v1/richtext/markdown/{unid}`
+        - `GET v1/richtext/mime/{unid}`
+        - `GET v1/richtext/plain/{unid}`
 
     **Improvements**
 
@@ -44,6 +49,12 @@ The section provides information on the latest features, improvements, and resol
     **Others**
 
     - Updated [Edit database schema JSON](../howto/database/editsourcejson.md) and [Export schema as JSON file](../howto/database/exportsourcejson.md) based on the UI enhahcements to the **Source** tab under **Schema Management**.
+
+    - The following endpoints have been replaced with the `GET v1/richtext/{richTextAs}/{unid}` endpoint:
+
+        - `GET v1/richtext/markdown/{unid}`
+        - `GET v1/richtext/mime/{unid}`
+        - `GET v1/richtext/plain/{unid}`
     
     - Installer jar files:
 	    - For Domino 14: *restapiInstall-r14.jar*
