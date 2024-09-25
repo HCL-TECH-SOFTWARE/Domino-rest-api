@@ -16,6 +16,32 @@ The section provides information on the latest features, improvements, and resol
 
     **New**
 
+    - Domino REST API can now encrypt document fields and sign a document with keys stored in your Notes ID file. This protects data from unauthorized access and further enhances data security and integrity. 
+    
+        To learn more about encrypting, descrypting, and signing, see [Using encryption, decryption, and signing during development](../references/usingdominorestapi/encryptsign.md).
+
+        To set up Domino REST API and enable this feature, see [Set up Domino REST API for encryption, decryption, and signing](../howto/production/signencrypt.md).
+    
+    - Domino REST API can now enable HTTPS setup in Domino using Domino's certificate configuration under the following conditions:
+            
+        - The server is Domino 14 or greater.
+        - Certs are stored using the Domino Certificate Manager. 
+            
+            !!!note
+                The `certsrv` method is not supported.
+            
+        - An entry matching the Domino FQDN exists. 
+
+        To enable this feature, create or update a JSON file in the `{notesdata}/keepconfig.d` directory with the following configuration:
+
+        ```json
+        {
+            "TLSCertStore" : true
+        }
+        ```
+
+        For more information on creating or updating a JSON file, see [Modify configuration of Domino REST API](../howto/install/modifyconfig.md). 
+
     - Added support for using external IdP for Office Round Trip Experience. For more information, see [Setup external IdP for Office Round Trip Experience](../howto/production/roundtripidp.md).
 
     - Added `DELETE v1/nameddocument` endpoint to delete a named document.
@@ -33,6 +59,16 @@ The section provides information on the latest features, improvements, and resol
         - `GET v1/richtext/plain/{unid}`
 
     **Improvements**
+
+    - Domino REST API Task
+
+        The Domino Addin Task has been updated with the following:
+
+        - When Domino REST API is started, it displays the messages `REST API: Starting...` and then `REST API Started` instead of printing a JSON status message. 
+        - When Domino REST API is stopped,  it now displays the message `REST API: Shutdown` instead of a long output of JSON.
+        - The Domino REST API JAVA process is now integrated with the Domino process, resulting in a better-integrated product and improved reliability.
+        - The Domino REST API Statistics can now be accessed via the Domino Console `SHOW STAT` command. To see just the Domino REST API statistics, use the `SHOW STAT restapi` command.
+        - The `KeepManagementPort` line in the `notes.ini` is no longer necessary. If set, it will be ignored.
 
     - Added an option of selecting additional modes when executing [Quick Config](../references/usingwebui/quickconfigui.md).
     
