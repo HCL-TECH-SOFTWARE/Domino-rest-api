@@ -27,8 +27,7 @@ You can arrange the scopes in **Stack View**, **Card View**, **Alphabetical View
         - MyServer/MyOrg
         - CN=MyServer/O=MyOrg
 
-        !!!note
-            Accessing a scope on a different a server will always return an **HTTP 302 response**. The server to be redirected to will be dictated by the `Fully qualified Internet host name` from the **server connection document** of the server that owns the scope.
+        --8<-- "scopenote.md"
 
     - For the **Maximum Access Level**, the default is **Editor**. You can set it to another value to set the scope's maximum access anyone using the scope has. 
 

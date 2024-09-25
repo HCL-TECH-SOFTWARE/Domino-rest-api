@@ -10,4 +10,5 @@ nav:
     - roundtrip.md
     - roundtripidp.md
     - virtualsheet.md
+    - signencrypt.md
     - versionupdate.md

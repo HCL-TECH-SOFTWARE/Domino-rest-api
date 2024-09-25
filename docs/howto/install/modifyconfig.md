@@ -21,6 +21,8 @@ The procedure guides you on how to modify the Domino REST API configuration. Be 
     !!!note
         For more information on modifying the configuration, see [Overwriting the values](../../references/parameters.md#overwriting-the-values).
 
+4. Restart Domino REST API on all servers with this new configuration.
+
 ## Expected result
 
 The updated configuration takes effect the next time you start Domino REST API.
