@@ -14,6 +14,8 @@ Topics to guide you in completing configuration goals and tasks in relation to d
 
 - [Configure HTTPS](httpsprod.md)
 
+- [Enable HTTPS setup in Domino](dominohttps.md)
+
 - [JWT multi server](jwtmultiserver.md)
 
 - [Configure Ports](prodports.md)

@@ -5,6 +5,7 @@ nav:
     - disablemodule.md
     - hardening.md
     - httpsprod.md
+    - Enable HTTPS setup in Domino: dominohttps.md
     - jwtmultiserver.md
     - prodports.md
     - roundtrip.md

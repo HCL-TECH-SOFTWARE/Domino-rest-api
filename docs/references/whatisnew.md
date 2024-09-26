@@ -22,25 +22,7 @@ The section provides information on the latest features, improvements, and resol
 
         To set up Domino REST API and enable this feature, see [Set up Domino REST API for encryption, decryption, and signing](../howto/production/signencrypt.md).
     
-    - Domino REST API can now enable HTTPS setup in Domino using Domino's certificate configuration under the following conditions:
-            
-        - The server is Domino 14 or greater.
-        - Certs are stored using the Domino Certificate Manager. 
-            
-            !!!note
-                The `certsrv` method is not supported.
-            
-        - An entry matching the Domino FQDN exists. 
-
-        To enable this feature, create or update a JSON file in the `{notesdata}/keepconfig.d` directory with the following configuration:
-
-        ```json
-        {
-            "TLSCertStore" : true
-        }
-        ```
-
-        For more information on creating or updating a JSON file, see [Modify configuration of Domino REST API](../howto/install/modifyconfig.md). 
+    - Domino REST API can now enable HTTPS setup in Domino using Domino's certificate configuration. To learn more, see [Enable HTTPS setup in Domino using Domino's certificate configuration](../howto/production/dominohttps.md). 
 
     - Added support for using external IdP for Office Round Trip Experience. For more information, see [Setup external IdP for Office Round Trip Experience](../howto/production/roundtripidp.md).
 
