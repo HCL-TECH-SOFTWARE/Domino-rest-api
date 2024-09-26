@@ -22,7 +22,7 @@ The section provides information on the latest features, improvements, and resol
 
         To set up Domino REST API and enable this feature, see [Set up Domino REST API for encryption, decryption, and signing](../howto/production/signencrypt.md).
     
-    - Domino REST API can now enable HTTPS setup in Domino using Domino's certificate configuration. To learn more, see [Enable HTTPS setup in Domino using Domino's certificate configuration](../howto/production/dominohttps.md). 
+    - Domino REST API can now enable HTTPS setup in Domino using Domino's certificate configuration. To learn more, see [Enable HTTPS using the Domino Certificate Manager](../howto/production/dominohttps.md). 
 
     - Added support for using external IdP for Office Round Trip Experience. For more information, see [Setup external IdP for Office Round Trip Experience](../howto/production/roundtripidp.md).
 
