@@ -1,7 +1,8 @@
 # Using encryption, decryption, and signing during development
 
-!!!warning "Important!"
-    This functionality is only available if you've configured your Domino server. For more information, see [Set up Domino REST API for encryption, decryption, and signing](../../howto/production/signencrypt.md). 
+!!!note 
+    - This feature is only available starting from the Domino REST API v1.1.0 release. 
+    - You must configure your Domino server to enable this feature. For more information, see [Set up Domino REST API for encryption, decryption, and signing](../../howto/production/signencrypt.md). 
 
 ## Encryption
 

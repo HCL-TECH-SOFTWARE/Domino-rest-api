@@ -1,5 +1,8 @@
 # Set up Domino REST API for encryption, decryption, and signing
 
+!!!note
+    This feature is only available starting from the Domino REST API v1.1.0 release. 
+
 Domino REST API can encrypt or decrypt document fields and sign a document with keys stored in your Notes ID file using the setup described in this topic.
 
 ## About this task
