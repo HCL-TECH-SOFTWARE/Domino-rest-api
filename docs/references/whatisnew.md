@@ -50,7 +50,7 @@ The section provides information on the latest features, improvements, and resol
         - When Domino REST API is stopped,  it now displays the message `REST API: Shutdown` instead of a long output of JSON.
         - The Domino REST API JAVA process is now integrated with the Domino process, resulting in a better-integrated product and improved reliability.
         - The Domino REST API Statistics can now be accessed via the Domino Console `SHOW STAT` command. To see just the Domino REST API statistics, use the `SHOW STAT restapi` command.
-        - The `KeepManagementPort` line in the `notes.ini` is no longer necessary. If set, it will be ignored.
+        - The `KeepManagementURL` line in the `notes.ini` is no longer necessary. If set, it will be ignored.
 
     - Added an option of selecting additional modes when executing [Quick Config](../references/usingwebui/quickconfigui.md).
     
