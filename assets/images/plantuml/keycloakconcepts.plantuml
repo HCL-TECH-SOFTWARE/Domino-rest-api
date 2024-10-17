@@ -1,0 +1,12 @@
+@startwbs KeycloakConcepts
+* Keycloak
+** Realm
+** Realm
+*** Client
+*** Client
+**** Client Scopes
+***** Mapper
+***** Mapper
+*** Client
+** Realm
+@endwbs
