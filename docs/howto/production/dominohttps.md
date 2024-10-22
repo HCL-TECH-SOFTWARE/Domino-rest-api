@@ -20,6 +20,8 @@ For Domino REST API to enable HTTPS setup in Domino using Domino's certificate c
             
 - An entry matching the Domino FQDN exists. 
 
+For more information about Domino Certificate Manager, see [Managing TLS certificates with Certificate Manager](https://help.hcl-software.com/domino/14.0.0/admin/secu_le_using_certificate_manager.html?hl=certificate%2Cmanager).
+
 ## Procedure
 
 1. Create or update a JSON file in the `{notesdata}/keepconfig.d` directory with the following configuration:
