@@ -85,6 +85,10 @@ Provides information related to the [installation and configuration of Domino RE
 
 To learn more information about parameters used in configuration, see [Configuration parameters](parameters.md)
 
+## Domino REST API SDKs
+
+List of available [Domino REST API SDKs](sdk.md)
+
 ## Troubleshooting
 
 For addressing common errors in installing and running the Domino REST API service, see [Troubleshooting](troubleshooting.md)
@@ -112,6 +116,16 @@ For information that administrator users need to know, see [Admin cheat sheet](a
 ## Deprecated features
 
 [Deprecated features](deprecated.md) from the current and earlier releases
+
+## Documentation references
+
+[HCL Domino Documentation](https://help.hcl-software.com/domino/14.0.0/admin/index.html)
+
+- Provides documentation, release information, and more details on how to install, configure, and manage Domino servers and related components.
+
+[HCL Volt MX Go Documentation](https://opensource.hcltechsw.com/voltmxgo-documentation/)
+
+- Provides documentation and release information about HCL Volt MX Go. 
 
 ## Acknowledgements
 

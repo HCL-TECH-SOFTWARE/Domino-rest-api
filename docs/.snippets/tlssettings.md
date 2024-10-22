@@ -33,6 +33,7 @@ Use the following to configure TLS for pem:
 !!! tip
     It's your choice which key you want to use. Main considerations are the assessment of your security team and the ease of acquisition of a specific key format in your organization.
 
+<!--
 ## Example of private key and a self-signed certificate using openSSL:
 
 ### Bash code: 
@@ -58,3 +59,4 @@ The configuration for TLS for pem would look like:
   "TLSType": "pem"
 }
 ```
+-->

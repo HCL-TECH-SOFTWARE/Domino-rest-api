@@ -80,3 +80,9 @@ To get valid certificates, use any of the following approaches:
 When configuring TLS, you can use JSON values or [environment variables](../../references/parameters.md#environment). You can use either of the two. When using both, the environment variable will take priority.
 
 --8<-- "tlssettings.md"
+
+### Enabling HTTPS using Domino Certificate Manager
+    
+If you are using Domino 14 or above and your certificates are stored in the Domino Certificate Manager, you may be able to enable HTTPS automatically. For more information, see [Enable HTTPS using the Domino Certificate Manager](../production/dominohttps.md).
+
+--8<-- "tlssettings1.md"

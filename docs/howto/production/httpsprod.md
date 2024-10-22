@@ -16,6 +16,8 @@ The REST API can directly use TLS and is HTTP 1.1 and HTTP/2 compliant. You woul
 
 --8<-- "tlssettings.md"
 
+--8<-- "tlssettings1.md"
+
 Read the details here: [configure certificate](../../howto/IdP/configuringCertificates.md).
 
 --8<-- "keepmngtURLcaution1.md"
