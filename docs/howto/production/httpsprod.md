@@ -10,6 +10,8 @@ Terminate your TLS connection at a proxy. When the proxy runs on the same "machi
 
 If you are using Domino 14 or above and your certificates are stored in the Domino Certificate Manager, you may be able to enable HTTPS automatically. For more information, see [Enable HTTPS using the Domino Certificate Manager](../production/dominohttps.md).
 
+To learn more about Domino Certificate Manager, see [Managing TLS certificates with Certificate Manager](https://help.hcl-software.com/domino/14.0.0/admin/secu_le_using_certificate_manager.html?hl=certificate%2Cmanager).
+
 ## Use a TLS Certificate
 
 The REST API can directly use TLS and is HTTP 1.1 and HTTP/2 compliant. You would obtain a TLS certificate from your IT security team or your favorite supplier (We like [LetsEncypt](https://letsencrypt.org), it's free) and set the configuration parameters in a json file.
