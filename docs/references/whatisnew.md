@@ -8,6 +8,33 @@ The section provides information on the latest features, improvements, and resol
     
     - Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](deprecated.md).
 
+???+ info "v1.1.1 - What's new or changed"
+    ## v1.1.1 - _What's new or changed_
+
+    *Release date: December XX, 2024*
+
+    **New**
+
+    **Improvements**
+
+    **Resolved Issues**
+
+
+    **Others**
+
+    - Added [tip for ensuring successful round-trip editing on Windows](../howto/production/roundtrip.md#to-access-and-edit-the-ms-office-file-attachment).
+    
+    - Installer jar files:
+	    - For Domino 14: *restapiInstall-r14.jar*
+	    - For Domino 12: *restapiInstall-r12.jar*
+
+    - Docker image version for docker compose .env file (CONTAINER_IMAGE):
+        - For Domino 14: *domino-rest-api:1.1.1-r14*
+        - For Domino 12: *domino-rest-api:1.1.1-r12*  
+        
+    - Docker image version for docker compose .env file from Harbor:
+        - For Domino 14: *hclcr.io/domino/restapi:1.1.1-r14*
+        - For Domino 12: *hclcr.io/domino/restapi:1.1.1-r12*  
 
 ???+ info "v1.1 - What's new or changed"
     ## v1.1 - _What's new or changed_
