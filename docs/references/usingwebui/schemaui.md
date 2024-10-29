@@ -147,8 +147,11 @@ All forms are now activated with default settings and have **Active** status.
 
 2. Under **Show fields from**, hover over a field item and click the **+** icon. This adds the field in the form. Repeat this for all the fields to be added.
 
-      [![Add field](../../assets/images/addfield.png){: style="height:60%;width:60%"}](../../assets/images/addfield1.png "Click to open in a new tab"){: target="_blank" rel="noopener noreferrer"}
+      [![Add field](../../assets/images/addfield.png){: style="height:60%;width:60%"}](../../assets/images/addfield.png "Click to open in a new tab"){: target="_blank" rel="noopener noreferrer"}
+
+      When you hover over the **info** icon beside the field name, the field property is shown. The field can be *editable*, which means that the field has **Read/Write** access setting. The field can also be either *computed*, *computed when composed*, or *computed for display*, which means that the field has **Read Only** access setting.
      
+      ![Field info icon](../../assets/images/addfield1.png){: style="height:60%;width:60%"}
 
 3. Set the read or write access of each field in the form in **Field Setting**.
 

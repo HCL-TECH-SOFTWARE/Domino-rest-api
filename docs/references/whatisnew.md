@@ -15,7 +15,13 @@ The section provides information on the latest features, improvements, and resol
 
     **New**
 
+    - Users who have suspended access to the Admin UI due to the entry of incorrect credentials more than a predetermined number of times can now be identified. Their access can be reinstated without waiting for the lockout period to end via the Management console. For more information, see [Release suspended users](../howto/production/suspendeduser.md).
+
     **Improvements**
+
+    - When adding a JSON object to the database schema on the **Source** tab on the **Schema Management** page in the **Admin UI**, the value of the JSON object is now validated to ensure the correct format based on the selected JSON object type. For more information, see [Edit database schema JSON](../howto/database/editsourcejson.md).
+
+    - When adding fields to a form on the **Schema Management** page in the **Admin UI**, users can now identify the property of the field by hovering over the **info** icon beside the field name. For more information, see [Change form configuration](./usingwebui/schemaui.md#change-form-configuration).
 
     **Resolved Issues**
 
