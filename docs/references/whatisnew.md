@@ -8,6 +8,39 @@ The section provides information on the latest features, improvements, and resol
     
     - Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](deprecated.md).
 
+???+ info "v1.1.1 - What's new or changed"
+    ## v1.1.1 - _What's new or changed_
+
+    *Release date: December XX, 2024*
+
+    **New**
+
+    - Users who have suspended access to the Admin UI due to the entry of incorrect credentials more than a predetermined number of times can now be identified. Their access can be reinstated without waiting for the lockout period to end via the Management console. For more information, see [Release suspended users](../howto/production/suspendeduser.md).
+
+    **Improvements**
+
+    - When adding a JSON object to the database schema on the **Source** tab on the **Schema Management** page in the **Admin UI**, the value of the JSON object is now validated to ensure the correct format based on the selected JSON object type. For more information, see [Edit database schema JSON](../howto/database/editsourcejson.md).
+
+    - When adding fields to a form on the **Schema Management** page in the **Admin UI**, users can now identify the property of the field by hovering over the **info** icon beside the field name. For more information, see [Change form configuration](./usingwebui/schemaui.md#change-form-configuration).
+
+    **Resolved Issues**
+
+
+    **Others**
+
+    - Added [tip for ensuring successful round-trip editing on Windows](../howto/production/roundtrip.md#to-access-and-edit-the-ms-office-file-attachment).
+    
+    - Installer jar files:
+	    - For Domino 14: *restapiInstall-r14.jar*
+	    - For Domino 12: *restapiInstall-r12.jar*
+
+    - Docker image version for docker compose .env file (CONTAINER_IMAGE):
+        - For Domino 14: *domino-rest-api:1.1.1-r14*
+        - For Domino 12: *domino-rest-api:1.1.1-r12*  
+        
+    - Docker image version for docker compose .env file from Harbor:
+        - For Domino 14: *hclcr.io/domino/restapi:1.1.1-r14*
+        - For Domino 12: *hclcr.io/domino/restapi:1.1.1-r12*  
 
 ???+ info "v1.1 - What's new or changed"
     ## v1.1 - _What's new or changed_
