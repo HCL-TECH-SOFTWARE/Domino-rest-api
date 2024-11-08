@@ -15,3 +15,5 @@ nav:
     - signencrypt.md
     - versionupdate.md
     - customAPI.md
+    - configsrc.md
+    - usersmc.md

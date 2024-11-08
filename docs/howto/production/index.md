@@ -32,3 +32,7 @@ Topics to guide you in completing configuration goals and tasks in relation to d
 
 - [Update Domino REST API](versionupdate.md)
 
+- [Customize accessible API schemas and endpoints](customAPI.md)
+
+- [# Identity known users with valid JWT token](usersmc.md)
+
