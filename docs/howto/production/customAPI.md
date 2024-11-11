@@ -6,23 +6,33 @@ Guides you on how to customize which API schemas and endpoints are available or 
 
 ## Before you begin
 
-Take note of the `operationId` of the endpoints in a specific API schema that you want to be inaccessible. This prerequisite is applicable to [Customize available endpoints in a specific API schema](#customize-accessible-endpoints-in-a-specific-api-schema).
+!!!note
+    This prerequisite is applicable to [Customize available endpoints in a specific API schema](#customize-available-endpoints-in-a-specific-api-schema).
+
+You have to take note of the `operationId` of the endpoints in a specific API schema that you want to be unavailable. 
 
 **To know the operationId**:
 
 1. Go to [OpenAPI (SwaggerUI)](http://localhost:8880/openapi/index.html).
 2. Select the API schema that contains the endpoints that you don't want to be available.
+
+    ![API schemas](../../assets/images/apischema2.png)
+
+    As an example, **basis** API schema is selected.
+
 3. Select the endpoint or endpoints that you don't want to be available. You will see the value of the `operationId` after the endpoint description.
 
-In the example image, the `operationId` of each listed endpoint is enclosed in the red box. 
+    In the example image, the `operationId` of each listed endpoint is enclosed in the red box. 
 
-![API endpoint operationId](../../assets/images/opID.png)
+    ![API endpoint operationId](../../assets/images/opID.png)
+
+4. Take note of the `operationId` of each endpoint you don't want to be available. 
 
 ## Procedure
 
-### Customize accessible API schemas
+### Customize available API schemas
 
-This procedure enables you to make API schemas unavailable to end users. 
+This procedure enables you customize which API schemas are unavailable to end users. 
 
 1. Create a JSON file using a text editor.
 2. Add the `versions` JSON object with the entry name of the API schema you want to be unavailable and the `active` property.
@@ -42,12 +52,12 @@ This procedure enables you to make API schemas unavailable to end users.
 
     |entry name|API schema|
     |:---|:---|
-    |basis|HCL Domino REST API basis 1.3.0|
-    |setup|HCL Domino REST API setup 1.1.3|
-    |admin|HCL Domino REST API admin 1.0.2|
-    |admin-server|HCL Domino REST API admin-server 1.0.2|
-    |poi|HCL Domino REST API poi 1.0.3|
-    |pim|HCL Domino REST API pim 1.0.2|
+    |basis|HCL Domino REST API basis|
+    |setup|HCL Domino REST API setup|
+    |admin|HCL Domino REST API admin|
+    |admin-server|HCL Domino REST API admin-server|
+    |poi|HCL Domino REST API poi|
+    |pim|HCL Domino REST API pim|
 
 4.	Set the value of the `active` property to `false` to make the API schema unavailable.
 
@@ -62,15 +72,11 @@ This procedure enables you to make API schemas unavailable to end users.
     }
     ```
 
-    For example, if you want to make the *HCL Domino REST API setup 1.1.3*
-    and *HCL Domino REST API admin 1.0.2* API schemas unavailable, you will add the following to the JSON file:
+    For example, if you want to make the *HCL Domino REST API admin 1.0.2* API schema unavailable, you will add the following to the JSON file:
 
     ``` json
     {
         "versions" : {
-            "setup" : {
-                "active" : false
-            },
             "admin" : {
                 "active" : false
             }
@@ -82,9 +88,18 @@ This procedure enables you to make API schemas unavailable to end users.
 5. Save the JSON file in the `keepconfig.d` directory.
 6. Restart Domino REST API on all servers.
 
+The following image shows the available API schemas **before** saving the example JSON file, which makes the *HCL Domino REST API admin* API schema unavailable, in the `keepconfig.d` directory.
+
+![API schemas before admin is unavailable](../../assets/images/apischema2.png)
+
+The following image shows the available API schemas **after** saving the example JSON file, which makes the *HCL Domino REST API admin* API schema unavailable, in the `keepconfig.d` directory.
+
+![API schemas after admin is unavailable](../../assets/images/apischema1.png)
+
+
 ### Customize available endpoints in a specific API schema 
 
-This procedure enables you to customize which endpoints in a specific API schema unavailable to end users by using the endpoint's `operationId`. 
+This procedure enables you to customize which endpoints in a specific API schema are unavailable to end users by using the endpoint's `operationId`. 
 
 1. Create a JSON file using a text editor.
 2. Add the `versions` JSON object with the entry name of the API schema you want to customize and the `disabledOperationIds` property.
@@ -124,33 +139,48 @@ This procedure enables you to customize which endpoints in a specific API schema
 5. Save the JSON file in the `keepconfig.d` directory.
 6. Restart Domino REST API on all servers.
 
-### Customize accessible endpoints according to the Domino REST API version 
+The following images show the availability of the `POST v1/document` and `GET v1/document/{unid}` endpoints on the *HCL Domino REST API basis* API schema, and the `GET setup-v1/schema` endpoint on the *HCL Domino REST API setup* API schema **before** saving the example JSON file in the `keepconfig.d` directory.
 
-This procedure enables you to make endpoints in API schemas available to end users according to the `keepVersion` parameter. Each endpoint in an API schema has an `x-keep-version` attribute whose value corresponds to the version of Domino REST API when they were supported. By modifying the value of the `keepVersion` parameter, you can make endpoints supported in future releases available to meet your specific use case.  
+???example "Example images before making the endpoints unavailable"
 
-    !!!note
-        Even if endpoints to be supported in future releases can be made available, there is no guarantee that they will function as expected.
+    ![API schemas before admin is unavailable](../../assets/images/apischema4.png)
+
+    ![API schemas before admin is unavailable](../../assets/images/apischema6.png)
+
+The following images show the availability of the `POST v1/document` and `GET v1/document/{unid}` endpoints on the *HCL Domino REST API basis* API schema, and the `GET setup-v1/schema` endpoint on the *HCL Domino REST API setup* API schema **after** saving the example JSON file in the `keepconfig.d` directory.
+
+
+???example "Example images after making the endpoints unavailable"
+
+    ![API schemas before admin is unavailable](../../assets/images/apischema3.png)
+
+    ![API schemas before admin is unavailable](../../assets/images/apischema5.png)
+
+
+### Customize accessible endpoints according to the API version 
+
+This procedure enables you to make endpoints in API schemas available to end users according to the `keepVersion` parameter. Each endpoint in an API schema has an `x-keep-version` attribute whose value corresponds to the supported API version defined by the `keepVersion` parameter. By modifying the value of the `keepVersion` parameter, you can make endpoints that are experimental or endpoints under development that might be supported in future releases available to meet your specific use case.  
+
+!!!warning "Important"
+    Even if experimental endpoints or endpoints to be supported in future releases can be made available, there is no guarantee that they will function as expected.
 
 1. Create a JSON file using a text editor.
-2. Add the `keepVersion` parameter.
+2. Add the `keepVersion` parameter with a value of `5`.
 
     ``` json
     {
-        "keepVersion" : "number"
-
+        "keepVersion" : 5
     }
     ```
 
-3.  Change the value of the `keepVersion` parameter to a later main version of Domino REST API.
+3. Save the JSON file in the `keepconfig.d` directory.
+4. Restart Domino REST API on all servers.
 
-    For example, if you want to make endpoints that will be supported on the second main version of Domino REST API available, set the value of `keepVersion` to 2. By doing this, supported endpoints in the current main version of Domino REST API, which is version 1, and endpoints to be supported on the second main version of Domino REST API will be available. 
+The following image shows the currently supported endpoints for running code against data **before** making experimental endpoints or endpoints under development available.
 
-    ``` json
-    {
-        "keepVersion" : 2
+ ![Supported endpoints for running code against data](../../assets/images/apischema7.png)
 
-    }
-    ```
+The following image shows some supported and experimental endpoints for running code against data **after** making the experimental endpoints or endpoints under development available.
 
-5. Save the JSON file in the `keepconfig.d` directory.
-6. Restart Domino REST API on all servers.
+ ![Supported and experimental endpoints for running code against data](../../assets/images/apischema8.png)
+

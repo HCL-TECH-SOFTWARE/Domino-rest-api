@@ -15,7 +15,13 @@ The section provides information on the latest features, improvements, and resol
 
     **New**
 
-    - Users who have suspended access to the Admin UI due to the entry of incorrect credentials more than a predetermined number of times can now be identified. Their access can be reinstated without waiting for the lockout period to end via the Management console. For more information, see [Release suspended users](../howto/production/suspendeduser.md).
+    - Users who have suspended access to the **Admin UI** due to the entry of incorrect credentials more than a predetermined number of times can now be identified. Their access can be reinstated without waiting for the lockout period to end via the **Management console**. For more information, see [Release suspended users](../howto/production/suspendeduser.md).
+
+    - Users with valid JWT tokens can now be identified via the **Users** tab on the **Management console**. For more information, see [Identify known users with valid JWT token](../howto/production/usersmc.md). 
+
+    - Sources of the Domino REST API configuration can now be identified via the **Config src** tab on the **Management console**. For more information, see [Find configuration sources](../howto/production/configsrc.md).
+
+    - Domino REST API administrators can now customize which API schemas and endpoints are available to meet specific requirements and use cases. For more information, see [Customize available API schemas and endpoints](../howto/production/customAPI.md). 
 
     **Improvements**
 

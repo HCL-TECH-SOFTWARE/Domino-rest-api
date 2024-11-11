@@ -1,6 +1,8 @@
-# Identity known users with valid JWT token
+# Identify known users with valid JWT token
 
 ## About this task
+
+Guides you on how to identify known users with valid JWT tokens. 
 
 ## Before you begin
 
@@ -18,18 +20,16 @@ You must have access to the **Management console**.
 
 2. Click **Users**. The **Known users with valid JWT Token** page opens. 
 
-    The **Configuration** page includes the **Key** column that shows the configuration parameters or keys, the **Value** column that shows the value of the respective configuration parameters or keys, and the **Source** column that shows in which configuration files you can find the configuration parameters/keys and their values.
+    ![Known users with valid JWT Token page](../../assets/images/mcuser1.png)
 
-    ![Configuration page](../../assets/images/configsrc.png)
+    The **Known users with valid JWT Token** page includes the following columns:
+    
+    |Column name     |Description|
+    |:---|:---|
+    |User|It shows the usernames, in the canonical format, of known users who have or had valid JWT tokens.|
+    |First seen|It shows the date and time when the known user has first logged in to Domino REST API.</br></br>The succeeding row indicates how long it has been since the known user first logged in to Domino REST API based on the server time after the **Users** tab is opened or refreshed.|
+    |Last seen|It shows the date and time when the known user has logged out of the Domino REST API, or closed the Domino REST API.</br></br>The succeeding row indicates how long it has been since the known user logged out or closed the Domino REST API based on the server time after the **Users** tab is opened or refreshed.|
+    |Expiry|It shows the date and time the validity of the user's JWT token starts.</br></br>The succeeding row indicates how long before the JWT token will expire or how long the JWT token has expired based on the server time after the **Users** tab is opened or refreshed.|
 
-## Additional information
-
-Using the following example image, you can find the configuration parameter `AllowJwtMail` in the `config.json` file located in the `/opt/hcl/keep/resources/config` directory.
-
-Using the same example image, you can see that the configuration parameter `AllowLocalMailFile` doesn't have a corresponding entry under the **Source** column. When you see instances like this, it means that you can find the configuration parameter in the preceding file entry in the **Source** column. Based on this example, you can also find the configuration parameter `AllowLocalMailFile` in the `config.json` file located in the `/opt/hcl/keep/resources/config` directory.
-
-![Configuration page](../../assets/images/configsrc.png)
- 
-Using the following example image, you can find `identity.managementAPI.Doctor Notes.active` and `identity.managementAPI.Doctor Notes.secret` in the `Login.json` file added to the `keepconfig.d` directory. You can also see that the value of `identity.managementAPI.Doctor Notes.secret` has random characters that doesn't provide understandable meaning. This means that the value of `identity.managementAPI.Doctor Notes.secret` can't be exposed. 
-
-![Configuration page](../../assets/images/configsrc1.png)
+    !!!note
+        If the user accesses Domino REST API after the token expires, the user must go through the login process.
