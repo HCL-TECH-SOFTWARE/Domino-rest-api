@@ -6,19 +6,25 @@ Topics to guide you in completing configuration goals and tasks in relation to d
 
 - [Change file size limit](changefilesize.md)
 
+- [Configure HTTPS](httpsprod.md)
+
 - [Configure parameters](configparam.md)
+
+- [Configure Ports](prodports.md)
+
+- [Customize available API schemas and endpoints](customAPI.md)
 
 - [Disable modules](disablemodule.md)
 
-- [Hardened production setup](hardening.md)
-
-- [Configure HTTPS](httpsprod.md)
-
 - [Enable HTTPS using Domino Certificate Manager](dominohttps.md)
 
-- [JWT multi server](jwtmultiserver.md)
+- [Find configuration sources](configsrc.md)
 
-- [Configure Ports](prodports.md)
+- [Hardened production setup](hardening.md)
+
+- [Identify known users with valid JWT token](usersmc.md)
+
+- [JWT multi server](jwtmultiserver.md)
 
 - [Release suspended users](suspendeduser.md)
 
@@ -31,4 +37,10 @@ Topics to guide you in completing configuration goals and tasks in relation to d
 - [Set up Domino REST API for encryption, decryption, and signing](signencrypt.md)
 
 - [Update Domino REST API](versionupdate.md)
+
+
+
+
+
+
 
