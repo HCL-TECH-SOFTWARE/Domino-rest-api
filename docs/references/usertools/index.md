@@ -9,7 +9,8 @@ The table shows the tools you can use when dealing with REST APIs. Some tools ar
 | :--------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [curl](https://curl.haxx.se/)                        | Command line tool and library for transferring data with URLs. It is used for REST interaction - for scripts and command line.                                |
 | [jq](https://stedolan.github.io/jq/)                 | Command line tool that processes JSON back and forth. Works well with curl.                                                                                   |
-| [Postman](https://www.postman.com/)                  | Cross-platform tool to interact with REST resources. Easy to use and very powerful when testing APIs. We provide [sample collections] for it, for you to try. |
+| [Postman](https://www.postman.com/)                  | Cross-platform tool to interact with REST resources. Easy to use and very powerful when testing APIs. We provide sample collections for it, for you to try. |
+|[Bruno](https://www.usebruno.com/)|Git-integrated, fully offline, and open-source API client to interact with REST resources.|
 | [CharlesProxy](https://www.charlesproxy.com/)        | HTTP(S) proxy to debug. Especially helpful when the client is not a browser.                                                                                  |
 | [Mockaroo](https://www.mockaroo.com/)                | Online tool to generate sample data.                                                                                                                          |
 | [Let's Encrypt](https://letsencrypt.org/)            | Generates free SSL certificates.                                                                                                                              |
