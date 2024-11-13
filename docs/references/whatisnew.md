@@ -21,13 +21,17 @@ The section provides information on the latest features, improvements, and resol
 
     - Sources of the Domino REST API configuration can now be identified via the **Config src** tab on the **Management console**. For more information, see [Find configuration sources](../howto/production/configsrc.md).
 
-    - Domino REST API administrators can now customize which API schemas and endpoints are available to meet specific requirements and use cases. For more information, see [Customize available API schemas and endpoints](../howto/production/customAPI.md). 
+    - Domino REST API administrators can now customize which API schemas and endpoints are available to meet specific requirements and use cases. For more information, see [Customize available API schemas and endpoints](../howto/production/customAPI.md).
+
+    - Implemented the Monaco Editor to the **Text View** mode on the **Source** tab on the **Schema Management** page of the **Admin UI**. With this implementation, users can now also edit the database schema from the **Text View** mode. For more information, see [Edit database schema JSON](../howto/database/editsourcejson.md).
 
     **Improvements**
 
     - When adding a JSON object to the database schema on the **Source** tab on the **Schema Management** page in the **Admin UI**, the value of the JSON object is now validated to ensure the correct format based on the selected JSON object type. For more information, see [Edit database schema JSON](../howto/database/editsourcejson.md).
 
     - When adding fields to a form on the **Schema Management** page in the **Admin UI**, users can now identify the property of the field by hovering over the **info** icon beside the field name. For more information, see [Change form configuration](./usingwebui/schemaui.md#change-form-configuration).
+
+    - The **Clear passkey** option has been removed from the **Admin UI** login page to avoid user confusion. This option only clears local storage data, not the actual passkey. To enhance the user experience, both the **LOG IN WITH PASSWORD** and **LOG IN WITH PASSKEY** options are available on the **Admin UI** login page. For more information, see [Use WebAuthn (Passkey) to log in to Admin UI](../howto/install/passkey.md).
 
     **Resolved Issues**
 

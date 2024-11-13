@@ -15,7 +15,7 @@ Go to the Domino REST API Admin UI.<br>
 
 > _For example `http://restapi.myhost.com:8880/admin/ui`, replacing the host with your Domino REST API's host._
 
-On the login page, enter the administrator username and password, and then click **LOG IN**.
+On the login page, enter the administrator username and password, and then click **LOG IN WITH PASSWORD**.
 
 ![Login Page](../assets/images/AdminLogin.png)
 
