@@ -66,13 +66,9 @@ You have now logged in to the **Domino REST API Admin UI**.
 
 ### To clear your passkey
 
-Check and follow the instructions for clearing a passkey on the web based on how you created your passkey. The following are links to some of those instructions:
+Check and follow the instructions for clearing a passkey on the Internet based on how you created your passkey. The following are links to some of those instructions:
 
 - [Remove a passkey or password from your Mac and iCloud Keychain](https://support.apple.com/en-ph/guide/mac-help/mchl77e2cb66/14.0/mac/14.0)
 - [Manage your passkeys in Windows](https://support.microsoft.com/en-us/windows/manage-your-passkeys-in-windows-6a70599a-25e1-4461-86be-d67d1023c69f)
 - [Manage passkeys in Chrome](https://support.google.com/chrome/answer/13168025?hl=en&co=GENIE.Platform%3DDesktop#zippy=%2Cmanage-passkeys-in-macos%2Cmanage-passkeys-in-windows)
-
-If you see the **Username** field already filled with the username you used when you signed up with your passkey after clearing your passkey, as shown in the following example image, try clearing your browser's cache.
-
-![Log in with passkey](../../assets/images/loginpasskey.png){: style="height:60%;width:60%"}
 

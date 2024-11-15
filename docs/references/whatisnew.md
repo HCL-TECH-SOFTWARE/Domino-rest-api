@@ -11,7 +11,7 @@ The section provides information on the latest features, improvements, and resol
 ???+ info "v1.1.1 - What's new or changed"
     ## v1.1.1 - _What's new or changed_
 
-    *Release date: December XX, 2024*
+    *Release date: December 02, 2024*
 
     **New**
 
@@ -25,6 +25,10 @@ The section provides information on the latest features, improvements, and resol
 
     - Implemented the Monaco Editor to the **Text View** mode on the **Source** tab on the **Schema Management** page of the **Admin UI**. With this implementation, users can now also edit the database schema from the **Text View** mode. For more information, see [Edit database schema JSON](../howto/database/editsourcejson.md).
 
+    - Added a new OpenAPI landing page that shows all the general API schemas and application-specific schemas, enabling users to easily find the schemas they require.
+
+    - Added [WebDAV API](openapidefinitions.md#webdav) that provides endpoints to perform remote Web content authoring operations that support the Office Round Trip Experience and Virtual Spreadsheet features of Domino REST API. 
+
     **Improvements**
 
     - When adding a JSON object to the database schema on the **Source** tab on the **Schema Management** page in the **Admin UI**, the value of the JSON object is now validated to ensure the correct format based on the selected JSON object type. For more information, see [Edit database schema JSON](../howto/database/editsourcejson.md).
@@ -35,6 +39,9 @@ The section provides information on the latest features, improvements, and resol
 
     **Resolved Issues**
 
+    - Forms or views with special characters were not encoded when performing a REST call to retrieve the list of fields or columns, resulting in a 405 Method Not Allowed error response. 
+    - Editing a schema in the Admin UI led to an empty page when the name of the schema form or  view ended in `#`.
+    - The `GET v1/lists/{name}` endpoint did not return the correct external names when pulling view data from a view schema with configured external names using the view alias. 
 
     **Others**
 
