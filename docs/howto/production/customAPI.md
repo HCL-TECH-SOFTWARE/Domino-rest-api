@@ -58,6 +58,7 @@ This procedure enables you customize which API schemas are unavailable to end us
     |admin-server|HCL Domino REST API admin-server|
     |poi|HCL Domino REST API poi|
     |pim|HCL Domino REST API pim|
+    |webdav|HCL Domino REST API webdav|
 
 4.	Set the value of the `active` property to `false` to make the API schema unavailable.
 

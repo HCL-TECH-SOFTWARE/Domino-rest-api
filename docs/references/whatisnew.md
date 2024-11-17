@@ -11,7 +11,7 @@ The section provides information on the latest features, improvements, and resol
 ???+ info "v1.1.1 - What's new or changed"
     ## v1.1.1 - _What's new or changed_
 
-    *Release date: December XX, 2024*
+    *Release date: December 02, 2024*
 
     **New**
 
@@ -21,7 +21,13 @@ The section provides information on the latest features, improvements, and resol
 
     - Sources of the Domino REST API configuration can now be identified via the **Config src** tab on the **Management console**. For more information, see [Find configuration sources](../howto/production/configsrc.md).
 
-    - Domino REST API administrators can now customize which API schemas and endpoints are available to meet specific requirements and use cases. For more information, see [Customize available API schemas and endpoints](../howto/production/customAPI.md). 
+    - Domino REST API administrators can now customize which API schemas and endpoints are available to meet specific requirements and use cases. For more information, see [Customize available API schemas and endpoints](../howto/production/customAPI.md).
+
+    - Implemented the Monaco Editor to the **Text View** mode on the **Source** tab on the **Schema Management** page of the **Admin UI**. With this implementation, users can now also edit the database schema from the **Text View** mode. For more information, see [Edit database schema JSON](../howto/database/editsourcejson.md).
+
+    - Added a new OpenAPI landing page that shows all the general API schemas and application-specific schemas, enabling users to easily find the schemas they require.
+
+    - Added [WebDAV API](openapidefinitions.md#webdav) that provides endpoints to perform remote Web content authoring operations that support the Office Round Trip Experience and Virtual Spreadsheet features of Domino REST API. 
 
     **Improvements**
 
@@ -29,8 +35,13 @@ The section provides information on the latest features, improvements, and resol
 
     - When adding fields to a form on the **Schema Management** page in the **Admin UI**, users can now identify the property of the field by hovering over the **info** icon beside the field name. For more information, see [Change form configuration](./usingwebui/schemaui.md#change-form-configuration).
 
+    - The **Clear passkey** option has been removed from the **Admin UI** login page to avoid user confusion. This option only clears local storage data, not the actual passkey. To enhance the user experience, both the **LOG IN WITH PASSWORD** and **LOG IN WITH PASSKEY** options are available on the **Admin UI** login page. For more information, see [Use WebAuthn (Passkey) to log in to Admin UI](../howto/install/passkey.md).
+
     **Resolved Issues**
 
+    - Forms or views with special characters were not encoded when performing a REST call to retrieve the list of fields or columns, resulting in a 405 Method Not Allowed error response. 
+    - Editing a schema in the Admin UI led to an empty page when the name of the schema form or  view ended in `#`.
+    - The `GET v1/lists/{name}` endpoint did not return the correct external names when pulling view data from a view schema with configured external names using the view alias. 
 
     **Others**
 

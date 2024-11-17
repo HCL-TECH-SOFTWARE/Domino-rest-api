@@ -6,7 +6,7 @@ The definitions below serve as reference and guide, so you can learn about the A
 
 !!! info "API definitions are individual"
 
-    Please note: depending on your server configuration, not all endpoints will be active. Custom access definitions are not visible here
+    Depending on your server configuration, not all endpoints will be active. Custom access definitions are not visible here
 
 ## Basis
 
@@ -51,6 +51,15 @@ We named this API in honor of an [Apache project](https://poi.apache.org/) that 
 [Explore the POI API using the ReDoc viewer](https://redocly.github.io/redoc/?url=https://opensource.hcltechsw.com/Domino-rest-api/assets/downloads/openapi.poi.json)
 
 [Open the `openapi.poi.json` file](https://opensource.hcltechsw.com/Domino-rest-api/assets/downloads/openapi.poi.json)
+
+## WebDAV
+
+*Web Distributed Authoring and Versioning* or WebDAV API provides endpoints to perform remote Web content authoring operations that support the Office Round Trip Experience and Virtual Spreadsheet features of Domino REST API.  
+
+!!!note
+    `PROPFIND`, `LOCK`, and `UNLOCK` methods aren't included since these aren't supported by OpenAPI.
+
+[Open the `openapi.webdav.json` file](../assets/downloads/openapi.webdav.json)
 
 ## OpenAPI extensions
 

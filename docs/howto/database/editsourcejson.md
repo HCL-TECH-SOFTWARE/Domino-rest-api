@@ -2,7 +2,7 @@
 
 ## About this task
 
-The procedures guide you in editing the database schema JSON in the **Tree View** mode in the **Source** tab under **Schema Management** so you can:
+The procedures guide you in editing the database schema JSON in the **Tree View** mode and **Text view** mode in the **Source** tab under **Schema Management** so you can:
 
 - add a new JSON object to the database schema
 - add a JSON object to an existing JSON object
@@ -15,7 +15,7 @@ The procedures guide you in editing the database schema JSON in the **Tree View*
 - You have selected a schema on the **Schema Management** page.
 - You have selected **Source** from the menu bar and is in the **Tree View** mode.  
 
-## Procedures
+## Tree View procedures
 
 ### To add a JSON object to the database schema
 
@@ -105,3 +105,40 @@ The procedures guide you in editing the database schema JSON in the **Tree View*
 2. Select **Duplicate**. The duplicated JSON object is placed at the end of the list.
 
 3. Click the **Save** icon to save the changes.
+
+## Text View procedure
+
+With the implementation of the Monaco Editor to the **Text View** mode on the **Source** tab, you can now edit the database schema JSON just like using a normal text editor.
+
+As an example, you can edit a value of a key. As shown in the images, the name of a view is changed from `Customers` to `Customer1`.
+
+=== "Before editing"
+
+    ![View name change](../../assets/images/sourcetext1.png)
+
+=== "After editing"
+
+    ![View name change](../../assets/images/sourcetext2.png)
+
+You can also enter additional data. As shown in the images, the following are added to `agents`:
+
+```json
+{
+   "name": "Fix Body",
+   "alias": [],
+   "unid": "3F8E64B529DA6CF848258435004A37CC"
+  }
+```
+
+=== "Before editing"
+
+    ![Add agent](../../assets/images/sourcetext3.png)
+
+=== "After editing"
+
+    ![Add agent](../../assets/images/sourcetext4.png)
+
+
+!!!tip
+    - Make sure to click the **Save** icon, and then select **Yes** in the **Save changes** dialog to save your changes.
+    - Make sure to follow the correct syntax when adding data.  

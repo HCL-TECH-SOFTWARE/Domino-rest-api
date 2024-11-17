@@ -292,8 +292,8 @@ The **Source** tab allows you to view the database schema details in JSON format
 
 
 !!!note
-      - The database schema JSON details are editable in the **Tree View** mode. For more information, see [Edit database schema JSON](../../howto/database/editsourcejson.md).
+      - To edit the database schema JSON details, see [Edit database schema JSON](../../howto/database/editsourcejson.md).
       
-      - To export the schema in a .json file, see [Export schema as JSON file](../../howto/database/exportsourcejson.md).
+      - To export the schema in a JSON file, see [Export schema as JSON file](../../howto/database/exportsourcejson.md).
 
 
