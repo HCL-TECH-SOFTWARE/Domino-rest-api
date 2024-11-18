@@ -27,7 +27,9 @@ The section provides information on the latest features, improvements, and resol
 
     - Added a new OpenAPI landing page that shows all the general API schemas and application-specific schemas, enabling users to easily find the schemas they require.
 
-    - Added [WebDAV API](openapidefinitions.md#webdav) that provides endpoints to perform remote Web content authoring operations that support the Office Round Trip Experience and Virtual Spreadsheet features of Domino REST API. 
+    - Added [WebDAV API](openapidefinitions.md#webdav) that provides endpoints to perform remote Web content authoring operations that support the Office Round Trip Experience and Virtual Spreadsheet features of Domino REST API.
+
+    - Added the console command `tell restapi idpstatus` that shows the state of the configured identity providers when executed on the Domino console.   
 
     **Improvements**
 
@@ -36,6 +38,8 @@ The section provides information on the latest features, improvements, and resol
     - When adding fields to a form on the **Schema Management** page in the **Admin UI**, users can now identify the property of the field by hovering over the **info** icon beside the field name. For more information, see [Change form configuration](./usingwebui/schemaui.md#change-form-configuration).
 
     - The **Clear passkey** option has been removed from the **Admin UI** login page to avoid user confusion. This option only clears local storage data, not the actual passkey. To enhance the user experience, both the **LOG IN WITH PASSWORD** and **LOG IN WITH PASSKEY** options are available on the **Admin UI** login page. For more information, see [Use WebAuthn (Passkey) to log in to Admin UI](../howto/install/passkey.md).
+
+    - Added the column attributes `twisties` and `responsesonly` to the `GET v1/lists` endpoint response when the *columns* parameter is set to true. 
 
     **Resolved Issues**
 
