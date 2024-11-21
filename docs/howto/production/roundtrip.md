@@ -1,6 +1,8 @@
 # Set up Office Round Trip Experience
 
-Microsoft Office Round Trip Experience is a feature included in Domino REST API that simplifies editing of a supported Microsoft Office file attached to a Domino document. The feature enables you to access, edit, and save the changes to the attached file using the applicable Microsoft Office application without having to download and re-attach the file to the Domino document.
+Microsoft[^1] Office Round Trip Experience is a feature included in Domino REST API that simplifies editing of a supported Microsoft Office file attached to a Domino document. The feature enables you to access, edit, and save the changes to the attached file using the applicable Microsoft Office application without having to download and re-attach the file to the Domino document.
+
+[^1]: Microsoft, Windows, and Office 365 are registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.
 
 ## About this task
 
@@ -13,7 +15,7 @@ The procedure guides you on how to setup and use the Microsoft Office Round Trip
 
 ## Procedures
 
-### Add an MS Office attachment and create a link
+### To add an MS Office attachment and create a link
 
 1. Add a Microsoft Office file as an attachment to a Domino document.
 
@@ -74,6 +76,15 @@ The procedure guides you on how to setup and use the Microsoft Office Round Trip
 
 ### To access and edit the MS Office file attachment
 
+!!!tip "Round-trip editing on Windows"
+    For successfully performing round-trip editing on Windows, it's recommended to deactivate the protected view for files originating from the Internet before executing this procedure. To do this:
+
+    1. Open the Microsoft application that you will use for round-trip editing.
+    2. Click **File** &rarr; **Options**.
+    3. Click **Trust Center** &rarr; **Trust Center Settings** &rarr; **Protected View**.
+    4. Clear the **Enable Protected View for files originating from the Internet** checkbox, and then click **OK**.
+
+
 1. Open the created link to the MS Office file attachment in a web browser.
 2. In the Open MS Office application dialog, click **Open**.
 
@@ -83,13 +94,12 @@ The procedure guides you on how to setup and use the Microsoft Office Round Trip
 
 3. In the login dialog, enter your Domino REST API login credentials and click **Login**.
 
+    The authentication is based on the [Office Forms Based Authentication (OFBA)](https://learn.microsoft.com/en-us/openspecs/sharepoint_protocols/ms-ofba/30c7bbe9-b284-421f-b866-4e7ed4866027) protocol. This is necessary since browsers and office applications don't currently support cookie and header sharing.
+
     ![Login dialog](../../assets/images/ofbalogin.png)
-
-    !!!info
-        The authentication is based on the [Office Forms Based Authentication (OFBA)](https://learn.microsoft.com/en-us/openspecs/sharepoint_protocols/ms-ofba/30c7bbe9-b284-421f-b866-4e7ed4866027) protocol. This is necessary since browsers and office applications don't currently support cookie and header sharing.
-
+        
     !!!note
-        You might see a different login dialogue with less functionality for OFBA when doing this on **Windows**. This is because some Microsoft applications in **Windows** still use **Internet Explorer**, and a lot of the functionalities we use in the original login dialogue is unsupported in it.
+        You might see a different login dialog with less functionality for OFBA when doing this on **Windows**. It's because some Microsoft applications in **Windows** still use **Internet Explorer**, and many of the functionalities we use in the original login dialog are unsupported.
 
     The MS Office file attachment is now opened in the applicable MS Office application. In the following image, you see an opened MS Word document as an example.
 

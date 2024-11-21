@@ -8,8 +8,64 @@ The section provides information on the latest features, improvements, and resol
     
     - Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](deprecated.md).
 
+???+ info "v1.1.1 - What's new or changed"
+    ## v1.1.1 - _What's new or changed_
 
-???+ info "v1.1 - What's new or changed"
+    *Release date: December 02, 2024*
+
+    **New**
+
+    - Users who have entered incorrect credentials more than a predetermined number of times during any Domino REST API authentication can be identified. Their access can be reinstated without waiting for the lockout period to end via the **Management console**. For more information, see [Release suspended users](../howto/production/suspendeduser.md).
+
+    - Users with valid JWT tokens can now be identified via the **Users** tab on the **Management console**. For more information, see [Identify known users with valid JWT token](../howto/production/usersmc.md). 
+
+    - The Domino REST API configuration settings and where they are located can be identified via the **Config src** tab on the **Management console**. For more information, see [Find configuration sources](../howto/production/configsrc.md).
+
+    - Domino REST API administrators can now customize which API schemas and endpoints are available to meet specific requirements and use cases. For more information, see [Customize available API schemas and endpoints](../howto/production/customAPI.md).
+
+    - Implemented the Monaco Editor to the **Text View** mode on the **Source** tab on the **Schema Management** page of the **Admin UI**. With this implementation, users can now also edit the database schema from the **Text View** mode. For more information, see [Edit database schema JSON](../howto/database/editsourcejson.md).
+
+    - Added a new OpenAPI landing page that shows all the general API schemas and application-specific schemas, enabling users to easily find the schemas they require.
+
+    - Added [WebDAV API](openapidefinitions.md#webdav) that provides endpoints to perform remote Web content authoring operations that support the Office Round Trip Experience and Virtual Spreadsheet features of Domino REST API.
+
+    - Added the console command `tell restapi idpstatus` that shows the state of the configured identity providers when executed on the Domino console.   
+
+    **Improvements**
+
+    - When adding a JSON object to the database schema on the **Source** tab on the **Schema Management** page in the **Admin UI**, the value of the JSON object is now validated to ensure the correct format based on the selected JSON object type. For more information, see [Edit database schema JSON](../howto/database/editsourcejson.md).
+
+    - When adding fields to a form on the **Schema Management** page in the **Admin UI**, users can now identify the property of the field by hovering over the **info** icon beside the field name. For more information, see [Change form configuration](./usingwebui/schemaui.md#change-form-configuration).
+
+    - The **Clear passkey** option has been removed from the **Admin UI** login page to avoid user confusion. This option only clears local storage data, not the actual passkey. To enhance the user experience, both the **LOG IN WITH PASSWORD** and **LOG IN WITH PASSKEY** options are available on the **Admin UI** login page. For more information, see [Use WebAuthn (Passkey) to log in to Admin UI](../howto/install/passkey.md).
+
+    - Added the column attributes `twisties` and `responsesonly` to the `GET v1/lists` endpoint response when the *columns* parameter is set to true. 
+
+    **Resolved Issues**
+
+    - Forms or views with some special characters were not encoded when performing a REST call to retrieve the list of fields or columns, resulting in a 405 Method Not Allowed error response. 
+    - Editing a schema in the **Admin UI** led to an empty page when the name of the schema form or view contained `#`.
+    - When calling the `GET v1/lists/{name}` endpoint using the view alias, the configured external names were not retrieved; instead, the column programmatic names were retrieved. 
+
+    **Others**
+
+    - Added [tip for ensuring successful round-trip editing on Windows](../howto/production/roundtrip.md#to-access-and-edit-the-ms-office-file-attachment).
+    
+    - Added **Bruno** as one of the tools you can use when dealing with REST APIs. For more information, see [Bruno](./usertools/bruno.md).
+    
+    - Installer jar files:
+	    - For Domino 14: *restapiInstall-r14.jar*
+	    - For Domino 12: *restapiInstall-r12.jar*
+
+    - Docker image version for docker compose .env file (CONTAINER_IMAGE):
+        - For Domino 14: *domino-rest-api:1.1.1-r14*
+        - For Domino 12: *domino-rest-api:1.1.1-r12*  
+        
+    - Docker image version for docker compose .env file from Harbor:
+        - For Domino 14: *hclcr.io/domino/restapi:1.1.1-r14*
+        - For Domino 12: *hclcr.io/domino/restapi:1.1.1-r12*  
+
+??? info "v1.1 - What's new or changed"
     ## v1.1 - _What's new or changed_
 
     *Release date: September 30, 2024*

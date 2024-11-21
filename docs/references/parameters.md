@@ -66,7 +66,8 @@ Versions has a named list of entries with two parameters:
 | Property | Type    | Description                                                                                                                                                                       |
 | :------- | :------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | path     | String  | Path used by [`getResourceAsStream`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getResourceAsStream-java.lang.String-) to load an OpenAPI specification file. |
-| active   | Boolean | Whether the spec is loaded.                                                                                                                                                       |
+| active   | Boolean | Whether the spec is loaded.|
+|disabledOperationIds|Array|Receives the `operationID` of an endpoint or endpoints in an API schema as value to make those endpoints unavailable |
 
 The name of the entries must match the name used in versions of the RestAPI verticle (See [below](#restapi-verticle)).
 

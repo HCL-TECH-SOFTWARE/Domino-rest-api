@@ -10,6 +10,7 @@ The procedure guides you on how to configure Domino REST API to use an **OpenID 
 2.	Copy the JSON object to the JSON file.
 
     ``` json
+    {
         "oidc": {
             "any-name": {
                 "active": true,
@@ -20,11 +21,13 @@ The procedure guides you on how to configure Domino REST API to use an **OpenID 
                 "userIdentifierInLdapFormat": true
             }
         }
+    }
     ```
 
 3.	Set the values of the `providerUrl`, `clientId`, and `clientSecret` parameters to the values from your identity provider (e.g. Keycloak).
 
     ``` json
+    {
         "oidc": {
             "any-name": {
                 "active": true,
@@ -35,6 +38,7 @@ The procedure guides you on how to configure Domino REST API to use an **OpenID 
                 "userIdentifierInLdapFormat": true
             }
         }
+    }
     ```
 
 

@@ -149,6 +149,7 @@ OIDC (OpenID Connect) support lets you point at a standard OIDC provider like [A
 It can be configured like:
 
 ``` json
+{
     "oidc": {
         "any-name": {
             "active": true,
@@ -159,6 +160,7 @@ It can be configured like:
             "userIdentifierInLdapFormat": true
         }
     }
+}
 ```
 
 
