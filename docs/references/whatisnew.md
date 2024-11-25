@@ -15,7 +15,7 @@ The section provides information on the latest features, improvements, and resol
 
     **New**
 
-    - Users who have entered incorrect credentials more than a predetermined number of times during any Domino REST API authentication can be identified. Their access can be reinstated without waiting for the lockout period to end via the **Management console**. For more information, see [Release suspended users](../howto/production/suspendeduser.md).
+    - When using the DRAPI IdP users can be locked out if they enter incorrect credentials several times.  You can now view and reinstate these users without waiting for the lockout period to end via the **Management console**. For more information, see [Release suspended users](../howto/production/suspendeduser.md).
 
     - Users with valid JWT tokens can now be identified via the **Users** tab on the **Management console**. For more information, see [Identify known users with valid JWT token](../howto/production/usersmc.md). 
 
@@ -27,7 +27,7 @@ The section provides information on the latest features, improvements, and resol
 
     - Added a new OpenAPI landing page that shows all the general API schemas and application-specific schemas, enabling users to easily find the schemas they require.
 
-    - Added [WebDAV API](openapidefinitions.md#webdav) that provides endpoints to perform remote Web content authoring operations that support the Office Round Trip Experience and Virtual Spreadsheet features of Domino REST API.
+    - Added OpenAPI schema and Swagger page for the [WebDAV API](openapidefinitions.md#webdav) that provides endpoints to perform remote Web content authoring operations that support the Office Round Trip Experience and Virtual Spreadsheet features of Domino REST API.
 
     - Added the console command `tell restapi idpstatus` that shows the state of the configured identity providers when executed on the Domino console.   
 
@@ -39,13 +39,20 @@ The section provides information on the latest features, improvements, and resol
 
     - The **Clear passkey** option has been removed from the **Admin UI** login page to avoid user confusion. This option only clears local storage data, not the actual passkey. To enhance the user experience, both the **LOG IN WITH PASSWORD** and **LOG IN WITH PASSKEY** options are available on the **Admin UI** login page. For more information, see [Use WebAuthn (Passkey) to log in to Admin UI](../howto/install/passkey.md).
 
-    - Added the column attributes `twisties` and `responsesonly` to the `GET v1/lists` endpoint response when the *columns* parameter is set to true. 
+    - Added the column attributes `twisties` and `responsesonly` to the `GET v1/lists` endpoint response when the *columns* parameter is set to true.
+
+    - Added hourly task to refresh TLS certificates when using the **Domino Certificate Manager**.
+
+    - Implemented the remaining special-text functions when retrieving a view. Special-text functions are calculated at runtime and include functions, such as `@DocNumber`, `@DocDecendants`, `@DocParentNumber`. 
 
     **Resolved Issues**
 
     - Forms or views with some special characters were not encoded when performing a REST call to retrieve the list of fields or columns, resulting in a 405 Method Not Allowed error response. 
     - Editing a schema in the **Admin UI** led to an empty page when the name of the schema form or view contained `#`.
-    - When calling the `GET v1/lists/{name}` endpoint using the view alias, the configured external names were not retrieved; instead, the column programmatic names were retrieved. 
+    - When calling the `GET v1/lists/{name}` endpoint using the view alias, the configured external names were not retrieved; instead, the column programmatic names were retrieved.
+    - Implemented various fixes resolving issues when using **Domino Certificate Manager** to enable HTTPs.
+    - Fixed the issue with the Domino REST API Task not always showing correctly via **Domino Administrator Monitor** pane. 
+    - Fixed the issues around Office Round Trip Editing in Windows using Webdav APIs.
 
     **Others**
 
