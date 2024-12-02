@@ -1,0 +1,17 @@
+@startjson "DisablePIM"
+{
+  "versions": {
+    "pim": {
+      "active": false
+    }
+  },
+  "verticles": {
+    "PIM": {
+      "active": false
+    },
+    "Firehose": {
+      "active": false
+    }
+  }
+}
+@endjson
