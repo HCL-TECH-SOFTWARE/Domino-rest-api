@@ -6,7 +6,7 @@
 
 Domino REST API implements an OAuth2 provider. The following is a guide for setting up and configuring Domino REST API's OAuth2 provider.
 
-## Prerequisite
+## Before you begin
 
 The `oauth.nsf` database exists in your Domino data directory. The Domino IdP uses the `oauth.nsf` to store content and refresh information.
 

@@ -267,7 +267,7 @@ where:
 
 ### Test Application specific scopes result in Postman
 
-#### Prerequisite
+#### Before you begin
 
 - Configured Postman
 - configured Keycloak

@@ -72,51 +72,20 @@ Sometimes on the initial starting up of the Domino REST API or creation of KeepC
 **Solution**:
 
 1. Stop your Domino REST API debugging session.
-2. Go into Notes, and then select **File** -> **Security** -> **User Security**.
+2. Go into Notes, and then select **File** &rarr; **Security** &rarr; **User Security**.
 3. Select the **Don't prompt for a password from other Notes-based programs (reduces security)** checkbox.
 4. Exit Notes and restart your Domino REST API debugging session.
 
 This setting can get reset each time you start Notes depending upon your organization's Policy, in which case, you'll need to enable it again.
 
-## Logging
+## Getting an empty response when executing an API request method after a server upgrade
 
-The Domino REST API uses the [Apache log4j2](https://logging.apache.org/log4j/2.x/) logging framework. By default, logs are stored in the `domino-keep.log` file in the subdirectory `IBM_TECHNICAL_SUPPORT` in your `Notes/Domino` data directory.
+Check if the schema and the scope still exist. The schema is stored in the database the schema is for, while the scope is stored in `KeepConfig.nsf`. There is a probability that the schema is missing. One possible reason for this is that the server upgrade replaced the design of the database, as opposed to just refreshing the design. Replacing the design removes all the design elements in the database, including the schema, and updates it with the latest design from a template. It can happen to both the system and non-system databases. 
 
-The log files are set to periodically roll over on a daily basis or when they reach a size of 10 MB. Logs are kept for a period of **30 days.**
+**Solution**:
 
-The default `log4j2.properties` file controls all of this. If you're looking to make changes to the logging, such as modifying the filename, adjusting the logging destination like sending it to a log analyzer, or modifying the log level, you can set your own logging parameters.
+- You can create a new schema and scope and repeat the API request method.  
+- You can then protect the individual design elements of your database, including the new schema you created. For more information, see the [related topic](https://help.hcl-software.com/dom_designer/14.0.0/basic/H_TO_COPY_AN_INDIVIDUAL_DESIGN_ELEMENT_STEPS_MIDTOPIC_182746832029234956.html) in the *Domino Designer* documentation. 
 
-Familiarity with [Apache log4j2](https://logging.apache.org/log4j/2.x/) is strongly recommended. The configuration has two steps:
-
-   - Specify the location of the configuration file for `Notes/Domino`. You can choose any name other than `log4j2.properties` that you prefer.
-   - Provide the file.
-    
-It's possible to have several configuration files, but only one will be active at any given time.
-
-### To provide your own logging configuration
-
- This guide shows you how to create your own logging configuration. The purpose is to change the logging configuration to your needs. Typically, that would be to temporarily adjust logging levels like `DEBUG` and `TRACE` or to integrate tools like [LogStash](https://www.elastic.co/guide/en/logstash/current/logging.html#log4j2).
-
-1. Open the `notes.ini` file. You may refer to [Editing NOTES.INI file](https://help.hcltechsw.com/domino/14.0.0/admin/conf_editingthenotesinifile_c.html).
-
-2. You can add the `KeepLogConfigFile` parameters with the following settings and save. The `KeepLogConfigFile` option can be added to `notes.ini` to edit the log configuration file.
-
-    **Configuration settings:**
-
-    - **Windows:** `KeepLogConfigFile=C:\path\to\log4j2.properties`
-    - **Linux:** `KeepLogConfigFile=/path/to/log4j2.properties` 
-
-!!!note
-    - You can find the default `log4j2.properties` file inside the file `keep-core jar`.
-    - For example, extract the contents of the `keep-core-1.28.2.jar` file and include the `log4j2.properties` file.
-
-Just a few things to keep in mind: 
-
-- The "`jar`" component is included in your Java installation. If your path doesn't lead there, you'll need to indicate the directory to your `java\bin folder`.
-- Make sure to specify the version of your `keep-core file`, as it may differ from the one shown in the example.
-- Make sure to remove the `log4j2.properties` file from your Rest API directory to avoid potential issues with upgrades.
-- The `log4j.properites` file for the Domino REST API may undergo changes without prior notice. If you observe any differences in the logging behavior after a recent upgrade, it's recommended to extract and review the updated `log4j` file.
-
-- Check out the [Log4J documentation](https://logging.apache.org/log4j/log4j-2.0-beta7/manual/appenders.html) for details on the available settings.
 
 

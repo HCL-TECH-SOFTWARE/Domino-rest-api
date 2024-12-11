@@ -6,7 +6,7 @@ When using Domino 14.0 with Domino REST API on Windows, 2 files need to be symbo
 
 This procedure guides you through creating symbolic links for 2 files on Domino 14 in case there were errors creating these during the installation of Domino REST API.
 
-## Prerequisite
+## Before you begin
 
 Domino Rest API v1.0.9 or greater must be installed.
 

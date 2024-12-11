@@ -12,7 +12,7 @@ The procedures guide you on using external names in schema definitions and in te
 
 ## Use external name
 
-### Prerequisite
+### Before you begin
 
 - You must have credentials to use the service user interface.
 - Configured schema and scopes
@@ -63,7 +63,7 @@ The service UI will return the field names you put in the new test mode.
 
 ## Test external names result in Postman
 
-### Prerequisite
+### Before you begin
 
 - Configured Postman
 

@@ -14,5 +14,6 @@ nav:
   - Rich Text: richtext
   - scopes.md
   - console.md
+  - logging.md
   
   

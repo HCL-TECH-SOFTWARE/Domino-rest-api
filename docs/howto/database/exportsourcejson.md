@@ -4,7 +4,7 @@
 
 The procedure guides you on exporting the database schema in JSON format from the **Source** tab on the **Schema Management** page so that you can share the database schema across databases.
 
-## Prerequisite
+## Before you begin
 
 - You have selected a schema on the **Schema Management** page.
 

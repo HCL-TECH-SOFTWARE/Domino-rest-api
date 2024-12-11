@@ -3,7 +3,7 @@
 
 The procedure guides you on running Domino REST API using helm charts on a Kubernetes platform, such as OpenShift.
 
-## Prerequisite
+## Before you begin
 
 You have [obtained your authentication token from the HCL Container Repository](../../howto/install/obtainauthenticationtoken.md). 
 

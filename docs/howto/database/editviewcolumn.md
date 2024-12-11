@@ -8,7 +8,7 @@ The procedures guide you in editing a database view of a schema so you can:
 - edit the external name of each selected column
 - reset an edited view to its initial state
  
-## Prerequisite
+## Before you begin
  
 The view should be in **Active** status. For more information, see [Activate a view](../../references/usingwebui/schemaui.md#activate-a-view).
 

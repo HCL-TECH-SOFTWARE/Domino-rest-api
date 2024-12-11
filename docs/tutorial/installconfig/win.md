@@ -10,7 +10,7 @@
 
 ## Install on a Windows Domino Server
 
-### Prerequisite
+### Before you begin
 
 - Domino must be [installed](https://www.hcltechsw.com/domino).
 

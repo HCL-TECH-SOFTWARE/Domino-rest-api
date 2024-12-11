@@ -10,7 +10,7 @@ The procedures guide you in editing the database schema JSON in the **Tree View*
 - delete a JSON object from the database schema
 - duplicate a JSON object
 
-## Prerequisite
+## Before you begin
 
 - You have selected a schema on the **Schema Management** page.
 - You have selected **Source** from the menu bar and is in the **Tree View** mode.  
