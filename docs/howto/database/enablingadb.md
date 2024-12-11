@@ -119,9 +119,44 @@ A typical Notes construct are documents containing a group of multi value fields
 
 ![Domino REST API Fields](../../assets/images/SampleJsonNoFieldGroup.png)
 
+<!-- source of SampleJsonNoFieldGroup.png in PlantUML
+@startjson
+!theme plain
+{
+   "Customer":"Peter Pan",
+   "Location":"Neverland",
+   "Name": ["Nibs","Tootles","Curly"],
+   "age": ["34","12","7"],
+   "fruit": ["Banana","Apple","Banana"]
+}
+@endjson
+-->
+
 By assigning the fields `Name`, `age` and `fruit` the **fieldGroup** `LostBoys`, Domino REST API will render them as records in an JSON Object. We opted for an object to ease processing and addressing since arrays might not have a guarantee of sequence. The result looks like this:
 
 ![Domino REST API Fields](../../assets/images/SampleJsonFieldGroup.png)
+
+<!-- source of SampleJsonFieldGroup.png in PlantUML
+@startjson
+!theme plain
+{
+   "Customer":"Peter Pan",
+   "Location":"Neverland",
+   "LostBoys": 
+      {"0": {
+         "Name": "Nibs",
+         "Age": "34",
+         "Fruit": "Banana"
+     }, 
+     "1": {"Name": "Tootles",
+         "Age": "12",
+         "Fruit": "Apple"},
+     "2": {"Name": "Curly",
+         "Age": "7",
+         "Fruit": "Banana"}}
+}
+@endjson
+-->
 
 ### Form aliases
 
