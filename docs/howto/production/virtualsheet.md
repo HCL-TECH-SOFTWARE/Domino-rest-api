@@ -12,7 +12,7 @@ Virtual spreadsheet is best used when viewing a list view using Microsoft Excel 
 
 The procedure guides you on how to set up and use the Virtual Spreadsheet feature.
 
-## Prerequisite
+## Before you begin
 
 - Make sure your computer has Microsoft Excel installed.
 - You must run your Domino REST API in HTTPs.

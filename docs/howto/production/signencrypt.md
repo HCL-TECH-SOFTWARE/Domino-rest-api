@@ -9,7 +9,7 @@ Domino REST API can encrypt or decrypt document fields and sign a document with 
 
 The procedure guides you in making changes to the Domino ID vault configuration, the IdP Catalog, the Domino Server configuration, the OIDC provider configuration, and the Domino REST API configuration to enable Domino REST API to encrypt or decrypt document fields and sign a document.
 
-## Prerequisite
+## Before you begin
 
 - You have Domino 14 or later.
 - IDs are stored in an ID Vault.

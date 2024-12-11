@@ -3,7 +3,7 @@
 ## About this task
 The procedure guides you on how to update your installed Domino REST API to the latest release version. It's recommended to always update to the latest release version to take advantage of the new features and improvements of Domino REST API. 
 
-## Prerequisite
+## Before you begin
 
 - When updating installed Domino REST API on Linux, Mac, or Windows, [download the latest release version of the Domino REST API multi-platform installer](../../tutorial/installconfig/index.md#download-domino-rest-api).
 

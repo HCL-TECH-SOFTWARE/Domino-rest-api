@@ -9,7 +9,7 @@ Domino REST API can now enable HTTPS setup in Domino using Domino's certificate 
 
 The procedure guides you on how Domino REST API can enable HTTPS setup in Domino using Domino's certificate configuration.
 
-## Prerequisite
+## Before you begin
 
 For Domino REST API to enable HTTPS setup in Domino using Domino's certificate configuration, the following conditions must be met:
 

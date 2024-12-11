@@ -6,7 +6,7 @@
 
 The procedure guides you on how to check the Domino REST API settings.
 
-## Prerequisite
+## Before you begin
 
 - You must have access to the **Management console** (Port 8889).
 

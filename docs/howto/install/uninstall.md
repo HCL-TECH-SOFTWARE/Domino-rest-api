@@ -10,7 +10,7 @@ The Domino REST API doesn't have an uninstaller. If you'd like to remove it from
 
 ## Domino Server
 
-### Prerequisite
+### Before you begin
 
 - You must have the correct permissions for this procedure, typically `Administrator` for Windows and `root` for Linux.
 

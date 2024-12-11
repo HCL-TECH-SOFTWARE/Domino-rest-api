@@ -8,7 +8,7 @@ Microsoft[^1] Office Round Trip Experience is a feature included in Domino REST 
 
 The procedure guides you on how to setup and use the Microsoft Office Round Trip Experience feature included in Domino REST API.
 
-## Prerequisite
+## Before you begin
 
 - Make sure your computer has Microsoft Office installed or can access Office 365.
 - You must run your Domino REST API in HTTPs.
