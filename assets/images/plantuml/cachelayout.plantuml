@@ -1,0 +1,26 @@
+@startuml CacheLayout
+
+
+package keep.cache {
+    interface DesignCache extends KeepBaseCache
+    interface FormItemTypeCache extends KeepBaseCache
+    interface KeepApplicationCache extends KeepBaseCache
+    interface KeepBaseCache
+    interface KeepRequestCache extends KeepBaseCache
+    interface KeepUsers extends KeepBaseCache
+    interface NameLookupCache extends KeepBaseCache
+    enum BannedUsersDomino
+    class BrokenCache
+}
+
+package keep.cache.impl {
+    enum DesignCacheHolder implements DesignCache
+    enum FormItemTypeCacheHolder implements FormItemTypeCache
+    enum KeepApplicationCacheHolder implements KeepApplicationCache
+    enum KeepUsersHolder implements KeepUsers
+    enum NameLookupCacheHolder implements NameLookupCache
+}
+
+BrokenCache - KeepRequestCache
+
+@enduml

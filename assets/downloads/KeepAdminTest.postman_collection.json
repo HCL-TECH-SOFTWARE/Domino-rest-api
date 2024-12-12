@@ -1,0 +1,759 @@
+{
+	"info": {
+		"_postman_id": "a1ddf91b-8a99-4594-8bb7-10616920183b",
+		"name": "Domino Keep Admin API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3071927"
+	},
+	"item": [
+		{
+			"name": "authentication",
+			"item": [
+				{
+					"name": "Admin Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Capture Bearer\", function () {",
+									"    pm.response.to.be.json;",
+									"    var jsonData = pm.response.json();",
+									"    pm.environment.set(\"AUTH_KEY\",jsonData.bearer);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"password\" : \"{{AdminPassword}}\",\t\n \"username\" : \"{{AdminName}}\"\n}"
+						},
+						"url": {
+							"raw": "{{HOST}}/api/v1/auth",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "database",
+			"item": [
+				{
+					"name": "Get acl",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AUTH_KEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/api/admin-v1/acl/entries?dataSource=demo.nsf",
+							"host": [
+								"{{DOMINOADMINHOST}}"
+							],
+							"path": [
+								"acl",
+								"entries"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "demo.nsf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get acl entry",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/api/admin-v1/acl/entries/Anonymous?dataSource=demo.nsf",
+							"host": [
+								"{{DOMINOADMINHOST}}"
+							],
+							"path": [
+								"acl",
+								"entries",
+								"Anonymous"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "demo.nsf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put acl entry",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Fred Doe/Mauraders\",\n    \"type\": \"PERSON\",\n    \"level\": \"AUTHOR\",\n    \"roles\": [],\n    \"flags\": [\n        \"NODELETE\"\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{HOST}}/api/admin-v1/acl/entries/{{aclName}}?dataSource=demo.nsf",
+							"host": [
+								"{{DOMINOADMINHOST}}"
+							],
+							"path": [
+								"acl",
+								"entries",
+								"{{aclName}}"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "demo.nsf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete acl entry",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/api/admin-v1/acl/entries/{{aclName}}?dataSource=demo.nsf",
+							"host": [
+								"{{DOMINOADMINHOST}}"
+							],
+							"path": [
+								"acl",
+								"entries",
+								"{{aclName}}"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "demo.nsf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get acl role",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/api/admin-v1/acl/roles?dataSource=demo.nsf",
+							"host": [
+								"{{DOMINOADMINHOST}}"
+							],
+							"path": [
+								"acl",
+								"roles"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "demo.nsf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put acl role",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"newName\": \"{{roleName}}\"\n}"
+						},
+						"url": {
+							"raw": "{{HOST}}/api/admin-v1/acl/roles/{{roleName}}?dataSource=Demo.nsf",
+							"host": [
+								"{{DOMINOADMINHOST}}"
+							],
+							"path": [
+								"acl",
+								"roles",
+								"{{roleName}}"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "Demo.nsf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post acl role and members",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"action\": \"add\",\n    \"members\": [\n        \"CN=Frederick Doe/O=Mauraders\"\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{HOST}}/api/admin-v1/acl/roles/{{roleName}}?dataSource=demo.nsf",
+							"host": [
+								"{{DOMINOADMINHOST}}"
+							],
+							"path": [
+								"acl",
+								"roles",
+								"{{roleName}}"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "demo.nsf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete acl role",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/api/admin-v1/acl/roles/{{roleName}}?dataSource=demo.nsf",
+							"host": [
+								"{{DOMINOADMINHOST}}"
+							],
+							"path": [
+								"acl",
+								"roles",
+								"{{roleName}}"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "demo.nsf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "compact",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AUTH_KEY}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"filepath\": \"demo.nsf\",\n    \"options\": [\n        \"Recover_space_all\",\n        \"Copy_replica\"\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{HOST}}/api/admin-v1/maintenance/compact",
+							"host": [
+								"{{DOMINOADMINHOST}}"
+							],
+							"path": [
+								"maintenance",
+								"compact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fixup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AUTH_KEY}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"filepath\": \"demo.nsf\",\n    \"options\": [\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{HOST}}/api/admin-v1/maintenance/fixup",
+							"host": [
+								"{{DOMINOADMINHOST}}"
+							],
+							"path": [
+								"maintenance",
+								"fixup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Collections",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AUTH_KEY}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"filepath\": \"demo.nsf\",\n    \"collections\": [\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{HOST}}/api/admin-v1/maintenance/collectionUpdate",
+							"host": [
+								"{{DOMINOADMINHOST}}"
+							],
+							"path": [
+								"maintenance",
+								"collectionUpdate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Full Text Index Update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AUTH_KEY}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"filepath\": \"Disc.nsf\",\n    \"options\": [\n        \"Attachments\",\n        \"Case_sensitive\"\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{HOST}}/api/admin-v1/maintenance/fullTextUpdate",
+							"host": [
+								"{{DOMINOADMINHOST}}"
+							],
+							"path": [
+								"maintenance",
+								"fullTextUpdate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "get groups",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/api/admin-v1/access/groups?name=LocalDomainServers&dataSource=names.nsf",
+							"host": [
+								"{{DOMINOADMINHOST}}"
+							],
+							"path": [
+								"access",
+								"groups"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "LocalDomainServers"
+								},
+								{
+									"key": "dataSource",
+									"value": "names.nsf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get group",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/api/admin-v1/access/group/{{GROUP_UNID}}?dataSource=names.nsf",
+							"host": [
+								"{{DOMINOADMINHOST}}"
+							],
+							"path": [
+								"access",
+								"group",
+								"{{GROUP_UNID}}"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "names.nsf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put group",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"pm.test(\"User worked\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.environment.set(\"GROUP_UNID\", jsonData[\"@unid\"]);",
+									"    pm.expect(jsonData.length == 10);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"{{groupName}}\",\n    \"category\": \"\",\n    \"description\": \"\",\n    \"internetAddress\": \"\",\n    \"mailDomain\": \"\",\n    \"owners\": [\n        \"\"\n    ],\n    \"type\": \"acl-only\",\n    \"members\": [\n        \"John Doe/Mauraders\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/admin-v1/access/group?dataSource=names.nsf",
+							"host": [
+								"{{DOMINOADMINHOST}}"
+							],
+							"path": [
+								"access",
+								"group"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "names.nsf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update group",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"{{groupName}}\",\n    \"category\": \"\",\n    \"description\": \"This is a test group\",\n    \"internetAddress\": \"\",\n    \"mailDomain\": \"\",\n    \"owners\": [\n        \"\"\n    ],\n    \"type\": \"acl-only\",\n    \"members\": [\n        \"John Doe/Mauraders\"\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{HOST}}/api/admin-v1/access/group/{{GROUP_UNID}}?dataSource=names.nsf",
+							"host": [
+								"{{DOMINOADMINHOST}}"
+							],
+							"path": [
+								"access",
+								"group",
+								"{{GROUP_UNID}}"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "names.nsf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update group members",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AUTH_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"members\": [\n            \"Fred Doe/Mauraders\"\n        ],\n        \"process\": \"add\",\n        \"type\": \"members\"\n    },\n    {\n        \"members\": [\n            \"John Doe/Mauraders\"\n        ],\n        \"process\": \"remove\",\n        \"type\": \"members\"\n    }\n]"
+						},
+						"url": {
+							"raw": "{{HOST}}/api/admin-v1/access/group/{{GROUP_UNID}}/updateMembers?dataSource=names.nsf",
+							"host": [
+								"{{DOMINOADMINHOST}}"
+							],
+							"path": [
+								"access",
+								"group",
+								"{{GROUP_UNID}}",
+								"updateMembers"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "names.nsf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete group",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{AUTH_KEY}}"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/api/admin-v1/access/group/{{GROUP_UNID}}?dataSource=names.nsf",
+							"host": [
+								"{{DOMINOADMINHOST}}"
+							],
+							"path": [
+								"access",
+								"group",
+								"{{GROUP_UNID}}"
+							],
+							"query": [
+								{
+									"key": "dataSource",
+									"value": "names.nsf"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bulk Operation in Batch",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{AUTH_KEY}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"HCL Domino Volt\",\n    \"owner\": \"Thomas Hampel\",\n    \"debug\": true,\n    \"notesini\": {\n       \"HTTPEnableMethods\": \"GET,POST,PUT,DELETE,HEAD\",\n       \"ServerTasks\": \"Update,Replica,Router,AMgr,AdminP,http\",\n       \"HTTPPublicURLs\": \"/iwaredir.nsf/*:.well-known*\",\n       \"SSL_DISABLE_TLS_10\": \"1\"\n    },\n    \"testusers\": {\n        \"certifierPassword\": \"passw0rd\",\n        \"count\": 30,\n        \"lastName\": \"Adams\",\n        \"firstName\": \"Testuser\",\n        \"userPassword\": \"voltuser\"\n     },\n    \"database\": [\n        {\n            \"create\": true,\n            \"filename\": \"domcfg.nsf\",\n            \"title\": \"Domino Web Server Configuration\",\n            \"template\": \"domcfg5.ntf\",\n            \"signwithadminp\": true,\n            \"acl\": [\n                {\n                    \"name\": \"-Default-\",\n                    \"level\": \"2\",\n                    \"type\": \"0\"\n                }\n            ],\n            \"documents\": [\n                {\n                    \"create\": true,\n                    \"fields\": [\n                        {\n                            \"name\": \"Form\",\n                            \"value\": \"LoginMap\"\n                        },\n                        {\n                            \"name\": \"LF_LoginForm\",\n                            \"value\": \"DWALoginForm\"\n                        },\n                        {\n                            \"name\": \"LF_LoginFormDB\",\n                            \"value\": \"iwaredir.nsf\"\n                        },\n                        {\n                            \"name\": \"LF_ServerType\",\n                            \"value\": \"0\"\n                        },\n                        {\n                            \"name\": \"LF_IP\",\n                            \"value\": \"\"\n                        },\n                        {\n                            \"name\": \"$PublicAccess \",\n                            \"value\": \"1\"\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"create\": true,\n            \"filename\": \"volt/VoltBuilder.nsf\",\n            \"title\": \"Domino Volt Builder\",\n            \"template\": \"volt/VoltBuilder.ntf\",\n            \"signwithadminp\": true,\n            \"acl\": [\n                {\n                    \"name\": \"Volt Authors\",\n                    \"level\": \"4\",\n                    \"type\": \"0\"\n                },\n                {\n                    \"name\": \"-Default-\",\n                    \"level\": \"2\",\n                    \"type\": \"0\"\n                }\n            ]\n        },\n        {\n            \"create\": false,\n            \"filename\": \"names.nsf\",\n            \"documents\": [\n                {\n                    \"create\": true,\n                    \"type\": \"Group\",\n                    \"fields\": [\n                        {\n                        \"name\": \"GroupType\",\n                        \"value\": \"0\"\n                        },\n                        {\n                            \"name\": \"Form\",\n                            \"value\": \"Group\"\n                        },\n                        {\n                            \"name\": \"Type\",\n                            \"value\": \"Group\"\n                        },\n                        {\n                            \"name\": \"ListName\",\n                            \"value\": \"Volt Authors\"\n                        },\n                        {\n                            \"name\": \"ListMembers\",\n                            \"value\": \"LocalDomainAdmins\"\n                        },\n                        {\n                            \"append\": true,\n                            \"name\": \"ListMembers\",\n                            \"value\": \"CN=Testuser Adams1/O=AMP\"\n                        },\n                        {\n                            \"append\": true,\n                            \"name\": \"ListMembers\",\n                            \"value\": \"CN=Testuser Adams2/O=AMP\"\n                        },\n                        {\n                            \"append\": true,\n                            \"name\": \"ListMembers\",\n                            \"value\": \"CN=Testuser Adams3/O=AMP\"\n                        },\n                        {\n                            \"append\": true,\n                            \"name\": \"ListMembers\",\n                            \"value\": \"CN=Testuser Adams4/O=AMP\"\n                        },\n                        {\n                            \"append\": true,\n                            \"name\": \"ListMembers\",\n                            \"value\": \"CN=Testuser Adams5/O=AMP\"\n                        },\n                        {\n                            \"append\": true,\n                            \"name\": \"ListMembers\",\n                            \"value\": \"CN=Testuser Adams6/O=AMP\"\n                        },\n                        {\n                            \"name\": \"ListCategory\",\n                            \"value\": \"\"\n                        },\n                        {\n                            \"name\": \"ListDescription\",\n                            \"value\": \"People who can create Volt Applications\"\n                        },\n                        {\n                            \"name\": \"LocalDomainAdmins\",\n                            \"value\": \"\"\n                        }\n                ]\n                },\n                {\n                    \"create\": false,\n                    \"type\": \"Server\",\n                    \"fields\": [\n                        {\n                            \"name\": \"HTTP_HomeURL\",\n                            \"value\": \"/volt-apps\"\n                        },\n                        {\n                            \"name\": \"CreateAccess\",\n                            \"value\": \"Volt Authors\"\n                        },\n                        {\n                            \"name\": \"HTTP_EnableSessionAuth\",\n                            \"value\": \"1\"\n                        },\n                        {\n                            \"name\": \"HTTP_TCPNP\",\n                            \"value\": \"1\"\n                        },\n                        {\n                            \"name\": \"HTTP_AllowAnonymous\",\n                            \"value\": \"0\"\n                        },\n                        {\n                            \"name\": \"HTTP_NormalMode\",\n                            \"value\": \"2\"\n                        },\n                        {\n                            \"name\": \"HTTP_SSLMode\",\n                            \"value\": \"1\"\n                        },\n                        {\n                            \"name\": \"HTTP_SSLNP\",\n                            \"value\": \"1\"\n                        },\n                        {\n                            \"name\": \"HTTP_SSLAnonymous\",\n                            \"value\": \"0\"\n                        },\n                        {\n                            \"name\": \"NSDEnbld\",\n                            \"value\": \"1\"\n                        },\n                        {\n                            \"name\": \"FREnbld\",\n                            \"value\": \"1\"\n                        },\n                        {\n                            \"name\": \"FltRcvryNot\",\n                            \"value\": \"LocalDomainAdmins\"\n                        },\n\n                        {\n                            \"name\": \"MajVer\",\n                            \"value\": 11\n                        },\n\n                        {\n                            \"name\": \"SSLCipherList\",\n                            \"value\": \"C030\"\n                        },\n                        {\n                            \"name\": \"SSLCipherList\",\n                            \"value\": \"9F\",\n                            \"append\": true\n                        },\n                        {\n                            \"name\": \"SSLCipherList\",\n                            \"value\": \"C02F\",\n                            \"append\": true\n                        },\n                        {\n                            \"name\": \"SSLCipherList\",\n                            \"value\": \"9E\",\n                            \"append\": true\n                        },\n                        {\n                            \"name\": \"SSLCipherList\",\n                            \"value\": \"C028\",\n                            \"append\": true\n                        },\n                        {\n                            \"name\": \"SSLCipherList\",\n                            \"value\": \"6B\",\n                            \"append\": true\n                        },\n                        {\n                            \"name\": \"SSLCipherList\",\n                            \"value\": \"C027\",\n                            \"append\": true\n                        },\n                        {\n                            \"name\": \"SSLCipherList\",\n                            \"value\": \"67\",\n                            \"append\": true\n                        }\n\n                    ]\n                }\n            ]\n        },\n        {\n            \"create\": true,\n            \"filename\": \"iwaredir.nsf\",\n            \"title\": \"Redirect\",\n            \"template\": \"iwaredir.ntf\",\n            \"signwithadminp\": true,\n            \"acl\": [\n                {\n                    \"name\": \"Anonymous\",\n                    \"level\": \"0\",\n                    \"type\": \"0\"\n                },\n                {\n                    \"name\": \"-Default-\",\n                    \"level\": \"3\",\n                    \"type\": \"0\"\n                }\n            ],\n            \"documents\": [\n                {\n                    \"create\": true,\n                    \"fields\": [\n                        {\n                            \"name\": \"ServerNameSelect\",\n                            \"value\": \"1\"\n                        },\n                        {\n                            \"name\": \"WMRLookupPref\",\n                            \"value\": \"0\"\n                        },\n                        {\n                            \"name\": \"RedirectMessageWebView\",\n                            \"value\": \"Redirecting...\"\n                        },\n                        {\n                            \"name\": \"$LANGUAGE\",\n                            \"value\": \"en\"\n                        },\n                        {\n                            \"name\": \"$ServerSettingsTable\",\n                            \"value\": \"Select\"\n                        },\n                        {\n                            \"name\": \"EnableUltraliteRadioButton\",\n                            \"value\": \"0\"\n                        },\n                        {\n                            \"name\": \"Form\",\n                            \"value\": \"AutoLogin\"\n                        },\n                        {\n                            \"name\": \"MobileAgentKeywords\",\n                            \"value\": \"ipod,iphone,android,ipad\"\n                        },\n                        {\n                            \"name\": \"SSLPort\",\n                            \"value\": \"443\"\n                        },\n                        {\n                            \"name\": \"RedirectionTime\",\n                            \"value\": 1\n                        },\n                        {\n                            \"name\": \"RedirectionMessageText\",\n                            \"value\": \"Redirecting...\"\n                        },\n                        {\n                            \"name\": \"WMRGlobalProfileURL\",\n                            \"value\": \"/\"\n                        },\n                        {\n                            \"name\": \"ServerNameChange\",\n                            \"value\": \"0\"\n                        },\n                        {\n                            \"name\": \"ForceSSL\",\n                            \"value\": \"1\"\n                        },\n                        {\n                            \"name\": \"OmitProtocol\",\n                            \"value\": \"0\"\n                        },\n                        {\n                            \"name\": \"UseHomeMailServer\",\n                            \"value\": \"0\"\n                        },\n                        {\n                            \"name\": \"LoginOptions\",\n                            \"value\": \"0\"\n                        },\n                        {\n                            \"name\": \"EncryptPassword\",\n                            \"value\": \"0\"\n                        },\n                        {\n                            \"name\": \"WebMailRedirectEnableDebug\",\n                            \"value\": \"0\"\n                        },\n                        {\n                            \"name\": \"WebMailRedirectProfileEnable\",\n                            \"value\": \"0\"\n                        },\n                        {\n                            \"name\": \"WMRVersion\",\n                            \"value\": \"650\"\n                        },\n                        {\n                            \"name\": \"WMRAttachmentNames\",\n                            \"value\": \"BLANK\"\n                        },\n                        {\n                            \"name\": \"$dWMR\",\n                            \"value\": \"(Help-BLANK)\"\n                        },\n                        {\n                            \"name\": \"ServerName\",\n                            \"value\": \"\"\n                        },\n                        {\n                            \"name\": \"MailServerDomainName\",\n                            \"value\": \"\"\n                        },\n                        {\n                            \"name\": \"RevProxyServerName\",\n                            \"value\": \"\"\n                        },\n                        {\n                            \"name\": \"ForcePath\",\n                            \"value\": \"\"\n                        },\n                        {\n                            \"name\": \"dWMRBackgroundColour\",\n                            \"value\": \"#FFFFFE\"\n                        },\n                        {\n                            \"name\": \"dWMRNewLogoName\",\n                            \"value\": \"\"\n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n }\n\n"
+				},
+				"url": {
+					"raw": "{{DOMINOADMINHOST}}batch?dataSource=names.nsf",
+					"host": [
+						"{{DOMINOADMINHOST}}batch"
+					],
+					"query": [
+						{
+							"key": "dataSource",
+							"value": "names.nsf"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

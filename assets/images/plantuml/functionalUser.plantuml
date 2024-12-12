@@ -1,0 +1,9 @@
+@startjson FunctionalUser
+{
+  "metrics": {
+        "active": true,
+        "CN" : "CN=Metrics Access/O=Functional",
+        "secret": "some very long string"
+      }
+}  
+@endjson
