@@ -31,25 +31,26 @@
 1. Go to [My HCLSoftware Portal](https://my.hcltechsw.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"}.
 
 2. On the landing page, click **Sign in**.
-3. On the sign in page, login using your credentials. 
+3. On the sign-in page, log in using your credentials. 
 4. On the **Software Downloads** page, click **HCL Domino**. 
 5. On the **HCL Domino** page, go to the **Tools, Connectors, and Integrators** section and click **Domino REST API**.
-6. Under **All Releases**, click the release version that you want to download. 
-7. Under **Downloads**, click the download icon corresponding to the file that you want to download. 
+6. Under **Releases**, click the release version you want to download. 
+7. Under **Downloads**, click the **Direct download** icon corresponding to the file you want to download. 
 
 #### via HCL Software License and Download Portal
 
-**Option 1**
-
 1. Go to [HCL Software License and Download Portal](https://hclsoftware.flexnetoperations.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"}.
 
-2. On the sign in page, enter your username and click **Next**. The **License & Download Portal** home page opens.
-3. In the **Your Downloads** pane, scroll to find and then select **HCL Domino**. The **Download Packages** page opens.
-4. On the **New Versions** tab, select the HCL Domino REST API version that you want to download.
+2. On the sign-in page, enter your username and click **Next**. The **License & Download Portal** home page opens.
+3. On the **License & Download Portal** home page, go to **Your Downloads** and search for and click **HCL Domino**. The **Download Packages** page opens.
+4. On the **Download Packages** page under the **New Versions** tab, select the HCL Domino REST API version that you want to download.
 5. On the **Software Terms and Conditions** page, click **I agree** for the **EULA Agreement**.
 6. On the **Downloads** page, select the files to download and then click **Download Selected Files**, or click the file name of the file you want to download in the **File Name** column. 
 
-**Option 2**
+    !!!note
+        When downloading files for the first time by clicking **Download Selected Files**, you need to install the **Download Manager Interface** once. Follow the download and installation instructions. After installing the **Download Manager Interface**, you can resume your download.
+
+<!--**Option 2**
 
 1. Go to [HCL Software License and Download Portal](https://hclsoftware.flexnetoperations.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"}.
 
@@ -58,7 +59,8 @@
 2. On the **Download Search** page, enter `HCL Domino REST API` in the **Search for** field, and then click **Search**.
 3. Select the HCL Domino REST API version that you want to download from the search result.
 5. On the **Software Terms and Conditions** page, click **I agree** for the **EULA Agreement**.
-6. On the **Downloads** page, select the files to download and then click **Download Selected Files**, or click the file name of the file you want to download in the **File Name** column. 
+6. On the **Downloads** page, select the files to download and then click **Download Selected Files**, or click the file name of the file you want to download in the **File Name** column.
+--> 
 
 <!-- prettier-ignore -->
 !!! tip
