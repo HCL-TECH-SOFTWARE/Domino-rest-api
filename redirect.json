@@ -1,0 +1,402 @@
+{
+  "template": "<tr class=\"lostLinkItem\"><td class=\"title\"></td><td class=\"old\"></td><td class=\"lostLinkItem\"><a href=\"#\">new</a></td></tr>",
+  "sites": [
+    {
+      "title": "Welcome: Introducing the Domino Rest API",
+      "old": "index.html",
+      "new": "topicguides/introducingrestapi.html"
+    },
+
+    {
+      "title": "What's new in Domino REST API?",
+      "old": "whatsnew",
+      "new": "references/whatisnew.html"
+    },
+
+    {
+      "title": "System Requirements",
+      "old": "https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789",
+      "new": "references/index.html"
+    },
+
+    {
+      "title": "Quick start",
+      "old": "quickstart",
+      "new": "tutorial/quickstart.html"
+    },
+
+    {
+      "title": "Understanding the Domino REST API",
+      "old": "quickstart/understanding.html",
+      "new": "topicguides/understanding.html"
+    },
+
+    {
+      "title": "Use cases",
+      "old": "quickstart/usecases.html",
+      "new": "topicguides/usecases.html"
+    },
+
+    {
+      "title": "Planning your application",
+      "old": "quickstart/planning.html",
+      "new": "topicguides/planning.html"
+    },
+
+    { "title": "Tutorial", "old": "tutorial", "new": "tutorial/index.html" },
+
+    {
+      "title": "OData",
+      "old": "tutorial/odata.html",
+      "new": "tutorial/odata/index.html"
+    },
+
+    {
+      "title": "Installing & Configuring",
+      "old": "installconfig",
+      "new": "tutorial/installconfig/index.html"
+    },
+
+    {
+      "title": "Installation",
+      "old": "installconfig/installation",
+      "new": "tutorial/installconfig/index.html"
+    },
+
+    {
+      "title": "Docker",
+      "old": "installconfig/installation/docker.html",
+      "new": "tutorial/installconfig/docker.html"
+    },
+
+    {
+      "title": "Linux",
+      "old": "installconfig/installation/linux.html",
+      "new": "tutorial/installconfig/linux.html"
+    },
+
+    {
+      "title": "Mac",
+      "old": "installconfig/installation/mac.html",
+      "new": "tutorial/installconfig/mac.html"
+    },
+
+    {
+      "title": "Windows",
+      "old": "installconfig/installation/win.html",
+      "new": "tutorial/installconfig/win.html"
+    },
+
+    {
+      "title": "Post Installation Tasks",
+      "old": "installconfig/installation/postinstallation.html",
+      "new": "tutorial/installconfig/postinstallation.html"
+    },
+
+    {
+      "title": "Functional Accounts",
+      "old": "installconfig/installation/functionalUsers.html",
+      "new": "tutorial/installconfig/functionalUsers.html"
+    },
+
+    {
+      "title": "Configuration",
+      "old": "installconfig/configuration",
+      "new": "tutorial/installconfig/index.html"
+    },
+
+    {
+      "title": "Configuring ports",
+      "old": "installconfig/configuration/configuringPorts.html",
+      "new": "tutorial/installconfig/configuringPorts.html"
+    },
+
+    {
+      "title": "Client config",
+      "old": "installconfig/configuration/notesclient.html",
+      "new": "howto/install/notesclient.html"
+    },
+
+    {
+      "title": "Parameters",
+      "old": "installconfig/configuration/parameters.html",
+      "new": "references/parameters.html"
+    },
+
+    {
+      "title": "Metrics",
+      "old": "installconfig/metrics.html",
+      "new": "references/usingdominorestapi/metrics.html"
+    },
+
+    {
+      "title": "Troubleshooting",
+      "old": "installconfig/troubleshooting.html",
+      "new": "references/troubleshooting.html"
+    },
+
+    {
+      "title": "Uninstalling",
+      "old": "installconfig/installation/uninstall.html",
+      "new": "howto/install/uninstall.html"
+    },
+
+    {
+      "title": "Security",
+      "old": "security",
+      "new": "references/security/securityindex.html"
+    },
+
+    {
+      "title": "Security",
+      "old": "references/security/securityindex.html",
+      "new": "references/security/index.html"
+    },
+
+    {
+      "title": "Auth*",
+      "old": "security/authentication.html",
+      "new": "references/security/authentication.html"
+    },
+
+    {
+      "title": "Configuration parameters",
+      "old": "security/configurationParameters.html",
+      "new": "references/security/configurationParameters.html"
+    },
+
+    {
+      "title": "Configuring certificates",
+      "old": "security/configuringCertificates.html",
+      "new": "howto/IdP/configuringCertificates.html"
+    },
+
+    {
+      "title": "Configuring identity provider",
+      "old": "security/configuringIdentityProvider.html",
+      "new": "howto/IdP/configuringIdentityProvider.html"
+    },
+
+    {
+      "title": "Configuring Keycloak",
+      "old": "security/configuringKeycloak.html",
+      "new": "howto/IdP/configuringKeycloak.html"
+    },
+
+    {
+      "title": "Securing Domino REST API endpoints",
+      "old": "security/securingKEEPEndpoints.html",
+      "new": "topicguides/securingKEEPEndpoints.html"
+    },
+
+    {
+      "title": "config.json",
+      "old": "security/configjson.html",
+      "new": "references/parameters.html"
+    },
+
+    {
+      "title": "config.json",
+      "old": "references/security/configjson.html",
+      "new": "references/parameters.html"
+    },
+
+    {
+      "title": "Encryption Keys",
+      "old": "security/encryption.html",
+      "new": "references/security/encryption.html"
+    },
+
+    {
+      "title": "Domino REST API SAML configuration",
+      "old": "security/keepsaml.html",
+      "new": "howto/IdP/keepsaml.html"
+    },
+
+    {
+      "title": "security.json",
+      "old": "security/securityjson.html",
+      "new": "references/parameters.html"
+    },
+
+    {
+      "title": "security.json",
+      "old": "references/security/securityjson.html",
+      "new": "references/parameters.html"
+    },
+
+    {
+      "title": "HTTPS - multi domain",
+      "old": "security/httpsproxy.html",
+      "new": "howto/web/httpsproxy.html"
+    },
+
+    {
+      "title": "HTTPS - single domain",
+      "old": "security/httpsproxy2.html",
+      "new": "howto/web/httpsproxy2.html"
+    },
+
+    {
+      "title": "Custom Identity Provider (IdP)",
+      "old": "security/customIdp.html",
+      "new": "references/security/customIdp.html"
+    },
+
+    {
+      "title": "Domino REST API IdP & Foundry",
+      "old": "security/configuring-keep-idplite-with-identity-service.html",
+      "new": "howto/VoltMX/configuring-keep-idplite-with-identity-service.html"
+    },
+
+    {
+      "title": "Using the API",
+      "old": "usingkeep",
+      "new": "references/usingdominorestapi/index.html"
+    },
+
+    {
+      "title": "The Domino REST API task",
+      "old": "usingkeep/restapitask.html",
+      "new": "references/usingdominorestapi/restapitask.html"
+    },
+
+    {
+      "title": "Domino REST API roles",
+      "old": "usingkeep/roles.html",
+      "new": "references/usingdominorestapi/roles.html"
+    },
+
+    {
+      "title": "Enabling a Database",
+      "old": "usingkeep/enablingadb.html",
+      "new": "howto/database/enablingadb.html"
+    },
+
+    {
+      "title": "RichText",
+      "old": "usingkeep/richtext.html",
+      "new": "references/usingdominorestapi/richtext.html"
+    },
+
+    {
+      "title": "Web UI",
+      "old": "usingkeep/administrationui.html",
+      "new": "references/usingdominorestapi/administrationui.html"
+    },
+
+    {
+      "title": "Agent Processing",
+      "old": "usingkeep/agents.html",
+      "new": "topicguides/agents.html"
+    },
+
+    {
+      "title": "Domino REST API Applications",
+      "old": "usingkeep/keepapplications.html",
+      "new": "references/usingdominorestapi/keepapplications.html"
+    },
+
+    {
+      "title": "Domino REST API is Different",
+      "old": "usingkeep/keepdifference.html",
+      "new": "topicguides/keepdifference.html"
+    },
+
+    {
+      "title": "The Domino REST API CLI",
+      "old": "usingkeep/keepcli.html",
+      "new": "references/usingdominorestapi/keepcli.html"
+    },
+
+    {
+      "title": "Domino data with Salesforce",
+      "old": "usingkeep/salesforce.html",
+      "new": "tutorial/odata/salesforce.html"
+    },
+
+    {
+      "title": "DataFormats",
+      "old": "usingkeep/dataformats.html",
+      "new": "references/usingdominorestapi/dataformats.html"
+    },
+
+    {
+      "title": "How it works",
+      "old": "howkeepworks",
+      "new": "topicguides/howkeepworks.html"
+    },
+
+    {
+      "title": "Factories and Caches",
+      "old": "howkeepworks/KeepFactory-and-caches.html",
+      "new": "topicguides/KeepFactory-and-caches.html"
+    },
+
+    {
+      "title": "Architectural Decisions",
+      "old": "howkeepworks/architecture.html",
+      "new": "topicguides/architecture.html"
+    },
+
+    {
+      "title": "The Barbican",
+      "old": "howkeepworks/barbican.html",
+      "new": "topicguides/barbican.html"
+    },
+
+    {
+      "title": "The EventBus",
+      "old": "howkeepworks/eventbus.html",
+      "new": "topicguides/eventbus.html"
+    },
+
+    {
+      "title": "The HTTP Handler",
+      "old": "howkeepworks/httpHandler.html",
+      "new": "topicguides/httpHandler.html"
+    },
+
+    {
+      "title": "Domino REST API Flows",
+      "old": "howkeepworks/keepFlows.html",
+      "new": "topicguides/keepFlows.html"
+    },
+
+    {
+      "title": "Scopes",
+      "old": "howkeepworks/scopes.html",
+      "new": "reference/usingdominorestapi/scopes.html"
+    },
+
+    {
+      "title": "Dominojnx",
+      "old": "howkeepworks/dominojnx",
+      "new": "topicguides/dominojnx.html"
+    },
+
+    {
+      "title": "References",
+      "old": "references",
+      "new": "references/index.html"
+    },
+
+    {
+      "title": "Glossary",
+      "old": "references/glossary.html",
+      "new": "references/quickreference/glossary.html"
+    },
+
+    {
+      "title": "Standards",
+      "old": "references/standards.html",
+      "new": "references/quickreference/standards.html"
+    },
+
+    {
+      "title": "Usertools",
+      "old": "references/usertools",
+      "new": "references/usertools/index.html"
+    }
+  ]
+}
