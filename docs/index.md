@@ -8,9 +8,9 @@ hide:
 
 {{ variable.drapi }} provides a secure REST API with access to HCL Domino servers and databases while running on HCL Domino and HCL Notes on Windows, Linux, and Mac. Designed to re-establish Domino as a world class, modern, standards-compliant, cloud native and enterprise-level collaboration platform, it adds contemporary REST APIs to Notes and Domino, enabling a modern programming experience with the tools of your choice. For more information, see [Introducing Domino REST API](topicguides/introducingrestapi.md).
 
-![Domino REST API](assets/images/svg/DominoKeepAPI.svg)
-
----
+<object type="image/svg+xml" data="assets/images/svg/keepblockdiagram.svg" width="100%">
+Open the <a href="assets/images/svg/keepblockdiagram.svg">overview</a>
+</object>
 
 ## What's new
 
@@ -31,15 +31,17 @@ hide:
     - For installation information, see [Installation and configuration](tutorial/installconfig/index.md).
 
     - For everything that admin needs to know, use the [Admin cheat sheet](references/admincheatsheet.md).
-    
+
     - Trouble running the Domino REST API? Use the [Troubleshooting guide](references/troubleshooting.md).
 
 ---
+
 !!! tip "Ol' Notes hands start here"
 
     Are you coming from a Notes client with a Domino server background? You never had to deal with certificates, JSON Web Token, multiple TCP ports, OAuth, and all the fancy new terms of a shiny new web world. We got you covered, read [the primer](topicguides/notesprimer.md) to get started
-    
+
 ---
+
 !!! info "API definitions now available"
 
     The OpenAPI definitions, rendering using [ReDoc](https://github.com/Redocly/redoc), are now [available in the References](references/openapidefinitions.md). **Depending on your server configuration, not all endpoints will be active.**
