@@ -99,7 +99,7 @@ The JSON file looks like this:
 {
   "disableJwtExpiryCheck": false,
   "jwt": {
-    "oicd": {
+    "my-idp": {
       "active": true,
       "algorithm": "RS256",
       "keyFile": "10-jwt.pubkey"
@@ -112,12 +112,12 @@ wherein:
 
 - `disableJwtExpiryCheck`: By setting the value to `true`, the enforcement of JWT expiration can be disabled. **DO NOT** do this on a production system (default is `false`).
 - `jwt`: Entry is related to JWT authorization.
-- `oicd`: The name you give your IdP. It could be `Rumpelstielzchen` but needs to be unique on your server.
+- `my-idp`: The name you give your IdP. It could be `Rumpelstielzchen` but needs to be unique on your server.
 - `active`: True/false.
 - `algorithm`: Currently supported: `RS256`.
 - `keyFile`: Path to public key file (PEM format), either relative to `keepconfig.d`or an absolute path.
 
-Domino REST API supports more than one IdP, distinguished by the name `oicd` in the example. Access checking takes longer the more identity providers you configure since Domino REST API checks every provider's key until it finds a match.
+Domino REST API supports more than one IdP, distinguished by the name `my-idp` in the example. Access checking takes longer the more identity providers you configure since Domino REST API checks every provider's key until it finds a match.
 
 ## Obtaining the public key directly from the IdP
 

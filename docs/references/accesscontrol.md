@@ -19,7 +19,7 @@ The [Domino Developer](../references/usingdominorestapi/roles.md#domino-develope
 
 ## Application access
 
-The Domino REST API provides its own IdP (Identity Provider) implementation following OICD standards. Applications are configured using a `client_id` and a `client_secret` to request access on behalf of an user.
+The Domino REST API provides its own IdP (Identity Provider) implementation following OIDC standards. Applications are configured using a `client_id` and a `client_secret` to request access on behalf of an user.
 
 When an enterprise IdP shall be used, the resulting `AccessToken` needs to comply with the [Domino REST API JWT specification](../references/security/jwt.md).
 

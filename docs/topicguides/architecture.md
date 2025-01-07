@@ -113,11 +113,11 @@ Access to the Domino REST APIs requires a valid JavaScript Web Token (JWT), sign
 
 ### Justification
 
-Domino REST API is API only, so any dance that requires user interaction must happen before Domino REST APIs are accessed. The ability to use Domino credentials, including local users (note: _local users work in Notes client only_) to obtain a JWT token lowers the barrier to entry. JWT is an established [industry standard (RFC7519)](https://tools.ietf.org/html/rfc7519) and also is the end result of an [OpenID Connect (OICD)](https://openid.net/connect/) dance. So its use and risks are well understood and documented.
+Domino REST API is API only, so any dance that requires user interaction must happen before Domino REST APIs are accessed. The ability to use Domino credentials, including local users (note: _local users work in Notes client only_) to obtain a JWT token lowers the barrier to entry. JWT is an established [industry standard (RFC7519)](https://tools.ietf.org/html/rfc7519) and also is the end result of an [OpenID Connect (OIDC)](https://openid.net/connect/) dance. So its use and risks are well understood and documented.
 
 ### Alternatives
 
-We also looked at OICD, SAML, and Kerberos. They all require user interaction to authorize access. Since Domino REST API is API only and has no user interface, the application must authorize access.
+We also looked at OIDC, SAML, and Kerberos. They all require user interaction to authorize access. Since Domino REST API is API only and has no user interface, the application must authorize access.
 
 ### Implication
 
