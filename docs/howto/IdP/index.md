@@ -8,7 +8,7 @@ Topics to guide you in completing goals and tasks about Identity Provider in rel
 
 - [Configure Domino REST API to Use an OIDC Provider](configureoidc.md)
 
-- [Configure Azure Active Directory as IdP](configuringAD.md)
+- [Configure Microsoft Entra ID as IdP](configuringAD.md)
 
 - [Configure certificates](configuringCertificates.md)
 

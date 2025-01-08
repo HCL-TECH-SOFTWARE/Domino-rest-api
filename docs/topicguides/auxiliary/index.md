@@ -1,30 +1,30 @@
 # Auxiliary services
 
-While the main purpose of a REST API is serving data (mostly JSON) over https, any complete system comes with a range of auxiliary services. The HCL Domino REST API is no exception. Here is what we got:
+While the main purpose of a REST API is serving data, mostly JSON, over https, any complete system comes with a range of auxiliary services. The HCL Domino REST API is no exception. Check the details. <!--Here is what we got:-->
 
 ## [Identity Provider (IdP)](idp.md)
 
-DRAPI has a dual use function. It can **be** your [OICD](#) compliant Identity Provider **and** is can be configured to accept users authenticated with an external IdP like [Keycloak](#), [Okta](#) or [Microsoft Entra ID](#) (the system formerly known as Azure Active Directory).
+Domino REST API has a dual-use function. It can **be** your [OICD](https://openid.net/developers/how-connect-works/) compliant Identity Provider **and** it can be configured to accept users authenticated with an external IdP like [Keycloak](../../howto/IdP/configuringKeycloak.md), Okta, or [Microsoft Entra ID](../../howto/IdP/configuringAD.md) formerly Azure Active Directory.
 
 ## [webDAV](webdav.md)
 
-DRAPI implements the [webDAV](#) HTTP extensions to facilitate the [Office Round trip experience](#)
+Domiro REST API implements the [webDAV](../../references/openapidefinitions.md#webdav) HTTP extensions to facilitate the [Office Round Trip Experience](../../howto/production/roundtrip.md).
 
-## [ODATA](odata.md)
+## [OData](odata.md)
 
-[ODATA](https://www.odata.org/) is the love child of SAP and Microsoft. It allows compliant software (like MS-Excel on Windows, Salesforce, PowerBI etc.) to read and potentially write REST data.
+[OData](https://www.odata.org/) or *Open Data Protocol* <!--is the love child of SAP and Microsoft. It--> allows compliant software, for example Excel on Windows, Salesforce, Power BI, to read and potentially write REST data.
 
 ## [iCal](ical.md)
 
-iCal allows to read and write calendar information and is part of the fixed [PIM Schema](#)
+iCal allows to read and write calendar information and is part of the fixed [PIM Schema](../../references/openapidefinitions.md#pim).
 
 ## [Health & metrics](healthmetrics.md)
 
-Cloud and Kubernetes compatible health monitoring and system metrics in [Prometheus](#) format
+Cloud and Kubernetes compatible health monitoring and system metrics in [Prometheus](https://prometheus.io/) format.
 
 ## [Management console](management.md)
 
-System functions using a proteded port and a functional account.
+System functions using a protected port and a functional account.
 
 ## Let's connect
 

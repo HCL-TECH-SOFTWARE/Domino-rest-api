@@ -8,7 +8,14 @@ Domino REST API runs on Domino and/or your Notes Client on Windows/Linux/Mac. So
 
 Domino REST API is based on industry standards, allows Notes and Domino to be accessed from other platforms, follows standard APIs, is extendable and uses the Notes and Domino security model. Domino REST API also puts the power in the hands of the developer to work using their preferred programming language.
 
-![Domino REST API](../assets/images/svg/DominoKeepAPI.svg)
+<!--![Domino REST API](../assets/images/svg/DominoKeepAPI.svg)-->
+
+*You can click the topics in the image for more information.*
+
+<object type="image/svg+xml" data="../assets/images/svg/keepblockdiagram.svg" width="100%">
+Open the <a href="../assets/images/svg/keepblockdiagram.svg">overview</a>
+</object>
+
 
 Domino REST API is designed to re-establish Domino as a world class, modern, standards-compliant, cloud native and enterprise-level collaboration platform. It adds contemporary [REST APIs](https://www.redhat.com/en/topics/api/what-is-a-rest-api) to Notes and Domino, enabling a modern programming experience with the tools of your choice.
 

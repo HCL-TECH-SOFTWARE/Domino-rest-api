@@ -27,9 +27,9 @@ When processing and using an incoming JWT from an external IdP, you need to conf
 |keyFile|Indicates the path to the public key file relative to `keepconfig.d` or an absolute path. It's used when the administrator saves the key files locally in a secure location.|
 |kid|Stands for *key ID* and indicates which key was used to secure JWS. It's used when the administrator saves the key files locally in a secure location.|
 |iss|Stands for *Issuer* and points to the external IdP’s endpoint URL with the public key in case the URL changed during IdP configuration.</br></br>It can also point to the external IdP’s endpoint URL if the administrator saves the key files locally in a secure location.|
-|aud|When using [Azure Active Directory as IdP](../../howto/IdP/configuringAD.md), set its value to the configured *Application ID URI*.|
+|aud|When using [Microsoft Entra ID as IdP](../../howto/IdP/configuringAD.md), set its value to the configured *Application ID URI*.|
 |userIdentifier|Use to configure Domino REST API to accept LDAP-format name. Must be configured with `userIdentifierinLdapFormat`. Set the value to `dn`.|
-|userIdentifierInLdapFormat|Use to configure Domino REST API to accept LDAP-format name. Must be configured with `userIdentifier`. Set the value to “true”.|
+|userIdentifierInLdapFormat|Use to configure Domino REST API to accept LDAP-format name. Must be configured with `userIdentifier`. Set the value to `true`.|
 
 !!!note
     When processing and using an incoming JWT from an external IdP, there are 2 configuration modes that you can use to configure Domino REST API. One configuration mode uses the `providerUrl`, while the other uses `keyFile` and `kid`. To learn more, see [External JWT Provider](../security/authentication.md#external-jwt-provider). 
