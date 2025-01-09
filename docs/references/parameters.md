@@ -167,7 +167,7 @@ This is the verticle for managing WebHandlers. `worker`, `threadPoolName`, `thre
 | active             | Boolean          | Set to `true` to enable the use of external IdP in OFBA.                       |
 | client_id          | String           | External IdP client ID to use for OFBA.                                        |
 | scope              | Array of Strings | List of scope names to use for OFBA.                                           |
-| application_id_uri | String           | An optional property. Required when external IdP is **Azure**. End with a `/`. |
+| application_id_uri | String           | An optional property. Required when external IdP is **Microsoft Entra ID, formerly Azure Active Directory**. End with a `/`. |
 
 ## Remarks
 

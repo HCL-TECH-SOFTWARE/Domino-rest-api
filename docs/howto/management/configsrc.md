@@ -2,7 +2,7 @@
 
 ## About this task
 
-You can [check the Domino REST API settings via the **Config** tab](../install/checksettings.md) in the **Management console**. The **Config** tab shows you all the default configuration of the Domino REST API and all the additional configuration made using the JSON files saved in the `keepconfig.d` directory. This procedure guides you on how to identify the source files of all the configuration parameters that you see in the **Config** tab by using the **Config src** tab.
+You can [check the Domino REST API settings via the **Config** tab](../management/checksettings.md) in the **Management console**. The **Config** tab shows you all the default configuration of the Domino REST API and all the additional configuration made using the JSON files saved in the `keepconfig.d` directory. This procedure guides you on how to identify the source files of all the configuration parameters that you see in the **Config** tab by using the **Config src** tab.
 
 ## Before you begin
 

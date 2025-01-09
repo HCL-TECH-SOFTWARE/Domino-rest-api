@@ -15,11 +15,11 @@ The section provides information on the latest features, improvements, and resol
 
     **New**
 
-    - When using the DRAPI IdP users can be locked out if they enter incorrect credentials several times.  You can now view and reinstate these users without waiting for the lockout period to end via the **Management console**. For more information, see [Release suspended users](../howto/production/suspendeduser.md).
+    - When using the DRAPI IdP users can be locked out if they enter incorrect credentials several times.  You can now view and reinstate these users without waiting for the lockout period to end via the **Management console**. For more information, see [Release suspended users](../howto/management/suspendeduser.md).
 
-    - Users with valid JWT tokens can now be identified via the **Users** tab on the **Management console**. For more information, see [Identify known users with valid JWT token](../howto/production/usersmc.md). 
+    - Users with valid JWT tokens can now be identified via the **Users** tab on the **Management console**. For more information, see [Identify known users with valid JWT token](../howto/management/usersmc.md). 
 
-    - The Domino REST API configuration settings and where they are located can be identified via the **Config src** tab on the **Management console**. For more information, see [Find configuration sources](../howto/production/configsrc.md).
+    - The Domino REST API configuration settings and where they are located can be identified via the **Config src** tab on the **Management console**. For more information, see [Find configuration sources](../howto/management/configsrc.md).
 
     - Domino REST API administrators can now customize which API schemas and endpoints are available to meet specific requirements and use cases. For more information, see [Customize available API schemas and endpoints](../howto/production/customAPI.md).
 

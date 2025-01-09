@@ -34,7 +34,7 @@ We considered but decided against the following APIs:
 - Protocol buffers (backend format, no support in browser despite being donated to Cloud Computing Foundation driven by single vendor, code generation limited to a few languages, poor documentation of proto files)
 - Java RPC (single language only)
 - Websockets (not suitable for backend, no documentation format)
-- oDATA (decided to implement that as a database specific option)
+- OData (decided to implement that as a database specific option)
 
 ### Implication
 

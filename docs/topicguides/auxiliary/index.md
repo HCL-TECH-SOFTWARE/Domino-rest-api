@@ -4,7 +4,7 @@ While the main purpose of a REST API is serving data, mostly JSON, over https, a
 
 ## [Identity Provider (IdP)](idp.md)
 
-Domino REST API has a dual-use function. It can **be** your [OICD](https://openid.net/developers/how-connect-works/) compliant Identity Provider **and** it can be configured to accept users authenticated with an external IdP like [Keycloak](../../howto/IdP/configuringKeycloak.md), Okta, or [Microsoft Entra ID](../../howto/IdP/configuringAD.md) formerly Azure Active Directory.
+Domino REST API has a dual-use function. It can **be** your [OICD](../../references/security/authentication.md#oidc) compliant Identity Provider **and** it can be configured to accept users authenticated with an external IdP like [Keycloak](../../howto/IdP/configuringKeycloak.md), Okta, or [Microsoft Entra ID](../../howto/IdP/configuringAD.md) formerly Azure Active Directory.
 
 ## [webDAV](webdav.md)
 

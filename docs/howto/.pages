@@ -5,6 +5,7 @@ nav:
     - IdP: IdP
     - Production: production
     - Database: database
+    - Management console: management
     - VoltMX: VoltMX
     - Code examples: codesamples
 

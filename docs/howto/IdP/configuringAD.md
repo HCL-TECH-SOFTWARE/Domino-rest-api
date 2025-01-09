@@ -175,7 +175,7 @@ All URLs are retrievable by accessing the _OpenID Connect_ metadata document, co
 
 ## Test the application
 
-1. Go to [Downloads](../../references/downloads.md#azure-ad), and then download the `AzureTester.zip` file.
+1. Go to [Downloads](../../references/downloads.md#microsoft-entra-id-formerly-azure-active-directory), and then download the `AzureTester.zip` file.
 
     The file contains an [expressJS](https://expressjs.com/) application and related static files (HTML/CSS/JS).
 
