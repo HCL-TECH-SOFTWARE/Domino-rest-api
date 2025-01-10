@@ -8,7 +8,7 @@ OData doesn't use [JSON Schema](https://json-schema.org/) but its own definition
 
 - [OData tutorials](../../tutorial/odata/index.md)
 
-<!--## How to
+<!--## How-to guides
 
 - add links-->
 

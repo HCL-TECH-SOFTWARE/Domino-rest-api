@@ -1,19 +1,22 @@
 # Form modes
 
-Form Modes are the enhanced security measures provided by [The Barbican](barbican.md). They allow to specify which document items are available for read and write operations based on a formula result. E.g. `@IsMember(Approvers; @UserName)` would make the mode available when the current user is listed in the `Approvers` item.
+Form Modes are enhanced security measures provided by [The Barbican](barbican.md). They allow you to specify which document items are available for read-and-write operations based on a formula result. For example, `@IsMember(Approvers; @UserName)` makes the mode available when the current user is listed in the `Approvers` item.
 
-## Tutorials
+<!--## Tutorials
 
-- add links
+- add links-->
 
-## How to
+## How-to guides
 
-- add links
+- [Add a mode](../references/usingwebui/schemaui.md#add-a-mode)
+- [Clone a mode](../references/usingwebui/schemaui.md#clone-a-mode)
+- [Compare modes](../references/usingwebui/schemaui.md#compare-modes)
 
 ## References
 
-- add links
+- [Form Modes](barbican.md#form-modes)
 - [Reserved Form mode names](../references/usingdominorestapi/modenames.md)
+- [Forms & Mode](../howto/database/enablingadb.md#forms--mode)
 
 ## Let's connect
 

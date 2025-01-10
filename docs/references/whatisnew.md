@@ -87,7 +87,7 @@ The section provides information on the latest features, improvements, and resol
     
     - Domino REST API can now enable HTTPS setup in Domino using Domino's certificate configuration. To learn more, see [Enable HTTPS using the Domino Certificate Manager](../howto/production/dominohttps.md). 
 
-    - Added support for using external IdP for Office Round Trip Experience. For more information, see [Setup external IdP for Office Round Trip Experience](../howto/production/roundtripidp.md).
+    - Added support for using external IdP for Office Round Trip Experience. For more information, see [Setup external IdP for Office Round Trip Experience](../howto/IdP/roundtripidp.md).
 
     - Added `DELETE v1/nameddocument` endpoint to delete a named document.
     - Added `GET v1/nameddocument` endpoint to retrieve a named document using the appropriate name.

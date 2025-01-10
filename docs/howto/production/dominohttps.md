@@ -1,4 +1,4 @@
-# Enable HTTPS using the Domino Certificate Manager
+# Enable HTTPS using Domino Certificate Manager
 
 !!!note
     This feature is only available starting from the Domino REST API v1.1.0 release. 

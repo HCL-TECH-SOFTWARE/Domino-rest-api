@@ -18,11 +18,13 @@ Topics to guide you in completing configuration goals and tasks in relation to d
 
 - [Hardened production setup](hardening.md)
 
+- [Host SPA in Domino REST API with ReactJS](reactjs.md)
+
 - [Set up Office Round Trip Experience](roundtrip.md)
 
 - [Set up Virtual Spreadsheet](virtualsheet.md)
 
-- [Set up External IdP for Office Round Trip Experience](roundtripidp.md)
+<!-- [Set up External IdP for Office Round Trip Experience](roundtripidp.md)-->
 
 - [Set up Domino REST API for encryption, decryption, and signing](signencrypt.md)
 

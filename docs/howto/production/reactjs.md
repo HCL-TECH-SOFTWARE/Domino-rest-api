@@ -1,13 +1,11 @@
-# ReactJS
+# Host SPA in Domino REST API with ReactJS
+<!--# ReactJS-->
 
-The Domino REST API allows hosting [SPA](https://en.wikipedia.org/wiki/Single-page_application) in its `keepweb.d` directory. This page highlight the steps to make this work with [ReactJS](https://react.dev).
+The Domino REST API allows hosting [SPA](https://en.wikipedia.org/wiki/Single-page_application) in its `keepweb.d` directory. This page highlights the procedure to make this work with [ReactJS](https://react.dev).
 
 !!! warning "This is not a ReactJS tutorial"
 
-    When you are not familiar with ReactJS, this is not the place for you.
-    Rather, learn [open standards](https://www.webcomponents.org), but if you insist:
-
-    [Google tutorials](https://www.google.com/search?q=react+tutorial+2023)
+    When you are not familiar with ReactJS, this is not the place for you. Rather, learn [open standards](https://www.webcomponents.org). But if you insist, check these [tutorials](https://www.google.com/search?q=react+tutorial+2023).
 
 ## Before you begin
 

@@ -18,3 +18,5 @@ Topics to guide you in completing goals and tasks about Identity Provider in rel
 
 - [Configure Domino REST API as SAML identity provider](keepsaml.md)
 
+- [Set up External IdP for Office Round Trip Experience](roundtripidp.md)
+

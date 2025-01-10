@@ -10,7 +10,7 @@ WebDAV enables user agents to collaboratively create and edit content directly o
 
 - add links
 
-## How to
+## How-to guides
 
 - add links-->
 

@@ -1,14 +1,22 @@
 # View Definitions
 
-A view definition configures the visibility of a view and the selection and naming of the view coulumns. Starting with 1.1.2 it also can contain information to recreate the view in a new database.
+A view definition configures view visibility and the selection and naming of the view columns. <!--Starting with the Domino REST API v1.1.2 release, it can also include information necessary to recreate the view in a new database.-->
 
 ## Tutorials
 
-- add links
+- [Manage database views](../../tutorial/adminui.md#manage-database-views)
+- [Verify the views for the demo database](../../tutorial/postmancurl.md#verify-the-views-for-the-demo-database)
+- [List views with SwaggerUI](../../tutorial/swagger.md#list-views-with-swaggerui)
 
-## How to
+## How-to guide
 
-- add links
+- [Edit database view of a schema](../../howto/database/editviewcolumn.md)
+
+## References
+
+- [List available database views](../usingwebui/schemaui.md#list-available-database-views)
+- [Activate a view](../usingwebui/schemaui.md#activate-a-view)
+- [Edit a view](../usingwebui/schemaui.md#edit-a-view)
 
 ## Let's connect
 

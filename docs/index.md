@@ -8,7 +8,7 @@ hide:
 
 {{ variable.drapi }} provides a secure REST API with access to HCL Domino servers and databases while running on HCL Domino and HCL Notes on Windows, Linux, and Mac. Designed to re-establish Domino as a world class, modern, standards-compliant, cloud native and enterprise-level collaboration platform, it adds contemporary REST APIs to Notes and Domino, enabling a modern programming experience with the tools of your choice. For more information, see [Introducing Domino REST API](topicguides/introducingrestapi.md).
 
-*Click the topics in the image for more information.*
+<span style="color:darkblue">*Click the topics in the image to learn more.*</span>
 
 <object type="image/svg+xml" data="assets/images/svg/keepblockdiagram.svg" width="90%">
 Open the <a href="assets/images/svg/keepblockdiagram.svg">overview</a>

@@ -10,7 +10,7 @@ The iCalendar Standard is an open standard for exchanging calendar and schedulin
 
 - add links
 
-## How to
+## How-to guides
 
 - add links-->
 
