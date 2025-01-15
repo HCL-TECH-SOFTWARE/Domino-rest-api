@@ -157,7 +157,7 @@ This is the verticle for managing WebHandlers. `worker`, `threadPoolName`, `thre
 | kid             | String  | Stands for _key ID_ and is a hint indicating which key was used to secure the JWS.                                                                                              |
 | keyFile         | String  | Path to the JWT public key                                                                                                                                                      |
 | iss             | String  | Identifies the principal that issued the JWT. The value is a case-sensitive string containing a string or URI value.                                                            |
-| aud             | String  | Identifies the recipient that the JWT is intended for. When configuring Azure Active Directory as an IdP, the value of this parameter is the Application ID URI you configured. |
+| aud             | String  | Identifies the recipient that the JWT is intended for. When configuring Microsoft Entra ID, formerly Azure Active Directory, as an IdP, the value of this parameter is the Application ID URI you configured. |
 | ofba | [JWT OFBA parameters](#jwt-ofba-parameters) | Parameters for enabling this external IdP to use for OFBA. |
 
 ## JWT OFBA parameters
@@ -167,7 +167,7 @@ This is the verticle for managing WebHandlers. `worker`, `threadPoolName`, `thre
 | active             | Boolean          | Set to `true` to enable the use of external IdP in OFBA.                       |
 | client_id          | String           | External IdP client ID to use for OFBA.                                        |
 | scope              | Array of Strings | List of scope names to use for OFBA.                                           |
-| application_id_uri | String           | An optional property. Required when external IdP is **Azure**. End with a `/`. |
+| application_id_uri | String           | An optional property. Required when external IdP is **Microsoft Entra ID, formerly Azure Active Directory**. End with a `/`. |
 
 ## Remarks
 

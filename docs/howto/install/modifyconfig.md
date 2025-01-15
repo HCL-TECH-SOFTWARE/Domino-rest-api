@@ -9,7 +9,7 @@ The procedure guides you on how to modify the Domino REST API configuration. Be 
 1. Identify the configuration entries that you want to modify.
 
     !!!tip
-        To check Domino REST API settings, see [Check Domino REST API settings](checksettings.md).
+        To check Domino REST API settings, see [Check Domino REST API settings](../management/checksettings.md).
 
 2. Create a JSON file and include the configuration entries that you want to modify with the new values.
 

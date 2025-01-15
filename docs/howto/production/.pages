@@ -1,22 +1,18 @@
 nav:
     - index.md
     - changefilesize.md
-    - prodports.md
-    - customAPI.md
-    - disablemodule.md
+    - Configure ports: prodports.md
+    - Customize API schemas and endpoints: customAPI.md
     - dominohttps.md
-    - configsrc.md
     - hardening.md
     - httpsprod.md
-    - usersmc.md
-    - jwtmultiserver.md
+    - Host SPA with ReactJS: reactjs.md
     - configparam.md
-    - suspendeduser.md
     - roundtrip.md
     - virtualsheet.md
-    - roundtripidp.md
-    - signencrypt.md
-    - versionupdate.md
+#    - roundtripidp.md
+    - Set up for encryption, decryption, signing: signencrypt.md
+    - Update Domino REST API: versionupdate.md
     
     
     

@@ -4,7 +4,9 @@ nav:
   - index.md
   - introducingrestapi.md
   - understanding.md
+  - schemascope.md
   - howkeepworks.md
+  - formmodes.md
   - keepdifference.md
   - keepFlows.md
   - KeepFactory-and-caches.md
@@ -17,4 +19,5 @@ nav:
   - agents.md
   - usecases.md
   - keepasproxy.md
+  - Auxiliary services: auxiliary
   - notesprimer.md

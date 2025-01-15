@@ -1,6 +1,16 @@
 # Disable and enable module in production
 
+## About this task
+
 If your specific configuration entry or references suggest that there are variables or function in the `config.json` file, you may be able to change them.
+
+## Before you begin
+
+You must have access to the **Management console**.
+
+!!! note
+     - Make sure the **Management console** is secure. For more information, see [Functional Accounts](../../references/functionalUsers.md).
+     - Credentials for the **Management console** aren't managed by the configured IdP, but are derived from the [configuration of functional accounts](../../references/functionalUsers.md).
 
 ## Procedure
 

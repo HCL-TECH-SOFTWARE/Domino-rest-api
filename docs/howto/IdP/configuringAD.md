@@ -1,8 +1,8 @@
-# Configure Azure Active Directory as IdP
+# Configure Microsoft Entra ID as IdP
 
 ## About this task
 
-The procedures guide you on configuring Azure Active Directory as an IdP. Azure Active Directory has its own ideas about JWT compatibility:
+The procedures guide you on configuring Microsoft Entra ID, formerly Azure Active Directory, as an IdP. Microsoft Entra ID has its own ideas about JWT compatibility:
 
 - The `aud` property is fixed to the ID of the application, not as commonly, the URL of the target system.
 - There is no `scope` property, but instead `scp` to describe the requested scopes.
@@ -11,7 +11,7 @@ The procedures guide you on configuring Azure Active Directory as an IdP. Azure 
 
 ### Register an application
 
-1. Navigate to the [Azure Portal](https://portal.azure.com){: target="\_blank"} to login, and then select **App registrations**.
+1. Navigate to the [Azure Portal](https://portal.azure.com){: target="_blank"} to login, and then select **App registrations**.
 
       ![Azure landing page](../../assets/images/configuringAD-01.png)
 
@@ -175,7 +175,7 @@ All URLs are retrievable by accessing the _OpenID Connect_ metadata document, co
 
 ## Test the application
 
-1. Go to [Downloads](../../references/downloads.md#azure-ad), and then download the `AzureTester.zip` file.
+1. Go to [Downloads](../../references/downloads.md#microsoft-entra-id-formerly-azure-active-directory), and then download the `AzureTester.zip` file.
 
     The file contains an [expressJS](https://expressjs.com/) application and related static files (HTML/CSS/JS).
 

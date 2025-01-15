@@ -58,9 +58,9 @@ The following scripts are for reference only. They have been superseded by the s
     - dataDir with the directory the Notes Data is located in
     - keepDir with the directory Domino REST API is located in
 
-## Azure AD
+## Microsoft Entra ID formerly Azure Active Directory
 
-[AzureTester.zip](../assets/downloads/AzureTester.zip) is a simple test application you run on a local http server to check if a registered App in Azure AD can be used as JWT provider for the Domino REST API.
+[AzureTester.zip](../assets/downloads/AzureTester.zip) is a simple test application you run on a local http server to check if a registered App in Microsoft Entra ID, formerly Azure Active Directory, can be used as JWT provider for the Domino REST API.
 
 !!!warning 
     This is for testing only. Do **NOT** use this code in production.

@@ -15,11 +15,11 @@ The section provides information on the latest features, improvements, and resol
 
     **New**
 
-    - When using the DRAPI IdP users can be locked out if they enter incorrect credentials several times.  You can now view and reinstate these users without waiting for the lockout period to end via the **Management console**. For more information, see [Release suspended users](../howto/production/suspendeduser.md).
+    - When using the DRAPI IdP users can be locked out if they enter incorrect credentials several times.  You can now view and reinstate these users without waiting for the lockout period to end via the **Management console**. For more information, see [Release suspended users](../howto/management/suspendeduser.md).
 
-    - Users with valid JWT tokens can now be identified via the **Users** tab on the **Management console**. For more information, see [Identify known users with valid JWT token](../howto/production/usersmc.md). 
+    - Users with valid JWT tokens can now be identified via the **Users** tab on the **Management console**. For more information, see [Identify known users with valid JWT token](../howto/management/usersmc.md). 
 
-    - The Domino REST API configuration settings and where they are located can be identified via the **Config src** tab on the **Management console**. For more information, see [Find configuration sources](../howto/production/configsrc.md).
+    - The Domino REST API configuration settings and where they are located can be identified via the **Config src** tab on the **Management console**. For more information, see [Find configuration sources](../howto/management/configsrc.md).
 
     - Domino REST API administrators can now customize which API schemas and endpoints are available to meet specific requirements and use cases. For more information, see [Customize available API schemas and endpoints](../howto/production/customAPI.md).
 
@@ -87,7 +87,7 @@ The section provides information on the latest features, improvements, and resol
     
     - Domino REST API can now enable HTTPS setup in Domino using Domino's certificate configuration. To learn more, see [Enable HTTPS using the Domino Certificate Manager](../howto/production/dominohttps.md). 
 
-    - Added support for using external IdP for Office Round Trip Experience. For more information, see [Setup external IdP for Office Round Trip Experience](../howto/production/roundtripidp.md).
+    - Added support for using external IdP for Office Round Trip Experience. For more information, see [Setup external IdP for Office Round Trip Experience](../howto/IdP/roundtripidp.md).
 
     - Added `DELETE v1/nameddocument` endpoint to delete a named document.
     - Added `GET v1/nameddocument` endpoint to retrieve a named document using the appropriate name.

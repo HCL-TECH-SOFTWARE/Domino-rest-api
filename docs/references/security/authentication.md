@@ -53,7 +53,7 @@ If your provider supports the [`/.well-known/openid-configuration` endpoint](htt
 
 During initialization, Domino REST API will query this endpoint for issuer and key information to trust public keys from that service.
 
-Some IdP, such as [Azure](../../howto/IdP/configuringAD.md), don't provide full information, missing algorithm or accurate issuer info. For them, additional parameters `aud`, `iss` and `algoritm` can be specified.
+Some IdP, such as [Microsoft Entra ID formerly Azure Active Directory](../../howto/IdP/configuringAD.md), don't provide full information, missing algorithm or accurate issuer info. For them, additional parameters `aud`, `iss` and `algoritm` can be specified.
 
 ```json
 {
@@ -143,7 +143,7 @@ The Domino REST API probes for the existence of various claims in the JWT token 
 
 ## OIDC
 
-OIDC (OpenID Connect) support lets you point at a standard OIDC provider like [Azure AD](../../howto/IdP/configuringAD.md) or [Keycloak](../../howto/IdP/configuringKeycloak.md ). It's similar to the [External JWT Provider configuration](../../references/security/authentication.md#external-jwt-provider) when using `providerUrl`, but follows OIDC semantics a bit more internally - namely, it needs a client ID and client secret.
+OIDC (OpenID Connect) support lets you point at a standard OIDC provider like [Microsoft Entra ID formerly Azure Active Directory](../../howto/IdP/configuringAD.md) or [Keycloak](../../howto/IdP/configuringKeycloak.md ). It's similar to the [External JWT Provider configuration](../../references/security/authentication.md#external-jwt-provider) when using `providerUrl`, but follows OIDC semantics a bit more internally - namely, it needs a client ID and client secret.
 
 
 It can be configured like:
@@ -231,7 +231,7 @@ In general, `oidc` and `oidc-idpcat` achieve the same goal, which is to use a co
 - Since Domino handles contacting the OIDC provider and caching keys, you benefit from that shared cache as well as shared diagnostics (for example, using notes.ini options for extra logging on the console).
 
 !!!note
-    In general, you'd use any of these ("jwt", "oidc", "oidc-idpcat") when you either want to or have to have an external identity provider like Keycloak or Azure AD and have those tokens be usable for Domino REST API calls. Using either "jwt"-with-providerUrl or either of the "oidc" ones will let Domino REST API use standard OIDC endpoints to handle key lookup, avoiding the need to copy and paste signer keys into the Domino REST API config.
+    In general, you'd use any of these ("jwt", "oidc", "oidc-idpcat") when you either want to or have to have an external identity provider like Keycloak or Microsoft Entra ID, formerly Azure Active Directory, and have those tokens be usable for Domino REST API calls. Using either "jwt"-with-providerUrl or either of the "oidc" ones will let Domino REST API use standard OIDC endpoints to handle key lookup, avoiding the need to copy and paste signer keys into the Domino REST API config.
 
 Check [Configure Domino REST API to use an OIDC provider](../../howto/IdP/configureoidc.md).
 

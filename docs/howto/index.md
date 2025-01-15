@@ -22,8 +22,16 @@ Considerations for production deployments, security included
 
 ## [Database](database/index.md)
 
-Working with databases, enable and configure for REST access
+Working with databases, and enabling and configuring for REST access
+
+## [Management console](management/index.md)
+
+Tasks requiring access to the Management console
 
 ## [VoltMX](VoltMX/index.md)
 
 Topics around the VoltMX integration of the REST API
+
+## [Code examples](codesamples/index.md)
+
+Code samples to interact with Domino REST API 

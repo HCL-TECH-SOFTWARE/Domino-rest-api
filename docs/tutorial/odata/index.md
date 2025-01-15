@@ -1,6 +1,6 @@
 # OData
 
-[OData](https://www.odata.org), an [open standard](https://www.iso.org/standard/69208.html) protocol for [REST](https://www.tutorialspoint.com/restful/restful_introduction.htm), is the love child of SAP and Microsoft. It has been adopted by:
+[OData](https://www.odata.org), an [open standard](https://www.iso.org/standard/69208.html) protocol for [REST](https://www.tutorialspoint.com/restful/restful_introduction.htm). It has been adopted by:
 
 - SAP
 - Salesforce
