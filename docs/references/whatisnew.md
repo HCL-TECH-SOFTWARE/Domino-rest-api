@@ -8,12 +8,26 @@ The section provides information on the latest features, improvements, and resol
     
     - Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](deprecated.md).
 
-???+ info "v1.1.1 - What's new or changed"
+???+ info "v1.1.2 -  What's new or changed"
+    ## v1.1.2 - _What's new or changed_
+
+    *Release date: February XX, 2025*
+
+    **New features**
+
+    **Improvements**
+
+    **Resolved issues**
+
+    **Others**
+
+
+??? info "v1.1.1 - What's new or changed"
     ## v1.1.1 - _What's new or changed_
 
     *Release date: December 02, 2024*
 
-    **New**
+    **New features**
 
     - When using the DRAPI IdP users can be locked out if they enter incorrect credentials several times.  You can now view and reinstate these users without waiting for the lockout period to end via the **Management console**. For more information, see [Release suspended users](../howto/management/suspendeduser.md).
 
@@ -45,7 +59,7 @@ The section provides information on the latest features, improvements, and resol
 
     - Implemented the remaining special-text functions when retrieving a view. Special-text functions are calculated at runtime and include functions, such as `@DocNumber`, `@DocDecendants`, `@DocParentNumber`. 
 
-    **Resolved Issues**
+    **Resolved issues**
 
     - Forms or views with some special characters were not encoded when performing a REST call to retrieve the list of fields or columns, resulting in a 405 Method Not Allowed error response. 
     - Editing a schema in the **Admin UI** led to an empty page when the name of the schema form or view contained `#`.
@@ -77,7 +91,7 @@ The section provides information on the latest features, improvements, and resol
 
     *Release date: September 30, 2024*
 
-    **New**
+    **New features**
 
     - Domino REST API can now encrypt document fields and sign a document with keys stored in your Notes ID file. This protects data from unauthorized access and further enhances data security and integrity. 
     
@@ -121,7 +135,7 @@ The section provides information on the latest features, improvements, and resol
 
     - Added an option for exporting database schema as JSON file by copying the schema and then creating a JSON file containing the copied schema. For more information, see [Export database schema as JSON file](../howto/database/exportsourcejson.md#to-create-a-json-file). 
 
-    **Resolved Issues**
+    **Resolved issues**
 
     - The `GET admin-v1/access/users` endpoint returned a **404 No users found with requested name** error when the value entered for the query parameter `startsWith` included a slash character.
     - Swedish characters were not correctly encoded and displayed in the response body when Office Round Trip Experience with RichText content was attempted using `POST /v1/document` endpoint.
@@ -155,7 +169,7 @@ The section provides information on the latest features, improvements, and resol
 
     *Release date: June 13, 2024*
 
-    **New**
+    **New features**
 
     - Preview: **Virtual Spreadsheet**  
 
@@ -174,7 +188,7 @@ The section provides information on the latest features, improvements, and resol
     
     - Implemented UI/UX enhancements in the [Application Management](./usingwebui/appui.md) page in the **Admin UI**.
 
-    **Resolved Issues**
+    **Resolved issues**
 
     - The `POST v1/run/formula` endpoint did not allow the formula to run unless the user was in the server config *allow run formula agents*.
 
@@ -200,7 +214,7 @@ The section provides information on the latest features, improvements, and resol
 
     *Release date: April 25, 2024*
 
-    **New**
+    **New features**
 
     - Added `GET v1/richtextprocessors` endpoint to return a list of the available methods of returning Rich Text.
     - Added `POST v1/run/agentWithContext` endpoint to specify an array of UNIDs to run an agent on. 
@@ -218,7 +232,7 @@ The section provides information on the latest features, improvements, and resol
     - Implemented UI/UX enhancements in the [OAuth Consents](./usingwebui/oauthconsentui.md) page in the **Admin UI**.
     - Enhanced the PIM Swagger documentation. 
 
-    **Resolved Issues**
+    **Resolved issues**
 
     - An intermittent issue occurred where deleting a schema might have caused other schemas not to load or be created for that same database.
     - Running `tell restapi quit` might have crashed the Domino server.
@@ -246,7 +260,7 @@ The section provides information on the latest features, improvements, and resol
 
     *Release date: March 27, 2024*
 
-    **New**
+    **New features**
     
     - Added the **Add New Form Schema** button on the **Database Forms** page in the **Admin UI** to allow the creation of a Form schema for a form that does not exist in the design of the database. This is useful for the profile document update introduced in the v1.0.10 release and can also be used to add or retrieve documents when no form exists in the design. For more information, see [Add new form schema](usingwebui/schemaui.md#add-new-form-schema).
     
@@ -267,7 +281,7 @@ The section provides information on the latest features, improvements, and resol
     - Added an **Activate Form** dialog in the **Admin UI** to get user confirmation for activating an inactive form when the user clicks the edit icon corresponding to an inactive form.
     - Enhanced processing speed for retrieving a list of schemas with a large number of schemas in the **Admin UI**.
 
-    **Resolved Issues**
+    **Resolved issues**
 
     - The error “badly formatted directory string”  was produced when creating a certificate via the **Management** page.
     - Trace logging did not work on Windows. 
@@ -295,7 +309,7 @@ The section provides information on the latest features, improvements, and resol
 
     *Release date: February 22, 2024*
 
-    **New**
+    **New features**
 
     - Added `POST v1/profiledocument` endpoint to create and update an existing profile document. 
         
@@ -329,7 +343,7 @@ The section provides information on the latest features, improvements, and resol
     - Added option to use a named key when using the `v1/profiledocument` endpoints.
     - Added the date time attributes of a **datetime** field when executing the `setup-v1/design/forms/{designName}` endpoint.
 
-    **Resolved Issues**
+    **Resolved issues**
 
     - Passkey on **Admin UI** didn't work on newer versions of Safari.
     - The `setup-v1/design/{designType}/{designName}` endpoint returned shared libraries.
@@ -355,7 +369,7 @@ The section provides information on the latest features, improvements, and resol
 
     *Release date: December 14, 2023*
 
-    **New**
+    **New features**
 
     - Added full support for Domino 14.
     
@@ -381,7 +395,7 @@ The section provides information on the latest features, improvements, and resol
     - Enabled retrieval of the document's parent UNID in the response (@parentDocument) when retrieving view contents via `GET v1/lists/{name}` endpoint by setting `metaAdditional=true`.
     - Updated the access-control-allow-methods with the correct set of allowed methods.
 
-    **Resolved Issues**
+    **Resolved issues**
 
     - Shared Fields, Shared Actions and Item Definitions were not returned when retrieving them from the `GET setup-v1/design/{designType}/{designName}` endpoint.
     - Access-control-allow-headers were not being set in the CORS response.
@@ -412,7 +426,7 @@ The section provides information on the latest features, improvements, and resol
 
     *Release date: November 14, 2023*
 
-    **New**
+    **New features**
 
     - OAuth will auto consent if a valid refresh token exists for a user scope application combination.
     - Added the following OAuth consent endpoints:
@@ -440,7 +454,7 @@ The section provides information on the latest features, improvements, and resol
     - Added search feature in **Schema Management** to easily look for forms, views, and agents.  
     - Added ability to configure or unconfigure all database forms at the same time.
     
-    **Resolved Issues**
+    **Resolved issues**
 
     - `POST v1/run/agent` did not run when using the agent's alias.
     - `POST v1/run/agent` did not run in the user's context when the agent is set to *Run as Web User*.
@@ -458,7 +472,7 @@ The section provides information on the latest features, improvements, and resol
 ??? info "v1.0.7 - What's new or changed"
     ## v1.0.7 - _What's new or changed_
 
-    **New**
+    **New features**
 
     - Added endpoint `GET v1/richtext/plain/{unid}` to retrieve just plain text from a `richtext` field.
     - Added endpoint `POST v1/bulk/etag` to give an entity tag (ETag) to specified documents. The endpoint is also useful in finding if a doc has been updated or deleted.
@@ -494,7 +508,7 @@ The section provides information on the latest features, improvements, and resol
 ???info "v1.0.6 - What's new or changed"
     ## v1.0.6 - _What's new or changed_
 
-    **New**
+    **New features**
 
     - HCL Domino REST API now supports WebAuthn allowing users to [log in to the **Admin UI** using a passkey](../howto/install/passkey.md).
     
@@ -529,7 +543,7 @@ The section provides information on the latest features, improvements, and resol
 ???info "v1.0.5 - What's new or changed"
     ## v1.0.5 - _What's new or changed_
 
-    **New**
+    **New features**
 
     - Added `v1/docmeta/{unid}` endpoint that includes metadata information about the document specified.
     - Added `richTextAs` parameter to the `v1/bulk/create`, `v1/bulk/unid`, `v1/bulk/update` and `v1/lists/{name}` endpoints when using `documents=true`.
@@ -558,7 +572,7 @@ The section provides information on the latest features, improvements, and resol
 ???info "v1.0.4 - What's new or changed"
     ## v1.0.4 - _What's new or changed_
 
-    **New** 
+    **New features** 
 
     - Added parameter `metaAdditional=` to the `/lists/{name}` endpoint in `api/v1` to return additional metadata for each row. Currently just returning the Form name of the underlying document.
     - Added the OpenID `/userinfo` endpoint in `api/v1` for OIDC compliance.
@@ -580,7 +594,7 @@ The section provides information on the latest features, improvements, and resol
 ???info "v1.0.3 - What's new or changed"
     ## v1.0.3 - _What's new or changed_
 
-    **New** 
+    **New features** 
 
     - `/lists/{listname}` API has a new parameter `keyAllowPartial=true` added to allow partial key matches.
     - New endpoint added to the setup API, call `DELETE /admin/cache` to reset the Domino REST API Scope and Schema cache, call if you are modifying Scopes or Schemas directly in Notes as opposed to the API or the Admin UI.
@@ -604,7 +618,7 @@ The section provides information on the latest features, improvements, and resol
 ???info "v1.0.2 - What's new or changed"
     ## v1.0.2 - _What's new or changed_
 
-    **New**
+    **New features**
 
     - Added ability to view the Domino Server console live as well as send commands from the Domino REST API management page if using admin credentials. See [Domino Console Configuration](../references/usingdominorestapi/console.md) for more information.
     
@@ -641,7 +655,7 @@ The section provides information on the latest features, improvements, and resol
 ???info "v1.0.1 - What's new or changed"
     ## v1.0.1 - _What's new or changed_
 
-    **New**
+    **New features**
 
     - The installer now has an upgrade option. Please see the [installation instructions](../tutorial/installconfig/index.md) for more information.
     

@@ -147,39 +147,53 @@ All forms are now activated with default settings and have **Active** status.
 
 2. Under **Show fields from**, hover over a field item and click the **+** icon. This adds the field in the form. Repeat this for all the fields to be added.
 
-      [![Add field](../../assets/images/addfield.png){: style="height:60%;width:60%"}](../../assets/images/addfield.png "Click to open in a new tab"){: target="_blank" rel="noopener noreferrer"}
+    [![Add field](../../assets/images/addfield.png){: style="height:50%;width:50%"}](../../assets/images/addfield.png "Click to open in a new tab"){: target="_blank" rel="noopener noreferrer"}
 
-      When you hover over the **info** icon beside the field name, the field property is shown. The field can be *editable*, which means that the field has **Read/Write** access setting. The field can also be either *computed*, *computed when composed*, or *computed for display*, which means that the field has **Read Only** access setting.
+    !!!tip
+        - Click **Add All Fields** icon to add all the available fields to the form.
+        - Click **Refresh List of Fields** icon to refresh the list of avaialble fields.
+        - Use the **Search Field** search box to search for a field by field name. 
+        - Hover over the **Info** icon beside the field name to show the field property. The field can be *editable*, which means that the field has **Read/Write** access setting. The field can also be either *computed*, *computed when composed*, or *computed for display*, which means that the field has **Read Only** access setting.
+        - Enter a custom field name in the **Add custom field** and click the **+** icon to add a custom field to the form.
+        - Click **Delete Fields**, select the fields to remove, and then click **Remove** to remove the selected fields from the form.
      
-      ![Field info icon](../../assets/images/addfield1.png){: style="height:60%;width:60%"}
 
-3. Set the read or write access of each field in the form in **Field Setting**.
+3. Under **Field Setting**, you can set the **Field Name**, **Field Type**, and the read or write access of the field in the form.
 
-4. Under **Mode Settings**, click the pencil icon corresponding to a mode formula. A dialog opens.
+    !!!tip
+        - Click the **Multi-Value** toggle to the on position to specify a **Field Group**. The **Multi-Value** toggle isn't clickable to the off position if you specified a field group.
+        - Click the **Required** toggle to the on position to specify that the field is a required field. When set to the on position, the word *Required* is added below the name of the field in the added field list.
 
-      The following image shows the opened **Formula for Delete Access** dialog.  
+    !!!note "Encryption feature"   
+        The encryption feature is available starting from the Domino REST API v1.1.0 release. Make sure to [set up Domino REST API for encryption, decryption, and signing](../../howto/production/signencrypt.md) before executing the following steps for encryption and signing.
 
-      [![Formula Settings](../../assets/images/modeformula.png)](../../assets/images/modeformula.png "Click to open in a new tab"){: target="_blank" rel="noopener noreferrer"}
+        Click the **Encrypt** toggle to the on position to enable encryption. For more information on encryption and signing, see [Using encryption, decryption, and signing during development](../usingdominorestapi/encryptsign.md).
 
-5. In the text field in the dialog, edit the `@True` or `@False` entry and click **Save** to close the dialog.
+4. Under **Mode Settings**: 
+
+      1. Click the pencil icon corresponding to a mode formula. A dialog opens.
+
+          The following image shows the opened **Formula for Delete Access** dialog.  
+
+          [![Formula Settings](../../assets/images/modeformula.png)](../../assets/images/modeformula.png "Click to open in a new tab"){: target="_blank" rel="noopener noreferrer"}
+
+      2. In the text field in the dialog, edit the `@True` or `@False` entry and click **Save** to close the dialog.
+
+    !!!note "Signing feature"    
+        The signing feature is available starting from the Domino REST API v1.1.0 release. Make sure to [set up Domino REST API for encryption, decryption, and signing](../../howto/production/signencrypt.md) before executing the following steps for encryption and signing.
+
+        Click the **Sign Document** toggle to the on position to enable this feature. For more information on encryption and signing, see [Using encryption, decryption, and signing during development](../usingdominorestapi/encryptsign.md).
+
+5. Under **Validation Rules**:
+
+      1. Click **Add Rule** if you want to add a validation rule. The **Add Rule** dialog opens.
+      2. Enter the validation formula in the **Formula** field and the error message in the **Error Message** field. 
+      3. Click **Add**.
+
+    !!!tip
+        To delete a validation rule, select the validation rule you want to delete and then click **Delete Rule**. In the confirmation dialog, click **Delete**.       
 
 6. Click **Save**.
-
-!!!tip
-    - Click **Add All Fields** icon to add all the available fields to the form.
-    - Click **Refresh List of Fields** icon to refresh the list of avaialble fields.
-    - Use the **Search Field** search box to search for a field by field name.  
-    - Enter a custom field name in the **Add custom field** and click the **+** icon to add a custom field to the form.
-    - Click **Delete Fields**, select the fields to remove, and then click **Remove** to remove the selected fields from the form.
-    - Click the **Multi-Value** toggle to the on position to specify a **Field Group**. The **Multi-Value** toggle isn't clickable to the off position if a field group is specified.
-
-!!!note    
-    The encryption and signing features are available starting from the Domino REST API v1.1.0 release. Make sure to [set up Domino REST API for encryption, decryption, and signing](../../howto/production/signencrypt.md) before executing the following steps for encryption and signing.
-
-    - Click the **Encrypt** toggle in **Field Setting** to the on position to enable encryption. 
-    - Click the **Sign Document** toggle in **Mode Settings** to the on position to enable this feature. 
-
-    For more information on encryption and signing, see [Using encryption, decryption, and signing during development](../usingdominorestapi/encryptsign.md).
 
 ## Add a mode
 

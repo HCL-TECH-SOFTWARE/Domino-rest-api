@@ -117,6 +117,8 @@ This page allows you to set various configurations to your schema.
 3. Set the Read or Write access formula for each of the fields in the form.
 4. Click **Save**.
 
+To learn more, see [Schema Management](../references/usingwebui/schemaui.md#change-form-configuration).
+
 ## Manage database views
 
 1. Click **Database Views** from the menu bar. This lists all the views for the selected database.
