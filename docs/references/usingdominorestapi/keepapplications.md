@@ -72,7 +72,7 @@ When creating a new Application, enter the application name, application descrip
 
 When the application presents App ID and App Secret in the header of a request, it can access the databases, even when they're not defined as "Open Access". This information is required for an application to use an OAuth flow to gain access to data. Thus, an application server can have more access than a browser application.
 
-Domino REST API offers an OAuth/OICD controlled access.
+Domino REST API offers an OAuth/OIDC controlled access.
 
 ### Desktop applications
 
