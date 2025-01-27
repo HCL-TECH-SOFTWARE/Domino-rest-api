@@ -15,11 +15,29 @@ The section provides information on the latest features, improvements, and resol
 
     **New features**
 
+    - Added the console command `tell restapi refresh` that refreshes Domino REST API to implement a new configuration when executed on the Domino console.
+
     **Improvements**
+
+    - Added an *Overview* link on the **Admin UI** landing page that opens the Domino REST API functional diagram when clicked. Clicking parts of the functional diagram directs you to corresponding documentation topics for easier navigation.
 
     **Resolved issues**
 
     **Others**
+
+    - Moved the `GET webdav-v1/login/idpList` endpoint from WebDAV OpenAPI to Basis OpenAPI and renamed it to `GET v1/auth/idpList` endpoint. Added the **configFor** query parameter as a required parameter of the endpoint to specify what external IdP to retrieve. 
+
+    - Installer jar files:
+	    - For Domino 14: *restapiInstall-r14.jar*
+	    - For Domino 12: *restapiInstall-r12.jar*
+
+    - Docker image version for docker compose .env file (CONTAINER_IMAGE):
+        - For Domino 14: *domino-rest-api:1.1.2-r14*
+        - For Domino 12: *domino-rest-api:1.1.2-r12*  
+        
+    - Docker image version for docker compose .env file from Harbor:
+        - For Domino 14: *hclcr.io/domino/restapi:1.1.2-r14*
+        - For Domino 12: *hclcr.io/domino/restapi:1.1.2-r12* 
 
 
 ??? info "v1.1.1 - What's new or changed"

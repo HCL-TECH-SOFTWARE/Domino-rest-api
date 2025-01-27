@@ -25,6 +25,9 @@ A successful login would lead to this landing page:
 
 ![Landing Page](../assets/images/AdminLanding.png)
 
+!!!tip
+    Starting with the Domino REST API v1.1.2 release, you can click **Overview** on the landing page, indicated by the <span style="color:red">red arrow</span> in the image, to open the Domino REST API functional diagram. Clicking parts of the functional diagram directs you to corresponding topics in the documentation.
+
 ## List available schemas
 
 Click **Database Management - Rest API** in the landing page. This opens the **Schema Management** page.
