@@ -67,7 +67,7 @@ To get valid certificates, use any of the following approaches:
 ```json
 {
   "jwt": {
-    "oicd": {
+    "my-idp": {
       "active": true,
       "algorithm": "RS256",
       "keyFile": "10-jwt.pubkey"
