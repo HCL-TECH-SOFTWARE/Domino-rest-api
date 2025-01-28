@@ -61,7 +61,7 @@ The `nsf` database file and schema are added to the schema list.
 1. On the **Schema Management** page, select the schema you want to edit.
 2. In the schema details card, click the edit icon.
 
-      ![Edit icon](../../assets/images/editschema.png)
+      ![Edit icon](../../assets/images/editschema.png){: style="height:50%;width:50%"}
 
 3. In the **Edit Schema** dialog:
       
@@ -75,6 +75,7 @@ The `nsf` database file and schema are added to the schema list.
       |In $DATA Scope|Enable the setting to make schema available in the system `$DATA` scope. Disable the setting to limit access to the schema to those with the specific scope. |
       |Enable Code|*feature under development*|
       |Require Revision|Enable the setting to require the provision of the correct revision version of the document to update the document through an update endpoint.|
+      |Prevent Design Refresh|Enable the setting to flag the schema written to the database, so the Domino design task won't replace or delete the schema.|
 
       <!--|Allow Decryption|*feature under development*|-->
 

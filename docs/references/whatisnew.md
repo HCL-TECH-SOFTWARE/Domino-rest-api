@@ -16,6 +16,7 @@ The section provides information on the latest features, improvements, and resol
     **New features**
 
     - Added the console command `tell restapi refresh` that refreshes Domino REST API to implement a new configuration when executed on the Domino console.
+    - Added the **Prevent Design Refresh** toggle in the **Admin UI** to flag the schema written to the database, so the Domino design task won't replace or delete the schema. For more information, see [Edit a schema](../references/usingwebui/schemaui.md#edit-a-schema). 
 
     **Improvements**
 
