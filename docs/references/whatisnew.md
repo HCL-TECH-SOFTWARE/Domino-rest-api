@@ -16,11 +16,13 @@ The section provides information on the latest features, improvements, and resol
     **New features**
 
     - Added the console command `tell restapi refresh` that refreshes Domino REST API to implement a new configuration when executed on the Domino console.
-    - Added the **Prevent Design Refresh** toggle in the **Admin UI** to flag the schema written to the database, so the Domino design task won't replace or delete the schema. For more information, see [Edit a schema](../references/usingwebui/schemaui.md#edit-a-schema). 
+    - Added the **Prevent Design Refresh** toggle in the **Admin UI** to flag the schema written to the database, so the Domino design task won't replace or delete the schema. For more information, see [Edit a schema](../references/usingwebui/schemaui.md#edit-a-schema).
+    - Added the **Required** toggle in the **Field Setting** under **Schema Management** of the **Admin UI** to mark a field as a required field.   
 
     **Improvements**
 
     - Added an *Overview* link on the **Admin UI** landing page that opens the Domino REST API functional diagram when clicked. Clicking parts of the functional diagram directs you to corresponding documentation topics for easier navigation.
+    - Enhanced user experience when editing a supported Microsoft Office file attached to a Domino document as the editing session does not expire as long as the Microsoft Office application is open. 
 
     **Resolved issues**
 
