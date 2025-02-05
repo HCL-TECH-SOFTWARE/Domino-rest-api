@@ -14,7 +14,7 @@ You must have access to the **Management console**.
 
 ## Procedure
 
-1. Log in into the Management console (Port 8889).
+1. Log in to the **Management console** (Port 8889).
 2. Click the `Config` button. The actual configuration settings opens. The default configuration is this: [config.json](../../references/parameters.md).
 
     **Example**:
