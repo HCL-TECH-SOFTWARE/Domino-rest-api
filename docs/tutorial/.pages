@@ -11,3 +11,4 @@ nav:
   - postmancurl.md
   - swagger.md
   - OData: odata
+  - extensibility
