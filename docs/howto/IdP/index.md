@@ -20,3 +20,4 @@ Topics to guide you in completing goals and tasks about Identity Provider in rel
 
 - [Set up External IdP for Office Round Trip Experience](roundtripidp.md)
 
+- [Set up External IdP for Admin UI login](adminuiidp.md)
