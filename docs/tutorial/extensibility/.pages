@@ -2,8 +2,8 @@ title: Extensibility tutorial
 
 nav:
   - index.md
-  - openapi.md
   - javaproject.md
+  - openapi.md
   - configjson.md
   - businesslogic.md
   - accesscontrol.md

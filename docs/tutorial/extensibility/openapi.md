@@ -16,7 +16,7 @@ Our extension shall allow to retrieve a list of pending approvals, approve or re
 
 !!! info "Next"
 
-    [Setting up the Maven Java project](javaproject.md)
+    [Creating the config.json](configjson.md)
 
 ## Let's connect
 
