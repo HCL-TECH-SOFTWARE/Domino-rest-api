@@ -28,6 +28,8 @@ Topics to guide you in completing configuration goals and tasks in relation to d
 
 - [Set up Domino REST API for encryption, decryption, and signing](signencrypt.md)
 
+- [Test formulas](testformulas.md)
+
 - [Update Domino REST API](versionupdate.md)
 
 

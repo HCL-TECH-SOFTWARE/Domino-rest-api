@@ -12,6 +12,7 @@ nav:
     - virtualsheet.md
 #    - roundtripidp.md
     - Set up for encryption, decryption, signing: signencrypt.md
+    - testformulas.md
     - Update Domino REST API: versionupdate.md
     
     

@@ -11,7 +11,7 @@ The section provides information on the latest features, improvements, and resol
 ???+ info "v1.1.2 -  What's new or changed"
     ## v1.1.2 - _What's new or changed_
 
-    *Release date: February XX, 2025*
+    *Release date: February 24, 2025*
 
     **New features**
 
@@ -31,6 +31,10 @@ The section provides information on the latest features, improvements, and resol
     **Others**
 
     - Moved the `GET webdav-v1/login/idpList` endpoint from WebDAV OpenAPI to Basis OpenAPI and renamed it to `GET v1/auth/idpList` endpoint. Added the **configFor** query parameter as a required parameter of the endpoint to specify what external IdP to retrieve. 
+
+    - Specifying a kyr file name in the `KeepCertStoreName` is set to be deprecated and is no longer encouraged. A warning will be issued if a kyr file name is specified.
+
+    - Using `KeepCertStoreName=*` to specify multiple explicit DNS names in the `KeepCertStoreName` is set to be deprecated and is no longer encouraged. While it is still functional, a warning will appear when used.
 
     - Installer jar files:
 	    - For Domino 14: *restapiInstall-r14.jar*

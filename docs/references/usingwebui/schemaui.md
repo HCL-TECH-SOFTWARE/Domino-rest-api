@@ -162,15 +162,17 @@ All forms are now activated with default settings and have **Active** status.
 3. Under **Field Setting**, you can set the **Field Name**, **Field Type**, and the read or write access of the field in the form.
 
     !!!tip
+
         - Click the **Multi-Value** toggle to the on position to specify a **Field Group**. The **Multi-Value** toggle isn't clickable to the off position if you specified a field group.
         - Click the **Required** toggle to the on position to specify that the field is a required field. When set to the on position, the word *Required* is added below the name of the field in the added field list.
 
-    !!!note "Encryption feature"   
+    !!!note "Encryption feature"
+
         The encryption feature is available starting from the Domino REST API v1.1.0 release. Make sure to [set up Domino REST API for encryption, decryption, and signing](../../howto/production/signencrypt.md) before executing the following steps for encryption and signing.
 
         Click the **Encrypt** toggle to the on position to enable encryption. For more information on encryption and signing, see [Using encryption, decryption, and signing during development](../usingdominorestapi/encryptsign.md).
 
-4. Under **Mode Settings**: 
+4. Under **Mode Settings**:
 
       1. Click the pencil icon corresponding to a mode formula. A dialog opens.
 
@@ -180,7 +182,10 @@ All forms are now activated with default settings and have **Active** status.
 
       2. In the text field in the dialog, edit the `@True` or `@False` entry and click **Save** to close the dialog.
 
-    !!!note "Signing feature"    
+      As a provided option, you may test the formula using the [Test Formulas](../../howto/production/testformulas.md).
+
+    !!! note "Signing feature"
+
         The signing feature is available starting from the Domino REST API v1.1.0 release. Make sure to [set up Domino REST API for encryption, decryption, and signing](../../howto/production/signencrypt.md) before executing the following steps for encryption and signing.
 
         Click the **Sign Document** toggle to the on position to enable this feature. For more information on encryption and signing, see [Using encryption, decryption, and signing during development](../usingdominorestapi/encryptsign.md).
@@ -192,7 +197,9 @@ All forms are now activated with default settings and have **Active** status.
       3. Click **Add**.
 
     !!!tip
-        To delete a validation rule, select the validation rule you want to delete and then click **Delete Rule**. In the confirmation dialog, click **Delete**.       
+
+        - You can add a validation rule for each field you added to the database form. 
+        - To delete a validation rule, select the validation rule you want to delete and then click **Delete Rule**. In the confirmation dialog, click **Delete**.       
 
 6. Click **Save**.
 
