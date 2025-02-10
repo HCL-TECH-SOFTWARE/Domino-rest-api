@@ -12,7 +12,13 @@ Second step is to create an OpenAPI 3.0.x specification. You can do that using n
 
 ## Creating the config.json
 
+DRAPI is driven by a [dynamic configuration](../../references/understandingconfig.md). In order to get your extension recognized you must provide the information what verticle will run your code and what classes implement your business logic. To do so a file `resources/config/config.json` is required
+
 ## Implementing business logic
+
+To implement functionality two Java classes get involved. A handler class that takes in the http request and forwards it on the Eventbus and a dbrequest class that performs the database interaction.
+
+For the most common use case of JSON in/out, the default handler performs all the necessary actions, no custom code is required.
 
 ## Access Control
 

@@ -9,6 +9,13 @@ The approval extension implements an approval system (simplified) that can work 
 We implement a base function, to give you an idea. The example easily can be extended to add notification, communication with external systems etc.
 You even could implement approvals for users who don't have write access to the document.
 
+!!! warning "JSON and file naming"
+
+    We support OpenApi's 3.0.x JSON format only.
+    YAML or 3.1.x are not supported.
+
+    The name of the file has to start with `openapi.` and end with `.json`
+
 ## End Points
 
 Our extension shall allow to retrieve a list of pending approvals, approve or reject a request or delegate the decision.
@@ -170,7 +177,7 @@ Tag and OperationId will form the package and class name [later on](configjson.m
 
 ## Security
 
-We need to specify what authentication is available. ait needs to match DRAPI
+We need to specify what authentication is available. It needs to match the security spec from DRAPI. the only supported value is `jwt`.
 
 ![JWT Security](JWTSecurity.png)
 
@@ -182,7 +189,7 @@ Our result looks like this:
 
 ![Approval Swagger](ApprovalSwagger.png).
 
-You can reference the full file [here](openapi.approvals.json)
+You can reference the full file [here as `openapi.eoffice.json`](openapi.eoffice.json)
 
 !!! info "Next"
 

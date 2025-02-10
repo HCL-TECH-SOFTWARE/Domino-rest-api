@@ -91,6 +91,7 @@ In this tutorial we will only add the pieces we absolutely need. SO, depending o
        <!-- Adjust Domino & Java version to your environment -->
        <domino.version>14.0.0</domino.version>
        <java.version>17</java.version>
+       <keep.version>1.38.0</keep.version> <!-- your Keep version -->
        <maven.compiler.plugin.version>3.13.0</maven.compiler.plugin.version>
        <maven.surefire.plugin.version>3.5.1</maven.surefire.plugin.version>
        <mockito.version>5.15.2</mockito.version>
@@ -102,13 +103,19 @@ In this tutorial we will only add the pieces we absolutely need. SO, depending o
     </properties>
 
     <dependencies>
-       <dependency>
-          <groupId>com.hcl.domino.keep</groupId>
-          <artifactId>keep-extension</artifactId>
-          <version>1.38.0</version> <!-- your Keep version -->
-          <scope>provided</scope>
-       </dependency>
-    <dependencies>
+        <dependency>
+            <groupId>com.hcl.domino.keep</groupId>
+            <artifactId>keep-core</artifactId>
+            <version>${keep.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.hcl.domino.keep</groupId>
+            <artifactId>keep-extension</artifactId>
+            <version>${keep.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 
     <build>
        <plugins>
