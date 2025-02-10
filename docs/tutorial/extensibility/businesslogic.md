@@ -36,7 +36,13 @@ The class provides convenient access to everthing needed to implement a custom f
 
 There are a few more, check the JavaDoc for details.
 
-In a nutshell: the `process` method needs to call `emit()` at least once or thrown an error. When the return type ia an array, it can call `emit()` multiple times.
+In a nutshell: the `process` method needs to call `emit()` at least once or throw an error. When the return type ia an array, it can call `emit()` multiple times.
+
+### Errors to throw
+
+While you can throw any [Exception](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html) to terminate a failed operation, DRAPI has a set of Exception classses that determine how the exception maps to a http status code.
+
+![KEEP Exceptions](../../assets/images/KeepErrors.png)
 
 ### GetApprovals
 
