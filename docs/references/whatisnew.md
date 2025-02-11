@@ -5,7 +5,6 @@ The section provides information on the latest features, improvements, and resol
 <!-- prettier-ignore -->
 !!! note "Important"
     - Items marked in <span style="color:red">**red**</span> are API changes that may impact your applications and should be reviewed before upgrading.
-    
     - Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](deprecated.md).
 
 ???+ info "v1.1.2 -  What's new or changed"
@@ -18,8 +17,12 @@ The section provides information on the latest features, improvements, and resol
     - Domino REST API Administrators can now create a support package from either the **Management console** or by using specific console commands on the Domino console. The support package is a collection of files that can help the support team to better identify, troubleshoot, and resolve encountered issues. For more information, see [Create support package](../howto/management/supportpackage.md).
     - Added the console command `tell restapi support` for creating a support package and `tell restapi support -includensf` for creating a support package that includes the `KeepConfig.nsf` when executed on the Domino console.
     - Added the console command `tell restapi refresh` that refreshes Domino REST API to implement a new configuration when executed on the Domino console.
+    - Added `GET webdav-v1/locks` endpoint to get a list of all currently locked documents.
+    - Added `DELETE webdav-v1/lock/{lockKey}` endpoint to remove the lock specified by a `lockKey` and to terminate the session of the user who owns the lock. The requestor must be the lock owner, the manager of the locked document's database, or a member of the `LocalKeepAdmins` group to remove the lock.
     - Added the **Prevent Design Refresh** toggle in the **Admin UI** to flag the schema written to the database, so the Domino design task won't replace or delete the schema. For more information, see [Edit a schema](../references/usingwebui/schemaui.md#edit-a-schema).
-    - Added the **Required** toggle in the **Field Setting** under **Schema Management** of the **Admin UI** to mark a field as a required field.   
+    - Added the **Required** toggle in the **Field Setting** under **Schema Management** of the **Admin UI** to mark a field as a required field.
+    - Added the **Validation Rules** section under **Schema Management** of the **Admin UI** to allow the addition of rules for validating fields using Formula Language. For more information, see [Change form configuration](../references/usingwebui/schemaui.md#change-form-configuration).
+        
 
     **Improvements**
 
@@ -31,14 +34,13 @@ The section provides information on the latest features, improvements, and resol
     **Others**
 
     - Moved the `GET webdav-v1/login/idpList` endpoint from WebDAV OpenAPI to Basis OpenAPI and renamed it to `GET v1/auth/idpList` endpoint. Added the **configFor** query parameter as a required parameter of the endpoint to specify what external IdP to retrieve. 
-
     - Specifying a kyr file name in the `KeepCertStoreName` is set to be deprecated and is no longer encouraged. A warning will be issued if a kyr file name is specified.
-
     - Using `KeepCertStoreName=*` to specify multiple explicit DNS names in the `KeepCertStoreName` is set to be deprecated and is no longer encouraged. While it is still functional, a warning will appear when used.
+    - Added procedure for testing access formulas in Mode Settings under **Schema Management** of the **Admin UI**. For more information, see [Test formulas](../howto/production/testformulas.md).
 
     - Installer jar files:
-	    - For Domino 14: *restapiInstall-r14.jar*
-	    - For Domino 12: *restapiInstall-r12.jar*
+        - For Domino 14: *restapiInstall-r14.jar*
+        - For Domino 12: *restapiInstall-r12.jar*
 
     - Docker image version for docker compose .env file (CONTAINER_IMAGE):
         - For Domino 14: *domino-rest-api:1.1.2-r14*
