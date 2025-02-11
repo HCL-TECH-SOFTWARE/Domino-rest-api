@@ -46,6 +46,43 @@ While you can throw any [Exception](https://docs.oracle.com/en/java/javase/17/do
 
 ### GetApprovals
 
+The `process` method can look like this:
+
+```java
+
+final static String APPROVAL_VIEW_NAME = "PendingApprovalByApprover";
+
+  @Override
+  public void process(DbRequestParameters<JsonObject> request) throws Exception {
+
+    final String approver = request.session.getUserName();
+    final DominoCollection view = request.db.openCollection(APPROVAL_VIEW_NAME)
+        .orElseThrow(() -> new KeepExceptionWrongDataRequest("database is not approval enabled"));
+
+    final CollectionSearchQuery searchQuery = view.query()
+        .readColumnValues()
+        .selectByKey(approver, true);
+
+    List<CollectionEntry> result = searchQuery.collectEntries(0, Integer.MAX_VALUE);
+
+    result.stream()
+        .map(this::entryToJson)
+        .forEach(request::emit);
+
+  }
+```
+
+A helper method `entryToJson` converts the `CollectionEntry` into a JsonObject that gets emitted back to HTTP as part of the resulting array. All the plumbing is taken care of.
+
+```java
+  JsonObject entryToJson(final CollectionEntry source) {
+    JsonObject result = new JsonObject();
+    // TODO: mapping
+
+    return result;
+  }
+```
+
 ### SubmitDecision
 
 ## Testing
