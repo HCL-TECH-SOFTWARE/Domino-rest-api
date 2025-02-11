@@ -17,6 +17,9 @@ Configure the `adminui` property in your chosen external IdP. For more informati
 
 ## Admin UI external IdP login
 
+!!!note
+    Take note that setting `AdminUIOIDCLogin` configuration to `false` will result into Admin UI not displaying all IdP logins.
+
 Once configured, the Admin UI login should look like the following example image. In the example image, *Keycloak* is used as the external IdP.
 
 ![external IdP for Admin UI login](../../assets/images/AdminUiLoginExternalIdP.png)

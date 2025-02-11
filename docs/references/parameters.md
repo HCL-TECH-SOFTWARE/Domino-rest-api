@@ -40,6 +40,8 @@ A configuration can have the following top-level properties. These properties ar
 | jwt                      | [JWT parameters](#jwt-parameters)                 | Parameters for enabling Domino REST API to accept JWT tokens from external providers     |
 | LandingPageRedirect  | String                | Alternative landing page for those who prefer a different layout than the tiled landing page. Ensure the URL provided is valid and complete.|
 | TokenCookie | Boolean | (default `false`) Set to `true` to allow Domino REST API to send back JWT as cookie named `KeepToken`. The cookie expiry is the same as the JWT expiry, it will also immediately expire when logout is called. |
+| AdminUIKeepLogin | Boolean | (default `true`) If set to `true`, displays the username and password login in the Admin UI login page. If this and `AdminUIOIDCLogin` are set to `false`, the Admin UI login page will behave as if this is set to `true`. |
+| AdminUIOIDCLogin | Boolean | (default `true`) If set to `true`, displays the IdP logins in the Admin UI login page. |
 
 ## Backpressure handling Parameters
 
