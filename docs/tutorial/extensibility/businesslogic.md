@@ -67,6 +67,8 @@ final static String APPROVAL_VIEW_NAME = "PendingApprovalByApprover";
 
     result.stream()
         .map(this::entryToJson)
+        .filter(Optional::isPresent)
+        .map(Optional::get)
         .forEach(request::emit);
 
   }
@@ -74,18 +76,96 @@ final static String APPROVAL_VIEW_NAME = "PendingApprovalByApprover";
 
 A helper method `entryToJson` converts the `CollectionEntry` into a JsonObject that gets emitted back to HTTP as part of the resulting array. All the plumbing is taken care of.
 
-```java
-  JsonObject entryToJson(final CollectionEntry source) {
-    JsonObject result = new JsonObject();
-    // TODO: mapping
+!!! tip "Style: Optional over null"
 
-    return result;
+    Nobody likes [null](https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare/)(PointerExceptions). So as a style decision DRAPI doesn't return `null` (unless it's broken), but Java's [Optional](https://www.baeldung.com/java-optional), that makes intend in the code more visible.
+
+    Instead of
+
+    ```java
+    SomeObject some = someFunction();
+    if (some == null) {
+        doTheNullCase();
+    } else {
+        doTheGoodCase(some);
+    }
+    ```
+
+    You would write more distinct code:
+
+    ```java
+    // When you have a default fallback
+    SomeObject some = someOptional().orElse(makeDefault());
+    // When no value raises an error
+    SomeObject some = someOptional().orElseThrow(new ShitHappenedException());
+    // When you only are interested in an existing result
+    someOptional().ifPresent(this::doTheGoodCase);
+    // Java > 8 has more options, check them out
+    ```
+
+```java
+  static final List<String> COLUMN_NAMES =
+      Arrays.asList("requestor", "value", "status", "subject", "submission");
+
+   Optional<JsonObject> entryToJson(final CollectionEntry source) {
+    final JsonObject result = new JsonObject();
+    final List<String> missing = new ArrayList<>();
+    final String unid = source.getUNID();
+    result.put("unid", unid);
+    COLUMN_NAMES.forEach(colName -> {
+      final Object colValue = source.get(colName);
+      if (colValue != null) {
+        result.put(colName, colValue);
+      } else {
+        missing.add(colName);
+      }
+    });
+    // We don't send incomplete records
+    if (missing.isEmpty()) {
+      logger.trace("Record {} processed {}", unid, source.toString());
+      return Optional.of(result);
+    }
+    logger.error("record {} has misssing columns: {}", unid, missing);
+    return Optional.empty();
   }
 ```
 
 ### SubmitDecision
 
+The code is similar simple. We check if the document exists, is an a state to be approved by the current user, record the decision in the ApprovalLog central database and update the document.
+
+```java
+ @Override
+  public void process(DbRequestParameters<JsonObject> request) throws Exception {
+
+    request.validate();
+
+    final String unid = request.incoming.getString("unid");
+    final String status = request.incoming.getString("status");
+    final Optional<String> delegee = Optional.ofNullable(request.incoming.getString("delegee"));
+
+    this.isTheRequestGoodToGo(request.session, request.db, unid, status, delegee);
+
+    try (Database approvalLog = request.session.getDatabaseDomino("ApprovalLog.nsf")) {
+      // TODO: write to log
+      // TODO: update document
+    } catch (Exception e) {
+      logger.error(e.getMessage());
+      throw e;
+    }
+
+    JsonObject happyResult = new JsonObject()
+        .put("StatusCode", "200")
+        .put("Status", "Decision {} recorded for {}");
+
+    request.emit(happyResult);
+
+  }
+```
+
 ## Testing
+
+Compile the Jar and throw it into DRAPI's `libs` folder. Restart DRAPi and it should show up.
 
 !!! info "Next"
 
