@@ -10,6 +10,8 @@ Topics to guide you in completing goals and tasks related to installation, confi
 
 - [Modify configuration of Domino REST API](modifyconfig.md)
 
+- [Install the Domino REST API on multiple servers](multiserver.md)
+
 - [Deploy to HCL Notes Client](notesclient.md)
 
 - [Remove Domino REST API from Domino server or Notes Client](uninstall.md)
@@ -21,3 +23,7 @@ Topics to guide you in completing goals and tasks related to installation, confi
 - [Customize oAuth consent screen](oauthoscreen.md) (experimental)
 
 - [Obtain authentication token from HCL Container Repository](obtainauthenticationtoken.md)
+
+## Let's connect
+
+--8<-- "feedback.md"

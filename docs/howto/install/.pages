@@ -3,10 +3,10 @@ nav:
     - Installation and configuration: tutorial/installconfig/index.html
     - symlink.md
     - modifyconfig.md
+    - multiserver.md
     - notesclient.md
     - uninstall.md
     - passkey.md
     - webauthn.md
     - oauthoscreen.md
     - obtainauthenticationtoken.md
-
