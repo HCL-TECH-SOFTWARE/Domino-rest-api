@@ -19,6 +19,8 @@ On the login page, enter the administrator username and password, and then click
 
 ![Login Page](../assets/images/AdminLogin.png)
 
+See other [log in options](../references/usingwebui/index.md) to learn more.
+
 ## Landing
 
 A successful login would lead to this landing page:
