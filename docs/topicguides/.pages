@@ -4,8 +4,9 @@ nav:
   - index.md
   - introducingrestapi.md
   - understanding.md
-  - schemascope.md
   - howkeepworks.md
+  - schemascope.md
+  - schemabackup.md
   - formmodes.md
   - keepdifference.md
   - keepFlows.md

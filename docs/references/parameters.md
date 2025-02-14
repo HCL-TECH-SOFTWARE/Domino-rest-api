@@ -39,21 +39,21 @@ A configuration can have the following top-level properties. These properties ar
 | webAuthnActive           | Boolean                                           | Set to `true` to enable WebAuthn to be active.                                                                                                                                                                                             |
 | jwt                      | [JWT parameters](#jwt-parameters)                 | Parameters for enabling Domino REST API to accept JWT tokens from external providers     |
 | LandingPageRedirect  | String                | Alternative landing page for those who prefer a different layout than the tiled landing page. Ensure the URL provided is valid and complete.|
-| TokenCookie | Boolean | (default `false`) Set to `true` to allow Domino REST API to send back JWT as cookie named `KeepToken`. The cookie expiry is the same as the JWT expiry, it will also immediately expire when logout is called. |
-| AdminUIKeepLogin | Boolean | (default `true`) If set to `true`, displays the username and password login in the Admin UI login page. If this and `AdminUIOIDCLogin` are set to `false`, the Admin UI login page will behave as if this is set to `true`. |
+| TokenCookie | Boolean | (default `false`) Set to `true` to allow Domino REST API to send back JWT as cookie named `KeepToken`. The cookie expiry is the same as the JWT expiry. It immediately expires when logout is called. |
+| AdminUIKeepLogin | Boolean | (default `true`) If set to `true`, displays the username and password login in the Admin UI login page. If this and `AdminUIOIDCLogin` are set to `false`, the Admin UI login page behaves as if this is set to `true`. |
 | AdminUIOIDCLogin | Boolean | (default `true`) If set to `true`, displays the IdP logins in the Admin UI login page. |
 
-## Backpressure handling Parameters
+## Backpressure handling parameters
 
 These parameters control the flow of requests to Domino, to shape acceptable load
 
 | Property                  | Type | Description                                                               |
 | :------------------------ | :--- | :------------------------------------------------------------------------ |
-| concurrentRequestMaxCount | int  | How many request con concurrently be open to Domino core `-1` = unlimited |
+| concurrentRequestMaxCount | int  | How many requests can concurrently be opened to Domino core `-1` = unlimited |
 | concurrentRequestDelay    | int  | Number of milli seconds to retry an operation (default = `42`)            |
-| concurrentRequestRetries  | int  | number of retries before rejecting a request" (default = `100`)           |
+| concurrentRequestRetries  | int  | number of retries before rejecting a request (default = `100`)           |
 
-## Prometheus Parameters
+## Prometheus parameters
 
 | Property         | Type    | Description                        |
 | :--------------- | :------ | :--------------------------------- |
@@ -71,7 +71,7 @@ Versions has a named list of entries with two parameters:
 | active   | Boolean | Whether the spec is loaded.|
 |disabledOperationIds|Array|Receives the `operationID` of an endpoint or endpoints in an API schema as value to make those endpoints unavailable |
 
-The name of the entries must match the name used in versions of the RestAPI verticle (See [below](#restapi-verticle)).
+The name of the entries must match the name used in versions of the [RestAPI verticle](#restapi-verticle).
 
 ## Vert.x parameters
 
@@ -110,10 +110,10 @@ Verticles defines a separate unit of work for particular tags. For the Rest API 
 | className      | String  | Class to use for the verticle. Typically this is `com.hcl.domino.keep.verticles.DominoDefaultVerticle`, unless you need to extend that class.                                                                                                                                                                                     |
 | tags           | Object  | Tags from OpenAPI specs to allocate to this verticle and the package in which to find the NSFHandlers.                                                                                                                                                                                                                            |
 | instances      | int     | Relevant only for RestAPI verticle, loads multiple instances that each use a thread pool. You will need to be aware of the number of cores available and scalability, see the [Vert.x documentation](https://vertx.io/docs/vertx-core/java/#_specifying_number_of_verticle_instances).                                            |
-| threadPoolName | String  | When a verticle should use a dedicated pool for the `executeBlocking` operations (a.k.a all calls into the Domino C API), the name for thread pool. By default it is assigned 10 threads, but this can be overwritten with `threadPoolSize`. Don't use the same `threadPoolName` by multiple verticles, sharing is not supported. |
-| threads        | int     | This will only be used for worker threads with a specific `threadPoolName`. The default is 10, but this can be overwritten.                                                                                                                                                                                                       |
+| threadPoolName | String  | When a verticle should use a dedicated pool for the `executeBlocking` operations (a.k.a all calls into the Domino C API), the name for thread pool. By default, it's assigned 10 threads, but this can be overwritten with `threadPoolSize`. Don't use the same `threadPoolName` by multiple verticles, sharing isn't supported. |
+| threads        | int     | Only used for worker threads with a specific `threadPoolName`. The default is 10, but this can be overwritten.                                                                                                                                                                                                       |
 | worker         | Boolean | To make this a [worker verticle](https://medium.com/@levon_t/java-vert-x-starter-guide-part-2-worker-verticles-c49866df44ab). Worker verticles run on their own event loop thread, pulled from a preconfigured pool of 20 threads. Use for heavy-duty verticles.                                                                  |
-| threadTimeout  | long    | defaults to 2. Number of minutes for an [`executeBlocking`](https://vertx.io/docs/vertx-core/java/#blocking_code) to time out. Only in effect when a `threadPoolName` is specified                                                                                                                                                |
+| threadTimeout  | long    | defaults to 2. Number of minutes for an [`executeBlocking`](https://vertx.io/docs/vertx-core/java/#blocking_code) to time out. Only in effect when a `threadPoolName` is specified.                                                                                                                                                |
 
 The following are types of verticles with additional parameters:
 

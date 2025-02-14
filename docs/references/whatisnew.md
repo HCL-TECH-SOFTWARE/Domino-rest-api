@@ -15,21 +15,27 @@ The section provides information on the latest features, improvements, and resol
     **New features**
 
     - Domino REST API Administrators can now create a support package from either the **Management console** or by using specific console commands on the Domino console. The support package is a collection of files that can help the support team to better identify, troubleshoot, and resolve encountered issues. For more information, see [Create support package](../howto/management/supportpackage.md).
+
+    - Added new options for logging in to the **Admin UI**. One new option uses Domino REST API IdP and implements the OAuth process requiring user consent to log in. The other new option is using an external IdP to log in to the Admin UI that uses authorization code flow with PKCE. 
+
+        For more information on how to log in to the **Admin UI**, see [Log in options](../references/usingwebui/index.md#log-in-options). For more information on how to configure and use an external IdP to log in to the **Admin UI**, see [Set up Admin UI external IdP login configuration](../howto/IdP/adminuiidp.md). 
+    
     - Added the console command `tell restapi support` for creating a support package and `tell restapi support -includensf` for creating a support package that includes the `KeepConfig.nsf` when executed on the Domino console.
     - Added the console command `tell restapi refresh` that refreshes Domino REST API to implement a new configuration when executed on the Domino console.
     - Added `GET webdav-v1/locks` endpoint to get a list of all currently locked documents.
     - Added `DELETE webdav-v1/lock/{lockKey}` endpoint to remove the lock specified by a `lockKey` and to terminate the session of the user who owns the lock. The requestor must be the lock owner, the manager of the locked document's database, or a member of the `LocalKeepAdmins` group to remove the lock.
     - Added the **Prevent Design Refresh** toggle in the **Admin UI** to flag the schema written to the database, so the Domino design task won't replace or delete the schema. For more information, see [Edit a schema](../references/usingwebui/schemaui.md#edit-a-schema).
-    - Added the **Required** toggle in the **Field Setting** under **Schema Management** of the **Admin UI** to mark a field as a required field.
-    - Added the **Validation Rules** section under **Schema Management** of the **Admin UI** to allow the addition of rules for validating fields using Formula Language. For more information, see [Change form configuration](../references/usingwebui/schemaui.md#change-form-configuration).
-        
 
+    - Added the **Required** toggle in the **Field Setting** under **Schema Management** of the **Admin UI** to mark a field as a required field.
+
+    - Added the **Validation Rules** section under **Schema Management** of the **Admin UI** to allow the addition of rules for validating fields using Formula Language. For more information, see [Change form configuration](../references/usingwebui/schemaui.md#change-form-configuration).
+
+    - Added support for [schema backup](../topicguides/schemabackup.md).
+        
     **Improvements**
 
     - Added an *Overview* link on the **Admin UI** landing page that opens the Domino REST API functional diagram when clicked. Clicking parts of the functional diagram directs you to corresponding documentation topics for easier navigation.
     - Enhanced user experience when editing a supported Microsoft Office file attached to a Domino document as the editing session does not expire as long as the Microsoft Office application is open. 
-
-    **Resolved issues**
 
     **Others**
 
@@ -49,7 +55,6 @@ The section provides information on the latest features, improvements, and resol
     - Docker image version for docker compose .env file from Harbor:
         - For Domino 14: *hclcr.io/domino/restapi:1.1.2-r14*
         - For Domino 12: *hclcr.io/domino/restapi:1.1.2-r12* 
-
 
 ??? info "v1.1.1 - What's new or changed"
     ## v1.1.1 - _What's new or changed_

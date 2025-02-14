@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Admin UI provides a user interface to several Domino REST APIs. It thus serves as an example of what a [React](https://reactjs.org/) application using the Domino REST APIs is capable of. It covers schema, scope, and app management. Anything that can be done using the Web UI can also be done using Postman, curl, Swagger UI, or similar tools. There are [tutorials](../../tutorial/index.md) to walk you through the same.
+The **Admin UI** provides a user interface to several Domino REST APIs. It thus serves as an example of what a [React](https://reactjs.org/) application using the Domino REST APIs is capable of. It covers schema, scope, and app management. Anything that can be done using the Web UI can also be done using Postman, curl, Swagger UI, or similar tools. There are [tutorials](../../tutorial/index.md) to walk you through the same.
 
 <!-- prettier-ignore -->
 !!! note
@@ -16,15 +16,15 @@ This is what the login page looks like.
 
 You'll need the administrator username and password to access the server.
 
-To use a Domino database in Domino REST API, it must be configured for use in the API. Download `Demo.nsf` from [Resources](../../references/downloads.md) and save it in the Notes data directory. Then login to the Domino REST API Admin UI using the administrator username and password.
+To use a Domino database in Domino REST API, it must be configured for use in the API. Download `Demo.nsf` from [Resources](../../references/downloads.md) and save it in the Notes data directory. Then login to the Domino REST API **Admin UI** using the administrator username and password.
 
 ## Log in options
 
-There are options for logging in to the Domino REST API Admin UI.
+There are options for logging in to the Domino REST API **Admin UI**.
 
 ### Log in with password
 
-This option uses the Domino REST API IdP to log in. You can log in to the Admin UI by entering your administrator username and password in the **Username** and **Password** fields, and clicking **LOG IN WITH PASSWORD**.  
+This option uses the Domino REST API IdP to log in. You can log in to the **Admin UI** by entering your administrator username and password in the **Username** and **Password** fields, and clicking **LOG IN WITH PASSWORD**.  
 
 ### Log in with passkey
 
@@ -32,23 +32,23 @@ This option enables users to log in with a passkey that enables signing in to we
 
 ### Log in with DRAPI
 
-This option uses the Domino REST API IdP and implements the OAuth process requiring user consent to log in. You can log in to the Admin UI by clicking **LOG IN WITH DRAPI**. Enter you administrator username and password in the **Username** and **Password** fields in the **HCL Domino Login** page, and then click **Login**.  
+This option uses the Domino REST API IdP and implements the OAuth process requiring user consent to log in. You can log in to the **Admin UI** by clicking **LOG IN WITH DRAPI**. Enter you administrator username and password in the **Username** and **Password** fields in the **HCL Domino Login** page, and then click **Login**.  
 
 ![HCL Domino Login](../../assets/images/AdminLogin2.png){: style="height:80%;width:80%"}
 
-### Log in with your IdP
+### Log in with your external IdP
 
-This option uses your configured IdP to log in to Domino REST API Admin UI and is only available after performing some configurations. For more information on the needed configurations, see
+This option uses your configured external IdP to log in to Domino REST API **Admin UI** and is only available after performing some configurations. For more information on the needed configurations, see [Set up Admin UI external IdP login configuration](../../howto/IdP/adminuiidp.md).
 
-Once configured, a **LOG IN WITH {configured IdP name}** button is available on the Admin UI login page. You can log in to the Admin UI by clicking **LOG IN WITH {configured IdP name}**, using your IdP authentication credentials to log in, and following succeeding login instructions.
+Once configured, a **LOG IN WITH {configured IdP name}** button is available on the **Admin UI** login page. You can log in to the **Admin UI** by clicking **LOG IN WITH {configured IdP name}**, using your IdP authentication credentials to log in, and following succeeding login instructions.
 
-The following image shows an example of the Admin UI login page when the user configured their own IdP to log in to Admin UI.
+The following image shows an example of the **Admin UI** login page when the user configured their own IdP to log in to **Admin UI**.
 
 ![HCL Domino Login](../../assets/images/AdminLogin1.png)
 
 ## Links
 
-From the Admin UI, you can access the following:
+From the **Admin UI**, you can access the following:
 
 - [Schema Management](schemaui.md)
 

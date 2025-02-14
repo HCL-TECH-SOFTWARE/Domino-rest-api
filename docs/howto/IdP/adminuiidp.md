@@ -1,4 +1,6 @@
-# Setup external IdP for Admin UI IdP
+# Set up external IdP for Admin UI IdP
+
+## About this task
 
 You can add your own IdP to use for Admin UI login. This uses a PKCE login flow.
 
@@ -8,7 +10,8 @@ You can add your own IdP to use for Admin UI login. This uses a PKCE login flow.
 
 Configure your external IdP in the configuration file. For more information, see [configuring external IdP](../IdP/index.md) for configuring an external IdP of your choice.
 
-!!!note
+!!! note
+
     When configuring your external IdP, make sure to set `{{origin}}/admin/ui/callback` as one of your redirect URIs.
 
 ### Set up Admin UI external IdP login configuration
@@ -17,7 +20,8 @@ Configure the `adminui` property in your chosen external IdP. For more informati
 
 ## Admin UI external IdP login
 
-!!!note
+!!! note
+
     Take note that setting `AdminUIOIDCLogin` configuration to `false` will result into Admin UI not displaying all IdP logins.
 
 Once configured, the Admin UI login should look like the following example image. In the example image, *Keycloak* is used as the external IdP.
@@ -26,7 +30,8 @@ Once configured, the Admin UI login should look like the following example image
 
 Clicking **Sign in with {external_idp_name}** commences the authorization code flow.
 
-!!!note
+!!! note
+
     Admin UI external IdP login uses authorization code flow with PKCE.
 
 ## Examples
