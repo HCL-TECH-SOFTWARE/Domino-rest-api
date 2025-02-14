@@ -1,6 +1,6 @@
-# Setup external IdP for Office Round Trip Experience
+# Setup external IdP for Admin UI IdP
 
-Aside from the default Domino REST API login page, you can also use your configured external IdP for Office Round Trip Experience log in.
+You can add your own IdP to use for Admin UI login. This uses a PKCE login flow.
 
 ## Configuration
 
@@ -9,24 +9,25 @@ Aside from the default Domino REST API login page, you can also use your configu
 Configure your external IdP in the configuration file. For more information, see [configuring external IdP](../IdP/index.md) for configuring an external IdP of your choice.
 
 !!!note
-    When configuring your external IdP, make sure to set `{{origin}}/api/webdav-v1/login/callback` as one of your redirect URIs.
+    When configuring your external IdP, make sure to set `{{origin}}/admin/ui/callback` as one of your redirect URIs.
 
-### Set up OFBA configuration
+### Set up Admin UI external IdP login configuration
 
-Configure the `ofba` property in your chosen external IdP. For more information, see [JWT parameters](../../references/parameters.md#jwt-parameters).
+Configure the `adminui` property in your chosen external IdP. For more information, see [JWT parameters](../../references/parameters.md#jwt-parameters).
 
-## OFBA log in
+## Admin UI external IdP login
 
-Once configured, the login UI for OFBA should look like the following example image. In the example image, *Keycloak* is used as the external IdP. 
+!!!note
+    Take note that setting `AdminUIOIDCLogin` configuration to `false` will result into Admin UI not displaying all IdP logins.
 
-![OFBA external IdP login UI](../../assets/images/OfbaExternalIdp.png)
+Once configured, the Admin UI login should look like the following example image. In the example image, *Keycloak* is used as the external IdP.
 
-
+![external IdP for Admin UI login](../../assets/images/AdminUiLoginExternalIdP.png)
 
 Clicking **Sign in with {external_idp_name}** commences the authorization code flow.
 
 !!!note
-    Office Round Trip Experience external IdP login uses authorization code flow with PKCE.
+    Admin UI external IdP login uses authorization code flow with PKCE.
 
 ## Examples
 
@@ -43,7 +44,7 @@ The following is an example configuration for Azure IdP:
       "aud": "{client_id}",
       "iss": "https://login.microsoftonline.com/{tenant_id}/v2.0",
       "algorithm": "RS256",
-      "ofba": {
+      "adminui": {
         "active": true,
         "client_id": "{client_id}",
         "application_id_uri": "api://dominorest/"
@@ -63,7 +64,7 @@ The following is an example configuration for Keycloak IdP:
     "KeycloakIdP": {
       "active": true,
       "providerUrl": "https://{keycloak_host}/realms/{realm_name}",
-      "ofba": {
+      "adminui": {
         "active": true,
         "client_id": "{client_id}"
       }
