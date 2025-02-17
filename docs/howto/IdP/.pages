@@ -1,0 +1,11 @@
+nav:
+    - index.md
+    - configuredrapiIdP.md
+    - configureoidc.md
+    - configuringAD.md
+    - configuringCertificates.md
+    - configuringIdentityProvider.md
+    - configuringKeycloak.md
+    - keepsaml.md
+    - roundtripidp.md
+    - adminuiidp.md
