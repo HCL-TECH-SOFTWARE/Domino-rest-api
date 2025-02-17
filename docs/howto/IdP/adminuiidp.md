@@ -22,7 +22,7 @@ Configure the `adminui` property in your chosen external IdP. For more informati
 
 !!! note
 
-    Take note that setting `AdminUIOIDCLogin` configuration to `false` will result into Admin UI not displaying all IdP logins.
+    The Admin UI shows the OIDC logins and the Domino REST API login, which uses the Domino REST API IdP. To prevent the Admin UI from showing all IdP logins, set the value of the `AdminUIOIDCLogin` parameter to `false`. To disable the login with password button, set the `AdminUIKeepLogin` parameter to `false`. For more information on how to modify the configuration, see [Modify configuration parameters](../production/configparam.md). 
 
 Once configured, the Admin UI login should look like the following example image. In the example image, *Keycloak* is used as the external IdP.
 

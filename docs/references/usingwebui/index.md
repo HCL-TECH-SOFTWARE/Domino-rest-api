@@ -44,7 +44,7 @@ Once configured, a **LOG IN WITH {configured IdP name}** button is available on 
 
 The following image shows an example of the **Admin UI** login page when the user configured their own IdP to log in to **Admin UI**.
 
-![HCL Domino Login](../../assets/images/AdminLogin1.png)
+![HCL Domino Login](../../assets/images/AdminUiLoginExternalIdP.png)
 
 ## Links
 

@@ -9,16 +9,17 @@ You can [check the Domino REST API settings via the **Config** tab](../managemen
 You must have access to the **Management console**.
 
 !!! note
+
      - Make sure the **Management console** is secure. For more information, see [Functional Accounts](../../references/functionalUsers.md).
      - Credentials for the **Management console** aren't managed by the configured IdP, but are derived from the [configuration of functional accounts](../../references/functionalUsers.md).
 
 ## Procedure
 
 1. Log in to the **Management console** (Port 8889).
-   
+
     ![Management console](../../assets/images/mngmntconsole.png)
 
-2. Click **Config src**. The **Configuration** page opens. 
+2. Click **Config src**. The **Configuration** page opens.
 
     The **Configuration** page includes the **Key** column that shows the configuration parameters or keys, the **Value** column that shows the value of the respective configuration parameters or keys, and the **Source** column that shows in which configuration files you can find the configuration parameters/keys and their values.
 

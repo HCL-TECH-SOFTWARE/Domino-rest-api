@@ -2,24 +2,32 @@
 
 ## About this task
 
-If your specific configuration entry or references suggest that there are variables or function in the `config.json` file, you may be able to change them.
+Guides you in enabling or disabling modules in your Domino REST API configuration.
+
+<!--If your specific configuration entry or references suggest that there are variables or function in the `config.json` file, you may be able to change them.-->
 
 ## Before you begin
 
-You must have access to the **Management console**.
+- You must have access to the **Management console**.
 
 !!! note
-     - Make sure the **Management console** is secure. For more information, see [Functional Accounts](../../references/functionalUsers.md).
-     - Credentials for the **Management console** aren't managed by the configured IdP, but are derived from the [configuration of functional accounts](../../references/functionalUsers.md).
+
+    - Make sure the **Management console** is secure. For more information, see [Functional Accounts](../../references/functionalUsers.md).
+    - Credentials for the **Management console** aren't managed by the configured IdP, but are derived from the [configuration of functional accounts](../../references/functionalUsers.md).
+
+- Check the [Configuration parameters](../../references/parameters.md) to learn more about the configurable parameters to modify the settings.
 
 ## Procedure
 
 1. Log in to the **Management console** (Port 8889).
-2. Click the `Config` button. The actual configuration settings opens. The default configuration is this: [config.json](../../references/parameters.md).
+2. Click **Config**. The actual configuration settings open.
+3. Identify and copy the configuration parameter or JSON object of the module in the configuration that you need to enable or disable.
+4. Create a JSON file using a text editor and paste the copied configuration parameter or JSON object
+to the JSON file.
 
     **Example**:
 
-    config.json
+    The following is a JSON object in the configuration related to the Design verticles that's currently not enabled.
 
     ```json
     {
@@ -31,15 +39,26 @@ You must have access to the **Management console**.
     }
     ```
 
-    This is how the `active` value to the corresponding configuration entry is turned off or disabled.
+5. Change the value of the `active` parameter to `true` or `false` based on whether you want to enable or disable the module in the configuration.
 
-3. Copy the KEEP configuration where you need to change your `config.json` values in any text/code editor app such as VSCode, Notepad, Notepad++ etc.
+    **Example**:
 
-    You may edit the file according to your reference. False and true are the indicator for disable and enable.
+    The following is a JSON object in the configuration related to the Design verticles that has been modified to be enabled by setting the value of the `active` parameter to `true`.
 
-4. Save the file in `.json` format inside the `keepconfig.d` directory.
+    ```json
+    {
+      "verticles": {
+        "Design": {
+          "active": true
+        }
+      }
+    }
+    ```
 
-    !!!note "Naming your json files"
+6. Save the JSON file in the `keepconfig.d` directory.
+
+    !!! note "Naming your JSON file"
+
         The config loader processes json files in alphabetical order, so when you have conflicting entries, the last one wins. Use a name that reveals its purpose such as `inactive-design.json`.
 
-5. Restart Domino REST API on all servers with this new configuration.
+7. Restart Domino REST API on all servers.
