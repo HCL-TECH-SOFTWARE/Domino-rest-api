@@ -60,8 +60,8 @@ The Domino REST API doesn't have an uninstaller. If you'd like to remove it from
       - `KeepConfig.ntf`
       - `KeepAgents.nsf`
       - `KeepAgents.ntf`
-      - `KeepOAuth.nsf`
       - `KeepOAuth.ntf`
+      - `oauth.nsf`
 
 6. Remove the following directories and their contents from your Domino Data directory:
 
@@ -94,8 +94,8 @@ Domino REST API has been removed from your system.
       - `KeepConfig.ntf`
       - `KeepAgents.nsf`
       - `KeepAgents.ntf`
-      - `KeepOAuth.nsf`
       - `KeepOAuth.ntf`
+      - `oauth.nsf`
 
 2. Remove the following directories and their contents from your Notes Data directory:
 
