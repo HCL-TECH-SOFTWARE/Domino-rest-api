@@ -19,11 +19,16 @@ On the login page, enter the administrator username and password, and then click
 
 ![Login Page](../assets/images/AdminLogin.png)
 
+See other [log in options](../references/usingwebui/index.md) to learn more.
+
 ## Landing
 
 A successful login would lead to this landing page:
 
 ![Landing Page](../assets/images/AdminLanding.png)
+
+!!!tip
+    Starting with the Domino REST API v1.1.2 release, you can click **Overview** on the landing page, indicated by the <span style="color:red">red arrow</span> in the image, to open the Domino REST API functional diagram. Clicking parts of the functional diagram directs you to corresponding topics in the documentation.
 
 ## List available schemas
 
@@ -116,6 +121,8 @@ This page allows you to set various configurations to your schema.
 
 3. Set the Read or Write access formula for each of the fields in the form.
 4. Click **Save**.
+
+To learn more, see [Schema Management](../references/usingwebui/schemaui.md#change-form-configuration).
 
 ## Manage database views
 

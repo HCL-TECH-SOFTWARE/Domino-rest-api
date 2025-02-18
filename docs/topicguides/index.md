@@ -10,6 +10,10 @@ This section discusses and explains topics and concepts about HCL Domino REST AP
 
 - [How HCL Domino REST API works](howkeepworks.md)
 
+- [Schema and scopes](schemascope.md)
+
+- [Form modes](formmodes.md)
+
 - [Domino REST API is different](keepdifference.md)
 
 - [HCL Domino REST API flows](keepFlows.md)
@@ -31,6 +35,10 @@ This section discusses and explains topics and concepts about HCL Domino REST AP
 - [Agent processing](agents.md)
 
 - [Use cases](usecases.md)
+
+- [Domino REST API and Proxy](keepasproxy.md)
+
+- [Auxiliary services](auxiliary/index.md)
 
 - [Reserved Form mode names](../references/usingdominorestapi/modenames.md)
 

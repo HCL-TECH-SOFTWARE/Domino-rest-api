@@ -1,0 +1,9 @@
+nav:
+    - index.md
+    - checksettings.md
+    - supportpackage.md
+    - disablemodule.md
+    - configsrc.md
+    - usersmc.md
+    - jwtmultiserver.md
+    - suspendeduser.md

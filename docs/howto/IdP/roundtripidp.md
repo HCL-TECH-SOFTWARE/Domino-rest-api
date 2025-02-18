@@ -1,4 +1,6 @@
-# Setup external IdP for Office Round Trip Experience
+# Set up external IdP for Office Round Trip Experience
+
+## About this task
 
 Aside from the default Domino REST API login page, you can also use your configured external IdP for Office Round Trip Experience log in.
 
@@ -20,8 +22,6 @@ Configure the `ofba` property in your chosen external IdP. For more information,
 Once configured, the login UI for OFBA should look like the following example image. In the example image, *Keycloak* is used as the external IdP. 
 
 ![OFBA external IdP login UI](../../assets/images/OfbaExternalIdp.png)
-
-
 
 Clicking **Sign in with {external_idp_name}** commences the authorization code flow.
 
@@ -46,8 +46,7 @@ The following is an example configuration for Azure IdP:
       "ofba": {
         "active": true,
         "client_id": "{client_id}",
-        "application_id_uri": "api://dominorest/",
-        "scope": ["$DATA"]
+        "application_id_uri": "api://dominorest/"
       }
     }
   }
@@ -66,8 +65,7 @@ The following is an example configuration for Keycloak IdP:
       "providerUrl": "https://{keycloak_host}/realms/{realm_name}",
       "ofba": {
         "active": true,
-        "client_id": "{client_id}",
-        "scope": ["$DATA"]
+        "client_id": "{client_id}"
       }
     }
   }

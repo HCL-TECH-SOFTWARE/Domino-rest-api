@@ -22,8 +22,11 @@ Once the restapi task is loaded in the Domino console, you can use the following
 |`tell restapi [show] info`|Show loaded components.|
 |`tell restapi [show] config`|Show current configuration.|
 |`tell restapi [show] status`|Show version information and state.|
+|`tell restapi refresh`|Refreshes Domino REST API with new configuration.|
 |`tell restapi refresh cache [database] [application]`|Refreshes Domino REST API's database and application cache. Leave off optional parameters for both.|
 |`tell restapi idpstatus`|Show state of configured identity providers.|
+|`tell restapi support`|Create a support package.|
+|`tell restapi support -includensf`|Create a support package, including `KeepConfig.nsf`.|
 
 The following are settings that can be set in the notes.ini
 

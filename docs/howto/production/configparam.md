@@ -1,41 +1,70 @@
 # Modify configuration parameters
 
-Domino REST API is preconfigured with settings that allow you to get started right away. However, you should familiarize yourself with all configuration parameters and security settings before you deploy into a production environment.
+## About this task
+
+Domino REST API is preconfigured with settings that allow you to get started right away. This task guides you on how to modify the settings by modifying the configuration parameters.
+
+## Before you begin
+
+- You must have access to the **Management console** to see the preconfigured settings.
+
+    !!! note
+
+         - Make sure the **Management console** is secure. For more information, see [Functional Accounts](../../references/functionalUsers.md).
+         - Credentials for the **Management console** aren't managed by the configured IdP, but are derived from the [configuration of functional accounts](../../references/functionalUsers.md).
+
+- Check the [Configuration parameters](../../references/parameters.md) to learn more about the configurable parameters to modify the settings.
 
 ## Procedure
 
-1. Log in into the Management console (Port 8889).
+1. Log in to the **Management console** (Port 8889).
 
-    Make sure that the administration location can only be accessed from a network that can be accessed by a your system administrator.
+    ![Management console](../../assets/images/mngmntconsole.png)
 
-2. Click the `Config` button. The actual configuration settings opens. The default configuration is in [config.json](../../references/parameters.md).
-3. Only copy the KEEP configuration where you need to change your `config.json` values in any text/code app such as VSCode, notepad, notepad++ etc.
+2. Click **Config** to see the preconfigured settings.
+3. Identify and copy the configuration parameter or JSON object that you need to modify to change the preconfigured settings.
+4. Create a JSON file using a text editor and paste the copied configuration parameter or JSON object
+to the JSON file.
 
-    **Example**:
-       
-    When you don't take advantage of the [Prometheus](https://prometheus.io/) formatted runtime metrics by using a metric server, such as [Grafana](https://grafana.com/), you can and should disable KEEP's metrics endpoint.
+    The following is an example of a JSON object related to Domino REST API's metrics endpoint.
 
     ```json
-      "metrics": {
+    {
+      "metrics" : {
+        "enabled" : true,
+        "jvmMetricsEnabled" : false
+       } 
+    }
+    ```
+
+5. Modify the value of the parameter and save the JSON file in the `keepconfig.d` directory.
+
+    The following example shows the JSON object after modifying the value of the `enabled` parameter to `false` to disable Domino REST API's `metrics` endpoint. In this example, the metrics endpoint is disabled when you don't want to take advantage of the [Prometheus](https://prometheus.io/) formatted runtime metrics by using a metric server, such as [Grafana](https://grafana.com/).
+
+    ```json
+    {
+      "metrics" : {
          "enabled": false,
          "jvmMetricsEnabled": false
        }
-      ```
+    }
+    ```
 
-4. Save the file in `.json` format inside the `keepconfig.d` directory.
+    !!! note "Naming your JSON files"
 
-    !!!note "Naming your json files"
         The config loader processes JSON files in alphabetical order. So when you have conflicting entries, the last one wins. Use a name that reveals its purpose such as `disable-metrics.json`.
 
-5. Restart Domino REST API on all servers with this new configuration.
+6. Restart Domino REST API on all servers.
 
-## Understanding configuration
+## Additional information
+
+### Understanding configuration
 
 The configuration follows the concept of an [Overlay File System](https://en.wikipedia.org/wiki/OverlayFS). The base configuration is retrieved from the installation directory or `jar` files.
 
 When jar files contain a resource `/config/config.json`, that configuration file is added to total configuration.
 
-Then, it's overlaid with any JSON files in the `keepconfig.d` directory within the Notes data directory and then finally, with any environment parameters.
+Then, it's overlaid with any JSON files in the `keepconfig.d` directory within the `notesdata` directory and then finally, with any environment parameters.
 
 ### Hierarchy
 
