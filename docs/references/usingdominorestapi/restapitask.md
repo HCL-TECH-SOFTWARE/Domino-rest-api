@@ -22,11 +22,12 @@ Once the restapi task is loaded in the Domino console, you can use the following
 |`tell restapi [show] info`|Show loaded components.|
 |`tell restapi [show] config`|Show current configuration.|
 |`tell restapi [show] status`|Show version information and state.|
-|`tell restapi refresh`|Refreshes Domino REST API with new configuration.|
-|`tell restapi refresh cache [database] [application]`|Refreshes Domino REST API's database and application cache. Leave off optional parameters for both.|
+|`tell restapi refresh`|Refreshes Domino REST API with new configuration.<br/><br/> Once this command is issued, new incoming requests will be blocked, returning an HTTP Error 503 response. The existing queue of requests will be processed, and once completed, the new configuration will take effect, allowing new requests to be accepted.|
 |`tell restapi idpstatus`|Show state of configured identity providers.|
 |`tell restapi support`|Create a support package.|
 |`tell restapi support -includensf`|Create a support package, including `KeepConfig.nsf`.|
+
+<!--|`tell restapi refresh cache [database] [application]`|Refreshes Domino REST API's database and application cache. Leave off optional parameters for both.|-->
 
 The following are settings that can be set in the notes.ini
 
