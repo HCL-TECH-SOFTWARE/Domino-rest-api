@@ -16,10 +16,6 @@ The section provides information on the latest features, improvements, and resol
     **New features**
 
     - Domino REST API Administrators can now create a support package from either the **Management console** or by using specific console commands on the Domino console. The support package is a collection of files that can help the support team to better identify, troubleshoot, and resolve encountered issues. For more information, see [Create support package](../howto/management/supportpackage.md).
-
-    - Added new options for logging in to the **Admin UI**. One new option uses Domino REST API IdP and implements the OAuth process requiring user consent to log in. The other new option is using an external IdP to log in to the Admin UI that uses authorization code flow with PKCE. 
-
-        For more information on how to log in to the **Admin UI**, see [Log in options](../references/usingwebui/index.md#log-in-options). For more information on how to configure and use an external IdP to log in to the **Admin UI**, see [Set up Admin UI external IdP login configuration](../howto/IdP/adminuiidp.md). 
     
     - Added the console command `tell restapi support` for creating a support package and `tell restapi support -includensf` for creating a support package that includes the `KeepConfig.nsf` when executed on the Domino console. For more information, see [Domino REST API task](usingdominorestapi/restapitask.md).
     
@@ -36,6 +32,12 @@ The section provides information on the latest features, improvements, and resol
     - Added the **Validation Rules** section under **Schema Management** of the **Admin UI** to allow the addition of rules for validating fields using Formula Language. For more information, see [Change form configuration](../references/usingwebui/schemaui.md#change-form-configuration).
 
     - Added support for [schema backup](../topicguides/schemabackup.md).
+
+    - **Preview**: New options for logging in to the Admin UI
+
+        There are new options for logging in to the **Admin UI**. One new option uses Domino REST API IdP and implements the OAuth process requiring user consent to log in. The other new option is using an external IdP to log in to the Admin UI that uses authorization code flow with PKCE. 
+
+        For more information on how to log in to the **Admin UI**, see [Log in options](../references/usingwebui/index.md#log-in-options). For more information on how to configure and use an external IdP to log in to the **Admin UI**, see [Set up Admin UI external IdP login configuration](../howto/IdP/adminuiidp.md). 
         
     **Improvements**
 

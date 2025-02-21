@@ -30,13 +30,21 @@ This option uses the Domino REST API IdP to log in. You can log in to the **Admi
 
 This option enables users to log in with a passkey that enables signing in to websites without remembering and managing passwords using a biometric sensor, PIN, or pattern. For more information on how to log in with passkey, see [Use passkey to log in to Admin UI](../../howto/install/passkey.md).
 
-### Log in with DRAPI
+### [Preview feature] Log in with DRAPI
+
+!!! note
+
+    If you run into any issues with this preview feature option, clear your browser's local storage (not the cache) for the Admin UI URL. Alternatively, you can open the Admin UI in an incognito window and log in using the [Log in with password](#log-in-with-password) option.
 
 This option uses the Domino REST API IdP and implements the OAuth process requiring user consent to log in. You can log in to the **Admin UI** by clicking **LOG IN WITH DRAPI**. Enter you administrator username and password in the **Username** and **Password** fields in the **HCL Domino Login** page, and then click **Login**.  
 
 ![HCL Domino Login](../../assets/images/AdminLogin2.png){: style="height:80%;width:80%"}
 
-### Log in with your external IdP
+### [Preview feature] Log in with your external IdP
+
+!!! note "For preview feature options"
+
+    If you run into any issues with this preview feature option, clear your browser's local storage (not the cache) for the Admin UI URL. Alternatively, you can open the Admin UI in an incognito window and log in using the [Log in with password](#log-in-with-password) option.
 
 This option uses your configured external IdP to log in to Domino REST API **Admin UI** and is only available after performing some configurations. For more information on the needed configurations, see [Set up Admin UI external IdP login configuration](../../howto/IdP/adminuiidp.md).
 
