@@ -7,7 +7,8 @@ The section provides information on the latest features, improvements, and resol
     - Items marked in <span style="color:red">**red**</span> are API changes that may impact your applications and should be reviewed before upgrading.
     - Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](deprecated.md).
 
-???+ info "v1.1.2 -  What's new or changed"
+???+ info "v1.1.2 - What's new or changed"
+
     ## v1.1.2 - _What's new or changed_
 
     *Release date: February 24, 2025*
@@ -20,10 +21,14 @@ The section provides information on the latest features, improvements, and resol
 
         For more information on how to log in to the **Admin UI**, see [Log in options](../references/usingwebui/index.md#log-in-options). For more information on how to configure and use an external IdP to log in to the **Admin UI**, see [Set up Admin UI external IdP login configuration](../howto/IdP/adminuiidp.md). 
     
-    - Added the console command `tell restapi support` for creating a support package and `tell restapi support -includensf` for creating a support package that includes the `KeepConfig.nsf` when executed on the Domino console.
-    - Added the console command `tell restapi refresh` that refreshes Domino REST API to implement a new configuration when executed on the Domino console.
-    - Added `GET webdav-v1/locks` endpoint to get a list of all currently locked documents.
-    - Added `DELETE webdav-v1/lock/{lockKey}` endpoint to remove the lock specified by a `lockKey` and to terminate the session of the user who owns the lock. The requestor must be the lock owner, the manager of the locked document's database, or a member of the `LocalKeepAdmins` group to remove the lock.
+    - Added the console command `tell restapi support` for creating a support package and `tell restapi support -includensf` for creating a support package that includes the `KeepConfig.nsf` when executed on the Domino console. For more information, see [Domino REST API task](usingdominorestapi/restapitask.md).
+    
+    - Added the console command `tell restapi refresh` to update the Domino REST API configuration without restarting the Domino REST API task. For more information, see [Domino REST API task](usingdominorestapi/restapitask.md).
+    
+    - Added `GET webdav-v1/locks` endpoint to get a list of all currently locked [OFBA](../howto/IdP/roundtripidp.md) documents.
+
+    - Added `DELETE webdav-v1/lock/{lockKey}` endpoint to remove the [OFBA](../howto/IdP/roundtripidp.md) lock specified by a `lockKey` and to terminate the session of the user who owns the lock. The requestor must be the lock owner, the manager of the locked document's database, or a member of the `LocalKeepAdmins` group to remove the lock.
+
     - Added the **Prevent Design Refresh** toggle in the **Admin UI** to flag the schema written to the database, so the Domino design task won't replace or delete the schema. For more information, see [Edit a schema](../references/usingwebui/schemaui.md#edit-a-schema).
 
     - Added the **Required** toggle in the **Field Setting** under **Schema Management** of the **Admin UI** to mark a field as a required field.
@@ -109,8 +114,8 @@ The section provides information on the latest features, improvements, and resol
     - Added **Bruno** as one of the tools you can use when dealing with REST APIs. For more information, see [Bruno](./usertools/bruno.md).
     
     - Installer jar files:
-	    - For Domino 14: *restapiInstall-r14.jar*
-	    - For Domino 12: *restapiInstall-r12.jar*
+        - For Domino 14: *restapiInstall-r14.jar*
+        - For Domino 12: *restapiInstall-r12.jar*
 
     - Docker image version for docker compose .env file (CONTAINER_IMAGE):
         - For Domino 14: *domino-rest-api:1.1.1-r14*
