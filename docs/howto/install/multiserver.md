@@ -12,7 +12,7 @@ Sharing configuration works not only for tightly coupled systems, but also for s
 
 You need to know the following to plan properly:
 
-- How are the participating servers replicating? You need to balance timelyness (to avoid replication conflicts) with resource consumption. Revisit [these considerations](https://www.wissel.net/blog/2009/06/picking-your-routing-and-replication-architecture.html).
+- How are the participating servers replicating? You need to balance timeliness (to avoid replication conflicts) with resource consumption. Revisit [these considerations](https://www.wissel.net/blog/2009/06/picking-your-routing-and-replication-architecture.html).
 - What will be the source of identity: DRAPI's login/Identity Provider or some external one like [Keycloak](https://www.keycloak.org/), [Microsoft Entra](https://www.microsoft.com/en-us/security/business/microsoft-entra) (formerly known as "Azure Active Directory"), [Okta](https://www.okta.com/) or some other [OIDC](https://openid.net/developers/how-connect-works/) compliant identity service?
 - Do you have or plan DRAPI extensions?
 - What [SPA](https://developer.mozilla.org/en-US/docs/Glossary/SPA) are you planning to deploy to `keepweb.d`?
@@ -20,9 +20,9 @@ You need to know the following to plan properly:
 ## Installation
 
 - Follow the [steps outlined here](../../tutorial/installconfig/index.md) to install DRAPI on your main server. We shall refer to it as hub henceforth.
-- Start DRAPI on the hub using the Domino console command `load restapi`. This will create the database `KeepConfig.nsf`. When you upgrade DRAPI, you need to refresh the design of `KeepConfig.nsf` from `KeepConfig.ntf`
+- Start DRAPI on the hub using the Domino console command `load restapi`. This will create the database `KeepConfig.nsf`. When you upgrade DRAPI, you need to refresh the design of `KeepConfig.nsf` from `KeepConfig.ntf`.
 - Use the Domino admin to create replicas of `KeepConfig.nsf` on all participating servers. You must retain the name and location.
-- If one of the participating servers already has a `KeepConfig.nsf` with a divergent replicaId, you must remove it. If it has no configuration entries, just delete it. When there are or you are not sure, rename it and deal with it later on.
+- If one of the participating servers already has a `KeepConfig.nsf` with a divergent replicaId, you must remove it. If it has no configuration entries, just delete it. When there are, or you aren't sure, rename it and deal with it later on.
 - Create and/or verify scheduled (or cluster) replication between the participating servers (henceforth referred to as spokes) and the hub.
 - Now install DRAPI on the spokes.
 
@@ -46,7 +46,7 @@ The **strongly** recommended way is to use the [Domino Certificate Manager](../p
 }
 ```
 
-Copy the file to all participating servers. This will cause each server to attempt to find a certificate matching its fully-qualified domain name as configured in its server document.
+Copy the file to all participating servers. This will cause each server to attempt to find a certificate matching its fully qualified domain name as configured in its server document.
 
 You have [other options](../production/httpsprod.md), but they require more work.
 
@@ -57,7 +57,7 @@ You have [other options](../production/httpsprod.md), but they require more work
 
 ### Shared JWT Keys to login to DRAPI
 
-When using DRAPI as your JWT provider (as opposed to an external identity provider like Keycloak), it can be useful to share the JWT issuing certificates across servers. The best way to do that is to store them in the Domino Certificate Manager. To do that, create a file `keepconfig.d\DominoCertMgr.json` with the following content:
+When using DRAPI as your JWT provider, as opposed to an external identity provider like Keycloak, it can be useful to share the JWT issuing certificates across servers. The best way to do that is to store them in the Domino Certificate Manager. To do that, create a file `keepconfig.d\DominoCertMgr.json` with the following content:
 
 ```json
 {
@@ -69,11 +69,11 @@ If you already have a certificate chain in certstore.nsf, set the `KeepCertStore
 
 Alternatively, to generate the certificate chain using DRAPI, use the Management Console to [generate the Keys for JWT](../../references/security/encryption.md#using-the-management-console-for-encryption-operations). As of 2025, you should prefer [EC](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography) certificates. This will create certificates in the certificate store using the common name of the Domino server and configure the local server to use it.
 
-To enable access to this certificate for other servers, open the [certificate store database](https://help.hcl-software.com/domino/14.0.0/admin/secu_le_using_certificate_manager.html) and find the newly-created certificate document. In that document, modify the "Servers with access" field to include the other Domino servers that will access it, and click "Submit Request". This will cause the Certificate Manager to encrypt the certificate in a way compatible with each named server.
+To enable access to this certificate for other servers, open the [certificate store database](https://help.hcl-software.com/domino/14.0.0/admin/secu_le_using_certificate_manager.html) and find the newly created certificate document. In that document, modify the **Servers with access**** field to include the other Domino servers that will access it, and click **Submit Request**. This causes the Certificate Manager to encrypt the certificate in a way compatible with each named server.
 
-Then, set the `KeepCertStoreNameJWT` notes.ini parameter on each server to the common name of the first server (e.g. `MyServer`).
+Then, set the `KeepCertStoreNameJWT` notes.ini parameter on each server to the common name of the first server, for example `MyServer`.
 
-ALternately, to share certificates without the certificate store, follow [the example](../../references/security/encryption.md#example-of-how-to-create-and-set-up-domino-rest-api-on-multiple-domino-servers-to-use-the-same-jwt-keys) and copy the 4 files across servers.
+Alternately, to share certificates without the certificate store, follow [the example](../../references/security/encryption.md#example-of-how-to-create-and-set-up-domino-rest-api-on-multiple-domino-servers-to-use-the-same-jwt-keys) and copy the 4 files across servers.
 
 ## Limit admin access
 
