@@ -1,0 +1,84 @@
+#!/bin/bash
+# Poor man's keep command line
+#Global variables
+httpcommand=$(echo "$1" | tr '[:lower:]' '[:upper:]')
+keep=https://your.keep.enabled.server.local
+user="Doctor Notes"
+apipath=api/v1
+
+# Login function
+execute_login() {
+   # Login to KEEP remote
+   read -p "server [$keep]:" server
+   read -p "Username [$user]: " uservar
+   read -sp "Password: " passvar
+   server=${server:-$keep}
+   uservar=${uservar:-$user}
+   echo 
+   echo accessing $server as $uservar
+   echo
+   dataraw="{\"username\" : \"${uservar}\", \"password\" : \"${passvar}\"}"
+   token=$(curl --location --request POST "${server}/api/v1/auth" \
+   --header 'Content-Type: application/json' \
+   --data-raw "${dataraw}" |  jq -r  '.bearer')
+   echo $token
+   echo token=$token > $TMPDIR/keep.login
+   echo server=$server >> $TMPDIR/keep.login
+   exit 0
+}
+
+# Logout, just remove the token
+execute_logout() {
+    echo User logged out > $TMPDIR/keep.login
+    rm -f $TMPDIR/keep.login
+    echo User logged out
+    exit 0
+}
+
+# Make a call to keeep
+execute_http() {
+if [ ! -f $TMPDIR/keep.login ]; then
+	echo "You need to login first with keep login"
+	exit 1
+fi
+export $(cat $TMPDIR/keep.login | xargs)
+ httpcommand=$(echo "$1" | tr '[:lower:]' '[:upper:]')
+ shift
+ curl -X ${httpcommand} --fail --insecure -H "Authorization: Bearer ${token}" -H "Content-Type: application/json" ${server}/${apipath}/$@
+ if [ $? -ne 0 ]; then
+   echo "Command $httpcommand failed!"
+   exit 1
+ fi    
+}
+
+if [ -z "$1" ]; then
+  echo "Usage keep [login|logout|get|post|put|patch|delete] URL PAYLOAD"
+  echo "      keep pim [get|post|put|patch|delete] URL PAYLOAD"
+  echo " e.g. keep login"
+  echo "      keep get /databases"
+  echo "      keep pim get /inbox"
+  exit 1
+fi
+
+if [[ "$httpcommand" == "LOGIN" ]]; then
+  execute_login;
+fi
+
+if [[ "$httpcommand" == "LOGOUT" ]]; then
+  execute_logout;
+fi
+
+if [[ "$httpcommand" == "LOGOUT" ]]; then
+  execute_logout;
+fi
+
+if [[ "$httpcommand" == "PIM" ]]; then
+  apipath=api/pim-v1
+  shift
+  execute_http $@
+  exit 0
+fi
+
+# All other cases
+apipath=api/v1
+execute_http $@

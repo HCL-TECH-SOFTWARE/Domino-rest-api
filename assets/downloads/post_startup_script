@@ -1,0 +1,24 @@
+#!/bin/sh
+# Starts the vert.x tasks that talks to Domino if in script mode
+
+if [ "$KEEP_LAUNCH_TYPE" != "script" ]; then
+  echo KEEP starting in task mode, no post_startup action required
+  exit 0
+fi
+
+export GodMode=false
+export DEBUG=true
+export DOMINO_HOME=/opt/hcl/domino/notes/latest/linux
+export JAVA_HOME=/opt/hcl/domino/notes/latest/linux/jvm
+export NOTESDATA=/local/notesdata
+export DYLD_LIBRARY_PATH=$DOMINO_HOME
+export LD_LIBRARY_PATH=$DOMINO_HOME
+export V_PATH=/opt/hcl/keep/resources:/opt/hcl/keep/classes:/opt/hcl/keep/libs/*
+export CLASSPATH=.:$V_PATH:$CLASSPATH
+export NOTES_ENV=SERVER
+export LOG_DIR=$NOTESDATA/logs
+[ -d $LOG_DIR ] || mkdir -p $LOG_DIR
+# This is important - must be writable -otherwise the docker blows 
+cd $NOTESDATA
+$JAVA_HOME/bin/java -XX:+HeapDumpOnOutOfMemoryError -XX:+UseG1GC -XX:+UseStringDeduplicationJVM -cp $CLASSPATH com.hcl.domino.keep.Launch &
+echo "Regular Keep start on its way"

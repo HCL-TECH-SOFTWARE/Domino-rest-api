@@ -1,0 +1,37 @@
+@startjson
+{
+  "DEBUG": true,
+  "identity": {
+    "healthcheckAPI": {
+      "health": {
+        "active": true,
+        "secret": "..."
+      }
+    },
+    "managementAPI": {
+      "Doctor Notes": {
+        "active": true,
+        "secret": "..."
+      },
+      "Frank Admin": {
+        "active": true,
+        "secret": "..."
+      },
+      "Gina Supervisor": {
+        "active": true,
+        "secret": "..."
+      }
+    },
+    "metricsAPI": {
+      "metrics": {
+        "active": true,
+        "secret": "..."
+      }
+    }
+  },
+  "metrics": {
+    "enabled": true,
+    "jvmMetricsEnabled": true
+  }
+}
+@endjson
