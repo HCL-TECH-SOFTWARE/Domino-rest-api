@@ -3,6 +3,7 @@ title: References
 nav:
   - index.md
   - What's new: whatisnew.md
+  - Release notes: releasenotes
   - System requirements: https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789
   - Installation and configuration: tutorial/installconfig/index.html
   - understandingconfig.md
