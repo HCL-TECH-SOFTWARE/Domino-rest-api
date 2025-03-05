@@ -11,14 +11,15 @@ The procedure guides you on how to update your installed Domino REST API to the 
 
     - [Download the docker image of the latest release version of Domino REST API](../../tutorial/installconfig/index.md#download-domino-rest-api).
 
-    - You can also take note of the latest Docker image version for docker compose `.env` file from Harbor in [What’s New](../../references/whatisnew.md).
+    - You can also take note of the latest Docker image version for docker compose `.env` file from Harbor in [What’s New](../../references/whatsnew/index.md).
 
 ## Procedure
 
-Follow the procedure based on the installation option you used when installing the existing version of your Domino REST API. 
+Follow the procedure based on the installation option you used when installing the existing version of your Domino REST API.
  
-!!!note
-    For more information on the parameters used for updating Domino REST API in Linux, Mac, and Windows, see [Explanation of parameters](../../tutorial/installconfig/index.md#explanation-of-parameters). 
+!!! note
+
+    For more information on the parameters used for updating Domino REST API in Linux, Mac, and Windows, see [Explanation of parameters](../../tutorial/installconfig/index.md#explanation-of-parameters).
 
 ### Docker
 
@@ -31,18 +32,18 @@ Follow the procedure based on the installation option you used when installing t
 
     !!!note
         - Make sure you [extract the tar.gz file](https://linuxize.com/post/how-to-extract-unzip-tar-gz-file/) first.
-        
+
         - This step isn't applicable if using the docker image from Harbor. 
 
 3.	Take note of the image name.
 
-    - When using the docker image from *HCL Software License and Download Portal* or *My HCLSoftware Portal*, take note of the image name that was output after being loaded. The image name is also indicated in the [What’s New](../../references/whatisnew.md) for each version of the Domino REST API and marked *Docker image version for docker compose .env file (CONTAINER_IMAGE)*.
-  	
+    - When using the docker image from *HCL Software License and Download Portal* or *My HCLSoftware Portal*, take note of the image name that was output after being loaded. The image name is also indicated in the [What’s New](../../references/whatsnew/index.md) for each version of the Domino REST API and marked *Docker image version for docker compose .env file (CONTAINER_IMAGE)*.
+
         !!!example "Example loaded image name" 
             - From earlier releases: `docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.10.0`
             - Starting v1.0.7 release: `domino-rest-api:1.0.7`
-    
-    - When using the docker image from *HCL Container Repository (Harbor)*, take note of the latest *Docker image version for docker compose .env file from Harbor* indicated in [What’s New](../../references/whatisnew.md).
+
+    - When using the docker image from *HCL Container Repository (Harbor)*, take note of the latest *Docker image version for docker compose .env file from Harbor* indicated in [What’s New](../../references/whatsnew/index.md).
 
         !!!example "Example image version name"
             hclcr.io/domino/restapi:1.0.6 

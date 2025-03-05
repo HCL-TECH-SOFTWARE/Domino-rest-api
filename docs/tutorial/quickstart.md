@@ -22,7 +22,7 @@ Log in to [HCL Software License & Download Portal](https://hclsoftware.flexnetop
 
 ## What's New
 
-Check [What's New](../references/whatisnew.md) to learn what's new in Domino REST API.
+Check [What's New](../references/whatsnew/index.md) to learn what's new in Domino REST API.
 
 ## The Domino REST API schema
 

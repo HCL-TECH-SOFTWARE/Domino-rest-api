@@ -1,3 +1,9 @@
+# What's new
+
+The section provides information on the latest features, improvements, fixes, and changes, including breaking changes, related to Domino REST API.
+
+##
+
 # Release Notes
 
 !!! error "Read them carefully!"
