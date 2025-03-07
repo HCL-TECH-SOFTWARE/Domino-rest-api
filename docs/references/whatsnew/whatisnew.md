@@ -1,13 +1,12 @@
-# What's new
-
-The section provides information on the latest features, improvements, and resolved issues related to Domino REST API.
+# What's new for v1.1.2 or earlier
 
 <!-- prettier-ignore -->
 !!! note "Important"
-    - Items marked in <span style="color:red">**red**</span> are API changes that may impact your applications and should be reviewed before upgrading.
-    - Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](deprecated.md).
 
-???+ info "v1.1.2 - What's new or changed"
+    - Items marked in <span style="color:red">**red**</span> are API changes that may impact your applications and should be reviewed before upgrading.
+    - Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](../deprecated.md).
+
+??? info "v1.1.2 - What's new or changed"
 
     ## v1.1.2 - _What's new or changed_
 
@@ -15,29 +14,29 @@ The section provides information on the latest features, improvements, and resol
 
     **New features**
 
-    - Domino REST API Administrators can now create a support package from either the **Management console** or by using specific console commands on the Domino console. The support package is a collection of files that can help the support team to better identify, troubleshoot, and resolve encountered issues. For more information, see [Create support package](../howto/management/supportpackage.md).
+    - Domino REST API Administrators can now create a support package from either the **Management console** or by using specific console commands on the Domino console. The support package is a collection of files that can help the support team to better identify, troubleshoot, and resolve encountered issues. For more information, see [Create support package](../../howto/management/supportpackage.md).
     
-    - Added the console command `tell restapi support` for creating a support package and `tell restapi support -includensf` for creating a support package that includes the `KeepConfig.nsf` when executed on the Domino console. For more information, see [Domino REST API task](usingdominorestapi/restapitask.md).
+    - Added the console command `tell restapi support` for creating a support package and `tell restapi support -includensf` for creating a support package that includes the `KeepConfig.nsf` when executed on the Domino console. For more information, see [Domino REST API task](../usingdominorestapi/restapitask.md).
     
-    - Added the console command `tell restapi refresh` to update the Domino REST API configuration without restarting the Domino REST API task. For more information, see [Domino REST API task](usingdominorestapi/restapitask.md).
+    - Added the console command `tell restapi refresh` to update the Domino REST API configuration without restarting the Domino REST API task. For more information, see [Domino REST API task](../usingdominorestapi/restapitask.md).
     
-    - Added `GET webdav-v1/locks` endpoint to get a list of all currently locked [OFBA](../howto/IdP/roundtripidp.md) documents.
+    - Added `GET webdav-v1/locks` endpoint to get a list of all currently locked [OFBA](../../howto/IdP/roundtripidp.md) documents.
 
-    - Added `DELETE webdav-v1/lock/{lockKey}` endpoint to remove the [OFBA](../howto/IdP/roundtripidp.md) lock specified by a `lockKey` and to terminate the session of the user who owns the lock. The requestor must be the lock owner, the manager of the locked document's database, or a member of the `LocalKeepAdmins` group to remove the lock.
+    - Added `DELETE webdav-v1/lock/{lockKey}` endpoint to remove the [OFBA](../../howto/IdP/roundtripidp.md) lock specified by a `lockKey` and to terminate the session of the user who owns the lock. The requestor must be the lock owner, the manager of the locked document's database, or a member of the `LocalKeepAdmins` group to remove the lock.
 
-    - Added the **Prevent Design Refresh** toggle in the **Admin UI** to flag the schema written to the database, so the Domino design task won't replace or delete the schema. For more information, see [Edit a schema](../references/usingwebui/schemaui.md#edit-a-schema).
+    - Added the **Prevent Design Refresh** toggle in the **Admin UI** to flag the schema written to the database, so the Domino design task won't replace or delete the schema. For more information, see [Edit a schema](../usingwebui/schemaui.md#edit-a-schema).
 
     - Added the **Required** toggle in the **Field Setting** under **Schema Management** of the **Admin UI** to mark a field as a required field.
 
-    - Added the **Validation Rules** section under **Schema Management** of the **Admin UI** to allow the addition of rules for validating fields using Formula Language. For more information, see [Change form configuration](../references/usingwebui/schemaui.md#change-form-configuration).
+    - Added the **Validation Rules** section under **Schema Management** of the **Admin UI** to allow the addition of rules for validating fields using Formula Language. For more information, see [Change form configuration](../usingwebui/schemaui.md#change-form-configuration).
 
-    - Added support for [schema backup](../topicguides/schemabackup.md).
+    - Added support for [schema backup](../../topicguides/schemabackup.md).
 
     - **Preview**: New options for logging in to the Admin UI
 
         There are new options for logging in to the **Admin UI**. One new option uses Domino REST API IdP and implements the OAuth process requiring user consent to log in. The other new option is using an external IdP to log in to the Admin UI that uses authorization code flow with PKCE. 
 
-        For more information on how to log in to the **Admin UI**, see [Log in options](../references/usingwebui/index.md#log-in-options). For more information on how to configure and use an external IdP to log in to the **Admin UI**, see [Set up Admin UI external IdP login configuration](../howto/IdP/adminuiidp.md). 
+        For more information on how to log in to the **Admin UI**, see [Log in options](../usingwebui/index.md#log-in-options). For more information on how to configure and use an external IdP to log in to the **Admin UI**, see [Set up Admin UI external IdP login configuration](../../howto/IdP/adminuiidp.md). 
         
     **Improvements**
 
@@ -49,7 +48,7 @@ The section provides information on the latest features, improvements, and resol
     - Moved the `GET webdav-v1/login/idpList` endpoint from WebDAV OpenAPI to Basis OpenAPI and renamed it to `GET v1/auth/idpList` endpoint. Added the **configFor** query parameter as a required parameter of the endpoint to specify what external IdP to retrieve. 
     - Specifying a kyr file name in the `KeepCertStoreName` is set to be deprecated and is no longer encouraged. A warning will be issued if a kyr file name is specified.
     - Using `KeepCertStoreName=*` to specify multiple explicit DNS names in the `KeepCertStoreName` is set to be deprecated and is no longer encouraged. While it is still functional, a warning will appear when used.
-    - Added procedure for testing access formulas in Mode Settings under **Schema Management** of the **Admin UI**. For more information, see [Test formulas](../howto/production/testformulas.md).
+    - Added procedure for testing access formulas in Mode Settings under **Schema Management** of the **Admin UI**. For more information, see [Test formulas](../../howto/production/testformulas.md).
 
     - Installer jar files:
         - For Domino 14: *restapiInstall-r14.jar*
@@ -70,29 +69,29 @@ The section provides information on the latest features, improvements, and resol
 
     **New features**
 
-    - When using the DRAPI IdP users can be locked out if they enter incorrect credentials several times.  You can now view and reinstate these users without waiting for the lockout period to end via the **Management console**. For more information, see [Release suspended users](../howto/management/suspendeduser.md).
+    - When using the DRAPI IdP users can be locked out if they enter incorrect credentials several times.  You can now view and reinstate these users without waiting for the lockout period to end via the **Management console**. For more information, see [Release suspended users](../../howto/management/suspendeduser.md).
 
-    - Users with valid JWT tokens can now be identified via the **Users** tab on the **Management console**. For more information, see [Identify known users with valid JWT token](../howto/management/usersmc.md). 
+    - Users with valid JWT tokens can now be identified via the **Users** tab on the **Management console**. For more information, see [Identify known users with valid JWT token](../../howto/management/usersmc.md). 
 
-    - The Domino REST API configuration settings and where they are located can be identified via the **Config src** tab on the **Management console**. For more information, see [Find configuration sources](../howto/management/configsrc.md).
+    - The Domino REST API configuration settings and where they are located can be identified via the **Config src** tab on the **Management console**. For more information, see [Find configuration sources](../../howto/management/configsrc.md).
 
-    - Domino REST API administrators can now customize which API schemas and endpoints are available to meet specific requirements and use cases. For more information, see [Customize available API schemas and endpoints](../howto/production/customAPI.md).
+    - Domino REST API administrators can now customize which API schemas and endpoints are available to meet specific requirements and use cases. For more information, see [Customize available API schemas and endpoints](../../howto/production/customAPI.md).
 
-    - Implemented the Monaco Editor to the **Text View** mode on the **Source** tab on the **Schema Management** page of the **Admin UI**. With this implementation, users can now also edit the database schema from the **Text View** mode. For more information, see [Edit database schema JSON](../howto/database/editsourcejson.md).
+    - Implemented the Monaco Editor to the **Text View** mode on the **Source** tab on the **Schema Management** page of the **Admin UI**. With this implementation, users can now also edit the database schema from the **Text View** mode. For more information, see [Edit database schema JSON](../../howto/database/editsourcejson.md).
 
     - Added a new OpenAPI landing page that shows all the general API schemas and application-specific schemas, enabling users to easily find the schemas they require.
 
-    - Added OpenAPI schema and Swagger page for the [WebDAV API](openapidefinitions.md#webdav) that provides endpoints to perform remote Web content authoring operations that support the Office Round Trip Experience and Virtual Spreadsheet features of Domino REST API.
+    - Added OpenAPI schema and Swagger page for the [WebDAV API](../openapidefinitions.md#webdav) that provides endpoints to perform remote Web content authoring operations that support the Office Round Trip Experience and Virtual Spreadsheet features of Domino REST API.
 
     - Added the console command `tell restapi idpstatus` that shows the state of the configured identity providers when executed on the Domino console.   
 
     **Improvements**
 
-    - When adding a JSON object to the database schema on the **Source** tab on the **Schema Management** page in the **Admin UI**, the value of the JSON object is now validated to ensure the correct format based on the selected JSON object type. For more information, see [Edit database schema JSON](../howto/database/editsourcejson.md).
+    - When adding a JSON object to the database schema on the **Source** tab on the **Schema Management** page in the **Admin UI**, the value of the JSON object is now validated to ensure the correct format based on the selected JSON object type. For more information, see [Edit database schema JSON](../../howto/database/editsourcejson.md).
 
-    - When adding fields to a form on the **Schema Management** page in the **Admin UI**, users can now identify the property of the field by hovering over the **info** icon beside the field name. For more information, see [Change form configuration](./usingwebui/schemaui.md#change-form-configuration).
+    - When adding fields to a form on the **Schema Management** page in the **Admin UI**, users can now identify the property of the field by hovering over the **info** icon beside the field name. For more information, see [Change form configuration](../usingwebui/schemaui.md#change-form-configuration).
 
-    - The **Clear passkey** option has been removed from the **Admin UI** login page to avoid user confusion. This option only clears local storage data, not the actual passkey. To enhance the user experience, both the **LOG IN WITH PASSWORD** and **LOG IN WITH PASSKEY** options are available on the **Admin UI** login page. For more information, see [Use WebAuthn (Passkey) to log in to Admin UI](../howto/install/passkey.md).
+    - The **Clear passkey** option has been removed from the **Admin UI** login page to avoid user confusion. This option only clears local storage data, not the actual passkey. To enhance the user experience, both the **LOG IN WITH PASSWORD** and **LOG IN WITH PASSKEY** options are available on the **Admin UI** login page. For more information, see [Use WebAuthn (Passkey) to log in to Admin UI](../../howto/install/passkey.md).
 
     - Added the column attributes `twisties` and `responsesonly` to the `GET v1/lists` endpoint response when the *columns* parameter is set to true.
 
@@ -111,9 +110,9 @@ The section provides information on the latest features, improvements, and resol
 
     **Others**
 
-    - Added [tip for ensuring successful round-trip editing on Windows](../howto/production/roundtrip.md#to-access-and-edit-the-ms-office-file-attachment).
+    - Added [tip for ensuring successful round-trip editing on Windows](../../howto/production/roundtrip.md#to-access-and-edit-the-ms-office-file-attachment).
     
-    - Added **Bruno** as one of the tools you can use when dealing with REST APIs. For more information, see [Bruno](./usertools/bruno.md).
+    - Added **Bruno** as one of the tools you can use when dealing with REST APIs. For more information, see [Bruno](../usertools/bruno.md).
     
     - Installer jar files:
         - For Domino 14: *restapiInstall-r14.jar*
@@ -136,13 +135,13 @@ The section provides information on the latest features, improvements, and resol
 
     - Domino REST API can now encrypt document fields and sign a document with keys stored in your Notes ID file. This protects data from unauthorized access and further enhances data security and integrity. 
     
-        To learn more about encrypting, descrypting, and signing, see [Using encryption, decryption, and signing during development](../references/usingdominorestapi/encryptsign.md).
+        To learn more about encrypting, descrypting, and signing, see [Using encryption, decryption, and signing during development](../usingdominorestapi/encryptsign.md).
 
-        To set up Domino REST API and enable this feature, see [Set up Domino REST API for encryption, decryption, and signing](../howto/production/signencrypt.md).
+        To set up Domino REST API and enable this feature, see [Set up Domino REST API for encryption, decryption, and signing](../../howto/production/signencrypt.md).
     
-    - Domino REST API can now enable HTTPS setup in Domino using Domino's certificate configuration. To learn more, see [Enable HTTPS using the Domino Certificate Manager](../howto/production/dominohttps.md). 
+    - Domino REST API can now enable HTTPS setup in Domino using Domino's certificate configuration. To learn more, see [Enable HTTPS using the Domino Certificate Manager](../../howto/production/dominohttps.md). 
 
-    - Added support for using external IdP for Office Round Trip Experience. For more information, see [Setup external IdP for Office Round Trip Experience](../howto/IdP/roundtripidp.md).
+    - Added support for using external IdP for Office Round Trip Experience. For more information, see [Setup external IdP for Office Round Trip Experience](../../howto/IdP/roundtripidp.md).
 
     - Added `DELETE v1/nameddocument` endpoint to delete a named document.
     - Added `GET v1/nameddocument` endpoint to retrieve a named document using the appropriate name.
@@ -170,11 +169,11 @@ The section provides information on the latest features, improvements, and resol
         - The Domino REST API Statistics can now be accessed via the Domino Console `SHOW STAT` command. To see just the Domino REST API statistics, use the `SHOW STAT restapi` command.
         - The `KeepManagementURL` line in the `notes.ini` is no longer necessary. If set, it will be ignored.
 
-    - Added an option of selecting additional modes when executing [Quick Config](../references/usingwebui/quickconfigui.md).
+    - Added an option of selecting additional modes when executing [Quick Config](../usingwebui/quickconfigui.md).
     
     - Implemented UI enhancements to the **Source** tab under **Schema Management** in the **Admin UI**. 
 
-    - Added an option for exporting database schema as JSON file by copying the schema and then creating a JSON file containing the copied schema. For more information, see [Export database schema as JSON file](../howto/database/exportsourcejson.md#to-create-a-json-file). 
+    - Added an option for exporting database schema as JSON file by copying the schema and then creating a JSON file containing the copied schema. For more information, see [Export database schema as JSON file](../../howto/database/exportsourcejson.md#to-create-a-json-file). 
 
     **Resolved issues**
 
@@ -184,7 +183,7 @@ The section provides information on the latest features, improvements, and resol
 
     **Others**
 
-    - Updated [Edit database schema JSON](../howto/database/editsourcejson.md) and [Export schema as JSON file](../howto/database/exportsourcejson.md) based on the UI enhahcements to the **Source** tab under **Schema Management**.
+    - Updated [Edit database schema JSON](../../howto/database/editsourcejson.md) and [Export schema as JSON file](../../howto/database/exportsourcejson.md) based on the UI enhahcements to the **Source** tab under **Schema Management**.
 
     - The following endpoints have been replaced with the `GET v1/richtext/{richTextAs}/{unid}` endpoint:
 
@@ -193,8 +192,8 @@ The section provides information on the latest features, improvements, and resol
         - `GET v1/richtext/plain/{unid}`
     
     - Installer jar files:
-	    - For Domino 14: *restapiInstall-r14.jar*
-	    - For Domino 12: *restapiInstall-r12.jar*
+        - For Domino 14: *restapiInstall-r14.jar*
+        - For Domino 12: *restapiInstall-r12.jar*
 
     - Docker image version for docker compose .env file (CONTAINER_IMAGE):
         - For Domino 14: *domino-rest-api:1.1.0-r14*
@@ -214,11 +213,11 @@ The section provides information on the latest features, improvements, and resol
 
     - Preview: **Virtual Spreadsheet**  
 
-        The **Virtual Spreadsheet** feature allows you to open up and edit view entries using Microsoft Excel [^1]. This feature uses the round trip editing feature of Domino REST API for Microsoft Office applications. For more information, see [Set up Virtual Spreadsheet](../howto/production/virtualsheet.md).
+        The **Virtual Spreadsheet** feature allows you to open up and edit view entries using Microsoft Excel [^1]. This feature uses the round trip editing feature of Domino REST API for Microsoft Office applications. For more information, see [Set up Virtual Spreadsheet](../../howto/production/virtualsheet.md).
 
         [^1]: Microsoft and Excel are registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.
 
-    - Added ability for a third-party Rich Text processor to process incoming Rich Text. For more information, see [Incoming Rich Text Processor](../references/richtextension.md#incoming-rich-text-processor). 
+    - Added ability for a third-party Rich Text processor to process incoming Rich Text. For more information, see [Incoming Rich Text Processor](../richtextension.md#incoming-rich-text-processor). 
 
     **Improvements**
     
@@ -227,7 +226,7 @@ The section provides information on the latest features, improvements, and resol
     - Added an array that contains the top-level child document UNIDs to the `@meta` object in the response of the `GET v1/document/{unid}` and `GET v1/docmeta/{unid}` endpoints.
     - Uses the correct mail template based on the Domino version when creating a second calendar using the `POST pim-v1/calendar` endpoint.
     
-    - Implemented UI/UX enhancements in the [Application Management](./usingwebui/appui.md) page in the **Admin UI**.
+    - Implemented UI/UX enhancements in the [Application Management](../usingwebui/appui.md) page in the **Admin UI**.
 
     **Resolved issues**
 
@@ -265,12 +264,12 @@ The section provides information on the latest features, improvements, and resol
 
     **Improvements**
 
-    - Extended how Rich Text is processed. For more information, see [Rich Text extension](richtextension.md).
+    - Extended how Rich Text is processed. For more information, see [Rich Text extension](../richtextension.md).
     
     - Improved OData filter processing by adding support for `in`, `contains`, `startswith`, and `endswith` clauses.
     - Enhanced user experience by allowing user to activate a form and bringing user directly into form edit mode by clicking the pencil icon corresponding to an inactive form in the **Database Form** tab in the **Admin UI** and confirming form activation.
     
-    - Implemented UI/UX enhancements in the [OAuth Consents](./usingwebui/oauthconsentui.md) page in the **Admin UI**.
+    - Implemented UI/UX enhancements in the [OAuth Consents](../usingwebui/oauthconsentui.md) page in the **Admin UI**.
     - Enhanced the PIM Swagger documentation. 
 
     **Resolved issues**
@@ -303,7 +302,7 @@ The section provides information on the latest features, improvements, and resol
 
     **New features**
     
-    - Added the **Add New Form Schema** button on the **Database Forms** page in the **Admin UI** to allow the creation of a Form schema for a form that does not exist in the design of the database. This is useful for the profile document update introduced in the v1.0.10 release and can also be used to add or retrieve documents when no form exists in the design. For more information, see [Add new form schema](usingwebui/schemaui.md#add-new-form-schema).
+    - Added the **Add New Form Schema** button on the **Database Forms** page in the **Admin UI** to allow the creation of a Form schema for a form that does not exist in the design of the database. This is useful for the profile document update introduced in the v1.0.10 release and can also be used to add or retrieve documents when no form exists in the design. For more information, see [Add new form schema](../usingwebui/schemaui.md#add-new-form-schema).
     
     - Added OData support for queries using `$select`.
     - Added OData support for the **ne** (not equal) operator in a filter.
@@ -361,7 +360,7 @@ The section provides information on the latest features, improvements, and resol
     - Added `GET setup-v1/admin/purge` endpoint to discover scopes that no longer have a valid schema because the schema no longer exists, the schema has invalid JSON, a corrupted NSF, or the NSF no longer exists.
     - Added  `POST setup-v1/admin/purge` endpoint to specify the schema and scope information to remove using the GET setup-v1/admin/purge endpoint response.
     
-    - Added Microsoft Office round-trip editing capability to simplify document editing experience by launching Office documents directly into their native applications and saving changes back to the server. For more information, see [Setup Office Round Trip Experience](../howto/production/roundtrip.md).
+    - Added Microsoft Office round-trip editing capability to simplify document editing experience by launching Office documents directly into their native applications and saving changes back to the server. For more information, see [Setup Office Round Trip Experience](../../howto/production/roundtrip.md).
 
     **Improvements**
 
@@ -445,7 +444,7 @@ The section provides information on the latest features, improvements, and resol
 
     **Others**
 
-    - Removed the use of `dataSource` or a path to an NSF in the `dataSource` parameter by most `admin-v1` endpoints. See [Deprecated features](deprecated.md) for more information and recommendation.
+    - Removed the use of `dataSource` or a path to an NSF in the `dataSource` parameter by most `admin-v1` endpoints. See [Deprecated features](../deprecated.md) for more information and recommendation.
     
     - Implemented various documentation updates.
     - Starting this release, there will be two installer jar files:
@@ -484,13 +483,13 @@ The section provides information on the latest features, improvements, and resol
     - Added endpoint `GET v1/attachmentnames/{unid}` to return a list of attachments attached to this document.
     - Added endpoint `GET v1/preview` to list endpoints that are marked as preview, may be considered beta endpoints.
     
-    - Added ability to view and revoke OAuth consents in the AdminUI via the [OAuth Consents](../references/usingwebui/oauthconsentui.md#oauth-consents) pane.
+    - Added ability to view and revoke OAuth consents in the AdminUI via the [OAuth Consents](../usingwebui/oauthconsentui.md#oauth-consents) pane.
     
     **Improvements**
 
-    - Added the ability to [clone form modes](../references/usingwebui/schemaui.md#clone-a-mode) and [compare form modes](../references/usingwebui/schemaui.md#compare-modes) in the AdminUI.
+    - Added the ability to [clone form modes](../usingwebui/schemaui.md#clone-a-mode) and [compare form modes](../usingwebui/schemaui.md#compare-modes) in the AdminUI.
     
-    - Added the ability to [export a schema](../howto/database/exportsourcejson.md) and [import a schema](../references/usingwebui/schemaui.md#import-a-schema) in the AdminUI.
+    - Added the ability to [export a schema](../../howto/database/exportsourcejson.md) and [import a schema](../usingwebui/schemaui.md#import-a-schema) in the AdminUI.
     
     - Added search feature in **Schema Management** to easily look for forms, views, and agents.  
     - Added ability to configure or unconfigure all database forms at the same time.
@@ -520,9 +519,9 @@ The section provides information on the latest features, improvements, and resol
     - Added endpoint `POST v1/bulk/folder` to add or remove documents to or from folders.
     - Added endpoint `GET v1/logout` for OIDC compliance. `POST v1/logout` is still recommended as a browser's PREFETCH could potentially cause issues.
     
-    - Added support for [Azure Active Directory as an IdP](../howto/IdP/configuringAD.md).
+    - Added support for [Azure Active Directory as an IdP](../../howto/IdP/configuringAD.md).
     
-    - Added ability to directly [edit a schema JSON](../howto/database/editsourcejson.md) in the **Admin UI**.
+    - Added ability to directly [edit a schema JSON](../../howto/database/editsourcejson.md) in the **Admin UI**.
     - Added the ability to specify multiple filter keys for `GET v1/lists/{name}`.
     - Added the ability to filter by top-level category in `GET v1/lists/{name}`.
     
@@ -551,11 +550,11 @@ The section provides information on the latest features, improvements, and resol
 
     **New features**
 
-    - HCL Domino REST API now supports WebAuthn allowing users to [log in to the **Admin UI** using a passkey](../howto/install/passkey.md).
+    - HCL Domino REST API now supports WebAuthn allowing users to [log in to the **Admin UI** using a passkey](../../howto/install/passkey.md).
     
     - Introduced access control for scopes via maximum access level to control the maximum access anyone using a scope might have. For example, if a scope's maximum access level is Editor and you are a Manager, the API runs as Editor. This feature doesn't increase a user's access level. The default for existing scopes is Editor.
     
-    - Introduced `$SETUP` scope that can be added to an application, which needs access to `$SETUP` endpoints. For more information, see [Scopes](../references/usingdominorestapi/scopes.md).
+    - Introduced `$SETUP` scope that can be added to an application, which needs access to `$SETUP` endpoints. For more information, see [Scopes](../usingdominorestapi/scopes.md).
     
     - Added `ftSearchQuery` to the `GET v1/lists/{name}` endpoint to filter a view based on a full text search query.
     - Added column multi-value delimiter and column position when retrieving information about views utilizing the `GET v1/lists?columns=true` endpoint. 
@@ -661,7 +660,7 @@ The section provides information on the latest features, improvements, and resol
 
     **New features**
 
-    - Added ability to view the Domino Server console live as well as send commands from the Domino REST API management page if using admin credentials. See [Domino Console Configuration](../references/usingdominorestapi/console.md) for more information.
+    - Added ability to view the Domino Server console live as well as send commands from the Domino REST API management page if using admin credentials. See [Domino Console Configuration](../usingdominorestapi/console.md) for more information.
     
     - Added ability to send Domino Server console commands via API if using admin credentials.
     - Added ability to view the schema json within the Admin UI.
@@ -698,7 +697,7 @@ The section provides information on the latest features, improvements, and resol
 
     **New features**
 
-    - The installer now has an upgrade option. Please see the [installation instructions](../tutorial/installconfig/index.md) for more information.
+    - The installer now has an upgrade option. Please see the [installation instructions](../../tutorial/installconfig/index.md) for more information.
     
     - A Quick Config option is now available to the Admin UI (lightning bolt on the left side). This feature creates a populated Schema and Scope based on the database you choose.
         - The Schema is configured with all visible Forms and Views.
@@ -739,11 +738,11 @@ The section provides information on the latest features, improvements, and resol
 
     | KEEP branding examples|
     | ---- |
-    | [Enabling a database](../howto/database/enablingadb.md) |
-    | [The Domino REST API CLI](../references/usingdominorestapi/keepcli.md#keepcmd) |
-    | [Running Agents: keepAgents.nsf](../topicguides/agents.md#running-agents) |
-    | [Parameters - AsyncAgentScheduler verticle: keepAgents.nsf](../references/parameters.md#asyncagentscheduler-verticle) |
-    | [Domino REST API Roles](../references/usingdominorestapi/roles.md) |
-    | [Factories and Caches: KeepFactory & KeepConfig](../topicguides/KeepFactory-and-caches.md) |
+    | [Enabling a database](../../howto/database/enablingadb.md) |
+    | [The Domino REST API CLI](../usingdominorestapi/keepcli.md#keepcmd) |
+    | [Running Agents: keepAgents.nsf](../../topicguides/agents.md#running-agents) |
+    | [Parameters - AsyncAgentScheduler verticle: keepAgents.nsf](../parameters.md#asyncagentscheduler-verticle) |
+    | [Domino REST API Roles](../usingdominorestapi/roles.md) |
+    | [Factories and Caches: KeepFactory & KeepConfig](../../topicguides/KeepFactory-and-caches.md) |
     | [HCL Tutorials, may reference KEEP](https://opensource.hcltechsw.com/domino-keep-tutorials) |
     | HCL Documentation, images and image file names may reference KEEP |

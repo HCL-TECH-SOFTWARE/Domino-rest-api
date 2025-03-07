@@ -6,7 +6,7 @@ This section provides technical references and descriptions for using HCL Domino
 
 ## What's new in Domino REST API
 
-Contains the [latest version information about Domino REST API](whatisnew.md).
+Contains the [latest version information about Domino REST API](whatsnew/index.md).
 
 ## System requirements
 

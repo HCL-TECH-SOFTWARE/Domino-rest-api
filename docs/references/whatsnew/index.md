@@ -1,18 +1,33 @@
-# Release Notes
+# What's new
 
-!!! error "Read them carefully!"
+The What's new contains information about the latest features, improvements, fixes, and changes, which include breaking changes, related to Domino REST API. Kindly read them carefully.
 
-    The release notes contain information about new features, fixes and changes. This includes breaking changes. While we try to minimize breaking changes, they do happen.
+!!! note "Important"
 
-    Ignore the release notes at your own peril
+    Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](../deprecated.md).
 
-## DRAPI 1.1.3
+## DRAPI v1.1.3
 
-- Released: [insert release date]
-- [insert number] breaking changes
-- [insert number] fixes
-- [insert number] feature updates
+???+ info "Release summary"
+
+    Release date: [insert release date]
+    
+    - [insert number] New features
+    - [insert number] Improvements
+    - [insert number] Resolved issues
+    - [insert number] Breaking changes
 
 [Read the full details](v1.1.3.md)
 
-## DRAPI 1.1.2
+## DRAPI v1.1.2 or earlier
+
+[Read the full details](whatisnew.md)
+
+<!--
+- Released: [insert release date]
+- [insert number] New features
+- [insert number] Improvements
+- [insert number] Resolved issues
+- [insert number] Changes
+- [insert number] Breaking changes
+-->

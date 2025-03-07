@@ -29,9 +29,9 @@ Running Domino REST API with a Docker image requires the following:
 
     Download the image as an archive file from [HCL Software License and Download Portal](https://hclsoftware.flexnetoperations.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"} or [My HCLSoftware Portal](https://my.hcltechsw.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"}. For more information, see [Download Domino REST API](index.md#download-domino-rest-api).
 
-    !!!warning "Important" 
-        
-        - If using a Docker image from [HCL Container Repository (Harbor)](https://hclcr.io/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"}, take note of the image name of the latest Docker image version from Harbor indicated in [What's New](../../references/whatisnew.md), update the CONTAINER_IMAGE variable in the [.env file](#update-env-file), and then [execute docker-compose](#run-domino-rest-api).
+    !!! warning "Important"
+
+        - If using a Docker image from [HCL Container Repository (Harbor)](https://hclcr.io/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"}, take note of the image name of the latest Docker image version from Harbor indicated in [What's New](../../references/whatsnew/index.md) of a release, update the CONTAINER_IMAGE variable in the [.env file](#update-env-file), and then [execute docker-compose](#run-domino-rest-api).
 
         - If prompted for access to HCL Container Repository (Harbor), [obtain your HCL Container Repository username and password](../../howto/install/obtainauthenticationtoken.md), and then sign-in using `docker login hclcr.io` command and the obtained credentials.  
 
@@ -85,16 +85,17 @@ docker load -i [name_of_tar_file].tar
 
 After loading the image, note the image name that was output. You need the image name to update the `CONTAINER_IMAGE` variable in the `.env` file.
 
-!!!example "Example loaded image name"
+!!! example "Example loaded image name"
+
     - From earlier releases: `docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.10.0`
     - Starting v1.0.7 release: `domino-rest-api:1.0.7`
-    
 
 **For docker image from HCL Container Repository (Harbor)**
 
-Take note of the image name of the latest docker image version for docker compose .env file from Harbor indicated in [What's New](../../references/whatisnew.md). You need the image name to update the `CONTAINER_IMAGE` variable in the `.env` file.
+Take note of the image name of the latest docker image version for docker compose .env file from Harbor indicated in [What's New](../../references/whatsnew/index.md) of a release version. You need the image name to update the `CONTAINER_IMAGE` variable in the `.env` file.
 
-!!!example "Example image name"
+!!! example "Example image name"
+
     `hclcr.io/domino/restapi:1.0.6`
 
 ## Update .env file
@@ -109,7 +110,7 @@ Depending on the compose file you choose, a different set of variables needs to 
 | Variable | Example | Remarks |
 | :---- | :---- | :---- |
 | CONTAINER_HOSTNAME | domino.acme.com | Pro tip: use something.local for local testing|
-| CONTAINER_IMAGE | docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.10.0 (example name for docker image from HCL Software License and Download Portal or My HCLSoftware Portal from earlier release)</br></br>domino-rest-api:1.0.7 (example name for docker image from HCL Software License and Download Portal or My HCLSoftware Portal starting v1.0.7 release)</br></br>hclcr.io/domino/restapi:1.0.6 (example name for docker image from Harbor)| <!--**Check** carefully for the current image name! `:latest` most likely need to be replaced.--> For docker image downloaded from HCL Software License and Download Portal or My HCLSoftware Portal, update based on the name of the loaded image, such as the example shown above, or use `docker images ls` to see the exact image name. <br><br>For docker image downloaded from Harbor, update based on the image name of the latest docker image version for docker compose .env file from Harbor indicated in [What's New](../../references/whatisnew.md). |
+| CONTAINER_IMAGE | docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.10.0 (example name for docker image from HCL Software License and Download Portal or My HCLSoftware Portal from earlier release)</br></br>domino-rest-api:1.0.7 (example name for docker image from HCL Software License and Download Portal or My HCLSoftware Portal starting v1.0.7 release)</br></br>hclcr.io/domino/restapi:1.0.6 (example name for docker image from Harbor)| <!--**Check** carefully for the current image name! `:latest` most likely need to be replaced.--> For docker image downloaded from HCL Software License and Download Portal or My HCLSoftware Portal, update based on the name of the loaded image, such as the example shown above, or use `docker images ls` to see the exact image name. <br><br>For docker image downloaded from Harbor, update based on the image name of the latest docker image version for docker compose .env file from Harbor indicated in [What's New](../../references/whatsnew/index.md) of a release.|
 | CONTAINER_NAME | domino-keep-test02 | |
 | CONTAINER_VOLUMES | domino_keep_notesdata | no spaces or special characters |
 | SERVERSETUP_ADMIN_CN | Peter Parker | |

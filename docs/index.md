@@ -19,7 +19,7 @@ Open the <a href="assets/images/svg/keepblockdiagram.svg">overview</a>
 
 !!!tip
 
-    - For the latest release information about {{ variable.drapi }}, see [What's new](references/whatisnew.md).
+    - For the latest release information about {{ variable.drapi }}, see [What's new](references/whatsnew/index.md).
 
     - To know features that have been deprecated in the current and earlier releases, see [deprecated features](references/deprecated.md).
 
