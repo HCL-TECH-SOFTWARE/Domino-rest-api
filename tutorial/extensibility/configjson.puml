@@ -1,0 +1,30 @@
+@startjson ExtensionConfig
+{
+  "versions": {
+    "eoffice" : {
+      "path" : "/schema/openapi.eoffice.json",
+      "active" : true
+    }
+  },
+  "verticles" : {
+    "MyOffice" : {
+      "worker" : false,
+      "className": "com.hcl.domino.keep.verticles.DominoDefaultVerticle",
+      "tags": {
+        "approval": "io.projectkeep.domino.keep.dbrequests.approval"
+      },
+      "active": true
+    },
+    "RestAPI" : {
+      "versions" : {
+        "eoffice" : {
+          "package" : "io.projectkeep.domino.keep.handlers",
+          "route" : "/api/eoffice-v1",
+          "defaultClass": "com.hcl.domino.keep.handlers.core.DefaultJsonHandler",
+          "defaultDatabase": "names"
+            }
+        }
+    }
+  }
+}
+@endjson

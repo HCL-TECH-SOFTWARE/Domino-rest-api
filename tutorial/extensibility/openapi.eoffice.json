@@ -1,0 +1,240 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Web approvals",
+    "description": "Simplified approval system that can work with any compliant database",
+    "termsOfService": "",
+    "contact": {
+      "email": ""
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "/api/eoffice-v1",
+      "description": "eOffice services"
+    }
+  ],
+  "tags": [
+    {
+      "name": "approval",
+      "description": "Approval related info"
+    }
+  ],
+  "paths": {
+    "/approvals": {
+      "get": {
+        "summary": "get the list of approvals for the current user",
+        "description": "Retrieves a list of approvals the current user has to decide",
+        "operationId": "getApprovals",
+        "tags": [
+          "approval"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/approvalList"
+          }
+        },
+        "security": [
+          {
+            "jwt": []
+          }
+        ]
+      },
+      "post": {
+        "summary": "submit an approval decision",
+        "description": "Submisssion of approval, rejection or delegation",
+        "operationId": "submitDecision",
+        "tags": [
+          "approval"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/status"
+          },
+          "400": {
+            "$ref": "#/components/responses/status"
+          }
+        },
+        "security": [
+          {
+            "jwt": []
+          }
+        ],
+        "requestBody": {
+          "$ref": "#/components/requestBodies/DecissionBody"
+        }
+      },
+      "parameters": [
+        {
+          "in": "query",
+          "name": "dataSource",
+          "description": "Which database to check",
+          "schema": {
+            "type": "string"
+          },
+          "required": true
+        }
+      ]
+    }
+  },
+  "components": {
+    "schemas": {
+      "PendingApproval": {
+        "type": "object",
+        "properties": {
+          "unid": {
+            "type": "string",
+            "description": "primary key",
+            "readOnly": true,
+            "minLength": 32,
+            "maxLength": 32
+          },
+          "requestor": {
+            "type": "string",
+            "description": "person needing an approval",
+            "readOnly": true
+          },
+          "value": {
+            "type": "number",
+            "description": "value in USD",
+            "readOnly": true,
+            "format": "float"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ApprovalStatus",
+            "description": "Where are we"
+          },
+          "subject": {
+            "type": "string",
+            "description": "Description of the request",
+            "readOnly": true
+          },
+          "submission": {
+            "type": "string",
+            "format": "date",
+            "readOnly": true,
+            "description": "creation date"
+          }
+        },
+        "required": [
+          "unid",
+          "requestor",
+          "value",
+          "status",
+          "subject",
+          "submission"
+        ],
+        "additionalProperties": false
+      },
+      "ApprovalStatus": {
+        "type": "string",
+        "description": "Possible status for approvals",
+        "enum": [
+          "new",
+          "pending",
+          "approved",
+          "rejected",
+          "delegated"
+        ]
+      },
+      "ApprovalDecision": {
+        "type": "object",
+        "properties": {
+          "unid": {
+            "$ref": "#/components/schemas/unid"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ApprovalStatus"
+          },
+          "delegee": {
+            "type": "string",
+            "description": "Person who actually decides"
+          }
+        },
+        "required": [
+          "unid",
+          "status"
+        ],
+        "additionalProperties": false
+      },
+      "unid": {
+        "type": "string",
+        "description": "Notes document primary key",
+        "minLength": 32,
+        "maxLength": 32
+      }
+    },
+    "securitySchemes": {
+      "jwt": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "JWT based security",
+        "bearerFormat": "jwt"
+      }
+    },
+    "responses": {
+      "approvalList": {
+        "description": "List of approvals to decide",
+        "headers": {},
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/PendingApproval"
+              }
+            }
+          }
+        }
+      },
+      "status": {
+        "description": "simple result status",
+        "headers": {},
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "StatusCode": {
+                  "type": "string"
+                },
+                "Status": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "StatusCode",
+                "Status"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "requestBodies": {
+      "DecissionBody": {
+        "required": false,
+        "description": "Shall it be?",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ApprovalDecision"
+            }
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "jwt": []
+    }
+  ]
+}
