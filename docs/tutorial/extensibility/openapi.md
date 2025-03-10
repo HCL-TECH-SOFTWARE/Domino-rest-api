@@ -1,6 +1,6 @@
 # OpenAPI 3.0.x specification
 
-Second step is to create an OpenAPI 3.0.x specification. You can do that using notepad, but you want to use [available tooling](https://openapi.tools/#gui-editors). You could use the original [Swagger Editor](https://editor.swagger.io/), Redhat's [Apicurio](https://www.apicur.io/) (Apicurito will suffice in most cases) or (what the creator of this tutorial liked best [APIGit](https://apigit.com/))
+Second step is to create an OpenAPI 3.0.x specification. You can do that using notepad, but you want to use [available tooling](https://openapi.tools/#gui-editors). You could use the original [Swagger Editor](https://editor.swagger.io/), Redhat's [Apicurio](https://www.apicur.io/) (Apicurito will suffice in most cases) or (what the creator of this tutorial liked best): [APIGit](https://apigit.com/)
 
 ## The idea
 

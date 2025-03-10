@@ -6,8 +6,8 @@ You will install the DRAPI dependencies and configure a `pom.xml` as well a the 
 
 - You need a matching JDK installed (Domino doesn't ship a JDK);
   - Java 8 for Domino 12
-  - Java 17 for Domino 17
-  - Java 21 for Domino 21
+  - Java 17 for Domino 14
+  - Java 21 for Domino 14.5
 - Apache [Maven](https://maven.apache.org/) latest 3.9 edition
 - Version control, we presume `git` for this tutorial
 - An Ide, but you could just use `vi` if you remember how to exit it
@@ -18,7 +18,7 @@ Be careful when installing a JDK, it might have license requirents (e.g. the Ora
 
 Maven at compile time relies on dependencies in the `~/.m2` direcory structure, so you need to install DRAPI's jar files there manually since they are not published to Maven central and can't be automagically downloaded.
 
-Locate the DRAPI installation diectory and change into it. It typically is something like `/opt/hcl/keep` or `C:\Program files\HCL\restapi`, Make sure you see teh following files (there are more, but not relevat here):
+Locate the DRAPI installation diectory and change into it. It typically is something like `/opt/hcl/keep` or `C:\Program files\HCL\restapi`, Make sure you see the following files (there are more, but not relevat here):
 
 - keep-core-\*.jar
 - keep-extension-\*.jar
