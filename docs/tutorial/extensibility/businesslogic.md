@@ -144,11 +144,30 @@ The code is similar simple. We check if the document exists, is an a state to be
     final String status = request.incoming.getString("status");
     final Optional<String> delegee = Optional.ofNullable(request.incoming.getString("delegee"));
 
-    this.isTheRequestGoodToGo(request.session, request.db, unid, status, delegee);
+    final Document doc = this.isTheRequestGoodToGo(request.session, request.db, unid, status);
+    final Date now = new Date();
 
     try (Database approvalLog = request.session.getDatabaseDomino("ApprovalLog.nsf")) {
-      // TODO: write to log
-      // TODO: update document
+      // Write to log
+      Document logEntry = approvalLog.createDocument();
+      logEntry.replaceItemValue("Form", "logentry");
+      logEntry.replaceItemValue("unid",unid);
+      logEntry.replaceItemValue("StatusOld",doc.getItemValue("status"));
+      logEntry.replaceItemValue("StatusNew",status);
+      logEntry.replaceItemValue("Approver",request.session.getUserName());
+      delegee.ifPresent(d -> logEntry.replaceItemValue("Delegee", delegee));
+      logEntry.replaceItemValue("TransactionDate",now);
+      logEntry.save();
+
+      // Now update document
+      if (delegee.isPresent() && "delegated".equals(status)) {
+        doc.replaceItemValue("Approver",delegee.get());
+        doc.replaceItemValue("Status","pending");
+      } else {
+        doc.replaceItemValue("Approver",request.session.getUserName());
+        doc.replaceItemValue("Status",status);
+      }
+      doc.save()
     } catch (Exception e) {
       logger.error(e.getMessage());
       throw e;
@@ -156,16 +175,31 @@ The code is similar simple. We check if the document exists, is an a state to be
 
     JsonObject happyResult = new JsonObject()
         .put("StatusCode", "200")
-        .put("Status", "Decision {} recorded for {}");
+        .put("Status", String.format("Decision %s recorded for %s",status,unid));
 
     request.emit(happyResult);
 
+  }
+
+    Document isTheRequestGoodToGo(final KeepJnxSession session, final Database db, final String unid, final String status)
+      throws KeepException {
+    Document doc = session.validateDocumentAccessRequest(db, unid, DocumentAccess.WRITE, this.getRequestId());
+    String docStatus = doc.get("Status", String.class, "Unknown");
+    String approver = doc.get("Approver", String.class, "Unknown");
+    if ("approved".equals(docStatus) || "rejected".equals(docStatus)) {
+      throw new KeepExceptionWrongDataRequest("Request is already %s", docStatus);
+    }
+    if (!session.getUserName().equals(approver)) {
+      throw new KeepExceptionWrongDataRequest("Request can only be approved by %s", approver);
+    }
+    return doc;
   }
 ```
 
 ## Testing
 
-Compile the Jar and throw it into DRAPI's `libs` folder. Restart DRAPi and it should show up.
+Compile the Jar and throw it into DRAPI's `libs` folder. Restart DRAPI and it should show up.
+Test using curl or Bruno
 
 !!! info "Next"
 

@@ -22,6 +22,8 @@ For the most common use case of JSON in/out, the default handler performs all th
 
 ## Access Control
 
+DRAPI follows Domino's access control, there's no sidestepping. You can however tighten the screws to be very specific on individual access requirements
+
 ## Deployment
 
 ## Setting up a devcontainer
