@@ -1,5 +1,6 @@
 nav:
   - Welcome: index.md
+  - What's new: whatsnew
   - Tutorials: tutorial
   - How-to guides: howto
   - Topic guides: topicguides

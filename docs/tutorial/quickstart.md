@@ -22,7 +22,7 @@ Log in to [HCL Software License & Download Portal](https://hclsoftware.flexnetop
 
 ## What's New
 
-Check [What's New](../references/whatsnew/index.md) to learn what's new in Domino REST API.
+Check [What's New](../whatsnew/index.md) to learn what's new in Domino REST API.
 
 ## The Domino REST API schema
 
@@ -61,6 +61,7 @@ You can use the built-in [Swagger API](../tutorial/swagger.md), [Postman and Cur
 
 <!-- prettier-ignore -->
 !!! tip
+
     Make sure to complete the [post installation steps](../tutorial/installconfig/postinstallation.md) to ensure proper operation.
 
 ### Tutorials
@@ -91,16 +92,16 @@ Read more about them in [Domino REST API roles](../references/usingdominorestapi
 Ensure your endpoints are [secure](../references/security/securingKEEPEndpoints.md).
 Bring up a browser and verify that you can hit these endpoints:
 
-| Endpoints | Ports | Details | Webpages                                                      |
-| ----------------------------------------------------------------------------------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| [Domino REST API Home Page](http://localhost:8880/)                                                   | 8880  | Start page                                                                                                                                                                                                                                                                                                                                | ![StartPage](../assets/images/startpage.png)                  |
-| [Live Domino REST API](http://localhost:8880/openapi/index.html?url=/api/v1/schema/openapi.core.json) | 8880  | Interact live with the API                                                                                                                                                                                                                                                                                                                | ![OpenAPI](../assets/images/OpenAPI.png)                      |
-| [Admin UI](http://localhost:8880/admin/ui/)                                                           | 8880  | Login with an admin user. LocalDomainAdmin member                                                                                                                                                                                                                                                                                         | ![Admin Login](../assets/images/AdminLogin.png)               |
-| [Management API](http://localhost:8889/)                                                              | 8889  | Access to the log and runtime info                                                                                                                                                                                                                                                                                                        | ![Server Info](../assets/images/mngmntconsole.png)              |
-| [Prometheus Metrics](http://localhost:8890/)                                                          | 8890  | Performance info in Prometheus format. Protected with basic authentication (metrics/metrics)                                                                                                                                                                                                                                              | ![Performance Metris](../assets/images/PrometheusMetrics.png) |
-| [Health check endpoint](http://localhost:8886/)                                                       | 8886  | Server healthcheck endpoint as used by Kubernetes or Openshift                                                                                                                                                                                                                                                                            |
-| [Auth](http://localhost:8880/api/v1/auth)                                                             | 8880  | The endpoint, `[POST] http/s://${HOST}:8880/api/v1/auth`, is the default end point to exchange Domino web credentials for a JWT access token. For example, use the token in Postman request headers as a Bearer authentication header. You also can use your [own IdP](../howto/IdP/configuringIdentityProvider.md) to gain access tokens |
-
+| Endpoints | Ports | Details | Webpages |
+| ---- | ---- | ---- | ----- |
+| [Domino REST API Home Page](http://localhost:8880/) | 8880 | Start page | ![StartPage](../assets/images/startpage.png) |
+| [Live Domino REST API](http://localhost:8880/openapi/index.html?url=/api/v1/schema/openapi.core.json) | 8880 | Interact live with the API | ![OpenAPI](../assets/images/OpenAPI.png) |
+| [Admin UI](http://localhost:8880/admin/ui/) | 8880 | Login with an admin user. LocalDomainAdmin member | ![Admin Login](../assets/images/AdminLogin.png) |
+| [Management API](http://localhost:8889/) | 8889 | Access to the log and runtime info | ![Server Info](../assets/images/mngmntconsole.png) |
+| [Prometheus Metrics](http://localhost:8890/) | 8890 | Performance info in Prometheus format. Protected with basic authentication (metrics/metrics) | ![Performance Metris](../assets/images/PrometheusMetrics.png) |
+| [Health check endpoint](http://localhost:8886/) | 8886 | Server healthcheck endpoint as used by Kubernetes or Openshift | |
+| [Auth](http://localhost:8880/api/v1/auth) | 8880  | The endpoint, `[POST] http/s://${HOST}:8880/api/v1/auth`, is the default end point to exchange Domino web credentials for a JWT access token. For example, use the token in Postman request headers as a Bearer authentication header. You also can use your [own IdP](../howto/IdP/configuringIdentityProvider.md) to gain access tokens | |
+ 
 ### What's next?
 
 Based on your interest, start by exploring the following sections of this documentation:

@@ -14,18 +14,9 @@ hide:
 Open the <a href="assets/images/svg/keepblockdiagram.svg">overview</a>
 </object>
 
-
-## What's new
-
-!!!tip
-
-    - For the latest release information about {{ variable.drapi }}, see [What's new](references/whatsnew/index.md).
-
-    - To know features that have been deprecated in the current and earlier releases, see [deprecated features](references/deprecated.md).
-
 ## TL/TR
 
-!!!tip
+!!! tip
 
     - Get a first idea what you are dealing with by [Understanding how the Domino REST API works](topicguides/understanding.md)
 
@@ -36,6 +27,8 @@ Open the <a href="assets/images/svg/keepblockdiagram.svg">overview</a>
     - For everything that admin needs to know, use the [Admin cheat sheet](references/admincheatsheet.md).
 
     - Trouble running the Domino REST API? Use the [Troubleshooting guide](references/troubleshooting.md).
+
+    - To know features that have been deprecated in the current and earlier releases, see [deprecated features](references/deprecated.md).
 
 ---
 

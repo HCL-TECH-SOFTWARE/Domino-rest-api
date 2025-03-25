@@ -183,7 +183,7 @@ We need to specify what authentication is available. It needs to match the secur
 
 ## Extensions
 
-There are a number of extensions [defined in DRAPI](../../references/openapidefinitions.html#custom-attribute), one can use to further refine the schema.
+There are a number of extensions [defined in DRAPI](../../references/openapidefinitions.md#custom-attributes), one can use to further refine the schema.
 
 Our result looks like this:
 

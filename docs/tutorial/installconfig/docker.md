@@ -13,33 +13,34 @@ All configuration options found there can be applied to the Domino REST API Dock
 
 Running Domino REST API with a Docker image requires the following:
 
-- **[Docker Desktop](https://docs.docker.com/get-docker/)** 
+- **[Docker Desktop](https://docs.docker.com/get-docker/)**
 
     A Docker installation, both **Docker** (for servers) or **Docker Desktop** are suitable. Download and install **Docker Desktop** for your environment (Linux, Windows or macOS).
 
     <!-- prettier-ignore -->
-    !!!tip "Docker Desktop License"
+    !!! tip "Docker Desktop License"
+
         Docker desktop [recently](https://www.theregister.com/2021/08/31/docker_desktop_no_longer_free/) became subject to a [Docker subscription](https://www.docker.com/pricing), make sure you are compliant or use the command line.
 
-- **[Docker Compose](https://docs.docker.com/compose/install/)** 
+- **[Docker Compose](https://docs.docker.com/compose/install/)**
 
     When you install a Docker Desktop version (Windows, macOS), Docker compose is already included. For servers, it's an [additional install](https://docs.docker.com/compose/install/).
 
-- **Domino REST API Docker image**. 
+- **Domino REST API Docker image**.
 
     Download the image as an archive file from [HCL Software License and Download Portal](https://hclsoftware.flexnetoperations.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"} or [My HCLSoftware Portal](https://my.hcltechsw.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"}. For more information, see [Download Domino REST API](index.md#download-domino-rest-api).
 
     !!! warning "Important"
 
-        - If using a Docker image from [HCL Container Repository (Harbor)](https://hclcr.io/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"}, take note of the image name of the latest Docker image version from Harbor indicated in [What's New](../../references/whatsnew/index.md) of a release, update the CONTAINER_IMAGE variable in the [.env file](#update-env-file), and then [execute docker-compose](#run-domino-rest-api).
+        - If using a Docker image from [HCL Container Repository (Harbor)](https://hclcr.io/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"}, take note of the image name of the latest Docker image version from Harbor indicated in [What's New](../../whatsnew/index.md) of a release, update the CONTAINER_IMAGE variable in the [.env file](#update-env-file), and then [execute docker-compose](#run-domino-rest-api).
 
         - If prompted for access to HCL Container Repository (Harbor), [obtain your HCL Container Repository username and password](../../howto/install/obtainauthenticationtoken.md), and then sign-in using `docker login hclcr.io` command and the obtained credentials.  
 
-- **Docker compose file** 
+- **Docker compose file**
 
     Download the file from [downloadable resources](../../references/downloads.md). Select the matching one for either a standalone primary or an additional server.
 
-- **`.env` file**. 
+- **`.env` file**.
 
     Download the `sample.env` from [downloadable resources](../../references/downloads.md). **Rename the file to `.env`**<!--, and **update** the `.env` file with your values-->.
 
@@ -52,26 +53,27 @@ A Domino server uses one persistent volume to store its data. This volume also s
 ![Docker Consumption](../../assets/images/DominoKeepContainers.png)
 
 <!-- prettier-ignore -->
-!!!note
+!!! note
+
     When you want to run multiple servers, create separate volumes for each. **DO NOT** share volumes between running instances.
 
 ## Store the following files in a folder
 
-- **server id** 
-    
+- **server id**
+
     Make sure that your server id file is named `server.id`.
 
-- **docker-compose.yml**. 
+- **docker-compose.yml**.
 
     Rename the compose file you downloaded from [resources](../../references/downloads.md) to `docker-compose.yml`.
 
-    !!!note
+    !!! note
+
         You can configure multiple Domino servers in a single compose file. For details, check the [Docker compose](https://docs.docker.com/compose/) documentation. With Domino REST API in mind, each server needs its own volume.
 
-- **.env** 
+- **.env**
 
     Edit the `.env` file from [resources](../../references/downloads.md) to update your values. For more information, see [Update .env file](#update-env-file).
-
 
 ## Load Docker image
 
@@ -92,7 +94,7 @@ After loading the image, note the image name that was output. You need the image
 
 **For docker image from HCL Container Repository (Harbor)**
 
-Take note of the image name of the latest docker image version for docker compose .env file from Harbor indicated in [What's New](../../references/whatsnew/index.md) of a release version. You need the image name to update the `CONTAINER_IMAGE` variable in the `.env` file.
+Take note of the image name of the latest docker image version for docker compose .env file from Harbor indicated in [What's New](../../whatsnew/index.md) of a release version. You need the image name to update the `CONTAINER_IMAGE` variable in the `.env` file.
 
 !!! example "Example image name"
 
@@ -105,12 +107,12 @@ Depending on the compose file you choose, a different set of variables needs to 
 !!!tip
     Refer also to the official [List of One-touch environment variables](https://help.hcltechsw.com/domino/14.0.0/admin/inst_onetouch_preparing_sysenv.html) for reference.
 
-**To update the variables in the compose file, update the variables in the `.env` file with your values**. Replace all values after the equal `=` sign. Refer to the table below for guidance on the variables, their example values, and additional information. 
+**To update the variables in the compose file, update the variables in the `.env` file with your values**. Replace all values after the equal `=` sign. Refer to the table below for guidance on the variables, their example values, and additional information.
 
 | Variable | Example | Remarks |
 | :---- | :---- | :---- |
 | CONTAINER_HOSTNAME | domino.acme.com | Pro tip: use something.local for local testing|
-| CONTAINER_IMAGE | docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.10.0 (example name for docker image from HCL Software License and Download Portal or My HCLSoftware Portal from earlier release)</br></br>domino-rest-api:1.0.7 (example name for docker image from HCL Software License and Download Portal or My HCLSoftware Portal starting v1.0.7 release)</br></br>hclcr.io/domino/restapi:1.0.6 (example name for docker image from Harbor)| <!--**Check** carefully for the current image name! `:latest` most likely need to be replaced.--> For docker image downloaded from HCL Software License and Download Portal or My HCLSoftware Portal, update based on the name of the loaded image, such as the example shown above, or use `docker images ls` to see the exact image name. <br><br>For docker image downloaded from Harbor, update based on the image name of the latest docker image version for docker compose .env file from Harbor indicated in [What's New](../../references/whatsnew/index.md) of a release.|
+| CONTAINER_IMAGE | docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.10.0 (example name for docker image from HCL Software License and Download Portal or My HCLSoftware Portal from earlier release)</br></br>domino-rest-api:1.0.7 (example name for docker image from HCL Software License and Download Portal or My HCLSoftware Portal starting v1.0.7 release)</br></br>hclcr.io/domino/restapi:1.0.6 (example name for docker image from Harbor)| <!--**Check** carefully for the current image name! `:latest` most likely need to be replaced.--> For docker image downloaded from HCL Software License and Download Portal or My HCLSoftware Portal, update based on the name of the loaded image, such as the example shown above, or use `docker images ls` to see the exact image name. <br><br>For docker image downloaded from Harbor, update based on the image name of the latest docker image version for docker compose .env file from Harbor indicated in [What's New](../../whatsnew/index.md) of a release.|
 | CONTAINER_NAME | domino-keep-test02 | |
 | CONTAINER_VOLUMES | domino_keep_notesdata | no spaces or special characters |
 | SERVERSETUP_ADMIN_CN | Peter Parker | |
@@ -136,6 +138,7 @@ docker-compose up
 
 <!-- prettier-ignore -->
 !!! note
+
     - Start in the directory where the files `server.id` and `docker-compose.yml` are located.
     - The setup can take a few minutes, depending on your hardware and the network speed to your primary server.
     
@@ -143,6 +146,7 @@ docker-compose up
 
 <!-- prettier-ignore -->
 !!! tip
+
     **When you don't have DNS setup**, amend your `hosts` file for name resolution:
 
     - `/etc/hosts` on Linux or macOS
