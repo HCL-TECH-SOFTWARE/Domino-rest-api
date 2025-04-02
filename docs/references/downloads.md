@@ -36,6 +36,12 @@ Download from:
 
 - [Demo.nsf](../assets/downloads/Demo.nsf) - Demo database for the Postman and Tutorial examples.
 
+## bruno
+
+- [Domino REST API bruno collection and environment](../assets/downloads/Domino%20REST%20Bruno%20Collection.zip){: download="Domino REST API bruno collection"}.
+
+This is a conversion of the Postman collection and environment, where still appropriate. It expects the [Demo.nsf](../assets/downloads/Demo.nsf) installed in the root of the Domino data directory.
+
 The following scripts are for reference only. They have been superseded by the scripts provided by the installer, so there's no need beyond satisfying curiosity to download them.
 
 ## Mac
