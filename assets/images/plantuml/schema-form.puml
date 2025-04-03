@@ -1,0 +1,25 @@
+@startjson SchemaFormMode
+		{
+			"formName": "Customer",
+			"formModes": [
+				{
+					"modeName": "default",
+					"fields": ["..."],
+                    "readAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@True"
+                    },
+                    "writeAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@False"
+                    },
+                    "deleteAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@False"
+                    },
+					"computeWithForm": false,
+                    "required" : ["Subject","Form","Owner"]
+				}
+			]
+		}
+@endjson

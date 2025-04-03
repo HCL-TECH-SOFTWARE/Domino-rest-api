@@ -1,0 +1,91 @@
+{
+	"id": "19702095-b709-48a7-970a-f8e4e4d90ea1",
+	"name": "Domino REST API",
+	"values": [
+		{
+			"key": "HOST",
+			"value": "http://localhost:8880/api/v1",
+			"enabled": true
+		},
+		{
+			"key": "SETUPHOST",
+			"value": "http://localhost:8880/api/setup-v1",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "ADMINHOST",
+			"value": "http://localhost:8889",
+			"enabled": true
+		},
+		{
+			"key": "METRICSADMINHOST",
+			"value": "http://localhost:8890",
+			"enabled": true
+		},
+		{
+			"key": "AUTH_KEY",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "AdminName",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "AdminPassword",
+			"value": "",
+			"type": "secret",
+			"enabled": true
+		},
+		{
+			"key": "FORM_0",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "UNID_0",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "APP_ID",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "METRICS_USERNAME",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "METRICS_PASSWORD",
+			"value": "",
+			"type": "secret",
+			"enabled": true
+		},
+		{
+			"key": "MANAGEMENT_USERNAME",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "MANAGEMENT_PASSWORD",
+			"value": "",
+			"type": "secret",
+			"enabled": true
+		},
+		{
+			"key": "CLIENT_ID",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2022-11-28T06:42:19.961Z",
+	"_postman_exported_using": "Postman/9.31.23"
+}

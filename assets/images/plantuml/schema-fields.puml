@@ -1,0 +1,50 @@
+@startjson SchemaKeepFields
+[
+  {
+    "name": "Form",
+    "type": "string",
+    "readOnly": true
+  },
+  {
+    "name": "apiName",
+    "type": "string"
+  },
+  {
+    "name": "Approvers",
+    "type": "array",
+    "items" : {
+        "type" : "string",
+        "format" : "authors"
+    }
+  },
+  {
+    "name": "Owner",
+    "type": "string",
+    "format": "readers"
+  },
+  {
+    "name": "color",
+    "type": "array",
+    "items" : {
+        "type" : "string"
+    },
+    "fieldGroup" : "Things"
+  },
+  {
+    "name": "shape",
+    "type": "array",
+    "items" : {
+        "type" : "string"
+    },
+    "fieldGroup" : "Things"
+  },
+  {
+    "name": "size",
+    "type": "array",
+    "items" : {
+        "type" : "string"
+    },
+    "fieldGroup" : "Things"
+  }
+]
+@endjson

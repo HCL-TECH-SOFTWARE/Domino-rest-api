@@ -1,0 +1,5817 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Domino REST API, formerly Project KEEP, provides a secure REST API with access into HCL Domino servers and databases.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/Domino-rest-api/references/usingwebui/schemaui.html">
+      
+      
+        <link rel="prev" href="index.html">
+      
+      
+        <link rel="next" href="scopeui.html">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>Schema Management - HCL Domino REST API Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/keep_style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","UA-169645537-2"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","UA-169645537-2",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=UA-169645537-2",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#schema-management" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="HCL Domino REST API Documentation" class="md-header__button md-logo" aria-label="HCL Domino REST API Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/HCL_KEEP_ICON.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Domino REST API Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Schema Management
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/Domino-rest-api" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/Domino-rest-api
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../index.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tutorial/index.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tutorials
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../howto/index.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  How-to guides
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../topicguides/index.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Topic guides
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="../index.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  References
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="HCL Domino REST API Documentation" class="md-nav__button md-logo" aria-label="HCL Domino REST API Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/HCL_KEEP_ICON.jpg" alt="logo">
+
+    </a>
+    HCL Domino REST API Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/Domino-rest-api" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/Domino-rest-api
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../tutorial/installconfig/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Tutorials
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/quickstart.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quickstart
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Capability Walkthrough
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Capability Walkthrough
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/walkthrough/lab-00.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 0 - Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/walkthrough/lab-01.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 01 - Login to the REST API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/walkthrough/lab-02.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 02 - Quick config
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/walkthrough/lab-03.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 03 - Schema exploration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/walkthrough/lab-04.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 04 - Additional scope & schema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/walkthrough/lab-05.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 05 - Create an application
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/walkthrough/lab-06.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 06 - Create a NodeJS application
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/walkthrough/lab-07.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 07 - Create a SPA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/walkthrough/lab-08.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 08 - Create a Java application
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/walkthrough/lab-09.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 9 - Unlock additional ports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/walkthrough/lab-10.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 10 - Configure JWT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/walkthrough/lab-11.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 11 - KEEP Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/walkthrough/downloadindex.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Downloads
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://opensource.hcltechsw.com/domino-keep-tutorials/pages/todo/index" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ToDo Database tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://opensource.hcltechsw.com/domino-keep-tutorials/pages/domino-new/index" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    From Scratch tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/adminui.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using Admin UI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/postmancurl.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using Postman and curl
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/swagger.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OpenAPI UI (a.k.a. Swagger)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    OData
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            OData
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/odata/excel.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Access Domino OData in MS-Excel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/odata/salesforce.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domino data with Salesforce
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Extensibility tutorial
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            Extensibility tutorial
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/extensibility/javaproject.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setting up the Java Maven project
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/extensibility/openapi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OpenAPI 3.0.x specification
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/extensibility/configjson.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The `config.json` configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/extensibility/businesslogic.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Implementing business logic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/extensibility/accesscontrol.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Access Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/extensibility/deployment.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deployment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/extensibility/devcontainer.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Development Container
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../howto/install/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    How-to guides
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            How-to guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Web
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Web
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/web/httpsproxy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure nginx as HTTPS proxy with subdomains
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/web/httpsproxy2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure nginx as HTTPS proxy - single domain
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    IdP
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            IdP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/IdP/configuredrapiIdP.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Domino Rest API IdP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/IdP/configureoidc.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Domino REST API to use an OIDC provider
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/IdP/configuringAD.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Microsoft Entra ID as IdP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/IdP/configuringCertificates.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure certificates
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/IdP/configuringIdentityProvider.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure an identity provider
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/IdP/configuringKeycloak.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Keycloak
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/IdP/keepsaml.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Domino REST API as SAML identity provider
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/IdP/roundtripidp.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Set up external IdP for Office Round Trip Experience
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/IdP/adminuiidp.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Set up external IdP for Admin UI IdP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Production
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Production
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/production/changefilesize.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Change file size limit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/production/prodports.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure ports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/production/customAPI.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Customize API schemas and endpoints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/production/dominohttps.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Enable HTTPS using Domino Certificate Manager
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/production/hardening.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hardened production setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/production/httpsprod.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTTPS for production
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/production/reactjs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Host SPA with ReactJS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/production/configparam.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modify configuration parameters
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/production/roundtrip.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Set up Office Round Trip Experience
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/production/virtualsheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Set up Virtual Spreadsheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/production/signencrypt.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Set up for encryption, decryption, signing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/production/testformulas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Test formulas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/production/versionupdate.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Update Domino REST API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Database
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Database
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/database/editsourcejson.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Edit database schema JSON
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/database/editviewcolumn.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Edit database view of a schema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/database/enablingadb.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Enable a database
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/database/excludeddb.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Enable excluded database files and directories
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/database/exportsourcejson.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Export database schema as JSON file
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/database/externalnames.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Use external names in schema definitions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/database/pullviewdata.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Adjust number of retrieved entries when pulling in view data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Management console
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Management console
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/management/checksettings.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Check Domino REST API settings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/management/supportpackage.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create support package
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/management/disablemodule.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Disable and enable module in production
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/management/configsrc.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Find configuration sources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/management/usersmc.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Identify known users with valid JWT token
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/management/jwtmultiserver.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JWT Multi-Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/management/suspendeduser.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release suspended users
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    VoltMX
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            VoltMX
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/VoltMX/configuring-keep-idplite-with-identity-service.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Domino REST API IdP with Volt MX Foundry Identity Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/VoltMX/setupoauthnsf.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Set up oauth.nsf
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Code examples
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            Code examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/codesamples/javascript.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/codesamples/js_sdk.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JavaScript SDK samples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../topicguides/auxiliary/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Topic guides
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Topic guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/introducingrestapi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducing the Domino REST API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/understanding.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Understanding HCL Domino REST API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/howkeepworks.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How HCL Domino REST API works
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/schemascope.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Schema & Scope
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/schemabackup.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Schema backup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/formmodes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Form modes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/keepdifference.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domino REST API is different
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/keepFlows.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domino REST API flows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/KeepFactory-and-caches.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Factories and Caches
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/architecture.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architectural decisions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/planning.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Planning your application
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/barbican.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The Barbican
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/eventbus.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    EventBus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/httpHandler.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTTP handler
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/dominojnx.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DominoJNX
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/agents.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agent processing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/usecases.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Use cases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/keepasproxy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domino REST API and Proxy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/notesprimer.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The shiny web world - a primer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/extensibility/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Extensibility
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../schemacomponents/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    References
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            References
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../whatisnew.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What's new
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System requirements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/installconfig/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation and configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../understandingconfig.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Understanding configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functionalUsers.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Functional accounts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hostingstatic.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hosting static applications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openapidefinitions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OpenAPI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../accesscontrol.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Access control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../usingdominorestapi/richtext/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Using Domino REST API
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_10" id="__nav_5_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_10">
+            <span class="md-nav__icon md-icon"></span>
+            Using Domino REST API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usingdominorestapi/keepapplications.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domino REST API Applications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usingdominorestapi/keepcli.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domino REST API CLI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usingdominorestapi/restapitask.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domino REST API task
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usingdominorestapi/roles.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domino REST API roles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usingdominorestapi/dataformats.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DataFormats
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usingdominorestapi/encryptsign.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Encryption, decryption, and signing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usingdominorestapi/formnames.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Form and Alias handling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usingdominorestapi/metrics.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Metrics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usingdominorestapi/modenames.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reserved Form mode names
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usingdominorestapi/scopes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scopes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usingdominorestapi/console.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using Domino Console
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usingdominorestapi/logging.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Logging
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_11" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_11" id="__nav_5_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Using Web UI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_11">
+            <span class="md-nav__icon md-icon"></span>
+            Using Web UI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Schema Management
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="schemaui.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Schema Management
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#view-available-database-schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      View available database schemas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-a-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add a schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Add a schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import-a-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Import a schema
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edit-a-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edit a schema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-available-database-forms" class="md-nav__link">
+    <span class="md-ellipsis">
+      List available database forms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-new-form-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add new form schema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activate-a-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activate a form
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-form-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change form configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-a-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add a mode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone-a-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clone a mode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compare-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compare modes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-available-database-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      List available database views
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activate-a-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activate a view
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edit-a-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edit a view
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-available-database-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      List available database agents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activate-an-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activate an agent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#view-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      View Source
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scopeui.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scope Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="quickconfigui.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Config
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="appui.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Application Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="oauthconsentui.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OAuth Consents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_12" id="__nav_5_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_12">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/authentication.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Auth\*
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/jwt.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JSON Web Token specification
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/configurationParameters.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuration <!--parameters-->
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/encryption.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Encryption Keys
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/VoltMX/setupoauthnsf.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Set up oauth.nsf
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/customIdp.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom Identity Provider (IdP)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/securingKEEPEndpoints.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Securing Domino REST API endpoints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_13" id="__nav_5_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    User tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_13">
+            <span class="md-nav__icon md-icon"></span>
+            User tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usertools/curl.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    curl
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usertools/postman.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Postman
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usertools/swagger.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Swagger UI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usertools/bruno.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bruno
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdk.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domino REST API SDKs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameters.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuration parameters
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_17" id="__nav_5_17_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Quick reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_17">
+            <span class="md-nav__icon md-icon"></span>
+            Quick reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quickreference/standards.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Standards
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quickreference/glossary.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../downloads.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Downloads
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../admincheatsheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Admin cheat sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ofba.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Extensions used to open the Microsoft Office in OFBA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../richtextension.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rich Text extension
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deprecated.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deprecated features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#view-available-database-schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      View available database schemas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-a-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add a schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Add a schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import-a-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Import a schema
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edit-a-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edit a schema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-available-database-forms" class="md-nav__link">
+    <span class="md-ellipsis">
+      List available database forms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-new-form-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add new form schema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activate-a-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activate a form
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-form-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change form configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-a-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add a mode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone-a-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clone a mode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compare-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compare modes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-available-database-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      List available database views
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activate-a-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activate a view
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edit-a-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edit a view
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-available-database-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      List available database agents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activate-an-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activate an agent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#view-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      View Source
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="schema-management">Schema Management</h1>
+<p>Select <strong>Database Management - REST API</strong> from the home page or <strong>Schemas</strong> from the side navigation pane to access the <strong>Schema Management</strong> page.</p>
+<h2 id="view-available-database-schemas">View available database schemas</h2>
+<p>The <strong>Schema Management</strong> page shows the available schemas.</p>
+<p><img alt="List Database" src="../../assets/images/ListSchemas.PNG" /></p>
+<p>You can arrange the schemas in <strong>Stack View</strong>, <strong>Card View</strong>, <strong>Alphabetical View</strong>, or <strong>NSF View</strong>. There is also a provision to search through the list either via <strong>Schema Name</strong> or <strong>NSF Name</strong>.</p>
+<h2 id="add-a-schema">Add a schema</h2>
+<p>The shape of data available is referred to as a schema. The schema is a JSON file in the design resources of the database. It gets created by a developer with Designer access to the NSF.</p>
+<p>This creates an alias to the schema. This, along with a scope, provides access to the database via the Domino REST API. One NSF can have multiple schemas, which is useful to provide different data sets or different levels of access to data.</p>
+<p>You can add a schema by <a href="#create-a-schema">creating your own schema</a> or <a href="#import-a-schema">importing a schema</a>.</p>
+<h3 id="create-a-schema">Create a schema</h3>
+<ol>
+<li>
+<p>On the <strong>Schema Management</strong> page, click <strong>Add Schema</strong>.</p>
+<p><img alt="Add schema" src="../../assets/images/addSchema.png" /></p>
+</li>
+<li>
+<p>In the <strong>Add New Schema</strong> dialog, click <strong>Create Schema</strong>.</p>
+<p><img alt="Create a schema " src="../../assets/images/createSchema.png" style="height:80%;width:80%" /></p>
+</li>
+<li>
+<p>In the <strong>Create Schema</strong> dialog:</p>
+<ol>
+<li>
+<p>Select a database from the <strong>Database</strong> drop-down list.</p>
+<p>You can also enter the database name in the <strong>Database</strong> field to filter the list of available databases.</p>
+</li>
+<li>
+<p>Select an <strong>Icon</strong>.</p>
+</li>
+<li>Enter a <strong>Schema Name</strong> and a <strong>Schema Description</strong>.</li>
+<li>Click <strong>Save Schema</strong>.</li>
+</ol>
+</li>
+</ol>
+<h3 id="import-a-schema">Import a schema</h3>
+<p>Use this option if you want to import a new schema from a JSON file produced by <a href="../../howto/database/exportsourcejson.html">exporting database schema as JSON file</a>.</p>
+<ol>
+<li>On the <strong>Schema management page</strong>, click <strong>Add Schema</strong>.</li>
+<li>In the <strong>Add New Schema</strong> dialog, click <strong>Import Schema</strong>.</li>
+<li>
+<p>Select the JSON database file and click <strong>Open</strong>. The JSON database file is the exported file from another database or within your server.</p>
+</li>
+<li>
+<p>In the <strong>Import Schema</strong> dialog:</p>
+<ol>
+<li>Choose the <code>.nsf</code> database from the <strong>Import Into Database</strong> dropdown list. The default <code>.nsf</code> is from the imported database JSON file.</li>
+<li>Update the <strong>Icon</strong>, <strong>Schema Name</strong>, <strong>Schema Description</strong>, and <strong>Formula Engine</strong> as needed. </li>
+<li>Click <strong>Save Schema</strong>. </li>
+</ol>
+</li>
+</ol>
+<p>The <code>nsf</code> database file and schema are added to the schema list.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The imported schema name must be unique. You'll be warned if you try to save a schema to a database that already has a schema with the same name.</p>
+</div>
+<h2 id="edit-a-schema">Edit a schema</h2>
+<ol>
+<li>On the <strong>Schema Management</strong> page, select the schema you want to edit.</li>
+<li>
+<p>In the schema details card, click the edit icon.</p>
+<p><img alt="Edit icon" src="../../assets/images/editschema.png" style="height:50%;width:50%" /></p>
+</li>
+<li>
+<p>In the <strong>Edit Schema</strong> dialog:</p>
+<ul>
+<li>You can select a new icon from the drop-down icon list.</li>
+<li>You can update the description of the schema in the <strong>Description</strong>.</li>
+<li>You can update the configuration by clicking the toggles to enable or disable the configuration settings. For more information, refer to the following table:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Configuration setting</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DQL Access</td>
+<td>Enable the setting to allows DQL queries to run against the elements of the schema. A mode named <code>dql</code> must be created on each form specifying the fields allowed for that form.</td>
+</tr>
+<tr>
+<td>In $DATA Scope</td>
+<td>Enable the setting to make schema available in the system <code>$DATA</code> scope. Disable the setting to limit access to the schema to those with the specific scope.</td>
+</tr>
+<tr>
+<td>Enable Code</td>
+<td><em>feature under development</em></td>
+</tr>
+<tr>
+<td>Require Revision</td>
+<td>Enable the setting to require the provision of the correct revision version of the document to update the document through an update endpoint.</td>
+</tr>
+<tr>
+<td>Prevent Design Refresh</td>
+<td>Enable the setting to flag the schema written to the database, so the Domino design task won't replace or delete the schema.</td>
+</tr>
+</tbody>
+</table>
+<!--|Allow Decryption|*feature under development*|-->
+<ul>
+<li>
+<p>You can enter a valid Notes formula in <strong>DQL Formula</strong> to limit DQL usage. The formula must evaluate to <code>@True</code> for DQL to be allowed. The default is <code>@True</code>, which means no limitations.</p>
+<p><img alt="Edit schema dialog" src="../../assets/images/editschema1.png" style="height:80%;width:80%" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>Save</strong>.</p>
+</li>
+</ol>
+<h2 id="list-available-database-forms">List available database forms</h2>
+<ol>
+<li>Select a schema from the list of schemas to load the details.</li>
+<li>
+<p>Select <strong>Database Forms</strong> from the menu bar to show the list of all the forms for the selected database schema.</p>
+<p><img alt="List Forms" src="../../assets/images/ListOfForms2.png" /></p>
+</li>
+</ol>
+<h2 id="add-new-form-schema">Add new form schema</h2>
+<p>The <strong>Add New Form Schema</strong> feature enables the creation of a new custom form through which you can set up a schema. The feature doesn't create a new form on the backend, so it won't exist in the database. Everything related to the new form is contained within the schema. Therefore, if you delete the form, it's only removed from the list of forms on the <strong>Database Forms</strong> tab.</p>
+<ol>
+<li>Click <strong>Add New Form Schema</strong>.</li>
+<li>In the <strong>Add New Form Schema</strong> dialog, enter your schema name and click <strong>Create</strong>.</li>
+<li>On the <strong>Schema Management - &lt;schema name&gt;</strong> page, select a form from the <strong>Show fields from</strong> dropdown field to display the fields of the selected form. You can also select <strong>All Fields</strong> from the dropdown field to display all the fields from all the available forms.</li>
+<li>Select the fields that you want to add to the mode.</li>
+<li>Configure the <strong>Field Setting</strong> and <strong>Mode Settings</strong> as needed for each added field.</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<p>The new form is now added to the list of forms and has an <strong>Active</strong> status.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>The form created using this feature can't be deactivated and can only be deleted. To delete the form, click the menu icon beside the form's status and select <strong>Delete</strong>. In the <strong>WARNING: Deleting Custom Form</strong> dialog, click <strong>Yes</strong> to confirm.</li>
+<li>You can identify a custom form by the marker beside the form name and by the <em>custom form</em> text below the form name.</li>
+</ul>
+</div>
+<h2 id="activate-a-form">Activate a form</h2>
+<p><strong>To activate a specific form or forms</strong></p>
+<ul>
+<li>Select the form that you want to activate, click the corresponding menu icon beside the form's status, and then select <strong>Activate</strong>.</li>
+</ul>
+<p>The activated form now has an <strong>Active</strong> status.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Clicking the menu icon and selecting <strong>Deactivate</strong> corresponding to a form deactivates the form. In the <strong>Reset Form</strong> dialog, click <strong>Yes</strong> to confirm. The form now has an <strong>Inactive</strong> status.</p>
+</div>
+<p><strong>To activate all forms</strong></p>
+<ul>
+<li>Click <strong>Activate All</strong>.</li>
+</ul>
+<p>All forms are now activated with default settings and have <strong>Active</strong> status.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>
+<p>Clicking <strong>Deactivate All</strong> deactivates all active forms and removes all the configurations you have made to each of the forms. In the confirmation dialog, click <strong>Yes</strong> to confirm. All forms now have an <strong>Inactive</strong> status.</p>
+</li>
+<li>
+<p>Clicking <strong>Deactivate All</strong> won't deactivate forms created using the <a href="#add-new-form-schema">Add New Form Schema</a> feature.  </p>
+</li>
+</ul>
+</div>
+<h2 id="change-form-configuration">Change form configuration</h2>
+<ol>
+<li>
+<p>On the <strong>Database Forms</strong> tab, click the pencil icon corresponding to the activated form that you want to edit.</p>
+<p><a href="../../assets/images/dbforms.png" rel="noopener noreferrer" target="_blank" title="Click to open in a new tab"><img alt="dbforms" src="../../assets/images/dbforms.png" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Clicking the pencil icon corresponding to an inactive form shows the <strong>Activate Form</strong> dialog, which requires you to confirm the activation of the form. If you click <strong>OK</strong>, the form is activated, and you are directed to the form <strong>Access Mode</strong> page. </p>
+</div>
+<p>The <strong>Access Mode</strong> page opens showing the <code>default</code> access mode.</p>
+<p><a href="../../assets/images/AccessMode.png" rel="noopener noreferrer" target="_blank" title="Click to open in a new tab"><img alt="Access mode" src="../../assets/images/AccessMode.png" /></a></p>
+</li>
+<li>
+<p>Under <strong>Show fields from</strong>, hover over a field item and click the <strong>+</strong> icon. This adds the field in the form. Repeat this for all the fields to be added.</p>
+<p><a href="../../assets/images/addfield.png" rel="noopener noreferrer" target="_blank" title="Click to open in a new tab"><img alt="Add field" src="../../assets/images/addfield.png" style="height:50%;width:50%" /></a></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>Click <strong>Add All Fields</strong> icon to add all the available fields to the form.</li>
+<li>Click <strong>Refresh List of Fields</strong> icon to refresh the list of avaialble fields.</li>
+<li>Use the <strong>Search Field</strong> search box to search for a field by field name.</li>
+<li>Hover over the <strong>Info</strong> icon beside the field name to show the field property. The field can be <em>editable</em>, which means that the field has <strong>Read/Write</strong> access setting. The field can also be either <em>computed</em>, <em>computed when composed</em>, or <em>computed for display</em>, which means that the field has <strong>Read Only</strong> access setting.</li>
+<li>Enter a custom field name in the <strong>Add custom field</strong> and click the <strong>+</strong> icon to add a custom field to the form.</li>
+<li>Click <strong>Delete Fields</strong>, select the fields to remove, and then click <strong>Remove</strong> to remove the selected fields from the form.</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Under <strong>Field Setting</strong>, you can set the <strong>Field Name</strong>, <strong>Field Type</strong>, and the read or write access of the field in the form.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>Click the <strong>Multi-Value</strong> toggle to the on position to specify a <strong>Field Group</strong>. The <strong>Multi-Value</strong> toggle isn't clickable to the off position if you specified a field group.</li>
+<li>Click the <strong>Required</strong> toggle to the on position to specify that the field is a required field. When set to the on position, the word <em>Required</em> is added below the name of the field in the added field list.</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Encryption feature</p>
+<p>The encryption feature is available starting from the Domino REST API v1.1.0 release. Make sure to <a href="../../howto/production/signencrypt.html">set up Domino REST API for encryption, decryption, and signing</a> before executing the following steps for encryption and signing.</p>
+<p>Click the <strong>Encrypt</strong> toggle to the on position to enable encryption. For more information on encryption and signing, see <a href="../usingdominorestapi/encryptsign.html">Using encryption, decryption, and signing during development</a>.</p>
+</div>
+</li>
+<li>
+<p>Under <strong>Mode Settings</strong>:</p>
+<ol>
+<li>
+<p>Click the pencil icon corresponding to a mode formula. A dialog opens.</p>
+<p>The following image shows the opened <strong>Formula for Delete Access</strong> dialog.  </p>
+<p><a href="../../assets/images/modeformula.png" rel="noopener noreferrer" target="_blank" title="Click to open in a new tab"><img alt="Formula Settings" src="../../assets/images/modeformula.png" /></a></p>
+</li>
+<li>
+<p>In the text field in the dialog, edit the <code>@True</code> or <code>@False</code> entry and click <strong>Save</strong> to close the dialog.</p>
+</li>
+</ol>
+<p>As a provided option, you may test the formula using the <a href="../../howto/production/testformulas.html">Test Formulas</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Signing feature</p>
+<p>The signing feature is available starting from the Domino REST API v1.1.0 release. Make sure to <a href="../../howto/production/signencrypt.html">set up Domino REST API for encryption, decryption, and signing</a> before executing the following steps for encryption and signing.</p>
+<p>Click the <strong>Sign Document</strong> toggle to the on position to enable this feature. For more information on encryption and signing, see <a href="../usingdominorestapi/encryptsign.html">Using encryption, decryption, and signing during development</a>.</p>
+</div>
+</li>
+<li>
+<p>(<strong>Optional</strong>) Under <strong>Validation Rules</strong>:</p>
+<ol>
+<li>Click <strong>Add Rule</strong> if you want to add a validation rule to validate the value of a field. The <strong>Add Rule</strong> dialog opens.</li>
+<li>Enter the validation formula in the <strong>Formula</strong> field and the error message in the <strong>Error Message</strong> field.</li>
+<li>Click <strong>Add</strong>.</li>
+</ol>
+<details class="example">
+<summary>Example of validation rule</summary>
+<p>The image shows an example of an added validation rule requiring that the value of the <code>first_name</code> field must be <em>Adam</em>.</p>
+<p><img alt="validation rule" src="../../assets/images/validationrule.png" style="height:70%;width:70%" /></p>
+</details>
+<details class="tip">
+<summary>Tips for validation rules</summary>
+<ul>
+<li>You can add a validation rule for each field you added to the database form. </li>
+<li>To delete a validation rule, select the validation rule and then click <strong>Delete Rule</strong>. In the confirmation dialog, click <strong>Delete</strong>.</li>
+<li>
+<p>You can go to <a href="../../tutorial/swagger.html">OpenAPI</a> to check if the added validation rule works. As an example, an error occurs showing the provided error message when creating a document with the <code>first_name</code> field having a value of <em>George</em> since it is not equal to the value set by the formula, which is <em>Adam</em>.</p>
+<p>The image shows the document being created with an incorrect value for the first_name field. Click the image for better viewing.</p>
+<p><a href="../../assets/images/validationrule1.png" rel="noopener noreferrer" target="_blank" title="Click to open in a new tab"><img alt="validation rule" src="../../assets/images/validationrule1.png" style="height:75%;width:75%" /></a></p>
+<p>The image shows the error message. Click the image for better viewing</p>
+<p><a href="../../assets/images/validationrule2.png" rel="noopener noreferrer" target="_blank" title="Click to open in a new tab"><img alt="validation rule" src="../../assets/images/validationrule2.png" style="height:75%;width:75%" /></a></p>
+</li>
+</ul>
+</details>
+</li>
+<li>
+<p>Click <strong>Save</strong>.</p>
+</li>
+</ol>
+<h2 id="add-a-mode">Add a mode</h2>
+<ol>
+<li>On the <strong>Database Forms</strong> tab, click the pencil icon corresponding to the activated form that you want to add a mode. The form <strong>Access Mode</strong> page opens showing the <code>default</code> access mode.</li>
+<li>Click <strong>Add Mode</strong>.</li>
+<li>
+<p>In the <strong>Add New Mode</strong> dialog, enter the name of the new mode and click <strong>Save</strong>. The new mode has been added to the <code>Mode</code>list.</p>
+<p>The following image shows an example of the added mode, which is the <code>dql</code>.</p>
+<p><a href="../../assets/images/modeList.png" rel="noopener noreferrer" target="_blank" title="Click to open in a new tab"><img alt="mode list" src="../../assets/images/modeList.png" /></a></p>
+</li>
+<li>
+<p>Add fields and set the read or write access formula for each of the added fields. </p>
+</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<h2 id="clone-a-mode">Clone a mode</h2>
+<p>Use <strong>Clone Mode</strong> to add a new mode based on an existing mode in the same schema.</p>
+<ol>
+<li>On the <strong>Database Forms</strong> tab, click the pencil icon corresponding to the activated form that you want to clone a mode. The form <strong>Access Mode</strong> page opens showing the <code>default</code> access mode.</li>
+<li>From the <strong>Mode</strong> dropdown list, choose the mode you want to clone, for example the <code>default</code> mode.</li>
+<li>Click <strong>Clone Mode</strong>.</li>
+<li>
+<p>In the <strong>Clone &lt;mode name&gt;</strong> dialog, enter the name of the mode and click <strong>Save</strong>. </p>
+<p>The new mode cloned from an existing mode is now available. You can remove or add fields to the new mode and read or write access formula for each of the fields.</p>
+</li>
+<li>
+<p>Click <strong>Save</strong>.</p>
+</li>
+</ol>
+<h2 id="compare-modes">Compare modes</h2>
+<p>Use this function to see the differences between the modes of a selected form. To use this function, you must have at least two modes in your selected form.</p>
+<ol>
+<li>On the <strong>Database Forms</strong> tab, click the pencil icon corresponding to the activated form that you want to compare the modes. The form <strong>Access Mode</strong> page opens showing the <code>default</code> access mode.</li>
+<li>Click <strong>Open Mode Compare</strong>. The <strong>Mode Compare - &lt;form name&gt;</strong> page opens.</li>
+<li>Select the modes to compare from the drop-down lists in the comparison columns. The comparison result is displayed.</li>
+</ol>
+<p><img alt="Compare Mode" src="../../assets/images/compareMode.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>A field available in only one mode is highlighted, and then indicated as <strong>Field not existing</strong> in the other mode. </li>
+<li>Fields with differences are highlighted. </li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>Click the <strong>Show only fields with differences</strong> toggle to only show fields with differences.</li>
+<li>In case there are too many fields, and you want to find a specific field, you can enter the field name in the <strong>Search Field</strong> to only display the specific field if available.</li>
+<li>Click <strong>Add New Column</strong> to add more modes in the comparison.</li>
+<li>Click the close icon to close the <strong>Mode Compare - &lt;form name&gt;</strong> page.</li>
+</ul>
+</div>
+<h2 id="list-available-database-views">List available database views</h2>
+<ol>
+<li>Select a schema from the list of schemas to load the details.</li>
+<li>
+<p>Select <strong>Database Views</strong> from the menu bar. This lists all the views for the selected schema.</p>
+<p><img alt="List Views" src="../../assets/images/ListOfViews1.png" /></p>
+</li>
+</ol>
+<h2 id="activate-a-view">Activate a view</h2>
+<p><strong>To activate a specific view or views</strong>:</p>
+<ul>
+<li>Select the view that you want to activate, and then click the corresponding <strong>Active</strong> option under <strong>Status</strong>.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Clicking the <strong>Inactive</strong> option corresponding to a view deactivates the view. On the <strong>Reset Views Columns</strong> dialog, click <strong>Yes</strong> to confirm deactivation of the view. </p>
+</div>
+<p><strong>To activate all views</strong>:</p>
+<ul>
+<li>Click <strong>Activate All</strong>.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Clicking <strong>Deactivate All</strong> deactivates all active views and removes all configurations you have made to each of the views. On the <strong>Reset ALL View Columns</strong> dialog, click <strong>Yes</strong> to confirm deactivation of all views.</p>
+</div>
+<h2 id="edit-a-view">Edit a view</h2>
+<p>See <a href="../../howto/database/editviewcolumn.html">Edit a database view of a schema</a> for more information.</p>
+<h2 id="list-available-database-agents">List available database agents</h2>
+<ol>
+<li>Select a schema from the list of schemas to load the details.</li>
+<li>
+<p>Select <strong>Database Agents</strong> from the menu bar. This lists all the Agents for the selected database.</p>
+<p><img alt="List Agents" src="../../assets/images/ListOfAgents.png" /></p>
+</li>
+</ol>
+<h2 id="activate-an-agent">Activate an agent</h2>
+<p><strong>To activate a specific agent or agents</strong></p>
+<ul>
+<li>Select the agent you want to activate, and then click the corresponding <strong>Active</strong> option under <strong>Status</strong>.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Clicking the <strong>Inactive</strong> option corresponding to an agent deactivates the agent.</p>
+</div>
+<p><strong>To activate all agents</strong></p>
+<ul>
+<li>Click <strong>Activate All</strong>.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Clicking <strong>Deactivate All</strong> deactivates all active agents. On the <strong>Reset ALL Agents</strong> dialog, click <strong>Yes</strong> to confirm the deactivation of all agents.</p>
+</div>
+<h2 id="view-source">View Source</h2>
+<p>The <strong>Source</strong> tab allows you to view the database schema details in JSON format.</p>
+<ol>
+<li>Select a schema from the list of schemas to load the schema details.</li>
+<li>
+<p>Select <strong>Source</strong> from the menu bar to show the details for the selected schema in the following view mode:</p>
+<ul>
+<li><strong>Text View</strong> - shows the text view of the details of the selected schema in JSON format</li>
+<li><strong>Tree View</strong> - shows the collapsible view of the details of the selected schema in JSON format</li>
+</ul>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>
+<p>To edit the database schema JSON details, see <a href="../../howto/database/editsourcejson.html">Edit database schema JSON</a>.</p>
+</li>
+<li>
+<p>To export the schema in a JSON file, see <a href="../../howto/database/exportsourcejson.html">Export schema as JSON file</a>.</p>
+</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 3, 2025 12:30:10">April 3, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022-2025, HCL America, Inc. | <a href="https://www.hcl-software.com/legal/privacy" target="_blank">Privacy Statement</a> | <a href="https://www.hcl-software.com/legal/terms-use" target="_blank">Terms of Use</a> <br/> <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE/Domino-rest-api" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

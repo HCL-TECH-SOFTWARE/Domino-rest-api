@@ -1,0 +1,8 @@
+#!/bin/bash
+# After shutdown - kill the Java task
+if [ "$KEEP_LAUNCH_TYPE" != "script" ]; then
+  echo KEEP started in task mode, no post_shutdown action required
+  exit 0
+fi
+
+pkill -9 -f projectkeep

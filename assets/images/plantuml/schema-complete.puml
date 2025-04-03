@@ -1,0 +1,237 @@
+@startjson SchemaComplete
+{
+	"apiName": "demo",
+	"schemaName": "demoschema",
+	"description": "Explaining how the API works",
+	"filePath": "samples/explainer.nsf",
+	"iconName": "weather",
+	"isActive": true,
+	"requireRevisionToUpdate": false,
+    "allowDecryption": true,
+    "formulaEngine": "domino",
+	"openAccess": true,
+	"allowCode": false,
+	"dqlAccess": true,
+    "dqlFormula" : {
+        "formulaType" : "domino",
+        "formula" : "@IsMember(@UserName,[\"DQLUsers\"])"
+    }, 
+	"views": [
+        {
+            "name": "($All)",
+            "alias": [
+                "All Documents",
+                "Alle Dokumente"
+            ],
+            "unid": "C7F4FC872D34DDB580257E99003EB09C"
+        },
+        {
+        	"name": "Workflow\\pending",
+        	"alias": [
+        		"(wfpending))"
+        	],
+        	"unid": "ABC1234567890ABC1234567890ABCDEF"
+        }
+    ],
+	"agents": [],
+	"forms": [
+		{
+			"formName": "Database",
+			"formModes": [
+				{
+					"modeName": "default",
+					"fields": [{
+                            "name": "Form",
+                            "type": "string",
+                            "readOnly": true
+                        },
+                        {
+                            "name": "apiName",
+                            "type": "string"
+                        },
+                        {
+                            "name": "filePath",
+                            "type": "string"
+                        },
+                        {
+                            "name": "description",
+                            "type": "string"
+                        },
+                        {
+                            "name": "Owner",
+                            "type": "string",
+                            "format": "author"
+                        }
+                    ],
+                    "readAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@True"
+                    },
+                    "writeAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@False"
+                    },
+                    "deleteAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@False"
+                    },
+					"computeWithForm": false
+				},
+				{
+					"modeName": "admin",
+					"fields": [{
+                            "name": "Form",
+                            "type": "string",
+                            "readOnly": true
+                        },
+                        {
+                            "name": "apiName",
+                            "type": "string"
+                        },
+                        {
+                            "name": "filePath",
+                            "type": "string"
+                        },
+                        {
+                            "name": "description",
+                            "type": "string"
+                        },
+                        {
+                            "name": "config",
+                            "type": "string"
+                        },
+                        {
+                            "name": "isActive",
+                            "type": "string"
+                        },
+                        {
+                            "name": "preload",
+                            "type": "string"
+                        },
+                        {
+                            "name": "Owner",
+                            "type": "string",
+                            "format": "author"
+                        }
+                    ],
+                    "readAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@IsMember(\"LocalKeepAdmins\"; @UserNamesList)"
+                    },
+                    "writeAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@IsMember(\"LocalKeepAdmins\"; @UserNamesList)"
+                    },
+                    "deleteAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@False"
+                    },
+					"computeWithForm": true
+				},
+				{
+					"modeName": "activation",
+					"fields": [{
+                            "name": "Form",
+                            "type": "string",
+                            "readOnly": true
+                        },
+                        {
+                            "name": "apiName",
+                            "type": "string"
+                        },
+                        {
+                            "name": "filePath",
+                            "type": "string"
+                        },
+                        {
+                            "name": "description",
+                            "type": "string"
+                        },
+                        {
+                            "name": "Owner",
+                            "type": "string",
+                            "format": "author"
+                        }
+                    ],
+					"readAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@IsMember(\"LocalKeepAdmins\"; @UserNamesList)"
+                    },
+                    "writeAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@IsMember(\"LocalKeepAdmins\"; @UserNamesList)"
+                    },
+                    "deleteAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@False"
+                    },
+					"computeWithForm": true
+				}
+			]
+		},
+		{
+			"formName": "Application",
+			"formModes": [
+				{
+					"modeName": "default",
+					"fields": [{
+                            "name": "Form",
+                            "type": "string",
+                            "readOnly": true
+                        },
+                        {
+                            "name": "appName",
+                            "type": "string"
+                        },
+                        {
+                            "name": "fullName",
+                            "type": "string"
+                        },
+                        {
+                            "name": "description",
+                            "type": "string"
+                        },
+                        {
+                            "name": "Owner",
+                            "type": "string",
+                            "format": "author"
+                        },
+                        {
+                            "name": "ApprovalStatus",
+                            "type": "string",
+                            "format": "string"
+                        },
+                        {
+                            "name": "RejectedComments",
+                            "type": "string",
+                            "format": "string"
+                        },
+                        {
+                            "name": "Databases",
+                            "type": "string",
+                            "format": "string"
+                        }
+                    ],
+					"readAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "!@IsNotMember(UserNamesList;Owner)"
+                    },
+                    "writeAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "!@IsNotMember(UserNamesList;Owner)"
+                    },
+                    "deleteAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@False"
+                    },
+					"computeWithForm": true
+				}
+			]
+		}
+	],
+	"formAliases": {
+        "Database": "Database",
+        "Application": "Application"
+    }
+}
+@endjson

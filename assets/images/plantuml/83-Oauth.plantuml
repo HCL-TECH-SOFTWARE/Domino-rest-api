@@ -1,0 +1,33 @@
+@startuml OAuthDance
+autonumber
+title OAuth Flow
+actor       "Resource\nOwner" as human
+participant "Public Client\nor\nApplication Server" as App
+participant "OAuth\nAuthorization\nEndpoint" as OAuth1
+participant "OAuth\nToken\nEndpoint" as OAuth2
+participant "OAuth\nRegistration\nEndpoint" as OAuth3
+participant "Identity Provider" as IdP
+actor "Administrator" as admin
+database "KEEP API\nEndpoint" as keep
+group registration
+  admin -> OAuth3: register new application
+  admin -> OAuth3: Define scopes for application
+  admin -> App: Provide client id
+end
+human -> App: request resource
+group use PKCE for public client
+human <-- App: request\nauthorization
+human -> OAuth1: access OAuth
+OAuth1 --> IdP: redirect to Authentication
+human <-> IdP: authenticates
+human -> OAuth1: authorizes client\nfor registered scopes
+human <-- OAuth1: redirects with authorization code
+human -> App: provide authorziation code
+App -> OAuth2: send client id\nand authorization code
+end
+App <- OAuth2: provide access token (JWT)
+group covered by KEEP
+App -[#000000]> keep: send access token (JWT) with resource request
+App <[#000000]- keep: provide resource
+end
+@enduml

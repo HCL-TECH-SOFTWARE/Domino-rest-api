@@ -1,0 +1,231 @@
+@startjson
+{
+  "PORT": 8880,
+  "ADMINPORT": 8889,
+  "METRICSPORT": 8890,
+  "shutdownkey": "***",
+  "CalendarTemplateFileName": "mail12.ntf",
+  "AllowJwtMail": true,
+  "versions": {
+    "core": {
+      "path": "/schema/openapi.core.json",
+      "active": true
+    },
+    "admin": {
+      "path": "/schema/openapi.admin.json",
+      "active": true
+    },
+    "pim": {
+      "path": "/schema/openapi.pim.json",
+      "active": true
+    }
+  },
+  "verticles": {
+    "Design": {
+      "worker": false,
+      "className": "com.hcl.domino.keep.verticles.DominoDefaultVerticle",
+      "tags": {
+        "design": "com.hcl.domino.keep.dbrequests.designcode",
+        "code": "com.hcl.domino.keep.dbrequests.designcode"
+      },
+      "threadPoolName": "codeThreads",
+      "active": true
+    },
+    "Data": {
+      "className": "com.hcl.domino.keep.verticles.DominoDefaultVerticle",
+      "tags": {
+        "data": "com.hcl.domino.keep.dbrequests.data"
+      },
+      "active": true
+    },
+    "Identity": {
+      "worker": false,
+      "className": "com.hcl.domino.keep.verticles.DominoDefaultVerticle",
+      "tags": {
+        "authentication": "com.hcl.domino.keep.dbrequests.identity"
+      },
+      "active": true
+    },
+    "PIM": {
+      "worker": true,
+      "className": "com.hcl.domino.keep.verticles.DominoDefaultVerticle",
+      "tags": {
+        "calendar": "com.hcl.domino.keep.dbrequests.pim",
+        "settings": "com.hcl.domino.keep.dbrequests.pim",
+        "mail": "com.hcl.domino.keep.dbrequests.pim",
+        "meta": "com.hcl.domino.keep.dbrequests.pim",
+        "contacts": "com.hcl.domino.keep.dbrequests.pim",
+        "tasks": "com.hcl.domino.keep.dbrequests.pim"
+      },
+      "active": true
+    },
+    "Admin": {
+      "worker": false,
+      "className": "com.hcl.domino.keep.verticles.DominoDefaultVerticle",
+      "tags": {
+        "admin": "com.hcl.domino.keep.dbrequests.admin",
+        "admin-database": "com.hcl.domino.keep.admin",
+        "admin-user": "com.hcl.domino.keep.admin",
+        "directory-assitance": "com.hcl.domino.keep.admin"
+      },
+      "active": true
+    },
+    "RestAPI": {
+      "className": "com.hcl.domino.keep.verticles.HttpListener",
+      "worker": true,
+      "threadPoolName": "httpThreads",
+      "threadPoolSize": 20,
+      "versions": {
+        "core": {
+          "package": "com.hcl.domino.keep.handlers.core",
+          "route": "/api/v1",
+          "defaultClass": "com.hcl.domino.keep.handlers.core.DefaultJsonHandler",
+          "defaultDatabase": "keepconfig",
+          "jsonBodyLimit": 5000000,
+          "filesBodyLimit": 10000000
+        },
+        "admin": {
+          "package": "com.hcl.domino.keep.handlers.core",
+          "route": "/api/admin-v1",
+          "defaultClass": "com.hcl.domino.keep.handlers.core.DefaultJsonHandler",
+          "defaultDatabase": "names",
+          "jsonBodyLimit": 5000000,
+          "filesBodyLimit": 10000000
+        },
+        "pim": {
+          "package": "com.hcl.domino.keep.handlers.pim",
+          "route": "/api/pim-v1",
+          "defaultClass": "com.hcl.domino.keep.handlers.pim.DefaultPimHandler",
+          "defaultDatabase": "MAIL",
+          "jsonBodyLimit": 5000000,
+          "filesBodyLimit": 10000000
+        }
+      },
+      "active": true
+    },
+    "AsyncAgentScheduler": {
+      "worker": true,
+      "className": "com.hcl.domino.keep.verticles.AgentSchedulerServiceVerticle",
+      "tags": {
+        
+      },
+      "active": true,
+      "threadPoolName": "AgentScheduler",
+      "threadPoolSize": 10,
+      "agentDefaultMaxDurationSeconds": 3600,
+      "logFrequencyMs": 30000
+    }
+  },
+  "cache": {
+    "KeepRequest": "off",
+    "NameLookup": "Java",
+    "JWTLogout": "Redis",
+    "Subscriptions": "Redis",
+    "OOO": "Redis"
+  },
+  "webapps": {
+    "active": true,
+    "appRoot": "/keepweb",
+    "appSource": "keepweb.d"
+  },
+  "vertx": {
+    
+  },
+  "prometheusMetrics": {
+    "embeddedServerEndpoint": "/metrics",
+    "enabled": true,
+    "publishQuantiles": true,
+    "startEmbeddedServer": true
+  },
+  "Redis": {
+    "sentinel": false,
+    "master": "master",
+    "cluster": [
+      "redis://127.0.0.1:6379"
+    ]
+  },
+  "DisableEventBusSocket": false,
+  "LocalMode": false,
+  "GodMode": false,
+  "disableDominoLogin": false,
+  "disableJwtExpiryCheck": false,
+  "JwtAlgorithm": "RSA",
+  "JwtIssuer": "Project KEEP RANDOM",
+  "JwtDuration": 60,
+  "maxJwtDuration": 360,
+  "JwtPrivateKey": "***",
+  "JwtPrivateKeyFile": "Path to PEM private key file",
+  "JwtPublicKey": "The public key of JWT issuer if JwtUseCert = true",
+  "JwtPublicKeyFile": "Path to PEM public Cert file",
+  "JwtUsePubPrivKey": false,
+  "JwtUsePemFile": false,
+  "TLSFile": "***",
+  "TLSPassword": "***",
+  "TLSType": "pfx",
+  "cipher": {
+    "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384": true,
+    "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384": true,
+    "TLS_RSA_WITH_AES_256_GCM_SHA384": true
+  },
+  "enabledProtocols": {
+    "TLSv1.3": false,
+    "TLSv1.2": true
+  },
+  "removeInsecureProtocols": {
+    "TLSv1": true,
+    "TLSv1.1": true,
+    "SSLv2Hello": true
+  },
+  "jwt": {
+    "demoProvider": {
+      "active": true,
+      "algorithm": "RS256",
+      "key": "---***----"
+    },
+    "demo2provider": {
+      "active": false,
+      "algorithm": "ES512",
+      "keyfile": "Somekey.pubkey",
+      "key": "ABC***EFGH"
+    }
+  },
+  "jwtAlgorythms": [
+    "RS256",
+    "RS384",
+    "RS512",
+    "ES256",
+    "ES384",
+    "ES512"
+  ],
+  "CORS": {
+    "localhost": true,
+    "hcl.com": true,
+    ".local": true
+  },
+  "PIM": {
+    "SystemFolders": {
+      "($Inbox)": "Inbox",
+      "($SoftDeletions)": "Trash",
+      "($All)": "All Documents",
+      "($Sent)": "Sent",
+      "($JunkMail)": "SPAM",
+      "($Contacts)": "Contacts",
+      "($Drafts)": "Drafts",
+      "($Journal)": "Journal",
+      "($Calendar)": "Calendar",
+      "($ToDo)": "Tasks",
+      "(Birthdays & Anniversaries)": "Birthdays & Anniversaries"
+    }
+  },
+  "DEBUG": true,
+  "LOG_DIR": "/local/notesdata/logs",
+  "PEMCert": "***",
+  "PEMKey": "***",
+  "Keep Properties": {
+    "keep-name": "Project KEEP API",
+    "keep-desc": "Next generation APIs for HCL Domino",
+    "keep-version": "0.9.20-SNAPSHOT",
+    "keep-vendor": "HCL Labs"
+  }
+}
+@endjson

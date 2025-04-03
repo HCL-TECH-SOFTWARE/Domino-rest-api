@@ -1,0 +1,11 @@
+@@startuml
+start
+:get domino document;
+: transform Domino to "raw" JSON;
+: get ParentDocument (WHY?);
+: Mix Parent with actual document (getResultWithResponses);
+: updateCalendarOutputdata;
+: get DominoJMapMapper;
+:return JSON;
+end
+@@enduml

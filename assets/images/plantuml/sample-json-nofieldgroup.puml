@@ -1,0 +1,9 @@
+@startjson SampleJsonNoFieldGroup
+{
+	"Customer" :"Peter Pan",
+	"Location" : "Neverland",
+	"Name" : [ "Nibs","Tootles", "Curly"],
+	"age" : [ 34, 12, 7 ],
+    "fruit" : ["Banana", "Apple", "Banana"]
+}
+@endjson

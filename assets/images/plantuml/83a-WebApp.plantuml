@@ -1,0 +1,14 @@
+@startuml WebAuth
+autonumber
+title Authentication flow for apps or browser
+actor       "Browser" as human
+participant "Identity Provider" as IdP1
+database "KEEP API\nEndpoint" as keep
+note right of human: Browsers can't keep secrets\nso they can't have an app secret 
+human <-> IdP1: authenticates
+human <- IdP1: provide access token (JWT)
+group covered by KEEP
+human -[#000000]> keep: send access token (JWT)\n with resource request
+human <[#000000]- keep: provide resource
+end
+@enduml
