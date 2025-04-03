@@ -23,6 +23,4 @@ Directory where you can modify some of Domino REST API's settings. Located in yo
 
 #### domino-keep.log
 
-The default file for storing logs. It's stored in the subdirectory `IBM_TECHNICAL_SUPPORT` of your `Notes/Domino` data directory. For more information, see [Logging](../troubleshooting.md#logging).
-
-
+The default file for storing logs. It's stored in the subdirectory `IBM_TECHNICAL_SUPPORT` of your `Notes/Domino` data directory. For more information, see [Logging](../usingdominorestapi/logging.md).

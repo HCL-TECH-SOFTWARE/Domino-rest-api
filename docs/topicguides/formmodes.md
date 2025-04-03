@@ -16,7 +16,7 @@ Form Modes are enhanced security measures provided by [The Barbican](barbican.md
 
 - [Form Modes](barbican.md#form-modes)
 - [Reserved Form mode names](../references/usingdominorestapi/modenames.md)
-- [Forms & Mode](../howto/database/enablingadb.md#forms--mode)
+- [Forms & Mode](../howto/database/enablingadb.md#forms-and-mode)
 
 ## Let's connect
 
