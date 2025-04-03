@@ -2,6 +2,8 @@
 
 --8<-- "keepmngtURLcaution1.md"
 
+For more information, see [Domino REST API task](../../references/usingdominorestapi/restapitask.md) and [ports](../../howto/production/prodports.md)
+
 ## About this task
 
 Domino REST API implements an OAuth2 provider. The following is a guide for setting up and configuring Domino REST API's OAuth2 provider.
@@ -67,14 +69,7 @@ The `oauth.nsf` database exists in your Domino data directory. The Domino IdP us
     - By default, the configured access level is `Author` with the capability to create information but unable to remove it. 
     - All servers involved must have at least an `Editor` access level and the `OAuthAdmin` role assigned. If you **DON'T** have this role, you'll only see your documents or records.
     - Administrators requiring troubleshooting capabilities should have `Editor` access level and the `OAuthAdmin` role assigned.
-     
+
     - [Enforce a consistent ACL](https://help.hcltechsw.com/domino/14.0.0/admin/conf_enforcingaconsistentaccesscontrollist_t.html?hl=consistent%2Cacl).
     - Ensure the database is copied to all servers involved.
-
-
-
-
-
-
-
 

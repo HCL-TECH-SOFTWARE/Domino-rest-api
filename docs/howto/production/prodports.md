@@ -1,7 +1,6 @@
-#  Configure ports in production
+# Configure ports in production
 
 By default the ports are set in Domino REST API as specified in the documentation [configuring ports](../../tutorial/installconfig/configuringPorts.md)  and there's no supported way to change them other than creating a configuration setting as specified in the [parameters](../../references/parameters.md).
-
 
 ## Procedure
 
@@ -28,8 +27,9 @@ By default the ports are set in Domino REST API as specified in the documentatio
     ``` 
 
 4. Copy the function where you need to change a certain port in `config.json` values in any text/code app such as VSCode, Notepad, Notepad++ etc, and save the file in `.json` format inside the `keepconfig.d` directory.
- 
-    !!!note "Naming your json files"
+
+    !!! note "Naming your json files"
+
         The config loader processes json files in alphabetical order, so when you have conflicting entries, the last one wins. Use a name that reveals its purpose such as `management-port.json`.
 
 5. Restart Domino REST API on all servers with this new configuration.
