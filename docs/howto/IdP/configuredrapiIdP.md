@@ -2,8 +2,6 @@
 
 --8<-- "keepmngtURLcaution1.md"
 
-For more information, see [Domino REST API task](../../references/usingdominorestapi/restapitask.md) and [ports](../../howto/production/prodports.md)
-
 ## About this task
 
 Domino REST API implements an OAuth2 provider. The following is a guide for setting up and configuring Domino REST API's OAuth2 provider.
