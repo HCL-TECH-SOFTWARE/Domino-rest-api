@@ -14,29 +14,25 @@ hide:
 Open the <a href="assets/images/svg/keepblockdiagram.svg">overview</a>
 </object>
 
-## TL/TR
-
-!!! tip
-
-    - Get a first idea what you are dealing with by [Understanding how the Domino REST API works](topicguides/understanding.md)
-
-    - If you want to start quickly, go to [Quickstart](tutorial/quickstart.md).
-
-    - For installation information, see [Installation and configuration](tutorial/installconfig/index.md).
-
-    - For everything that admin needs to know, use the [Admin cheat sheet](references/admincheatsheet.md).
-
-    - Trouble running the Domino REST API? Use the [Troubleshooting guide](references/troubleshooting.md).
-
-    - To know features that have been deprecated in the current and earlier releases, see [deprecated features](references/deprecated.md).
-
 ---
 
-!!! tip "Ol' Notes hands start here"
+## Getting started
 
-    Are you coming from a Notes client with a Domino server background? You never had to deal with certificates, JSON Web Token, multiple TCP ports, OAuth, and all the fancy new terms of a shiny new web world. We got you covered, read [the primer](topicguides/notesprimer.md) to get started
+- Get a first idea of what you are dealing with by [understanding how the Domino REST API works](topicguides/understanding.md).
 
----
+- If you want to start quickly, go to [Quickstart](tutorial/quickstart.md).
+
+- For installation information, see [Installation and configuration](tutorial/installconfig/index.md).
+
+- For the latest release information about HCL Domino REST API, see [What's new](whatsnew/index.md).
+
+- To know features deprecated in the current and earlier releases, see [deprecated features](references/deprecated.md).
+
+- Having trouble running the Domino REST API? Use the [troubleshooting guide](references/troubleshooting.md).
+
+<!-- For everything that admin needs to know, use the [Admin cheat sheet](references/admincheatsheet.md).-->
+
+- Are you coming from a Notes client with a Domino server background? You never had to deal with certificates, JSON Web Token, multiple TCP ports, OAuth, and all the fancy new terms of a shiny new web world. Read [the primer](topicguides/notesprimer.md) to get started.
 
 !!! info "API definitions now available"
 

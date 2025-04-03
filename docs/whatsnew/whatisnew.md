@@ -1,4 +1,4 @@
-# What's new for v1.1.2 and earlier
+# What's new for Domino REST API v1.1.2 and earlier
 
 <!-- prettier-ignore -->
 !!! note "Important"

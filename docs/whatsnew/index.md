@@ -11,7 +11,7 @@ The What's new contains information about the latest features, improvements, fix
 
 ???+ info "Release summary"
 
-    Release date: [insert release date]
+    Release date: April 21, 2025
     
     - [insert number] New features
     - [insert number] Improvements
