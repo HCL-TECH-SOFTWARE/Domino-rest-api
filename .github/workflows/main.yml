@@ -19,7 +19,7 @@ jobs:
           python-version: 3.x
       - name: Install Mkdocs and pre-reqs
         run: |
-          pip install mkdocs-material
+          pip install mkdocs-material==9.6.9
           pip install mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugin mike mkdocs-markdownextradata-plugin mkdocs-git-authors-plugin mkdocs-blog-plugin mkdocs-section-index
       - name: Deploy GH Pages
         run: |
