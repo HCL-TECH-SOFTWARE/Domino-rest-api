@@ -1,4 +1,4 @@
-# Post installation task overview
+# Post installation tasks overview
 
 After installation the Domino REST API will run on port 8880 with http and a transient JWT token for single server use. This is nice to try things out, but not production ready. Familiarize yourself with the tasks listed here to finalize a **production worthy** Domino REST API deployment.
 
