@@ -82,7 +82,7 @@ extra_css:
 plugins:
   - search
   - awesome-pages
-#  - section-index
+  - section-index
   - tags
   - git-revision-date-localized:
       type: date
