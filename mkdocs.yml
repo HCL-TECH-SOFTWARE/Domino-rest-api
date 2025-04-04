@@ -21,8 +21,6 @@ theme:
   icon:
     repo: fontawesome/brands/github
   font: false
-  #  text: Roboto
-  #  code: Roboto Mono
   favicon: favicon.ico
 
 # Markdown Extensions
@@ -36,6 +34,8 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+#      emoji_index: !!python/name:material.extensions.emoji.twemoji
+#      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.snippets:
       base_path:
         - "docs/.snippets"
