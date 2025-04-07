@@ -80,12 +80,9 @@ This setting can get reset each time you start Notes depending upon your organiz
 
 ## Getting an empty response when executing an API request method after a server upgrade
 
-Check if the schema and the scope still exist. The schema is stored in the database the schema is for, while the scope is stored in `KeepConfig.nsf`. There is a probability that the schema is missing. One possible reason for this is that the server upgrade replaced the design of the database, as opposed to just refreshing the design. Replacing the design removes all the design elements in the database, including the schema, and updates it with the latest design from a template. It can happen to both the system and non-system databases. 
+Check if the schema and the scope still exist. The schema is stored in the database the schema is for, while the scope is stored in `KeepConfig.nsf`. There is a probability that the schema is missing. One possible reason for this is that the server upgrade replaced the design of the database, as opposed to just refreshing the design. Replacing the design removes all the design elements in the database, including the schema, and updates it with the latest design from a template. It can happen to both the system and non-system databases.
 
 **Solution**:
 
 - You can create a new schema and scope and repeat the API request method.  
-- You can then protect the individual design elements of your database, including the new schema you created. For more information, see the [related topic](https://help.hcl-software.com/dom_designer/14.0.0/basic/H_TO_COPY_AN_INDIVIDUAL_DESIGN_ELEMENT_STEPS_MIDTOPIC_182746832029234956.html) in the *Domino Designer* documentation. 
-
-
-
+- You can then protect the individual design elements of your database, including the new schema you created. For more information, see the [related topic](https://help.hcl-software.com/dom_designer/14.0.0/basic/H_TO_COPY_AN_INDIVIDUAL_DESIGN_ELEMENT_STEPS_MIDTOPIC_182746832029234956.html) in the *Domino Designer* documentation.

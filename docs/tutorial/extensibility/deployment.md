@@ -6,7 +6,7 @@
 
 !!! info "Next"
 
-    [Setting up a devcontainer](devcontainer.md)
+    [Setting up a Development Container](devcontainer.md)
 
 ## Let's connect
 

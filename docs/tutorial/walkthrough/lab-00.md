@@ -36,7 +36,7 @@ curl --version
 
 - Postman installed (can start)
 
-- Domino running with REST API active: open [localhost:8880](http://localhost:8880)(if you're using KEEP installed locally) or [web](your KEEP server)(if you're connecting to internet) and see:
+- Domino running with REST API active: open [localhost:8880](http://localhost:8880)(if you're using KEEP installed locally) or **web** (your KEEP server if you're connecting to internet) and see:
 
 ![Landing page](img/landingPage.png)
 

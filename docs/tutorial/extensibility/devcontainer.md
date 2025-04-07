@@ -35,7 +35,7 @@ We start with a Java development image and add Domino and tooling
 
 ## Side cars anyone?
 
--8<-- "future.md"
+--8<-- "future.md"
 
 ## Let's connect
 

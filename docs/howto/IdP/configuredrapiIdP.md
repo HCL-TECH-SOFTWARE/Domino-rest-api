@@ -67,14 +67,7 @@ The `oauth.nsf` database exists in your Domino data directory. The Domino IdP us
     - By default, the configured access level is `Author` with the capability to create information but unable to remove it. 
     - All servers involved must have at least an `Editor` access level and the `OAuthAdmin` role assigned. If you **DON'T** have this role, you'll only see your documents or records.
     - Administrators requiring troubleshooting capabilities should have `Editor` access level and the `OAuthAdmin` role assigned.
-     
+
     - [Enforce a consistent ACL](https://help.hcltechsw.com/domino/14.0.0/admin/conf_enforcingaconsistentaccesscontrollist_t.html?hl=consistent%2Cacl).
     - Ensure the database is copied to all servers involved.
-
-
-
-
-
-
-
 

@@ -34,6 +34,12 @@ This step is strictly optional. It can, after the initial setup steps greatly im
 
     [Setting up the Maven Java project](javaproject.md)
 
+## Future Versions and Breaking Changes
+
+While the intent is that Java extensibility APIs will be stable over time, the specifics are more likely to change across major versions than the published REST API endpoints. Be sure to check release notes for any changes between versions that may affect Java extensions.
+
+Beyond the published DRAPI APIs, take care to not assume the presence of most specific dependencies within DRAPI's "libs" directory. Some dependencies - namely, domino-jnx-api and Vert.x - are almost guaranteed to remain consistent over time. Others, like specific utility libraries, are liable to change or be removed even between minor versions of DRAPI. The safest route is to use few third-party dependencies in your Java projects, and otherwise check each DRAPI version for changes.
+
 ## Let's connect
 
 --8<-- "feedback.md"
