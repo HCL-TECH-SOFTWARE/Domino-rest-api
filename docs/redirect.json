@@ -9,8 +9,8 @@
 
     {
       "title": "What's new in Domino REST API?",
-      "old": "whatsnew",
-      "new": "references/whatisnew.html"
+      "old": "references/whatisnew.html",
+      "new": "whatsnew/index.html"
     },
 
     {
@@ -280,9 +280,9 @@
     },
 
     {
-      "title": "Web UI",
+      "title": "Using Admin UI",
       "old": "usingkeep/administrationui.html",
-      "new": "references/usingdominorestapi/administrationui.html"
+      "new": "references/usingwebui/index.html"
     },
 
     {
@@ -366,7 +366,7 @@
     {
       "title": "Scopes",
       "old": "howkeepworks/scopes.html",
-      "new": "reference/usingdominorestapi/scopes.html"
+      "new": "references/usingdominorestapi/scopes.html"
     },
 
     {

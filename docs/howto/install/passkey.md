@@ -42,13 +42,17 @@ Some third-party password managers, such as [1Password](https://1password.com/pr
 1. Open the **Domino REST API Admin UI** sign-in page in your browser.
 2. Enter your **Username** and **Password**, and then click **Sign up with Passkey**.
 
-    ![Sign up with passkey](../../assets/images/signuppasskey.png){: style="height:60%;width:60%"}
+    ![Sign up with passkey](../../assets/images/signuppasskey.png)
+
+    !!! tip
+
+        If the **Username** and **Password** fields are not visible by default, click **LOG IN WITH PASSWORD** for the fields to be displayed. 
 
     A dialog opens. The following image shows an example of the dialog opened in Chrome on macOS.
 
-    ![Create a passkey dialog](../../assets/images/passkeydialog.png){: style="height:60%;width:60%"}
+    ![Create a passkey dialog](../../assets/images/passkeydialog.png){: style="height:70%;width:70%"}
 
-3. Using the provided example, you can click **Create** or click **Save another way** to choose where to save your passkey from the available options. Follow the succeeding instructions to complete the process.
+3. Using the provided example, you can click **Continue** or click **Save another way** to choose where to save your passkey from the available options. Follow the succeeding instructions to complete the process.
 
 You have now logged in to the **Domino REST API Admin UI**.
 
@@ -58,12 +62,13 @@ You have now logged in to the **Domino REST API Admin UI**.
 
     See [Configure WebAuthn with Domino REST API and Domino 14](../../howto/install/webauthn.md) to use the same passkey.
 
-1. Open the **Domino REST API Admin UI** sign-in page in your browser. The **Username** field is already filled with the username you used when you signed up with your passkey.  
+1. Open the **Domino REST API Admin UI** sign-in page in your browser.
+2. Click **LOG IN WITH PASSKEY**. The **Username** field is already filled with the username you used when you signed up with your passkey.  
 
-    ![Log in with passkey](../../assets/images/loginpasskey.png){: style="height:60%;width:60%"}
+    ![Log in with passkey](../../assets/images/loginpasskey.png)
 
-2. Click **LOG IN WITH PASSKEY**.
-3. Follow the instructions to use your passkey. The instructions vary depending on what you have chosen on how to create the passkey. 
+3. Click **LOG IN**.
+4. Follow the instructions to use your passkey. The instructions vary depending on what you have chosen on how to create the passkey.
 
 You have now logged in to the **Domino REST API Admin UI**.
 

@@ -1,7 +1,8 @@
 # Update Domino REST API to the latest release version
 
 ## About this task
-The procedure guides you on how to update your installed Domino REST API to the latest release version. It's recommended to always update to the latest release version to take advantage of the new features and improvements of Domino REST API. 
+
+The procedure guides you on how to update your installed Domino REST API to the latest release version. It's recommended to always update to the latest release version to take advantage of the new features and improvements of Domino REST API.
 
 ## Before you begin
 
@@ -11,12 +12,12 @@ The procedure guides you on how to update your installed Domino REST API to the 
 
     - [Download the docker image of the latest release version of Domino REST API](../../tutorial/installconfig/index.md#download-domino-rest-api).
 
-    - You can also take note of the latest Docker image version for docker compose `.env` file from Harbor in [What’s New](../../references/whatsnew/index.md).
+    - You can also take note of the latest Docker image version for docker compose `.env` file from Harbor in [What’s New](../../whatsnew/index.md).
 
 ## Procedure
 
 Follow the procedure based on the installation option you used when installing the existing version of your Domino REST API.
- 
+
 !!! note
 
     For more information on the parameters used for updating Domino REST API in Linux, Mac, and Windows, see [Explanation of parameters](../../tutorial/installconfig/index.md#explanation-of-parameters).
@@ -35,34 +36,38 @@ Follow the procedure based on the installation option you used when installing t
 
         - This step isn't applicable if using the docker image from Harbor. 
 
-3.	Take note of the image name.
+3. Take note of the image name.
 
-    - When using the docker image from *HCL Software License and Download Portal* or *My HCLSoftware Portal*, take note of the image name that was output after being loaded. The image name is also indicated in the [What’s New](../../references/whatsnew/index.md) for each version of the Domino REST API and marked *Docker image version for docker compose .env file (CONTAINER_IMAGE)*.
+    - When using the docker image from *HCL Software License and Download Portal* or *My HCLSoftware Portal*, take note of the image name that was output after being loaded. The image name is also indicated in the [What’s New](../../whatsnew/index.md) for each version of the Domino REST API and marked *Docker image version for docker compose .env file (CONTAINER_IMAGE)*.
 
-        !!!example "Example loaded image name" 
+        !!! example "Example loaded image name"
+
             - From earlier releases: `docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.10.0`
             - Starting v1.0.7 release: `domino-rest-api:1.0.7`
 
-    - When using the docker image from *HCL Container Repository (Harbor)*, take note of the latest *Docker image version for docker compose .env file from Harbor* indicated in [What’s New](../../references/whatsnew/index.md).
+    - When using the docker image from *HCL Container Repository (Harbor)*, take note of the latest *Docker image version for docker compose .env file from Harbor* indicated in [What’s New](../../whatsnew/index.md).
 
-        !!!example "Example image version name"
+        !!! example "Example image version name"
+
             hclcr.io/domino/restapi:1.0.6 
 
-4.	Update the value of the `CONTAINER_IMAGE` variable in your existing .env file with the noted Docker image name. 
+4. Update the value of the `CONTAINER_IMAGE` variable in your existing .env file with the noted Docker image name.
 
-    !!!note
+    !!! note
+
         It's recommended to use your existing .env file, but you can also use a new .env file. If you use a new .env file, make sure to update the variable values as needed. 
 
-5.	Run the following command in the directory where you stored the `server.id` and `docker-compose.yml` files, which you used in your initial installation.
+5. Run the following command in the directory where you stored the `server.id` and `docker-compose.yml` files, which you used in your initial installation.
 
     ```bash
     docker-compose up
     ```
 
-    !!!note
+    !!! note
+
         If prompted for access to HCL Container Repository (Harbor), [obtain your HCL Container Repository username and password](../../howto/install/obtainauthenticationtoken.md), and then sign-in using `docker login hclcr.io` command and the obtained credentials. 
 
-6.	[Validate that an instance is successfully running on a container](../../tutorial/installconfig/docker.md#validation).
+6. [Validate that an instance is successfully running on a container](../../tutorial/installconfig/docker.md#validation).
 
 <!--### Helm
 
@@ -181,15 +186,17 @@ java -jar restapiInstall.jar \
  -a
 ```
 
-!!!note
-    For more information on the installation-related support and limitations to client use, see [Install on Mac](../../tutorial/installconfig/mac.md). 
+!!! note
+
+    For more information on the installation-related support and limitations to client use, see [Install on Mac](../../tutorial/installconfig/mac.md).
 
 
 ### Windows
 
 To update to the latest release version, run the following command:
 
-!!!note
+!!! note
+
     Domino REST API installer needs to be run as administrator.
 
 
@@ -221,6 +228,6 @@ java -jar restapiInstall.jar ^
 
 When running the command for Windows Notes Client, the installer creates a `runrestapi.cmd` script in the Domino REST API installation directory. Run it to launch the Domino REST API.
 
-!!!note
-    For more information on the installation-related support and limitations to client use, see [Install on Windows](../../tutorial/installconfig/win.md). 
+!!! note
 
+    For more information on the installation-related support and limitations to client use, see [Install on Windows](../../tutorial/installconfig/win.md). 
