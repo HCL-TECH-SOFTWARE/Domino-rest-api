@@ -16,7 +16,7 @@ Open the <a href="assets/images/svg/keepblockdiagram.svg">overview</a>
 
 ---
 
-## Getting started
+## Get started
 
 - Get a first idea of what you are dealing with by [understanding how the Domino REST API works](topicguides/understanding.md).
 
@@ -30,14 +30,13 @@ Open the <a href="assets/images/svg/keepblockdiagram.svg">overview</a>
 
 - Having trouble running the Domino REST API? Use the [troubleshooting guide](references/troubleshooting.md).
 
-<!-- For everything that admin needs to know, use the [Admin cheat sheet](references/admincheatsheet.md).-->
-
 - Are you coming from a Notes client with a Domino server background? You never had to deal with certificates, JSON Web Token, multiple TCP ports, OAuth, and all the fancy new terms of a shiny new web world. Read [the primer](topicguides/notesprimer.md) to get started.
 
 !!! info "API definitions now available"
 
     The OpenAPI definitions, rendering using [ReDoc](https://github.com/Redocly/redoc), are now [available in the References](references/openapidefinitions.md). **Depending on your server configuration, not all endpoints will be active.**
 
+<!-- For everything that admin needs to know, use the [Admin cheat sheet](references/admincheatsheet.md).-->
 ---
 
 ## How the documentation is organized

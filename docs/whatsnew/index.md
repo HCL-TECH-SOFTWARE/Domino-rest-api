@@ -13,10 +13,10 @@ The What's new contains information about the latest features, improvements, fix
 
     Release date: April 21, 2025
     
-    - [insert number] New features
-    - [insert number] Improvements
-    - [insert number] Resolved issues
-    - [insert number] Breaking changes
+    - **3** New features
+    - **4** Improvements
+    - **4** Resolved issues
+    - **1** Breaking change
 
 [Read the full details](v1.1.3.md)
 
