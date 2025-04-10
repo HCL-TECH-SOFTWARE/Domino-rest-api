@@ -47,7 +47,7 @@ I keep all my code in `~/Code` ( `%HOME%\Code` for Windows), Don't put files und
 
 Decide on your organisation, usually it is the reverse URL, so when your url is `acme.com`, you use `com.acme` as org, which is the entry to your packet hierachy, for the purpose of this tutorial we will use `io.projectkeep`. Please **do not** use it for your actual code.
 
-![Directory Structure](DirectoryStructure.png)
+![Directory Structure](../../assets/images/DirectoryStructure.png)
 
 For macOS or Linux:
 

@@ -59,8 +59,9 @@ This procedure enables you customize which API schemas are unavailable to end us
     |poi|HCL Domino REST API poi|
     |pim|HCL Domino REST API pim|
     |webdav|HCL Domino REST API webdav|
+    |wopi|Online collaborative editing|
 
-4.	Set the value of the `active` property to `false` to make the API schema unavailable.
+3. Set the value of the `active` property to `false` to make the API schema unavailable.
 
     ``` json
     {
@@ -84,10 +85,10 @@ This procedure enables you customize which API schemas are unavailable to end us
         }
 
     }
-    ``` 
+    ```
 
-5. Save the JSON file in the `keepconfig.d` directory.
-6. Restart Domino REST API on all servers.
+4. Save the JSON file in the `keepconfig.d` directory.
+5. Restart Domino REST API on all servers.
 
 The following image shows the available API schemas **before** saving the example JSON file, which makes the *HCL Domino REST API admin* API schema unavailable, in the `keepconfig.d` directory.
 
@@ -97,10 +98,9 @@ The following image shows the available API schemas **after** saving the example
 
 ![API schemas after admin is unavailable](../../assets/images/apischema1.png)
 
+### Customize available endpoints in a specific API schema
 
-### Customize available endpoints in a specific API schema 
-
-This procedure enables you to customize which endpoints in a specific API schema are unavailable to end users by using the endpoint's `operationId`. 
+This procedure enables you to customize which endpoints in a specific API schema are unavailable to end users by using the endpoint's `operationId`.
 
 1. Create a JSON file using a text editor.
 2. Add the `versions` JSON object with the entry name of the API schema you want to customize and the `disabledOperationIds` property.
@@ -137,8 +137,8 @@ This procedure enables you to customize which endpoints in a specific API schema
     }
     ```
 
-5. Save the JSON file in the `keepconfig.d` directory.
-6. Restart Domino REST API on all servers.
+4. Save the JSON file in the `keepconfig.d` directory.
+5. Restart Domino REST API on all servers.
 
 The following images show the availability of the `POST v1/document` and `GET v1/document/{unid}` endpoints on the *HCL Domino REST API basis* API schema, and the `GET setup-v1/schema` endpoint on the *HCL Domino REST API setup* API schema **before** saving the example JSON file in the `keepconfig.d` directory.
 
@@ -150,15 +150,13 @@ The following images show the availability of the `POST v1/document` and `GET v1
 
 The following images show the availability of the `POST v1/document` and `GET v1/document/{unid}` endpoints on the *HCL Domino REST API basis* API schema, and the `GET setup-v1/schema` endpoint on the *HCL Domino REST API setup* API schema **after** saving the example JSON file in the `keepconfig.d` directory.
 
-
 ???example "Example images after making the endpoints unavailable"
 
     ![API schemas before admin is unavailable](../../assets/images/apischema3.png)
 
     ![API schemas before admin is unavailable](../../assets/images/apischema5.png)
 
-
-### Customize accessible endpoints according to the API version 
+### Customize accessible endpoints according to the API version
 
 This procedure enables you to make endpoints in API schemas available to end users according to the `keepVersion` parameter. Each endpoint in an API schema has an `x-keep-version` attribute whose value corresponds to the supported API version defined by the `keepVersion` parameter. By modifying the value of the `keepVersion` parameter, you can make endpoints that are experimental or endpoints under development that might be supported in future releases available to meet your specific use case.  
 
