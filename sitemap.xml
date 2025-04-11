@@ -2,862 +2,862 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/index.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/404.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/index.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/IdP/index.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/IdP/adminuiidp.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/IdP/configuredrapiIdP.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/IdP/configureoidc.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/IdP/configuringAD.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/IdP/configuringCertificates.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/IdP/configuringIdentityProvider.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/IdP/configuringKeycloak.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/IdP/keepsaml.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/IdP/roundtripidp.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/VoltMX/index.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/VoltMX/configuring-keep-idplite-with-identity-service.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/VoltMX/setupoauthnsf.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/codesamples/index.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/codesamples/javascript.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/codesamples/js_sdk.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/database/index.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/database/editsourcejson.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/database/editviewcolumn.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/database/enablingadb.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/database/excludeddb.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/database/exportsourcejson.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/database/externalnames.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/database/pullviewdata.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/install/index.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/install/modifyconfig.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/install/multiserver.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/install/notesclient.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/install/oauthoscreen.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/install/obtainauthenticationtoken.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/install/passkey.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/install/symlink.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/install/uninstall.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/install/webauthn.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/management/index.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/management/checksettings.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/management/configsrc.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/management/disablemodule.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/management/jwtmultiserver.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/management/supportpackage.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/management/suspendeduser.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/management/usersmc.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/production/index.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/production/changefilesize.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/production/configparam.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/production/customAPI.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/production/dominohttps.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/production/hardening.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/production/httpsprod.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/production/prodports.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/production/reactjs.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/production/roundtrip.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/production/signencrypt.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/production/testformulas.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/production/versionupdate.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/production/virtualsheet.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/web/index.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/web/httpsproxy.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/howto/web/httpsproxy2.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/index.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/accesscontrol.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/admincheatsheet.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/deprecated.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/downloads.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/functionalUsers.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/hostingstatic.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/ofba.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/openapidefinitions.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/parameters.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/richtextension.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/sdk.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/sysreq.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/troubleshooting.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/understandingconfig.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/whatisnew.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/quickreference/index.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/quickreference/glossary.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/quickreference/standards.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/schemacomponents/index.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/schemacomponents/agentdefinitions.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/schemacomponents/formdefinitions.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/schemacomponents/viewdefinitions.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/security/index.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/security/authentication.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/security/configurationParameters.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/security/customIdp.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/security/encryption.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/security/jwt.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/security/securingKEEPEndpoints.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usertools/index.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usertools/bruno.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usertools/curl.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usertools/postman.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usertools/swagger.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/index.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/console.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/dataformats.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/encryptsign.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/formnames.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/keepapplications.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/keepcli.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/logging.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/metrics.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/modenames.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/restapitask.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/roles.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/scopes.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/index.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/conversion.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/sample.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/incoming/multipart-alternative.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/incoming/multipart-mixed.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/incoming/text-html%2Bplain.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/incoming/text-html.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/incoming/text-markdown%2Bhtml.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/incoming/text-markdown%2Bplain%2Bhtml.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/incoming/text-markdown%2Bplain.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/incoming/text-markdown.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/incoming/text-plain.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/outgoing/mime-html-1.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/outgoing/mime-html-2.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/outgoing/mime-html-3.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/outgoing/mime-html-4.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/outgoing/mime-markdown-1.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/outgoing/mime-markdown-2.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/outgoing/mime-markdown-3.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/outgoing/mime-markdown-4.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/outgoing/mime-mime-1.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/outgoing/mime-mime-2.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/outgoing/mime-plain-1.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/outgoing/mime-plain-2.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/outgoing/mime-plain-3.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/outgoing/mime-plain-4.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/outgoing/mime-plain-5.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/outgoing/richtext-html.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/outgoing/richtext-markdown.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/outgoing/richtext-mime.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/outgoing/richtext-plain.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingwebui/index.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingwebui/appui.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingwebui/oauthconsentui.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingwebui/quickconfigui.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingwebui/schemaui.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/references/usingwebui/scopeui.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/topicguides/index.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/topicguides/KeepFactory-and-caches.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/topicguides/agents.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/topicguides/architecture.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/topicguides/barbican.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/topicguides/dominojnx.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/topicguides/eventbus.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/topicguides/formmodes.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/topicguides/howkeepworks.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/topicguides/httpHandler.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/topicguides/introducingrestapi.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/topicguides/keepFlows.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/topicguides/keepasproxy.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/topicguides/keepdifference.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/topicguides/notesprimer.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/topicguides/planning.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/topicguides/schemabackup.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/topicguides/schemascope.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/topicguides/understanding.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/topicguides/usecases.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/topicguides/auxiliary/index.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/topicguides/auxiliary/healthmetrics.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/topicguides/auxiliary/ical.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/topicguides/auxiliary/idp.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/topicguides/auxiliary/management.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/topicguides/auxiliary/odata.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/topicguides/auxiliary/webdav.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/topicguides/extensibility/index.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/index.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/adminui.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/postmancurl.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/quickstart.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/swagger.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/extensibility/index.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/extensibility/accesscontrol.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/extensibility/businesslogic.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/extensibility/configjson.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/extensibility/deployment.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/extensibility/devcontainer.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/extensibility/javaproject.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/extensibility/openapi.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/installconfig/index.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/installconfig/configuringPorts.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/installconfig/connectivity.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/installconfig/docker.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/installconfig/linux.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/installconfig/mac.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/installconfig/postinstallation.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/installconfig/setupfunctionalaccount.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/installconfig/win.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/installconfig/configuration/index.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/odata/index.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/odata/excel.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/odata/salesforce.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/walkthrough/index.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/walkthrough/downloadindex.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/walkthrough/lab-00.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/walkthrough/lab-01.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/walkthrough/lab-02.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/walkthrough/lab-03.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/walkthrough/lab-04.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/walkthrough/lab-05.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/walkthrough/lab-06.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/walkthrough/lab-07.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/walkthrough/lab-08.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/walkthrough/lab-09.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/walkthrough/lab-10.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/Domino-rest-api/tutorial/walkthrough/lab-11.html</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-04-11</lastmod>
     </url>
 </urlset>
