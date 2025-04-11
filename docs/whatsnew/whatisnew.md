@@ -1,15 +1,14 @@
-# What's new
-
-The section provides information on the latest features, improvements, and resolved issues related to Domino REST API.
+# What's new for Domino REST API v1.1.2 and earlier
 
 <!-- prettier-ignore -->
 !!! note "Important"
+
     - Items marked in <span style="color:red">**red**</span> are API changes that may impact your applications and should be reviewed before upgrading.
-    - Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](deprecated.md).
+    - Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](../references/deprecated.md).
 
-???+ info "v1.1.2 - What's new or changed"
+??? info "v1.1.2 - What's new or changed"
 
-    ## v1.1.2 - _What's new or changed_
+    ## v1.1.2 - What's new or changed
 
     *Release date: February 24, 2025*
 
@@ -17,9 +16,9 @@ The section provides information on the latest features, improvements, and resol
 
     - Domino REST API Administrators can now create a support package from either the **Management console** or by using specific console commands on the Domino console. The support package is a collection of files that can help the support team to better identify, troubleshoot, and resolve encountered issues. For more information, see [Create support package](../howto/management/supportpackage.md).
     
-    - Added the console command `tell restapi support` for creating a support package and `tell restapi support -includensf` for creating a support package that includes the `KeepConfig.nsf` when executed on the Domino console. For more information, see [Domino REST API task](usingdominorestapi/restapitask.md).
+    - Added the console command `tell restapi support` for creating a support package and `tell restapi support -includensf` for creating a support package that includes the `KeepConfig.nsf` when executed on the Domino console. For more information, see [Domino REST API task](../references/usingdominorestapi/restapitask.md).
     
-    - Added the console command `tell restapi refresh` to update the Domino REST API configuration without restarting the Domino REST API task. For more information, see [Domino REST API task](usingdominorestapi/restapitask.md).
+    - Added the console command `tell restapi refresh` to update the Domino REST API configuration without restarting the Domino REST API task. For more information, see [Domino REST API task](../references/usingdominorestapi/restapitask.md).
     
     - Added `GET webdav-v1/locks` endpoint to get a list of all currently locked [OFBA](../howto/IdP/roundtripidp.md) documents.
 
@@ -64,7 +63,7 @@ The section provides information on the latest features, improvements, and resol
         - For Domino 12: *hclcr.io/domino/restapi:1.1.2-r12* 
 
 ??? info "v1.1.1 - What's new or changed"
-    ## v1.1.1 - _What's new or changed_
+    ## v1.1.1 - What's new or changed
 
     *Release date: December 02, 2024*
 
@@ -82,7 +81,7 @@ The section provides information on the latest features, improvements, and resol
 
     - Added a new OpenAPI landing page that shows all the general API schemas and application-specific schemas, enabling users to easily find the schemas they require.
 
-    - Added OpenAPI schema and Swagger page for the [WebDAV API](openapidefinitions.md#webdav) that provides endpoints to perform remote Web content authoring operations that support the Office Round Trip Experience and Virtual Spreadsheet features of Domino REST API.
+    - Added OpenAPI schema and Swagger page for the [WebDAV API](../references/openapidefinitions.md#webdav) that provides endpoints to perform remote Web content authoring operations that support the Office Round Trip Experience and Virtual Spreadsheet features of Domino REST API.
 
     - Added the console command `tell restapi idpstatus` that shows the state of the configured identity providers when executed on the Domino console.   
 
@@ -90,7 +89,7 @@ The section provides information on the latest features, improvements, and resol
 
     - When adding a JSON object to the database schema on the **Source** tab on the **Schema Management** page in the **Admin UI**, the value of the JSON object is now validated to ensure the correct format based on the selected JSON object type. For more information, see [Edit database schema JSON](../howto/database/editsourcejson.md).
 
-    - When adding fields to a form on the **Schema Management** page in the **Admin UI**, users can now identify the property of the field by hovering over the **info** icon beside the field name. For more information, see [Change form configuration](./usingwebui/schemaui.md#change-form-configuration).
+    - When adding fields to a form on the **Schema Management** page in the **Admin UI**, users can now identify the property of the field by hovering over the **info** icon beside the field name. For more information, see [Change form configuration](../references/usingwebui/schemaui.md#change-form-configuration).
 
     - The **Clear passkey** option has been removed from the **Admin UI** login page to avoid user confusion. This option only clears local storage data, not the actual passkey. To enhance the user experience, both the **LOG IN WITH PASSWORD** and **LOG IN WITH PASSKEY** options are available on the **Admin UI** login page. For more information, see [Use WebAuthn (Passkey) to log in to Admin UI](../howto/install/passkey.md).
 
@@ -113,7 +112,7 @@ The section provides information on the latest features, improvements, and resol
 
     - Added [tip for ensuring successful round-trip editing on Windows](../howto/production/roundtrip.md#to-access-and-edit-the-ms-office-file-attachment).
     
-    - Added **Bruno** as one of the tools you can use when dealing with REST APIs. For more information, see [Bruno](./usertools/bruno.md).
+    - Added **Bruno** as one of the tools you can use when dealing with REST APIs. For more information, see [Bruno](../references/usertools/bruno.md).
     
     - Installer jar files:
         - For Domino 14: *restapiInstall-r14.jar*
@@ -128,7 +127,7 @@ The section provides information on the latest features, improvements, and resol
         - For Domino 12: *hclcr.io/domino/restapi:1.1.1-r12*  
 
 ??? info "v1.1 - What's new or changed"
-    ## v1.1 - _What's new or changed_
+    ## v1.1 - What's new or changed
 
     *Release date: September 30, 2024*
 
@@ -193,8 +192,8 @@ The section provides information on the latest features, improvements, and resol
         - `GET v1/richtext/plain/{unid}`
     
     - Installer jar files:
-	    - For Domino 14: *restapiInstall-r14.jar*
-	    - For Domino 12: *restapiInstall-r12.jar*
+        - For Domino 14: *restapiInstall-r14.jar*
+        - For Domino 12: *restapiInstall-r12.jar*
 
     - Docker image version for docker compose .env file (CONTAINER_IMAGE):
         - For Domino 14: *domino-rest-api:1.1.0-r14*
@@ -206,7 +205,7 @@ The section provides information on the latest features, improvements, and resol
 
 
 ??? info "v1.0.14 - What's new or changed"
-    ## v1.0.14 - _What's new or changed_
+    ## v1.0.14 - What's new or changed
 
     *Release date: June 13, 2024*
 
@@ -227,7 +226,7 @@ The section provides information on the latest features, improvements, and resol
     - Added an array that contains the top-level child document UNIDs to the `@meta` object in the response of the `GET v1/document/{unid}` and `GET v1/docmeta/{unid}` endpoints.
     - Uses the correct mail template based on the Domino version when creating a second calendar using the `POST pim-v1/calendar` endpoint.
     
-    - Implemented UI/UX enhancements in the [Application Management](./usingwebui/appui.md) page in the **Admin UI**.
+    - Implemented UI/UX enhancements in the [Application Management](../references/usingwebui/appui.md) page in the **Admin UI**.
 
     **Resolved issues**
 
@@ -251,7 +250,7 @@ The section provides information on the latest features, improvements, and resol
 
 
 ??? info "v1.0.12 - What's new or changed"
-    ## v1.0.12 - _What's new or changed_
+    ## v1.0.12 - What's new or changed
 
     *Release date: April 25, 2024*
 
@@ -265,12 +264,12 @@ The section provides information on the latest features, improvements, and resol
 
     **Improvements**
 
-    - Extended how Rich Text is processed. For more information, see [Rich Text extension](richtextension.md).
+    - Extended how Rich Text is processed. For more information, see [Rich Text extension](../references/richtextension.md).
     
     - Improved OData filter processing by adding support for `in`, `contains`, `startswith`, and `endswith` clauses.
     - Enhanced user experience by allowing user to activate a form and bringing user directly into form edit mode by clicking the pencil icon corresponding to an inactive form in the **Database Form** tab in the **Admin UI** and confirming form activation.
     
-    - Implemented UI/UX enhancements in the [OAuth Consents](./usingwebui/oauthconsentui.md) page in the **Admin UI**.
+    - Implemented UI/UX enhancements in the [OAuth Consents](../references/usingwebui/oauthconsentui.md) page in the **Admin UI**.
     - Enhanced the PIM Swagger documentation. 
 
     **Resolved issues**
@@ -297,13 +296,13 @@ The section provides information on the latest features, improvements, and resol
 
 
 ??? info "v1.0.11 - What's new or changed"
-    ## v1.0.11 - _What's new or changed_
+    ## v1.0.11 - What's new or changed
 
     *Release date: March 27, 2024*
 
     **New features**
     
-    - Added the **Add New Form Schema** button on the **Database Forms** page in the **Admin UI** to allow the creation of a Form schema for a form that does not exist in the design of the database. This is useful for the profile document update introduced in the v1.0.10 release and can also be used to add or retrieve documents when no form exists in the design. For more information, see [Add new form schema](usingwebui/schemaui.md#add-new-form-schema).
+    - Added the **Add New Form Schema** button on the **Database Forms** page in the **Admin UI** to allow the creation of a Form schema for a form that does not exist in the design of the database. This is useful for the profile document update introduced in the v1.0.10 release and can also be used to add or retrieve documents when no form exists in the design. For more information, see [Add new form schema](../references/usingwebui/schemaui.md#add-new-form-schema).
     
     - Added OData support for queries using `$select`.
     - Added OData support for the **ne** (not equal) operator in a filter.
@@ -346,7 +345,7 @@ The section provides information on the latest features, improvements, and resol
 
 
 ??? info "v1.0.10 - What's new or changed"
-    ## v1.0.10 - _What's new or changed_
+    ## v1.0.10 - What's new or changed
 
     *Release date: February 22, 2024*
 
@@ -354,8 +353,9 @@ The section provides information on the latest features, improvements, and resol
 
     - Added `POST v1/profiledocument` endpoint to create and update an existing profile document. 
         
-    !!!warning "Important" 
-	    A POST request replaces all fields listed in your schema. Ensure to include all the fields in the POST request body and the corresponding values you want to retain and overwrite.
+    !!! warning "Important" 
+    
+        A POST request replaces all fields listed in your schema. Ensure to include all the fields in the POST request body and the corresponding values you want to retain and overwrite.
 
     - Added `DELETE v1/profiledocument` endpoint to delete a profile document as long as the schema allows it.
     - Added `GET setup-v1/admin/purge` endpoint to discover scopes that no longer have a valid schema because the schema no longer exists, the schema has invalid JSON, a corrupted NSF, or the NSF no longer exists.
@@ -406,7 +406,7 @@ The section provides information on the latest features, improvements, and resol
     
 
 ??? info "v1.0.9 - What's new or changed"
-    ## v1.0.9 - _What's new or changed_
+    ## v1.0.9 - What's new or changed
 
     *Release date: December 14, 2023*
 
@@ -445,7 +445,7 @@ The section provides information on the latest features, improvements, and resol
 
     **Others**
 
-    - Removed the use of `dataSource` or a path to an NSF in the `dataSource` parameter by most `admin-v1` endpoints. See [Deprecated features](deprecated.md) for more information and recommendation.
+    - Removed the use of `dataSource` or a path to an NSF in the `dataSource` parameter by most `admin-v1` endpoints. See [Deprecated features](../references/deprecated.md) for more information and recommendation.
     
     - Implemented various documentation updates.
     - Starting this release, there will be two installer jar files:
@@ -463,7 +463,7 @@ The section provides information on the latest features, improvements, and resol
 
 
 ??? info "v1.0.8 - What's new or changed"
-    ## v1.0.8 - _What's new or changed_
+    ## v1.0.8 - What's new or changed
 
     *Release date: November 14, 2023*
 
@@ -511,7 +511,7 @@ The section provides information on the latest features, improvements, and resol
 
 
 ??? info "v1.0.7 - What's new or changed"
-    ## v1.0.7 - _What's new or changed_
+    ## v1.0.7 - What's new or changed
 
     **New features**
 
@@ -547,7 +547,7 @@ The section provides information on the latest features, improvements, and resol
     
 
 ???info "v1.0.6 - What's new or changed"
-    ## v1.0.6 - _What's new or changed_
+    ## v1.0.6 - What's new or changed
 
     **New features**
 
@@ -582,7 +582,7 @@ The section provides information on the latest features, improvements, and resol
 
 
 ???info "v1.0.5 - What's new or changed"
-    ## v1.0.5 - _What's new or changed_
+    ## v1.0.5 - What's new or changed
 
     **New features**
 
@@ -611,7 +611,7 @@ The section provides information on the latest features, improvements, and resol
     - Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.18.3*. 
 
 ???info "v1.0.4 - What's new or changed"
-    ## v1.0.4 - _What's new or changed_
+    ## v1.0.4 - What's new or changed
 
     **New features** 
 
@@ -633,7 +633,7 @@ The section provides information on the latest features, improvements, and resol
     - Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.17.0*.
 
 ???info "v1.0.3 - What's new or changed"
-    ## v1.0.3 - _What's new or changed_
+    ## v1.0.3 - What's new or changed
 
     **New features** 
 
@@ -657,7 +657,7 @@ The section provides information on the latest features, improvements, and resol
     - Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.15.0*. 
 
 ???info "v1.0.2 - What's new or changed"
-    ## v1.0.2 - _What's new or changed_
+    ## v1.0.2 - What's new or changed
 
     **New features**
 
@@ -694,7 +694,7 @@ The section provides information on the latest features, improvements, and resol
     - Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.12.0*.
 
 ???info "v1.0.1 - What's new or changed"
-    ## v1.0.1 - _What's new or changed_
+    ## v1.0.1 - What's new or changed
 
     **New features**
 
@@ -740,7 +740,7 @@ The section provides information on the latest features, improvements, and resol
     | KEEP branding examples|
     | ---- |
     | [Enabling a database](../howto/database/enablingadb.md) |
-    | [The Domino REST API CLI](../references/usingdominorestapi/keepcli.md) |
+    | [The Domino REST API CLI](../references/usingdominorestapi/keepcli.md#keepcmd) |
     | [Running Agents: keepAgents.nsf](../topicguides/agents.md#running-agents) |
     | [Parameters - AsyncAgentScheduler verticle: keepAgents.nsf](../references/parameters.md#asyncagentscheduler-verticle) |
     | [Domino REST API Roles](../references/usingdominorestapi/roles.md) |

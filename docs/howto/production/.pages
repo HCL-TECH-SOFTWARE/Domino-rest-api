@@ -7,6 +7,7 @@ nav:
     - hardening.md
     - httpsprod.md
     - Host SPA with ReactJS: reactjs.md
+    - oauthinvstgtn.md
     - configparam.md
     - roundtrip.md
     - virtualsheet.md

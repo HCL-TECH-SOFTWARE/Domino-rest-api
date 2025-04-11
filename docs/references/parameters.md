@@ -43,6 +43,10 @@ A configuration can have the following top-level properties. These properties ar
 | TokenCookie | Boolean | (default `false`) Set to `true` to allow Domino REST API to send back JWT as cookie named `KeepToken`. The cookie expiry is the same as the JWT expiry. It immediately expires when logout is called. |
 | AdminUIKeepLogin | Boolean | (default `true`) If set to `true`, displays the username and password login in the Admin UI login page. If this and `AdminUIOIDCLogin` are set to `false`, the Admin UI login page behaves as if this is set to `true`. |
 | AdminUIOIDCLogin | Boolean | (default `true`) If set to `true`, displays the IdP logins in the Admin UI login page. |
+| WopiSessionSeconds | int | Duration of WOPI session in seconds. Default is `36000` (10 hours). |
+| WebdavSessionSeconds | int | Duration of Webdav session in seconds. Default is `300` (5 minutes). |
+| WopiLockSeconds | int | Duration of WOPI lock in seconds. Should be less than or the same as `WopiSessionSeconds`. Default is `1800` (15 minutes). |
+| WebdavLockSeconds | int | Duration of Webdav lock in seconds. Should be less than or the same as `WebdavSessionSeconds`. Default is `300` (5 minutes). |
 
 ## Backpressure handling parameters
 

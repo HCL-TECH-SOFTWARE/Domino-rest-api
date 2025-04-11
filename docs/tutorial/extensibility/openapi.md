@@ -77,7 +77,7 @@ The Schema looks like this, the URL (see below) will return an array of them. No
 }
 ```
 
-![A pendig approval](PendingApproval.png)
+![A pendig approval](../../assets/images/PendingApproval.png)
 
 #### Decision
 
@@ -103,13 +103,13 @@ A decision submission needs: the unid, the new status and in case of a delegatio
 }
 ```
 
-![Approval decision](ApprovalDecision.png)
+![Approval decision](../../assets/images/ApprovalDecision.png)
 
 ### URLs
 
 For our tutorial project a single URL `/appovals` with `GET` for the list and `POST` for the decision is sufficient.
 
-![Get Approvals](GetApprovals.png)
+![Get Approvals](../../assets/images/GetApprovals.png)
 
 Important elements are:
 
@@ -179,7 +179,7 @@ Tag and OperationId will form the package and class name [later on](configjson.m
 
 We need to specify what authentication is available. It needs to match the security spec from DRAPI. the only supported value is `jwt`.
 
-![JWT Security](JWTSecurity.png)
+![JWT Security](../../assets/images/JWTSecurity.png)
 
 ## Extensions
 
@@ -187,7 +187,7 @@ There are a number of extensions [defined in DRAPI](../../references/openapidefi
 
 Our result looks like this:
 
-![Approval Swagger](ApprovalSwagger.png).
+![Approval Swagger](../../assets/images/ApprovalSwagger.png).
 
 You can reference the full file [here as `openapi.eoffice.json`](openapi.eoffice.json)
 

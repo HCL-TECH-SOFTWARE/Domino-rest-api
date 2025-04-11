@@ -4,10 +4,6 @@
 
 This section provides technical references and descriptions for using HCL Domino REST API.
 
-## What's new in Domino REST API
-
-Contains the [latest version information about Domino REST API](whatisnew.md).
-
 ## System requirements
 
 Provides the minimum [system requirements for Domino REST API](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789).

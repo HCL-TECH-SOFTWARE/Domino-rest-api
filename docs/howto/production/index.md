@@ -20,6 +20,8 @@ Topics to guide you in completing configuration goals and tasks in relation to d
 
 - [Host SPA in Domino REST API with ReactJS](reactjs.md)
 
+- [Investigate OAuth](oauthinvstgtn.md)
+
 - [Set up Office Round Trip Experience](roundtrip.md)
 
 - [Set up Virtual Spreadsheet](virtualsheet.md)

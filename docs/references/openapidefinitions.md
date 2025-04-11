@@ -61,6 +61,12 @@ We named this API in honor of an [Apache project](https://poi.apache.org/) that 
 
 [Open the `openapi.webdav.json` file](../assets/downloads/openapi.webdav.json)
 
+## WOPI
+
+*Web Application Open Platform Interface* or WOPI protocol provides a set of endpoints that enable online collaborative editing of document attachments in Domino. WOPI is a well documented open protocol, for more information, see the [WOPI documentation](https://learn.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/rest/).
+
+[Open the `openapi.wopi.json` file](../assets/downloads/openapi.wopi.json)
+
 ## OpenAPI extensions
 
 The OpenAPI specification is extensible, for one you can define new data types beyond [the default types](https://spec.openapis.org/oas/v3.0.3#schema-object) and you can introduce new method attributes prefixed with `x-`.
