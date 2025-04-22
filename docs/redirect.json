@@ -14,6 +14,42 @@
     },
 
     {
+      "title": "v1.0.12 - What's new or changed",
+      "old": "references/whatisnew.html#v1012-whats-new-or-changed",
+      "new": "whatsnew/whatisnew.html#v1012-whats-new-or-changed"
+    },
+
+    {
+      "title": "v1.0.14 - What's new or changed",
+      "old": "references/whatisnew.html#v1014-whats-new-or-changed",
+      "new": "whatsnew/whatisnew.html#v1014-whats-new-or-changed"
+    },
+
+    {
+      "title": "v1.1 - What's new or changed",
+      "old": "references/whatisnew.html#v11-whats-new-or-changed",
+      "new": "whatsnew/whatisnew.html#v11-whats-new-or-changed"
+    },
+
+    {
+      "title": "v1.1.1 - What's new or changed",
+      "old": "references/whatisnew.html#v111-whats-new-or-changed",
+      "new": "whatsnew/whatisnew.html#v111-whats-new-or-changed"
+    },
+
+    {
+      "title": "v1.1.2 - What's new or changed",
+      "old": "references/whatisnew.html#v112-whats-new-or-changed",
+      "new": "whatsnew/whatisnew.html#v112-whats-new-or-changed"
+    },
+
+    {
+      "title": "v1.1.3 - What's new or changed",
+      "old": "references/whatisnew.html#v113-whats-new-or-changed",
+      "new": "whatsnew/v1.1.3.html"
+    },
+
+    {
       "title": "System Requirements",
       "old": "https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789",
       "new": "references/index.html"
