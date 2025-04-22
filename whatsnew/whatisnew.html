@@ -1,0 +1,7954 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Domino REST API, formerly Project KEEP, provides a secure REST API with access into HCL Domino servers and databases.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/Domino-rest-api/whatsnew/whatisnew.html">
+      
+      
+        <link rel="prev" href="v1.1.3.html">
+      
+      
+        <link rel="next" href="../tutorial/index.html">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Domino REST API v1.1.2 and earlier - HCL Domino REST API Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../assets/css/keep_style.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","UA-169645537-2"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","UA-169645537-2",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=UA-169645537-2",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#whats-new-for-domino-rest-api-v112-and-earlier" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="HCL Domino REST API Documentation" class="md-header__button md-logo" aria-label="HCL Domino REST API Documentation" data-md-component="logo">
+      
+  <img src="../assets/images/HCL_KEEP_ICON.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Domino REST API Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Domino REST API v1.1.2 and earlier
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/Domino-rest-api" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/Domino-rest-api
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../index.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  What's new
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../tutorial/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tutorials
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../howto/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  How-to guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../topicguides/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Topic guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../references/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  References
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="HCL Domino REST API Documentation" class="md-nav__button md-logo" aria-label="HCL Domino REST API Documentation" data-md-component="logo">
+      
+  <img src="../assets/images/HCL_KEEP_ICON.jpg" alt="logo">
+
+    </a>
+    HCL Domino REST API Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/Domino-rest-api" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/Domino-rest-api
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    What's new
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            What's new
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="v1.1.3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domino REST API v1.1.3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Domino REST API v1.1.2 and earlier
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="whatisnew.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domino REST API v1.1.2 and earlier
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#v112-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.1.2 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v111-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.1.1 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v11-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.1 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1014-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.14 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1012-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.12 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1011-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.11 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1010-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.10 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v109-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.9 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v108-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.8 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v107-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.7 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v106-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.6 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v105-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.5 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v104-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.4 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v103-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.3 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v102-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.2 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v101-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.1 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v10-whats-changed-since-the-early-access-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0 - What's changed since the Early Access Release
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hcl-domino-rest-api-formerly-known-as-hcl-project-keep" class="md-nav__link">
+    <span class="md-ellipsis">
+      HCL Domino REST API formerly known as HCL Project KEEP
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../tutorial/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Tutorials
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/quickstart.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quickstart
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../tutorial/installconfig/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Installation and configuration
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Installation and configuration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System requirements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/installconfig/docker.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/installconfig/linux.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/installconfig/mac.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mac
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/installconfig/win.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Win
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_7" id="__nav_3_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Post installation tasks
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            Post installation tasks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/installconfig/postinstallation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Post installation tasks overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/installconfig/connectivity.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verify connectivity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/installconfig/configuringPorts.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Securing ports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/database/enablingadb.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Enable a database
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/security/authentication.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure JWT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/security/encryption.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sharing JWT between servers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/adminui.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure apps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/installconfig/setupfunctionalaccount.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup functional accounts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../tutorial/walkthrough/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Capability Walkthrough
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Capability Walkthrough
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/walkthrough/lab-00.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 0 - Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/walkthrough/lab-01.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 01 - Login to the REST API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/walkthrough/lab-02.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 02 - Quick config
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/walkthrough/lab-03.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 03 - Schema exploration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/walkthrough/lab-04.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 04 - Additional scope & schema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/walkthrough/lab-05.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 05 - Create an application
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/walkthrough/lab-06.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 06 - Create a NodeJS application
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/walkthrough/lab-07.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 07 - Create a SPA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/walkthrough/lab-08.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 08 - Create a Java application
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/walkthrough/lab-09.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 9 - Unlock additional ports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/walkthrough/lab-10.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 10 - Configure JWT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/walkthrough/lab-11.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 11 - KEEP Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/walkthrough/downloadindex.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Downloads
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://opensource.hcltechsw.com/domino-keep-tutorials/pages/todo/index" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ToDo Database tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://opensource.hcltechsw.com/domino-keep-tutorials/pages/domino-new/index" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    From Scratch tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/adminui.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using Admin UI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/postmancurl.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using Postman and curl
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/swagger.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OpenAPI UI (a.k.a. Swagger)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../tutorial/odata/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    OData
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            OData
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/odata/excel.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Access Domino OData in MS-Excel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/odata/salesforce.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domino data with Salesforce
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../tutorial/extensibility/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Extensibility tutorial
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
+            <span class="md-nav__icon md-icon"></span>
+            Extensibility tutorial
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/extensibility/javaproject.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setting up the Java Maven project
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/extensibility/openapi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OpenAPI 3.0.x specification
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/extensibility/configjson.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The `config.json` configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/extensibility/businesslogic.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Implementing business logic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/extensibility/accesscontrol.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Access Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/extensibility/deployment.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deployment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/extensibility/devcontainer.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Development Container
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../howto/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    How-to guides
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            How-to guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../howto/install/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/installconfig/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation and configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/install/symlink.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create symlink for Domino 14 and Domino REST API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/install/modifyconfig.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modify configuration of Domino REST API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/install/multiserver.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deploy DRAPI to multiple servers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/install/notesclient.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deploy to HCL Notes Client
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/install/uninstall.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Remove Domino REST API from Domino server or Notes Client
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/install/passkey.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Use WebAuthn (Passkey) to log in to Admin UI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/install/webauthn.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure WebAuthn with Domino REST API and Domino 14 or greater
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/install/oauthoscreen.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Customize oAuth consent screen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/install/obtainauthenticationtoken.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Obtain authentication token from HCL Container Repository
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../howto/web/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Web
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Web
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/web/httpsproxy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure nginx as HTTPS proxy with subdomains
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/web/httpsproxy2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure nginx as HTTPS proxy - single domain
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../howto/IdP/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    IdP
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            IdP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/IdP/configuredrapiIdP.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Domino Rest API IdP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/IdP/configureoidc.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Domino REST API to use an OIDC provider
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/IdP/configuringAD.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Microsoft Entra ID as IdP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/IdP/configuringCertificates.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure certificates
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/IdP/configuringIdentityProvider.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure an identity provider
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/IdP/configuringKeycloak.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Keycloak
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/IdP/keepsaml.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Domino REST API as SAML identity provider
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/IdP/roundtripidp.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Set up external IdP for Office Round Trip Experience
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/IdP/adminuiidp.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Set up external IdP for Admin UI IdP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../howto/production/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Production
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Production
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/production/changefilesize.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Change file size limit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/production/prodports.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure ports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/production/customAPI.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Customize API schemas and endpoints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/production/dominohttps.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Enable HTTPS using Domino Certificate Manager
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/production/hardening.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hardened production setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/production/httpsprod.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTTPS for production
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/production/reactjs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Host SPA with ReactJS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/production/oauthinvstgtn.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Investigate OAuth
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/production/configparam.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modify configuration parameters
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/production/roundtrip.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Set up Office Round Trip Experience
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/production/virtualsheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Set up Virtual Spreadsheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/production/signencrypt.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Set up for encryption, decryption, signing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/production/testformulas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Test formulas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/production/versionupdate.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Update Domino REST API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../howto/database/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Database
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Database
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/database/editsourcejson.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Edit database schema JSON
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/database/editviewcolumn.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Edit database view of a schema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/database/enablingadb.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Enable a database
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/database/excludeddb.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Enable excluded database files and directories
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/database/exportsourcejson.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Export database schema as JSON file
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/database/externalnames.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Use external names in schema definitions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/database/pullviewdata.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Adjust number of retrieved entries when pulling in view data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../howto/management/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Management console
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            Management console
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/management/checksettings.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Check Domino REST API settings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/management/supportpackage.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create support package
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/management/disablemodule.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Disable and enable module in production
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/management/configsrc.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Find configuration sources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/management/usersmc.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Identify known users with valid JWT token
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/management/jwtmultiserver.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JWT Multi-Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/management/suspendeduser.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release suspended users
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../howto/VoltMX/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    VoltMX
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            VoltMX
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/VoltMX/configuring-keep-idplite-with-identity-service.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Domino REST API IdP with Volt MX Foundry Identity Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/VoltMX/setupoauthnsf.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Set up oauth.nsf
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../howto/codesamples/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Code examples
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_9" id="__nav_4_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_9">
+            <span class="md-nav__icon md-icon"></span>
+            Code examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/codesamples/javascript.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/codesamples/js_sdk.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JavaScript SDK samples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../topicguides/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Topic guides
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Topic guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/introducingrestapi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducing the Domino REST API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/understanding.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Understanding HCL Domino REST API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/howkeepworks.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How HCL Domino REST API works
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/schemascope.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Schema & Scope
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/schemabackup.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Schema backup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/formmodes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Form modes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/keepdifference.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domino REST API is different
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/keepFlows.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domino REST API flows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/KeepFactory-and-caches.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Factories and Caches
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/architecture.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architectural decisions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/planning.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Planning your application
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/barbican.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The Barbican
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/eventbus.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    EventBus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/httpHandler.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTTP handler
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/dominojnx.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DominoJNX
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/agents.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agent processing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/usecases.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Use cases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/keepasproxy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domino REST API and Proxy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_20" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../topicguides/auxiliary/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Auxiliary services
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_20" id="__nav_5_20_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_20">
+            <span class="md-nav__icon md-icon"></span>
+            Auxiliary services
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/auxiliary/idp.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Identity Provider (IdP)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/auxiliary/webdav.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    webDAV
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/auxiliary/odata.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OData
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/auxiliary/ical.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    iCal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/auxiliary/healthmetrics.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Health & metrics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/auxiliary/management.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Management console
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topicguides/notesprimer.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The shiny web world - a primer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_22" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../topicguides/extensibility/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Extensibility
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_22">
+            <span class="md-nav__icon md-icon"></span>
+            Extensibility
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../references/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    References
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            References
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System requirements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/installconfig/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation and configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/understandingconfig.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Understanding configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/functionalUsers.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Functional accounts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/hostingstatic.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hosting static applications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/openapidefinitions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OpenAPI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/accesscontrol.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Access control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../references/schemacomponents/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Schema Components
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_9">
+            <span class="md-nav__icon md-icon"></span>
+            Schema Components
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/schemacomponents/formdefinitions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Form definitions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/schemacomponents/viewdefinitions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    View Definitions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/schemacomponents/agentdefinitions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agent definitions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../references/usingdominorestapi/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Using Domino REST API
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_10">
+            <span class="md-nav__icon md-icon"></span>
+            Using Domino REST API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingdominorestapi/keepapplications.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domino REST API Applications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingdominorestapi/keepcli.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domino REST API CLI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingdominorestapi/restapitask.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domino REST API task
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingdominorestapi/roles.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domino REST API roles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingdominorestapi/dataformats.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DataFormats
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingdominorestapi/encryptsign.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Encryption, decryption, and signing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingdominorestapi/formnames.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Form and Alias handling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingdominorestapi/metrics.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Metrics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingdominorestapi/modenames.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reserved Form mode names
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_10_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../references/usingdominorestapi/richtext/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Rich Text
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_10_11" id="__nav_6_10_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_10_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_10_11">
+            <span class="md-nav__icon md-icon"></span>
+            Rich Text
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingdominorestapi/richtext/conversion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conversion table
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingdominorestapi/scopes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scopes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingdominorestapi/console.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using Domino Console
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingdominorestapi/logging.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Logging
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../references/usingwebui/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Using Admin UI
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_11" id="__nav_6_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_11">
+            <span class="md-nav__icon md-icon"></span>
+            Using Admin UI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingwebui/schemaui.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Schema Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingwebui/scopeui.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scope Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingwebui/quickconfigui.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Config
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingwebui/appui.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Application Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usingwebui/oauthconsentui.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OAuth Consents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_12" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../references/security/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_12" id="__nav_6_12_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_12">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/security/authentication.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Auth\*
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/security/jwt.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JSON Web Token specification
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/security/configurationParameters.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuration <!--parameters-->
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/security/encryption.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Encryption Keys
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/VoltMX/setupoauthnsf.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Set up oauth.nsf
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/security/customIdp.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom Identity Provider (IdP)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/security/securingKEEPEndpoints.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Securing Domino REST API endpoints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_13" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../references/usertools/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    User tools
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_13" id="__nav_6_13_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_13">
+            <span class="md-nav__icon md-icon"></span>
+            User tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usertools/curl.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    curl
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usertools/postman.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Postman
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usertools/swagger.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Swagger UI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/usertools/bruno.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bruno
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/sdk.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domino REST API SDKs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/parameters.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuration parameters
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/troubleshooting.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_17" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../references/quickreference/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Quick reference
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_17" id="__nav_6_17_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_17">
+            <span class="md-nav__icon md-icon"></span>
+            Quick reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/quickreference/standards.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Standards
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/quickreference/glossary.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/downloads.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Downloads
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/admincheatsheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Admin cheat sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/ofba.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Extensions used to open the Microsoft Office in OFBA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/richtextension.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rich Text extension
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/deprecated.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deprecated features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#v112-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.1.2 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v111-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.1.1 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v11-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.1 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1014-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.14 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1012-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.12 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1011-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.11 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1010-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.10 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v109-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.9 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v108-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.8 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v107-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.7 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v106-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.6 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v105-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.5 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v104-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.4 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v103-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.3 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v102-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.2 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v101-whats-new-or-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.1 - What's new or changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v10-whats-changed-since-the-early-access-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0 - What's changed since the Early Access Release
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hcl-domino-rest-api-formerly-known-as-hcl-project-keep" class="md-nav__link">
+    <span class="md-ellipsis">
+      HCL Domino REST API formerly known as HCL Project KEEP
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="whats-new-for-domino-rest-api-v112-and-earlier">What's new for Domino REST API v1.1.2 and earlier</h1>
+<!-- prettier-ignore -->
+<div class="admonition note">
+<p class="admonition-title">Important</p>
+<ul>
+<li>Items marked in <span style="color:red"><strong>red</strong></span> are API changes that may impact your applications and should be reviewed before upgrading.</li>
+<li>Always be aware of features that have been deprecated in the current and earlier releases by checking <a href="../references/deprecated.html">deprecated features</a>.</li>
+</ul>
+</div>
+<details class="info">
+<summary>v1.1.2 - What's new or changed</summary>
+<h2 id="v112-whats-new-or-changed">v1.1.2 - What's new or changed</h2>
+<p><em>Release date: February 24, 2025</em></p>
+<p><strong>New features</strong></p>
+<ul>
+<li>
+<p>Domino REST API Administrators can now create a support package from either the <strong>Management console</strong> or by using specific console commands on the Domino console. The support package is a collection of files that can help the support team to better identify, troubleshoot, and resolve encountered issues. For more information, see <a href="../howto/management/supportpackage.html">Create support package</a>.</p>
+</li>
+<li>
+<p>Added the console command <code>tell restapi support</code> for creating a support package and <code>tell restapi support -includensf</code> for creating a support package that includes the <code>KeepConfig.nsf</code> when executed on the Domino console. For more information, see <a href="../references/usingdominorestapi/restapitask.html">Domino REST API task</a>.</p>
+</li>
+<li>
+<p>Added the console command <code>tell restapi refresh</code> to update the Domino REST API configuration without restarting the Domino REST API task. For more information, see <a href="../references/usingdominorestapi/restapitask.html">Domino REST API task</a>.</p>
+</li>
+<li>
+<p>Added <code>GET webdav-v1/locks</code> endpoint to get a list of all currently locked <a href="../howto/IdP/roundtripidp.html">OFBA</a> documents.</p>
+</li>
+<li>
+<p>Added <code>DELETE webdav-v1/lock/{lockKey}</code> endpoint to remove the <a href="../howto/IdP/roundtripidp.html">OFBA</a> lock specified by a <code>lockKey</code> and to terminate the session of the user who owns the lock. The requestor must be the lock owner, the manager of the locked document's database, or a member of the <code>LocalKeepAdmins</code> group to remove the lock.</p>
+</li>
+<li>
+<p>Added the <strong>Prevent Design Refresh</strong> toggle in the <strong>Admin UI</strong> to flag the schema written to the database, so the Domino design task won't replace or delete the schema. For more information, see <a href="../references/usingwebui/schemaui.html#edit-a-schema">Edit a schema</a>.</p>
+</li>
+<li>
+<p>Added the <strong>Required</strong> toggle in the <strong>Field Setting</strong> under <strong>Schema Management</strong> of the <strong>Admin UI</strong> to mark a field as a required field.</p>
+</li>
+<li>
+<p>Added the <strong>Validation Rules</strong> section under <strong>Schema Management</strong> of the <strong>Admin UI</strong> to allow the addition of rules for validating fields using Formula Language. For more information, see <a href="../references/usingwebui/schemaui.html#change-form-configuration">Change form configuration</a>.</p>
+</li>
+<li>
+<p>Added support for <a href="../topicguides/schemabackup.html">schema backup</a>.</p>
+</li>
+<li>
+<p><strong>Preview</strong>: New options for logging in to the Admin UI</p>
+<p>There are new options for logging in to the <strong>Admin UI</strong>. One new option uses Domino REST API IdP and implements the OAuth process requiring user consent to log in. The other new option is using an external IdP to log in to the Admin UI that uses authorization code flow with PKCE. </p>
+<p>For more information on how to log in to the <strong>Admin UI</strong>, see <a href="../references/usingwebui/index.html#log-in-options">Log in options</a>. For more information on how to configure and use an external IdP to log in to the <strong>Admin UI</strong>, see <a href="../howto/IdP/adminuiidp.html">Set up Admin UI external IdP login configuration</a>. </p>
+</li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul>
+<li>Added an <em>Overview</em> link on the <strong>Admin UI</strong> landing page that opens the Domino REST API functional diagram when clicked. Clicking parts of the functional diagram directs you to corresponding documentation topics for easier navigation.</li>
+<li>Enhanced user experience when editing a supported Microsoft Office file attached to a Domino document as the editing session does not expire as long as the Microsoft Office application is open. </li>
+</ul>
+<p><strong>Others</strong></p>
+<ul>
+<li>Moved the <code>GET webdav-v1/login/idpList</code> endpoint from WebDAV OpenAPI to Basis OpenAPI and renamed it to <code>GET v1/auth/idpList</code> endpoint. Added the <strong>configFor</strong> query parameter as a required parameter of the endpoint to specify what external IdP to retrieve. </li>
+<li>Specifying a kyr file name in the <code>KeepCertStoreName</code> is set to be deprecated and is no longer encouraged. A warning will be issued if a kyr file name is specified.</li>
+<li>Using <code>KeepCertStoreName=*</code> to specify multiple explicit DNS names in the <code>KeepCertStoreName</code> is set to be deprecated and is no longer encouraged. While it is still functional, a warning will appear when used.</li>
+<li>
+<p>Added procedure for testing access formulas in Mode Settings under <strong>Schema Management</strong> of the <strong>Admin UI</strong>. For more information, see <a href="../howto/production/testformulas.html">Test formulas</a>.</p>
+</li>
+<li>
+<p>Installer jar files:</p>
+<ul>
+<li>For Domino 14: <em>restapiInstall-r14.jar</em></li>
+<li>For Domino 12: <em>restapiInstall-r12.jar</em></li>
+</ul>
+</li>
+<li>
+<p>Docker image version for docker compose .env file (CONTAINER_IMAGE):</p>
+<ul>
+<li>For Domino 14: <em>domino-rest-api:1.1.2-r14</em></li>
+<li>For Domino 12: <em>domino-rest-api:1.1.2-r12</em>  </li>
+</ul>
+</li>
+<li>
+<p>Docker image version for docker compose .env file from Harbor:</p>
+<ul>
+<li>For Domino 14: <em>hclcr.io/domino/restapi:1.1.2-r14</em></li>
+<li>For Domino 12: <em>hclcr.io/domino/restapi:1.1.2-r12</em> </li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="info">
+<summary>v1.1.1 - What's new or changed</summary>
+<h2 id="v111-whats-new-or-changed">v1.1.1 - What's new or changed</h2>
+<p><em>Release date: December 02, 2024</em></p>
+<p><strong>New features</strong></p>
+<ul>
+<li>
+<p>When using the DRAPI IdP users can be locked out if they enter incorrect credentials several times.  You can now view and reinstate these users without waiting for the lockout period to end via the <strong>Management console</strong>. For more information, see <a href="../howto/management/suspendeduser.html">Release suspended users</a>.</p>
+</li>
+<li>
+<p>Users with valid JWT tokens can now be identified via the <strong>Users</strong> tab on the <strong>Management console</strong>. For more information, see <a href="../howto/management/usersmc.html">Identify known users with valid JWT token</a>. </p>
+</li>
+<li>
+<p>The Domino REST API configuration settings and where they are located can be identified via the <strong>Config src</strong> tab on the <strong>Management console</strong>. For more information, see <a href="../howto/management/configsrc.html">Find configuration sources</a>.</p>
+</li>
+<li>
+<p>Domino REST API administrators can now customize which API schemas and endpoints are available to meet specific requirements and use cases. For more information, see <a href="../howto/production/customAPI.html">Customize available API schemas and endpoints</a>.</p>
+</li>
+<li>
+<p>Implemented the Monaco Editor to the <strong>Text View</strong> mode on the <strong>Source</strong> tab on the <strong>Schema Management</strong> page of the <strong>Admin UI</strong>. With this implementation, users can now also edit the database schema from the <strong>Text View</strong> mode. For more information, see <a href="../howto/database/editsourcejson.html">Edit database schema JSON</a>.</p>
+</li>
+<li>
+<p>Added a new OpenAPI landing page that shows all the general API schemas and application-specific schemas, enabling users to easily find the schemas they require.</p>
+</li>
+<li>
+<p>Added OpenAPI schema and Swagger page for the <a href="../references/openapidefinitions.html#webdav">WebDAV API</a> that provides endpoints to perform remote Web content authoring operations that support the Office Round Trip Experience and Virtual Spreadsheet features of Domino REST API.</p>
+</li>
+<li>
+<p>Added the console command <code>tell restapi idpstatus</code> that shows the state of the configured identity providers when executed on the Domino console.   </p>
+</li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul>
+<li>
+<p>When adding a JSON object to the database schema on the <strong>Source</strong> tab on the <strong>Schema Management</strong> page in the <strong>Admin UI</strong>, the value of the JSON object is now validated to ensure the correct format based on the selected JSON object type. For more information, see <a href="../howto/database/editsourcejson.html">Edit database schema JSON</a>.</p>
+</li>
+<li>
+<p>When adding fields to a form on the <strong>Schema Management</strong> page in the <strong>Admin UI</strong>, users can now identify the property of the field by hovering over the <strong>info</strong> icon beside the field name. For more information, see <a href="../references/usingwebui/schemaui.html#change-form-configuration">Change form configuration</a>.</p>
+</li>
+<li>
+<p>The <strong>Clear passkey</strong> option has been removed from the <strong>Admin UI</strong> login page to avoid user confusion. This option only clears local storage data, not the actual passkey. To enhance the user experience, both the <strong>LOG IN WITH PASSWORD</strong> and <strong>LOG IN WITH PASSKEY</strong> options are available on the <strong>Admin UI</strong> login page. For more information, see <a href="../howto/install/passkey.html">Use WebAuthn (Passkey) to log in to Admin UI</a>.</p>
+</li>
+<li>
+<p>Added the column attributes <code>twisties</code> and <code>responsesonly</code> to the <code>GET v1/lists</code> endpoint response when the <em>columns</em> parameter is set to true.</p>
+</li>
+<li>
+<p>Added hourly task to refresh TLS certificates when using the <strong>Domino Certificate Manager</strong>.</p>
+</li>
+<li>
+<p>Implemented the remaining special-text functions when retrieving a view. Special-text functions are calculated at runtime and include functions, such as <code>@DocNumber</code>, <code>@DocDecendants</code>, <code>@DocParentNumber</code>. </p>
+</li>
+</ul>
+<p><strong>Resolved issues</strong></p>
+<ul>
+<li>Forms or views with some special characters were not encoded when performing a REST call to retrieve the list of fields or columns, resulting in a 405 Method Not Allowed error response. </li>
+<li>Editing a schema in the <strong>Admin UI</strong> led to an empty page when the name of the schema form or view contained <code>#</code>.</li>
+<li>When calling the <code>GET v1/lists/{name}</code> endpoint using the view alias, the configured external names were not retrieved; instead, the column programmatic names were retrieved.</li>
+<li>Implemented various fixes resolving issues when using <strong>Domino Certificate Manager</strong> to enable HTTPs.</li>
+<li>Fixed the issue with the Domino REST API Task not always showing correctly via <strong>Domino Administrator Monitor</strong> pane. </li>
+<li>Fixed the issues around Office Round Trip Editing in Windows using Webdav APIs.</li>
+</ul>
+<p><strong>Others</strong></p>
+<ul>
+<li>
+<p>Added <a href="../howto/production/roundtrip.html#to-access-and-edit-the-ms-office-file-attachment">tip for ensuring successful round-trip editing on Windows</a>.</p>
+</li>
+<li>
+<p>Added <strong>Bruno</strong> as one of the tools you can use when dealing with REST APIs. For more information, see <a href="../references/usertools/bruno.html">Bruno</a>.</p>
+</li>
+<li>
+<p>Installer jar files:</p>
+<ul>
+<li>For Domino 14: <em>restapiInstall-r14.jar</em></li>
+<li>For Domino 12: <em>restapiInstall-r12.jar</em></li>
+</ul>
+</li>
+<li>
+<p>Docker image version for docker compose .env file (CONTAINER_IMAGE):</p>
+<ul>
+<li>For Domino 14: <em>domino-rest-api:1.1.1-r14</em></li>
+<li>For Domino 12: <em>domino-rest-api:1.1.1-r12</em>  </li>
+</ul>
+</li>
+<li>
+<p>Docker image version for docker compose .env file from Harbor:</p>
+<ul>
+<li>For Domino 14: <em>hclcr.io/domino/restapi:1.1.1-r14</em></li>
+<li>For Domino 12: <em>hclcr.io/domino/restapi:1.1.1-r12</em>  </li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="info">
+<summary>v1.1 - What's new or changed</summary>
+<h2 id="v11-whats-new-or-changed">v1.1 - What's new or changed</h2>
+<p><em>Release date: September 30, 2024</em></p>
+<p><strong>New features</strong></p>
+<ul>
+<li>
+<p>Domino REST API can now encrypt document fields and sign a document with keys stored in your Notes ID file. This protects data from unauthorized access and further enhances data security and integrity. </p>
+<p>To learn more about encrypting, descrypting, and signing, see <a href="../references/usingdominorestapi/encryptsign.html">Using encryption, decryption, and signing during development</a>.</p>
+<p>To set up Domino REST API and enable this feature, see <a href="../howto/production/signencrypt.html">Set up Domino REST API for encryption, decryption, and signing</a>.</p>
+</li>
+<li>
+<p>Domino REST API can now enable HTTPS setup in Domino using Domino's certificate configuration. To learn more, see <a href="../howto/production/dominohttps.html">Enable HTTPS using the Domino Certificate Manager</a>. </p>
+</li>
+<li>
+<p>Added support for using external IdP for Office Round Trip Experience. For more information, see <a href="../howto/IdP/roundtripidp.html">Setup external IdP for Office Round Trip Experience</a>.</p>
+</li>
+<li>
+<p>Added <code>DELETE v1/nameddocument</code> endpoint to delete a named document.</p>
+</li>
+<li>Added <code>GET v1/nameddocument</code> endpoint to retrieve a named document using the appropriate name.</li>
+<li>Added <code>GET v1/nameddocumentlist</code> endpoint to retrieve a list of named documents.</li>
+<li>
+<p>Added <code>POST v1/nameddocument</code> endpoint to create and update a named document. </p>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>A POST request replaces all fields listed in your schema. Ensure to include all the fields in the POST request body and the corresponding values you want to retain and overwrite. </p>
+</div>
+</li>
+<li>
+<p>Added <code>GET v1/richtext/{richTextAs}/{unid}</code> endpoint that returns a stream of data from a Rich Text field based on the specified format. The endpoint is usable for all Rich Text processors and combines the functionalities of the following endpoints:</p>
+<ul>
+<li><code>GET v1/richtext/markdown/{unid}</code></li>
+<li><code>GET v1/richtext/mime/{unid}</code></li>
+<li><code>GET v1/richtext/plain/{unid}</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul>
+<li>
+<p>Domino REST API Task</p>
+<p>The Domino Addin Task has been updated with the following:</p>
+<ul>
+<li>When Domino REST API is started, it displays the messages <code>REST API: Starting...</code> and then <code>REST API Started</code> instead of printing a JSON status message. </li>
+<li>When Domino REST API is stopped,  it now displays the message <code>REST API: Shutdown</code> instead of a long output of JSON.</li>
+<li>The Domino REST API Java process is now integrated with the Domino process, resulting in a better-integrated product and improved reliability.</li>
+<li>The Domino REST API Statistics can now be accessed via the Domino Console <code>SHOW STAT</code> command. To see just the Domino REST API statistics, use the <code>SHOW STAT restapi</code> command.</li>
+<li>The <code>KeepManagementURL</code> line in the <code>notes.ini</code> is no longer necessary. If set, it will be ignored.</li>
+</ul>
+</li>
+<li>
+<p>Added an option of selecting additional modes when executing <a href="../references/usingwebui/quickconfigui.html">Quick Config</a>.</p>
+</li>
+<li>
+<p>Implemented UI enhancements to the <strong>Source</strong> tab under <strong>Schema Management</strong> in the <strong>Admin UI</strong>. </p>
+</li>
+<li>
+<p>Added an option for exporting database schema as JSON file by copying the schema and then creating a JSON file containing the copied schema. For more information, see <a href="../howto/database/exportsourcejson.html#to-create-a-json-file">Export database schema as JSON file</a>. </p>
+</li>
+</ul>
+<p><strong>Resolved issues</strong></p>
+<ul>
+<li>The <code>GET admin-v1/access/users</code> endpoint returned a <strong>404 No users found with requested name</strong> error when the value entered for the query parameter <code>startsWith</code> included a slash character.</li>
+<li>Swedish characters were not correctly encoded and displayed in the response body when Office Round Trip Experience with RichText content was attempted using <code>POST /v1/document</code> endpoint.</li>
+<li>Issues were encountered when logging in with MS-OFBA via Internet Explorer 8, as some login functions were not supported by the web browser.</li>
+</ul>
+<p><strong>Others</strong></p>
+<ul>
+<li>
+<p>Updated <a href="../howto/database/editsourcejson.html">Edit database schema JSON</a> and <a href="../howto/database/exportsourcejson.html">Export schema as JSON file</a> based on the UI enhahcements to the <strong>Source</strong> tab under <strong>Schema Management</strong>.</p>
+</li>
+<li>
+<p>The following endpoints have been replaced with the <code>GET v1/richtext/{richTextAs}/{unid}</code> endpoint:</p>
+<ul>
+<li><code>GET v1/richtext/markdown/{unid}</code></li>
+<li><code>GET v1/richtext/mime/{unid}</code></li>
+<li><code>GET v1/richtext/plain/{unid}</code></li>
+</ul>
+</li>
+<li>
+<p>Installer jar files:</p>
+<ul>
+<li>For Domino 14: <em>restapiInstall-r14.jar</em></li>
+<li>For Domino 12: <em>restapiInstall-r12.jar</em></li>
+</ul>
+</li>
+<li>
+<p>Docker image version for docker compose .env file (CONTAINER_IMAGE):</p>
+<ul>
+<li>For Domino 14: <em>domino-rest-api:1.1.0-r14</em></li>
+<li>For Domino 12: <em>domino-rest-api:1.1.0-r12</em>  </li>
+</ul>
+</li>
+<li>
+<p>Docker image version for docker compose .env file from Harbor:</p>
+<ul>
+<li>For Domino 14: <em>hclcr.io/domino/restapi:1.1.0-r14</em></li>
+<li>For Domino 12: <em>hclcr.io/domino/restapi:1.1.0-r12</em>  </li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="info">
+<summary>v1.0.14 - What's new or changed</summary>
+<h2 id="v1014-whats-new-or-changed">v1.0.14 - What's new or changed</h2>
+<p><em>Release date: June 13, 2024</em></p>
+<p><strong>New features</strong></p>
+<ul>
+<li>
+<p>Preview: <strong>Virtual Spreadsheet</strong>  </p>
+<p>The <strong>Virtual Spreadsheet</strong> feature allows you to open up and edit view entries using Microsoft Excel <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. This feature uses the round trip editing feature of Domino REST API for Microsoft Office applications. For more information, see <a href="../howto/production/virtualsheet.html">Set up Virtual Spreadsheet</a>.</p>
+</li>
+<li>
+<p>Added ability for a third-party Rich Text processor to process incoming Rich Text. For more information, see <a href="../references/richtextension.html#incoming-rich-text-processor">Incoming Rich Text Processor</a>. </p>
+</li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul>
+<li>Added support for <code>contains</code>, <code>startswith</code>, and <code>endswith</code> in OData functions.</li>
+<li>Added the <code>includeAttachmentMetadata</code> parameter to the <code>GET v1/attachmentnames</code> endpoint to output the attachment file size, created date, and modified date.</li>
+<li>Added an array that contains the top-level child document UNIDs to the <code>@meta</code> object in the response of the <code>GET v1/document/{unid}</code> and <code>GET v1/docmeta/{unid}</code> endpoints.</li>
+<li>
+<p>Uses the correct mail template based on the Domino version when creating a second calendar using the <code>POST pim-v1/calendar</code> endpoint.</p>
+</li>
+<li>
+<p>Implemented UI/UX enhancements in the <a href="../references/usingwebui/appui.html">Application Management</a> page in the <strong>Admin UI</strong>.</p>
+</li>
+</ul>
+<p><strong>Resolved issues</strong></p>
+<ul>
+<li>The <code>POST v1/run/formula</code> endpoint did not allow the formula to run unless the user was in the server config <em>allow run formula agents</em>.</li>
+</ul>
+<p><strong>Others</strong></p>
+<ul>
+<li>Implemented documentation updates.</li>
+<li>
+<p>Installer jar files:</p>
+<ul>
+<li>For Domino 14: <em>restapiInstall-r14.jar</em></li>
+<li>For Domino 12: <em>restapiInstall-r12.jar</em></li>
+</ul>
+</li>
+<li>
+<p>Docker image version for docker compose .env file (CONTAINER_IMAGE):</p>
+<ul>
+<li>For Domino 14: <em>domino-rest-api:1.0.14-r14</em></li>
+<li>For Domino 12: <em>domino-rest-api:1.0.14-r12</em>  </li>
+</ul>
+</li>
+<li>
+<p>Docker image version for docker compose .env file from Harbor:</p>
+<ul>
+<li>For Domino 14: <em>hclcr.io/domino/restapi:1.0.14-r14</em></li>
+<li>For Domino 12: <em>hclcr.io/domino/restapi:1.0.14-r12</em></li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="info">
+<summary>v1.0.12 - What's new or changed</summary>
+<h2 id="v1012-whats-new-or-changed">v1.0.12 - What's new or changed</h2>
+<p><em>Release date: April 25, 2024</em></p>
+<p><strong>New features</strong></p>
+<ul>
+<li>Added <code>GET v1/richtextprocessors</code> endpoint to return a list of the available methods of returning Rich Text.</li>
+<li>
+<p>Added <code>POST v1/run/agentWithContext</code> endpoint to specify an array of UNIDs to run an agent on. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The agent must use <code>NotesSession.DocumentContext</code> to access the document.</p>
+</div>
+</li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul>
+<li>
+<p>Extended how Rich Text is processed. For more information, see <a href="../references/richtextension.html">Rich Text extension</a>.</p>
+</li>
+<li>
+<p>Improved OData filter processing by adding support for <code>in</code>, <code>contains</code>, <code>startswith</code>, and <code>endswith</code> clauses.</p>
+</li>
+<li>
+<p>Enhanced user experience by allowing user to activate a form and bringing user directly into form edit mode by clicking the pencil icon corresponding to an inactive form in the <strong>Database Form</strong> tab in the <strong>Admin UI</strong> and confirming form activation.</p>
+</li>
+<li>
+<p>Implemented UI/UX enhancements in the <a href="../references/usingwebui/oauthconsentui.html">OAuth Consents</a> page in the <strong>Admin UI</strong>.</p>
+</li>
+<li>Enhanced the PIM Swagger documentation. </li>
+</ul>
+<p><strong>Resolved issues</strong></p>
+<ul>
+<li>An intermittent issue occurred where deleting a schema might have caused other schemas not to load or be created for that same database.</li>
+<li>Running <code>tell restapi quit</code> might have crashed the Domino server.</li>
+<li>An issue occurred with <code>pim-v1/attachments/{unid}/{attachmentName}</code> where deleting the attachment did not remove the attachment's icon.</li>
+<li>The <strong>External Name</strong> field in the <strong>Admin UI</strong> was blank when editing a View and the column title has DBCS characters.</li>
+</ul>
+<p><strong>Others</strong></p>
+<ul>
+<li>Implemented documentation updates.</li>
+<li>
+<p>Installer jar files:</p>
+<ul>
+<li>For Domino 14: <em>restapiInstall-r14.jar</em></li>
+<li>For Domino 12: <em>restapiInstall-r12.jar</em></li>
+</ul>
+</li>
+<li>
+<p>Docker image version for docker compose .env file (CONTAINER_IMAGE):</p>
+<ul>
+<li>For Domino 14: <em>domino-rest-api:1.0.12-r14</em></li>
+<li>For Domino 12: <em>domino-rest-api:1.0.12-r12</em>  </li>
+</ul>
+</li>
+<li>
+<p>Docker image version for docker compose .env file from Harbor:</p>
+<ul>
+<li>For Domino 14: <em>hclcr.io/domino/restapi:1.0.12-r14</em></li>
+<li>For Domino 12: <em>hclcr.io/domino/restapi:1.0.12-r12</em> </li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="info">
+<summary>v1.0.11 - What's new or changed</summary>
+<h2 id="v1011-whats-new-or-changed">v1.0.11 - What's new or changed</h2>
+<p><em>Release date: March 27, 2024</em></p>
+<p><strong>New features</strong></p>
+<ul>
+<li>
+<p>Added the <strong>Add New Form Schema</strong> button on the <strong>Database Forms</strong> page in the <strong>Admin UI</strong> to allow the creation of a Form schema for a form that does not exist in the design of the database. This is useful for the profile document update introduced in the v1.0.10 release and can also be used to add or retrieve documents when no form exists in the design. For more information, see <a href="../references/usingwebui/schemaui.html#add-new-form-schema">Add new form schema</a>.</p>
+</li>
+<li>
+<p>Added OData support for queries using <code>$select</code>.</p>
+</li>
+<li>Added OData support for the <strong>ne</strong> (not equal) operator in a filter.</li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul>
+<li>Provides column hidden metadata when using the <code>v1/lists</code> endpoint and setting the value of the <strong>columns</strong> parameter to <em>true</em>.</li>
+<li>Provides additional field metadata specifying if a <strong>datetime</strong> form field shows a date, a time, or both when retrieving a list of fields from the <code>setup-v1/design/forms/{formName}</code> endpoint.</li>
+<li>
+<p>Sets the field type correctly, depending on how the field is defined on the form, when adding a <strong>datetime</strong> field to a Form schema in the <strong>Admin UI</strong>. The field type is set to:</p>
+<ul>
+<li><em>date-time</em> when the <strong>datetime</strong> field with date and time is selected.</li>
+<li><em>date</em> when the <strong>datetime</strong> field with only date is selected.</li>
+<li><em>string</em> when the <strong>datetime</strong> field with only time is selected.  </li>
+</ul>
+</li>
+<li>
+<p>Changed the <strong>Inactive-Active</strong> toggle for activating a form on the <strong>Database Forms</strong> page in the <strong>Admin UI</strong> to a 3-dot icon menu that displays available options when clicked.</p>
+</li>
+<li>Added an <strong>Activate Form</strong> dialog in the <strong>Admin UI</strong> to get user confirmation for activating an inactive form when the user clicks the edit icon corresponding to an inactive form.</li>
+<li>Enhanced processing speed for retrieving a list of schemas with a large number of schemas in the <strong>Admin UI</strong>.</li>
+</ul>
+<p><strong>Resolved issues</strong></p>
+<ul>
+<li>The error “badly formatted directory string”  was produced when creating a certificate via the <strong>Management</strong> page.</li>
+<li>Trace logging did not work on Windows. </li>
+<li>A different form was shown to be activated when activating a form that has been searched.  </li>
+</ul>
+<p><strong>Others</strong></p>
+<ul>
+<li>Implemented documentation updates.</li>
+<li>The terms <em>Configure</em> and <em>Unconfigure</em> in relation to database forms in the <strong>Admin UI</strong> have been changed to <em>Activate</em> and <em>Deactivate</em>, respectively.</li>
+<li>
+<p>Installer jar files:</p>
+<ul>
+<li>For Domino 14: <em>restapiInstall-r14.jar</em></li>
+<li>For Domino 12: <em>restapiInstall-r12.jar</em></li>
+</ul>
+</li>
+<li>
+<p>Docker image version for docker compose .env file (CONTAINER_IMAGE):</p>
+<ul>
+<li>For Domino 14: <em>domino-rest-api:1.0.11-r14</em></li>
+<li>For Domino 12: <em>domino-rest-api:1.0.11-r12</em>  </li>
+</ul>
+</li>
+<li>
+<p>Docker image version for docker compose .env file from Harbor:</p>
+<ul>
+<li>For Domino 14: <em>hclcr.io/domino/restapi:1.0.11-r14</em></li>
+<li>For Domino 12: <em>hclcr.io/domino/restapi:1.0.11-r12</em> </li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="info">
+<summary>v1.0.10 - What's new or changed</summary>
+<h2 id="v1010-whats-new-or-changed">v1.0.10 - What's new or changed</h2>
+<p><em>Release date: February 22, 2024</em></p>
+<p><strong>New features</strong></p>
+<ul>
+<li>Added <code>POST v1/profiledocument</code> endpoint to create and update an existing profile document. </li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>A POST request replaces all fields listed in your schema. Ensure to include all the fields in the POST request body and the corresponding values you want to retain and overwrite.</p>
+</div>
+<ul>
+<li>Added <code>DELETE v1/profiledocument</code> endpoint to delete a profile document as long as the schema allows it.</li>
+<li>Added <code>GET setup-v1/admin/purge</code> endpoint to discover scopes that no longer have a valid schema because the schema no longer exists, the schema has invalid JSON, a corrupted NSF, or the NSF no longer exists.</li>
+<li>
+<p>Added  <code>POST setup-v1/admin/purge</code> endpoint to specify the schema and scope information to remove using the GET setup-v1/admin/purge endpoint response.</p>
+</li>
+<li>
+<p>Added Microsoft Office round-trip editing capability to simplify document editing experience by launching Office documents directly into their native applications and saving changes back to the server. For more information, see <a href="../howto/production/roundtrip.html">Setup Office Round Trip Experience</a>.</p>
+</li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul>
+<li>
+<p><span style="color:red">The <strong><code>GET v1/profiledocument</code> endpoint has been updated</strong>. Previously, this endpoint returned the complete profile document by default, but starting this release, you must define a schema to get a Profile document. The need for the schema also applies to the new <code>POST v1/profiledocument</code> and <code>DELETE v1/profiledocument</code> endpoints.</span> </p>
+<p><span style="color:red">Profile documents do not always have a Form associated with them. In such cases, you must create a schema for the Form named "Profile" (case sensitive). Profile documents without a Form will look for the "Profile" schema and return the error "No form and mode configuration found for Profile/default" if the schema doesn't exist.</span></p>
+<p><span style="color:red">The easiest way to create the "Profile" schema is to create a Form named "Profile" in the database containing all fields you need to retrieve or update and then add the Form Schema. Alternatively, you can create the schema programmatically by following the steps:</span></p>
+<ol>
+<li>Call the <code>GET setup-v1/schema</code> endpoint to get the schema where you want to add the "Profile" form.</li>
+<li>Copy the response to a text editor, and modify it by adding the "Profile" form and the fields required using other Form schemas as a guide.</li>
+<li>Update the whole schema using the <code>POST setup-v1/schema</code> endpoint. </li>
+</ol>
+<p><span style="color:red">Make sure to save a copy of the <code>GET setup-v1/schema</code> response in case you need to revert to the previous version. In a future release, you will be able to add a Form schema for a form that doesn't exist in the database and will be able to add the Profile using this method.</span> </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>GET v1/profiledocument</code> endpoint no longer creates a profile document. Instead, use the <code>POST v1/profiledocument</code> endpoint to create one.</p>
+</div>
+</li>
+<li>
+<p>Reduced heap memory used by Domino REST API.</p>
+</li>
+<li>Added option to use a named key when using the <code>v1/profiledocument</code> endpoints.</li>
+<li>Added the date time attributes of a <strong>datetime</strong> field when executing the <code>setup-v1/design/forms/{designName}</code> endpoint.</li>
+</ul>
+<p><strong>Resolved issues</strong></p>
+<ul>
+<li>Passkey on <strong>Admin UI</strong> didn't work on newer versions of Safari.</li>
+<li>The <code>setup-v1/design/{designType}/{designName}</code> endpoint returned shared libraries.</li>
+</ul>
+<p><strong>Others</strong></p>
+<ul>
+<li>Implemented documentation updates.</li>
+<li>
+<p>Installer jar files:</p>
+<ul>
+<li>For Domino 14: <em>restapiInstall-r14.jar</em></li>
+<li>For Domino 12: <em>restapiInstall-r12.jar</em></li>
+</ul>
+</li>
+<li>
+<p>Docker image version for docker compose .env file (CONTAINER_IMAGE):</p>
+<ul>
+<li>For Domino 14: <em>domino-rest-api:1.0.10-r14</em></li>
+<li>For Domino 12: <em>domino-rest-api:1.0.10-r12</em>  </li>
+</ul>
+</li>
+<li>
+<p>Docker image version for docker compose .env file from Harbor:</p>
+<ul>
+<li>For Domino 14: <em>hclcr.io/domino/restapi:1.0.10-r14</em></li>
+<li>For Domino 12: <em>hclcr.io/domino/restapi:1.0.10-r12</em> </li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="info">
+<summary>v1.0.9 - What's new or changed</summary>
+<h2 id="v109-whats-new-or-changed">v1.0.9 - What's new or changed</h2>
+<p><em>Release date: December 14, 2023</em></p>
+<p><strong>New features</strong></p>
+<ul>
+<li>
+<p>Added full support for Domino 14.</p>
+<p>To utilize the newer JVM functionality provided by Domino 14, we  now provide both a Domino 12 and a Domino 14 installer, as well as Docker images for both platforms.</p>
+<p>Older versions of the Domino REST API will run on Domino 14, but may have issues with certain endpoints. It is suggested that you follow the following steps to upgrade your Domino 12 server with the Domino REST API to Domino 14:</p>
+<ol>
+<li>Stop your Domino 12 server.</li>
+<li>Remove <code>restapi</code> from the <code>ServerTasks</code> line in <code>notes.ini</code>.</li>
+<li>Upgrade your Domino 12 server to Domino 14.</li>
+<li>Start your Domino 14 server.</li>
+<li>Stop your Domino 14 server.</li>
+<li>Install the Domino 14 version of the Domino REST API.</li>
+<li>Start Domino.</li>
+</ol>
+</li>
+<li>
+<p>Added <code>POST v1/query/qrp/json</code> endpoint to perform a DQL query to get back QueryResultsProcessor JSON results. For an example of usage, see <em>Swagger UI</em>. </p>
+</li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul>
+<li>Added a new option on the <code>GET v1/lists</code> endpoint by adding a filter parameter to return a list of available views containing the case-insensitive filter text.</li>
+<li>Added warnings to the <code>POST setup-v1/schema</code> endpoint if design elements specified in the schema are not found in the database.</li>
+<li>Added a new option to the<code>POST setup-v1/schema</code> endpoint by enabling the setting of <code>dryRun=true</code> to get the response and verify there are no warnings without creating the schema.</li>
+<li>Enabled retrieval of the document's parent UNID in the response (@parentDocument) when retrieving view contents via <code>GET v1/lists/{name}</code> endpoint by setting <code>metaAdditional=true</code>.</li>
+<li>Updated the access-control-allow-methods with the correct set of allowed methods.</li>
+</ul>
+<p><strong>Resolved issues</strong></p>
+<ul>
+<li>Shared Fields, Shared Actions and Item Definitions were not returned when retrieving them from the <code>GET setup-v1/design/{designType}/{designName}</code> endpoint.</li>
+<li>Access-control-allow-headers were not being set in the CORS response.</li>
+<li>A returned field specified as Rich Text in the Form and Schema was not actually Rich Text on the document. </li>
+<li>Views or Folders were retrieved even if the column was defined as <em>Show Responses only</em>.</li>
+</ul>
+<p><strong>Others</strong></p>
+<ul>
+<li>
+<p>Removed the use of <code>dataSource</code> or a path to an NSF in the <code>dataSource</code> parameter by most <code>admin-v1</code> endpoints. See <a href="../references/deprecated.html">Deprecated features</a> for more information and recommendation.</p>
+</li>
+<li>
+<p>Implemented various documentation updates.</p>
+</li>
+<li>
+<p>Starting this release, there will be two installer jar files:</p>
+<ul>
+<li>For Domino 14: <em>restapiInstall-r14.jar</em></li>
+<li>For Domino 12: <em>restapiInstall-r12.jar</em></li>
+</ul>
+</li>
+<li>
+<p>Docker image version for docker compose .env file (CONTAINER_IMAGE):</p>
+<ul>
+<li>For Domino 14: <em>domino-rest-api:1.0.9-r14</em></li>
+<li>For Domino 12: <em>domino-rest-api:1.0.9-r12</em>  </li>
+</ul>
+</li>
+<li>
+<p>Docker image version for docker compose .env file from Harbor:</p>
+<ul>
+<li>For Domino 14: <em>hclcr.io/domino/restapi:1.0.9-r14</em></li>
+<li>For Domino 12: <em>hclcr.io/domino/restapi:1.0.9-r12</em> </li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="info">
+<summary>v1.0.8 - What's new or changed</summary>
+<h2 id="v108-whats-new-or-changed">v1.0.8 - What's new or changed</h2>
+<p><em>Release date: November 14, 2023</em></p>
+<p><strong>New features</strong></p>
+<ul>
+<li>OAuth will auto consent if a valid refresh token exists for a user scope application combination.</li>
+<li>
+<p>Added the following OAuth consent endpoints:</p>
+<ul>
+<li><code>GET v1/consents</code> returns all valid consents for the current user.</li>
+<li><code>GET v1/consent/{client_id}</code> returns all valid OAuth consents for the current user associated with the application app <code>id (client_id)</code>.</li>
+<li><code>DELETE v1/consents</code> revokes all OAuth consents that the current user has access to.</li>
+<li><code>DELETE v1/consent/revoke/{unid}</code> revokes a specific OAuth consent. The <code>unid</code> is available in the response of the consent <code>GET</code> endpoints.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<ul>
+<li>Users in the LocalKeepAdmins group or have manager access to the OAuth database (<code>oauth.nsf</code>) have access to all valid consents. </li>
+<li>Consent endpoints that act on All consents the user has access to will act on all valid consents.</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Added endpoint <code>GET v1/attachmentnames/{unid}</code> to return a list of attachments attached to this document.</p>
+</li>
+<li>
+<p>Added endpoint <code>GET v1/preview</code> to list endpoints that are marked as preview, may be considered beta endpoints.</p>
+</li>
+<li>
+<p>Added ability to view and revoke OAuth consents in the AdminUI via the <a href="../references/usingwebui/oauthconsentui.html#oauth-consents">OAuth Consents</a> pane.</p>
+</li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul>
+<li>
+<p>Added the ability to <a href="../references/usingwebui/schemaui.html#clone-a-mode">clone form modes</a> and <a href="../references/usingwebui/schemaui.html#compare-modes">compare form modes</a> in the AdminUI.</p>
+</li>
+<li>
+<p>Added the ability to <a href="../howto/database/exportsourcejson.html">export a schema</a> and <a href="../references/usingwebui/schemaui.html#import-a-schema">import a schema</a> in the AdminUI.</p>
+</li>
+<li>
+<p>Added search feature in <strong>Schema Management</strong> to easily look for forms, views, and agents.  </p>
+</li>
+<li>Added ability to configure or unconfigure all database forms at the same time.</li>
+</ul>
+<p><strong>Resolved issues</strong></p>
+<ul>
+<li><code>POST v1/run/agent</code> did not run when using the agent's alias.</li>
+<li><code>POST v1/run/agent</code> did not run in the user's context when the agent is set to <em>Run as Web User</em>.</li>
+<li>Calling <code>POST /attachments/{unid}</code> multiple times did not render the attachments correctly in Notes.</li>
+<li><code>POST v1/query</code> wasn't returning <code>richtext</code> fields as plain when <code>richTextAs=plain</code> was set.</li>
+</ul>
+<p><strong>Others</strong></p>
+<ul>
+<li>Implemented various documentation updates.</li>
+<li>Docker image version for docker compose .env file (CONTAINER_IMAGE) is <em>domino-rest-api:1.0.8</em>.</li>
+<li>Docker image version for docker compose .env file from Harbor is <em>hclcr.io/domino/restapi:1.0.8</em>.</li>
+</ul>
+</details>
+<details class="info">
+<summary>v1.0.7 - What's new or changed</summary>
+<h2 id="v107-whats-new-or-changed">v1.0.7 - What's new or changed</h2>
+<p><strong>New features</strong></p>
+<ul>
+<li>Added endpoint <code>GET v1/richtext/plain/{unid}</code> to retrieve just plain text from a <code>richtext</code> field.</li>
+<li>Added endpoint <code>POST v1/bulk/etag</code> to give an entity tag (ETag) to specified documents. The endpoint is also useful in finding if a doc has been updated or deleted.</li>
+<li>Added endpoint <code>POST v1/bulk/folder</code> to add or remove documents to or from folders.</li>
+<li>
+<p>Added endpoint <code>GET v1/logout</code> for OIDC compliance. <code>POST v1/logout</code> is still recommended as a browser's PREFETCH could potentially cause issues.</p>
+</li>
+<li>
+<p>Added support for <a href="../howto/IdP/configuringAD.html">Azure Active Directory as an IdP</a>.</p>
+</li>
+<li>
+<p>Added ability to directly <a href="../howto/database/editsourcejson.html">edit a schema JSON</a> in the <strong>Admin UI</strong>.</p>
+</li>
+<li>Added the ability to specify multiple filter keys for <code>GET v1/lists/{name}</code>.</li>
+<li>Added the ability to filter by top-level category in <code>GET v1/lists/{name}</code>.</li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul>
+<li>Sped up the <code>setup-v1/admin/quickconfig</code> endpoint significantly, which sped up <strong>Admin UI Quick Config</strong>.</li>
+<li>Added a file selection button for <code>POST v1/attachments/{unid}</code> in the Swagger UI to select attachments for a document.</li>
+<li>Implemented UI improvements in Schema Management in the Admin UI for better user experience. </li>
+</ul>
+<p><strong>Resolved issues</strong></p>
+<ul>
+<li>A valid sort may fail in <code>GET v1/lists/{name}</code> under certain circumstances.</li>
+<li>A document, which was deleted but in an abnormal state and showing up in a view, generated an error when retrieved via <code>v1/lists/{name}</code>.</li>
+<li>Creating a view via <code>POST setup-v1/design</code> would cause an NPE if the selection formula was left off.</li>
+</ul>
+<p><strong>Others</strong></p>
+<ul>
+<li>Implemented various documentation updates.</li>
+<li>Starting this release, the installer jar file name now includes the Domino version, for example, <code>restapiInstall-r12.jar</code>. </li>
+<li>Docker image version for docker compose .env file (CONTAINER_IMAGE) is <em>domino-rest-api:1.0.7</em>. </li>
+<li>Docker image version for docker compose .env file from Harbor is <em>hclcr.io/domino/restapi:1.0.7</em>.</li>
+</ul>
+</details>
+<details class="info">
+<summary>v1.0.6 - What's new or changed</summary>
+<h2 id="v106-whats-new-or-changed">v1.0.6 - What's new or changed</h2>
+<p><strong>New features</strong></p>
+<ul>
+<li>
+<p>HCL Domino REST API now supports WebAuthn allowing users to <a href="../howto/install/passkey.html">log in to the <strong>Admin UI</strong> using a passkey</a>.</p>
+</li>
+<li>
+<p>Introduced access control for scopes via maximum access level to control the maximum access anyone using a scope might have. For example, if a scope's maximum access level is Editor and you are a Manager, the API runs as Editor. This feature doesn't increase a user's access level. The default for existing scopes is Editor.</p>
+</li>
+<li>
+<p>Introduced <code>$SETUP</code> scope that can be added to an application, which needs access to <code>$SETUP</code> endpoints. For more information, see <a href="../references/usingdominorestapi/scopes.html">Scopes</a>.</p>
+</li>
+<li>
+<p>Added <code>ftSearchQuery</code> to the <code>GET v1/lists/{name}</code> endpoint to filter a view based on a full text search query.</p>
+</li>
+<li>Added column multi-value delimiter and column position when retrieving information about views utilizing the <code>GET v1/lists?columns=true</code> endpoint. </li>
+<li>Enabled retrieval of Rich Text embedded images by the <code>GET v1/attachments/{unid}/{attachmentName}</code> endpoint. When retrieving the html of a <code>richtext</code> field, embedded images come back in an <img> tag such as <code>&lt;img src="/test.nsf/0/a0286fbd3bdc1d5bc12222d5006ac837/Photo/0.84?OpenElement&amp;FieldElemFormat=gif"&gt;</code>. Use base64 encoding to encode the image src URL and pass that in as the <code>attachmentName</code>. </li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul>
+<li>A database view can now be edited in the Admin UI to select which columns to include. Column external names can now also be set or edited.</li>
+<li>Added ability to mark a document as read (<code>markRead=true</code>) or unread (<code>markUnread=true</code>) when getting a view that contains those documents using the <code>GET v1/lists/{name}</code> endpoint.</li>
+<li>Added the ability to select only distinct documents (<code>distinctDocuments=true</code>) when retrieving view contents via the <code>GET v1/lists/{name}</code> endpoint.</li>
+<li>Added ability to mark a document as read (<code>markRead=true</code>) or unread (<code>markUnread=true</code>) when retrieving a document using the <code>GET v1/document/{unid}</code> endpoint.</li>
+<li>Added ability to mark a document as unread (<code>markUnread=true</code>) when updating a document using the <code>PUT/PATCH v1/document/{unid}</code> endpoints.</li>
+<li>Added ability to retrieve a database's DXL utilizing the <code>GET setup-v1/dxl</code> endpoint.</li>
+<li>Updated the Domino REST API serializer / deserializer so that only items specific to the fields and their types are added to the schema when creating or updating the schema. There should be no issues with pre-existing schemas, and the schema will update next time something in that schema has changed. </li>
+</ul>
+<p><strong>Resolved issues</strong></p>
+<ul>
+<li>An issue occurred with <code>GET setup-v1/design/{designType}/{designName}</code> when the <code>designName</code> contained characters that would normally be encoded.</li>
+</ul>
+<p><strong>Others</strong></p>
+<ul>
+<li>Docker image version for docker compose .env file (CONTAINER_IMAGE) is <em>docker.qs.hcllabs.net/hclcom/projectkeep-r12:DRAPI-1.0.6</em>. </li>
+<li>Docker image version for docker compose .env file from Harbor is <em>hclcr.io/domino/restapi:1.0.6</em>.</li>
+</ul>
+</details>
+<details class="info">
+<summary>v1.0.5 - What's new or changed</summary>
+<h2 id="v105-whats-new-or-changed">v1.0.5 - What's new or changed</h2>
+<p><strong>New features</strong></p>
+<ul>
+<li>Added <code>v1/docmeta/{unid}</code> endpoint that includes metadata information about the document specified.</li>
+<li>Added <code>richTextAs</code> parameter to the <code>v1/bulk/create</code>, <code>v1/bulk/unid</code>, <code>v1/bulk/update</code> and <code>v1/lists/{name}</code> endpoints when using <code>documents=true</code>.</li>
+<li>Added a list of Server Commands to the Management Page's Domino Server console.</li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul>
+<li>Refined Rich Text MIME representation and Rich Text Markdown representation.</li>
+<li>An error message now appears when deleting an ACL role using <code>admin-v1/acl/roles/{rolename}</code> while a member in the ACL still has that role.</li>
+<li>Returns the rendered Markdown as HTML when retrieving a document where the Rich Text representation is HTML and the <code>richtext</code> field contains Markdown. </li>
+<li>Searches for the text/markdown MIME part of the document and returns it if existing when retrieving a document where the Rich Text representation is Markdown but stored as MIME.</li>
+<li>Updated the <strong>Database Views</strong> activation page in <strong>Schema Management</strong> for better user experience.   </li>
+</ul>
+<p><strong>Resolved issues</strong></p>
+<ul>
+<li><code>admin-v1/access/groups</code> parameters weren't working as expected.</li>
+<li><code>v1/scope/form/{form}</code> didn't return the form information when using the form's alias.</li>
+<li>The default configuration wasn't set for some attributes when using the <strong>Admin UI Quick Config</strong> or the <code>setup-v1/admin/quickconfig</code> endpoint.</li>
+<li><code>v1/bulk/delete</code> returned an error instead of deleting the document.</li>
+</ul>
+<p><strong>Others</strong></p>
+<ul>
+<li>Changed default Rich Text representation to MIME in the documentation.</li>
+<li>Docker image version for docker compose .env file (CONTAINER_IMAGE) is <em>docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.18.3</em>. </li>
+</ul>
+</details>
+<details class="info">
+<summary>v1.0.4 - What's new or changed</summary>
+<h2 id="v104-whats-new-or-changed">v1.0.4 - What's new or changed</h2>
+<p><strong>New features</strong> </p>
+<ul>
+<li>Added parameter <code>metaAdditional=</code> to the <code>/lists/{name}</code> endpoint in <code>api/v1</code> to return additional metadata for each row. Currently just returning the Form name of the underlying document.</li>
+<li>Added the OpenID <code>/userinfo</code> endpoint in <code>api/v1</code> for OIDC compliance.</li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul>
+<li>Increased throughput performance of most endpoints.</li>
+<li>Modified the <code>/admin/quickconfig</code> endpoint in <code>api/setup-v1</code> to add default values to some Schema items if not specified.</li>
+</ul>
+<p><strong>Resolved issues</strong></p>
+<ul>
+<li>A page in the <strong>Admin UI</strong> may time out while bringing up a list of databases if there are a lot of databases.</li>
+<li>The <code>/attachments/{unid}</code> endpoint in <code>api/v1</code> didn't honor the <code>fieldName=</code> parameter. This parameter specifies the <code>richtext</code> field to attach to, instead, it attached to the document.</li>
+</ul>
+<p><strong>Others</strong></p>
+<ul>
+<li>Docker image version for docker compose .env file (CONTAINER_IMAGE) is <em>docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.17.0</em>.</li>
+</ul>
+</details>
+<details class="info">
+<summary>v1.0.3 - What's new or changed</summary>
+<h2 id="v103-whats-new-or-changed">v1.0.3 - What's new or changed</h2>
+<p><strong>New features</strong> </p>
+<ul>
+<li><code>/lists/{listname}</code> API has a new parameter <code>keyAllowPartial=true</code> added to allow partial key matches.</li>
+<li>New endpoint added to the setup API, call <code>DELETE /admin/cache</code> to reset the Domino REST API Scope and Schema cache, call if you are modifying Scopes or Schemas directly in Notes as opposed to the API or the Admin UI.</li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul>
+<li>Removed invalid Scopes (<code>openid</code> and <code>email</code>) from the Swagger UI dropdown list of APIs / Scopes.</li>
+</ul>
+<p><strong>Resolved issues</strong></p>
+<ul>
+<li>The Admin UI became unresponsive when populating the Database list when defining a new Schema when there were a lot of databases on the server.</li>
+<li>A JWT token failed to decode if it's claims contained extended characters.</li>
+<li>On a Windows Domino server, the <code>.wellknown</code> issuer may have been wrong.</li>
+<li>In various endpoints, an error may have been thrown if a Rich Text CD record returns invalid or unknown data. This issue may have also prevented a database from showing up in the Admin UI.</li>
+<li>When calling the <code>/design/{designType}/{designName}</code> and using the <code>nsfPath</code> parameter as opposed to the <code>dataSource</code> parameter resulted in the API trying to return that design information from KeepConfig.nsf instead of the specified database.</li>
+</ul>
+<p><strong>Others</strong></p>
+<ul>
+<li>Docker image version for docker compose .env file (CONTAINER_IMAGE) is <em>docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.15.0</em>. </li>
+</ul>
+</details>
+<details class="info">
+<summary>v1.0.2 - What's new or changed</summary>
+<h2 id="v102-whats-new-or-changed">v1.0.2 - What's new or changed</h2>
+<p><strong>New features</strong></p>
+<ul>
+<li>
+<p>Added ability to view the Domino Server console live as well as send commands from the Domino REST API management page if using admin credentials. See <a href="../references/usingdominorestapi/console.html">Domino Console Configuration</a> for more information.</p>
+</li>
+<li>
+<p>Added ability to send Domino Server console commands via API if using admin credentials.</p>
+</li>
+<li>Added ability to view the schema json within the Admin UI.</li>
+<li>Added ability for customers to use a different name for fields (like an alias) in a schema,  good for obfuscating field names or for descriptive naming.</li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul>
+<li>Increased speed of design element population in the Admin UI.</li>
+<li>Increased stability of the Admin UI when the retrieving complex databases.</li>
+<li><span style="color:red">The <code>setup-v1/design</code> json output been modified so the design element key is the UNID, previously the key was the design element name. This change was made because design element names are not necessarily unique and part of the fix for design element population noted above.</span></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="err">previous</span><span class="w"> </span><span class="err">versio</span><span class="kc">ns</span><span class="w"> </span><span class="p">:</span>
+<span class="nt">&quot;forms&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;ReportNotes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">              </span><span class="nt">&quot;@unid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;87A0390EA55C0D4C852567710005FF52&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;@name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ReportNotes&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="err">...</span>
+
+<span class="err">curre</span><span class="kc">nt</span><span class="w"> </span><span class="err">versio</span><span class="kc">n</span><span class="w"> </span><span class="p">:</span>
+<span class="nt">&quot;forms&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;87A0390EA55C0D4C852567710005FF52&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;@unid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;87A0390EA55C0D4C852567710005FF52&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;@name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ReportNotes&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="err">...</span>
+</code></pre></div>
+<p><strong>Others</strong></p>
+<ul>
+<li>Docker image version for docker compose .env file (CONTAINER_IMAGE) is <em>docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.12.0</em>.</li>
+</ul>
+</details>
+<details class="info">
+<summary>v1.0.1 - What's new or changed</summary>
+<h2 id="v101-whats-new-or-changed">v1.0.1 - What's new or changed</h2>
+<p><strong>New features</strong></p>
+<ul>
+<li>
+<p>The installer now has an upgrade option. Please see the <a href="../tutorial/installconfig/index.html">installation instructions</a> for more information.</p>
+</li>
+<li>
+<p>A Quick Config option is now available to the Admin UI (lightning bolt on the left side). This feature creates a populated Schema and Scope based on the database you choose.</p>
+<ul>
+<li>The Schema is configured with all visible Forms and Views.</li>
+<li>All non-system fields are added to the Forms.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul>
+<li>
+<p>Added the <code>PATCH</code> verb to the APIs <code>/api/v1/document/{unid}</code> and <code>/api/v1/bulk/update</code> allowing a document update without the need to provide all fields in the schema.</p>
+</li>
+<li>
+<p><span style="color:red">Field schema has been modified. The boolean fields <code>readOnly</code> and <code>writeOnly</code> were removed and replaced with String field <code>fieldAccess</code> which specifies the access of this field, either <code>RW</code>, <code>RO</code> or <code>WO</code>. If existing schemas have the old fields, they will be still processed correctly.</span></p>
+</li>
+<li><code>null</code> has been added as valid json for document updating, setting a field value to <code>null</code> will remove that field from the document.</li>
+<li>Inactive scopes will no longer show in the Swagger UI's drop down list since they're not available.</li>
+<li>Performance improvements.</li>
+</ul>
+<p><strong>Resolved issues</strong></p>
+<ul>
+<li>The Domino restapi task may not successfully start on Linux Domino.</li>
+<li>A document was prevented from being created or updated if one of it's multi-value fields had empty value(s).</li>
+<li>Fixed multiple issues around odata.</li>
+</ul>
+<p><strong>Others</strong></p>
+<ul>
+<li>Docker image version for docker compose .env file (CONTAINER_IMAGE) is <em>docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.10.0</em>.</li>
+</ul>
+</details>
+<details class="info">
+<summary>v1.0 - What's changed since the Early Access Release</summary>
+<h2 id="v10-whats-changed-since-the-early-access-release">v1.0 - <em>What's changed since the Early Access Release</em></h2>
+<p><strong>Improvements</strong></p>
+<ul>
+<li>The <code>core</code> api (<code>/api/v1</code>) has changed name, it's now <code>basis</code>, but still has the same path (<code>/api/v1</code>).</li>
+<li>The <code>design</code>, <code>schema</code>, <code>scope</code>, and some <code>administrative</code> APIs that were in the <code>core</code> api have been moved to the <code>setup</code> api (<code>/api/setup-v1</code>). This has been done so that these apis can be disabled from a user facing server.</li>
+<li>The Domino REST API landing page now has a single button for the Swagger UI, once in the Swagger UI, use the drop down at the top right to switch between API specifications.</li>
+</ul>
+</details>
+<details class="info">
+<summary>HCL Domino REST API formerly known as HCL Project KEEP</summary>
+<h2 id="hcl-domino-rest-api-formerly-known-as-hcl-project-keep">HCL Domino REST API formerly known as HCL Project KEEP</h2>
+<p><em>HCL Project KEEP</em> was introduced as an Early Adopter program. We've re-branded <em>HCL Project KEEP</em> to <em>HCL Domino REST API</em> to align with the <em>HCL VOLT MX GO</em> strategy. You will find that there are still references to the KEEP branding throughout the product and in the documentation. Refer to the <em>KEEP branding examples</em> table to see areas and documentation pages where the KEEP branding is still prevalent.</p>
+<table>
+<thead>
+<tr>
+<th>KEEP branding examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../howto/database/enablingadb.html">Enabling a database</a></td>
+</tr>
+<tr>
+<td><a href="../references/usingdominorestapi/keepcli.html#keepcmd">The Domino REST API CLI</a></td>
+</tr>
+<tr>
+<td><a href="../topicguides/agents.html#running-agents">Running Agents: keepAgents.nsf</a></td>
+</tr>
+<tr>
+<td><a href="../references/parameters.html#asyncagentscheduler-verticle">Parameters - AsyncAgentScheduler verticle: keepAgents.nsf</a></td>
+</tr>
+<tr>
+<td><a href="../references/usingdominorestapi/roles.html">Domino REST API Roles</a></td>
+</tr>
+<tr>
+<td><a href="../topicguides/KeepFactory-and-caches.html">Factories and Caches: KeepFactory &amp; KeepConfig</a></td>
+</tr>
+<tr>
+<td><a href="https://opensource.hcltechsw.com/domino-keep-tutorials">HCL Tutorials, may reference KEEP</a></td>
+</tr>
+<tr>
+<td>HCL Documentation, images and image file names may reference KEEP</td>
+</tr>
+</tbody>
+</table>
+</details>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Microsoft and Excel are registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 3, 2025 15:23:03">April 3, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022-2025, HCL America, Inc. | <a href="https://www.hcl-software.com/legal/privacy" target="_blank">Privacy Statement</a> | <a href="https://www.hcl-software.com/legal/terms-use" target="_blank">Terms of Use</a> <br/> <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE/Domino-rest-api" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

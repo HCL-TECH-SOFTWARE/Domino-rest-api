@@ -77,14 +77,14 @@ const captureFailedURL = (baseURL) => {
   errorMsg.appendChild(document.createTextNode('You tried to reach '));
   errorMsg.appendChild(code);
   errorMsg.appendChild(
-    document.createTextNode(" which doesn't exist (anymore)")
+    document.createTextNode(" , which might not exist or have a new link.")
   );
   errorDiv.appendChild(errorMsg);
   const lookfor = createUrlVariations(document.location.pathname, baseURL);
   const hits = pageSource.filter((page) => pageHit(page, lookfor));
   if (hits.length > 0) {
     const tryThis = document.createElement('p');
-    tryThis.innerText = 'We think this is this what you might be looking for:';
+    tryThis.innerText = 'This is what you might be looking for:';
     const list = document.createElement('ul');
     hits.forEach((page) => {
       const item = document.createElement('li');
