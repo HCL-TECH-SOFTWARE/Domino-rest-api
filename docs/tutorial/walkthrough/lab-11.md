@@ -33,6 +33,32 @@ All configuration settings are kept in JSON files you place in `keepcofig.d`. Fi
 
 ![CORS Settings](img/CORS.png)
 
+**Starting Domino REST API v1.1.3**, CORS uses Regex. For more information, see [CORS is now using Regex](../../whatsnew/v1.1.3.md#cors-is-now-using-regex).
+
+```json
+{
+  "CORS": {
+    "^https?:\\/\\/localhost$": true,
+    "^https?:\\/\\/.*\\.local$": false,
+    "^https?:\\/\\/yourDomain\\.com$": true
+  }
+}
+```
+
+wherein:
+
+- `^` &rarr; beginning of the string
+- `http` &rarr; the literal string `http`
+- `s?` &rarr; optional the string `s`
+- `\\/` &rarr; double escape the string `/`
+- `.*` &rarr; one or more characters of any type
+- `\\.` &rarr; double escape the string `.`
+- `$` &rarr; end of string
+
+!!! note
+
+    Inside JSON, the `\` of Regex gets escaped to `\\`.
+
 ### Disable PIM access
 
 ```json
