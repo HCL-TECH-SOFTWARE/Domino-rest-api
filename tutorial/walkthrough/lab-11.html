@@ -6708,6 +6708,29 @@
 <span class="p">}</span>
 </code></pre></div>
 <p><img alt="CORS Settings" src="img/CORS.png" /></p>
+<p><strong>Starting Domino REST API v1.1.3</strong>, CORS uses Regex. For more information, see <a href="../../whatsnew/v1.1.3.html#cors-is-now-using-regex">CORS is now using Regex</a>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;CORS&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;^https?:\\/\\/localhost$&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;^https?:\\/\\/.*\\.local$&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;^https?:\\/\\/yourDomain\\.com$&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>wherein:</p>
+<ul>
+<li><code>^</code> &rarr; beginning of the string</li>
+<li><code>http</code> &rarr; the literal string <code>http</code></li>
+<li><code>s?</code> &rarr; optional the string <code>s</code></li>
+<li><code>\\/</code> &rarr; double escape the string <code>/</code></li>
+<li><code>.*</code> &rarr; one or more characters of any type</li>
+<li><code>\\.</code> &rarr; double escape the string <code>.</code></li>
+<li><code>$</code> &rarr; end of string</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Inside JSON, the <code>\</code> of Regex gets escaped to <code>\\</code>.</p>
+</div>
 <h3 id="disable-pim-access">Disable PIM access</h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;versions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -6804,7 +6827,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 31, 2024 15:42:42">July 31, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 24, 2025 13:03:21">April 24, 2025</span>
   </span>
 
     
