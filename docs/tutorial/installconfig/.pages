@@ -2,12 +2,14 @@ title: Installation and configuration
 
 nav:
     - index.md
+    - Installation: install
+    - Post-installation: configuration
     - System requirements: https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789
-    - docker.md
-    #- helm.md
-    - linux.md
-    - mac.md
-    - win.md
+#    - docker.md
+#    - helm.md
+#    - linux.md
+#    - mac.md
+#    - win.md
     - Post installation tasks:
           - postinstallation.md
           - Verify connectivity: connectivity.md
