@@ -38,6 +38,48 @@ Let's say you want to disable the preset and enable `acme.com`, you create a `se
 }
 ```
 
+**Starting Domino REST API v1.1.3**, CORS uses Regex. For more information, see [CORS is now using Regex](../../whatsnew/v1.1.3.md#cors-is-now-using-regex).
+
+So the default entry in `security.json` should look like this:
+
+```json
+{
+  "CORS": {
+    "^https?:\\/\\/localhost$": true,
+    "^https?:\\/\\/hcl\\.com$": true,
+    "^https?:\\/\\/.*\\.local$": true
+    
+  }
+}
+```
+
+If you disable the preset and enable `acme.com`, you create a `security.json` with this content:
+
+```json
+{
+  "CORS": {
+    "^https?:\\/\\/localhost$": false,
+    "^https?:\\/\\/hcl\\.com$": false,
+    "^https?:\\/\\/.*\\.local$": false,
+    "^https?:\\/\\/acme\\.com$": true
+  }
+}
+```
+
+wherein:
+
+- `^` &rarr; beginning of the string
+- `http` &rarr; the literal string `http`
+- `s?` &rarr; optional the string `s`
+- `\\/` &rarr; double escape the string `/`
+- `.*` &rarr; one or more characters of any type
+- `\\.` &rarr; double escape the string `.`
+- `$` &rarr; end of string
+
+!!! note
+
+    Inside JSON, the `\` of Regex gets escaped to `\\`.
+
 ### Hosting your static application on Domino REST API
 
 Frameworks like Angular, ReactJS, Swelte etc. usually generate a `build` directory with a set of static files.
