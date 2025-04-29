@@ -7,12 +7,14 @@ The What's new contains information about the latest features, improvements, fix
     Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](../references/deprecated.md).
     
 
-## Domino REST API v1.1.3
+## Domino REST API v1.1.3.1
 
 ???+ info "Release summary"
 
-    Release date: April 21, 2025
+    Release date: April 29, 2025
     
+    !!! danger "Domino REST API v1.1.3.1 supercedes and should be used in place of v1.1.3." 
+
     - **4** New features
     - **4** Improvements
     - **3** Resolved issues
