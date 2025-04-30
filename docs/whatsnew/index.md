@@ -11,7 +11,7 @@ The What's new contains information about the latest features, improvements, fix
 
 ???+ info "Release summary"
 
-    Release date: April 29, 2025
+    Release date: April 30, 2025
     
     !!! danger "Domino REST API v1.1.3.1 supersedes and should be used in place of v1.1.3." 
 
