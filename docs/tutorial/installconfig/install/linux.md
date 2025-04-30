@@ -1,5 +1,3 @@
-<!--# Linux-->
-
 # Install on Linux Domino server
 
 On Linux, the installer installs the Domino REST APIs for use with an HCL Domino server. It's **strongly** recommended to use the default directories on Linux.
@@ -56,7 +54,7 @@ sudo java -jar restapiInstall-r14.jar \
 
 The installer adds the `restapi` task to the automatically starting tasks. If opted out using `-n`, you must manually add the `KeepInstallDir` key into your `notes.ini` and then can subsequently issue `load restapi` manually in the Domino console.
 
-For more information, see [Domino REST API task](../references/usingdominorestapi/restapitask.md).
+For more information, see [Domino REST API task](../../../references/usingdominorestapi/restapitask.md).
 
 ## Verify the installation
 

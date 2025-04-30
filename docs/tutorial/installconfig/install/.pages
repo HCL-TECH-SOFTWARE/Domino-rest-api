@@ -1,8 +1,8 @@
 nav:
     - index.md
-    - Check system requirements: https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789
+    - System requirements: https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789
     - Download Domino REST API: downloaddrapi.md
-    - linux.md
-    - win.md
-    - mac.md
-    - docker.md
+    - Linux: linux.md
+    - Windows: win.md
+    - macOS: mac.md
+    - Docker: docker.md
