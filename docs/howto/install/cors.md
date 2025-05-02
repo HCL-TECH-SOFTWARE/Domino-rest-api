@@ -47,7 +47,7 @@ The regex for `https://drapi.company.com:8880` is `https:\\/\\/.drapi\\.mycompan
 {
   "CORS": {
     "^https?:\\/\\/localhost(?:\\:\\d+)?$": true,
-    "^http?:\\/\\/.*\\.otherdomain\\.com(?:\\:\\d+)?$": true,
+    "^https:\\/\\/.*\\.otherdomain\\.com(?:\\:\\d+)?$": true,
     "^https:\\/\\/drapi.company\\.com\\:8880$": true,
     "^https:\\/\\/sales.company\\.com$": true
   }
