@@ -18,11 +18,13 @@ the static files to Domino REST API. This is configured in the `security.json` i
 The default entry in `security.json` is like this:
 
 ```json
-"CORS": {
-        "localhost": true,
-        "hcl.com": true,
-        ".local": true
-    }
+{
+  "CORS": {
+    "localhost": true,
+    "hcl.com": true,
+    ".local": true
+  }
+}   
 ```
 
 Let's say you want to disable the preset and enable `acme.com`, you create a `security.json` with this content:
