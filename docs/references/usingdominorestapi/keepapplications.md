@@ -11,76 +11,78 @@ while **server based applications** can provide an application id and applicatio
 
 ### Browser based applications
 
-Browser based applications (ReactJS, Angular, Vue, VanillaJS) can be hosted on a different server than the URL of the Domino REST API.
-To enable access to Domino REST API (besides the user's credential), [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) need to be configured to allow access from the server providing
-the static files to Domino REST API. This is configured in the `security.json` in the `CORS` section. You need to add your domain and set it to `true`. To simplify corporate deployment, we check domain endings only. Which means that `acme.com` covers `www.acme.com`, `hr.acme.com` or even `one.two.three.acme.com`.
+Browser based applications (ReactJS, Angular, Vue, VanillaJS) can be hosted on a different server than the URL of the Domino REST API. To enable access to Domino REST API (besides the user's credential), [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) need to be configured to allow access from the server providing the static files to Domino REST API. This is configured in the `security.json` in the `CORS` section. You need to add your domain and set it to `true`. To simplify corporate deployment, we check domain endings only. Which means that `acme.com` covers `www.acme.com`, `hr.acme.com` or even `one.two.three.acme.com`.
 
-The default entry in `security.json` is like this:
+=== "Starting Domino REST API v1.1.3"
 
-```json
-{
-  "CORS": {
-    "localhost": true,
-    "hcl.com": true,
-    ".local": true
-  }
-}   
-```
+    **Starting Domino REST API v1.1.3**, CORS uses Regex. For more information, see [CORS is now using Regex](../../whatsnew/v1.1.3.md#cors-is-now-using-regex).
 
-Let's say you want to disable the preset and enable `acme.com`, you create a `security.json` with this content:
+    The default entry in `security.json` should look like this:
 
-```json
-{
-  "CORS": {
-    "localhost": false,
-    "hcl.com": false,
-    ".local": false,
-    "acme.com": true
-  }
-}
-```
+    ```json
+    {
+      "CORS": {
+        "^https?:\\/\\/localhost$": true,
+        "^https?:\\/\\/hcl\\.com$": true,
+        "^https?:\\/\\/.*\\.local$": true
+        
+      }
+    }
+    ```
 
-**Starting Domino REST API v1.1.3**, CORS uses Regex. For more information, see [CORS is now using Regex](../../whatsnew/v1.1.3.md#cors-is-now-using-regex).
+    If you disable the preset and enable `acme.com`, you create a `security.json` with this content:
 
-So the default entry in `security.json` should look like this:
+    ```json
+    {
+      "CORS": {
+        "^https?:\\/\\/localhost$": false,
+        "^https?:\\/\\/hcl\\.com$": false,
+        "^https?:\\/\\/.*\\.local$": false,
+        "^https?:\\/\\/acme\\.com$": true
+      }
+    }
+    ```
 
-```json
-{
-  "CORS": {
-    "^https?:\\/\\/localhost$": true,
-    "^https?:\\/\\/hcl\\.com$": true,
-    "^https?:\\/\\/.*\\.local$": true
-    
-  }
-}
-```
+    wherein:
 
-If you disable the preset and enable `acme.com`, you create a `security.json` with this content:
+    - `^` &rarr; beginning of the string
+    - `http` &rarr; the literal string `http`
+    - `s?` &rarr; optional the string `s`
+    - `\\/` &rarr; double escape the string `/`
+    - `.*` &rarr; one or more characters of any type
+    - `\\.` &rarr; double escape the string `.`
+    - `$` &rarr; end of string
 
-```json
-{
-  "CORS": {
-    "^https?:\\/\\/localhost$": false,
-    "^https?:\\/\\/hcl\\.com$": false,
-    "^https?:\\/\\/.*\\.local$": false,
-    "^https?:\\/\\/acme\\.com$": true
-  }
-}
-```
+    !!! note
 
-wherein:
+        Inside JSON, the `\` of Regex gets escaped to `\\`.
+        
+=== "From Domino REST API v1.0 to v1.1.2"
 
-- `^` &rarr; beginning of the string
-- `http` &rarr; the literal string `http`
-- `s?` &rarr; optional the string `s`
-- `\\/` &rarr; double escape the string `/`
-- `.*` &rarr; one or more characters of any type
-- `\\.` &rarr; double escape the string `.`
-- `$` &rarr; end of string
+    The default entry in `security.json` is like this:
 
-!!! note
+    ```json
+    {
+      "CORS": {
+        "localhost": true,
+        "hcl.com": true,
+        ".local": true
+      }
+    }   
+    ```
 
-    Inside JSON, the `\` of Regex gets escaped to `\\`.
+    Let's say you want to disable the preset and enable `acme.com`, you create a `security.json` with this content:
+
+    ```json
+    {
+      "CORS": {
+        "localhost": false,
+        "hcl.com": false,
+        ".local": false,
+        "acme.com": true
+      }
+    }
+    ```
 
 ### Hosting your static application on Domino REST API
 
