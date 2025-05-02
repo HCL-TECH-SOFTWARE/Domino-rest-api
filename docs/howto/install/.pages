@@ -3,6 +3,7 @@ nav:
     - Installation and configuration: tutorial/installconfig/index.html
     - symlink.md
     - modifyconfig.md
+    - cors.md
     - multiserver.md
     - notesclient.md
     - uninstall.md
