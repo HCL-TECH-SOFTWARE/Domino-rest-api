@@ -2126,6 +2126,8 @@
       
         
       
+        
+      
     
     
     
@@ -2228,6 +2230,29 @@
   
   <span class="md-ellipsis">
     Modify configuration of Domino REST API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/install/cors.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure CORS for AdminUI, OAuth and your applications
     
   </span>
   
@@ -6618,29 +6643,29 @@
 
 <h2 id="new-features">New features</h2>
 <ul>
-<li>
-<p>Added the option to use Proof Key for Code Exchange (PKCE) as the authentication method for the created OAuth app on the Application Management page in the Admin UI. PKCE enhances security by ensuring that only the intended client can obtain an access token, providing a strong defense against potential security threats.</p>
+<li>Added the option to use Proof Key for Code Exchange (PKCE) as the authentication method for the created OAuth app on the Application Management page in the Admin UI. PKCE enhances security by ensuring that only the intended client can obtain an access token, providing a strong defense against potential security threats.</li>
+</ul>
 <p>For more information, see <a href="../references/usingwebui/appui.html#add-an-application">Add an application</a>.</p>
-</li>
+<ul>
 <li>
 <p>Added OpenAPI schema and Swagger page for the <em>Web Application Open Platform Interface</em> or <a href="../references/openapidefinitions.html#wopi">WOPI</a> protocol that provides a set of endpoints enabling seamless online collaborative editing of document attachments in Domino.</p>
 </li>
 <li>
 <p>Added the capability of setting the WebDAV and WOPI session durations and lock durations using the following configuration parameters:</p>
-<ul>
-<li><code>WopiSessionSeconds</code></li>
+</li>
+<li>
+<p><code>WopiSessionSeconds</code></p>
+</li>
 <li><code>WebdavSessionSeconds</code></li>
 <li><code>WopiLockSeconds</code></li>
 <li><code>WebdavLockSeconds</code></li>
 </ul>
 <p>For more information, see <a href="../references/parameters.html#parameters-in-json-files">Configuration parameters</a> for details of the configuration parameters and <a href="../howto/install/modifyconfig.html">Modify configuration of Domino REST API</a> for the procedure on modify the Domino REST API configuration.</p>
-</li>
-<li>
-<p>New option for logging in to the <strong>Admin UI</strong></p>
+<ul>
+<li>New option for logging in to the <strong>Admin UI</strong></li>
+</ul>
 <p>You can now log in to the Admin UI using the <em>Log in with OIDC</em> option. This option enables the use of Domino REST API IdP and implements the OAuth process requiring user consent to log in. It also enables the use of external IdP to log in to the <strong>Admin UI</strong> that uses authorization code flow with PKCE.</p>
 <p>For more information, see <a href="../references/usingwebui/index.html#log-in-options">Log in options</a>.</p>
-</li>
-</ul>
 <h2 id="improvements">Improvements</h2>
 <ul>
 <li>Cache ACL Lookups for faster operations.</li>
@@ -6661,8 +6686,8 @@
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;CORS&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;localhost&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;.local&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nt">&quot;.local&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>New:</p>
@@ -6671,7 +6696,7 @@
 <span class="w">    </span><span class="nt">&quot;^https?:\\/\\/localhost(?:\\:\\d+)?$&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;^https?:\\/\\/.*\\.local(?:\\:\\d+)?$&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="w">  </span><span class="p">}</span>
-<span class="p">}</span><span class="w"> </span>
+<span class="p">}</span>
 </code></pre></div>
 <p>A few pointers:</p>
 <ul>
@@ -6691,27 +6716,29 @@
 <p>This enables greater flexibility, but requires an update to your CORS variable if you have made changes in <code>keepconfig.d</code> to your CORS configuration.</p>
 <p>Example:</p>
 <p>Change <code>mycompany.com</code> to <code>https:\\/\\/.*\\.mycompany\.com:8000$</code> to allow only <code>https</code> on port <code>8000</code> for <code>mycompany.com</code>.</p>
+<div class="admonition danger">
+<p class="admonition-title">You need to include your host</p>
+<p>The new CORS implementation is designed to be restrictive, any HTTP request presenting an <code>origin</code> header will be checked
+against your configuration and denied if no match can be found. The <a href="https://fetch.spec.whatwg.org/#http-cors-protocol">CORS specification</a> states:</p>
+<p><em>Ultimately server developers have a lot of freedom in how they handle HTTP responses and these tactics can differ between the response to the <a href="https://fetch.spec.whatwg.org/#cors-preflight-request">CORS-preflight request</a> and the <a href="https://fetch.spec.whatwg.org/#cors-request">CORS request</a> that follows it</em></p>
+<p>We decided on the side of caution, and fail any request that is not a match for a presented <code>origin</code> header. As a result you have to include your DRAPI host in your CORS setup.</p>
+</div>
+<p>See the full details <a href="../howto/install/cors.html">here</a></p>
 <div class="admonition tip">
 <p class="admonition-title">Use a Regex tool</p>
 <p>Regex can be hard to decipher and understand due to their syntax and flexibility. To test if a Regex does what you want, use an <a href="https://regex101.com/">online interactive tool</a> for validation. Make sure to pick the Java flavor.</p>
 </div>
 <h2 id="others">Others</h2>
 <ul>
-<li>Installer jar files:<ul>
+<li>Installer jar files:</li>
 <li>For Domino 14: <em>restapiInstall-r14.jar</em></li>
 <li>For Domino 12: <em>restapiInstall-r12.jar</em></li>
-</ul>
-</li>
-<li>Docker image version for docker compose .env file (CONTAINER_IMAGE):<ul>
+<li>Docker image version for docker compose .env file (CONTAINER_IMAGE):</li>
 <li>For Domino 14: <em>domino-rest-api:1.1.3.1-r14</em></li>
-<li>For Domino 12: <em>domino-rest-api:1.1.3.1-r12</em>  </li>
-</ul>
-</li>
-<li>Docker image version for docker compose .env file from Harbor:<ul>
+<li>For Domino 12: <em>domino-rest-api:1.1.3.1-r12</em></li>
+<li>Docker image version for docker compose .env file from Harbor:</li>
 <li>For Domino 14: <em>hclcr.io/domino/restapi:1.1.3.1-r14</em></li>
 <li>For Domino 12: <em>hclcr.io/domino/restapi:1.1.3.1-r12</em></li>
-</ul>
-</li>
 </ul>
 
 
@@ -6733,7 +6760,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 2, 2025 10:24:31">May 2, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 2, 2025 16:09:59">May 2, 2025</span>
   </span>
 
     
