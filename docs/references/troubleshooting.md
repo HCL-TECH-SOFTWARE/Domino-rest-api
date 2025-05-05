@@ -86,3 +86,11 @@ Check if the schema and the scope still exist. The schema is stored in the datab
 
 - You can create a new schema and scope and repeat the API request method.  
 - You can then protect the individual design elements of your database, including the new schema you created. For more information, see the [related topic](https://help.hcl-software.com/dom_designer/14.0.0/basic/H_TO_COPY_AN_INDIVIDUAL_DESIGN_ELEMENT_STEPS_MIDTOPIC_182746832029234956.html) in the *Domino Designer* documentation.
+
+## Getting a CORS error while trying to go into the Admin UI
+
+You get a CORS error when trying to access the **Admin UI**.
+
+**Solution**:
+
+You need to configure CORS. For more information, see [Configure CORS for AdminUI, OAuth and your applications](../howto/install/cors.md).
