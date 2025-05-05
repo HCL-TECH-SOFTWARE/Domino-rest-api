@@ -2239,9 +2239,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#calling-drapi-from-your-browser-based-application" class="md-nav__link">
+  <a href="#calling-domino-rest-api-from-your-browser-based-application" class="md-nav__link">
     <span class="md-ellipsis">
-      Calling DRAPI from your browser based application
+      Calling Domino REST API from your browser-based application
     </span>
   </a>
   
@@ -6600,9 +6600,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#calling-drapi-from-your-browser-based-application" class="md-nav__link">
+  <a href="#calling-domino-rest-api-from-your-browser-based-application" class="md-nav__link">
     <span class="md-ellipsis">
-      Calling DRAPI from your browser based application
+      Calling Domino REST API from your browser-based application
     </span>
   </a>
   
@@ -6638,25 +6638,25 @@
 
 <h1 id="configure-cors-for-adminui-oauth-and-your-applications">Configure CORS for AdminUI, OAuth and your applications</h1>
 <h2 id="about-this-task">About this task</h2>
-<p>The <a href="https://fetch.spec.whatwg.org/#http-cors-protocol">CORS protocol</a> is designed to prevent accidential data leakage. A client (Browser, curl, Postman, Bruno etc.) presents an <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Origin"><code>origin</code></a> to DRAPI to gain access to valid responses. Browsers do that automatically when the origin schema, hostname or <strong>port</strong> differ from DRAPI. Commandline or developer tools like curl or Bruno don't automatically sen the <code>origin</code> header and thus are not subject to a CORS check. Same applies to server code like NodeJS, Java or GO</p>
+<p>The <a href="https://fetch.spec.whatwg.org/#http-cors-protocol">CORS protocol</a> is designed to prevent accidental data leakage. A client, such as a browser, curl, Postman, Bruno, presents an <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Origin"><code>origin</code></a> to Domino REST API to gain access to valid responses. Browsers do that automatically when the origin schema, hostname, or <strong>port</strong> differ from Domino REST API. Command line or developer tools like curl or Bruno don't automatically send the <code>origin</code> header and thus aren't subject to a CORS check. The same applies to server code like NodeJS, Java, or GO.</p>
 <div class="admonition tip">
 <p class="admonition-title">You can avoid CORS</p>
-<p>DRAPI allows to <a href="../../references/hostingstatic.html">host your static applications</a> which doesn't require additional CORS setup besides your host</p>
+<p>Domino REST API allows to <a href="../../references/hostingstatic.html">host your static applications</a>, which doesn't require additional CORS setup besides your host.</p>
 </div>
 <h2 id="procedure">Procedure</h2>
-<p>Lets presume the following setup</p>
+<p>Assuming the following setup:</p>
 <ul>
-<li>Your DRAPI host is <code>https://drapi.company.com:8880</code></li>
-<li>You have multiple servers hosting static applications: <code>https://sales.company.com</code> and <code>https://***.otherdomain.com</code> (running on different ports)</li>
-<li>For development you want to allow <code>http://localhost:5438</code></li>
+<li>Your Domino REST API host is <code>https://drapi.company.com:8880</code>.</li>
+<li>You have multiple servers hosting static applications: <code>https://sales.company.com</code> and <code>https://***.otherdomain.com</code> (running on different ports).</li>
+<li>For development, you want to allow <code>http://localhost:5438</code>.</li>
 </ul>
-<p>Cors mapping uses <a href="https://www.w3schools.com/java/java_regex.asp">Java Regular Expressions</a> (Regex)</p>
+<p>CORS mapping uses <a href="https://www.w3schools.com/java/java_regex.asp">Java Regular Expressions</a> (Regex).</p>
 <div class="admonition tip">
 <p class="admonition-title">Use a Regex tool</p>
 <p>Regex can be hard to decipher and understand due to their syntax and flexibility. To test if a Regex does what you want, use an <a href="https://regex101.com/">online interactive tool</a> for validation. Make sure to pick the Java flavor.</p>
 </div>
-<p>Create a JSON file in <code>keepconfig.d</code> E.g. <code>cors.json</code> that contains one element per regex with the value <code>true</code>. If you need to temporay disable an entry, you can set it to false. Make sure you understand <a href="../../references/understandingconfig.html">DRAPI configuration</a></p>
-<p>The regex for <code>https://drapi.company.com:8880</code> is <code>https:\\/\\/.drapi\\.mycompany\.com:8880$</code></p>
+<p>Create a JSON file in <code>keepconfig.d</code>, for example <code>cors.json</code>, that contains one element per regex with the value <code>true</code>. If you need to temporarily disable an entry, you can set it to false. Make sure you understand <a href="../../references/understandingconfig.html">Domino REST API configuration</a>.</p>
+<p>The regex for <code>https://drapi.mycompany.com:8880</code> is <code>https:\\/\\/.drapi\\.mycompany\.com:8880$</code></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Inside JSON, the <code>\</code> of Regex gets escaped to <code>\\</code>.</p>
@@ -6684,17 +6684,16 @@
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">You need to include your host</p>
-<p>The CORS implementation is designed to be restrictive, any HTTP request presenting an <code>origin</code> header will be checked
-against your configuration and denied if no match can be found. The <a href="https://fetch.spec.whatwg.org/#http-cors-protocol">CORS specification</a> states:</p>
-<p><em>Ultimately server developers have a lot of freedom in how they handle HTTP responses and these tactics can differ between the response to the <a href="https://fetch.spec.whatwg.org/#cors-preflight-request">CORS-preflight request</a> and the <a href="https://fetch.spec.whatwg.org/#cors-request">CORS request</a> that follows it</em></p>
-<p>We decided on the side of caution, and fail any request that is not a match for a presented <code>origin</code> header. As a result you have to include your DRAPI host in your CORS setup.</p>
+<p>The CORS implementation is designed to be restrictive. any HTTP request presenting an <code>origin</code> header will be checked against your configuration and denied if no match can be found. The <a href="https://fetch.spec.whatwg.org/#http-cors-protocol">CORS specification</a> states:</p>
+<p><em>Ultimately, server developers have a lot of freedom in how they handle HTTP responses and these tactics can differ between the response to the <a href="https://fetch.spec.whatwg.org/#cors-preflight-request">CORS-preflight request</a> and the <a href="https://fetch.spec.whatwg.org/#cors-request">CORS request</a> that follows it.</em></p>
+<p>We decided on the side of caution and fail any request that is not a match for a presented <code>origin</code> header. As a result, you have to include your Domino REST API host in your CORS setup.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>To check Domino REST API settings, see <a href="../management/checksettings.html">Check Domino REST API settings</a>.</p>
 </div>
-<h2 id="calling-drapi-from-your-browser-based-application">Calling DRAPI from your browser based application</h2>
-<p>You can use the browser's build in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">Fetch API</a> (for your favorite framework, check its documentation) with a simple function:</p>
+<h2 id="calling-domino-rest-api-from-your-browser-based-application">Calling Domino REST API from your browser-based application</h2>
+<p>You can use the browser's build in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">Fetch API</a> with a simple function:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">drapiFetch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">url</span><span class="p">,</span><span class="w"> </span><span class="nx">method</span><span class="p">,</span><span class="w"> </span><span class="nx">token</span><span class="p">,</span><span class="w"> </span><span class="nx">body</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="nx">method</span><span class="p">,</span>
@@ -6714,7 +6713,7 @@ against your configuration and denied if no match can be found. The <a href="htt
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">json</span><span class="p">;</span>
 <span class="p">};</span>
 </code></pre></div>
-<p>This is just an example, you need to add error handling. To deal with chunked responses <a href="https://www.wissel.net/blog/2023/07/handle-http-chunked-responses.html">check this out</a></p>
+<p>This is just an example, you need to add error handling. To deal with chunked responses, <a href="https://www.wissel.net/blog/2023/07/handle-http-chunked-responses.html">check this out</a>.</p>
 <h2 id="lets-connect">Let's connect</h2>
 <!-- prettier-ignore -->
 <div class="admonition danger">
@@ -6748,7 +6747,7 @@ against your configuration and denied if no match can be found. The <a href="htt
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 2, 2025 16:20:27">May 2, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 2, 2025 16:52:59">May 2, 2025</span>
   </span>
 
     
