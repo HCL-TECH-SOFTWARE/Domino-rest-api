@@ -4,7 +4,7 @@
 
 - SAP
 - Salesforce
-- Micrrosoft
+- Microsoft
   - MS Excel (Windows only)
   - MS PowerBI
 
