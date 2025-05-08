@@ -3,7 +3,7 @@ title: Installation and configuration
 nav:
     - index.md
     - Installation: install
-    - Post-installation: configuration
+    - Post-installation tasks: configuration
 #    - System requirements: https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789
 #    - docker.md
 #    - helm.md

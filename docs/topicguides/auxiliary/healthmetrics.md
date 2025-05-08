@@ -14,7 +14,7 @@ Metrics are exposed on their own dedicated port, **METRICSPORT** in the config. 
 
 ## Tutorials
 
-- [Set up a functional account to access health and metrics ports](../../tutorial/installconfig/setupfunctionalaccount.md)
+- [Set up a functional account to access health and metrics ports](../../tutorial/installconfig/configuration/setupfunctionalaccount.md)
 
 ## How-to guide
 

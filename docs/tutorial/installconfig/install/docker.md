@@ -33,9 +33,9 @@ Running Domino REST API with a Docker image requires the following:
 
     !!! warning "Important"
 
-        - If using a Docker image from [HCL Container Repository (Harbor)](https://hclcr.io/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:15px;width:15px"}, take note of the image name of the latest Docker image version from Harbor indicated in [What's New](../whatsnew/index.md) of a release, update the CONTAINER_IMAGE variable in the [.env file](#update-env-file), and then [execute docker-compose](#run-domino-rest-api).
+        - If using a Docker image from [HCL Container Repository (Harbor)](https://hclcr.io/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}, take note of the image name of the latest Docker image version from Harbor indicated in [What's New](../../../whatsnew/index.md) of a release, update the CONTAINER_IMAGE variable in the [.env file](#update-env-file), and then [execute docker-compose](#run-domino-rest-api).
 
-        - If prompted for access to HCL Container Repository (Harbor), [obtain your HCL Container Repository username and password](../howto/install/obtainauthenticationtoken.md), and then sign-in using `docker login hclcr.io` command and the obtained credentials.  
+        - If prompted for access to HCL Container Repository (Harbor), [obtain your HCL Container Repository username and password](../../../howto/install/obtainauthenticationtoken.md), and then sign-in using `docker login hclcr.io` command and the obtained credentials.  
 
 - **Docker compose file**
 
@@ -107,7 +107,7 @@ Depending on the compose file you choose, a different set of variables needs to 
     | Variable | Example | 
     | :---- | :---- | 
     | CONTAINER_HOSTNAME | domino.acme.com <br/><br/>Tip: Use something local for local testing| 
-    | CONTAINER_IMAGE | docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.10.0 (example name for docker image from HCL Software License and Download Portal or My HCLSoftware Portal from earlier release)</br></br>domino-rest-api:1.0.7 (example name for docker image from HCL Software License and Download Portal or My HCLSoftware Portal starting v1.0.7 release)</br></br>hclcr.io/domino/restapi:1.0.6 (example name for docker image from Harbor)</br></br>**Remarks**:</br>For docker image downloaded from HCL Software License and Download Portal or My HCLSoftware Portal, update based on the name of the loaded image, such as the example shown above, or use `docker images ls` to see the exact image name. <br><br>For docker image downloaded from Harbor, update based on the image name of the latest docker image version for docker compose .env file from Harbor indicated in [What's New](../whatsnew/index.md) of a release.|
+    | CONTAINER_IMAGE | docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.10.0 (example name for docker image from HCL Software License and Download Portal or My HCLSoftware Portal from earlier release)</br></br>domino-rest-api:1.0.7 (example name for docker image from HCL Software License and Download Portal or My HCLSoftware Portal starting v1.0.7 release)</br></br>hclcr.io/domino/restapi:1.0.6 (example name for docker image from Harbor)</br></br>**Remarks**:</br>For docker image downloaded from HCL Software License and Download Portal or My HCLSoftware Portal, update based on the name of the loaded image, such as the example shown above, or use `docker images ls` to see the exact image name. <br><br>For docker image downloaded from Harbor, update based on the image name of the latest docker image version for docker compose .env file from Harbor indicated in [What's New](../../../whatsnew/index.md) of a release.|
     | CONTAINER_NAME | domino-keep-test02 |
     | CONTAINER_VOLUMES | domino_keep_notesdata<br/><br>**Remarks**:</br>No spaces or special characters |
     | SERVERSETUP_ADMIN_CN | Peter Parker | |
@@ -121,7 +121,7 @@ Depending on the compose file you choose, a different set of variables needs to 
     | SERVERSETUP_ORG_ORGNAME | Stark Industries<br/><br>**Remarks**:</br>Your existing org |  
     | SERVERSETUP_SERVER_DOMAINNAME | MarvelPhase4<br/><br>**Remarks**:</br>Your existing Notes domain |  
     | SERVERSETUP_SERVER_NAME | keep-server-01 |
-    | SERVERSETUP_SERVER_SERVERTASKS | replica, router, update, amgr, adminp, http, keep<br/><br>**Remarks**:</br>Refer to the [Domino REST API task](../references/usingdominorestapi/restapitask.md) page. | 
+    | SERVERSETUP_SERVER_SERVERTASKS | replica, router, update, amgr, adminp, http, keep<br/><br>**Remarks**:</br>Refer to the [Domino REST API task](../../../references/usingdominorestapi/restapitask.md) page. | 
 
 ## Run Domino REST API
 
@@ -137,7 +137,7 @@ docker-compose up
     - Start in the directory where the files `server.id` and `docker-compose.yml` are located.
     - The setup can take a few minutes, depending on your hardware and the network speed to your primary server.
     
-    - If prompted for access credentials to HCL Container Repository (Harbor), see [Obtain authentication token from HCL Container Repository](../howto/install/obtainauthenticationtoken.md).
+    - If prompted for access credentials to HCL Container Repository (Harbor), see [Obtain authentication token from HCL Container Repository](../../../howto/install/obtainauthenticationtoken.md).
 
 <!-- prettier-ignore -->
 !!! tip
@@ -208,6 +208,9 @@ Now you have the command `domino_container` at your disposal:
 - Start Domino and Domino REST API using `domino_container start`.
 - Learn more about the scripts using `domino_container help`.
 
+## Next step
+
+Perform [post-installation tasks](../configuration/index.md).
 
 <!--# Docker
 

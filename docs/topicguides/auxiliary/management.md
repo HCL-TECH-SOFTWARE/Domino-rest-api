@@ -4,8 +4,8 @@ System information and interactions conducted through a functional account.
 
 ## Tutorials
 
-- [Create user and password to initially access the Management console](../../tutorial/installconfig/setupfunctionalaccount.md#create-user-and-password-to-initially-access-the-management-console).
-- [Set up a functional account](../../tutorial/installconfig/setupfunctionalaccount.md)
+- [Create user and password to initially access the Management console](../../tutorial/installconfig/configuration/setupfunctionalaccount.md#create-user-and-password-to-initially-access-the-management-console).
+- [Set up a functional account](../../tutorial/installconfig/configuration/setupfunctionalaccount.md)
 
 ## How-to guides
 

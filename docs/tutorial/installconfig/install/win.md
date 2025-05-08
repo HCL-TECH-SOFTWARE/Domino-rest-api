@@ -20,7 +20,7 @@
 
 --8<-- "jarfilename.md"
 
-## Install on Windows Domino Server
+## Install on Windows Domino server
 
 !!! warning "Important"
 
@@ -56,10 +56,11 @@ The installer adds the `restapi` task to the automatically starting tasks. If op
 
 For more information, see [Domino REST API task](../../../references/usingdominorestapi/restapitask.md).
 
-!!!note "Domino REST API and Domino 14"
+!!! note "Domino REST API and Domino 14"
 
     The Domino REST API installer starting with v1.0.9 has a workaround for an issue between Domino REST API and Domino 14.0 on Windows. For more information or if you receive an error during installation, see [Create symlink for Domino 14 and Domino Rest API](../../../howto/install/symlink.md).
 
+<!--
 ### Verify the installation
 
 On a new Domino REST API installation, the following actions are performed:
@@ -83,8 +84,9 @@ If an existing installation is found at the location you specified as the restap
     - If this isn't V1, you will be notified that an unknown version has been found and if you want to proceed you will need to force an upgrade to continue. Forcing an upgrade removes ALL files from the Domino REST API directory and it's subdirectories, so take care that any files you may have put there will be removed. Domino REST API doesn't store any configuration or user files in the Domino REST API directory, only it's runtime and libraries.
         - If you specified `-f` on the command line, all files in the Domino REST API directory structure are removed and installation of the new version is performed.
         - If you didn't specify `-f`, you will be asked if you want to force an upgrade. Answering `A <enter>` continues, all files in the REST API directory structure are removed and installation of the new is performed. Pressing any other key aborts.
+-->
 
-## Install on Windows Notes Client
+## Install on Windows Notes client
 
 To install, run the following commands:
 
@@ -109,7 +111,7 @@ java -jar restapiInstall-r14.jar ^
 ```
 
 The installer creates a `runrestapi.cmd` script in the Domino REST API installation directory. Run the script to launch the Domino REST API.
-
+<!--
 ### Verify the client installation
 
 The installer conducts a series of actions:
@@ -117,7 +119,7 @@ The installer conducts a series of actions:
 - Create the Domino REST API directory.
 - Copy all binary files needed by Domino REST API to that directory.
 - Create `runrestapi.cmd` in the Domino REST API directory.
-
+-->
 ### Limitations to client use
 
 --8<-- "limitclientuse.md"
@@ -128,8 +130,54 @@ For more information, see [Deploy HCL Domino REST API to HCL Notes Client](../..
 
 --8<-- "iskeeprunning.md"
 
+## Additional information
 
+### Installation explanation on Windows Domino server
 
+The following details explain what happens when installing Domino REST API.
+
+A new Domino REST API installation
+
+- creates the Domino REST API directory (if necessary).
+- copies all binary files needed by Domino REST API to that directory.
+- copies `restapi` into the Domino directory.
+- updates the `ServerTasks` variable in `notes.ini` with `restapi`.
+- adds the variable `KeepInstallDir` to the `notes.ini` pointing to the Domino REST API directory.
+
+If there is an existing installation at the location you specified as the `restapi` directory:
+
+- The installer checks for a file in your Domino REST API directory named `installerFiles.txt`.
+  
+  - If this file exists, the installer uses this list as the list of files to remove before proceeding.
+
+    - If you specified `-u` on the command line, removal of the old files and installation of the new version are performed.
+    - If you didn't specify `-u`, you will be asked if you want to upgrade. Answering `A <enter>` continues the removal of the old files and the installation of the new version.
+
+  - If this file doesn't exist, which it didn't with `Domino REST API V1`, the installer checks if this is V1 by checking for the existence of the `keep-core-1.9.5.jar` file in the Domino REST API directory.
+
+    - If this is V1, the installer will use the list of known V1 files before proceeding.
+
+        - If you specified `-u` on the command line, removal of the old files and installation of the new version are performed.
+        - If you didn't specify `-u`, you will be asked if you want to upgrade. Answering `A <enter>` continues removal of the old files and installation of the new version. Pressing any other key aborts.
+
+    - If this isn't V1, you will be notified that an unknown version has been found, and if you want to proceed, you will need to force an upgrade to continue. Forcing an upgrade removes ALL files from the Domino REST API directory and it's subdirectories, so take care that any files you may have put there will be removed. Domino REST API doesn't store any configuration or user files in the Domino REST API directory, only it's runtime and libraries.
+
+        - If you specified `-f` on the command line, all files in the Domino REST API directory structure are removed and installation of the new version is performed.
+        - If you didn't specify `-f`, you will be asked if you want to force an upgrade. Answering `A <enter>` continues removal of all files in the REST API directory structure and the installation of the new version. Pressing any other key aborts.
+
+### Installation explanation on Windows Notes client
+
+The following details explain what happens when installing Domino REST API.
+
+The installer conducts a series of actions:
+
+- Create the Domino REST API directory.
+- Copy all binary files needed by Domino REST API to that directory.
+- Create `runrestapi.cmd` in the Domino REST API directory.
+
+## Next step
+
+Perform [post-installation tasks](../configuration/index.md).
 
 <!--
 # Windows

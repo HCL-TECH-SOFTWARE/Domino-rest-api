@@ -56,7 +56,7 @@ The installer adds the `restapi` task to the automatically starting tasks. If op
 
 For more information, see [Domino REST API task](../../../references/usingdominorestapi/restapitask.md).
 
-## Verify the installation
+<!--## Verify the installation
 
 On a new Domino REST API installation, perform the following actions:
 
@@ -84,7 +84,7 @@ If an exiting installation is found at the location you specified as the `restap
     - If this isn't V1, you will be notified that an unknown version has been found and if you want to proceed you will need to force an upgrade to continue. Forcing an upgrade removes ALL files from the Domino REST API directory and it's subdirectories, so take care that any files you may have put there will be removed. Domino REST API doesn't store any configuration or user files in the Domino REST API directory, only it's runtime and libraries.
         - If you specified `-f` on the command line, all files in the Domino REST API directory structure are removed and installation of the new version is performed.
         - If you didn't specify `-f`, you will be asked if you want to force an upgrade, answering `A <enter>` continues, all files in the REST API directory structure are remove and installation of the new is performed. Pressing any other key aborts.
-
+-->
 ## Update environment
 
 - The `restapi` task requires 2 environment variables to be set before launching Domino.
@@ -128,6 +128,44 @@ On Linux, you need to carefully check that your file and directory ownership and
 
 --8<-- "iskeeprunning.md"
 
+## Additional information
+
+### Installation explanation
+
+The following details explain what happens when installing Domino REST API.
+
+A new Domino REST API installation
+
+- creates the Domino REST API directory.
+- copies all binary files needed by Domino REST API to that directory.
+- copies `restapi` into the Domino directory.
+- updates the `ServerTasks` variable in `notes.ini` with `restapi`.
+- adds a variable `KeepInstallDir` to the `notes.ini` pointing to the Domino REST API directory.
+
+If there is an existing installation at the location you specified as the `restapi` directory:
+
+- The installer checks for a file in your Domino REST API directory named `installerFiles.txt`.
+
+  - If this file exists, the installer uses this list as the list of files to remove before proceeding.
+
+    - If you specified `-u` on the command line, removal of the old files and installation of the new version are performed.
+    - If you didn't specify `-u`, you will be asked if you want to upgrade. Answering `A <enter>` continues the removal of the old files and the installation of the new version.
+
+  - If this file doesn't exist, which it didn't with `Domino REST API V1`, the installer checks to see if this is V1 by checking for the existence of the `keep-core-1.9.5.jar` file in the Domino REST API directory.
+
+    - If this is V1, the installer uses the list of known V1 files before proceeding.
+  
+        - If you specified `-u` on the command line, old files are removed and installation of the new version is performed.
+        - If you didn't specify `-u`, you'll be asked if you want to upgrade. Answering `A <enter>` continues the removal of the old files and the installation of the new version. Pressing any other key aborts the process.
+
+    - If this isn't V1, you are notified that an unknown version has been found, and if you want to proceed, you will need to force an upgrade to continue. Forcing an upgrade removes ALL files from the Domino REST API directory and it's subdirectories, so take care that any files you may have put there will be removed. Domino REST API doesn't store any configuration or user files in the Domino REST API directory, only its runtime and libraries.
+  
+        - If you specified `-f` on the command line, all files in the Domino REST API directory structure are removed and installation of the new version is performed.
+        - If you didn't specify `-f`, you will be asked if you want to force an upgrade. Answering `A <enter>` continues the removal of all files in the REST API directory structure and the installation of the new version. Pressing any other key aborts the process.
+
+## Next step
+
+Perform [post-installation tasks](../configuration/index.md).
 
 <!--
 # Linux

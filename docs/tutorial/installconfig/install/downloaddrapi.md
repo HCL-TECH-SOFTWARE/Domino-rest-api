@@ -50,3 +50,9 @@ For Domino 14
 
 ## Next step
 
+Install Domino REST API on:
+
+- Domino Server on [Linux](linux.md)
+- Domino Server or Notes Client on [Windows](win.md)
+- Notes Client on [macOS](mac.md)
+- Domino Server on [Docker](docker.md)
