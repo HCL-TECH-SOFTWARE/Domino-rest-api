@@ -1,5 +1,14 @@
 # Installation and configuration
 
+The guide outlines the steps to install the Domino REST API and the necessary configuration tasks after installation to complete a production-ready deployment, ensuring full capability and a secure interface for your Domino applications.
+
+## [Installation](install/index.md)
+
+Details the necessary steps to install the Domino REST API, beginning with verifying that your system meets the required specifications, followed by downloading the installers, and concluding with the installation of the Domino REST API on the compatible platform.
+
+## [Post-installation tasks](configuration/index.md)
+
+Details the necessary configuration tasks necessary to complete a production-ready deployment of Domino REST API.
 <!--
 ## Installation
 

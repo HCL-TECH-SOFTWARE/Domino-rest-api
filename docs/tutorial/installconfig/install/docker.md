@@ -10,7 +10,7 @@ All configuration options found there can be applied to the Domino REST API Dock
 
     The Domino REST API Docker image **contains** a Domino server. You don't need a separate Domino installation. The image is completely self contained. Domino REST API is a Domino service, using the network free C API. So there is no scenario where an "only Domino REST API" container would work.
 
-## Prerequisites
+## Before you begin <!--Prerequisites-->
 
 Running Domino REST API with a Docker image requires the following:
 
@@ -23,7 +23,7 @@ Running Domino REST API with a Docker image requires the following:
 
         Docker desktop [recently](https://www.theregister.com/2021/08/31/docker_desktop_no_longer_free/) became subject to a [Docker subscription](https://www.docker.com/pricing), make sure you are compliant or use the command line.
 
-- **[Docker Compose](https://docs.docker.com/compose/install/)** 
+- **[Docker Compose](https://docs.docker.com/compose/install/)**
 
     When you install a Docker Desktop version (Windows, macOS), Docker compose is already included. For servers, it's an [additional install](https://docs.docker.com/compose/install/).
 

@@ -18,13 +18,15 @@ To alter a parameter, either set an environment parameter, if one exists (there 
 
 A configuration can have the following top-level properties. These properties are case-sensitive.
 
-| Property                 | Type                                              | Description                                                                                                                                                                                                                                |
-| :----------------------- | :------------------------------------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| HOST                     | String                                            | Hostname or IP address to bind to, default is not set |
-| MANAGEMENTPORT           | int (0 to 65353)                                  | (default 8889) Commands regarding the runtime, for example config and shutdown, should only be exposed to an admin network workstation.                                                                                                           |
-| METRICSPORT              | int (0 to 65353)                                  | (default 8890) Port for Prometheus metrics.                                                                                                                                                                                                |
-| Firehoseport             | int (0 to 65353)                                  | (default 42424) Port for Firehose to successfully deliver data to custom HTTP endpoints.                                                                                                                                                   |
-| PORT                     | int (0 to 65353)                                  | (default 8880) The port for regular API access.                                                                                                                                                                                            |
+|Property|Type|Description|
+|:---|:---|:---|
+| HOST | String | Hostname or IP address to bind to, default is not set |
+| MANAGEMENTPORT | int (0 to 65353) | (default 8889) Commands regarding the runtime, for example config and shutdown, should only be exposed to an admin network workstation. |
+| METRICSPORT | int (0 to 65353) | (default 8890) Port for Prometheus metrics. |
+| FIREHOSEPORT | int (0 to 65353) | (default 42424) Port for Firehose to successfully deliver data to custom HTTP endpoints. |
+| PORT | int (0 to 65353) | (default 8880) Port for regular API access.|
+|HEALTHCHECK |int (0 to 65353)| (default 8886) Port for health check, which is the standard approach for Docker and Kubernetes environments to allow any automated tooling that manages your containers to periodically check and automatically take action if Domino REST API is no longer working.|
+
 | prometheusMetrics        | [prometheusParameters](#prometheus-parameters)    | Parameters to hand over to the Prometheus task from vert.x.                                                                                                                                                                                |
 | versions                 | [versionParameters](#version-parameters)          | List of the OpenAPI definition files to load.                                                                                                                                                                                              |
 | verticles                | [verticlesParameters](#restapi-verticle)          | The verticles to load.                                                                                                                                                                                                                     |

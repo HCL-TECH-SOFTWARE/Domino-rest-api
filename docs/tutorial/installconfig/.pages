@@ -10,14 +10,14 @@ nav:
 #    - linux.md
 #    - mac.md
 #    - win.md
-    - Post installation tasks:
-          - postinstallation.md
-          - Verify connectivity: connectivity.md
-          - Securing ports: configuringPorts.md
-          - Enable a database: howto/database/enablingadb.html
-          - Configure JWT: references/security/authentication.html
-          - Sharing JWT between servers: references/security/encryption.html
-          - Configure apps: tutorial/adminui.html
-          - Setup functional accounts: setupfunctionalaccount.md
+#    - Post installation tasks:
+#          - postinstallation.md
+#          - Verify connectivity: connectivity.md
+#          - Securing ports: configuringPorts.md
+#          - Enable a database: howto/database/enablingadb.html
+#          - Configure JWT: references/security/authentication.html
+#          - Sharing JWT between servers: references/security/encryption.html
+#          - Configure apps: tutorial/adminui.html
+#          - Setup functional accounts: setupfunctionalaccount.md
     #- functionalUsers.md
     #- configuringPorts.md

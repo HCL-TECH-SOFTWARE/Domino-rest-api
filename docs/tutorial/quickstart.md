@@ -62,7 +62,7 @@ You can use the built-in [Swagger API](../tutorial/swagger.md), [Postman and Cur
 <!-- prettier-ignore -->
 !!! tip
 
-    Make sure to complete the [post installation steps](../tutorial/installconfig/postinstallation.md) to ensure proper operation.
+    Make sure to complete the [post installation steps](../tutorial/installconfig/configuration/index.md) to ensure proper operation.
 
 ### Tutorials
 

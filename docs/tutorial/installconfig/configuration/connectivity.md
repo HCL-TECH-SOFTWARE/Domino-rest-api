@@ -38,7 +38,7 @@ On Linux or macOS, edit `/etc/hosts`. On Windows, edit `C:\Windows\System32\driv
 
 !!! note
 
-    If you have configured `https`, and you should, use that. Also, you might not need port `8880` when you opted for [a proxy configuration](../../../howto/web/httpsproxy.md). You can [learn more about ports here](../../../tutorial/installconfig/configuringPorts.md).
+    If you have configured `https`, and you should, use that. Also, you might not need port `8880` when you opted for [a proxy configuration](../../../howto/web/httpsproxy.md). You can [learn more about ports here](../../../topicguides/configuringPorts.md).
 
 ### Client access
 

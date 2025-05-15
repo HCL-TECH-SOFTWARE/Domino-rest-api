@@ -26,6 +26,13 @@ Domino REST API uses JSON Web Token (JWT) for authorization. To allow using Domi
 
 The JWT token can also be shared between servers to enable SSO (Single Sign On) for Domino REST API.
 
+## [Manage databases](admingroup.md)
+
+There are databases created on the Domino server as part of the Domino REST API installation. These databases must be secured and managed like other production databases.
+
+## [Expose databases to REST API access](exposedb.md)
+
+To make a database available on the Domino REST API, create a Domino REST API schema and link it to a publicly visible scope. The schema defines what documents, based on the value of their form item, views, folders, and agents are available for a call via HTTP.
 
 <!--
 

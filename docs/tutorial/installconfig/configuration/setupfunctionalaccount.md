@@ -16,20 +16,20 @@ You need access to the **Management console** to use its utility function to sal
 
 1. Create a `tempmanagement.json` file in your `[NotesData]/keepconfig.d` directory with the following content:
 
-  ```json
-  {
-    "identity": {
-      "managementAPI": {
-        "Doctor Notes": {
-          "active": true,
-          "secret": "E4B321EBA91B7F92D9BF5EAFA5322824FEC2287B8A6C133D7C31EFB706A2BA30:1A57478185E7AF3A98F01ECA08F0BA881DBC88BEC60AE8C6F1B1CC5CC55C11A20F676E082BF2D28BB96DB5A8CFB091C767C035B380DB4CBC7D1001EA8BE01663"
+    ```json
+    {
+      "identity": {
+        "managementAPI": {
+          "Doctor Notes": {
+            "active": true,
+            "secret": "E4B321EBA91B7F92D9BF5EAFA5322824FEC2287B8A6C133D7C31EFB706A2BA30:1A57478185E7AF3A98F01ECA08F0BA881DBC88BEC60AE8C6F1B1CC5CC55C11A20F676E082BF2D28BB96DB5A8CFB091C767C035B380DB4CBC7D1001EA8BE01663"
+          }
         }
       }
     }
-  }
-  ```
+    ```
 
-  This creates the user *Doctor Notes* with the password set to *password* to access the Management console.
+    This creates the user *Doctor Notes* with the password set to *password* to access the **Management console**.
 
 2. Restart Domino REST API.
 
@@ -105,7 +105,7 @@ You use the password when logging in to the endpoints, while you use the salted 
 
 Using the examples provided, your `tempmanagement.json` file might look like the following example JSON structure:
 
-    ```json
+  ```json
     {
       "identity": {
         "healthcheckAPI": {
@@ -129,7 +129,7 @@ Using the examples provided, your `tempmanagement.json` file might look like the
         }
       }
     }
-    ```
+  ```
 
 Based on the example, you can log in to the **Management console** (Port 8889) using the username *Doctor Notes*, to the Metrics endpoint (Port8890) using the username *metrics*, and to the Health check (Port 8886) using the username *John Doe*. You have to use the password corresponding to the salted password you configured for each username.
 

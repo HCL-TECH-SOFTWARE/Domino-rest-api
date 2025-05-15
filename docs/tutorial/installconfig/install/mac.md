@@ -129,9 +129,10 @@ If an exiting installation is found at the location you specified as the `restap
 
     If your Notes client has an issue when running `runrestapi.sh`, download and install `openJ9` SDK and modify the `JAVA_HOME` variable in the `runrestapi.sh` to point to your `openJ9` directory.
 
-## Next step
+<!--## Next step
 
 Perform [post-installation tasks](../configuration/index.md).
+-->
 
 <!--
 # Install on macOS

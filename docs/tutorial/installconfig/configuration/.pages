@@ -4,3 +4,5 @@ nav:
   - secureport.md
   - setupfunctionalaccount.md
   - jwtconfig.md
+  - admingroup.md
+  - Expose database for access: exposedb.md

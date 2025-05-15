@@ -119,6 +119,15 @@ To use JWT tokens from an external provider, Domino REST API requires access to 
 
 If you used [the permanent JWT key](#use-a-permanent-jwt-key), you can copy the 4 generated files to your other Domino servers in the `keepconfig.d` directory to set up Domino REST API on multiple Domino servers to use the same JWT keys and achieve single login and decryption capabilities.
 
+### Related information
+
+- To learn more about *JWT payload*, *distinguished names*, and *name resolution*, see [Auth*](../../../references/security/authentication.md).
+- To learn more about areas in Domino REST APi that need encryption keys and how to generate those keys, see [Encryption Keys](../../../references/security/encryption.md).
+
+## Next step
+
+Proceed to [Manage databases](admingroup.md).
+<!--
 ### JWT Payload
 
 The JWT requires the following format. Additional entries get ignored.
@@ -171,3 +180,4 @@ The Domino REST API probes for the existence of various claims in the JWT token 
 ### References
 
 To learn more, see [JWT Authorization](../../../references/security/authentication.md#jwt-authorization) and [Encryption Keys](../../../references/security/encryption.md).
+-->
