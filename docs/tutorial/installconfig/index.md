@@ -9,6 +9,18 @@ Details the necessary steps to install the Domino REST API, beginning with verif
 ## [Post-installation tasks](configuration/index.md)
 
 Details the necessary configuration tasks necessary to complete a production-ready deployment of Domino REST API.
+
+## Additional information
+
+After completing the installation and the post-installation tasks:
+
+- Complete the [walkthrough tutorial](../walkthrough/index.md).
+
+- Learn about the [OpenAPI UI](../swagger.md).
+
+- Check [Understanding configuration](../../references/understandingconfig.md) once you are ready to tweak the default configuration so that you understand how to do it.
+
+- Learn about [hosting static applications](../../references/hostingstatic.md), often referred to as Single Page Applications (SPA) or browser apps. The [tutorial](../walkthrough/index.md) has [an example](../walkthrough/lab-07.md) that you can refer to.
 <!--
 ## Installation
 

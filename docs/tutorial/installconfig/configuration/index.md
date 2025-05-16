@@ -2,6 +2,11 @@
 
 After installation, Domino REST API will run on port 8880 with HTTP and a transient JWT token for single server use. It's nice to try things out, but not production-ready. The following configuration tasks are needed to finalize a **production-worthy** Domino REST API deployment and to ensure complete functionality and a secure interface to your Domino applications.
 
+!!! caution "Important"
+
+    - You should familiarize yourself with all [configuration parameters](../../../references/parameters.md) and [security](../../../references/security/index.md) settings before you deploy into a production environment.
+    - Domino REST API honors all Domino access control mechanisms and doesn't allow anonymous access. For more information, see [Access Control](../../../references/accesscontrol.md).
+
 ## [Check connectivity](connectivity.md)
 
 After the installation, make sure connectivity works.

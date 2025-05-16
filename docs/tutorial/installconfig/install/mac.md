@@ -51,6 +51,10 @@ java -jar restapiInstall-r14.jar \
 
 The installer creates a `runrestapi.sh` script in the Domino REST API installation directory. Run it to launch the Domino REST API. You can copy or move the script to `~/bin` to add it to the macOS path.
 
+!!! tip
+
+    If your Notes client has an issue when running `runrestapi.sh`, download and install `openJ9` SDK and modify the `JAVA_HOME` variable in the `runrestapi.sh` to point to your `openJ9` directory.
+
 <!--
 ## Verify the installation
 
@@ -124,10 +128,6 @@ If an exiting installation is found at the location you specified as the `restap
         - If you specified `-f` on the command line, all files in the Domino REST API directory structure are removed and installation of the new version is performed.
         - If you didn't specify `-f`, you will be asked if you want to force an upgrade. Answering `A <enter>` continues removal of all files in the REST API directory structure and installation of the new version is performed. Pressing any other key aborts.
 
-<!-- prettier-ignore -->
-!!! tip
-
-    If your Notes client has an issue when running `runrestapi.sh`, download and install `openJ9` SDK and modify the `JAVA_HOME` variable in the `runrestapi.sh` to point to your `openJ9` directory.
 
 <!--## Next step
 
