@@ -1,0 +1,8 @@
+nav:
+  - index.md
+  - connectivity.md
+  - secureport.md
+  - setupfunctionalaccount.md
+  - jwtconfig.md
+  - admingroup.md
+  - Expose database for access: exposedb.md

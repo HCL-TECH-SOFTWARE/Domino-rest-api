@@ -43,3 +43,5 @@ This section discusses and explains topics and concepts about HCL Domino REST AP
 - [Reserved Form mode names](../references/usingdominorestapi/modenames.md)
 
 - [Web world - a primer](notesprimer.md)
+
+- [Ports](configuringPorts.md)
