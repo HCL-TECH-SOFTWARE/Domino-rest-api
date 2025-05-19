@@ -7,3 +7,4 @@ nav:
     - usersmc.md
     - jwtmultiserver.md
     - suspendeduser.md
+    - console.md

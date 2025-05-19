@@ -11,8 +11,4 @@ Topics to guide you in completing goals and tasks about Domino REST API requirin
 - [Identify known users with valid JWT token](usersmc.md)
 - [JWT multi server](jwtmultiserver.md)
 - [Release suspended users](suspendeduser.md)
-
-
-
-
-
+- [Use Domino console](console.md)
