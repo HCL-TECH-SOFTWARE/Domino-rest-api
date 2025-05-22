@@ -178,7 +178,8 @@ All forms are now activated with default settings and have **Active** status.
 
           The following image shows the opened **Formula for Delete Access** dialog.  
 
-          [![Formula Settings](../../assets/images/modeformula.png)](../../assets/images/modeformula.png "Click to open in a new tab"){: target="_blank" rel="noopener noreferrer"}
+          [![Formula Settings](../../assets/images/modeformula1.png)](../../assets/images/modeformula.png "Click to open in a new tab"){: target="_blank" rel="noopener noreferrer"}
+          <!--[![Formula Settings](../../assets/images/modeformula.png)](../../assets/images/modeformula.png "Click to open in a new tab"){: target="_blank" rel="noopener noreferrer"}-->
 
       2. In the text field in the dialog, edit the `@True` or `@False` entry and click **Save** to close the dialog.
 

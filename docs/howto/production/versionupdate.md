@@ -25,20 +25,21 @@ Follow the procedure based on the installation option you used when installing t
 ### Docker
 
 1. Remove the existing docker container.
-2. If using the docker image from *HCL Software License and Download Portal* or *My HCLSoftware Portal*, load the docker image using the following command: 
+2. If using the docker image from *My HCLSoftware Portal*, load the docker image using the following command: 
 
     ```bash
 	docker load -i [name_of_tar_file].tar
     ```
 
-    !!!note
+    !!! note
+
         - Make sure you [extract the tar.gz file](https://linuxize.com/post/how-to-extract-unzip-tar-gz-file/) first.
 
         - This step isn't applicable if using the docker image from Harbor. 
 
 3. Take note of the image name.
 
-    - When using the docker image from *HCL Software License and Download Portal* or *My HCLSoftware Portal*, take note of the image name that was output after being loaded. The image name is also indicated in the [What’s New](../../whatsnew/index.md) for each version of the Domino REST API and marked *Docker image version for docker compose .env file (CONTAINER_IMAGE)*.
+    - When using the docker image from *My HCLSoftware Portal*, take note of the image name that was output after being loaded. The image name is also indicated in the [What’s New](../../whatsnew/index.md) for each version of the Domino REST API and marked *Docker image version for docker compose .env file (CONTAINER_IMAGE)*.
 
         !!! example "Example loaded image name"
 

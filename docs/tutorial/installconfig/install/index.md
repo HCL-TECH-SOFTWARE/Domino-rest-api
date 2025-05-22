@@ -9,10 +9,10 @@ Guides you through the procedures for installing Domino REST API.
     Before starting the installation, make sure that you check the [system requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789).
 
 2. [Download Domino REST API](downloaddrapi.md)
-
+<!--
     - For **Domino customers**, you can download the Domino REST API via [My HCLSoftware Portal](../install/downloaddrapi.md#download-via-my-hclsoftware-portal).
     - For **Volt MX Go and other customers**, you can download the Domino REST API via [HCL Software License and Download Portal](../install/downloaddrapi.md#download-via-hcl-software-license-and-download-portal) or via [My HCLSoftware Portal](../install/downloaddrapi.md#download-via-my-hclsoftware-portal).
-
+-->
 3. Install Domino REST API on:
 
     - Domino Server on [Linux](linux.md)
