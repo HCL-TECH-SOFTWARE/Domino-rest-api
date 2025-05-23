@@ -208,8 +208,8 @@ The configuration is as follows in Domino REST API:
 | :-------------- | :-----------------------------------|
 | `active`   | **Optional** - Can be useful for setting to `false` to temporarily disable something without deleting the config entirely. |
 | `providerURL`| It's the OIDC-provider-specific URL. It's in a form common for Keycloak, but Azure and others look different.|
-| `scope`| It's the configured client ID from the OIDC provider, generally created as part of setting up Domino/DRAPI as a legal client in the config. |
-|`aud`| It's the generated client secret from the OIDC provider, usually a randomly-generated hex string. | 
+| `scope`| A scope that is expected to be included in the token from the OIDC provider. |
+|`aud`| A string or array of strings of audiences expected to be included in the token. | 
 |`additionalClientIds`| **Optional** - Can be a string or array of strings of client IDs beyond the one configured in `idpcat.nsf` that will be considered valid.| 
 |`userIdentifier` and `userIdentifierInLdapFormat`| **Optional**| 
 |`microsoft`| **Optional** - Can be used to enable MS-Azure-specific workarounds internally| 
