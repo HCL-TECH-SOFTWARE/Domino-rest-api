@@ -207,7 +207,7 @@ The configuration is as follows in Domino REST API:
 | Items           | Description                          |
 | :-------------- | :-----------------------------------|
 | `active`   | **Optional** - Can be useful for setting to `false` to temporarily disable something without deleting the config entirely. |
-| `providerURL`| It's the OIDC-provider-specific URL. It's in a form common for Keycloak, but Azure and others look different.|
+| `providerUrl`| It's the OIDC-provider-specific URL. It's in a form common for Keycloak, but Azure and others look different.|
 | `scope`| A scope that is expected to be included in the token from the OIDC provider. |
 |`aud`| A string or array of strings of audiences expected to be included in the token. | 
 |`additionalClientIds`| **Optional** - Can be a string or array of strings of client IDs beyond the one configured in `idpcat.nsf` that will be considered valid.| 
