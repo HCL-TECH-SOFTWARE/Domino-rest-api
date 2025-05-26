@@ -14,7 +14,7 @@ This guide allows new users with working experience in HCL Notes and HCL Domino 
 
 ## Downloading Domino REST API
 
-Log in to [HCL Software License & Download Portal](https://hclsoftware.flexnetoperations.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:15px;width:15px"} or [My HCLSoftware Portal](https://my.hcltechsw.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:15px;width:15px"} and download Domino REST API.
+Log in to [My HCLSoftware Portal](https://my.hcltechsw.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:15px;width:15px"} and download Domino REST API.
 
 ## Let's connect
 
@@ -82,8 +82,8 @@ The [Postman collection](../references/downloads.md) has sample interactions wit
 
 - **Domino developer** creates the **schema** that defines what data can be accessed in a nsf database.
 - **Domino administrator** creates and activates the **scope** that defines how the data can be accessed. Also creates (optional) OAuth compatible applications with `client_id` and `client_secret` properties.
-- **VoltMX administrator** configures Volt MX's foundry middleware to interact with Domino REST API using the foundry Domino REST API adapter
-- **Application developer** develops applications leveraging Domino REST API Endpoints, VoltMX services and front-end tools like VoltMX Iris, VSCode or any tools and framework of choice
+- **Volt MX administrator** configures Volt MX's foundry middleware to interact with Domino REST API using the foundry Domino REST API adapter
+- **Application developer** develops applications leveraging Domino REST API Endpoints, Volt MX services and front-end tools like Volt Iris, VSCode or any tools and framework of choice
 
 Read more about them in [Domino REST API roles](../references/usingdominorestapi/roles.md).
 

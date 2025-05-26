@@ -22,7 +22,7 @@ Topics to guide you in completing goals and tasks related to installation, confi
 
 - [Configure WebAuthn with Domino REST API and Domino 14 or greater](webauthn.md)
 
-- [Customize oAuth consent screen](oauthoscreen.md) (experimental)
+- [Customize OAuth consent screen](oauthoscreen.md) (experimental)
 
 - [Obtain authentication token from HCL Container Repository](obtainauthenticationtoken.md)
 

@@ -2,7 +2,7 @@
 
 ## About this task
 
-Guides you on testing if a user has read, write, and delete access to the database form based on the **Formula for Read Access**, **Formula for Write Access**, and **Formula for Delete Access** in the **Mode Settings**.
+Guides you on testing if a user has read, write, and delete access to the database form based on the **Formula for Read Access**, **Formula for Write Access**, and **Formula for Delete Access** in the **Mode Settings** in the **Admin UI**.
 
 ![Mode Settings](../../assets/images/modesettings.png)
 
