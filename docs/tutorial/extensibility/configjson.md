@@ -1,6 +1,6 @@
-# The `config.json` configuration
+# The config.json configuration
 
-DRAPI is driven by a [dynamic configuration](../../references/understandingconfig.md). In order to get your extension recognized you must provide the information what verticle will run your code and what classes implement your business logic. To do so a file `resources/config/config.json` is required:
+DRAPI is driven by a [dynamic configuration](../../references/understandingconfig.md). To get your extension recognized you must provide the information what verticle will run your code and what classes implement your business logic. To do so a file `resources/config/config.json` is required:
 
 ```json
 {
@@ -37,15 +37,17 @@ DRAPI is driven by a [dynamic configuration](../../references/understandingconfi
 
 ![Extension Config](../../assets/images/ExtensionConfig.png)
 
-1. versions contains all active API collections
-2. The name must match the middle part of your OpenAPI file (`openapi.eoffice.json`)
-3. The entries in the verticle key determine how the HTTP side (fixed name `RestAPI`) and the database side (choose your own name) process your API
-4. Specifies the verticle to use on database side. The default entry works for all regular API calls
-5. The tags entry is used to determine the package name for your implementation class (see below)
-6. This must match (2) and the middle part of your OpenAPI file name
-7. The package name for eventual HTTP side handlers, not relevant as long as you deal with JSON in/out
-8. The route needs to match your OpenAPI file and is the actual route used. If mismatched, interactive Swagger won't work.
-9. Leave the default entries as is. Advanced use cases are not subject of this tutorial
+|Item|Description|
+|:---|:---|
+|1|`versions` contains all active API collections.|
+|2|The name must match the middle part of your OpenAPI file (`openapi.eoffice.json`).|
+|3|The entries in the verticle key determine how the HTTP side (fixed name `RestAPI`) and the database side (choose your own name) process your API.|
+|4|Specifies the verticle to use on the database side. The default entry works for all regular API calls.|
+|5|The tags entry is used to determine the package name for your implementation class (see below).|
+|6|This must match item 2 and the middle part of your OpenAPI filename.|
+|7|The package name for eventual HTTP side handlers, not relevant as long as you deal with JSON in/out.|
+|8|The route needs to match your OpenAPI file and is the actual route used. If mismatched, interactive Swagger won't work.|
+|9|Leave the default entries as is. Advanced use cases aren't subject of this tutorial.|
 
 ## Determine the class names for the business logic
 

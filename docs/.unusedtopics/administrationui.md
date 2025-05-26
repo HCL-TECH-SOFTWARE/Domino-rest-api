@@ -351,7 +351,7 @@ Allows the current user to view and revoke available OAuth consents.
 
 Click **OAuth Consents** from the navigation pane. 
 
-![oAuth Consent](../../assets/images/oauthConsentIcon.png){: style="height:80%;width:80%"}
+![OAuth Consent](../../assets/images/oauthConsentIcon.png){: style="height:80%;width:80%"}
 
 This opens the **OAuth Consents** pane. 
 
