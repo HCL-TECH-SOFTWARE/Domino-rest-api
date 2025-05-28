@@ -1,7 +1,5 @@
 # Encryption Keys
 
---8<-- "keepmngtURLcaution1.md"
-
 There are three areas in Domino REST API where encryption keys are needed:
 
 - HTTPS certificates for Domino REST API ports
@@ -103,15 +101,15 @@ The 4 files get created in your `keepconfig.d` directory. Distribute them to all
 - Log in to the Management console (Port 8889).
 - Type a name you want to call this certificate into the **Certificate Name**. There should be no spaces or special characters.
 
-    - for example: MultiDomain
+  - for example: MultiDomain
 
 - Click **Create IdP Certificate**.
 - Domino REST API generates 4 files in this server's `[notesdata]/keepconfig.d` directory:
 
-    - MultiDomain.cert.pem
-    - MultiDomain.json
-    - MultiDomain.private.key.pem
-    - MultiDomain.public.key.pem
+  - MultiDomain.cert.pem
+  - MultiDomain.json
+  - MultiDomain.private.key.pem
+  - MultiDomain.public.key.pem
 
 - Copy these 4 files to your other Domino servers into the `[notesdata]/keepconfig.d` directory.
 - Restart Domino REST API on all servers with this new configuration and they will now share the same JWT keys.

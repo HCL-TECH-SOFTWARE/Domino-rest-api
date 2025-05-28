@@ -1,7 +1,5 @@
 # Configure certificates
 
---8<-- "keepmngtURLcaution1.md"
-
 ## About this task
 
 The procedures guide you on obtaining and configuring certificates.
@@ -77,12 +75,13 @@ To get valid certificates, use any of the following approaches:
 ```
 
 ## Configure a certificate for HTTPS
+
 When configuring TLS, you can use JSON values or [environment variables](../../references/parameters.md#environment). You can use either of the two. When using both, the environment variable will take priority.
 
 --8<-- "tlssettings.md"
 
 ### Enabling HTTPS using Domino Certificate Manager
-    
+
 If you are using Domino 14 or above and your certificates are stored in the Domino Certificate Manager, you may be able to enable HTTPS automatically. For more information, see [Enable HTTPS using the Domino Certificate Manager](../production/dominohttps.md).
 
 To learn more about Domino Certificate Manager, see [Managing TLS certificates with Certificate Manager](https://help.hcl-software.com/domino/14.0.0/admin/secu_le_using_certificate_manager.html?hl=certificate%2Cmanager).

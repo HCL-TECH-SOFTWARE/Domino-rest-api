@@ -1,11 +1,11 @@
 # Configure an identity provider
 
---8<-- "keepmngtURLcaution1.md"
-
-In its default configuration, Domino REST API uses Domino as its identity provider (IdP).
+In its default configuration, Domino REST API uses itself as its identity provider (IdP), so it is client and IdP at the same time.
 This allows you to start evaluating and testing out of the box. To enable this, you need to have an HTTP password configured in Domino and good enough for internal use.
 
 However, for an actual deployment, you might want to configure your own IdP and authentication flow. The only IdP requirements are use of a supported algorithm for signing and a token with the expected format.
+
+--8<-- "onclientids.md"
 
 ## About this task
 

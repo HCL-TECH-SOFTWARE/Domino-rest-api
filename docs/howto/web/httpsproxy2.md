@@ -1,13 +1,11 @@
 # Configure nginx as HTTPS proxy - single domain
 
---8<-- "keepmngtURLcaution1.md"
-
 ## About this task
 
 The information in this section guides you in configuring nginx as an HTTPS proxy - single domain.
 
 !!!tip
-    Know more about [Domino REST API and Proxy](../../topicguides/keepasproxy.md). 
+Know more about [Domino REST API and Proxy](../../topicguides/keepasproxy.md).
 
 ## Configuring nginx as an HTTPS proxy - single domain
 
