@@ -1,16 +1,20 @@
 # Security overview
 
-Good security isn't a one-trick pony, but a combination of factors. Here are what we implemented:
+Good security isn't a one-trick pony, but a combination of factors.
+
+--8<-- "pickYourAuth.md"
+
+Here are what we implemented:
 
 - We use [Open Standards](../quickreference/standards.md) wherever appropriate. Standards enjoy more scrutiny from more eyeballs.
 
 - Domino REST API uses the [Eclipse Vert.x Framework](https://vertx.io), which supports many different versions of [SSL certificates](https://vertx.io/docs/vertx-core/java/#ssl) such as:
 
-    - [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail)
-    
-    - [PKS](https://en.wikipedia.org/wiki/PKCS_12)
-    
-    - [JKS](https://en.wikipedia.org/wiki/Java_KeyStore)
+  - [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail)
+
+  - [PKS](https://en.wikipedia.org/wiki/PKCS_12)
+
+  - [JKS](https://en.wikipedia.org/wiki/Java_KeyStore)
 
 - All Domino REST API access is authorized using a signed [JWT](https://jwt.io) claim. [Access control](../accesscontrol.md) settings are completely observed and honored.
 

@@ -9,3 +9,4 @@ nav:
   - Set up oauth.nsf: howto/VoltMX/setupoauthnsf.html
   - customIdp.md
   - securingKEEPEndpoints.md
+  - idpcompare.md

@@ -4,7 +4,7 @@ The Domino REST API is designed to be able to share configuration between multip
 Sharing configuration works not only for tightly coupled systems, but also for servers that ate just on the same org or even across Domain boundaries (as long as trust and replication are setup correctly and working).
 
 !!!warning "Not everything is shared"
-    Settings in `KeepConfig.nsf`, mostly scopes and oauth applications replicate. Configuration settings in `keepconfig.d` and `keepweb.d` are per server. When you want to share those, you need to manually copy them over.
+Settings in `KeepConfig.nsf`, mostly scopes and oauth applications replicate. Configuration settings in `keepconfig.d` and `keepweb.d` are per server. When you want to share those, you need to manually copy them over.
 
 !!!info "We are working on improving the config sharing."
 
@@ -61,15 +61,16 @@ When using DRAPI as your JWT provider, as opposed to an external identity provid
 
 ```json
 {
-  "JWTCertStore": true
+  "JWTCertStore": true,
+  "JWTCertStoreName": "MyCertForKeep"
 }
 ```
 
-If you already have a certificate chain in certstore.nsf, set the `KeepCertStoreNameJWT` notes.ini parameter on each server to the subject host name of the certificate.
+`MyCertForKeep` needs to match an existing certificate chain in certstore.nsf.
 
-Alternatively, to generate the certificate chain using DRAPI, use the Management Console to [generate the Keys for JWT](../../references/security/encryption.md#using-the-management-console-for-encryption-operations). As of 2025, you should prefer [EC](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography) certificates. This will create certificates in the certificate store using the common name of the Domino server and configure the local server to use it.
+You can generate the certificate chain using DRAPI, use the Management Console to [generate the Keys for JWT](../../references/security/encryption.md#using-the-management-console-for-encryption-operations). As of 2025, you should prefer [EC](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography) certificates. This will create certificates in the certificate store using the common name of the Domino server and configure the local server to use it.
 
-To enable access to this certificate for other servers, open the [certificate store database](https://help.hcl-software.com/domino/14.0.0/admin/secu_le_using_certificate_manager.html) and find the newly created certificate document. In that document, modify the **Servers with access**** field to include the other Domino servers that will access it, and click **Submit Request**. This causes the Certificate Manager to encrypt the certificate in a way compatible with each named server.
+To enable access to this certificate for other servers, open the [certificate store database](https://help.hcl-software.com/domino/14.0.0/admin/secu_le_using_certificate_manager.html) and find the newly created certificate document. In that document, modify the **Servers with access\*\*** field to include the other Domino servers that will access it, and click **Submit Request**. This causes the Certificate Manager to encrypt the certificate in a way compatible with each named server.
 
 Then, set the `KeepCertStoreNameJWT` notes.ini parameter on each server to the common name of the first server, for example `MyServer`.
 
@@ -111,7 +112,8 @@ You don't need access to the AdminUI on your spoke servers, it only increases th
 }
 ```
 
-!!!warning "Swagger UI"
+!!! warning "Swagger UI"
+
     This also disables the Swagger UI. So use a tool like [Bruno](https://www.usebruno.com/) instead.
 
 ## Let's connect
