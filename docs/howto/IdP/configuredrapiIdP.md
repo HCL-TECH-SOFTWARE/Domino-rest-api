@@ -12,6 +12,8 @@ The `oauth.nsf` database exists in your Domino data directory. The Domino IdP us
 
       - If for some reason you need to create the `oauth.nsf`, see [Set up oauth.nsf](../../howto/VoltMX/setupoauthnsf.md), and save it in your Domino data directory.
 
+--8<-- "onclientids.md"
+
 ## Procedure
 
 1. Configure Domino REST API to access the `oauth.nsf`.

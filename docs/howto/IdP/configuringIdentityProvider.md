@@ -5,6 +5,8 @@ This allows you to start evaluating and testing out of the box. To enable this, 
 
 However, for an actual deployment, you might want to configure your own IdP and authentication flow. The only IdP requirements are use of a supported algorithm for signing and a token with the expected format.
 
+--8<-- "onclientids.md"
+
 ## About this task
 
 The provided information guides you of configuring your own IdP and authentication flow for use in an actual deployment.
