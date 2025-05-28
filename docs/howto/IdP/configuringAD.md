@@ -222,6 +222,12 @@ A few tips to troubleshoot the setup when the goalpost has been moved:
 - Compare the `aud` value from the JWT token with the `aud` value of the configuration file. Adjust the configuration file if different.
 - Check the `scp`, which is Microsoft's "alternative" to `scope`, and make sure it has the expected values matching the settings in the application configuration in the Admin UI. Adjust the scope in the DRAPI application (AdminUI) or your AzureAD IdP settings.
 
+## RInse and repeat
+
+- [Set up External IdP for Office Round Trip Experience](roundtripidp.md)
+
+- [Set up External IdP for Admin UI login](adminuiidp.md)
+
 ## Let's connect
 
 --8<-- "feedback.md"

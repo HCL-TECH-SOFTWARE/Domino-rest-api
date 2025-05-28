@@ -45,7 +45,13 @@ The procedure guides you on how to configure Domino REST API to use an **OpenID 
 
 4. Save the JSON file in the `keepconfig.d` directory.
 
-   !!!tip
-   Use a filename for the JSON file that reveals its purpose. To learn more on how JSON files in `keepconfig.d` are processed, see [Understanding configuration](../production/configparam.md#understanding-configuration).
+!!! tip
+
+    Use a filename for the JSON file that reveals its purpose. To learn more on how JSON files in `keepconfig.d` are processed, see [Understanding configuration](../production/configparam.md#understanding-configuration).
 
 5. Restart Domino REST API on all servers.
+
+## Rinse and repeat
+
+- [Set up External IdP for Office Round Trip Experience](roundtripidp.md)
+- [Set up External IdP for Admin UI login](adminuiidp.md)
