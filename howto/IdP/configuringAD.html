@@ -2632,6 +2632,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#client-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client Ids
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configuration-in-azure" class="md-nav__link">
     <span class="md-ellipsis">
       Configuration in Azure
@@ -2740,6 +2749,15 @@
   <a href="#troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
       Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rinse-and-repeat" class="md-nav__link">
+    <span class="md-ellipsis">
+      RInse and repeat
     </span>
   </a>
   
@@ -5920,6 +5938,8 @@
       
         
       
+        
+      
     
     
     
@@ -6021,7 +6041,7 @@
   
   
   <span class="md-ellipsis">
-    Configuration <!--parameters-->
+    Configuration
     
   </span>
   
@@ -6114,6 +6134,29 @@
   
   <span class="md-ellipsis">
     Securing Domino REST API endpoints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/security/idpcompare.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comparing IdP Options
     
   </span>
   
@@ -6639,6 +6682,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#client-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client Ids
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configuration-in-azure" class="md-nav__link">
     <span class="md-ellipsis">
       Configuration in Azure
@@ -6753,6 +6805,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#rinse-and-repeat" class="md-nav__link">
+    <span class="md-ellipsis">
+      RInse and repeat
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#lets-connect" class="md-nav__link">
     <span class="md-ellipsis">
       Let's connect
@@ -6787,98 +6848,99 @@
 <li>The <code>aud</code> property is fixed to the ID of the application, not as commonly, the URL of the target system.</li>
 <li>There is no <code>scope</code> property, but instead <code>scp</code> to describe the requested scopes.</li>
 </ul>
+<h2 id="client-ids">Client Ids</h2>
+<p>When configuring an external IdP using OIDC or OIDC-idpcat you need to provide a clientId. We recommend to use <code>Domino</code>, but the admins of your IdP might have other ideas.
+In any case, that's the clientId for the REST server, it is <em>NOT</em> the one for the AdminUI or the Office forms based authentication (OFBA) for attachment editing. To be fully operational you need to configure at least three clients on your IdP:</p>
+<ul>
+<li><code>Domino</code> for the server (client secret might be handeled by <code>idpcat.nsf</code>)</li>
+<li><code>keepadminui</code> for the Domino REST API admin client</li>
+<li><code>keepofba</code> for the Office document round trip experience</li>
+<li>One each for your custom client applications (with clientSecret for servers or PKSE for clients)</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Use the internal IdP as learing resource</p>
+<p>The application configuration provided by the internal IdP makes it easy to configure and retrive client specific JWT, that have
+all required fields. Test your application with that and use the defined proprties, scopes foremost, to requests the external
+IdP client configurations</p>
+</div>
 <h2 id="configuration-in-azure">Configuration in Azure</h2>
 <h3 id="register-an-application">Register an application</h3>
 <ol>
-<li>
-<p>Navigate to the <a href="https://portal.azure.com" target="_blank">Azure Portal</a> to login, and then select <strong>App registrations</strong>.</p>
-<p><img alt="Azure landing page" src="../../assets/images/configuringAD-01.png" /></p>
-</li>
-<li>
-<p>Select <strong>New registration</strong>.</p>
-<p><img alt="Azure app registration" src="../../assets/images/configuringAD-02.png" /></p>
-</li>
-<li>
-<p>Enter a <strong>Name</strong>, select a supported account type (in most cases <strong>Single tenant</strong> will do), enter local redirect URL (so you can develop your app), and then click <strong>Register</strong>.</p>
-<p><img alt="Azure app registration" src="../../assets/images/configuringAD-03.png" style="height:90%;width:90%" /></p>
-</li>
+<li>Navigate to the <a href="https://portal.azure.com" target="_blank">Azure Portal</a> to login, and then select <strong>App registrations</strong>.</li>
 </ol>
+<p><img alt="Azure landing page" src="../../assets/images/configuringAD-01.png" /></p>
+<ol>
+<li>Select <strong>New registration</strong>.</li>
+</ol>
+<p><img alt="Azure app registration" src="../../assets/images/configuringAD-02.png" /></p>
+<ol>
+<li>Enter a <strong>Name</strong>, select a supported account type (in most cases <strong>Single tenant</strong> will do), enter local redirect URL (so you can develop your app), and then click <strong>Register</strong>.</li>
+</ol>
+<p><img alt="Azure app registration" src="../../assets/images/configuringAD-03.png" style="height:90%;width:90%" /></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>If you aren't sure about the redirect URL, use <code>http://localhost:8080/redirect</code>. You can change this later on in <strong>Authentication</strong> in the application page.</p>
 </div>
+<p>If you aren't sure about the redirect URL, use <code>http://localhost:8080/redirect</code>. You can change this later on in <strong>Authentication</strong> in the application page.</p>
 <h3 id="add-credentials">Add credentials</h3>
 <p>The next step is to add the client credentials. Your application will need the <strong>Application (client) ID</strong> and <strong>Client credentials</strong>.</p>
 <p><img alt="Azure app registration" src="../../assets/images/configuringAD-04.png" style="height:90%;width:90%" /></p>
 <ol>
-<li>
-<p>Select <strong>Certificates &amp; secrets</strong> &rarr; <strong>Client secrets</strong> &rarr; <strong>New client secret</strong>.</p>
-<p><img alt="Azure app registration" src="../../assets/images/configuringAD-05.png" style="height:90%;width:90%" /></p>
-</li>
-<li>
-<p>Add a description, select an expiration for your client secret, and then click <strong>Add</strong>.</p>
-<p><img alt="Azure app registration" src="../../assets/images/configuringAD-06.png" style="height:90%;width:90%" /></p>
-</li>
-<li>
-<p>Copy the secret's value for use in your client application code.</p>
-<p><img alt="Azure app registration" src="../../assets/images/configuringAD-07.png" style="height:90%;width:90%" /></p>
-</li>
+<li>Select <strong>Certificates &amp; secrets</strong> &rarr; <strong>Client secrets</strong> &rarr; <strong>New client secret</strong>.</li>
 </ol>
+<p><img alt="Azure app registration" src="../../assets/images/configuringAD-05.png" style="height:90%;width:90%" /></p>
+<ol>
+<li>Add a description, select an expiration for your client secret, and then click <strong>Add</strong>.</li>
+</ol>
+<p><img alt="Azure app registration" src="../../assets/images/configuringAD-06.png" style="height:90%;width:90%" /></p>
+<ol>
+<li>Copy the secret's value for use in your client application code.</li>
+</ol>
+<p><img alt="Azure app registration" src="../../assets/images/configuringAD-07.png" style="height:90%;width:90%" /></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The secret value is only shown once and never displayed again after you leave this page.</p>
 </div>
+<p>The secret value is only shown once and never displayed again after you leave this page.</p>
 <h3 id="api-definition">API definition</h3>
 <ol>
 <li>Select <strong>Expose an API</strong>.</li>
-<li>
-<p>Select <strong>Add</strong> next to the <strong>Application ID URI</strong>. The URI must start with <code>api://</code>. You can overwrite the UUID with some clear text name.</p>
+<li>Select <strong>Add</strong> next to the <strong>Application ID URI</strong>. The URI must start with <code>api://</code>. You can overwrite the UUID with some clear text name.</li>
+</ol>
 <p><img alt="Azure app registration" src="../../assets/images/configuringAD-08.png" style="height:90%;width:90%" /></p>
-</li>
-<li>
-<p>Select <strong>Add a scope</strong>.</p>
-</li>
-<li>
-<p>Specify the scope's attributes in the <strong>Add a scope</strong> pane.</p>
+<ol>
+<li>Select <strong>Add a scope</strong>.</li>
+<li>Specify the scope's attributes in the <strong>Add a scope</strong> pane.</li>
+</ol>
 <p>Ensure admins and users can consent and that the scope is set to <strong>Enabled</strong>. For more information about scopes in Domino REST API, see <a href="../../references/usingdominorestapi/scopes.html">scopes reference</a> and <a href="../../topicguides/understanding.html#databases-schemas-and-scopes">scope topic guide</a>.</p>
 <p><img alt="Azure app registration" src="../../assets/images/configuringAD-09.png" style="height:70%;width:70%" /></p>
-</li>
-<li>
-<p>Click <strong>Add scope</strong>.</p>
-</li>
+<ol>
+<li>Click <strong>Add scope</strong>.</li>
 <li>Repeat the steps for adding a scope for each scope that your need to add.</li>
 </ol>
 <p><img alt="Azure app registration" src="../../assets/images/configuringAD-10.png" style="height:90%;width:90%" /></p>
 <h3 id="configure-api-permissions">Configure API permissions</h3>
 <ol>
 <li>Select <strong>API permissions</strong>. The <strong>API permissions</strong> screen, which has <code>User.Read</code> preconfigured, opens.</li>
-<li>
-<p>Click <strong>Add a permission</strong>.</p>
-<p><img alt="Azure app registration" src="../../assets/images/configuringAD-11.png" style="height:90%;width:90%" /></p>
-</li>
-<li>
-<p>Select <strong>APIs my organization uses</strong>.</p>
-</li>
-<li>
-<p>Start typing the name of your application, and then select it.</p>
-<p><img alt="Azure app registration" src="../../assets/images/configuringAD-12.png" style="height:90%;width:90%" /></p>
-</li>
-<li>
-<p>Under <strong>Select permissions</strong>, select the scopes you have created earlier and the click <strong>Add permissions</strong>.</p>
-<p><img alt="Azure app registration" src="../../assets/images/configuringAD-13.png" style="height:90%;width:90%" /></p>
-</li>
+<li>Click <strong>Add a permission</strong>.</li>
 </ol>
+<p><img alt="Azure app registration" src="../../assets/images/configuringAD-11.png" style="height:90%;width:90%" /></p>
+<ol>
+<li>Select <strong>APIs my organization uses</strong>.</li>
+<li>Start typing the name of your application, and then select it.</li>
+</ol>
+<p><img alt="Azure app registration" src="../../assets/images/configuringAD-12.png" style="height:90%;width:90%" /></p>
+<ol>
+<li>Under <strong>Select permissions</strong>, select the scopes you have created earlier and the click <strong>Add permissions</strong>.</li>
+</ol>
+<p><img alt="Azure app registration" src="../../assets/images/configuringAD-13.png" style="height:90%;width:90%" /></p>
 <p>After adding permissions, you should see the selected permissions under <strong>Configured permissions</strong>.</p>
 <p><img alt="Azure app registration" src="../../assets/images/configuringAD-14.png" style="height:90%;width:90%" /></p>
 <h3 id="update-the-application-owners">Update the application owners</h3>
 <ol>
-<li>
-<p>Under <strong>Manage</strong>, select <strong>Owners</strong> and then select <strong>Add owners</strong>.</p>
+<li>Under <strong>Manage</strong>, select <strong>Owners</strong> and then select <strong>Add owners</strong>.</li>
+</ol>
 <p><img alt="Azure app registration" src="../../assets/images/configuringAD-15.png" style="width:90%" /></p>
-</li>
-<li>
-<p>Search for and select the user account that you want to be an owner of the application, and then click <strong>Select</strong>.</p>
-</li>
+<ol>
+<li>Search for and select the user account that you want to be an owner of the application, and then click <strong>Select</strong>.</li>
 </ol>
 <h3 id="adjust-authentication">Adjust authentication</h3>
 <p>In <strong>Authentication</strong>, make sure you have localhost for local development and https-based URLs for your test, staging, and/or production systems specified. Select only <strong>Access token</strong> and make sure redirect ends with <code>/</code>.</p>
@@ -6894,15 +6956,13 @@
 <p><img alt="Azure app registration" src="../../assets/images/configuringAD-17.png" style="height:80%;width:80%" /></p>
 <h3 id="urls-to-note">URLs to note</h3>
 <ol>
-<li>
-<p>From the app's <strong>Overview</strong> page, select <strong>Endpoints</strong>.</p>
-<p><img alt="Azure app registration" src="../../assets/images/configuringAD-18.png" style="height:90%;width:90%" /></p>
-</li>
-<li>
-<p>Take note of the following URLs.</p>
-<p><img alt="Azure app registration" src="../../assets/images/configuringAD-19.png" style="height:90%;width:90%" /></p>
-</li>
+<li>From the app's <strong>Overview</strong> page, select <strong>Endpoints</strong>.</li>
 </ol>
+<p><img alt="Azure app registration" src="../../assets/images/configuringAD-18.png" style="height:90%;width:90%" /></p>
+<ol>
+<li>Take note of the following URLs.</li>
+</ol>
+<p><img alt="Azure app registration" src="../../assets/images/configuringAD-19.png" style="height:90%;width:90%" /></p>
 <p>All URLs are retrievable by accessing the <em>OpenID Connect</em> metadata document, colloquially referred to as <code>.well-known</code>. These are the ones involved:</p>
 <ul>
 <li>OpenID Connect metadata document</li>
@@ -6911,12 +6971,12 @@
 </ul>
 <h2 id="configuration-in-domino-rest-api">Configuration in Domino REST API</h2>
 <ol>
-<li>
-<p>Create a <a href="https://www.json.org/json-en.html">json</a> file in the directory <code>[notesdata]/keepconfig.d</code>.</p>
+<li>Create a <a href="https://www.json.org/json-en.html">json</a> file in the directory <code>[notesdata]/keepconfig.d</code>.</li>
+</ol>
 <p>You can choose the filename as long as you limit yourself to numbers and ASCII letters (<code>[0-9a-zA-Z]+</code>). We suggest <code>AzureAD01.json</code>, the same value you use in the json data below.</p>
-</li>
-<li>
-<p>Add the following content to the json file.</p>
+<ol>
+<li>Add the following content to the json file.</li>
+</ol>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;jwt&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;AzureAD01&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -6940,13 +7000,13 @@
 <li>
 <p>The <code>iss</code> parameter might be different from what the <code>openid-configuration</code> reports. So compare the values. We've seen the URL changed from <code>https://login.microsoftonline.com/[your-tennantid-here]/v2.0</code> to <code>https://sts.windows.net/[your-tennantid-here]/</code>, if that's so you need to specify it here.</p>
 </li>
-<li>Currently, Azure AD doesn't return the <code>alg</code> claim in the <code>jwks_uri</code>, you have to specify it here.</li>
-</ul>
+<li>
+<p>Currently, Azure AD doesn't return the <code>alg</code> claim in the <code>jwks_uri</code>, you have to specify it here.</p>
 </li>
 <li>
 <p>Restart Domino REST API.</p>
 </li>
-</ol>
+</ul>
 <div class="admonition danger">
 <p class="admonition-title">Azure AD / Entra ID is a moving target</p>
 <p>Depending on your configuration you will need to adjust the <code>aud</code> and <code>iss</code> values in the configuration file.
@@ -7004,6 +7064,15 @@ So to get <code>scp : "$DATA MAIL demo"</code> in the JWT, you must specify <cod
 <li>Compare the <code>aud</code> value from the JWT token with the <code>aud</code> value of the configuration file. Adjust the configuration file if different.</li>
 <li>Check the <code>scp</code>, which is Microsoft's "alternative" to <code>scope</code>, and make sure it has the expected values matching the settings in the application configuration in the Admin UI. Adjust the scope in the DRAPI application (AdminUI) or your AzureAD IdP settings.</li>
 </ul>
+<h2 id="rinse-and-repeat">RInse and repeat</h2>
+<ul>
+<li>
+<p><a href="roundtripidp.html">Set up External IdP for Office Round Trip Experience</a></p>
+</li>
+<li>
+<p><a href="adminuiidp.html">Set up External IdP for Admin UI login</a></p>
+</li>
+</ul>
 <h2 id="lets-connect">Let's connect</h2>
 <!-- prettier-ignore -->
 <div class="admonition danger">
@@ -7037,7 +7106,7 @@ So to get <code>scp : "$DATA MAIL demo"</code> in the JWT, you must specify <cod
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 9, 2025 17:17:00">January 9, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 28, 2025 16:48:14 UTC">May 28, 2025</span>
   </span>
 
     

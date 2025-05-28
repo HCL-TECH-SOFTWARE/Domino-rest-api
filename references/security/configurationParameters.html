@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Configuration <!--parameters-->
+              Configuration
             
           </span>
         </div>
@@ -5744,6 +5744,8 @@
       
         
       
+        
+      
     
     
     
@@ -5854,7 +5856,7 @@
   
   
   <span class="md-ellipsis">
-    Configuration <!--parameters-->
+    Configuration
     
   </span>
   
@@ -5867,7 +5869,7 @@
   
   
   <span class="md-ellipsis">
-    Configuration <!--parameters-->
+    Configuration
     
   </span>
   
@@ -6018,6 +6020,29 @@
   
   <span class="md-ellipsis">
     Securing Domino REST API endpoints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="idpcompare.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comparing IdP Options
     
   </span>
   
@@ -6588,16 +6613,7 @@
   
 
 
-<h1 id="configuration">Configuration <!--parameters--></h1>
-<!-- prettier-ignore -->
-<div class="admonition warning">
-<p class="admonition-title">Caution</p>
-<p>The Domino server task communicates with the REST API through the <code>KeepManagementURL</code>. It has a default value of <code>http://localhost:8889</code>. You can overwrite this setting in the <code>notes.ini</code> by editing, or creating if missing, the entry <code>KeepManagementURL</code> (case sensitive). Having configured a TLS certificate, you need to make sure the entry starts with <code>https://</code> and uses the host name your TLS certificate has been issued for. <code>localhost</code>, <code>127.0.0.1</code> or <code>::1</code> won't work. Configuring TLS doesn't change the port. So when you host, your TLS certificate is issued for, is <code>domino.demo.com</code> and your old entry was missing or is the default of <code>http://localhost:8880</code>, then your new value needs to be: <code>https://domino.demo.com:8889</code>. </p>
-</div>
-<!--For more information, see [Domino REST API task](../../references/usingdominorestapi/restapitask.md) and [ports](../../howto/production/prodports.md).-->
-
-<!--## Configuration-->
-
+<h1 id="configuration">Configuration</h1>
 <p>Domino REST API comes with reasonable default configuration settings. They allow you to start evaluating and testing out-of-the-box. For an actual deployment, you want to understand the details as outlined here.</p>
 <h2 id="understanding-configuration">Understanding configuration</h2>
 <p>The configuration follows the concept of an Overlay File System, where the base configuration is retrieved from the jar file and then overlaid with all the JSON files (if present) in the <code>keepconfig.d</code> directory within the Notes data directory and finally, the environment parameters, if any of those exist. Check <a href="../understandingconfig.html">the details here</a>.</p>
@@ -6669,7 +6685,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 14, 2024 14:45:55">February 14, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 28, 2025 16:22:56 UTC">May 28, 2025</span>
   </span>
 
     

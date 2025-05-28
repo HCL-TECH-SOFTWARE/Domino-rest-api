@@ -5866,6 +5866,8 @@
       
         
       
+        
+      
     
     
     
@@ -5967,7 +5969,7 @@
   
   
   <span class="md-ellipsis">
-    Configuration <!--parameters-->
+    Configuration
     
   </span>
   
@@ -6060,6 +6062,29 @@
   
   <span class="md-ellipsis">
     Securing Domino REST API endpoints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/security/idpcompare.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comparing IdP Options
     
   </span>
   
@@ -6677,8 +6702,8 @@
 Sharing configuration works not only for tightly coupled systems, but also for servers that ate just on the same org or even across Domain boundaries (as long as trust and replication are setup correctly and working).</p>
 <div class="admonition warning">
 <p class="admonition-title">Not everything is shared</p>
-<p>Settings in <code>KeepConfig.nsf</code>, mostly scopes and oauth applications replicate. Configuration settings in <code>keepconfig.d</code> and <code>keepweb.d</code> are per server. When you want to share those, you need to manually copy them over.</p>
 </div>
+<p>Settings in <code>KeepConfig.nsf</code>, mostly scopes and oauth applications replicate. Configuration settings in <code>keepconfig.d</code> and <code>keepweb.d</code> are per server. When you want to share those, you need to manually copy them over.</p>
 <div class="admonition info">
 <p class="admonition-title">We are working on improving the config sharing.</p>
 </div>
@@ -6723,12 +6748,13 @@ Sharing configuration works not only for tightly coupled systems, but also for s
 <h3 id="shared-jwt-keys-to-login-to-drapi">Shared JWT Keys to login to DRAPI</h3>
 <p>When using DRAPI as your JWT provider, as opposed to an external identity provider like Keycloak, it can be useful to share the JWT issuing certificates across servers. The best way to do that is to store them in the Domino Certificate Manager. To do that, create a file <code>keepconfig.d\DominoCertMgr.json</code> with the following content:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;JWTCertStore&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="nt">&quot;JWTCertStore&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;JWTCertStoreName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MyCertForKeep&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>If you already have a certificate chain in certstore.nsf, set the <code>KeepCertStoreNameJWT</code> notes.ini parameter on each server to the subject host name of the certificate.</p>
-<p>Alternatively, to generate the certificate chain using DRAPI, use the Management Console to <a href="../../references/security/encryption.html#using-the-management-console-for-encryption-operations">generate the Keys for JWT</a>. As of 2025, you should prefer <a href="https://en.wikipedia.org/wiki/Elliptic-curve_cryptography">EC</a> certificates. This will create certificates in the certificate store using the common name of the Domino server and configure the local server to use it.</p>
-<p>To enable access to this certificate for other servers, open the <a href="https://help.hcl-software.com/domino/14.0.0/admin/secu_le_using_certificate_manager.html">certificate store database</a> and find the newly created certificate document. In that document, modify the <strong>Servers with access</strong><strong> field to include the other Domino servers that will access it, and click </strong>Submit Request**. This causes the Certificate Manager to encrypt the certificate in a way compatible with each named server.</p>
+<p><code>MyCertForKeep</code> needs to match an existing certificate chain in certstore.nsf.</p>
+<p>You can generate the certificate chain using DRAPI, use the Management Console to <a href="../../references/security/encryption.html#using-the-management-console-for-encryption-operations">generate the Keys for JWT</a>. As of 2025, you should prefer <a href="https://en.wikipedia.org/wiki/Elliptic-curve_cryptography">EC</a> certificates. This will create certificates in the certificate store using the common name of the Domino server and configure the local server to use it.</p>
+<p>To enable access to this certificate for other servers, open the <a href="https://help.hcl-software.com/domino/14.0.0/admin/secu_le_using_certificate_manager.html">certificate store database</a> and find the newly created certificate document. In that document, modify the <strong>Servers with access**</strong> field to include the other Domino servers that will access it, and click <strong>Submit Request</strong>. This causes the Certificate Manager to encrypt the certificate in a way compatible with each named server.</p>
 <p>Then, set the <code>KeepCertStoreNameJWT</code> notes.ini parameter on each server to the common name of the first server, for example <code>MyServer</code>.</p>
 <p>Alternately, to share certificates without the certificate store, follow <a href="../../references/security/encryption.html#example-of-how-to-create-and-set-up-domino-rest-api-on-multiple-domino-servers-to-use-the-same-jwt-keys">the example</a> and copy the 4 files across servers.</p>
 <h2 id="limit-admin-access">Limit admin access</h2>
@@ -6800,7 +6826,7 @@ Sharing configuration works not only for tightly coupled systems, but also for s
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 24, 2025 13:53:27">February 24, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 28, 2025 16:22:56 UTC">May 28, 2025</span>
   </span>
 
     

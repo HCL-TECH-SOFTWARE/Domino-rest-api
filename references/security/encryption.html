@@ -5744,6 +5744,8 @@
       
         
       
+        
+      
     
     
     
@@ -5845,7 +5847,7 @@
   
   
   <span class="md-ellipsis">
-    Configuration <!--parameters-->
+    Configuration
     
   </span>
   
@@ -6051,6 +6053,29 @@
   
   <span class="md-ellipsis">
     Securing Domino REST API endpoints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="idpcompare.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comparing IdP Options
     
   </span>
   
@@ -6655,13 +6680,6 @@
 
 
 <h1 id="encryption-keys">Encryption Keys</h1>
-<!-- prettier-ignore -->
-<div class="admonition warning">
-<p class="admonition-title">Caution</p>
-<p>The Domino server task communicates with the REST API through the <code>KeepManagementURL</code>. It has a default value of <code>http://localhost:8889</code>. You can overwrite this setting in the <code>notes.ini</code> by editing, or creating if missing, the entry <code>KeepManagementURL</code> (case sensitive). Having configured a TLS certificate, you need to make sure the entry starts with <code>https://</code> and uses the host name your TLS certificate has been issued for. <code>localhost</code>, <code>127.0.0.1</code> or <code>::1</code> won't work. Configuring TLS doesn't change the port. So when you host, your TLS certificate is issued for, is <code>domino.demo.com</code> and your old entry was missing or is the default of <code>http://localhost:8880</code>, then your new value needs to be: <code>https://domino.demo.com:8889</code>. </p>
-</div>
-<!--For more information, see [Domino REST API task](../../references/usingdominorestapi/restapitask.md) and [ports](../../howto/production/prodports.md).-->
-
 <p>There are three areas in Domino REST API where encryption keys are needed:</p>
 <ul>
 <li>HTTPS certificates for Domino REST API ports</li>
@@ -6732,21 +6750,23 @@ Then enter the <code>Shutdown key</code> (masked input) and click on `Create IdP
 <li>Log in to the Management console (Port 8889).</li>
 <li>
 <p>Type a name you want to call this certificate into the <strong>Certificate Name</strong>. There should be no spaces or special characters.</p>
-<ul>
-<li>for example: MultiDomain</li>
-</ul>
+</li>
+<li>
+<p>for example: MultiDomain</p>
 </li>
 <li>
 <p>Click <strong>Create IdP Certificate</strong>.</p>
 </li>
 <li>
 <p>Domino REST API generates 4 files in this server's <code>[notesdata]/keepconfig.d</code> directory:</p>
-<ul>
-<li>MultiDomain.cert.pem</li>
+</li>
+<li>
+<p>MultiDomain.cert.pem</p>
+</li>
 <li>MultiDomain.json</li>
 <li>MultiDomain.private.key.pem</li>
-<li>MultiDomain.public.key.pem</li>
-</ul>
+<li>
+<p>MultiDomain.public.key.pem</p>
 </li>
 <li>
 <p>Copy these 4 files to your other Domino servers into the <code>[notesdata]/keepconfig.d</code> directory.</p>
@@ -6773,7 +6793,7 @@ Then enter the <code>Shutdown key</code> (masked input) and click on `Create IdP
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 4, 2024 09:22:57">July 4, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 28, 2025 16:22:56 UTC">May 28, 2025</span>
   </span>
 
     

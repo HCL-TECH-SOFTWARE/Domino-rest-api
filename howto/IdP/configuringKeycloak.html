@@ -2692,6 +2692,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#client-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client Ids
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#about-this-task" class="md-nav__link">
     <span class="md-ellipsis">
       About this task
@@ -5881,6 +5890,8 @@
       
         
       
+        
+      
     
     
     
@@ -5982,7 +5993,7 @@
   
   
   <span class="md-ellipsis">
-    Configuration <!--parameters-->
+    Configuration
     
   </span>
   
@@ -6075,6 +6086,29 @@
   
   <span class="md-ellipsis">
     Securing Domino REST API endpoints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/security/idpcompare.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comparing IdP Options
     
   </span>
   
@@ -6591,6 +6625,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#client-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client Ids
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#about-this-task" class="md-nav__link">
     <span class="md-ellipsis">
       About this task
@@ -6705,6 +6748,21 @@
 <h1 id="configure-keycloak">Configure Keycloak</h1>
 <p><a href="https://www.keycloak.org/">Keycloak</a> is an Open Source Identity and Access Management solution sponsored by <a href="https://www.redhat.com/en">RedHat</a>.</p>
 <p>Keycloak can be used to produce JWT Access Token for Domino REST API. Keycloak has many features like default configuration, user federation, identity brokering and social login. Those are topics not covered here. Consult the <a href="https://duckduckgo.com/?q=keycloak+tutorial&amp;ia=web">Keycloak Tutorial</a> or the <a href="https://www.keycloak.org/documentation">Keycloak documentation</a> to learn more. This page focuses on the settings required for Domino REST API.</p>
+<h2 id="client-ids">Client Ids</h2>
+<p>When configuring an external IdP using OIDC or OIDC-idpcat you need to provide a clientId. We recommend to use <code>Domino</code>, but the admins of your IdP might have other ideas.
+In any case, that's the clientId for the REST server, it is <em>NOT</em> the one for the AdminUI or the Office forms based authentication (OFBA) for attachment editing. To be fully operational you need to configure at least three clients on your IdP:</p>
+<ul>
+<li><code>Domino</code> for the server (client secret might be handeled by <code>idpcat.nsf</code>)</li>
+<li><code>keepadminui</code> for the Domino REST API admin client</li>
+<li><code>keepofba</code> for the Office document round trip experience</li>
+<li>One each for your custom client applications (with clientSecret for servers or PKSE for clients)</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Use the internal IdP as learing resource</p>
+<p>The application configuration provided by the internal IdP makes it easy to configure and retrive client specific JWT, that have
+all required fields. Test your application with that and use the defined proprties, scopes foremost, to requests the external
+IdP client configurations</p>
+</div>
 <h2 id="about-this-task">About this task</h2>
 <p>This section describes key concepts and provides the steps required to configure Keycloak successfully for Domino REST API.</p>
 <h2 id="keycloak-concepts">Keycloak concepts</h2>
@@ -6722,8 +6780,8 @@
 <p>Note: The screenshots were captured using the Keycloak version 25.0.</p>
 <ol>
 <li>Login to Keycloak.</li>
-<li>
-<p>Click the <strong>Keycloak</strong> dropdown menu at the top left corner, then click <strong>Create Realm</strong>.</p>
+<li>Click the <strong>Keycloak</strong> dropdown menu at the top left corner, then click <strong>Create Realm</strong>.</li>
+</ol>
 <p><img alt="Create realm" src="../../assets/images/keyrealm.png" /></p>
 <ol>
 <li>
@@ -6731,13 +6789,11 @@
 </li>
 <li>
 <p>Click <strong>Create</strong>.</p>
-</li>
-</ol>
 <p><img alt="Click Create" src="../../assets/images/keyrealmname.png" /></p>
 </li>
 <li>
 <p>Click <strong>Realm settings</strong>.</p>
-<ol>
+</li>
 <li>
 <p>Fill in the fields applicable to your project. Mandatory fields are those fields with red asterisk (<span style="color: red;">*</span>).</p>
 <p><strong>Display name</strong>: <code>Humanoid Robots</code>.</p>
@@ -6775,11 +6831,9 @@
 </ol>
 <p><img alt="Attribute general settings" src="../../assets/images/keyattr.png" /></p>
 </li>
-</ol>
-</li>
 <li>
 <p>Click <strong>Users</strong>.</p>
-<ol>
+</li>
 <li>
 <p>Click <strong>Create new user</strong>, if there are no existing users. Otherwise, click <strong>Add user</strong>, if there are existing users.</p>
 <p><img alt="Create users screen" src="../../assets/images/keyusers.png" /></p>
@@ -6803,7 +6857,7 @@
 <ol>
 <li>
 <p>Click <strong>Set password</strong>.</p>
-<p><img alt="User Credential" src="../../assets/images/keycredential.png" />   </p>
+<p><img alt="User Credential" src="../../assets/images/keycredential.png" /></p>
 </li>
 <li>
 <p>Fill in the <strong>Password</strong> and <strong>New password confirmation</strong> with same phrases.</p>
@@ -6815,10 +6869,10 @@
 </li>
 </ol>
 </li>
-</ol>
-</li>
 <li>
 <p>Click <strong>Client scopes</strong>.</p>
+</li>
+</ol>
 <p>Each Domino REST API scope in Domino, that you want to make accessible in Keycloak, will need a client scope in Keycloak. This includes all named scopes (the lowercase ones), and the <a href="../../references/usingdominorestapi/scopes.html">special scopes</a> like <code>$DATA</code> or <code>MAIL</code>.</p>
 <p>Click <strong>Create client scope</strong>. Creating a client scope doesn't automatically expose it, for that, assign it to one or more clients. In this example, create a client scope named <code>demo</code>.</p>
 <p><img alt="Keycloak create scope" src="../../assets/images/keynewscope1.png" /></p>
@@ -6828,7 +6882,7 @@
 <li>Set <strong>Display on consent screen</strong> toggle to <code>On</code> position.</li>
 <li>Set <strong>Include in token scope</strong> toggle to <code>On</code> position.</li>
 <li>
-<p>Click <strong>Save</strong>.                  </p>
+<p>Click <strong>Save</strong>.</p>
 <p><img alt="saving client scope screen" src="../../assets/images/keyscopename1.png" /></p>
 </li>
 </ol>
@@ -6844,10 +6898,10 @@
 <p>Click <strong>Save</strong>.</p>
 <p><img alt="saving new client scope screen" src="../../assets/images/keyscopename2.png" /></p>
 </li>
-</ol>
-</li>
 <li>
 <p>Click <strong>Clients</strong>, and then click <strong>Create client</strong>.</p>
+</li>
+</ol>
 <p><img alt="create client screen" src="../../assets/images/keycreateclient.png" /></p>
 <ol>
 <li>
@@ -6866,11 +6920,9 @@
 <p>On <strong>Login Settings</strong> section, click <strong>Save</strong>.</p>
 <p><img alt="login settings and save screen" src="../../assets/images/keyURI.png" /></p>
 </li>
-</ol>
-</li>
 <li>
 <p>On the saved client's ID, for example <strong>thespian</strong>, click <strong>Clients scopes</strong> tab.</p>
-<ol>
+</li>
 <li>
 <p>Click the <strong>thespian-dedicated</strong>. This is the client's dedicated scope once the client is created. It is used to hold mappers that are independent from scopes, like user attributes.</p>
 <p><img alt="Add client scope screen" src="../../assets/images/keydedicated.png" /></p>
@@ -6915,14 +6967,14 @@
 <p>Click <strong>Save</strong>.</p>
 <p><img alt="Mapper-3" src="../../assets/images/keymapper3.png" /></p>
 </li>
-</ol>
-</li>
 <li>
 <p>Click the <strong>Client details</strong>.</p>
+</li>
+</ol>
 <p><img alt="Client details" src="../../assets/images/keycdetails.png" /></p>
 <ol>
 <li>
-<p>Set <strong>Assign Type</strong> of all scopes to  <strong>Optional</strong>, except your <code>email</code> scope.</p>
+<p>Set <strong>Assign Type</strong> of all scopes to <strong>Optional</strong>, except your <code>email</code> scope.</p>
 </li>
 <li>
 <p>Click the <strong>Add client scope</strong>.</p>
@@ -6941,15 +6993,13 @@
 <p><img alt="generate access token screen" src="../../assets/images/keyevaluate.png" /></p>
 </li>
 </ol>
-</li>
-</ol>
 <h2 id="spa-applications">SPA applications</h2>
 <p>An SPA (Single Page App) or a mobile client can't keep a client secret. For those, the use of Proof Key for Code Exchange (PKCE) (defined in <a href="https://tools.ietf.org/html/rfc7636">RFC 7636</a>) is recommended (read <a href="https://auth0.com/docs/flows/authorization-code-flow-with-proof-key-for-code-exchange-pkce">this intro</a> for details). The only difference in Keycloak is to toggle <code>off</code> the <strong>Client Authentication</strong>.</p>
 <p><img alt="Spa app screen" src="../../assets/images/keypkce.png" /></p>
 <div class="admonition warning">
 <p class="admonition-title">Important</p>
-<p>It's <strong>SECURITY</strong>, so learn about <a href="https://www.keycloak.org/guides#getting-started/">Keycloak</a>!</p>
 </div>
+<p>It's <strong>SECURITY</strong>, so learn about <a href="https://www.keycloak.org/guides#getting-started/">Keycloak</a>!</p>
 <h2 id="configure-the-domino-rest-api">Configure the Domino REST API</h2>
 <p>You can find the full explanation <a href="configuringIdentityProvider.html">here</a>. For the short version:</p>
 <ul>
@@ -7064,7 +7114,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 11, 2024 16:26:11">December 11, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 28, 2025 16:34:52 UTC">May 28, 2025</span>
   </span>
 
     

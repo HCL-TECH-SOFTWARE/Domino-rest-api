@@ -5824,6 +5824,8 @@
       
         
       
+        
+      
     
     
     
@@ -5925,7 +5927,7 @@
   
   
   <span class="md-ellipsis">
-    Configuration <!--parameters-->
+    Configuration
     
   </span>
   
@@ -6018,6 +6020,29 @@
   
   <span class="md-ellipsis">
     Securing Domino REST API endpoints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/security/idpcompare.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comparing IdP Options
     
   </span>
   
@@ -6589,13 +6614,6 @@
 
 
 <h1 id="configure-domino-rest-api-idp-with-volt-mx-foundry-identity-service">Configure Domino REST API IdP with Volt MX Foundry Identity Service</h1>
-<!-- prettier-ignore -->
-<div class="admonition warning">
-<p class="admonition-title">Caution</p>
-<p>The Domino server task communicates with the REST API through the <code>KeepManagementURL</code>. It has a default value of <code>http://localhost:8889</code>. You can overwrite this setting in the <code>notes.ini</code> by editing, or creating if missing, the entry <code>KeepManagementURL</code> (case sensitive). Having configured a TLS certificate, you need to make sure the entry starts with <code>https://</code> and uses the host name your TLS certificate has been issued for. <code>localhost</code>, <code>127.0.0.1</code> or <code>::1</code> won't work. Configuring TLS doesn't change the port. So when you host, your TLS certificate is issued for, is <code>domino.demo.com</code> and your old entry was missing or is the default of <code>http://localhost:8880</code>, then your new value needs to be: <code>https://domino.demo.com:8889</code>. </p>
-</div>
-<!--For more information, see [Domino REST API task](../../references/usingdominorestapi/restapitask.md) and [ports](../../howto/production/prodports.md).-->
-
 <h2 id="about-this-task">About this task</h2>
 <p>Domino REST API implements what essentially amounts to an OAuth2 Provider DominoIDP and Volt MX Foundry implements an Integration Service adapter for OAuth2 providers. The following is a guide for creating a Foundry Identity Service using Domino REST API's OAuth provider.</p>
 <h2 id="before-you-begin">Before you begin</h2>
@@ -6605,25 +6623,27 @@
 <ol>
 <li>
 <p>Create a new Identity Service in the Foundry browser console by filling in the fields:</p>
-<ul>
-<li><strong>Type of identity</strong> = OAuth 2.0</li>
+</li>
+<li>
+<p><strong>Type of identity</strong> = OAuth 2.0</p>
+</li>
 <li><strong>Grant Type</strong> = Authorization Code</li>
 <li><strong>Authorize Endpoint</strong> = <code>[your Domino REST API API server]/oauth/authorization</code></li>
 <li><strong>Token Endpoint</strong> = <code>[your Domino REST API API server]/oauth/token</code></li>
 <li><strong>IMPORTANT</strong> - make sure to select <strong>Form Param</strong> under <strong>Advanced</strong>. <!--{: .alert .alert-danger}--></li>
 <li>Take note of the <strong>Callback URL</strong>.</li>
-</ul>
+</ol>
 <p>Pause here for a moment (don't save yet), and complete the steps for <a href="#set-up-domino-rest-api-application-and-database">setting up Domino REST API application and database</a>.</p>
 <ul>
 <li><strong>Scope</strong> = database <code>name</code> (API Name) for the database added in the next step; if more than one database, you should be able to enter a list of database names; check Domino REST API documentation to see how the names are delimited (perhaps a comma or space, but to Domino REST API it simple, just enter one db name if uncertain about how to specify multiple).</li>
 <li><strong>Client ID</strong> = <code>App id</code> from the application created in the next section below.</li>
-<li><strong>Client Secret</strong> = Obtained when you first create the application (next section).</li>
-</ul>
+<li>
+<p><strong>Client Secret</strong> = Obtained when you first create the application (next section).</p>
 </li>
 <li>
 <p>Now you can <strong>Save</strong>.</p>
 </li>
-</ol>
+</ul>
 <p><img alt="voltmx identityprovider keepidplite" src="../../assets/images/voltmx-identityprovider-keepidplite.png" /></p>
 <h2 id="set-up-domino-rest-api-application-and-database">Set up Domino REST API application and database</h2>
 <p>From the Domino REST API Admin browser client:</p>
@@ -6633,8 +6653,8 @@
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>When you create the application, you'll need the callback URL <a href="#create-foundry-identity-service">defined earlier</a>.</p>
 </div>
+<p>When you create the application, you'll need the callback URL <a href="#create-foundry-identity-service">defined earlier</a>.</p>
 <p><img alt="Domino REST API create application" src="../../assets/images/keep-create-application.png" style="height:80%;width:80%" /></p>
 <p>The App ID (Client ID) is available any time you view a created application. The secret is shown only when the secret is created the first time. If you forget the secret, generate a new one by clicking the circular arrow as indicated in the following image:</p>
 <p><img alt="Domino REST API application id and secret" src="../../assets/images/keep-application-id-and-secret.png" /></p>
@@ -6658,7 +6678,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 11, 2024 16:26:11">December 11, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 28, 2025 16:22:56 UTC">May 28, 2025</span>
   </span>
 
     

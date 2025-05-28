@@ -2669,6 +2669,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#client-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client Ids
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#about-this-task" class="md-nav__link">
     <span class="md-ellipsis">
       About this task
@@ -5833,6 +5842,8 @@
       
         
       
+        
+      
     
     
     
@@ -5934,7 +5945,7 @@
   
   
   <span class="md-ellipsis">
-    Configuration <!--parameters-->
+    Configuration
     
   </span>
   
@@ -6027,6 +6038,29 @@
   
   <span class="md-ellipsis">
     Securing Domino REST API endpoints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/security/idpcompare.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comparing IdP Options
     
   </span>
   
@@ -6543,6 +6577,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#client-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client Ids
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#about-this-task" class="md-nav__link">
     <span class="md-ellipsis">
       About this task
@@ -6607,16 +6650,24 @@
 
 
 <h1 id="configure-an-identity-provider">Configure an identity provider</h1>
-<!-- prettier-ignore -->
-<div class="admonition warning">
-<p class="admonition-title">Caution</p>
-<p>The Domino server task communicates with the REST API through the <code>KeepManagementURL</code>. It has a default value of <code>http://localhost:8889</code>. You can overwrite this setting in the <code>notes.ini</code> by editing, or creating if missing, the entry <code>KeepManagementURL</code> (case sensitive). Having configured a TLS certificate, you need to make sure the entry starts with <code>https://</code> and uses the host name your TLS certificate has been issued for. <code>localhost</code>, <code>127.0.0.1</code> or <code>::1</code> won't work. Configuring TLS doesn't change the port. So when you host, your TLS certificate is issued for, is <code>domino.demo.com</code> and your old entry was missing or is the default of <code>http://localhost:8880</code>, then your new value needs to be: <code>https://domino.demo.com:8889</code>. </p>
-</div>
-<!--For more information, see [Domino REST API task](../../references/usingdominorestapi/restapitask.md) and [ports](../../howto/production/prodports.md).-->
-
-<p>In its default configuration, Domino REST API uses Domino as its identity provider (IdP).
+<p>In its default configuration, Domino REST API uses itself as its identity provider (IdP), so it is client and IdP at the same time.
 This allows you to start evaluating and testing out of the box. To enable this, you need to have an HTTP password configured in Domino and good enough for internal use.</p>
 <p>However, for an actual deployment, you might want to configure your own IdP and authentication flow. The only IdP requirements are use of a supported algorithm for signing and a token with the expected format.</p>
+<h2 id="client-ids">Client Ids</h2>
+<p>When configuring an external IdP using OIDC or OIDC-idpcat you need to provide a clientId. We recommend to use <code>Domino</code>, but the admins of your IdP might have other ideas.
+In any case, that's the clientId for the REST server, it is <em>NOT</em> the one for the AdminUI or the Office forms based authentication (OFBA) for attachment editing. To be fully operational you need to configure at least three clients on your IdP:</p>
+<ul>
+<li><code>Domino</code> for the server (client secret might be handeled by <code>idpcat.nsf</code>)</li>
+<li><code>keepadminui</code> for the Domino REST API admin client</li>
+<li><code>keepofba</code> for the Office document round trip experience</li>
+<li>One each for your custom client applications (with clientSecret for servers or PKSE for clients)</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Use the internal IdP as learing resource</p>
+<p>The application configuration provided by the internal IdP makes it easy to configure and retrive client specific JWT, that have
+all required fields. Test your application with that and use the defined proprties, scopes foremost, to requests the external
+IdP client configurations</p>
+</div>
 <h2 id="about-this-task">About this task</h2>
 <p>The provided information guides you of configuring your own IdP and authentication flow for use in an actual deployment.</p>
 <h2 id="identity-providers">Identity providers</h2>
@@ -6752,7 +6803,7 @@ mF1ZCI6IkRvbWlubyJ9.HJC2MTu8OPT8KnsZnLWqIIc3CoPaEmzQwnygEaRjapk
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 7, 2025 14:56:58">January 7, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 28, 2025 16:34:52 UTC">May 28, 2025</span>
   </span>
 
     
