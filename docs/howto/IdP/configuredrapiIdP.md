@@ -48,16 +48,12 @@ The `oauth.nsf` database exists in your Domino data directory. The Domino IdP us
 
       3. Change the value of the `url` parameter to match your Domino REST API host.
 
-         !!! note
-
-             The indicated `url` value in the JSON object above is just an example value.
+         **The indicated `url` value in the JSON object above is just an example value**.
 
       4. **(Optional)** Adjust the expiration time values as needed.
       5. Save the JSON file in the `keepconfig.d` directory located in your Domino data directory.
 
-         !!! note
-
-             You need to create the `keepconfig.d` directory if not yet existing.
+         You need to create the `keepconfig.d` directory if not yet existing.
 
       6. Restart Domino REST API.
 
