@@ -10,11 +10,11 @@ Here are what we implemented:
 
 - Domino REST API uses the [Eclipse Vert.x Framework](https://vertx.io), which supports many different versions of [SSL certificates](https://vertx.io/docs/vertx-core/java/#ssl) such as:
 
-  - [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail)
+    - [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail)
 
-  - [PKS](https://en.wikipedia.org/wiki/PKCS_12)
+    - [PKS](https://en.wikipedia.org/wiki/PKCS_12)
 
-  - [JKS](https://en.wikipedia.org/wiki/Java_KeyStore)
+    - [JKS](https://en.wikipedia.org/wiki/Java_KeyStore)
 
 - All Domino REST API access is authorized using a signed [JWT](https://jwt.io) claim. [Access control](../accesscontrol.md) settings are completely observed and honored.
 

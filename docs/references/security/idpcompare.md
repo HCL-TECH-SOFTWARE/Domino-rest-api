@@ -17,12 +17,12 @@ You can use the [build-in IdP](./authentication.md) or an [external IdP](./authe
 
 ## External IdP config using `jwt`
 
-![external config using jwt](./DRAPIAuth1.png)
+![external config using jwt](../../assets/images/DRAPIAuth1.png)
 
 ## External IdP config using `oicd`
 
-![external config using oicd](./DRAPIAuth2.png)
+![external config using oicd](../../assets/images/DRAPIAuth2.png)
 
 ## External IdP config using `oicd-idpcat`
 
-![external config using oicd-idpcat](./DRAPIAuth3.png)
+![external config using oicd-idpcat](../../assets/images/DRAPIAuth3.png)
