@@ -134,8 +134,8 @@ TO ease configuration and simplify key rollover, the public key for JWT verifica
   }
 ```
 
-The Domino REST API will extend this URL to `https://someidp.your.domain/.well-known/openid-configuration` and check for a JSON return containing the `jwks_uri` key. When your IdP doesn't use the `.well-known` approach (e.g. [Keycloak](./configuringKeycloak.md)), you need to directly point to they key URL.
+The Domino REST API will extend this URL to `https://someidp.your.domain/.well-known/openid-configuration` and check for a JSON return containing the `jwks_uri` key. When your IdP doesn't use the `.well-known` approach, such as [Keycloak](./configuringKeycloak.md), you need to directly point to the key URL.
 
 !!! note
 
-    Keycloak's `providerUrl` is different from the general IdP practise to use `/.well-known/openid-configuration`, mainly since Keycloak can handle multiple realms, the well-known approach can't handle. Hence you need ro use `/auth/realms/[RealmName]`
+    Keycloak's `providerUrl` is different from the general IdP practice to use `/.well-known/openid-configuration`, mainly since Keycloak can handle multiple realms while the well-known approach cannot. Hence you need to use `/auth/realms/[RealmName]`.

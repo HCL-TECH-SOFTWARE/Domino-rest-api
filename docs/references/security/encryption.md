@@ -21,9 +21,9 @@ If you create your own CA, you must:
 - Make the public key of the root and intermediate certificates available.
 - Import these certificates in all browsers and runtimes used for testing.
 
-Follow the [detailed instructions](https://www.wissel.net/blog/2019/10/create-your-own-ca.html) and the [followup](https://www.wissel.net/blog/2019/10/a-certificate-wants-a-san.html).
+Follow the [detailed instructions](https://www.wissel.net/blog/2019/10/create-your-own-ca.html) and the [follow up](https://www.wissel.net/blog/2019/10/a-certificate-wants-a-san.html).
 
-Again: **It's generally better to use [LetsEncrypt](https://letsencrypt.org/)**.
+Again, **it's generally better to use [LetsEncrypt](https://letsencrypt.org/)**.
 
 ## Encryption key for JWT signing
 
@@ -101,15 +101,15 @@ The 4 files get created in your `keepconfig.d` directory. Distribute them to all
 - Log in to the Management console (Port 8889).
 - Type a name you want to call this certificate into the **Certificate Name**. There should be no spaces or special characters.
 
-  - for example: MultiDomain
+    - for example: MultiDomain
 
 - Click **Create IdP Certificate**.
 - Domino REST API generates 4 files in this server's `[notesdata]/keepconfig.d` directory:
 
-  - MultiDomain.cert.pem
-  - MultiDomain.json
-  - MultiDomain.private.key.pem
-  - MultiDomain.public.key.pem
+    - MultiDomain.cert.pem
+    - MultiDomain.json
+    - MultiDomain.private.key.pem
+    - MultiDomain.public.key.pem
 
 - Copy these 4 files to your other Domino servers into the `[notesdata]/keepconfig.d` directory.
 - Restart Domino REST API on all servers with this new configuration and they will now share the same JWT keys.

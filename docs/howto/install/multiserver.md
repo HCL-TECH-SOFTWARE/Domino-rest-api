@@ -3,8 +3,9 @@
 The Domino REST API is designed to be able to share configuration between multiple servers. To do this succesfully, you need to plan carefully and follow the steps outlined here.
 Sharing configuration works not only for tightly coupled systems, but also for servers that ate just on the same org or even across Domain boundaries (as long as trust and replication are setup correctly and working).
 
-!!!warning "Not everything is shared"
-Settings in `KeepConfig.nsf`, mostly scopes and oauth applications replicate. Configuration settings in `keepconfig.d` and `keepweb.d` are per server. When you want to share those, you need to manually copy them over.
+!!! warning "Not everything is shared"
+
+    Settings in `KeepConfig.nsf`, mostly scopes and oauth applications replicate. Configuration settings in `keepconfig.d` and `keepweb.d` are per server. When you want to share those, you need to manually copy them over.
 
 !!!info "We are working on improving the config sharing."
 

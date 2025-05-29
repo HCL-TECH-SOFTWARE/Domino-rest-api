@@ -12,8 +12,9 @@ Aside from the default Domino REST API login page, you can also use your configu
 
 Configure your external IdP in the configuration file. For more information, see [configuring external IdP](../IdP/index.md) for configuring an external IdP of your choice.
 
-!!!note
-When configuring your external IdP, make sure to set `{{origin}}/api/webdav-v1/login/callback` as one of your redirect URIs.
+!!! note
+
+    When configuring your external IdP, make sure to set `{{origin}}/api/webdav-v1/login/callback` as one of your redirect URIs.
 
 ### Set up OFBA configuration
 
@@ -27,8 +28,9 @@ Once configured, the login UI for OFBA should look like the following example im
 
 Clicking **Sign in with {external_idp_name}** commences the authorization code flow.
 
-!!!note
-Office Round Trip Experience external IdP login uses authorization code flow with PKCE.
+!!! note
+
+    Office Round Trip Experience external IdP login uses authorization code flow with PKCE.
 
 ## Examples
 

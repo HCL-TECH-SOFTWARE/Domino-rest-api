@@ -143,7 +143,7 @@ The Domino REST API probes for the existence of various claims in the JWT token 
 
 ## OIDC
 
-OIDC (OpenID Connect) support lets you point at a standard OIDC provider like [Microsoft Entra ID formerly Azure Active Directory](../../howto/IdP/configuringAD.md) or [Keycloak](../../howto/IdP/configuringKeycloak.md). It's similar to the [External JWT Provider configuration](../../references/security/authentication.md#external-jwt-provider) when using `providerUrl`, but follows OIDC semantics a bit more internally - namely, it needs a client ID and client secret.
+OIDC (OpenID Connect) support lets you point at a standard OIDC provider like [Microsoft Entra ID formerly Azure Active Directory](../../howto/IdP/configuringAD.md) or [Keycloak](../../howto/IdP/configuringKeycloak.md). It's similar to the [External JWT Provider configuration](../../references/security/authentication.md#external-jwt--oidc-providers) when using `providerUrl`, but follows OIDC semantics a bit more internally - namely, it needs a client ID and client secret.
 
 It can be configured like:
 
@@ -162,7 +162,7 @@ It can be configured like:
 }
 ```
 
-The "oidc" is similar to "oidc-idpcat" or "jwt," are main configuration block. Inside, the keys can be anything, like "any-name". This is the same idea as documented in [External JWT Provider configuration](../../references/security/authentication.md#external-jwt-provider).
+The "oidc" is similar to "oidc-idpcat" or "jwt," are main configuration block. Inside, the keys can be anything, like "any-name". This is the same idea as documented in [External JWT Provider configuration](../../references/security/authentication.md#external-jwt--oidc-providers).
 
 | Items                                             | Description                                                                                                                 |
 | :------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------- |
@@ -213,10 +213,14 @@ The configuration is as follows in Domino REST API:
 | `microsoft`                                       | **Optional** - Can be used to enable MS-Azure-specific workarounds internally                                                             |
 | `allowExpired`                                    | **Optional**- Can be used to consider even expired tokens valid. This should generally only be used during development.                   |
 
-!!!note - You can use `oidc-idpcat` authentication in the same places that "JWT" config blocks were used previously, just with some coordination with core Domino. - "JWT" will work the same on Domino 14. There's no conflict if Domino REST API and Domino have completely distinct authentication providers. - "oidc-idpcat" comes into play if you:
+!!! note 
 
-        - Want both Domino REST API and core Domino to use the same provider.
-        - You're on Domino 14 or greater. There's no harm if you use "jwt" or "oidc" without configuring Domino, or even if they happen to point to the same location.
+    - You can use `oidc-idpcat` authentication in the same places that "JWT" config blocks were used previously, just with some coordination with core Domino. 
+    - "JWT" will work the same on Domino 14. There's no conflict if Domino REST API and Domino have completely distinct authentication providers. 
+    - "oidc-idpcat" comes into play if you:
+
+        - want both Domino REST API and core Domino to use the same provider.
+        - are on Domino 14 or greater. There's no harm if you use "jwt" or "oidc" without configuring Domino, or even if they happen to point to the same location.
 
 ### Differences between `oidc` and `oidc-idpcat`
 
