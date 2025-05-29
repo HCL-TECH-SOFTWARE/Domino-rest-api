@@ -7,11 +7,13 @@ The procedures guide you on configuring Microsoft Entra ID, formerly Azure Activ
 - The `aud` property is fixed to the ID of the application, not as commonly, the URL of the target system.
 - There is no `scope` property, but instead `scp` to describe the requested scopes.
 
+--8<-- "onclientids.md"
+
 ## Configuration in Azure
 
 ### Register an application
 
-1. Navigate to the [Azure Portal](https://portal.azure.com){: target="_blank"} to login, and then select **App registrations**.
+1. Navigate to the [Azure Portal](https://portal.azure.com){: target="\_blank"} to login, and then select **App registrations**.
 
       ![Azure landing page](../../assets/images/configuringAD-01.png)
 
@@ -23,10 +25,9 @@ The procedures guide you on configuring Microsoft Entra ID, formerly Azure Activ
 
       ![Azure app registration](../../assets/images/configuringAD-03.png){: style="height:90%;width:90%"}
 
-!!!tip
+!!! tip
+
     If you aren't sure about the redirect URL, use `http://localhost:8080/redirect`. You can change this later on in **Authentication** in the application page.
-
-
 
 ### Add credentials
 
@@ -45,10 +46,10 @@ The next step is to add the client credentials. Your application will need the *
 3. Copy the secret's value for use in your client application code.
 
       ![Azure app registration](../../assets/images/configuringAD-07.png){: style="height:90%;width:90%"}
-      
-!!!note
+
+!!! note
+
     The secret value is only shown once and never displayed again after you leave this page.
- 
 
 ### API definition
 
@@ -67,7 +68,7 @@ The next step is to add the client credentials. Your application will need the *
 5. Click **Add scope**.
 6. Repeat the steps for adding a scope for each scope that your need to add.
 
-![Azure app registration](../../assets/images/configuringAD-10.png){: style="height:90%;width:90%"}
+      ![Azure app registration](../../assets/images/configuringAD-10.png){: style="height:90%;width:90%"}
 
 ### Configure API permissions
 
@@ -142,36 +143,32 @@ All URLs are retrievable by accessing the _OpenID Connect_ metadata document, co
 
       ```json
       {
-        "jwt": {
-          "AzureAD01": {
+      "jwt": {
+         "AzureAD01": {
             "active": true,
             "providerUrl": "https://login.microsoftonline.com/[your-tennantid-here]/v2.0/.well-known/openid-configuration",
             "aud": "[your application id-here]",
             "iss": "https://sts.windows.net/[your-tennantid-here]/",
             "algorithm": "RS256"
-          }
-        }
+         }
+      }
       }
       ```
 
       Remarks:
 
-      - The `AzureAD01` isn't a fixed value. Pick anything that makes it clear for you. We strongly suggest to use the value as the filename too.
+      - The `AzureAD01` isn't a fixed value. Pick anything that makes it clear for you. Use the value as the filename too.
 
       - The `aud` parameter is the Application ID in [Expose an API](#api-definition) (the `id` parameter in the manifest, **not** the Application ID URI).
 
-      - The `iss` parameter might be different from what the `openid-configuration` reports. So compare the values. We've seen the URL changed from `https://login.microsoftonline.com/[your-tennantid-here]/v2.0` to `https://sts.windows.net/[your-tennantid-here]/`, if that's so you need to specify it here.
-      - Currently, Azure AD doesn't return the `alg` claim in the `jwks_uri`, you have to specify it here.
+      - The `iss` parameter might be different from what the `openid-configuration` reports. Compare the values. It has been noticed that the URL changed from `https://login.microsoftonline.com/[your-tennantid-here]/v2.0` to `https://sts.windows.net/[your-tennantid-here]/`, if that's so you need to specify it here.
+      - Currently, Azure AD doesn't return the `alg` claim in the `jwks_uri`. Uou have to specify it here.
 
 3. Restart Domino REST API.
 
 !!! danger "Azure AD / Entra ID is a moving target"
 
-    Depending on your configuration you will need to adjust the `aud` and `iss` values in the configuration file.
-    To determine the correct values, use the test application below to inspect what values are actually sent with the
-    Azure access token. We found for `aud`, you might get the application id and something different for `iss`, also we expect the algorythm to be included somewhen
-
-    Use the test application below!
+    Depending on your configuration, you will need to adjust the `aud` and `iss` values in the configuration file. To determine the correct values, use the test application below to inspect what values are actually sent with the Azure access token. For `aud`, you might get the application ID and something different for `iss`. Also, the algorithm might be included somewhere. Use the test application below!
 
 ## Test the application
 
@@ -222,6 +219,12 @@ A few tips to troubleshoot the setup when the goalpost has been moved:
 - Compare the `iss` value from the JWT token with the `issuer` value from the `openid-configuration` endpoint. If they don't match, you need to add the `iss` to the JSON configuration file you created or edited in `keepconfig.d`.
 - Compare the `aud` value from the JWT token with the `aud` value of the configuration file. Adjust the configuration file if different.
 - Check the `scp`, which is Microsoft's "alternative" to `scope`, and make sure it has the expected values matching the settings in the application configuration in the Admin UI. Adjust the scope in the DRAPI application (AdminUI) or your AzureAD IdP settings.
+
+## Rinse and repeat
+
+- [Set up External IdP for Office Round Trip Experience](roundtripidp.md)
+
+- [Set up External IdP for Admin UI login](adminuiidp.md)
 
 ## Let's connect
 

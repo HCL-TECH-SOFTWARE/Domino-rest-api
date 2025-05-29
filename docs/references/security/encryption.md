@@ -1,7 +1,5 @@
 # Encryption Keys
 
---8<-- "keepmngtURLcaution1.md"
-
 There are three areas in Domino REST API where encryption keys are needed:
 
 - HTTPS certificates for Domino REST API ports
@@ -23,9 +21,9 @@ If you create your own CA, you must:
 - Make the public key of the root and intermediate certificates available.
 - Import these certificates in all browsers and runtimes used for testing.
 
-Follow the [detailed instructions](https://www.wissel.net/blog/2019/10/create-your-own-ca.html) and the [followup](https://www.wissel.net/blog/2019/10/a-certificate-wants-a-san.html).
+Follow the [detailed instructions](https://www.wissel.net/blog/2019/10/create-your-own-ca.html) and the [follow up](https://www.wissel.net/blog/2019/10/a-certificate-wants-a-san.html).
 
-Again: **It's generally better to use [LetsEncrypt](https://letsencrypt.org/)**.
+Again, **it's generally better to use [LetsEncrypt](https://letsencrypt.org/)**.
 
 ## Encryption key for JWT signing
 

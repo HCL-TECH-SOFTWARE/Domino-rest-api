@@ -1,7 +1,5 @@
 # Configure Domino REST API IdP with Volt MX Foundry Identity Service
 
---8<-- "keepmngtURLcaution1.md"
-
 ## About this task
 
 Domino REST API implements what essentially amounts to an OAuth2 Provider DominoIDP and Volt MX Foundry implements an Integration Service adapter for OAuth2 providers. The following is a guide for creating a Foundry Identity Service using Domino REST API's OAuth provider.
@@ -9,7 +7,6 @@ Domino REST API implements what essentially amounts to an OAuth2 Provider Domino
 ## Before you begin
 
 You must first set up the [Domino Rest API IdP](../../howto/IdP/configuredrapiIdP.md).
-
 
 ## Create Foundry Identity Service
 
@@ -42,6 +39,7 @@ From the Domino REST API Admin browser client:
 2. Create an application, and note its client id, and client secret.
 
 !!! note
+
     When you create the application, you'll need the callback URL [defined earlier](#create-foundry-identity-service).
 
 ![Domino REST API create application](../../assets/images/keep-create-application.png){: style="height:80%;width:80%"}

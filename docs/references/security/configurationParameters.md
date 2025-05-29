@@ -1,8 +1,4 @@
-# Configuration <!--parameters-->
-
---8<-- "keepmngtURLcaution1.md"
-
-<!--## Configuration-->
+# Configuration
 
 Domino REST API comes with reasonable default configuration settings. They allow you to start evaluating and testing out-of-the-box. For an actual deployment, you want to understand the details as outlined here.
 

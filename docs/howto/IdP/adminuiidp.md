@@ -1,5 +1,7 @@
 # Set up external IdP for Admin UI IdP
 
+--8<-- "onclientids.md"
+
 ## About this task
 
 You can add your own IdP to use for Admin UI login. This uses a PKCE login flow.
@@ -22,9 +24,9 @@ Configure the `adminui` property in your chosen external IdP. For more informati
 
 !!! note
 
-    The Admin UI shows the OIDC logins and the Domino REST API login, which uses the Domino REST API IdP. To prevent the Admin UI from showing all IdP logins, set the value of the `AdminUIOIDCLogin` parameter to `false`. To disable the login with password button, set the `AdminUIKeepLogin` parameter to `false`. For more information on how to modify the configuration, see [Modify configuration parameters](../production/configparam.md). 
+    The Admin UI shows the OIDC logins and the Domino REST API login, which uses the Domino REST API IdP. To prevent the Admin UI from showing all IdP logins, set the value of the `AdminUIOIDCLogin` parameter to `false`. To disable the login with password button, set the `AdminUIKeepLogin` parameter to `false`. For more information on how to modify the configuration, see [Modify configuration parameters](../production/configparam.md).
 
-Once configured, the Admin UI login should look like the following example image. In the example image, *Keycloak* is used as the external IdP.
+Once configured, the Admin UI login should look like the following example image. In the example image, _Keycloak_ is used as the external IdP.
 
 ![external IdP for Admin UI login](../../assets/images/AdminUiLoginExternalIdP.png)
 
@@ -51,7 +53,7 @@ The following is an example configuration for Azure IdP:
       "algorithm": "RS256",
       "adminui": {
         "active": true,
-        "client_id": "{client_id}",
+        "client_id": "keepadminui",
         "application_id_uri": "api://dominorest/"
       }
     }
@@ -71,7 +73,7 @@ The following is an example configuration for Keycloak IdP:
       "providerUrl": "https://{keycloak_host}/realms/{realm_name}",
       "adminui": {
         "active": true,
-        "client_id": "{client_id}"
+        "client_id": "keepadminui"
       }
     }
   }

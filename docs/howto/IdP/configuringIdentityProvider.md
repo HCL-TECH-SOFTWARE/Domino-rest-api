@@ -1,11 +1,11 @@
 # Configure an identity provider
 
---8<-- "keepmngtURLcaution1.md"
-
-In its default configuration, Domino REST API uses Domino as its identity provider (IdP).
+In its default configuration, Domino REST API uses itself as its identity provider (IdP), so it is client and IdP at the same time.
 This allows you to start evaluating and testing out of the box. To enable this, you need to have an HTTP password configured in Domino and good enough for internal use.
 
 However, for an actual deployment, you might want to configure your own IdP and authentication flow. The only IdP requirements are use of a supported algorithm for signing and a token with the expected format.
+
+--8<-- "onclientids.md"
 
 ## About this task
 
@@ -134,8 +134,8 @@ TO ease configuration and simplify key rollover, the public key for JWT verifica
   }
 ```
 
-The Domino REST API will extend this URL to `https://someidp.your.domain/.well-known/openid-configuration` and check for a JSON return containing the `jwks_uri` key. When your IdP doesn't use the `.well-known` approach (e.g. [Keycloak](./configuringKeycloak.md)), you need to directly point to they key URL.
+The Domino REST API will extend this URL to `https://someidp.your.domain/.well-known/openid-configuration` and check for a JSON return containing the `jwks_uri` key. When your IdP doesn't use the `.well-known` approach, such as [Keycloak](./configuringKeycloak.md), you need to directly point to the key URL.
 
 !!! note
 
-    Keycloak's `providerUrl` is different from the general IdP practise to use `/.well-known/openid-configuration`, mainly since Keycloak can handle multiple realms, the well-known approach can't handle. Hence you need ro use `/auth/realms/[RealmName]`
+    Keycloak's `providerUrl` is different from the general IdP practice to use `/.well-known/openid-configuration`, mainly since Keycloak can handle multiple realms while the well-known approach cannot. Hence you need to use `/auth/realms/[RealmName]`.
