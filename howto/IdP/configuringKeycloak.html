@@ -6749,8 +6749,7 @@
 <p><a href="https://www.keycloak.org/">Keycloak</a> is an Open Source Identity and Access Management solution sponsored by <a href="https://www.redhat.com/en">RedHat</a>.</p>
 <p>Keycloak can be used to produce JWT Access Token for Domino REST API. Keycloak has many features like default configuration, user federation, identity brokering and social login. Those are topics not covered here. Consult the <a href="https://duckduckgo.com/?q=keycloak+tutorial&amp;ia=web">Keycloak Tutorial</a> or the <a href="https://www.keycloak.org/documentation">Keycloak documentation</a> to learn more. This page focuses on the settings required for Domino REST API.</p>
 <h2 id="client-ids">Client Ids</h2>
-<p>When configuring an external IdP using OIDC or OIDC-idpcat you need to provide a clientId. We recommend to use <code>Domino</code>, but the admins of your IdP might have other ideas.
-In any case, that's the clientId for the REST server, it is <em>NOT</em> the one for the AdminUI or the Office forms based authentication (OFBA) for attachment editing. To be fully operational you need to configure at least three clients on your IdP:</p>
+<p>When configuring an external IdP using OIDC or OIDC-idpcat, you need to provide a clientId. It's recommended to use <code>Domino</code>, but the admins of your IdP might have other ideas. In any case, that's the clientId for the REST server. It's <em>NOT</em> the one for the AdminUI or the Office Forms Based Authentication (OFBA) for attachment editing. To be fully operational, you need to configure at least three clients on your IdP:</p>
 <ul>
 <li><code>Domino</code> for the server (client secret might be handeled by <code>idpcat.nsf</code>)</li>
 <li><code>keepadminui</code> for the Domino REST API admin client</li>
@@ -6758,16 +6757,15 @@ In any case, that's the clientId for the REST server, it is <em>NOT</em> the one
 <li>One each for your custom client applications (with clientSecret for servers or PKSE for clients)</li>
 </ul>
 <div class="admonition tip">
-<p class="admonition-title">Use the internal IdP as learing resource</p>
-<p>The application configuration provided by the internal IdP makes it easy to configure and retrive client specific JWT, that have
-all required fields. Test your application with that and use the defined proprties, scopes foremost, to requests the external
-IdP client configurations</p>
+<p class="admonition-title">Use the internal IdP as learning resource</p>
+<p>The application configuration provided by the internal IdP makes it easy to configure and retrieve client-specific JWT that have all the required fields. Test your application with that and use the defined proprties, scopes foremost, to requests the external
+IdP client configurations.</p>
 </div>
 <h2 id="about-this-task">About this task</h2>
 <p>This section describes key concepts and provides the steps required to configure Keycloak successfully for Domino REST API.</p>
 <h2 id="keycloak-concepts">Keycloak concepts</h2>
 <p>Only concepts relevant to Domino REST API are listed:</p>
-<p><img alt="Keycloak concepts" src="../../assets/images/KeycloakConcepts.png" /></p>
+<p><img alt="Keycloak concepts" src="../../assets/images/KeycloakConcepts.png" style="height:80%;width:80%" /></p>
 <ul>
 <li><strong>Realm</strong>: The starting point for Keycloak identity management, contains all other elements.</li>
 <li><strong>Client</strong>: Each accessing application, client app, Single Page App or server app will have a client entry. The client entry contains application Id and, if required, the application secret. Furthermore it has mapper and client scopes assigned to it.</li>
@@ -6777,13 +6775,19 @@ IdP client configurations</p>
 </ul>
 <h2 id="procedure">Procedure</h2>
 <p>In this example, you will learn and create a realm, a user, client scopes, client and client scope mappers inside the Keycloak app.</p>
-<p>Note: The screenshots were captured using the Keycloak version 25.0.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The screenshots were captured using Keycloak version 25.0.</p>
+</div>
 <ol>
 <li>Login to Keycloak.</li>
-<li>Click the <strong>Keycloak</strong> dropdown menu at the top left corner, then click <strong>Create Realm</strong>.</li>
-</ol>
-<p><img alt="Create realm" src="../../assets/images/keyrealm.png" /></p>
+<li>
+<p>Create a realm.</p>
 <ol>
+<li>
+<p>Click the <strong>Keycloak</strong> dropdown menu at the top left corner, and then click <strong>Create Realm</strong>.</p>
+<p><img alt="Create realm" src="../../assets/images/keyrealm.png" /></p>
+</li>
 <li>
 <p>Fill in the <strong>Realm Name</strong>. For example <strong>Ameca</strong>.</p>
 </li>
@@ -6791,9 +6795,12 @@ IdP client configurations</p>
 <p>Click <strong>Create</strong>.</p>
 <p><img alt="Click Create" src="../../assets/images/keyrealmname.png" /></p>
 </li>
-<li>
-<p>Click <strong>Realm settings</strong>.</p>
+</ol>
 </li>
+<li>
+<p>Configure realm settings.</p>
+<ol>
+<li>Click <strong>Realm settings</strong>.</li>
 <li>
 <p>Fill in the fields applicable to your project. Mandatory fields are those fields with red asterisk (<span style="color: red;">*</span>).</p>
 <p><strong>Display name</strong>: <code>Humanoid Robots</code>.</p>
@@ -6807,11 +6814,12 @@ IdP client configurations</p>
 <p>Click <strong>User Profile</strong> tab.</p>
 </li>
 <li>
-<p>Click <strong>Create Attribute</strong>.</p>
-<p>Creating an attribute is optional, we use <code>CN</code> here to store the Domino style name (e.g. <code>CN=John Doe/O=Mauraders</code>)</p>
+<p>Create an attribute.</p>
+<p>Creating an attribute is optional. <code>CN</code> is used here to store the Domino style name, such as <code>CN=John Doe/O=Mauraders</code>.</p>
 <ol>
+<li>Click <strong>Create Attribute</strong>.</li>
 <li>
-<p>Fill in the fields applicable to your project. Mandatory fields are those fields with red asterisk (<span style="color: red;">*</span>).</p>
+<p>Fill in the fields applicable to your project. Mandatory fields are marked with with red asterisk <span style="color: red;">*</span>.</p>
 </li>
 <li>
 <p>Fill in the <strong>Attribute name</strong>. For example <code>CN</code></p>
@@ -6827,10 +6835,15 @@ IdP client configurations</p>
 </li>
 <li>
 <p>Click <strong>Create</strong>.</p>
-</li>
-</ol>
 <p><img alt="Attribute general settings" src="../../assets/images/keyattr.png" /></p>
 </li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>Add a user.</p>
+<ol>
 <li>
 <p>Click <strong>Users</strong>.</p>
 </li>
@@ -6839,7 +6852,7 @@ IdP client configurations</p>
 <p><img alt="Create users screen" src="../../assets/images/keyusers.png" /></p>
 </li>
 <li>
-<p>Fill in the mandatory fields with red asterisk(<code>*</code>), as minimum requirements to save. You can see here the user profile <strong>attribute</strong> you created on the <strong>Realm Settings</strong>. For example, <em>Domino common name</em>. For a direct access grant you must have first name, last name and eMail, even if they're not marked mandatory.</p>
+<p>Fill in the mandatory fields as minimum requirements to save. You can see here the user profile <strong>attribute</strong> you created on the <strong>Realm Settings</strong>. For example, <em>Domino common name</em>. For a direct access grant you must have first name, last name and eMail, even if they're not marked mandatory.</p>
 <p>Fill in the following:</p>
 <p><strong>Username</strong>: <code>harrychen</code>.</p>
 <p><strong>Email</strong>: <code>harrychen@ameca.org</code></p>
@@ -6853,7 +6866,7 @@ IdP client configurations</p>
 </li>
 <li>
 <p>On your user details, for example user <code>harrychen</code>, click the <strong>Credential</strong> tab.</p>
-<p>You need configure <a href="https://www.keycloak.org/docs/latest/server_admin/#ref-user-credentials_server_administration_guide">User credentials</a>. For this example we are using username and password but this could be a social or federated login. Check <a href="https://www.keycloak.org/docs/latest/server_admin/#ref-user-credentials_server_administration_guide">Keycloak</a> for details.</p>
+<p>You need configure <a href="https://www.keycloak.org/docs/latest/server_admin/#ref-user-credentials_server_administration_guide">User credentials</a>. For this example username and password are used, but it could be a social or federated login. Check <a href="https://www.keycloak.org/docs/latest/server_admin/#ref-user-credentials_server_administration_guide">Keycloak</a> for details.</p>
 <ol>
 <li>
 <p>Click <strong>Set password</strong>.</p>
@@ -6869,10 +6882,10 @@ IdP client configurations</p>
 </li>
 </ol>
 </li>
+</ol>
+</li>
 <li>
 <p>Click <strong>Client scopes</strong>.</p>
-</li>
-</ol>
 <p>Each Domino REST API scope in Domino, that you want to make accessible in Keycloak, will need a client scope in Keycloak. This includes all named scopes (the lowercase ones), and the <a href="../../references/usingdominorestapi/scopes.html">special scopes</a> like <code>$DATA</code> or <code>MAIL</code>.</p>
 <p>Click <strong>Create client scope</strong>. Creating a client scope doesn't automatically expose it, for that, assign it to one or more clients. In this example, create a client scope named <code>demo</code>.</p>
 <p><img alt="Keycloak create scope" src="../../assets/images/keynewscope1.png" /></p>
@@ -6881,11 +6894,9 @@ IdP client configurations</p>
 <li>Fill in <strong>Description</strong>. For example <code>demo for all demo</code>.</li>
 <li>Set <strong>Display on consent screen</strong> toggle to <code>On</code> position.</li>
 <li>Set <strong>Include in token scope</strong> toggle to <code>On</code> position.</li>
-<li>
-<p>Click <strong>Save</strong>.</p>
-<p><img alt="saving client scope screen" src="../../assets/images/keyscopename1.png" /></p>
-</li>
+<li>Click <strong>Save</strong>.</li>
 </ol>
+<p><img alt="saving client scope screen" src="../../assets/images/keyscopename1.png" /></p>
 <p>The configuration so far will identify a user presenting the access token to Domino REST API, but not yet provide any access. You need to specify what scopes this application will be allowed to access. You can use one or more (lowercase) scopes or some of the special scopes MAIL, $DATA or $DECRYPT. Multiple scopes are separated using a space.</p>
 <p>Create another specific client scope, like <strong>$DATA</strong>.</p>
 <p><img alt="create clients scope screen" src="../../assets/images/keynewscope2.png" /></p>
@@ -6894,22 +6905,22 @@ IdP client configurations</p>
 <li>Fill in <strong>Description</strong>. For example <code>all data for database</code>.</li>
 <li>Set <strong>Display on consent screen</strong> toggle to <code>On</code> position.</li>
 <li>Set <strong>Include in token scope</strong> toggle to <code>On</code> position.</li>
-<li>
-<p>Click <strong>Save</strong>.</p>
+<li>Click <strong>Save</strong>.</li>
+</ol>
 <p><img alt="saving new client scope screen" src="../../assets/images/keyscopename2.png" /></p>
 </li>
 <li>
-<p>Click <strong>Clients</strong>, and then click <strong>Create client</strong>.</p>
-</li>
-</ol>
-<p><img alt="create client screen" src="../../assets/images/keycreateclient.png" /></p>
+<p>Create a client.</p>
 <ol>
 <li>
-<p>On the <strong>General Setting</strong> section, fill in the following fields:</p>
+<p>Click <strong>Clients</strong>, and then click <strong>Create client</strong>.</p>
+<p><img alt="create client screen" src="../../assets/images/keycreateclient.png" /></p>
+</li>
+<li>
+<p>On the <strong>General Setting</strong> section, fill in the following fields, and the click <strong>Next</strong>.</p>
 <p><strong>Client ID</strong>: <code>thespian</code>.</p>
 <p><strong>Name</strong>: <code>thespian</code>.</p>
 <p><strong>Description</strong>: <code>ameca's client</code></p>
-<p>Click <strong>Next</strong>.</p>
 <p><img alt="general settings screen" src="../../assets/images/keyclientid.png" /></p>
 </li>
 <li>
@@ -6920,6 +6931,8 @@ IdP client configurations</p>
 <p>On <strong>Login Settings</strong> section, click <strong>Save</strong>.</p>
 <p><img alt="login settings and save screen" src="../../assets/images/keyURI.png" /></p>
 </li>
+</ol>
+</li>
 <li>
 <p>On the saved client's ID, for example <strong>thespian</strong>, click <strong>Clients scopes</strong> tab.</p>
 </li>
@@ -6929,8 +6942,6 @@ IdP client configurations</p>
 </li>
 <li>
 <p>Click <strong>Configure new mapper</strong> or if there are existing mappers, click <strong>Add mappers</strong> &rarr; <strong>by Configuration</strong>. You need to add few mappers inside the dedicated client scope.</p>
-</li>
-</ol>
 <p>In this example, you need to have 2 <strong>Audience</strong> mappers and 1 <strong>User Atrribute</strong>, inside the <strong>thespian-dedicated</strong> client scope.</p>
 <p><img alt="add a new new mapper screen" src="../../assets/images/keynewmapper.png" /></p>
 <p>Mapper-1 as <strong>Audience</strong> mapper</p>
@@ -6967,10 +6978,10 @@ IdP client configurations</p>
 <p>Click <strong>Save</strong>.</p>
 <p><img alt="Mapper-3" src="../../assets/images/keymapper3.png" /></p>
 </li>
+</ol>
+</li>
 <li>
 <p>Click the <strong>Client details</strong>.</p>
-</li>
-</ol>
 <p><img alt="Client details" src="../../assets/images/keycdetails.png" /></p>
 <ol>
 <li>
@@ -6993,18 +7004,20 @@ IdP client configurations</p>
 <p><img alt="generate access token screen" src="../../assets/images/keyevaluate.png" /></p>
 </li>
 </ol>
+</li>
+</ol>
 <h2 id="spa-applications">SPA applications</h2>
 <p>An SPA (Single Page App) or a mobile client can't keep a client secret. For those, the use of Proof Key for Code Exchange (PKCE) (defined in <a href="https://tools.ietf.org/html/rfc7636">RFC 7636</a>) is recommended (read <a href="https://auth0.com/docs/flows/authorization-code-flow-with-proof-key-for-code-exchange-pkce">this intro</a> for details). The only difference in Keycloak is to toggle <code>off</code> the <strong>Client Authentication</strong>.</p>
 <p><img alt="Spa app screen" src="../../assets/images/keypkce.png" /></p>
 <div class="admonition warning">
 <p class="admonition-title">Important</p>
-</div>
 <p>It's <strong>SECURITY</strong>, so learn about <a href="https://www.keycloak.org/guides#getting-started/">Keycloak</a>!</p>
+</div>
 <h2 id="configure-the-domino-rest-api">Configure the Domino REST API</h2>
 <p>You can find the full explanation <a href="configuringIdentityProvider.html">here</a>. For the short version:</p>
 <ul>
-<li>Create a JSON file in <code>keepconfig.d</code> to contain the Keycloak related information</li>
-<li>Restart the REST API</li>
+<li>Create a JSON file in <code>keepconfig.d</code> to contain the Keycloak related information.</li>
+<li>Restart the Domino REST API.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;jwt&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -7114,7 +7127,7 @@ IdP client configurations</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 28, 2025 16:34:52 UTC">May 28, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 29, 2025 14:48:47 UTC">May 29, 2025</span>
   </span>
 
     

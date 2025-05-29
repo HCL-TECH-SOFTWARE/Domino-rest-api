@@ -6748,9 +6748,8 @@
 <h1 id="auth">Auth*</h1>
 <!-- prettier-ignore -->
 <div class="admonition warning">
-<p class="admonition-title">You have choices for you IdP</p>
-<p>There are multiple ways to configure an external IdP in the DOmino REST API: <code>jwt</code>, <code>oidc</code> and <code>oidc-idpcat</code>.
-When in doubt use <code>oidc-idpcat</code>. Read our <a href="/Domino-rest-api/references/security/idpcompare.html">comparison</a> for details</p>
+<p class="admonition-title">You have choices for your IdP</p>
+<p>There are multiple ways to configure an external IdP in the Domino REST API: <code>jwt</code>, <code>oidc</code>, and <code>oidc-idpcat</code>. When in doubt, use <code>oidc-idpcat</code>. Read the <a href="/Domino-rest-api/references/security/idpcompare.html">comparison</a> for details.</p>
 </div>
 <p>Domino REST API offers a built-in endpoint to exchange your Domino credentials for a valid JSON Web Token (JWT). This page describes the setup of <strong>external JWT identity providers</strong> (IdP).</p>
 <h2 id="jwt-authorization">JWT Authorization</h2>
@@ -6865,7 +6864,7 @@ The better way is to <a href="../../howto/install/multiserver.html#shared-jwt-ke
 <li>sub</li>
 </ol>
 <h2 id="oidc">OIDC</h2>
-<p>OIDC (OpenID Connect) support lets you point at a standard OIDC provider like <a href="../../howto/IdP/configuringAD.html">Microsoft Entra ID formerly Azure Active Directory</a> or <a href="../../howto/IdP/configuringKeycloak.html">Keycloak</a>. It's similar to the <a href="authentication.html#external-jwt-provider">External JWT Provider configuration</a> when using <code>providerUrl</code>, but follows OIDC semantics a bit more internally - namely, it needs a client ID and client secret.</p>
+<p>OIDC (OpenID Connect) support lets you point at a standard OIDC provider like <a href="../../howto/IdP/configuringAD.html">Microsoft Entra ID formerly Azure Active Directory</a> or <a href="../../howto/IdP/configuringKeycloak.html">Keycloak</a>. It's similar to the <a href="authentication.html#external-jwt--oidc-providers">External JWT Provider configuration</a> when using <code>providerUrl</code>, but follows OIDC semantics a bit more internally - namely, it needs a client ID and client secret.</p>
 <p>It can be configured like:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;oidc&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -6880,7 +6879,7 @@ The better way is to <a href="../../howto/install/multiserver.html#shared-jwt-ke
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>The "oidc" is similar to "oidc-idpcat" or "jwt," are main configuration block. Inside, the keys can be anything, like "any-name". This is the same idea as documented in <a href="authentication.html#external-jwt-provider">External JWT Provider configuration</a>.</p>
+<p>The "oidc" is similar to "oidc-idpcat" or "jwt," are main configuration block. Inside, the keys can be anything, like "any-name". This is the same idea as documented in <a href="authentication.html#external-jwt--oidc-providers">External JWT Provider configuration</a>.</p>
 <table>
 <thead>
 <tr>
@@ -6983,10 +6982,20 @@ The better way is to <a href="../../howto/install/multiserver.html#shared-jwt-ke
 </tr>
 </tbody>
 </table>
-<p>!!!note - You can use <code>oidc-idpcat</code> authentication in the same places that "JWT" config blocks were used previously, just with some coordination with core Domino. - "JWT" will work the same on Domino 14. There's no conflict if Domino REST API and Domino have completely distinct authentication providers. - "oidc-idpcat" comes into play if you:</p>
-<pre><code>    - Want both Domino REST API and core Domino to use the same provider.
-    - You're on Domino 14 or greater. There's no harm if you use "jwt" or "oidc" without configuring Domino, or even if they happen to point to the same location.
-</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>You can use <code>oidc-idpcat</code> authentication in the same places that "JWT" config blocks were used previously, just with some coordination with core Domino. </li>
+<li>"JWT" will work the same on Domino 14. There's no conflict if Domino REST API and Domino have completely distinct authentication providers. </li>
+<li>
+<p>"oidc-idpcat" comes into play if you:</p>
+<ul>
+<li>want both Domino REST API and core Domino to use the same provider.</li>
+<li>are on Domino 14 or greater. There's no harm if you use "jwt" or "oidc" without configuring Domino, or even if they happen to point to the same location.</li>
+</ul>
+</li>
+</ul>
+</div>
 <h3 id="differences-between-oidc-and-oidc-idpcat">Differences between <code>oidc</code> and <code>oidc-idpcat</code></h3>
 <p>In general, <code>oidc</code> and <code>oidc-idpcat</code> achieve the same goal, which is to use a complete OIDC provider. The advantages of using the "oidc-idpcat" variation are as follows:</p>
 <ul>
@@ -6999,8 +7008,7 @@ The better way is to <a href="../../howto/install/multiserver.html#shared-jwt-ke
 </div>
 <p>Check <a href="../../howto/IdP/configureoidc.html">Configure Domino REST API to use an OIDC provider</a>.</p>
 <h2 id="client-ids">Client Ids</h2>
-<p>When configuring an external IdP using OIDC or OIDC-idpcat you need to provide a clientId. We recommend to use <code>Domino</code>, but the admins of your IdP might have other ideas.
-In any case, that's the clientId for the REST server, it is <em>NOT</em> the one for the AdminUI or the Office forms based authentication (OFBA) for attachment editing. To be fully operational you need to configure at least three clients on your IdP:</p>
+<p>When configuring an external IdP using OIDC or OIDC-idpcat, you need to provide a clientId. It's recommended to use <code>Domino</code>, but the admins of your IdP might have other ideas. In any case, that's the clientId for the REST server. It's <em>NOT</em> the one for the AdminUI or the Office Forms Based Authentication (OFBA) for attachment editing. To be fully operational, you need to configure at least three clients on your IdP:</p>
 <ul>
 <li><code>Domino</code> for the server (client secret might be handeled by <code>idpcat.nsf</code>)</li>
 <li><code>keepadminui</code> for the Domino REST API admin client</li>
@@ -7008,10 +7016,9 @@ In any case, that's the clientId for the REST server, it is <em>NOT</em> the one
 <li>One each for your custom client applications (with clientSecret for servers or PKSE for clients)</li>
 </ul>
 <div class="admonition tip">
-<p class="admonition-title">Use the internal IdP as learing resource</p>
-<p>The application configuration provided by the internal IdP makes it easy to configure and retrive client specific JWT, that have
-all required fields. Test your application with that and use the defined proprties, scopes foremost, to requests the external
-IdP client configurations</p>
+<p class="admonition-title">Use the internal IdP as learning resource</p>
+<p>The application configuration provided by the internal IdP makes it easy to configure and retrieve client-specific JWT that have all the required fields. Test your application with that and use the defined proprties, scopes foremost, to requests the external
+IdP client configurations.</p>
 </div>
 <h2 id="domino-rest-api-and-oauth">Domino REST API and OAuth</h2>
 <p>Domino REST API is designed to consume an access token. This token can be the result of an OAuth dance or simply the result of an exchange of Domino credentials. The Domino REST API provides an IdP that does the OAuth dance.</p>
@@ -7037,7 +7044,7 @@ IdP client configurations</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 28, 2025 16:22:56 UTC">May 28, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 29, 2025 14:48:47 UTC">May 29, 2025</span>
   </span>
 
     

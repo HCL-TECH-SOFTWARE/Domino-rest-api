@@ -6729,8 +6729,7 @@
 
 <h1 id="set-up-external-idp-for-admin-ui-idp">Set up external IdP for Admin UI IdP</h1>
 <h2 id="client-ids">Client Ids</h2>
-<p>When configuring an external IdP using OIDC or OIDC-idpcat you need to provide a clientId. We recommend to use <code>Domino</code>, but the admins of your IdP might have other ideas.
-In any case, that's the clientId for the REST server, it is <em>NOT</em> the one for the AdminUI or the Office forms based authentication (OFBA) for attachment editing. To be fully operational you need to configure at least three clients on your IdP:</p>
+<p>When configuring an external IdP using OIDC or OIDC-idpcat, you need to provide a clientId. It's recommended to use <code>Domino</code>, but the admins of your IdP might have other ideas. In any case, that's the clientId for the REST server. It's <em>NOT</em> the one for the AdminUI or the Office Forms Based Authentication (OFBA) for attachment editing. To be fully operational, you need to configure at least three clients on your IdP:</p>
 <ul>
 <li><code>Domino</code> for the server (client secret might be handeled by <code>idpcat.nsf</code>)</li>
 <li><code>keepadminui</code> for the Domino REST API admin client</li>
@@ -6738,10 +6737,9 @@ In any case, that's the clientId for the REST server, it is <em>NOT</em> the one
 <li>One each for your custom client applications (with clientSecret for servers or PKSE for clients)</li>
 </ul>
 <div class="admonition tip">
-<p class="admonition-title">Use the internal IdP as learing resource</p>
-<p>The application configuration provided by the internal IdP makes it easy to configure and retrive client specific JWT, that have
-all required fields. Test your application with that and use the defined proprties, scopes foremost, to requests the external
-IdP client configurations</p>
+<p class="admonition-title">Use the internal IdP as learning resource</p>
+<p>The application configuration provided by the internal IdP makes it easy to configure and retrieve client-specific JWT that have all the required fields. Test your application with that and use the defined proprties, scopes foremost, to requests the external
+IdP client configurations.</p>
 </div>
 <h2 id="about-this-task">About this task</h2>
 <p>You can add your own IdP to use for Admin UI login. This uses a PKCE login flow.</p>

@@ -6698,8 +6698,8 @@
 <li>Make the public key of the root and intermediate certificates available.</li>
 <li>Import these certificates in all browsers and runtimes used for testing.</li>
 </ul>
-<p>Follow the <a href="https://www.wissel.net/blog/2019/10/create-your-own-ca.html">detailed instructions</a> and the <a href="https://www.wissel.net/blog/2019/10/a-certificate-wants-a-san.html">followup</a>.</p>
-<p>Again: <strong>It's generally better to use <a href="https://letsencrypt.org/">LetsEncrypt</a></strong>.</p>
+<p>Follow the <a href="https://www.wissel.net/blog/2019/10/create-your-own-ca.html">detailed instructions</a> and the <a href="https://www.wissel.net/blog/2019/10/a-certificate-wants-a-san.html">follow up</a>.</p>
+<p>Again, <strong>it's generally better to use <a href="https://letsencrypt.org/">LetsEncrypt</a></strong>.</p>
 <h2 id="encryption-key-for-jwt-signing">Encryption key for JWT signing</h2>
 <p>Domino REST API uses JWT for authentication. When you get started with Domino REST API, you probably log in with a Domino username and password. Domino REST API, out of the box, uses an ephemeral symmetric encryption key to sign requests. Since you can't see the key or share it, this configuration is reasonably secure. When you restart Domino REST API, a new key is used.</p>
 <p>To use a key that can be deployed to an external identity provider (IdP) or used to send requests to the Domino ID vault service, you must generate a public/private key pair and configure the <a href="index.html">security</a> settings. <strong>Never share the private key</strong>.</p>
@@ -6750,23 +6750,21 @@ Then enter the <code>Shutdown key</code> (masked input) and click on `Create IdP
 <li>Log in to the Management console (Port 8889).</li>
 <li>
 <p>Type a name you want to call this certificate into the <strong>Certificate Name</strong>. There should be no spaces or special characters.</p>
-</li>
-<li>
-<p>for example: MultiDomain</p>
+<ul>
+<li>for example: MultiDomain</li>
+</ul>
 </li>
 <li>
 <p>Click <strong>Create IdP Certificate</strong>.</p>
 </li>
 <li>
 <p>Domino REST API generates 4 files in this server's <code>[notesdata]/keepconfig.d</code> directory:</p>
-</li>
-<li>
-<p>MultiDomain.cert.pem</p>
-</li>
+<ul>
+<li>MultiDomain.cert.pem</li>
 <li>MultiDomain.json</li>
 <li>MultiDomain.private.key.pem</li>
-<li>
-<p>MultiDomain.public.key.pem</p>
+<li>MultiDomain.public.key.pem</li>
+</ul>
 </li>
 <li>
 <p>Copy these 4 files to your other Domino servers into the <code>[notesdata]/keepconfig.d</code> directory.</p>
@@ -6793,7 +6791,7 @@ Then enter the <code>Shutdown key</code> (masked input) and click on `Create IdP
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 28, 2025 16:22:56 UTC">May 28, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 29, 2025 14:48:47 UTC">May 29, 2025</span>
   </span>
 
     
