@@ -29,7 +29,7 @@ Some things to note when creating an identity service in Volt MX Foundry using D
 
 2. Now you can **Save**.
 
-![voltmx identityprovider keepidplite](../../assets/images/voltmx-identityprovider-keepidplite.png)
+![volt mx identityprovider keepidplite](../../assets/images/voltmx-identityprovider-keepidplite.png)
 
 ## Set up Domino REST API application and database
 

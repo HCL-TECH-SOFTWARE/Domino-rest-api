@@ -28,9 +28,9 @@ Working with databases, and enabling and configuring for REST access
 
 Tasks requiring access to the Management console
 
-## [VoltMX](VoltMX/index.md)
+## [Volt MX](VoltMX/index.md)
 
-Topics around the VoltMX integration of the REST API
+Topics around the Volt MX integration of the REST API
 
 ## [Code examples](codesamples/index.md)
 
