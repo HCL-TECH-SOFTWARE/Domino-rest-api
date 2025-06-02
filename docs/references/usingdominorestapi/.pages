@@ -13,7 +13,7 @@ nav:
   - modenames.md
   - Rich Text: richtext
   - scopes.md
-  - console.md
+#  - console.md
   - logging.md
   
   

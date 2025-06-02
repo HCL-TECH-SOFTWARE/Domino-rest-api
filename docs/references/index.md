@@ -45,8 +45,6 @@ Provides information related to the [installation and configuration of Domino RE
 
 - [Metrics](usingdominorestapi/metrics.md)
 
-- [Using Domino Console](usingdominorestapi/console.md)
-
 - [Reserved Form Modes](usingdominorestapi/modenames.md)
 
 ## Security

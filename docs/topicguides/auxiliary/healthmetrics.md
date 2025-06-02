@@ -14,7 +14,7 @@ Metrics are exposed on their own dedicated port, **METRICSPORT** in the config. 
 
 ## Tutorials
 
-- [Set up a functional account to access health and metrics ports](../../tutorial/installconfig/setupfunctionalaccount.md)
+- [Set up a functional account to access health and metrics ports](../../tutorial/installconfig/configuration/setupfunctionalaccount.md)
 
 ## How-to guide
 
@@ -23,8 +23,8 @@ Metrics are exposed on their own dedicated port, **METRICSPORT** in the config. 
 ## References
 
 - [Metrics](../../references/usingdominorestapi/metrics.md)
-- [Healthcheck Port (8886)](../../tutorial/installconfig/configuringPorts.md#healthcheck-port-8886)
-- [Port for Prometheus metrics (8890)](../../tutorial/installconfig/configuringPorts.md#port-for-prometheus-metrics-8890)
+- [Healthcheck Port (8886)](../configuringPorts.md#healthcheck-port-8886)
+- [Port for Prometheus metrics (8890)](../configuringPorts.md#port-for-prometheus-metrics-8890)
 
 ## Let's connect
 

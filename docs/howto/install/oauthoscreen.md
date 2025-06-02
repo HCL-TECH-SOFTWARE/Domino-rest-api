@@ -1,4 +1,4 @@
-# Customize oAuth consent screen
+# Customize OAuth consent screen
 
 !!! warning "Expert understanding required!"
 
@@ -6,7 +6,7 @@
 
 ![Consent Screen](../../assets/images/consentscreen.png)
 
-The oAuth consent screen uses 3 files:
+The OAuth consent screen uses 3 files:
 
 - `authorization.html` located in `resources/oauth`
 - `authorization.css` located in `resources/webroot`
@@ -85,4 +85,4 @@ Good luck with the changes.
 
 !!! tip "When things go wrong"
 
-    If you encounter any issues with the oAuth consent screen, you can revert to the default settings by removing the `alternateConsentDir` in the `oauth` section of your JSON configuration file.
+    If you encounter any issues with the OAuth consent screen, you can revert to the default settings by removing the `alternateConsentDir` in the `oauth` section of your JSON configuration file.

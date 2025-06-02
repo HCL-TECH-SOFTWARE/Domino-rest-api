@@ -6,11 +6,7 @@ title: Downloads
 
 ## Domino REST API
 
-Download from:
-
-- [HCL Software License & Download Portal](https://hclsoftware.flexnetoperations.com/){: target="_blank"}
-
-- [My HCLSoftware Portal](https://my.hcltechsw.com/){: target="_blank"}
+Download from [My HCLSoftware Portal](https://my.hcltechsw.com/){: target="_blank"}.
 
 ## Presentations
 
