@@ -1,6 +1,6 @@
 # Using Admin UI
 
-This tutorial shows how to use the Admin UI to configure and use a database for Domino REST API. Download the database `Demo.nsf` from [Resources](../references/downloads.md) and follow along. Anything you can do with the Admin UI you can also do using Postman, curl, SwaggerUI, or similar tools. See how to do each of the tasks in this tutorial using [Postman and Curl](./postmancurl.md) and using [SwaggerUI](./swagger.md).
+This tutorial shows how to use the Admin UI to configure and use a database for Domino REST API. Download the database `Demo.nsf` from [Resources](../references/downloads.md) and follow along. Anything you can do with the Admin UI you can also do using Postman, curl, Swagger UI, or similar tools. See how to do each of the tasks in this tutorial using [Postman and Curl](./postmancurl.md) and using [Swagger UI](./swagger.md).
 
 !!! note
     The screenshots may vary. The screenshots are based on latest Domino REST API snapshots. Make sure you're up-to-date.
@@ -155,4 +155,4 @@ To log out, click the profile icon and then select **Sign Out**.
 
 ## Additional information
 
-Refer to the [SwaggerUI tutorial](./swagger.md) for a UI-driven tutorial for creating a document and more.
+Refer to the [Swagger UI tutorial](./swagger.md) for a UI-driven tutorial for creating a document and more.

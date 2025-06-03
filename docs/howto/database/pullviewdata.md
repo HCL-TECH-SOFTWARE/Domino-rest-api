@@ -16,9 +16,9 @@ For example, to retrieve all the entries from a view that has 1350 entries, set 
 
 **Using the OpenAPI UI**
 
-1. Go to [SwaggerUI](http://localhost:8880/openapi/index.html).
+1. Go to [Swagger UI](http://localhost:8880/openapi/index.html).
 
-2. Follow the authorization steps in [Create a document with SwaggerUI](../../tutorial/swagger.md#create-a-document-with-swaggerui).
+2. Follow the authorization steps in [Create a document with Swagger UI](../../tutorial/swagger.md#create-a-document-with-swagger-ui).
 
 3. Go to and expand **data**, and then expand the **GET /lists/{name}** endpoint.
 4. Enter the scope name in **dataSource**.
@@ -37,9 +37,9 @@ This returns the remaining 350 entries not included in the returned entries in t
 
 **Using the OpenAPI UI**
 
-1. Go to [SwaggerUI](http://localhost:8880/openapi/index.html).
+1. Go to [Swagger UI](http://localhost:8880/openapi/index.html).
 
-2. Follow the authorization steps in [Create a document with SwaggerUI](../../tutorial/swagger.md#create-a-document-with-swaggerui).
+2. Follow the authorization steps in [Create a document with Swagger UI](../../tutorial/swagger.md#create-a-document-with-swagger-ui).
 
 3. Go to and expand **data**, and then expand the **GET /lists/{name}** endpoint.
 4. Enter the scope name in **dataSource**, view name in **name**, and then click **Execute**.
