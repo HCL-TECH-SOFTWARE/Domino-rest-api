@@ -5,8 +5,9 @@
 - SAP
 - Salesforce
 - Microsoft
-  - MS Excel (Windows and Mac)
-  - MS PowerBI
+
+    - MS Excel (Windows and Mac)
+    - MS PowerBI
 
 - [HCL Volt MX](https://opensource.hcltechsw.com/volt-mx-docs/index.html)
 
