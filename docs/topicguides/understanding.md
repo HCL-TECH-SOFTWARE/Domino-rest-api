@@ -69,7 +69,7 @@ Based on this mismatch of source and target environment we designed your option 
 - **Domino developer**: creates the **schema** that defines what data can be accessed in an NSF database.
 - **Domino administrator**: creates and activates the **scope** that defines how the data can be accessed. Also creates (optional) OAuth compatible applications with `client_id` and `client_secret` properties.
 - **Volt MX administrator**: configures Volt MX's foundry middleware to interact with Domino REST API using the foundry Domino REST API adapter.
-- **Application developer**: develops applications leveraging Domino REST API Endpoints, Volt MX services and front-end tools like Volt Iris, VSCode or any tools and framework of choice.
+- **Application developer**: develops applications leveraging Domino REST API Endpoints, Volt MX services and front-end tools like Volt MX Iris, VS Code or any tools and framework of choice.
 
 Read more about them in [Domino REST API Roles](../references/usingdominorestapi/roles.md).
 

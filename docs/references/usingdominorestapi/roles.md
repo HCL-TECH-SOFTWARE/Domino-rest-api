@@ -19,7 +19,7 @@ This role configures Volt MX's foundry middleware to interact with Domino REST A
 
 ## Volt MX developer
 
-This role develops applications leveraging Domino REST API Endpoints, Volt MX services with the Volt Iris IDE. Needs to be able to read data from a Domino REST API scope, so minimum access is `Reader`. When the application wants to update data in Notes, higher access will be required.
+This role develops applications leveraging Domino REST API Endpoints, Volt MX services with the Volt MX Iris IDE. Needs to be able to read data from a Domino REST API scope, so minimum access is `Reader`. When the application wants to update data in Notes, higher access will be required.
 
 You are not limited to Domino and Volt MX specific roles. Classical development is possible too!
 
@@ -33,6 +33,6 @@ This role develops applications leveraging Domino REST API Endpoints, Volt MX se
 
 This role develops applications using the SDKs native to the mobile OS like XCode or Android studio. Needs to be able to read data from a Domino REST API scope, so minimum access is `Reader`. When the application wants to update data in Notes, higher access will be required.
 
-The **Volt Iris IDE** allows to create multi-device experiences without getting lost in device specifics.
+The **Volt MX Iris IDE** allows to create multi-device experiences without getting lost in device specifics.
 
 <!-- {: .alert .alert-danger} -->
