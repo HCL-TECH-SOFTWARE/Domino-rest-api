@@ -72,6 +72,6 @@ The procedure guides you on how to set up and use the Virtual Spreadsheet featur
 
     This also includes trying to save the changes made with no `vsheet` mode, Microsoft Excel would show that it's saved, but in reality it's not.
 
-## Related links
+## Additional information
 
-- Virtual spreadsheet for MS Excel is read and write, if you want to be read-only using MS Excel, you can try out [OData Feed for MS Excel](../../tutorial/odata/excel.md).
+- Virtual spreadsheet for MS Excel is read and write. If you want it to be read-only using MS Excel, you can try out [OData Feed for MS Excel](../../tutorial/odata/excel.md).
