@@ -6,7 +6,7 @@ A view definition configures view visibility and the selection and naming of the
 
 - [Manage database views](../../tutorial/adminui.md#manage-database-views)
 - [Verify the views for the demo database](../../tutorial/postmancurl.md#verify-the-views-for-the-demo-database)
-- [List views with SwaggerUI](../../tutorial/swagger.md#list-views-with-swaggerui)
+- [List views with Swagger UI](../../tutorial/swagger.md#list-views-with-swagger-ui)
 
 ## How-to guide
 

@@ -13,7 +13,7 @@ You have to take note of the `operationId` of the endpoints in a specific API sc
 
 **To know the operationId**:
 
-1. Go to [OpenAPI (SwaggerUI)](http://localhost:8880/openapi/index.html).
+1. Go to [OpenAPI (Swagger UI)](http://localhost:8880/openapi/index.html).
 2. Select the API schema that contains the endpoints that you don't want to be available.
 
     ![API schemas](../../assets/images/apischema2.png)

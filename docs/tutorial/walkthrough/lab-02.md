@@ -66,7 +66,7 @@ In the Admin UI you will find one entry each for schema and scope:
 
 - [Discord discussion](https://discord.com/invite/jmRHpDRnH4)
 
-- Check the SwaggerUI for the new entry
+- Check the Swagger UI for the new entry
 - Use POSTMAN to create a second quick config using recipe.nsf
 - Open Domino Designer to check resources
 
