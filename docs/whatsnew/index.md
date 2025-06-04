@@ -17,7 +17,7 @@ The What's new contains information about the latest features, improvements, fix
     <!-- **0** New features-->
     <!-- **0** Breaking change-->
 
-[Read the full details](v1.1.3.md)
+[Read the full details](v1.1.4.md)
 
 ## Domino REST API v1.1.3.1
 
@@ -32,7 +32,7 @@ The What's new contains information about the latest features, improvements, fix
     - **3** Resolved issues
     - **1** Breaking change
 
-[Read the full details](v1.1.4.md)
+[Read the full details](v1.1.3.md)
 
 ## Domino REST API v1.1.2 and earlier
 
