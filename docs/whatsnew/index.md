@@ -12,8 +12,8 @@ The What's new contains information about the latest features, improvements, fix
 
     Release date: June 16, 2025
 
-    - **5** Improvements
-    - **2** Resolved issues
+    - **7** Improvements
+    - **4** Resolved issues
     <!-- **0** New features-->
     <!-- **0** Breaking change-->
 

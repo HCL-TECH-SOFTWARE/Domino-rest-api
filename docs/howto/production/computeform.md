@@ -23,7 +23,7 @@ You are aware of how to [change the form configuration](../../references/usingwe
 
     !!! note
 
-        - **Continue on Error** toggle is only enabled when the **Compute with Form** toggle is set to the on position or if the schema item is not available. 
+        - **Continue on Error** toggle is only enabled when the **Compute with Form** toggle is set to the on position. The **Continue on Error** toggle is set to the on position by default.
         - When set to the on position, the process continues even if the document validation fails. 
 
 4. Click **Save**.
