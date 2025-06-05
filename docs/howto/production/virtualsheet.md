@@ -19,7 +19,7 @@ The procedure guides you on how to set up and use the Virtual Spreadsheet featur
 
 ## Procedure
 
-1. Choose an active view that you want to open. 
+1. Choose an active view that you want to open.
 
     !!!tip
         - To get a list of your views from your target schema, see [List available database views](../../references/usingwebui/schemaui.md#list-available-database-views).
@@ -30,7 +30,7 @@ The procedure guides you on how to set up and use the Virtual Spreadsheet featur
     If you aren't sure which form or forms are available in the view, you may use the view's selection formula. To do this:
 
     - You can use the Domino Designer to open the view and look at its selection formula.
-    - You can use the `GET /design/{designType}/{designName}` endpoint by setting `designType` parameter to *views* and `designName` parameter to your view name, and then find the `selectionFormula` in the response. 
+    - You can use the `GET /design/{designType}/{designName}` endpoint by setting `designType` parameter to *views* and `designName` parameter to your view name, and then find the `selectionFormula` in the response.
 
         For example, if your view's selection formula states `SELECT Form = 'Customers' | Form = 'Leads'`, both the `Customers` form and the `Leads` form need to have the `vsheet` mode.  
 
@@ -65,10 +65,13 @@ The procedure guides you on how to set up and use the Virtual Spreadsheet featur
 
 6. Implement updates as needed and save them using the Microsoft Excel save command. You should see a prompt indicating *Saving...*. If the prompt changes to *Saved.*, it means your updates have been saved.
 
-
 !!!warning "Important"
     Changes that result into an error when updating the corresponding document of the view entry won't be saved.
 
     For example, if you edited 10 rows and 1 row encountered an error, Microsoft Excel would prompt a successful save, but in reality, that 1 row's changes wouldn't get reflected back in its corresponding document.
 
     This also includes trying to save the changes made with no `vsheet` mode, Microsoft Excel would show that it's saved, but in reality it's not.
+
+## Additional information
+
+- Virtual spreadsheet for MS Excel is read and write. If you want it to be read-only using MS Excel, you can try out [OData Feed for MS Excel](../../tutorial/odata/excel.md).

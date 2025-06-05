@@ -5,8 +5,9 @@
 - SAP
 - Salesforce
 - Microsoft
-  - MS Excel (Windows only)
-  - MS PowerBI
+
+    - MS Excel (Windows and Mac)
+    - MS PowerBI
 
 - [HCL Volt MX](https://opensource.hcltechsw.com/volt-mx-docs/index.html)
 
@@ -32,4 +33,3 @@ Continue this tutorial for your use case:
 - [OData in Excel](excel.md)
 
 - [OData in Salesforce](salesforce.md)
-

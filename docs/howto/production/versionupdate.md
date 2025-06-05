@@ -6,11 +6,11 @@ The procedure guides you on how to update your installed Domino REST API to the 
 
 ## Before you begin
 
-- When updating installed Domino REST API on Linux, Mac, or Windows, [download the latest release version of the Domino REST API multi-platform installer](../../tutorial/installconfig/index.md#download-domino-rest-api).
+- When updating installed Domino REST API on Linux, Mac, or Windows, [download the latest release version of the Domino REST API multi-platform installer](../../tutorial/installconfig/install/downloaddrapi.md).
 
 - When updating Domino REST API running with Docker image:
 
-    - [Download the docker image of the latest release version of Domino REST API](../../tutorial/installconfig/index.md#download-domino-rest-api).
+    - [Download the docker image of the latest release version of Domino REST API](../../tutorial/installconfig/install/downloaddrapi.md).
 
     - You can also take note of the latest Docker image version for docker compose `.env` file from Harbor in [What’s New](../../whatsnew/index.md).
 
@@ -25,20 +25,21 @@ Follow the procedure based on the installation option you used when installing t
 ### Docker
 
 1. Remove the existing docker container.
-2. If using the docker image from *HCL Software License and Download Portal* or *My HCLSoftware Portal*, load the docker image using the following command: 
-    
+2. If using the docker image from *My HCLSoftware Portal*, load the docker image using the following command: 
+
     ```bash
 	docker load -i [name_of_tar_file].tar
     ```
 
-    !!!note
+    !!! note
+
         - Make sure you [extract the tar.gz file](https://linuxize.com/post/how-to-extract-unzip-tar-gz-file/) first.
 
         - This step isn't applicable if using the docker image from Harbor. 
 
 3. Take note of the image name.
 
-    - When using the docker image from *HCL Software License and Download Portal* or *My HCLSoftware Portal*, take note of the image name that was output after being loaded. The image name is also indicated in the [What’s New](../../whatsnew/index.md) for each version of the Domino REST API and marked *Docker image version for docker compose .env file (CONTAINER_IMAGE)*.
+    - When using the docker image from *My HCLSoftware Portal*, take note of the image name that was output after being loaded. The image name is also indicated in the [What’s New](../../whatsnew/index.md) for each version of the Domino REST API and marked *Docker image version for docker compose .env file (CONTAINER_IMAGE)*.
 
         !!! example "Example loaded image name"
 
@@ -67,7 +68,7 @@ Follow the procedure based on the installation option you used when installing t
 
         If prompted for access to HCL Container Repository (Harbor), [obtain your HCL Container Repository username and password](../../howto/install/obtainauthenticationtoken.md), and then sign-in using `docker login hclcr.io` command and the obtained credentials. 
 
-6. [Validate that an instance is successfully running on a container](../../tutorial/installconfig/docker.md#validation).
+6. [Validate that an instance is successfully running on a container](../../tutorial/installconfig/install/docker.md#validation).
 
 <!--### Helm
 
@@ -188,7 +189,7 @@ java -jar restapiInstall.jar \
 
 !!! note
 
-    For more information on the installation-related support and limitations to client use, see [Install on Mac](../../tutorial/installconfig/mac.md).
+    For more information on the installation-related support and limitations to client use, see [Install on Mac](../../tutorial/installconfig/install/mac.md).
 
 
 ### Windows
@@ -230,4 +231,4 @@ When running the command for Windows Notes Client, the installer creates a `runr
 
 !!! note
 
-    For more information on the installation-related support and limitations to client use, see [Install on Windows](../../tutorial/installconfig/win.md). 
+    For more information on the installation-related support and limitations to client use, see [Install on Windows](../../tutorial/installconfig/install/win.md). 

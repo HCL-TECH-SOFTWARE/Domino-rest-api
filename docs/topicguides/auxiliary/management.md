@@ -4,8 +4,8 @@ System information and interactions conducted through a functional account.
 
 ## Tutorials
 
-- [Create user and password to initially access the Management console](../../tutorial/installconfig/setupfunctionalaccount.md#create-user-and-password-to-initially-access-the-management-console).
-- [Set up a functional account](../../tutorial/installconfig/setupfunctionalaccount.md)
+- [Create user and password to initially access the Management console](../../tutorial/installconfig/configuration/setupfunctionalaccount.md#create-user-and-password-to-initially-access-the-management-console).
+- [Set up a functional account](../../tutorial/installconfig/configuration/setupfunctionalaccount.md)
 
 ## How-to guides
 
@@ -14,8 +14,8 @@ Check the [Management console](../../howto/management/index.md) how-to guides fo
 ## References
 
 - [Using the Management Console for encryption operations](../../references/security/encryption.md#using-the-management-console-for-encryption-operations)
-- [Using Domino Console](../../references/usingdominorestapi/console.md)
-- [Management Port (8889)](../../tutorial/installconfig/configuringPorts.md#management-port-8889)
+- [Using Domino Console](../../howto/management/console.md)
+- [Management Port (8889)](../configuringPorts.md#management-port-8889)
 
 ## Let's connect
 

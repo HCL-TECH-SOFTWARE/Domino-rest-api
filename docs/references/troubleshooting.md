@@ -19,7 +19,7 @@ You need to check if the REST API is loaded.
 3. If it's listed, shut it down with `tell restapi quit` before trying `load restapi`. 
 4. Take note of any messages in case you need more support.
 
---8<-- "iskeeprunning.md"
+<!----8<-- "iskeeprunning.md"-->
 
 ## Address already in use error
 

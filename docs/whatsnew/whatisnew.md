@@ -661,7 +661,7 @@
 
     **New features**
 
-    - Added ability to view the Domino Server console live as well as send commands from the Domino REST API management page if using admin credentials. See [Domino Console Configuration](../references/usingdominorestapi/console.md) for more information.
+    - Added ability to view the Domino Server console live as well as send commands from the Domino REST API management page if using admin credentials. See [Domino Console Configuration](../howto/management/console.md) for more information.
     
     - Added ability to send Domino Server console commands via API if using admin credentials.
     - Added ability to view the schema json within the Admin UI.
