@@ -36,6 +36,8 @@ This option enables users to log in with a passkey that enables signing in to we
 
 ### Log in with OIDC
 
+!!! danger "For Domino REST API v2.1.4, do not use this log in option. Instead, use the Log in with password option."
+
 This option uses the Domino REST API IdP by default and implements the OAuth process requiring user consent to log in. You can log in to the **Admin UI** by clicking **LOG IN WITH OIDC**. The **DRAPI** option will be the only one available from the drop-down field. Click **LOG IN**.
 
 ![HCL Domino Login](../../assets/images/AdminLogin3.png)
