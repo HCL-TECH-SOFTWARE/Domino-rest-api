@@ -78,7 +78,6 @@ You can use your browser's developer tools to inspect and debug the error you en
 
     In cases where you suspect that errors may be linked to network requests, it can be helpful to access the **Network** tab within the developer tools. This enables you to filter the displayed requests by their status, making it easier to identify any issues. By clicking on the name of a request that has failed, you can view additional details regarding the error, including the specifics of the response.
 
-
 ## Customer Support portal
 
 To open support tickets, go to the [Customer Support](https://support.hcl-software.com/csm "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:15px;width:15px"} portal.
