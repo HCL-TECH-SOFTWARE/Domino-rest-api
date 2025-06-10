@@ -95,7 +95,7 @@ For addressing common errors in installing and running the Domino REST API servi
 
 ## Contact support
 
-Helps you understand what information to provide to ensure that your support needs are addressed quickly and effectively. To learn more, see [Contact support](support.md)
+Helps you understand what information to provide to ensure that your support needs are addressed effectively. To learn more, see [Contact support](support.md)
 
 ## Downloads
 
