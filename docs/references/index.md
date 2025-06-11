@@ -93,6 +93,10 @@ For addressing common errors in installing and running the Domino REST API servi
 
 - [Glossary](quickreference/glossary.md)
 
+## Contact support
+
+Helps you understand what information to provide to ensure that your support needs are addressed effectively. To learn more, see [Contact support](support.md)
+
 ## Downloads
 
 For scripts, Postman collections, sample databases, and more, see [Downloads](downloads.md).

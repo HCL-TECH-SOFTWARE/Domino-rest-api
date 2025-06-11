@@ -162,13 +162,13 @@ It can be configured like:
 }
 ```
 
-The "oidc" is similar to "oidc-idpcat" or "jwt," are main configuration block. Inside, the keys can be anything, like "any-name". This is the same idea as documented in [External JWT Provider configuration](../../references/security/authentication.md#external-jwt--oidc-providers).
+The "oidc" is similar to "oidc-idpcat" or "jwt". The keys can be anything, like "any-name". This is the same idea as documented in [External JWT Provider configuration](../../references/security/authentication.md#external-jwt--oidc-providers).
 
 | Items                                             | Description                                                                                                                 |
 | :------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------- |
 | `active`                                          | **Optional**, and can be useful for setting to false to temporarily disable something without deleting the config entirely. |
 | `providerURL`                                     | It's the OIDC-provider-specific URL. It's in a form common for Keycloak, but Azure and others look different.               |
-| `clientId`                                        | It's the configured client ID from the OIDC provider, Strongly recommended to use `Domino` as client name.                  |
+| `clientId`                                        | It's the configured client ID from the OIDC provider. It is strongly recommended to use `Domino` as client name.                  |
 | `clientSecret`                                    | It's the generated client secret from the OIDC provider, usually a randomly-generated hex string.                           |
 | `userIdentifier` and `userIdentifierInLdapFormat` | **Optional**                                                                                                                |
 
@@ -176,11 +176,7 @@ The "oidc" is similar to "oidc-idpcat" or "jwt," are main configuration block. I
 
 !!! tip "We strongly recommend this option"
 
-    The `OIDC idpcat` support lets you use providers configured in `idpcat.nsf` ("IdP Catalog") starting with Domino 14.
-
-- To know more about creating `idpcat.nsf`, see [Configuring trusted OIDC providers](https://help.hcltechsw.com/domino/14.0.0/admin/secu_config_http_bearer_auth_t.html?hl=idp%2Ccatalog)
-
-- [Configuring trusted OIDC providers](https://help.hcltechsw.com/domino/14.0.0/admin/secu_config_http_bearer_auth_t.html?hl=idp%2Ccatalog)
+    The `OIDC idpcat` support lets you use providers configured in `idpcat.nsf` ("IdP Catalog") starting with Domino 14. To know more about creating `idpcat.nsf`, see [Configuring trusted OIDC providers](https://help.hcltechsw.com/domino/14.0.0/admin/secu_config_http_bearer_auth_t.html?hl=idp%2Ccatalog)
 
 The configuration is as follows in Domino REST API:
 
@@ -234,6 +230,40 @@ In general, `oidc` and `oidc-idpcat` achieve the same goal, which is to use a co
     In general, you'd use any of these ("jwt", "oidc", "oidc-idpcat") when you either want to or have to have an external identity provider like Keycloak or Microsoft Entra ID, formerly Azure Active Directory, and have those tokens be usable for Domino REST API calls. Using either "jwt"-with-providerUrl or either of the "oidc" ones will let Domino REST API use standard OIDC endpoints to handle key lookup, avoiding the need to copy and paste signer keys into the Domino REST API config.
 
 Check [Configure Domino REST API to use an OIDC provider](../../howto/IdP/configureoidc.md).
+
+### Domino as an OIDC provider
+
+!!! note "This is a preview feature in the Domino REST API v1.1.4 release, and applies to HCL Domino v14.5 or later only."
+
+Starting with HCL Domino v14.5, the Domino HTTP task can act as an OIDC identity provider. This feature allows administrators to leverage their existing Domino HTTP authentication experience to authenticate end users with applications, servers, and services that support OIDC.
+
+The following configuration allows Domino REST API to use Domino as an OIDC provider:
+
+```json
+{
+  "domino-oidc-idpcat": {
+      "active": true,
+      "providerUrl": "https://<domino oidc server>/auth/protocol/oidc",
+      "clientId": "some-clientid",
+      "clientSecret": "some-clientsecret",
+      "scope": "Domino.user.all",
+      "aud": "https://<Domino REST API DNS name>"
+    }
+  }
+```
+
+| Items | Description |
+| :--- | :--- |
+| `active` | **Optional** - Can be useful for setting to `false` to temporarily disable something without deleting the config entirely. |
+| `providerUrl` | The base URL that includes the name of the OIDC Domino server.<br/><br/>For example: `https://auth.mydomains.com/auth/protocol/oidc`|
+| `clientId` | It's the configured client ID from the OIDC provider. It's strongly recommended to use `Domino` as client name. |
+| `clientSecret` | It's the generated client secret from the OIDC provider, usually a randomly generated hex string. |
+| `scope` | A scope that is expected to be included in the token from the OIDC provider. The scopes are `openid`, `email`, `profile`, `$DATA`, `Domino.user.all`. `Domino.user.all` is used for Domino HTTP. |
+| `aud` | A string or array of strings of audiences expected to be included in the token. The value of the `aud` key is set to `https://<Domino REST API DNS name>` to match what Domino HTTP expects.|
+
+!!! caution
+
+    The Domino REST API configuration **MUST NOT** specify `additionalClientIds`. 
 
 --8<-- "onclientids.md"
 

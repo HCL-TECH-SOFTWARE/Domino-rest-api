@@ -5,7 +5,7 @@ When configuring an external IdP using OIDC or OIDC-idpcat, you need to provide 
 - `Domino` for the server (client secret might be handeled by `idpcat.nsf`)
 - `keepadminui` for the Domino REST API admin client
 - `keepofba` for the Office document round trip experience
-- One each for your custom client applications (with clientSecret for servers or PKSE for clients)
+- One each for your custom client applications (with clientSecret for servers or PKCE for clients)
 
 !!! tip "Use the internal IdP as learning resource"
 
