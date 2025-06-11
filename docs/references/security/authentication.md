@@ -263,7 +263,7 @@ The following configuration allows Domino REST API to use Domino as an OIDC prov
 
 !!! caution
 
-    The Domino REST API configuration **MUST NOT** specify `additionalClientIds` as it sets a flag that breaks the core API call. 
+    The Domino REST API configuration **MUST NOT** specify `additionalClientIds`. 
 
 --8<-- "onclientids.md"
 
