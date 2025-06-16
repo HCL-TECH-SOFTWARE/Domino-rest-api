@@ -10,25 +10,25 @@
       
       
       
-        <link rel="canonical" href="https://opensource.hcltechsw.com/Domino-rest-api/tutorial/installconfig/docker.html">
+        <link rel="canonical" href="https://opensource.hcltechsw.com/Domino-rest-api/tutorial/installconfig/configuration/exposedb.html">
       
       
-        <link rel="prev" href="index.html">
+        <link rel="prev" href="admingroup.html">
       
       
-        <link rel="next" href="linux.html">
+        <link rel="next" href="../../walkthrough/index.html">
       
       
-      <link rel="icon" href="../../favicon.ico">
+      <link rel="icon" href="../../../favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>Docker - HCL Domino REST API Documentation</title>
+        <title>Expose database for access - HCL Domino REST API Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
       
 
@@ -41,9 +41,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/css/keep_style.css">
+      <link rel="stylesheet" href="../../../assets/css/keep_style.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#run-domino-rest-api-with-a-docker-image" class="md-skip">
+        <a href="#expose-domino-database-for-rest-api-access" class="md-skip">
           Skip to content
         </a>
       
@@ -92,9 +92,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../index.html" title="HCL Domino REST API Documentation" class="md-header__button md-logo" aria-label="HCL Domino REST API Documentation" data-md-component="logo">
+    <a href="../../../index.html" title="HCL Domino REST API Documentation" class="md-header__button md-logo" aria-label="HCL Domino REST API Documentation" data-md-component="logo">
       
-  <img src="../../assets/images/HCL_KEEP_ICON.jpg" alt="logo">
+  <img src="../../../assets/images/HCL_KEEP_ICON.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Docker
+              Expose database for access
             
           </span>
         </div>
@@ -197,7 +197,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../index.html" class="md-tabs__link">
+      <a href="../../../index.html" class="md-tabs__link">
         
   
   
@@ -218,7 +218,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../whatsnew/index.html" class="md-tabs__link">
+        <a href="../../../whatsnew/index.html" class="md-tabs__link">
           
   
   
@@ -242,7 +242,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../index.html" class="md-tabs__link">
+        <a href="../../index.html" class="md-tabs__link">
           
   
   
@@ -264,7 +264,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../howto/index.html" class="md-tabs__link">
+        <a href="../../../howto/index.html" class="md-tabs__link">
           
   
   
@@ -286,7 +286,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../topicguides/index.html" class="md-tabs__link">
+        <a href="../../../topicguides/index.html" class="md-tabs__link">
           
   
   
@@ -308,7 +308,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../references/index.html" class="md-tabs__link">
+        <a href="../../../references/index.html" class="md-tabs__link">
           
   
   
@@ -350,9 +350,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../index.html" title="HCL Domino REST API Documentation" class="md-nav__button md-logo" aria-label="HCL Domino REST API Documentation" data-md-component="logo">
+    <a href="../../../index.html" title="HCL Domino REST API Documentation" class="md-nav__button md-logo" aria-label="HCL Domino REST API Documentation" data-md-component="logo">
       
-  <img src="../../assets/images/HCL_KEEP_ICON.jpg" alt="logo">
+  <img src="../../../assets/images/HCL_KEEP_ICON.jpg" alt="logo">
 
     </a>
     HCL Domino REST API Documentation
@@ -379,7 +379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../index.html" class="md-nav__link">
+      <a href="../../../index.html" class="md-nav__link">
         
   
   
@@ -411,6 +411,8 @@
       
         
       
+        
+      
     
     
     
@@ -426,7 +428,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../whatsnew/index.html" class="md-nav__link ">
+            <a href="../../../whatsnew/index.html" class="md-nav__link ">
               
   
   
@@ -461,7 +463,30 @@
   
   
     <li class="md-nav__item">
-      <a href="../../whatsnew/v1.1.3.html" class="md-nav__link">
+      <a href="../../../whatsnew/v1.1.4.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domino REST API v1.1.4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../whatsnew/v1.1.3.html" class="md-nav__link">
         
   
   
@@ -484,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../whatsnew/whatisnew.html" class="md-nav__link">
+      <a href="../../../whatsnew/whatisnew.html" class="md-nav__link">
         
   
   
@@ -560,7 +585,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../index.html" class="md-nav__link ">
+            <a href="../../index.html" class="md-nav__link ">
               
   
   
@@ -595,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../quickstart.html" class="md-nav__link">
+      <a href="../../quickstart.html" class="md-nav__link">
         
   
   
@@ -606,6 +631,282 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Installation and configuration
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Installation and configuration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../install/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3_2" id="__nav_3_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System requirements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install/downloaddrapi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Download Domino REST API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install/linux.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install/win.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Windows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install/mac.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    macOS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install/docker.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -649,7 +950,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -658,7 +959,7 @@
   
   
   <span class="md-ellipsis">
-    Installation and configuration
+    Post-installation tasks
     
   </span>
   
@@ -666,16 +967,16 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_3_3" id="__nav_3_3_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3_3">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3_3">
             <span class="md-nav__icon md-icon"></span>
-            Installation and configuration
+            Post-installation tasks
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -688,12 +989,104 @@
   
   
     <li class="md-nav__item">
-      <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789" class="md-nav__link">
+      <a href="connectivity.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    System requirements
+    Check connectivity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="secureport.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Secure ports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="setupfunctionalaccount.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Set up functional accounts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="jwtconfig.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure JWT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="admingroup.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manage databases
     
   </span>
   
@@ -725,7 +1118,7 @@
   
   
   <span class="md-ellipsis">
-    Docker
+    Expose database for access
     
   </span>
   
@@ -733,12 +1126,12 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="docker.html" class="md-nav__link md-nav__link--active">
+      <a href="exposedb.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Docker
+    Expose database for access
     
   </span>
   
@@ -763,19 +1156,73 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#about-this-task" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      About this task
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Prerequisites">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#log-in-to-admin-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log in to Admin UI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create a schema">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#persistent-volume" class="md-nav__link">
+  <a href="#add-schema" class="md-nav__link">
     <span class="md-ellipsis">
-      Persistent volume
+      Add schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activate-a-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activate a form
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-a-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure a form
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activate-a-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activate a view
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activate-an-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activate an agent
     </span>
   </a>
   
@@ -787,56 +1234,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#store-the-following-files-in-a-folder" class="md-nav__link">
+  <a href="#create-a-scope" class="md-nav__link">
     <span class="md-ellipsis">
-      Store the following files in a folder
+      Create a scope
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#load-docker-image" class="md-nav__link">
+  <a href="#create-an-oauth-application" class="md-nav__link">
     <span class="md-ellipsis">
-      Load Docker image
+      Create an OAuth application
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create an OAuth application">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add application
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#update-env-file" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#generate-an-app-secret" class="md-nav__link">
     <span class="md-ellipsis">
-      Update .env file
+      Generate an app secret
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#run-domino-rest-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      Run Domino REST API
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Validation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#alternate-docker-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Alternate Docker configuration
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -844,318 +1279,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="linux.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Linux
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="mac.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Mac
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="win.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Win
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_3_7" id="__nav_3_3_7_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Post installation tasks
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3_7">
-            <span class="md-nav__icon md-icon"></span>
-            Post installation tasks
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="postinstallation.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Post installation tasks overview
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="connectivity.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Verify connectivity
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="configuringPorts.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Securing ports
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../howto/database/enablingadb.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Enable a database
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../references/security/authentication.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Configure JWT
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../references/security/encryption.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Sharing JWT between servers
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../adminui.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Configure apps
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="setupfunctionalaccount.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Setup functional accounts
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1231,7 +1354,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../walkthrough/index.html" class="md-nav__link ">
+            <a href="../../walkthrough/index.html" class="md-nav__link ">
               
   
   
@@ -1266,7 +1389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../walkthrough/lab-00.html" class="md-nav__link">
+      <a href="../../walkthrough/lab-00.html" class="md-nav__link">
         
   
   
@@ -1289,7 +1412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../walkthrough/lab-01.html" class="md-nav__link">
+      <a href="../../walkthrough/lab-01.html" class="md-nav__link">
         
   
   
@@ -1312,7 +1435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../walkthrough/lab-02.html" class="md-nav__link">
+      <a href="../../walkthrough/lab-02.html" class="md-nav__link">
         
   
   
@@ -1335,7 +1458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../walkthrough/lab-03.html" class="md-nav__link">
+      <a href="../../walkthrough/lab-03.html" class="md-nav__link">
         
   
   
@@ -1358,7 +1481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../walkthrough/lab-04.html" class="md-nav__link">
+      <a href="../../walkthrough/lab-04.html" class="md-nav__link">
         
   
   
@@ -1381,7 +1504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../walkthrough/lab-05.html" class="md-nav__link">
+      <a href="../../walkthrough/lab-05.html" class="md-nav__link">
         
   
   
@@ -1404,7 +1527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../walkthrough/lab-06.html" class="md-nav__link">
+      <a href="../../walkthrough/lab-06.html" class="md-nav__link">
         
   
   
@@ -1427,7 +1550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../walkthrough/lab-07.html" class="md-nav__link">
+      <a href="../../walkthrough/lab-07.html" class="md-nav__link">
         
   
   
@@ -1450,7 +1573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../walkthrough/lab-08.html" class="md-nav__link">
+      <a href="../../walkthrough/lab-08.html" class="md-nav__link">
         
   
   
@@ -1473,7 +1596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../walkthrough/lab-09.html" class="md-nav__link">
+      <a href="../../walkthrough/lab-09.html" class="md-nav__link">
         
   
   
@@ -1496,7 +1619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../walkthrough/lab-10.html" class="md-nav__link">
+      <a href="../../walkthrough/lab-10.html" class="md-nav__link">
         
   
   
@@ -1519,7 +1642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../walkthrough/lab-11.html" class="md-nav__link">
+      <a href="../../walkthrough/lab-11.html" class="md-nav__link">
         
   
   
@@ -1542,7 +1665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../walkthrough/downloadindex.html" class="md-nav__link">
+      <a href="../../walkthrough/downloadindex.html" class="md-nav__link">
         
   
   
@@ -1619,7 +1742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adminui.html" class="md-nav__link">
+      <a href="../../adminui.html" class="md-nav__link">
         
   
   
@@ -1642,7 +1765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../postmancurl.html" class="md-nav__link">
+      <a href="../../postmancurl.html" class="md-nav__link">
         
   
   
@@ -1665,7 +1788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../swagger.html" class="md-nav__link">
+      <a href="../../swagger.html" class="md-nav__link">
         
   
   
@@ -1713,7 +1836,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../odata/index.html" class="md-nav__link ">
+            <a href="../../odata/index.html" class="md-nav__link ">
               
   
   
@@ -1748,7 +1871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../odata/excel.html" class="md-nav__link">
+      <a href="../../odata/excel.html" class="md-nav__link">
         
   
   
@@ -1771,7 +1894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../odata/salesforce.html" class="md-nav__link">
+      <a href="../../odata/salesforce.html" class="md-nav__link">
         
   
   
@@ -1837,7 +1960,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../extensibility/index.html" class="md-nav__link ">
+            <a href="../../extensibility/index.html" class="md-nav__link ">
               
   
   
@@ -1872,7 +1995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../extensibility/javaproject.html" class="md-nav__link">
+      <a href="../../extensibility/javaproject.html" class="md-nav__link">
         
   
   
@@ -1895,7 +2018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../extensibility/openapi.html" class="md-nav__link">
+      <a href="../../extensibility/openapi.html" class="md-nav__link">
         
   
   
@@ -1918,12 +2041,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../extensibility/configjson.html" class="md-nav__link">
+      <a href="../../extensibility/configjson.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    The `config.json` configuration
+    The config.json configuration
     
   </span>
   
@@ -1941,7 +2064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../extensibility/businesslogic.html" class="md-nav__link">
+      <a href="../../extensibility/businesslogic.html" class="md-nav__link">
         
   
   
@@ -1964,7 +2087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../extensibility/accesscontrol.html" class="md-nav__link">
+      <a href="../../extensibility/accesscontrol.html" class="md-nav__link">
         
   
   
@@ -1987,7 +2110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../extensibility/deployment.html" class="md-nav__link">
+      <a href="../../extensibility/deployment.html" class="md-nav__link">
         
   
   
@@ -2010,7 +2133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../extensibility/devcontainer.html" class="md-nav__link">
+      <a href="../../extensibility/devcontainer.html" class="md-nav__link">
         
   
   
@@ -2085,7 +2208,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../howto/index.html" class="md-nav__link ">
+            <a href="../../../howto/index.html" class="md-nav__link ">
               
   
   
@@ -2163,7 +2286,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../howto/install/index.html" class="md-nav__link ">
+            <a href="../../../howto/install/index.html" class="md-nav__link ">
               
   
   
@@ -2198,7 +2321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   
@@ -2221,7 +2344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/install/symlink.html" class="md-nav__link">
+      <a href="../../../howto/install/symlink.html" class="md-nav__link">
         
   
   
@@ -2244,7 +2367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/install/modifyconfig.html" class="md-nav__link">
+      <a href="../../../howto/install/modifyconfig.html" class="md-nav__link">
         
   
   
@@ -2267,7 +2390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/install/cors.html" class="md-nav__link">
+      <a href="../../../howto/install/cors.html" class="md-nav__link">
         
   
   
@@ -2290,7 +2413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/install/multiserver.html" class="md-nav__link">
+      <a href="../../../howto/install/multiserver.html" class="md-nav__link">
         
   
   
@@ -2313,7 +2436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/install/notesclient.html" class="md-nav__link">
+      <a href="../../../howto/install/notesclient.html" class="md-nav__link">
         
   
   
@@ -2336,7 +2459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/install/uninstall.html" class="md-nav__link">
+      <a href="../../../howto/install/uninstall.html" class="md-nav__link">
         
   
   
@@ -2359,7 +2482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/install/passkey.html" class="md-nav__link">
+      <a href="../../../howto/install/passkey.html" class="md-nav__link">
         
   
   
@@ -2382,7 +2505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/install/webauthn.html" class="md-nav__link">
+      <a href="../../../howto/install/webauthn.html" class="md-nav__link">
         
   
   
@@ -2405,12 +2528,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/install/oauthoscreen.html" class="md-nav__link">
+      <a href="../../../howto/install/oauthoscreen.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Customize oAuth consent screen
+    Customize OAuth consent screen
     
   </span>
   
@@ -2428,7 +2551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/install/obtainauthenticationtoken.html" class="md-nav__link">
+      <a href="../../../howto/install/obtainauthenticationtoken.html" class="md-nav__link">
         
   
   
@@ -2484,7 +2607,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../howto/web/index.html" class="md-nav__link ">
+            <a href="../../../howto/web/index.html" class="md-nav__link ">
               
   
   
@@ -2519,7 +2642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/web/httpsproxy.html" class="md-nav__link">
+      <a href="../../../howto/web/httpsproxy.html" class="md-nav__link">
         
   
   
@@ -2542,7 +2665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/web/httpsproxy2.html" class="md-nav__link">
+      <a href="../../../howto/web/httpsproxy2.html" class="md-nav__link">
         
   
   
@@ -2612,7 +2735,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../howto/IdP/index.html" class="md-nav__link ">
+            <a href="../../../howto/IdP/index.html" class="md-nav__link ">
               
   
   
@@ -2647,7 +2770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/IdP/configuredrapiIdP.html" class="md-nav__link">
+      <a href="../../../howto/IdP/configuredrapiIdP.html" class="md-nav__link">
         
   
   
@@ -2670,7 +2793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/IdP/configureoidc.html" class="md-nav__link">
+      <a href="../../../howto/IdP/configureoidc.html" class="md-nav__link">
         
   
   
@@ -2693,7 +2816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/IdP/configuringAD.html" class="md-nav__link">
+      <a href="../../../howto/IdP/configuringAD.html" class="md-nav__link">
         
   
   
@@ -2716,7 +2839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/IdP/configuringCertificates.html" class="md-nav__link">
+      <a href="../../../howto/IdP/configuringCertificates.html" class="md-nav__link">
         
   
   
@@ -2739,7 +2862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/IdP/configuringIdentityProvider.html" class="md-nav__link">
+      <a href="../../../howto/IdP/configuringIdentityProvider.html" class="md-nav__link">
         
   
   
@@ -2762,7 +2885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/IdP/configuringKeycloak.html" class="md-nav__link">
+      <a href="../../../howto/IdP/configuringKeycloak.html" class="md-nav__link">
         
   
   
@@ -2785,7 +2908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/IdP/keepsaml.html" class="md-nav__link">
+      <a href="../../../howto/IdP/keepsaml.html" class="md-nav__link">
         
   
   
@@ -2808,7 +2931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/IdP/roundtripidp.html" class="md-nav__link">
+      <a href="../../../howto/IdP/roundtripidp.html" class="md-nav__link">
         
   
   
@@ -2831,7 +2954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/IdP/adminuiidp.html" class="md-nav__link">
+      <a href="../../../howto/IdP/adminuiidp.html" class="md-nav__link">
         
   
   
@@ -2896,6 +3019,8 @@
       
         
       
+        
+      
     
     
     
@@ -2911,7 +3036,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../howto/production/index.html" class="md-nav__link ">
+            <a href="../../../howto/production/index.html" class="md-nav__link ">
               
   
   
@@ -2946,7 +3071,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/production/changefilesize.html" class="md-nav__link">
+      <a href="../../../howto/production/changefilesize.html" class="md-nav__link">
         
   
   
@@ -2969,7 +3094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/production/prodports.html" class="md-nav__link">
+      <a href="../../../howto/production/prodports.html" class="md-nav__link">
         
   
   
@@ -2992,7 +3117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/production/customAPI.html" class="md-nav__link">
+      <a href="../../../howto/production/customAPI.html" class="md-nav__link">
         
   
   
@@ -3015,7 +3140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/production/dominohttps.html" class="md-nav__link">
+      <a href="../../../howto/production/dominohttps.html" class="md-nav__link">
         
   
   
@@ -3038,7 +3163,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/production/hardening.html" class="md-nav__link">
+      <a href="../../../howto/production/hardening.html" class="md-nav__link">
         
   
   
@@ -3061,7 +3186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/production/httpsprod.html" class="md-nav__link">
+      <a href="../../../howto/production/httpsprod.html" class="md-nav__link">
         
   
   
@@ -3084,7 +3209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/production/reactjs.html" class="md-nav__link">
+      <a href="../../../howto/production/reactjs.html" class="md-nav__link">
         
   
   
@@ -3107,7 +3232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/production/oauthinvstgtn.html" class="md-nav__link">
+      <a href="../../../howto/production/oauthinvstgtn.html" class="md-nav__link">
         
   
   
@@ -3130,7 +3255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/production/configparam.html" class="md-nav__link">
+      <a href="../../../howto/production/configparam.html" class="md-nav__link">
         
   
   
@@ -3153,7 +3278,30 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/production/roundtrip.html" class="md-nav__link">
+      <a href="../../../howto/production/computeform.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Set compute with form
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../howto/production/roundtrip.html" class="md-nav__link">
         
   
   
@@ -3176,7 +3324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/production/virtualsheet.html" class="md-nav__link">
+      <a href="../../../howto/production/virtualsheet.html" class="md-nav__link">
         
   
   
@@ -3199,7 +3347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/production/signencrypt.html" class="md-nav__link">
+      <a href="../../../howto/production/signencrypt.html" class="md-nav__link">
         
   
   
@@ -3222,7 +3370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/production/testformulas.html" class="md-nav__link">
+      <a href="../../../howto/production/testformulas.html" class="md-nav__link">
         
   
   
@@ -3245,7 +3393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/production/versionupdate.html" class="md-nav__link">
+      <a href="../../../howto/production/versionupdate.html" class="md-nav__link">
         
   
   
@@ -3311,7 +3459,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../howto/database/index.html" class="md-nav__link ">
+            <a href="../../../howto/database/index.html" class="md-nav__link ">
               
   
   
@@ -3346,7 +3494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/database/editsourcejson.html" class="md-nav__link">
+      <a href="../../../howto/database/editsourcejson.html" class="md-nav__link">
         
   
   
@@ -3369,7 +3517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/database/editviewcolumn.html" class="md-nav__link">
+      <a href="../../../howto/database/editviewcolumn.html" class="md-nav__link">
         
   
   
@@ -3392,7 +3540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/database/enablingadb.html" class="md-nav__link">
+      <a href="../../../howto/database/enablingadb.html" class="md-nav__link">
         
   
   
@@ -3415,7 +3563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/database/excludeddb.html" class="md-nav__link">
+      <a href="../../../howto/database/excludeddb.html" class="md-nav__link">
         
   
   
@@ -3438,7 +3586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/database/exportsourcejson.html" class="md-nav__link">
+      <a href="../../../howto/database/exportsourcejson.html" class="md-nav__link">
         
   
   
@@ -3461,7 +3609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/database/externalnames.html" class="md-nav__link">
+      <a href="../../../howto/database/externalnames.html" class="md-nav__link">
         
   
   
@@ -3484,7 +3632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/database/pullviewdata.html" class="md-nav__link">
+      <a href="../../../howto/database/pullviewdata.html" class="md-nav__link">
         
   
   
@@ -3535,6 +3683,8 @@
       
         
       
+        
+      
     
     
     
@@ -3550,7 +3700,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../howto/management/index.html" class="md-nav__link ">
+            <a href="../../../howto/management/index.html" class="md-nav__link ">
               
   
   
@@ -3585,7 +3735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/management/checksettings.html" class="md-nav__link">
+      <a href="../../../howto/management/checksettings.html" class="md-nav__link">
         
   
   
@@ -3608,7 +3758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/management/supportpackage.html" class="md-nav__link">
+      <a href="../../../howto/management/supportpackage.html" class="md-nav__link">
         
   
   
@@ -3631,7 +3781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/management/disablemodule.html" class="md-nav__link">
+      <a href="../../../howto/management/disablemodule.html" class="md-nav__link">
         
   
   
@@ -3654,7 +3804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/management/configsrc.html" class="md-nav__link">
+      <a href="../../../howto/management/configsrc.html" class="md-nav__link">
         
   
   
@@ -3677,7 +3827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/management/usersmc.html" class="md-nav__link">
+      <a href="../../../howto/management/usersmc.html" class="md-nav__link">
         
   
   
@@ -3700,7 +3850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/management/jwtmultiserver.html" class="md-nav__link">
+      <a href="../../../howto/management/jwtmultiserver.html" class="md-nav__link">
         
   
   
@@ -3723,12 +3873,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/management/suspendeduser.html" class="md-nav__link">
+      <a href="../../../howto/management/suspendeduser.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Release suspended users
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../howto/management/console.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Use Domino Console
     
   </span>
   
@@ -3779,7 +3952,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../howto/VoltMX/index.html" class="md-nav__link ">
+            <a href="../../../howto/VoltMX/index.html" class="md-nav__link ">
               
   
   
@@ -3814,7 +3987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/VoltMX/configuring-keep-idplite-with-identity-service.html" class="md-nav__link">
+      <a href="../../../howto/VoltMX/configuring-keep-idplite-with-identity-service.html" class="md-nav__link">
         
   
   
@@ -3837,7 +4010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/VoltMX/setupoauthnsf.html" class="md-nav__link">
+      <a href="../../../howto/VoltMX/setupoauthnsf.html" class="md-nav__link">
         
   
   
@@ -3893,7 +4066,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../howto/codesamples/index.html" class="md-nav__link ">
+            <a href="../../../howto/codesamples/index.html" class="md-nav__link ">
               
   
   
@@ -3928,7 +4101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/codesamples/javascript.html" class="md-nav__link">
+      <a href="../../../howto/codesamples/javascript.html" class="md-nav__link">
         
   
   
@@ -3951,7 +4124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/codesamples/js_sdk.html" class="md-nav__link">
+      <a href="../../../howto/codesamples/js_sdk.html" class="md-nav__link">
         
   
   
@@ -4037,6 +4210,8 @@
       
         
       
+        
+      
     
     
     
@@ -4052,7 +4227,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../topicguides/index.html" class="md-nav__link ">
+            <a href="../../../topicguides/index.html" class="md-nav__link ">
               
   
   
@@ -4087,7 +4262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../topicguides/introducingrestapi.html" class="md-nav__link">
+      <a href="../../../topicguides/introducingrestapi.html" class="md-nav__link">
         
   
   
@@ -4110,7 +4285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../topicguides/understanding.html" class="md-nav__link">
+      <a href="../../../topicguides/understanding.html" class="md-nav__link">
         
   
   
@@ -4133,7 +4308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../topicguides/howkeepworks.html" class="md-nav__link">
+      <a href="../../../topicguides/howkeepworks.html" class="md-nav__link">
         
   
   
@@ -4156,7 +4331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../topicguides/schemascope.html" class="md-nav__link">
+      <a href="../../../topicguides/schemascope.html" class="md-nav__link">
         
   
   
@@ -4179,7 +4354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../topicguides/schemabackup.html" class="md-nav__link">
+      <a href="../../../topicguides/schemabackup.html" class="md-nav__link">
         
   
   
@@ -4202,7 +4377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../topicguides/formmodes.html" class="md-nav__link">
+      <a href="../../../topicguides/formmodes.html" class="md-nav__link">
         
   
   
@@ -4225,7 +4400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../topicguides/keepdifference.html" class="md-nav__link">
+      <a href="../../../topicguides/keepdifference.html" class="md-nav__link">
         
   
   
@@ -4248,7 +4423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../topicguides/keepFlows.html" class="md-nav__link">
+      <a href="../../../topicguides/keepFlows.html" class="md-nav__link">
         
   
   
@@ -4271,7 +4446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../topicguides/KeepFactory-and-caches.html" class="md-nav__link">
+      <a href="../../../topicguides/KeepFactory-and-caches.html" class="md-nav__link">
         
   
   
@@ -4294,7 +4469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../topicguides/architecture.html" class="md-nav__link">
+      <a href="../../../topicguides/architecture.html" class="md-nav__link">
         
   
   
@@ -4317,7 +4492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../topicguides/planning.html" class="md-nav__link">
+      <a href="../../../topicguides/planning.html" class="md-nav__link">
         
   
   
@@ -4340,7 +4515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../topicguides/barbican.html" class="md-nav__link">
+      <a href="../../../topicguides/barbican.html" class="md-nav__link">
         
   
   
@@ -4363,7 +4538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../topicguides/eventbus.html" class="md-nav__link">
+      <a href="../../../topicguides/eventbus.html" class="md-nav__link">
         
   
   
@@ -4386,7 +4561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../topicguides/httpHandler.html" class="md-nav__link">
+      <a href="../../../topicguides/httpHandler.html" class="md-nav__link">
         
   
   
@@ -4409,7 +4584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../topicguides/dominojnx.html" class="md-nav__link">
+      <a href="../../../topicguides/dominojnx.html" class="md-nav__link">
         
   
   
@@ -4432,7 +4607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../topicguides/agents.html" class="md-nav__link">
+      <a href="../../../topicguides/agents.html" class="md-nav__link">
         
   
   
@@ -4455,7 +4630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../topicguides/usecases.html" class="md-nav__link">
+      <a href="../../../topicguides/usecases.html" class="md-nav__link">
         
   
   
@@ -4478,7 +4653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../topicguides/keepasproxy.html" class="md-nav__link">
+      <a href="../../../topicguides/keepasproxy.html" class="md-nav__link">
         
   
   
@@ -4534,7 +4709,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../topicguides/auxiliary/index.html" class="md-nav__link ">
+            <a href="../../../topicguides/auxiliary/index.html" class="md-nav__link ">
               
   
   
@@ -4569,7 +4744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../topicguides/auxiliary/idp.html" class="md-nav__link">
+      <a href="../../../topicguides/auxiliary/idp.html" class="md-nav__link">
         
   
   
@@ -4592,7 +4767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../topicguides/auxiliary/webdav.html" class="md-nav__link">
+      <a href="../../../topicguides/auxiliary/webdav.html" class="md-nav__link">
         
   
   
@@ -4615,7 +4790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../topicguides/auxiliary/odata.html" class="md-nav__link">
+      <a href="../../../topicguides/auxiliary/odata.html" class="md-nav__link">
         
   
   
@@ -4638,7 +4813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../topicguides/auxiliary/ical.html" class="md-nav__link">
+      <a href="../../../topicguides/auxiliary/ical.html" class="md-nav__link">
         
   
   
@@ -4661,7 +4836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../topicguides/auxiliary/healthmetrics.html" class="md-nav__link">
+      <a href="../../../topicguides/auxiliary/healthmetrics.html" class="md-nav__link">
         
   
   
@@ -4684,7 +4859,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../topicguides/auxiliary/management.html" class="md-nav__link">
+      <a href="../../../topicguides/auxiliary/management.html" class="md-nav__link">
         
   
   
@@ -4715,7 +4890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../topicguides/notesprimer.html" class="md-nav__link">
+      <a href="../../../topicguides/notesprimer.html" class="md-nav__link">
         
   
   
@@ -4759,7 +4934,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../topicguides/extensibility/index.html" class="md-nav__link ">
+            <a href="../../../topicguides/extensibility/index.html" class="md-nav__link ">
               
   
   
@@ -4790,6 +4965,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../topicguides/configuringPorts.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -4808,6 +5006,8 @@
       
         
           
+        
+      
         
       
         
@@ -4867,7 +5067,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../references/index.html" class="md-nav__link ">
+            <a href="../../../references/index.html" class="md-nav__link ">
               
   
   
@@ -4925,7 +5125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   
@@ -4948,7 +5148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/understandingconfig.html" class="md-nav__link">
+      <a href="../../../references/understandingconfig.html" class="md-nav__link">
         
   
   
@@ -4971,7 +5171,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/functionalUsers.html" class="md-nav__link">
+      <a href="../../../references/functionalUsers.html" class="md-nav__link">
         
   
   
@@ -4994,7 +5194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/hostingstatic.html" class="md-nav__link">
+      <a href="../../../references/hostingstatic.html" class="md-nav__link">
         
   
   
@@ -5017,7 +5217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/openapidefinitions.html" class="md-nav__link">
+      <a href="../../../references/openapidefinitions.html" class="md-nav__link">
         
   
   
@@ -5040,7 +5240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/accesscontrol.html" class="md-nav__link">
+      <a href="../../../references/accesscontrol.html" class="md-nav__link">
         
   
   
@@ -5090,7 +5290,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../references/schemacomponents/index.html" class="md-nav__link ">
+            <a href="../../../references/schemacomponents/index.html" class="md-nav__link ">
               
   
   
@@ -5125,7 +5325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/schemacomponents/formdefinitions.html" class="md-nav__link">
+      <a href="../../../references/schemacomponents/formdefinitions.html" class="md-nav__link">
         
   
   
@@ -5148,7 +5348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/schemacomponents/viewdefinitions.html" class="md-nav__link">
+      <a href="../../../references/schemacomponents/viewdefinitions.html" class="md-nav__link">
         
   
   
@@ -5171,7 +5371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/schemacomponents/agentdefinitions.html" class="md-nav__link">
+      <a href="../../../references/schemacomponents/agentdefinitions.html" class="md-nav__link">
         
   
   
@@ -5232,8 +5432,6 @@
       
         
       
-        
-      
     
     
     
@@ -5249,7 +5447,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../references/usingdominorestapi/index.html" class="md-nav__link ">
+            <a href="../../../references/usingdominorestapi/index.html" class="md-nav__link ">
               
   
   
@@ -5284,7 +5482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/usingdominorestapi/keepapplications.html" class="md-nav__link">
+      <a href="../../../references/usingdominorestapi/keepapplications.html" class="md-nav__link">
         
   
   
@@ -5307,7 +5505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/usingdominorestapi/keepcli.html" class="md-nav__link">
+      <a href="../../../references/usingdominorestapi/keepcli.html" class="md-nav__link">
         
   
   
@@ -5330,7 +5528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/usingdominorestapi/restapitask.html" class="md-nav__link">
+      <a href="../../../references/usingdominorestapi/restapitask.html" class="md-nav__link">
         
   
   
@@ -5353,7 +5551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/usingdominorestapi/roles.html" class="md-nav__link">
+      <a href="../../../references/usingdominorestapi/roles.html" class="md-nav__link">
         
   
   
@@ -5376,7 +5574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/usingdominorestapi/dataformats.html" class="md-nav__link">
+      <a href="../../../references/usingdominorestapi/dataformats.html" class="md-nav__link">
         
   
   
@@ -5399,7 +5597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/usingdominorestapi/encryptsign.html" class="md-nav__link">
+      <a href="../../../references/usingdominorestapi/encryptsign.html" class="md-nav__link">
         
   
   
@@ -5422,7 +5620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/usingdominorestapi/formnames.html" class="md-nav__link">
+      <a href="../../../references/usingdominorestapi/formnames.html" class="md-nav__link">
         
   
   
@@ -5445,7 +5643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/usingdominorestapi/metrics.html" class="md-nav__link">
+      <a href="../../../references/usingdominorestapi/metrics.html" class="md-nav__link">
         
   
   
@@ -5468,7 +5666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/usingdominorestapi/modenames.html" class="md-nav__link">
+      <a href="../../../references/usingdominorestapi/modenames.html" class="md-nav__link">
         
   
   
@@ -5514,7 +5712,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../references/usingdominorestapi/richtext/index.html" class="md-nav__link ">
+            <a href="../../../references/usingdominorestapi/richtext/index.html" class="md-nav__link ">
               
   
   
@@ -5549,7 +5747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/usingdominorestapi/richtext/conversion.html" class="md-nav__link">
+      <a href="../../../references/usingdominorestapi/richtext/conversion.html" class="md-nav__link">
         
   
   
@@ -5580,7 +5778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/usingdominorestapi/scopes.html" class="md-nav__link">
+      <a href="../../../references/usingdominorestapi/scopes.html" class="md-nav__link">
         
   
   
@@ -5603,30 +5801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/usingdominorestapi/console.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Using Domino Console
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../references/usingdominorestapi/logging.html" class="md-nav__link">
+      <a href="../../../references/usingdominorestapi/logging.html" class="md-nav__link">
         
   
   
@@ -5688,7 +5863,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../references/usingwebui/index.html" class="md-nav__link ">
+            <a href="../../../references/usingwebui/index.html" class="md-nav__link ">
               
   
   
@@ -5723,7 +5898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/usingwebui/schemaui.html" class="md-nav__link">
+      <a href="../../../references/usingwebui/schemaui.html" class="md-nav__link">
         
   
   
@@ -5746,7 +5921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/usingwebui/scopeui.html" class="md-nav__link">
+      <a href="../../../references/usingwebui/scopeui.html" class="md-nav__link">
         
   
   
@@ -5769,7 +5944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/usingwebui/quickconfigui.html" class="md-nav__link">
+      <a href="../../../references/usingwebui/quickconfigui.html" class="md-nav__link">
         
   
   
@@ -5792,7 +5967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/usingwebui/appui.html" class="md-nav__link">
+      <a href="../../../references/usingwebui/appui.html" class="md-nav__link">
         
   
   
@@ -5815,7 +5990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/usingwebui/oauthconsentui.html" class="md-nav__link">
+      <a href="../../../references/usingwebui/oauthconsentui.html" class="md-nav__link">
         
   
   
@@ -5883,7 +6058,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../references/security/index.html" class="md-nav__link ">
+            <a href="../../../references/security/index.html" class="md-nav__link ">
               
   
   
@@ -5918,7 +6093,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/security/authentication.html" class="md-nav__link">
+      <a href="../../../references/security/authentication.html" class="md-nav__link">
         
   
   
@@ -5941,7 +6116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/security/jwt.html" class="md-nav__link">
+      <a href="../../../references/security/jwt.html" class="md-nav__link">
         
   
   
@@ -5964,7 +6139,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/security/configurationParameters.html" class="md-nav__link">
+      <a href="../../../references/security/configurationParameters.html" class="md-nav__link">
         
   
   
@@ -5987,7 +6162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/security/encryption.html" class="md-nav__link">
+      <a href="../../../references/security/encryption.html" class="md-nav__link">
         
   
   
@@ -6010,7 +6185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/VoltMX/setupoauthnsf.html" class="md-nav__link">
+      <a href="../../../howto/VoltMX/setupoauthnsf.html" class="md-nav__link">
         
   
   
@@ -6033,7 +6208,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/security/customIdp.html" class="md-nav__link">
+      <a href="../../../references/security/customIdp.html" class="md-nav__link">
         
   
   
@@ -6056,7 +6231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/security/securingKEEPEndpoints.html" class="md-nav__link">
+      <a href="../../../references/security/securingKEEPEndpoints.html" class="md-nav__link">
         
   
   
@@ -6079,7 +6254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/security/idpcompare.html" class="md-nav__link">
+      <a href="../../../references/security/idpcompare.html" class="md-nav__link">
         
   
   
@@ -6139,7 +6314,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../references/usertools/index.html" class="md-nav__link ">
+            <a href="../../../references/usertools/index.html" class="md-nav__link ">
               
   
   
@@ -6174,7 +6349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/usertools/curl.html" class="md-nav__link">
+      <a href="../../../references/usertools/curl.html" class="md-nav__link">
         
   
   
@@ -6197,7 +6372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/usertools/postman.html" class="md-nav__link">
+      <a href="../../../references/usertools/postman.html" class="md-nav__link">
         
   
   
@@ -6220,7 +6395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/usertools/swagger.html" class="md-nav__link">
+      <a href="../../../references/usertools/swagger.html" class="md-nav__link">
         
   
   
@@ -6243,7 +6418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/usertools/bruno.html" class="md-nav__link">
+      <a href="../../../references/usertools/bruno.html" class="md-nav__link">
         
   
   
@@ -6274,7 +6449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/sdk.html" class="md-nav__link">
+      <a href="../../../references/sdk.html" class="md-nav__link">
         
   
   
@@ -6297,7 +6472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/parameters.html" class="md-nav__link">
+      <a href="../../../references/parameters.html" class="md-nav__link">
         
   
   
@@ -6320,7 +6495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/troubleshooting.html" class="md-nav__link">
+      <a href="../../../references/troubleshooting.html" class="md-nav__link">
         
   
   
@@ -6368,7 +6543,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../references/quickreference/index.html" class="md-nav__link ">
+            <a href="../../../references/quickreference/index.html" class="md-nav__link ">
               
   
   
@@ -6403,7 +6578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/quickreference/standards.html" class="md-nav__link">
+      <a href="../../../references/quickreference/standards.html" class="md-nav__link">
         
   
   
@@ -6426,7 +6601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/quickreference/glossary.html" class="md-nav__link">
+      <a href="../../../references/quickreference/glossary.html" class="md-nav__link">
         
   
   
@@ -6457,7 +6632,30 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/downloads.html" class="md-nav__link">
+      <a href="../../../references/support.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contact support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../references/downloads.html" class="md-nav__link">
         
   
   
@@ -6480,7 +6678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/admincheatsheet.html" class="md-nav__link">
+      <a href="../../../references/admincheatsheet.html" class="md-nav__link">
         
   
   
@@ -6503,7 +6701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/ofba.html" class="md-nav__link">
+      <a href="../../../references/ofba.html" class="md-nav__link">
         
   
   
@@ -6526,7 +6724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/richtextension.html" class="md-nav__link">
+      <a href="../../../references/richtextension.html" class="md-nav__link">
         
   
   
@@ -6549,7 +6747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/deprecated.html" class="md-nav__link">
+      <a href="../../../references/deprecated.html" class="md-nav__link">
         
   
   
@@ -6601,19 +6799,73 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#about-this-task" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      About this task
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Prerequisites">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#log-in-to-admin-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log in to Admin UI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create a schema">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#persistent-volume" class="md-nav__link">
+  <a href="#add-schema" class="md-nav__link">
     <span class="md-ellipsis">
-      Persistent volume
+      Add schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activate-a-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activate a form
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-a-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure a form
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activate-a-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activate a view
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activate-an-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activate an agent
     </span>
   </a>
   
@@ -6625,56 +6877,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#store-the-following-files-in-a-folder" class="md-nav__link">
+  <a href="#create-a-scope" class="md-nav__link">
     <span class="md-ellipsis">
-      Store the following files in a folder
+      Create a scope
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#load-docker-image" class="md-nav__link">
+  <a href="#create-an-oauth-application" class="md-nav__link">
     <span class="md-ellipsis">
-      Load Docker image
+      Create an OAuth application
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create an OAuth application">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add application
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#update-env-file" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#generate-an-app-secret" class="md-nav__link">
     <span class="md-ellipsis">
-      Update .env file
+      Generate an app secret
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#run-domino-rest-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      Run Domino REST API
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Validation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#alternate-docker-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Alternate Docker configuration
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -6697,278 +6937,243 @@
   
 
 
-<!--# Docker-->
-
-<h1 id="run-domino-rest-api-with-a-docker-image">Run Domino REST API with a Docker image</h1>
-<p>The Domino REST API Docker image is built <strong>on top of an HCL Domino Docker image</strong>, inspired by <a href="https://github.com/HCL-TECH-SOFTWARE/domino-container">the open source templates</a>.
-All configuration options found there can be applied to the Domino REST API Docker image. You will need to decide if you want to run a standalone server or an additional server in an existing Domino domain.</p>
-<!-- prettier-ignore -->
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>The Domino REST API Docker image <strong>contains</strong> a Domino server. You don't need a separate Domino installation. The image is completely self contained. Domino REST API is a Domino service, using the network free C API. So there is no scenario where an "only Domino REST API" container would work.</p>
-</div>
-<h2 id="prerequisites">Prerequisites</h2>
-<p>Running Domino REST API with a Docker image requires the following:</p>
-<ul>
-<li>
-<p><strong><a href="https://docs.docker.com/get-docker/">Docker Desktop</a></strong></p>
-<p>A Docker installation, both <strong>Docker</strong> (for servers) or <strong>Docker Desktop</strong> are suitable. Download and install <strong>Docker Desktop</strong> for your environment (Linux, Windows or macOS).</p>
-<!-- prettier-ignore -->
-<div class="admonition tip">
-<p class="admonition-title">Docker Desktop License</p>
-<p>Docker desktop <a href="https://www.theregister.com/2021/08/31/docker_desktop_no_longer_free/">recently</a> became subject to a <a href="https://www.docker.com/pricing">Docker subscription</a>, make sure you are compliant or use the command line.</p>
-</div>
-</li>
-<li>
-<p><strong><a href="https://docs.docker.com/compose/install/">Docker Compose</a></strong></p>
-<p>When you install a Docker Desktop version (Windows, macOS), Docker compose is already included. For servers, it's an <a href="https://docs.docker.com/compose/install/">additional install</a>.</p>
-</li>
-<li>
-<p><strong>Domino REST API Docker image</strong>.</p>
-<p>Download the image as an archive file from <a href="https://hclsoftware.flexnetoperations.com/" rel="noopener noreferrer" target="_blank" title="Opens a new tab">HCL Software License and Download Portal</a>&nbsp;<img alt="link image" src="../../assets/images/external-link.svg" style="height:15px;width:15px" /> or <a href="https://my.hcltechsw.com/" rel="noopener noreferrer" target="_blank" title="Opens a new tab">My HCLSoftware Portal</a>&nbsp;<img alt="link image" src="../../assets/images/external-link.svg" style="height:15px;width:15px" />. For more information, see <a href="index.html#download-domino-rest-api">Download Domino REST API</a>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Important</p>
-<ul>
-<li>
-<p>If using a Docker image from <a href="https://hclcr.io/" rel="noopener noreferrer" target="_blank" title="Opens a new tab">HCL Container Repository (Harbor)</a>&nbsp;<img alt="link image" src="../../assets/images/external-link.svg" style="height:15px;width:15px" />, take note of the image name of the latest Docker image version from Harbor indicated in <a href="../../whatsnew/index.html">What's New</a> of a release, update the CONTAINER_IMAGE variable in the <a href="#update-env-file">.env file</a>, and then <a href="#run-domino-rest-api">execute docker-compose</a>.</p>
-</li>
-<li>
-<p>If prompted for access to HCL Container Repository (Harbor), <a href="../../howto/install/obtainauthenticationtoken.html">obtain your HCL Container Repository username and password</a>, and then sign-in using <code>docker login hclcr.io</code> command and the obtained credentials.  </p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Docker compose file</strong></p>
-<p>Download the file from <a href="../../references/downloads.html">downloadable resources</a>. Select the matching one for either a standalone primary or an additional server.</p>
-</li>
-<li>
-<p><strong><code>.env</code> file</strong>.</p>
-<p>Download the <code>sample.env</code> from <a href="../../references/downloads.html">downloadable resources</a>. <strong>Rename the file to <code>.env</code></strong><!--, and **update** the <code>.env</code> file with your values-->.</p>
-</li>
-<li>
-<p>A valid <strong>Domino server id</strong>, when you want to run an additional server in your existing domain.</p>
-</li>
-</ul>
-<h3 id="persistent-volume">Persistent volume</h3>
-<p>A Domino server uses one persistent volume to store its data. This volume also stores log files and the server’s ID file. When you remove the container, that volume remains and is reused when you start a new container instance.</p>
-<p><img alt="Docker Consumption" src="../../assets/images/DominoKeepContainers.png" /></p>
-<!-- prettier-ignore -->
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>When you want to run multiple servers, create separate volumes for each. <strong>DO NOT</strong> share volumes between running instances.</p>
-</div>
-<h2 id="store-the-following-files-in-a-folder">Store the following files in a folder</h2>
-<ul>
-<li>
-<p><strong>server id</strong></p>
-<p>Make sure that your server id file is named <code>server.id</code>.</p>
-</li>
-<li>
-<p><strong>docker-compose.yml</strong>.</p>
-<p>Rename the compose file you downloaded from <a href="../../references/downloads.html">resources</a> to <code>docker-compose.yml</code>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You can configure multiple Domino servers in a single compose file. For details, check the <a href="https://docs.docker.com/compose/">Docker compose</a> documentation. With Domino REST API in mind, each server needs its own volume.</p>
-</div>
-</li>
-<li>
-<p><strong>.env</strong></p>
-<p>Edit the <code>.env</code> file from <a href="../../references/downloads.html">resources</a> to update your values. For more information, see <a href="#update-env-file">Update .env file</a>.</p>
-</li>
-</ul>
-<h2 id="load-docker-image">Load Docker image</h2>
-<p><strong>For docker image from HCL Software License and Download Portal or My HCLSoftware Portal</strong></p>
-<p>Load the docker image that you've downloaded from <a href="#prerequisites">prerequisites</a>. Make sure you <a href="https://linuxize.com/post/how-to-extract-unzip-tar-gz-file/" rel="noopener noreferrer" target="_blank" title="Opens a new tab">extract the tar.gz file</a>&nbsp;<img alt="link image" src="../../assets/images/external-link.svg" style="height:15px;width:15px" /> first. </p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>load<span class="w"> </span>-i<span class="w"> </span><span class="o">[</span>name_of_tar_file<span class="o">]</span>.tar
-</code></pre></div>
-<p>After loading the image, note the image name that was output. You need the image name to update the <code>CONTAINER_IMAGE</code> variable in the <code>.env</code> file.</p>
-<div class="admonition example">
-<p class="admonition-title">Example loaded image name</p>
-<ul>
-<li>From earlier releases: <code>docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.10.0</code></li>
-<li>Starting v1.0.7 release: <code>domino-rest-api:1.0.7</code></li>
-</ul>
-</div>
-<p><strong>For docker image from HCL Container Repository (Harbor)</strong></p>
-<p>Take note of the image name of the latest docker image version for docker compose .env file from Harbor indicated in <a href="../../whatsnew/index.html">What's New</a> of a release version. You need the image name to update the <code>CONTAINER_IMAGE</code> variable in the <code>.env</code> file.</p>
-<div class="admonition example">
-<p class="admonition-title">Example image name</p>
-<p><code>hclcr.io/domino/restapi:1.0.6</code></p>
-</div>
-<h2 id="update-env-file">Update .env file</h2>
-<p>Depending on the compose file you choose, a different set of variables needs to be replaced. If a variable isn't in the compose file, you don't need it. We keep the variable names in sync with <a href="https://help.hcl-software.com/domino/14.0.0/admin/inst_onetouch.html">One-touch Domino setup</a>, thus in the compose file you will find gems like <code>SERVERSETUP_SERVER_NAME: "${SERVERSETUP_SERVER_NAME}"</code>. This makes naming of variables consistent.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Refer also to the official <a href="https://help.hcltechsw.com/domino/14.0.0/admin/inst_onetouch_preparing_sysenv.html">List of One-touch environment variables</a> for reference.</p>
-</div>
-<p><strong>To update the variables in the compose file, update the variables in the <code>.env</code> file with your values</strong>. Replace all values after the equal <code>=</code> sign. Refer to the table below for guidance on the variables, their example values, and additional information.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Variable</th>
-<th style="text-align: left;">Example</th>
-<th style="text-align: left;">Remarks</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">CONTAINER_HOSTNAME</td>
-<td style="text-align: left;">domino.acme.com</td>
-<td style="text-align: left;">Pro tip: use something.local for local testing</td>
-</tr>
-<tr>
-<td style="text-align: left;">CONTAINER_IMAGE</td>
-<td style="text-align: left;">docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.10.0 (example name for docker image from HCL Software License and Download Portal or My HCLSoftware Portal from earlier release)</br></br>domino-rest-api:1.0.7 (example name for docker image from HCL Software License and Download Portal or My HCLSoftware Portal starting v1.0.7 release)</br></br>hclcr.io/domino/restapi:1.0.6 (example name for docker image from Harbor)</td>
-<td style="text-align: left;"><!--**Check** carefully for the current image name! <code>:latest</code> most likely need to be replaced.--> For docker image downloaded from HCL Software License and Download Portal or My HCLSoftware Portal, update based on the name of the loaded image, such as the example shown above, or use <code>docker images ls</code> to see the exact image name. <br><br>For docker image downloaded from Harbor, update based on the image name of the latest docker image version for docker compose .env file from Harbor indicated in <a href="../../whatsnew/index.html">What's New</a> of a release.</td>
-</tr>
-<tr>
-<td style="text-align: left;">CONTAINER_NAME</td>
-<td style="text-align: left;">domino-keep-test02</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left;">CONTAINER_VOLUMES</td>
-<td style="text-align: left;">domino_keep_notesdata</td>
-<td style="text-align: left;">no spaces or special characters</td>
-</tr>
-<tr>
-<td style="text-align: left;">SERVERSETUP_ADMIN_CN</td>
-<td style="text-align: left;">Peter Parker</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left;">SERVERSETUP_ADMIN_FIRSTNAME</td>
-<td style="text-align: left;">Paul</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left;">SERVERSETUP_ADMIN_LASTNAME</td>
-<td style="text-align: left;">Herbert</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left;">SERVERSETUP_ADMIN_PASSWORD</td>
-<td style="text-align: left;">domin4ever</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left;">SERVERSETUP_EXISTINGSERVER_CN</td>
-<td style="text-align: left;">domino01</td>
-<td style="text-align: left;">YOUR EXISTING SERVER</td>
-</tr>
-<tr>
-<td style="text-align: left;">SERVERSETUP_EXISTINGSERVER_HOSTNAMEORIP</td>
-<td style="text-align: left;">10.45.10.3</td>
-<td style="text-align: left;">MUST BE REACHABLE, can use DNS too</td>
-</tr>
-<tr>
-<td style="text-align: left;">SERVERSETUP_NETWORK_HOSTNAME</td>
-<td style="text-align: left;">keep01.domino.acme.com</td>
-<td style="text-align: left;">MUST RESOLVE</td>
-</tr>
-<tr>
-<td style="text-align: left;">SERVERSETUP_ORG_CERTIFIERPASSWORD</td>
-<td style="text-align: left;">supersecret</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left;">SERVERSETUP_ORG_ORGNAME</td>
-<td style="text-align: left;">Stark Industries</td>
-<td style="text-align: left;">YOUR EXISTING ORG</td>
-</tr>
-<tr>
-<td style="text-align: left;">SERVERSETUP_SERVER_DOMAINNAME</td>
-<td style="text-align: left;">MarvelPhase4</td>
-<td style="text-align: left;">YOUR EXISTING NOTES DOMAIN</td>
-</tr>
-<tr>
-<td style="text-align: left;">SERVERSETUP_SERVER_NAME</td>
-<td style="text-align: left;">keep-server-01</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left;">SERVERSETUP_SERVER_SERVERTASKS</td>
-<td style="text-align: left;">replica, router, update, amgr, adminp, http, keep</td>
-<td style="text-align: left;">Refer to the <a href="../../references/usingdominorestapi/restapitask.html">Domino REST API task</a> page.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="run-domino-rest-api">Run Domino REST API</h2>
-<p>Start Domino REST API using <code>docker-compose</code> on all supported platforms by running the following command:</p>
-<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>up
-</code></pre></div>
-<!-- prettier-ignore -->
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<ul>
-<li>Start in the directory where the files <code>server.id</code> and <code>docker-compose.yml</code> are located.</li>
-<li>
-<p>The setup can take a few minutes, depending on your hardware and the network speed to your primary server.</p>
-</li>
-<li>
-<p>If prompted for access credentials to HCL Container Repository (Harbor), see <a href="../../howto/install/obtainauthenticationtoken.html">Obtain authentication token from HCL Container Repository</a>.</p>
-</li>
-</ul>
-</div>
-<!-- prettier-ignore -->
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p><strong>When you don't have DNS setup</strong>, amend your <code>hosts</code> file for name resolution:</p>
-<ul>
-<li><code>/etc/hosts</code> on Linux or macOS</li>
-<li><code>C:\Windows\System32\drivers\etc\hosts</code> on Windows</li>
-</ul>
-</div>
-<ul>
-<li>You can then use Docker desktop to start/stop the container.</li>
-<li>Use <code>docker-compose up -d</code> to run docker in the background.</li>
-<li><strong>Don't run two Domino REST API containers sharing the same volume at the same time</strong>, alternate (such as debug/non-debug) or with 2 different volumes is OK.</li>
-</ul>
-<h2 id="validation">Validation</h2>
-<p>To validate that an instance is successfully running on a container:</p>
-<ul>
-<li>A Docker container should be created and running on your Docker machine. To check that the container is up, run the following command on a terminal:</li>
-</ul>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>ps
-</code></pre></div>
-<ul>
-<li>The container should be accessible via</li>
-</ul>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span><span class="nv">$containername</span><span class="w"> </span>/bin/bash
-</code></pre></div>
-<ul>
-<li>Domino should be accessible on <code>http://$host:80</code> (might need configuration).</li>
-<li>Domino REST API should be accessible on <code>http://$host:8880</code>.</li>
-<li>Domino REST API Management should be accessible on <code>http://$host:8889</code>.</li>
-<li>Metrics should be accessible on <code>http://$host:8890/metrics</code>.</li>
-</ul>
-<h2 id="alternate-docker-configuration">Alternate Docker configuration</h2>
-<p>When you run your Domino servers on Linux, you probably use the <a href="https://www.nashcom.de/nshweb/pages/startscript.htm">Nashcom startup script</a> for Domino.
-On this foundation, the GitHub.com hosted <a href="https://github.com/HCL-TECH-SOFTWARE/domino-container">Domino Docker</a> project offers management scripts that allows easy management of your Docker container using a command <code>domino_container</code>.</p>
-<p>Installation steps are as follows:</p>
+<h1 id="expose-domino-database-for-rest-api-access">Expose Domino database for REST API access</h1>
+<p>By default, no databases are available through the Domino REST API. You decide what Domino databases you want to expose. For those databases you want to expose, you can select specific design elements and define what actions are allowed to prevent potential misuse. Exposing Domino databases for REST API access is a shared activity between an <a href="../../../references/usingdominorestapi/roles.html">administrator and a developer</a>. As shown in the following diagram, the developer creates the schema, while the administrator enables the schema and creates the scope and OAuth application.</p>
+<p><img alt="From DB to schema to scope" src="../../../assets/images/KeepAPISteps.png" style="height:70%;width:70%" /></p>
+<h2 id="about-this-task">About this task</h2>
+<p>The procedure guides you in creating the components that expose the Domino database to enable external applications to securely access Domino applications, their data, and design elements.</p>
+<h2 id="log-in-to-admin-ui">Log in to Admin UI</h2>
+<p>The <strong>Admin UI</strong> provides an easy-to-use interface for creating and managing schemas, scopes, and OAuth applications for Domino applications to be accessible via Domino REST API.</p>
 <ol>
 <li>
-<p>Clone the <a href="https://github.com/HCL-TECH-SOFTWARE/domino-container">domino-docker</a> repository: <code>git clone https://github.com/HCL-TECH-SOFTWARE/domino-container</code></p>
+<p>Using a web browser, go to <code>http://serverhostname:8880/admin/ui</code>.</p>
+<p>wherein: <code>serverhostname</code> is your Domino server's hostname.</p>
 </li>
 <li>
-<p>Change into the installation directory: <code>cd start_script</code></p>
-</li>
-<li>
-<p>Run the installer: <code>./install_domino_container</code> </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You might need <code>sudo</code> to run the installer.</p>
-</div>
+<p>On the login page, enter the administrator username and password, and then click <strong>LOG IN WITH PASSWORD</strong>.</p>
 </li>
 </ol>
-<p>Now you have the command <code>domino_container</code> at your disposal:</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For more information on logging in to the Admin UI, see the <a href="../../../references/usingwebui/index.html#log-in-options">other log in options</a>.</p>
+</div>
+<h2 id="create-a-schema">Create a schema</h2>
+<p>The schema is created in the Domino database that you want to expose. The Domino database can have multiple schemas to provide different data sets or different levels of access to data.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The schema is created by a developer who has a Designer access level to the Domino database to be exposed.</p>
+</div>
+<h3 id="add-schema">Add schema</h3>
+<ol>
+<li>Select <strong>Database Management - REST API</strong> from the home page or <strong>Schemas</strong> from the side navigation pane to access the <strong>Schema Management</strong> page.</li>
+<li>
+<p>On the <strong>Schema Management</strong> page, click <strong>Add Schema</strong>.</p>
+<p><img alt="Add schema" src="../../../assets/images/addSchema.png" /></p>
+</li>
+<li>
+<p>In the <strong>Add New Schema</strong> dialog, click <strong>Create Schema</strong>.</p>
+<p><img alt="Create a schema " src="../../../assets/images/createSchema.png" style="height:80%;width:80%" /></p>
+</li>
+<li>
+<p>In the <strong>Create Schema</strong> dialog:</p>
+<ol>
+<li>
+<p>Select a database from the <strong>Database</strong> drop-down list.</p>
+<p>You can also enter the database name in the <strong>Database</strong> field to filter the list of available databases.</p>
+</li>
+<li>
+<p>Select an <strong>Icon</strong>.</p>
+</li>
+<li>Enter a <strong>Schema Name</strong> and a <strong>Schema Description</strong>.</li>
+<li>Click <strong>Save Schema</strong>.</li>
+</ol>
+</li>
+</ol>
+<p>The new schema is available and visible on the <strong>Schema Management</strong> page. If no visible, make sure to click the <strong>Only show schemas configured with scopes</strong> toggle to the off position. </p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <ul>
-<li>Use <code>domino_container cfg</code> to set your configuration.</li>
-<li>Use <code>domino_container env</code> for the environment values.</li>
-<li>Start Domino and Domino REST API using <code>domino_container start</code>.</li>
-<li>Learn more about the scripts using <code>domino_container help</code>.</li>
+<li>You also have the option of importing an schema. For more information, see <a href="../../../references/usingwebui/schemaui.html#import-a-schema">Import a schema</a>.</li>
 </ul>
+</div>
+<h3 id="activate-a-form">Activate a form</h3>
+<ol>
+<li>On the <strong>Schema Management</strong> page, click the schema you just created.</li>
+<li>On the Database Forms tab, select the form that you want to activate, click the corresponding menu icon beside the form's status, and then select <strong>Activate</strong>.</li>
+<li>Repeat the previous step for all the forms that you want to activate.</li>
+</ol>
+<p>The activated form or forms now have an <strong>Active</strong> status.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Click <strong>Activate All</strong> to activate all forms with default settings.</p>
+</div>
+<h3 id="configure-a-form">Configure a form</h3>
+<ol>
+<li>
+<p>On the <strong>Database Forms</strong> tab, click the pencil icon corresponding to the activated form that you want to configure.</p>
+<p><a href="../../../assets/images/dbforms.png" rel="noopener noreferrer" target="_blank" title="Click to open in a new tab"><img alt="dbforms" src="../../../assets/images/dbforms.png" /></a></p>
+<p>The <strong>Access Mode</strong> page opens showing the <code>default</code> access mode.</p>
+<p><a href="../../../assets/images/AccessMode.png" rel="noopener noreferrer" target="_blank" title="Click to open in a new tab"><img alt="Access mode" src="../../../assets/images/AccessMode.png" /></a></p>
+</li>
+<li>
+<p>Under <strong>Show fields from</strong>, hover over a field item and click the <strong>+</strong> icon. This adds the field in the form. Repeat this for all the fields to be added.</p>
+<p><a href="../../../assets/images/addfield.png" rel="noopener noreferrer" target="_blank" title="Click to open in a new tab"><img alt="Add field" src="../../../assets/images/addfield.png" style="height:50%;width:50%" /></a></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>Click <strong>Add All Fields</strong> icon to add all the available fields to the form.</li>
+<li>Click <strong>Refresh List of Fields</strong> icon to refresh the list of avaialble fields.</li>
+<li>Use the <strong>Search Field</strong> search box to search for a field by field name.</li>
+<li>Hover over the <strong>Info</strong> icon beside the field name to show the field property. The field can be <em>editable</em>, which means that the field has <strong>Read/Write</strong> access setting. The field can also be either <em>computed</em>, <em>computed when composed</em>, or <em>computed for display</em>, which means that the field has <strong>Read Only</strong> access setting.</li>
+<li>Enter a custom field name in the <strong>Add custom field</strong> and click the <strong>+</strong> icon to add a custom field to the form.</li>
+<li>Click <strong>Delete Fields</strong>, select the fields to remove, and then click <strong>Remove</strong> to remove the selected fields from the form.</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Under <strong>Field Setting</strong>, you can set the <strong>Field Name</strong>, <strong>Field Type</strong>, and the read or write access of the field in the form.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>Click the <strong>Multi-Value</strong> toggle to the on position to specify a <strong>Field Group</strong>. The <strong>Multi-Value</strong> toggle isn't clickable to the off position if you specified a field group.</li>
+<li>Click the <strong>Required</strong> toggle to the on position to specify that the field is a required field. When set to the on position, the word <em>Required</em> is added below the name of the field in the added field list.</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Encryption feature</p>
+<p>The encryption feature is available starting from the Domino REST API v1.1.0 release. Make sure to <a href="../../../howto/production/signencrypt.html">set up Domino REST API for encryption, decryption, and signing</a> before executing the following steps for encryption and signing.</p>
+<p>Click the <strong>Encrypt</strong> toggle to the on position to enable encryption. For more information on encryption and signing, see <a href="../../../references/usingdominorestapi/encryptsign.html">Using encryption, decryption, and signing during development</a>.</p>
+</div>
+</li>
+<li>
+<p>Under <strong>Mode Settings</strong>:</p>
+<ol>
+<li>
+<p>Click the pencil icon corresponding to a mode formula. A dialog opens.</p>
+<p>The following image shows the opened <strong>Formula for Delete Access</strong> dialog.  </p>
+<p><a href="../../../assets/images/modeformula.png" rel="noopener noreferrer" target="_blank" title="Click to open in a new tab"><img alt="Formula Settings" src="../../../assets/images/modeformula.png" /></a></p>
+</li>
+<li>
+<p>In the text field in the dialog, edit the <code>@True</code> or <code>@False</code> entry and click <strong>Save</strong> to close the dialog.</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Signing feature</p>
+<p>The signing feature is available starting from the Domino REST API v1.1.0 release. Make sure to <a href="../../../howto/production/signencrypt.html">set up Domino REST API for encryption, decryption, and signing</a> before executing the following steps for encryption and signing.</p>
+<p>Click the <strong>Sign Document</strong> toggle to the on position to enable this feature. For more information on encryption and signing, see <a href="../../../references/usingdominorestapi/encryptsign.html">Using encryption, decryption, and signing during development</a>.</p>
+</div>
+</li>
+<li>
+<p>(<strong>Optional</strong>) Under <strong>Validation Rules</strong>:</p>
+<ol>
+<li>Click <strong>Add Rule</strong> if you want to add a validation rule to validate the value of a field. The <strong>Add Rule</strong> dialog opens.</li>
+<li>Enter the validation formula in the <strong>Formula</strong> field and the error message in the <strong>Error Message</strong> field.</li>
+<li>Click <strong>Add</strong>.</li>
+</ol>
+</li>
+<li>
+<p>Click <strong>Save</strong>.</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>Form modes specify what data can be read or written to documents using the form name in their form item. The Admin UI lists four modes that provide a special purpose. They are default, dql, odata and raw. Depending on the use case, the developer may define more than the default mode.</li>
+<li>For more information on configuring a form, see <a href="../../../references/usingwebui/schemaui.html#change-form-configuration">Change form configuration</a>.</li>
+</ul>
+</div>
+<h3 id="activate-a-view">Activate a view</h3>
+<ol>
+<li>Click the name of your schema from the breadcrumb navigation menu to go back to the Schema Management page. </li>
+<li>
+<p>Select <strong>Database Views</strong> from the menu bar. This lists all the views for the selected schema.</p>
+<p><img alt="List Views" src="../../../assets/images/ListOfViews1.png" /></p>
+</li>
+<li>
+<p>Select the view that you want to activate, and then click the corresponding <strong>Active</strong> option under <strong>Status</strong>.</p>
+</li>
+<li>Repeat the previous step for all the views that you want to activate.</li>
+</ol>
+<h3 id="activate-an-agent">Activate an agent</h3>
+<ol>
+<li>
+<p>Select <strong>Database Agents</strong> from the menu bar. This lists all the Agents for the selected database.</p>
+<p><img alt="List Agents" src="../../../assets/images/ListOfAgents.png" /></p>
+</li>
+<li>
+<p>Select the agent you want to activate, and then click the corresponding <strong>Active</strong> option under <strong>Status</strong>.</p>
+</li>
+<li>Repeat the previous step for all the agents that you want to activate.</li>
+</ol>
+<h2 id="create-a-scope">Create a scope</h2>
+<p>The scope configuration is stored in the KeepConfig.nsf database. This separation of scope and schema means multiple scopes can link to a single schema. You use the scope name when performing all CRUD operations.</p>
+<ol>
+<li>Select <strong>Database Management - Activation</strong> from the home page or <strong>Scopes</strong> from the side navigation pane to access the <strong>Scope Management</strong> page.</li>
+<li>
+<p>On the <strong>Scope Management</strong> page, click <strong>Add Scope</strong>.</p>
+<p><img alt="Create Database Scope" src="../../../assets/images/CreateDatabaseBlue.png" /></p>
+</li>
+<li>
+<p>Under <strong>Available Schema</strong>, select the schema that you created.</p>
+</li>
+<li>
+<p>Under <strong>Add New Scope</strong>, fill in the form and click <strong>Add</strong>.</p>
+<ul>
+<li>
+<p>For the <strong>Server</strong> field, enter the name of the server the scope is available on, or leave it blank for the current server. The value of the entered name must be either the server's hierarchical name or in canonical format. See the following examples for reference:</p>
+<ul>
+<li>MyServer/MyOrg</li>
+<li>CN=MyServer/O=MyOrg</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Accessing a scope on a different server will always return an <strong>HTTP 302 response</strong>. The server to be redirected to will be dictated by the <code>Fully qualified Internet hostname</code> from the <strong>server connection document</strong> of the server that owns the scope.</p>
+</div>
+</li>
+<li>
+<p>For the <strong>Maximum Access Level</strong>, the default is <strong>Editor</strong>. You can set it to another value to set the scope's maximum access anyone using the scope has.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><img alt="Configure Database" src="../../../assets/images/AddNewDatabase.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <strong>Maximum Access Level</strong> prevents an app that has inherited a user's access rights when the user grants the app access from unauthorized altering of schemas or access control lists.  To know more about what each access level allows and to whom the access level is assigned, see <a href="https://help.hcltechsw.com/domino/14.0.0/admin/conf_accesslevelsintheacl_c.html">Access levels in the ACL</a>.</p>
+</div>
+<h2 id="create-an-oauth-application">Create an OAuth application</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This step is optional and is only applicable when you use Domino REST API as your identity provider.</p>
+</div>
+<p>You can create one or more OAuth applications that can access one or more of the defined scopes.</p>
+<h3 id="add-application">Add application</h3>
+<ol>
+<li>Select <strong>Application Management - OAUTH</strong> from the home page or <strong>Applications</strong> from the side navigation pane to access the <strong>Application Management</strong> page.</li>
+<li>On the <strong>Application Management</strong> page, click <strong>Add Application</strong>.</li>
+<li>
+<p>Under <strong>Add New Application</strong>, fill in the form and click <strong>Add</strong>.</p>
+<p><img alt="Application Form" src="../../../assets/images/AddApplicationForm.png" /></p>
+<p>The new application is now shown on the <strong>Application Management</strong> page.</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>When adding a scope, select the scope from the <strong>Scope</strong> drop-down list and click the <strong>Add Scope</strong> icon.</li>
+<li>The callback URL will be provided by the external application that will be accessing Domino through Domino REST API, which is the redirect after OAuth authentication. </li>
+<li><strong>When your app accesses endpoints that run write operations in the <code>/setup-v1/</code> URL path, make sure to add the <code>$SETUP</code> scope aside from the <code>$DATA</code> scope</strong> to enhance access control in relation to the app inheriting a user's access rights when the user grants app access.</li>
+<li>Select the <strong>use PKCE</strong> checkbox if you want to use PKCE or Proof Key for Code Exchange, an extension to the authorization code flow to prevent cross-site request forgery and authorization code injection attacks. For more information about how PKCE works and how to implement PKCE, see <a href="https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce" rel="noopener noreferrer" target="_blank" title="Opens a new tab">Authorization Code Flow with Proof Key for Code Exchange (PKCE)</a>&nbsp;<img alt="link image" src="../../../assets/images/external-link.svg" style="height:15px;width:15px" />.</li>
+</ul>
+</div>
+<h3 id="generate-an-app-secret">Generate an app secret</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This only applies to applications that use app secret as authentication method. This is not needed if you use PKCE as the authentication method. For more information, see <a href="../../../references/usingwebui/appui.html">Application Management</a>.</p>
+</div>
+<p>Click the <strong>Click to Generate Secret</strong> text corresponding to the new OAuth application to generate the <strong>App Secret</strong>.</p>
+<p>You will supply the <strong>App ID</strong> and <strong>App Secret</strong> to the external application that will be accessing the related Domino database through the Domino REST API.</p>
+<p>Make sure to take note of the <strong>App Secret</strong>. Once you switch away from the <strong>App Management</strong> page, the <strong>App Secret</strong> will be salted and hashed, and then saved. It can't be transformed back. If you forget it, you need to generate a new one.</p>
 
 
 
@@ -6989,7 +7194,7 @@ On this foundation, the GitHub.com hosted <a href="https://github.com/HCL-TECH-S
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 25, 2025 17:35:06 UTC">March 25, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 15, 2025 17:34:04 UTC">May 15, 2025</span>
   </span>
 
     
@@ -7138,10 +7343,10 @@ On this foundation, the GitHub.com hosted <a href="https://github.com/HCL-TECH-S
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
   </body>

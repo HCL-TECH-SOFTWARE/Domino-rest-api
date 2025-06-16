@@ -88,7 +88,7 @@
     },
 
     {
-      "title": "Installing & Configuring",
+      "title": "Installation and configuration",
       "old": "installconfig",
       "new": "tutorial/installconfig/index.html"
     },
@@ -96,43 +96,43 @@
     {
       "title": "Installation",
       "old": "installconfig/installation",
-      "new": "tutorial/installconfig/index.html"
+      "new": "tutorial/installconfig/install/index.html"
     },
 
     {
       "title": "Docker",
       "old": "installconfig/installation/docker.html",
-      "new": "tutorial/installconfig/docker.html"
+      "new": "tutorial/installconfig/install/docker.html"
     },
 
     {
       "title": "Linux",
       "old": "installconfig/installation/linux.html",
-      "new": "tutorial/installconfig/linux.html"
+      "new": "tutorial/installconfig/install/linux.html"
     },
 
     {
       "title": "Mac",
       "old": "installconfig/installation/mac.html",
-      "new": "tutorial/installconfig/mac.html"
+      "new": "tutorial/installconfig/install/mac.html"
     },
 
     {
       "title": "Windows",
       "old": "installconfig/installation/win.html",
-      "new": "tutorial/installconfig/win.html"
+      "new": "tutorial/installconfig/install/win.html"
     },
 
     {
       "title": "Post Installation Tasks",
       "old": "installconfig/installation/postinstallation.html",
-      "new": "tutorial/installconfig/postinstallation.html"
+      "new": "tutorial/installconfig/configuration/index.html"
     },
 
     {
       "title": "Functional Accounts",
       "old": "installconfig/installation/functionalUsers.html",
-      "new": "tutorial/installconfig/functionalUsers.html"
+      "new": "references/functionalUsers.html"
     },
 
     {
