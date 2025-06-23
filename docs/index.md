@@ -1,7 +1,9 @@
 ---
 title: Welcome
+template: home-blocks.html
 hide:
   - navigation
+  - toc
 ---
 
 # Welcome to {{ variable.drapi }} documentation
@@ -56,3 +58,104 @@ The {{ variable.drapi }} documentation is based on the [Diátaxis framework](htt
 ## Let's connect
 
 --8<-- "feedback.md"
+
+<!--
+<div class="grid cards" markdown>
+
+-    :material-gesture-tap-button:{ .lg .middle } __Get started__
+
+    ---
+
+    - [System requirements](tutorials/installupgrade/sysreq/index.md)
+
+    - [Compatibility matrix](references/compatibilitymatrix.md)
+
+    - [Installation and upgrade](tutorials/installupgrade/index.md)
+
+    - [Tutorials](tutorials/index.md)
+
+    - [Trainings and webinars](tutorials/webinar.md)
+
+    - [Video tutorials and demonstrations](tutorials/video.md)
+
+    ---
+
+-   :material-new-box:{ .lg .middle } __What's New?__
+
+    ---
+
+    Find out what's new in the latest HCL Volt MX Go release.
+
+    ---
+
+    [:octicons-arrow-right-24: Go to What's New](./whatsnew/index.md)
+
+
+-   :material-book-open-variant:{ .lg .middle } __Tutorials__
+
+    ---
+
+    Hands-on introduction to Volt MX Go.
+    
+    ---
+
+    [:octicons-arrow-right-24: Go to Tutorials](./tutorials/index.md)
+
+-   :material-server-network:{ .lg .middle } __How-to guides__
+
+    ---
+
+    Practical step-by-step guides for performing tasks and operation.
+
+    ---
+
+    [:octicons-arrow-right-24: Go to How-to guides](./howto/index.md)
+
+-   :material-file-document:{ .lg .middle } __Topic guides__
+
+    ---
+
+    High-level discussion and explanation of key topics and concepts to give background information.
+
+    ---
+
+    [:octicons-arrow-right-24: Go to Topic guides](./topicguides/index.md)
+
+-   :material-code-tags:{ .lg .middle } __References__
+
+    ---
+
+    Technical references and descriptions on using Volt MX Go.
+
+    ---
+
+    [:octicons-arrow-right-24: Go to Reference](./references/index.md)
+
+-    :material-link-variant:{ .lg .middle } __Quick links__
+
+    ---
+
+    - [Rosetta API reference documentation](javadoc/index.html "Link opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](assets/images/external-link.svg){: style="height:13px;width:13px"}
+
+    - [Known limitations](references/knownlimitation.md)
+
+    - [Support](references/index.md#support)
+
+    - [Documentation references](references/index.md#documentation-references)
+
+    - [Additional considerations](references/addconsideration.md)
+
+    ---
+
+-   :material-map:{ .lg .middle } __Guide to documentation__
+
+    ---
+
+    Provides information on how the documentation is organized and on using the Volt MX Go documentation.
+
+    ---
+
+    [:octicons-arrow-right-24: Go to Guide to documentation](./references/docguide.md)
+
+</div>
+-->

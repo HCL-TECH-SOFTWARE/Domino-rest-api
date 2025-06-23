@@ -1,0 +1,169 @@
+
+/* General flexbox styles */
+
+.align-top {
+    align-items: top;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.flex-start {
+    justify-content: flex-start;
+}
+
+.flex-break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+.nowrap {
+    flex-wrap: nowrap;
+}
+
+
+/* General Text Stypes */
+.white {
+    color: white;
+}
+
+.orange-bg {
+    background-color: orange;
+}
+
+.body-text {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+/* Button Styles */
+.md-button {
+    margin-top: .5rem;
+    margin-right: .5rem;
+}
+
+.md-button--primary {
+    background-color: var(--md-primary-bg-color);
+    color: hsla(280deg, 37%, 48%, 1);
+    border-color: var(--md-primary-bg-color)
+}
+
+.md-button--secondary {
+    background-color: black;
+}
+
+.md-button:focus,
+.md-button:hover {
+    background-color: var(--md-accent-fg-color);
+    color: var(--md-default-bg-color);
+    border-color: var(--md-accent-fg-color)
+}
+
+/* Set the main area background colour */
+
+.md-main {
+    background-color: #EFEFEF;
+}
+
+/* Card style */
+
+.md-typeset .grid.cards>ol>li,
+.md-typeset .grid.cards>ul>li,
+.md-typeset .grid>.card {
+    border-radius: .2rem;
+    margin: 0 .4rem .4rem 0;
+    background-color: white;
+}
+
+/* Hero section styles */
+
+.section-flexbox-row {
+    color: var(--md-primary-bg-color);
+    display: flex;
+    flex-direction: row;
+    /* width: 100%; */
+    max-width: 61rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.dx-hero-container {
+    padding-top: 0rem;
+    background: url(../images/MX_Hero_Sky.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    /*height: 15rem;*/
+    min-height: auto;
+}
+
+.dx-hero__content {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width:30em) {
+
+    .align-top {
+        justify-content: flex-start;
+    }
+
+    .align-center {
+        justify-content: space-around;
+
+    }
+
+    .space-around {
+        align-items: center;
+
+    }
+
+    .flex-start {
+        align-items: top;
+    }
+
+    .section-flexbox-row {
+        margin-right: 1rem;
+        margin-left: 1rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        padding: 0.5rem;
+    }
+    
+}
+
+
+@media only screen and (max-width:64em) and (min-width:30em),
+only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+    .section-flexbox-row {
+        margin-right: 1rem;
+        margin-left: 1rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        padding: 0.5rem;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+
+
+}
+
+/*Added as part of the June 2025 template updates*/
+.md-footer-copyright {
+    font-size: .8rem !important;
+	margin-left: 65px;
+}
