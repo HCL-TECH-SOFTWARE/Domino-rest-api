@@ -1,4 +1,8 @@
 
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -43,6 +47,8 @@
     
       <link rel="stylesheet" href="../../assets/css/keep_style.css">
     
+      <link rel="stylesheet" href="../../assets/css/style.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -60,6 +66,11 @@
     
     
     
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
   </head>
   
   
@@ -79,9 +90,59 @@
     </div>
     <div data-md-component="announce">
       
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com" target="_blank">HCLSoftware U</a>
+  <a href="https://developer.ds.hcl-software.com/" target="_blank">Community Forums</a>
+  <!--<a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>-->
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
     </div>
     
       <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../latest/howto/web/httpsproxy.html">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL("../.."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
         
       </div>
     
@@ -4957,6 +5018,8 @@
       
         
       
+        
+      
     
     
     
@@ -6658,6 +6721,29 @@
   
   <span class="md-ellipsis">
     Deprecated features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/docguide.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guide to documentation
     
   </span>
   
