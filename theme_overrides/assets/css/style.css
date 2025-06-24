@@ -1,0 +1,411 @@
+.md-tabs__link--active {
+    /*border-bottom: 2px solid #FFF; This removes the underline of the selected header menu*/
+    font-weight: 600;
+}
+
+.md-grid {
+    max-width: 100%;
+}
+
+.md-main__inner {
+    margin-top: 0;
+}
+
+.md-tabs__link {
+    opacity: 1;
+}
+
+.md-typeset h1 {
+    font-weight: 500;
+    color: var(--md-typeset-fg-color);
+}
+
+.md-typeset h2 {
+    font-weight: 500;
+    color: var(--md-typeset-fg-color);
+}
+
+.md-content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    /* border-left: 1px solid silver;
+    border-right: 1px solid silver; */
+}
+
+[dir=ltr] .md-sidebar--primary > .md-sidebar__scrollwrap {
+    border-right: 1px solid silver;
+}
+
+[dir=ltr]  .md-sidebar--secondary > .md-sidebar__scrollwrap {
+    border-left: 1px solid silver;
+}
+
+
+[dir=rtl] .md-sidebar--primary > .md-sidebar__scrollwrap {
+    border-left: 1px solid silver;
+}
+
+[dir=rtl]  .md-sidebar--secondary > .md-sidebar__scrollwrap {
+    border-right: 1px solid silver;
+}
+
+.md-sidebar {
+    padding-top: 0;
+}
+
+/* Left hand nav title */
+.md-nav--lifted>.md-nav__list>.md-nav__item--active>.md-nav__link {
+    box-shadow: none;
+    background: none;
+    color: black;
+    position: inherit
+}
+
+/* Right hand nav title */
+.md-nav--secondary .md-nav__title {
+    box-shadow: none;
+    background: none;
+    color: black;
+    position: inherit
+}
+
+.md-sidebar__scrollwrap {
+    margin: 0;
+    background-color: #EFEFEF;
+    padding-top: 1.2rem;
+}
+
+
+[dir=ltr] .md-header__title {
+	margin-left: 0;
+}
+
+[dir=rtl] .md-header__title {
+    margin-right: 0;
+}
+
+.announcement__link {
+    color: white !important;
+    text-decoration: underline;
+}
+
+
+.md-banner {
+    height: 50px;
+    background-color: black;  
+	overflow: hidden;
+	
+}
+
+
+.md-header{
+    background-color: #212121;
+    box-shadow: none;
+	/*The following are added as part of the june 2025 template update*/
+    color: var(--md-primary-bg-color);
+    display: block;
+    left: 0;
+    position: sticky;
+    right: 0;
+    top: 0;
+    z-index: 4;
+}
+/*White border line for Search text box
+.md-search {
+    position: relative;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+}
+*/
+
+.md-tabs{
+    background-color: #212121;
+}
+
+ 
+.nav-link {
+	margin-right: 20px;
+}
+ 
+ .md-footer-hcl  {
+    text-align: center;
+    bottom: 0;
+    width: 80%;
+    color: #ffffff;
+    font-size: 13px;
+    min-height: 34px;
+	margin-left: 120px;
+	   
+ }
+ 
+ .footer-launch::after {
+    content: url("../assets/new-tab.svg");
+    width: 20px;
+    height: 20px;
+    margin: auto 2px;
+    padding-top: 3px;
+    display: inline-block;
+    vertical-align: text-bottom;
+	
+}
+
+
+.dropbtn  {
+  color: white;
+  font-size: 16px;
+  border: none;
+  z-index: 9999;
+}
+
+.dropdown {
+  float: right;
+  z-index: 9999;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #212121;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 9999;
+  font-size: 14px;
+  margin-left: -8%; /*This left alignment is only for Mobile view only*/
+}
+
+.dropdown-content a {
+  color: white;
+  /*padding: 2px 6px - this is before the JUne 2025 update*/
+  padding: 4px 6px;
+  display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+  /*the following was added as part of the June 2025 update*/
+    color: #ffffff;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.md-banner--feedback {
+margin-left: 180px;
+margin-right: 150px;
+text-align: center;
+
+}
+
+.md-banner--warning {
+    background: var(--md-typeset-mark-color) !important;
+}
+
+:root {
+    --md-primary-light-grey: #EFEFEF;
+}
+
+/*Alignment is done for language selector for desktop view*/
+
+@media screen and (min-width: 800px) {
+    .md-select {
+        position: relative;
+        z-index: 1;
+        margin-left: -40%;
+    }
+    .dropdown-content {
+        margin-left: -2%;
+	}
+}
+
+/*starting from line 221, the following items are added as part of the June 2025 template update */
+
+.version-banner {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 0.75rem;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid #ffeeba;
+    z-index: 9999;
+    position: relative;
+    font-size: 14px;
+  }
+  
+  .version-banner a {
+    color: #130485;
+    text-decoration: underline;
+  }
+  
+  
+  
+  .header_title { 
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 20px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  /* Left container: logo + subtitle links */
+  .header_left {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  /* Logo */
+  .header_left a img {
+    vertical-align: middle;
+    margin-left: -20px;
+  }
+  /* Subtitle links */
+  .subtitle {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .subtitle a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  .subtitle a:hover {
+      color: white;
+  }
+  
+  
+  /* .subtitle a:hover span {
+    color: #0ba5a8;
+    text-decoration: underline;
+  } */
+  
+  .md-container {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      margin-top: -1px;
+  }
+  
+  .md-tabs {
+      background-color: #212121;
+  }
+   
+  .nav-link {
+      margin-right: 20px;
+  }
+   
+   .md-footer-hcl  {
+      text-align: center;
+      bottom: 0;
+      width: 80%;
+      color: #ffffff;
+      font-size: 13px;
+      min-height: 34px;
+      margin-left: 120px;   
+   }
+   
+   .footer-launch::after {
+      content: url("../images/new-tab.svg");
+      width: 20px;
+      height: 20px;
+      margin: auto 2px;
+      padding-top: 3px;
+      display: inline-block;
+      vertical-align: text-bottom;
+  }
+  
+  
+  
+  /* Main footer container */
+  .footer {
+    background-color: #1a1a1a;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 10px 0;
+  }
+  
+  /* Left section - Email & Twitter */
+  .footer-left ul,
+  .footer-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footer-left {
+      margin-left: 65px;
+  }
+  
+  .footer-left a,
+  .footer-right a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-left a:hover,
+  .footer-right a:hover {
+    color: #0ba5a8;
+  }
+  
+  .footer-launch::after {
+      content: url("../images/new-tab.svg");
+      width: 20px;
+      height: 20px;
+      margin: auto 5px;
+      padding-top: 3px;
+      display: inline-block;
+      vertical-align: text-bottom;
+  }
+  
+  .footer-mail::after {
+      content: url("../images/email.svg");
+      width: 20px;
+      height: 20px;
+      margin: auto 5px;
+      padding-top: 3px;
+      display: inline-block;
+      vertical-align: text-bottom;
+  }
+  
+  .footer-twitter::after {
+      content: url("https://help.hcltechsw.com/images/twitter.png");
+      width: 20px;
+      height: 20px;
+      margin: auto 5px;
+      padding-top: 3px;
+      display: inline-block;
+      vertical-align: text-bottom;
+  }
+  
+  /* .footer-container {
+      width: 90%;
+  } */
+  
+  .footer-left {
+      float: left;
+  }
+  
+  .footer-right {
+      float: right;
+  }
+  
+  .share-content {
+      text-align: left;
+  }
+  
+  .legal-content {
+      text-align: right;
+  }
+  /* .md-footer-copyright {
+      font-size: .8rem !important;
+      margin-left: 65px;
+  } */
+  

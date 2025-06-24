@@ -29,11 +29,12 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - attr_list
+  - md_in_html
   - pymdownx.tabbed:
       alternate_style: true
-#  - pymdownx.emoji:
-#      emoji_index: !!python/name:materialx.emoji.twemoji
-#      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 #      emoji_index: !!python/name:material.extensions.emoji.twemoji
 #      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.snippets:
@@ -78,6 +79,7 @@ edit_uri: edit/main/docs
 # Customization
 extra_css:
   - assets/css/keep_style.css
+  - assets/css/style.css
 
 plugins:
   - search
