@@ -4,23 +4,26 @@ nav:
   - index.md
   - introducingrestapi.md
   - understanding.md
-  - howkeepworks.md
+  - usecases.md
   - schemascope.md
   - schemabackup.md
-  - formmodes.md
-  - keepdifference.md
-  - keepFlows.md
-  - KeepFactory-and-caches.md
-  - architecture.md
-  - planning.md
-  - barbican.md
-  - eventbus.md
-  - httpHandler.md
-  - dominojnx.md
-  - agents.md
-  - usecases.md
-  - keepasproxy.md
-  - Auxiliary services: auxiliary
-  - notesprimer.md
-  - Extensibility: extensibility
   - configuringPorts.md
+  - Auxiliary services: auxiliary
+  
+#  - howkeepworks.md
+#  - schemabackup.md
+#  - formmodes.md
+#  - keepdifference.md
+#  - keepFlows.md
+#  - KeepFactory-and-caches.md
+#  - architecture.md
+#  - planning.md
+#  - barbican.md
+#  - eventbus.md
+#  - httpHandler.md
+#  - dominojnx.md
+#  - agents.md
+#  - keepasproxy.md
+#  - notesprimer.md
+#  - Extensibility: extensibility
+  

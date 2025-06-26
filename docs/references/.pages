@@ -21,7 +21,7 @@ nav:
   - Quick reference: quickreference
   - support.md
   - downloads.md
-  - admincheatsheet.md
+#  - admincheatsheet.md
   - ofba.md
   - richtextension.md
   - deprecated.md

@@ -75,7 +75,7 @@ Provides information related to the [installation and configuration of Domino RE
 
 - [Swagger UI](usertools/swagger.md)
 
-## Configuration parameters 
+## Configuration parameters
 
 To learn more information about parameters used in configuration, see [Configuration parameters](parameters.md)
 
@@ -101,10 +101,10 @@ Helps you understand what information to provide to ensure that your support nee
 
 For scripts, Postman collections, sample databases, and more, see [Downloads](downloads.md).
 
-## Admin cheat sheet
+<!--## Admin cheat sheet
 
 For information that administrator users need to know, see [Admin cheat sheet](admincheatsheet.md).
-
+-->
 ## Extensions
 
 - [Extensions to open Microsoft Office in OFBA](ofba.md)
