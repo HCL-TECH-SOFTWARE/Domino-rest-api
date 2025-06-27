@@ -13,7 +13,7 @@ In case of a **Form** in a schema, this is different. A **Form** definition mean
 In other words:
 
 - What a form design element is to a document in a client, is the form schema in the REST API.
-- The form schema can do more, see <!--[Form modes](../topicguides/formmodes.md) and-->[The Barbican](../topicguides/barbican.md#form-modes).
+- The form schema can do more, see <!--[Form modes](../topicguides/formmodes.md) and-->[The Barbican](../references/extensibility/barbican.md#form-modes).
 - The schema is the responsibility of the Domino developer.
 
 ## Scope

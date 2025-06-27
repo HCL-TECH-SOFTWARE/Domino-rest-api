@@ -744,6 +744,6 @@
     | [Running Agents: keepAgents.nsf](../topicguides/agents.md#running-agents) |
     | [Parameters - AsyncAgentScheduler verticle: keepAgents.nsf](../references/parameters.md#asyncagentscheduler-verticle) |
     | [Domino REST API Roles](../references/usingdominorestapi/roles.md) |
-    | [Factories and Caches: KeepFactory & KeepConfig](../topicguides/KeepFactory-and-caches.md) |
+    | [Factories and Caches: KeepFactory & KeepConfig](../references/extensibility/KeepFactory-and-caches.md) |
     | [HCL Tutorials, may reference KEEP](https://opensource.hcltechsw.com/domino-keep-tutorials) |
     | HCL Documentation, images and image file names may reference KEEP |

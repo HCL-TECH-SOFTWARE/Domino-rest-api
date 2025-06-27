@@ -110,4 +110,4 @@ Based on your interest, start by exploring the following sections of this docume
 
 - Learn more about [using Domino REST API](../references/usingdominorestapi/index.md).
 
-- Explore the internal [working of Domino REST API](../topicguides/howkeepworks.md) and know more about the [Barbican](../topicguides/barbican.md).
+- Explore the internal [working of Domino REST API](../references/extensibility/howkeepworks.md) and know more about the [Barbican](../references/extensibility/barbican.md).

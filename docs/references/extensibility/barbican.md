@@ -9,21 +9,21 @@ The Barbican in Domino REST API decides what a given user can read from or write
 - _Exception_: If NO fields are configured in `keepconfig`, no fields on the form can be accessed. As a best practice, define fields to constitute the schema for the document at this mode. A warning is logged to the console, if fields are not set. On write access, this ensures unexpected fields are not submitted.
 - An item in a document can be accessed only if there is a matching field on the form or a field configured in `keepconfig`.
 
-![Field Access in Barbican](../assets/images/Barbican-filter.png)
+![Field Access in Barbican](../../assets/images/Barbican-filter.png)
 
 The Barbican functions as the schema definition for the Domino REST API.
 
 ## Reading documents
 
-![Reading documents in Barbican](../assets/images/Barbican-read.png){: .scale-img-eighty-percent }
+![Reading documents in Barbican](../../assets/images/Barbican-read.png){: .scale-img-eighty-percent }
 
 ## Updating documents
 
-![Updating documents in Barbican](../assets/images/Barbican-write.png){: .scale-img-eighty-percent }
+![Updating documents in Barbican](../../assets/images/Barbican-write.png){: .scale-img-eighty-percent }
 
 ## Creating documents
 
-![Creating documents in Barbican](../assets/images/Barbican-create.png){: .scale-img-eighty-percent }
+![Creating documents in Barbican](../../assets/images/Barbican-create.png){: .scale-img-eighty-percent }
 
 ## Form Modes
 
@@ -31,13 +31,13 @@ Form Modes are used to manage access to documents. Domino REST API only allows a
 
 When a form is not configured, documents with that form item are not accessible via Domino REST API. A form configuration has one or more **Form Modes** to determine access.
 
-![Form configuration with modes](../assets/images/Formconfiguration.png)
+![Form configuration with modes](../../assets/images/Formconfiguration.png)
 
 Each mode, specified in JSON as a series of flags and formulas, that determine access. Currently we make use of the [`@Formula` language](https://help.hcltechsw.com/dom_designer/12.0.0/basic/H_NOTES_FORMULA_LANGUAGE.html), but we might extend the options in future.
 
 Using a configuration, rather than code in an individual application shifts preserving integrity to the Domino server, an important step to roll out Single Page WebApps or mobile apps without the need for extended application server infrastructure
 
-![Form configuration with modes](../assets/images/formmode.png)
+![Form configuration with modes](../../assets/images/formmode.png)
 
 | Item                | Sample Value                                                        | Explanation                                                                                            |
 | ------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
@@ -75,4 +75,4 @@ This assigning of access to documents to different users, based on their roles, 
 
 ## Further readings
 
-Check the pages about the [Admin UI](../references/usingwebui/index.md) and go through the [Tutorials](../tutorial/index.md).
+Check the pages about the [Admin UI](../../references/usingwebui/index.md) and go through the [Tutorials](../../tutorial/index.md).

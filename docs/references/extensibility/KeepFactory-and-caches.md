@@ -15,7 +15,7 @@ KeepFactory often needs to work differently for JUnit tests. This is why instanc
 
 The KeepFactory is also used by the HttpListener and AbstractKeepDataVerticle to load handler classes according to the OpenAPI spec.
 
-![Domino REST API Errors](../assets/images/KeepFactory.png)
+![Domino REST API Errors](../../assets/images/KeepFactory.png)
 
 ## **KeepConfig**
 
@@ -76,8 +76,7 @@ The design cache is used by the Domino REST API Admin module to select:
 
 - **Views** to _enable_ for Domino REST API access.
 - **Forms** to _enable_ for Domino REST API access.
-- **Agents** to _expose_ for Domino REST API access.
-  As a result, anyone using the Domino REST API Admin module must have a minimum of Designer access to the databases they are enabling for Domino REST API access.
+- **Agents** to _expose_ for Domino REST API access. As a result, anyone using the Domino REST API Admin module must have a minimum of Designer access to the databases they are enabling for Domino REST API access.
 
 ## JWTManager
 
@@ -85,4 +84,4 @@ This is responsible for generating JWT tokens.
 
 ## LoggedOutUserList
 
-This uses an ExpiringMap to auto-expire JWT tokens. The "/logout" endpoint also expires a JWT token. The expired tokens are checked by the "jwt" security handler, `ExpiringJwtHandler`.
+This uses an ExpiringMap to auto expire JWT tokens. The "/logout" endpoint also expires a JWT token. The expired tokens are checked by the "jwt" security handler, `ExpiringJwtHandler`.

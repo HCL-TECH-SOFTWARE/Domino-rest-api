@@ -15,6 +15,7 @@ nav:
   - Using Admin UI: usingwebui
   - Security: security
   - User tools: usertools
+  - Extensibility: extensibility
   - sdk.md
   - parameters.md
   - troubleshooting.md
