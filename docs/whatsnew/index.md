@@ -39,7 +39,7 @@ The What's new contains information about the latest features, improvements, fix
 
 [Read the full details](v1.1.3.md)
 
-## Domino REST API v1.1.2 and earlier EOS
+## Domino REST API v1.1.2 and earlier
 
 ??? note "Important"
 
