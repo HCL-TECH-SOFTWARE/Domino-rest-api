@@ -3,10 +3,11 @@ title: Topic guides
 nav:
   - index.md
   - introducingrestapi.md
-  - understanding.md
   - usecases.md
+  - understanding.md
   - schemascope.md
   - schemabackup.md
+  - agents.md
   - configuringPorts.md
   - Auxiliary services: auxiliary
   

@@ -6,9 +6,9 @@ This section discusses and explains topics and concepts about HCL Domino REST AP
 
 - [Introducing Domino REST API](introducingrestapi.md)
 
-- [Understanding Domino REST API](understanding.md)
-
 - [Use cases](usecases.md)
+
+- [Understanding Domino REST API](understanding.md)
 
 - [Schema and scopes](schemascope.md)
 
