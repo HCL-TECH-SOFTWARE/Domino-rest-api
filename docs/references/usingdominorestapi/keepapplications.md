@@ -84,13 +84,13 @@ Browser based applications (ReactJS, Angular, Vue, VanillaJS) can be hosted on a
     }
     ```
 
-### Hosting your static application on Domino REST API
+### Hosting static applications
 
-Frameworks like Angular, ReactJS, Swelte etc. usually generate a `build` directory with a set of static files.
+A typical use case for the Domino REST API is to create a web user interface using modern web development frameworks like Angular, ReactJS, or Svelte. These frameworks typically generate a `build` directory containing a set of static files.
 
-You can copy that directory to `keepweb.d` in your Domino data directory and Domino REST API will serve them on the `/keepweb/` URL path. This eliminates the need for CORS configuration.
+You can copy this directory to the `keepweb.d` directory within your Domino data directory, and the Domino REST API will serve these files at the `/keepweb/` URL path. This approach eliminates the need for [CORS](#browser-based-applications) configuration.
 
-Check the details in [Security Configuration](../security/index.md).
+This functionality is similar to how Domino serves static files from its `domino/html` directory.
 
 ### Server based applications
 

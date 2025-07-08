@@ -87,6 +87,10 @@ List of available [Domino REST API SDKs](sdk.md)
 
 For addressing common errors in installing and running the Domino REST API service, see [Troubleshooting](troubleshooting.md)
 
+## Limitations and constraints
+
+Outlines known limitations and important considerations for using the Domino REST API. To learn more, see [Limitations and constrains](limitation.md).
+
 ## Quick reference
 
 - [Standards](quickreference/standards.md) used by Domino REST API

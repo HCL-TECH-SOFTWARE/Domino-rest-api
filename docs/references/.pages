@@ -7,7 +7,7 @@ nav:
   - Installation and configuration: tutorial/installconfig/index.html
   - understandingconfig.md
   - Functional accounts: functionalUsers.md
-  - hostingstatic.md
+#  - hostingstatic.md
   - OpenAPI: openapidefinitions.md
   - accesscontrol.md
   - Schema Components: schemacomponents
@@ -16,9 +16,10 @@ nav:
   - Security: security
   - User tools: usertools
   - Extensibility: extensibility
-  - sdk.md
   - parameters.md
+  - sdk.md
   - troubleshooting.md
+  - limitation.md
   - Quick reference: quickreference
   - support.md
   - downloads.md
