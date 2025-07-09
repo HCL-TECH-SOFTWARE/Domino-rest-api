@@ -16,7 +16,7 @@ The procedure guides you on planning your application by considering the followi
 
     - If your application is mobile, desktop, including Microsoft Excel[^1], or uses a command line with cURL, it requires direct access to the server.
 
-        [^1]: Microsoft and Excel are registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.
+        [^1]: Microsoft and Microsoft Excel are registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.
 
         ![Local applications](../../assets/images/access/LocalApp.png)
 

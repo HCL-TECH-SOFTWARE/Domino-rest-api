@@ -1,6 +1,6 @@
 # Extensions used to open the Microsoft Office in OFBA
  
-Here are the file formats often used by various applications within the Microsoft Office suite and Office 365 apps. Office Forms Based Authentication can access these file types through the Domino REST API to open and modify office documents.
+Here are the file formats often used by various applications within the Microsoft Office [^1] suite and Office 365 apps. Office Forms Based Authentication can access these file types through the Domino REST API to open and modify office documents.
 
 ## Generic
 
@@ -19,7 +19,7 @@ dotm=ms-word:ofv|u|%s,ms-word:ofe|u|%s
 dotx=ms-word:ofv|u|%s,ms-word:ofe|u|%s
 ```     
 
-## Microsoft Powerpoint
+## Microsoft PowerPoint
 
 ```     
 pot=ms-powerpoint:ofv|u|%s,ms-powerpoint:ofe|u|%s
@@ -99,4 +99,4 @@ xsn=ms-infopath:ofv|u|%s,ms-infopath:ofe|u|%s
 xsf=ms-infopath:ofv|u|%s,ms-infopath:ofe|u|%s
 ```
 
-     
+[^1]: Microsoft, Microsoft Office, Microsoft Office 365, Microsoft Word, Microsoft PowerPoint, Microsoft Excel, Microsoft Visio, Microsoft Access, Microsoft Project, Microsoft Publisher, and Microsoft InfoPath are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.

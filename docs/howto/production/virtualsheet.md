@@ -2,7 +2,7 @@
 
 Virtual Spreadsheet enables you to open and edit view entries using Microsoft Excel[^1]. This feature uses the [round trip editing feature](roundtrip.md) of Domino REST API for Microsoft Office applications.
 
-[^1]: Microsoft and Excel are registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.
+[^1]: Microsoft and Microsoft Excel are registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.
 
 Coming from the word *virtual*, virtual spreadsheet doesn't exist as a spreadsheet file anywhere. It's only created on demand and returned as a spreadsheet file to the user. It's also not saved back as a whole spreadsheet file. Instead, Domino REST API reads each row and updates each document tied to its respective view entry.
 

@@ -215,7 +215,7 @@
 
         The **Virtual Spreadsheet** feature allows you to open up and edit view entries using Microsoft Excel [^1]. This feature uses the round trip editing feature of Domino REST API for Microsoft Office applications. For more information, see [Set up Virtual Spreadsheet](../howto/production/virtualsheet.md).
 
-        [^1]: Microsoft and Excel are registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.
+        [^1]: Microsoft and Microsoft Excel are registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.
 
     - Added ability for a third-party Rich Text processor to process incoming Rich Text. For more information, see [Incoming Rich Text Processor](../references/richtextension.md#incoming-rich-text-processor). 
 
