@@ -1,5 +1,5 @@
 <!-- prettier-ignore -->
-!!! danger "Let's connect!"
+!!! information "Let's connect!"
 
     Your opinion matters. Let us know all your questions, discussions, ideas, and feedback.
 
