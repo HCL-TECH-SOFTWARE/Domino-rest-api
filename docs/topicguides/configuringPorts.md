@@ -20,22 +20,10 @@ The management port allows access to Domino REST API runtime behavior, such as t
 
 A typical configuration is to block access to Port 8889 from anything but `localhost`. An administrator who wants to interact with the management port would use an `ssh` session to access the server and use `curl` to access the management endpoints.
 
-## Port for Prometheus metrics (8890)
+## Port for Prometheus Metrics (8890)
 
 Domino REST API provides metrics in Prometheus format on Port 8890. When you don't collect metrics, block access to this port. When you do collect them, open access to this port to the collecting server or servers only.
 
-## Additional information
+## Additional Information
 
 To learn more on how to secure the ports to encrypt the communication between any client and the Domino REST API server in a production environment, see [Secure ports](../tutorial/installconfig/configuration/secureport.md).
-<!--## Configure for HTTPS access on Port 443
-
-To make all ports accessible on Port 443, an https proxy server (Ingress on Kubernetes) can be used. This documentation provides two examples:
-
-- [Proxy using multiple sub-domains](../../howto/web/httpsproxy.md)
-
-- [Proxy using URL path access](../../howto/web/httpsproxy2.md)
-
-Alternatively you can configure the Ports directly for TLS. The ports don't change like the web default settings (80 for http, 443 for https), they just start to require https, e.g. `https://yourserver.com:8880`
-
-Details on certificate configuration [can be found here](../../howto/IdP/configuringCertificates.md).
--->

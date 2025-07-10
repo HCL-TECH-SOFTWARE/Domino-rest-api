@@ -21,7 +21,7 @@ Testing is done using [JUnit5](https://www.baeldung.com/junit-5), [Mockito](http
 
 Last, not least, all interface definitions are maintained as [OpenAPI 3.0.x](https://spec.openapis.org/oas/v3.0.4.html) specification in JSON format.
 
-![Keep block layout](KEEPLayout.png)
+![Keep block layout](../../assets/images/KEEPLayout.png)
 
 ## Skills and tools you need
 

@@ -13,7 +13,7 @@ The [Vert.x](https://vertx.io) EventBus is the nervous system of Domino REST API
 
 ## Flowchart
 
-![FlowChart of our Eventbus](../assets/images/EventBus.png)
+![FlowChart of our Eventbus](../../assets/images/EventBus.png)
 
 ```bash
 title EventBus use in KEEP
@@ -61,7 +61,7 @@ HttpListener->HttpClient: response end
 EventBus uses header values to transport the meta data.
 The body (usually JSON) has a "payload" property with the requested data.
 
-![FlowChart of our Eventbus](../assets/images/HTTPtoEventBus.png)
+![FlowChart of our Eventbus](../../assets/images/HTTPtoEventBus.png)
 
 ## Initial request header
 

@@ -75,8 +75,8 @@
 
     {
       "title": "Planning your application",
-      "old": "quickstart/planning.html",
-      "new": "topicguides/planning.html"
+      "old": "topicguides/planning.html",
+      "new": "howto/production/planning.html"
     },
 
     { "title": "Tutorial", "old": "tutorial", "new": "tutorial/index.html" },
@@ -335,8 +335,8 @@
 
     {
       "title": "Domino REST API is Different",
-      "old": "usingkeep/keepdifference.html",
-      "new": "topicguides/keepdifference.html"
+      "old": "topicguides/keepdifference.html",
+      "new": "references/limitation.html"
     },
 
     {
@@ -359,14 +359,14 @@
 
     {
       "title": "How it works",
-      "old": "howkeepworks",
-      "new": "topicguides/howkeepworks.html"
+      "old": "topicguides/howkeepworks.html",
+      "new": "references/extensibility/howkeepworks.html"
     },
 
     {
       "title": "Factories and Caches",
-      "old": "howkeepworks/KeepFactory-and-caches.html",
-      "new": "topicguides/KeepFactory-and-caches.html"
+      "old": "topicguides/KeepFactory-and-caches.html",
+      "new": "references/extensibility/KeepFactory-and-caches.html"
     },
 
     {
@@ -377,26 +377,26 @@
 
     {
       "title": "The Barbican",
-      "old": "howkeepworks/barbican.html",
-      "new": "topicguides/barbican.html"
+      "old": "topicguides/barbican.html",
+      "new": "references/extensibility/barbican.html"
     },
 
     {
       "title": "The EventBus",
-      "old": "howkeepworks/eventbus.html",
-      "new": "topicguides/eventbus.html"
+      "old": "topicguides/eventbus.html",
+      "new": "references/extensibility/eventbus.html"
     },
 
     {
       "title": "The HTTP Handler",
-      "old": "howkeepworks/httpHandler.html",
-      "new": "topicguides/httpHandler.html"
+      "old": "topicguides/httpHandler.html",
+      "new": "references/extensibility/httpHandler.html"
     },
 
     {
       "title": "Domino REST API Flows",
-      "old": "howkeepworks/keepFlows.html",
-      "new": "topicguides/keepFlows.html"
+      "old": "topicguides/keepFlows.html",
+      "new": "references/extensibility/keepFlows.html"
     },
 
     {

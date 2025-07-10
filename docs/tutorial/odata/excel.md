@@ -62,4 +62,4 @@ This means that the data in a Notes database can be displayed in something as si
 
 OData feed for MS Excel is read-only, if you want to read and write using MS Excel, you can try out [Virtual Spreadsheet](../../howto/production/virtualsheet.md).
 
-[^1]: Microsoft and Excel are registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.
+[^1]: Microsoft and Microsoft Excel are registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.

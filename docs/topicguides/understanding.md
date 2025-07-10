@@ -4,11 +4,11 @@ HCL Domino REST API is the middleware connecting Notes & Domino to a contemporar
 
 [![Understanding Domino REST API](../assets/images/UnderstandingKEEP640.png)](../assets/images/UnderstandingKEEP.png)
 
-## A Note can contain ANYTHING, an API shouldn't
+## A Note Can Contain Anything; An API Shouldn't
 
 A document note (a.k.a. a document) in a Notes database can contain any number of items (colloquially referred to as _fields_ - which is actually inaccurate) that are fully self contained, describing their datatype, cardinality (single value, multi-value) and content. There is no fixed relationship to any form containing defining fields.
 
-By _convention_, documents contain an item with the name `Form` pointing to what the document tentatively might contain. **Tentative!** The document might not contain items for each field in the referred form, might contain items created by actions, agents, or external code without a matching field in the form or items which don't match the data type of the field definition.
+By _convention_, documents contain an item with the name `Form` pointing to what the document tentatively might contain. **Tentatively!** The document might not contain items for each field in the referred form, might contain items created by actions, agents, or external code without a matching field in the form or items which don't match the data type of the field definition.
 
 Furthermore, a document might be viewed with different forms and/or change the value of its form item during its lifetime.
 
@@ -22,14 +22,14 @@ These free for all capabilities aren't suitable to be exposed in an API. An API 
 - Which mode is available to a given user is determined by an `@Formula` that can include item values, UserName, Groups and roles for its computation. This allows to map permissions and workflows on an API level.
 - Reading and writing coerces note item values into the ones defined in the schema. Multi-value fields are delivered as array, while single values as scalar, regardless of item content.
 
-## Security is declared, not computed
+## Security Is Declared, Not Computed
 
 [Notes' security](https://wissel.net/blog/2014/02/domino-development-back-to-basics-part-6-better-safe-than-sorry-security.html) uses ACL entries and special item types `Reader`, `Name` and `Author` to define access permissions. Since this is near and dear to all applications, the API needs to support this:
 
 - The schema's format containing values like `date-time` or `int64` got extended to include `readers`, `names`, `authors` and `richtext`. This allows for appropriate data mappings.
 - JSON's boolean data type is mapped to 0 and 1.
 
-## Who are you? It depends
+## Who Are You? It Depends
 
 Domino provides its own source of identity, the Domino directory. However this isn't the only option in use in customer environments. Furthermore, applications need to access data **on your behalf**. To accommodate this Domino REST API uses [JWT](https://jwt.io) tokens, defined [scopes](../references/usingdominorestapi/scopes.md) and an [OAuth 2.0](https://oauth.net/2/) compliant authorization service:
 
@@ -39,7 +39,7 @@ Domino provides its own source of identity, the Domino directory. However this i
 - The API allows to configure OAuth applications providing `client_id` and `client_secret` to empower user authorizing API access to a defined scope.
 - The management (8889), metrics (8890), and healthcheck (8886) endpoints use identities that are stored in `identities : { ... }` in Domino REST API's configuration. Out of the box, none are configured.
 
-## Databases, schemas and scopes
+## Databases, Schemas and Scopes
 
 ![Databases schema and scopes](../assets/images/KeepSchemaToApp.png)
 
@@ -73,7 +73,7 @@ Based on this mismatch of source and target environment we designed your option 
 
 Read more about them in [Domino REST API Roles](../references/usingdominorestapi/roles.md).
 
-## On the todo list
+## On the Todo List
 
 We're not done yet:
 

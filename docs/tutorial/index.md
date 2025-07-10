@@ -32,7 +32,9 @@ Follow the [Domino ToDo Database](https://opensource.hcltechsw.com/domino-keep-t
 - Using the XPages ToDo Application.
 - Viewing the ACL via Domino REST API Postman APIs.
 - Configuring it for validated Domino REST API access.
-- Using OData to access data in Microsoft Excel. All steps are done via the Domino REST API Admin GUI.
+- Using OData to access data in Microsoft Excel [^1]. All steps are done via the Domino REST API Admin GUI.
+
+[^1]: Microsoft and Microsoft Excel are registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.
 
 ### Web Developers
 

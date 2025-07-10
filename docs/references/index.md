@@ -75,7 +75,7 @@ Provides information related to the [installation and configuration of Domino RE
 
 - [Swagger UI](usertools/swagger.md)
 
-## Configuration parameters 
+## Configuration parameters
 
 To learn more information about parameters used in configuration, see [Configuration parameters](parameters.md)
 
@@ -86,6 +86,10 @@ List of available [Domino REST API SDKs](sdk.md)
 ## Troubleshooting
 
 For addressing common errors in installing and running the Domino REST API service, see [Troubleshooting](troubleshooting.md)
+
+## Limitations and constraints
+
+Outlines known limitations and important considerations for using the Domino REST API. To learn more, see [Limitations and constrains](limitation.md).
 
 ## Quick reference
 
@@ -101,10 +105,10 @@ Helps you understand what information to provide to ensure that your support nee
 
 For scripts, Postman collections, sample databases, and more, see [Downloads](downloads.md).
 
-## Admin cheat sheet
+<!--## Admin cheat sheet
 
 For information that administrator users need to know, see [Admin cheat sheet](admincheatsheet.md).
-
+-->
 ## Extensions
 
 - [Extensions to open Microsoft Office in OFBA](ofba.md)

@@ -7,7 +7,7 @@ nav:
   - Installation and configuration: tutorial/installconfig/index.html
   - understandingconfig.md
   - Functional accounts: functionalUsers.md
-  - hostingstatic.md
+#  - hostingstatic.md
   - OpenAPI: openapidefinitions.md
   - accesscontrol.md
   - Schema Components: schemacomponents
@@ -15,13 +15,15 @@ nav:
   - Using Admin UI: usingwebui
   - Security: security
   - User tools: usertools
-  - sdk.md
+  - Extensibility: extensibility
   - parameters.md
+  - sdk.md
   - troubleshooting.md
+  - limitation.md
   - Quick reference: quickreference
   - support.md
   - downloads.md
-  - admincheatsheet.md
+#  - admincheatsheet.md
   - ofba.md
   - richtextension.md
   - deprecated.md

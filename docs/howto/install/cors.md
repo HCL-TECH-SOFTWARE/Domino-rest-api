@@ -6,7 +6,7 @@ The [CORS protocol](https://fetch.spec.whatwg.org/#http-cors-protocol) is design
 
 !!! tip "You can avoid CORS"
 
-    Domino REST API allows to [host your static applications](../../references/hostingstatic.md), which doesn't require additional CORS setup besides your host.
+    Domino REST API allows to [host your static applications](../../references/usingdominorestapi/keepapplications.md#hosting-static-applications), which doesn't require additional CORS setup besides your host.
 
 ## Procedure
 

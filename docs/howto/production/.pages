@@ -9,6 +9,7 @@ nav:
     - Host SPA with ReactJS: reactjs.md
     - oauthinvstgtn.md
     - configparam.md
+    - planning.md
     - computeform.md
     - roundtrip.md
     - virtualsheet.md

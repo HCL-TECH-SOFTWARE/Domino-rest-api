@@ -65,7 +65,9 @@ We also looked at NRPC (Notes only, no SDK), gRPC (server to server only, no bro
 
 ### Implication
 
-HTTP is the most used and widely supported transport protocol. Considering that we also cater to MS-Excel (on Windows) and pure browser applications, it was the only logical choice.
+HTTP is the most used and widely supported transport protocol. Considering that we also cater to Microsoft Excel[^1] (on Windows) and pure browser applications, it was the only logical choice.
+
+[^1]: Microsoft and Microsoft Excel are registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.
 
 <hr />
 

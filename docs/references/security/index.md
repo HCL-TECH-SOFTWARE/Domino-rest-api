@@ -23,7 +23,7 @@ Here are what we implemented:
 - No anonymous access is granted for REST data.
 - Access to sensitive information can be limited to servers that present additional credentials.
 
-- Read/Write access is controlled on a per form, field and user basis. See [The Barbican](../../topicguides/barbican.md) for details.
+- Read/Write access is controlled on a per form, field and user basis. See [The Barbican](../../references/extensibility/barbican.md) for details.
 
 Here's a flowchart to show how Domino REST API handles security.
 

@@ -49,7 +49,7 @@ You need to create or edit a json file in `keepconfig.d` that has the `oauth` ke
 }
 ```
 
-That directory must contain you custom `authorization.html`. It doesn't need to be accessible via http(s), since the REST task will pick it up. You can use `keepconfig.d` for this. For CSS and JS (again: don't mess with the JS) you need http(s) accessible locations, like `keepweb.d` that [is visible](../../references/hostingstatic.md) as `/keepweb`.
+That directory must contain you custom `authorization.html`. It doesn't need to be accessible via http(s), since the REST task will pick it up. You can use `keepconfig.d` for this. For CSS and JS, you need http(s) accessible locations like `keepweb.d` that's [visible](../../references/usingdominorestapi/keepapplications.md#hosting-static-applications) as `/keepweb`.
 
 !!! tip "Use a name matching the purpose"
 
