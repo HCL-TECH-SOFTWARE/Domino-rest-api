@@ -14,25 +14,25 @@
       
       
       
-        <link rel="canonical" href="https://opensource.hcltechsw.com/Domino-rest-api/references/hostingstatic.html">
+        <link rel="canonical" href="https://opensource.hcltechsw.com/Domino-rest-api/references/extensibility/eventbus.html">
       
       
-        <link rel="prev" href="functionalUsers.html">
+        <link rel="prev" href="barbican.html">
       
       
-        <link rel="next" href="openapidefinitions.html">
+        <link rel="next" href="httpHandler.html">
       
       
-      <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+      <link rel="icon" href="../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
-        <title>Hosting static applications - HCL Domino REST API Documentation</title>
+        <title>EventBus - HCL Domino REST API Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
       
       
 
@@ -45,11 +45,11 @@
       
     
     
-      <link rel="stylesheet" href="../assets/css/keep_style.css">
+      <link rel="stylesheet" href="../../assets/css/keep_style.css">
     
-      <link rel="stylesheet" href="../assets/css/style.css">
+      <link rel="stylesheet" href="../../assets/css/style.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hosting-static-applications" class="md-skip">
+        <a href="#eventbus" class="md-skip">
           Skip to content
         </a>
       
@@ -136,12 +136,12 @@
             <div class="md-banner__inner md-grid md-typeset">
               
   You're not viewing the latest version.
-  <a href="../../latest/references/hostingstatic.html">
+  <a href="../../../latest/references/extensibility/eventbus.html">
     <strong>Click here to go to latest.</strong>
   </a> 
 
             </div>
-            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL(".."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL("../.."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
           </aside>
         
       </div>
@@ -153,9 +153,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="HCL Domino REST API Documentation" class="md-header__button md-logo" aria-label="HCL Domino REST API Documentation" data-md-component="logo">
+    <a href="../../index.html" title="HCL Domino REST API Documentation" class="md-header__button md-logo" aria-label="HCL Domino REST API Documentation" data-md-component="logo">
       
-  <img src="../assets/images/HCL_KEEP_ICON.jpg" alt="logo">
+  <img src="../../assets/images/HCL_KEEP_ICON.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -172,7 +172,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Hosting static applications
+              EventBus
             
           </span>
         </div>
@@ -258,7 +258,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../index.html" class="md-tabs__link">
+      <a href="../../index.html" class="md-tabs__link">
         
   
   
@@ -279,7 +279,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../whatsnew/index.html" class="md-tabs__link">
+        <a href="../../whatsnew/index.html" class="md-tabs__link">
           
   
   
@@ -301,7 +301,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../tutorial/index.html" class="md-tabs__link">
+        <a href="../../tutorial/index.html" class="md-tabs__link">
           
   
   
@@ -323,7 +323,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../howto/index.html" class="md-tabs__link">
+        <a href="../../howto/index.html" class="md-tabs__link">
           
   
   
@@ -345,7 +345,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../topicguides/index.html" class="md-tabs__link">
+        <a href="../../topicguides/index.html" class="md-tabs__link">
           
   
   
@@ -369,7 +369,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="index.html" class="md-tabs__link">
+        <a href="../index.html" class="md-tabs__link">
           
   
   
@@ -411,9 +411,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="HCL Domino REST API Documentation" class="md-nav__button md-logo" aria-label="HCL Domino REST API Documentation" data-md-component="logo">
+    <a href="../../index.html" title="HCL Domino REST API Documentation" class="md-nav__button md-logo" aria-label="HCL Domino REST API Documentation" data-md-component="logo">
       
-  <img src="../assets/images/HCL_KEEP_ICON.jpg" alt="logo">
+  <img src="../../assets/images/HCL_KEEP_ICON.jpg" alt="logo">
 
     </a>
     HCL Domino REST API Documentation
@@ -440,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../../index.html" class="md-nav__link">
         
   
   
@@ -489,7 +489,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../whatsnew/index.html" class="md-nav__link ">
+            <a href="../../whatsnew/index.html" class="md-nav__link ">
               
   
   
@@ -524,7 +524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../whatsnew/v1.1.4.html" class="md-nav__link">
+      <a href="../../whatsnew/v1.1.4.html" class="md-nav__link">
         
   
   
@@ -547,7 +547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../whatsnew/v1.1.3.html" class="md-nav__link">
+      <a href="../../whatsnew/v1.1.3.html" class="md-nav__link">
         
   
   
@@ -570,7 +570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../whatsnew/whatisnew.html" class="md-nav__link">
+      <a href="../../whatsnew/whatisnew.html" class="md-nav__link">
         
   
   
@@ -641,7 +641,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../tutorial/index.html" class="md-nav__link ">
+            <a href="../../tutorial/index.html" class="md-nav__link ">
               
   
   
@@ -676,7 +676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/quickstart.html" class="md-nav__link">
+      <a href="../../tutorial/quickstart.html" class="md-nav__link">
         
   
   
@@ -724,7 +724,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../tutorial/installconfig/index.html" class="md-nav__link ">
+            <a href="../../tutorial/installconfig/index.html" class="md-nav__link ">
               
   
   
@@ -792,7 +792,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../tutorial/installconfig/install/index.html" class="md-nav__link ">
+            <a href="../../tutorial/installconfig/install/index.html" class="md-nav__link ">
               
   
   
@@ -850,7 +850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/installconfig/install/downloaddrapi.html" class="md-nav__link">
+      <a href="../../tutorial/installconfig/install/downloaddrapi.html" class="md-nav__link">
         
   
   
@@ -873,7 +873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/installconfig/install/linux.html" class="md-nav__link">
+      <a href="../../tutorial/installconfig/install/linux.html" class="md-nav__link">
         
   
   
@@ -896,7 +896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/installconfig/install/win.html" class="md-nav__link">
+      <a href="../../tutorial/installconfig/install/win.html" class="md-nav__link">
         
   
   
@@ -919,7 +919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/installconfig/install/mac.html" class="md-nav__link">
+      <a href="../../tutorial/installconfig/install/mac.html" class="md-nav__link">
         
   
   
@@ -942,7 +942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/installconfig/install/docker.html" class="md-nav__link">
+      <a href="../../tutorial/installconfig/install/docker.html" class="md-nav__link">
         
   
   
@@ -1006,7 +1006,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../tutorial/installconfig/configuration/index.html" class="md-nav__link ">
+            <a href="../../tutorial/installconfig/configuration/index.html" class="md-nav__link ">
               
   
   
@@ -1041,7 +1041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/installconfig/configuration/connectivity.html" class="md-nav__link">
+      <a href="../../tutorial/installconfig/configuration/connectivity.html" class="md-nav__link">
         
   
   
@@ -1064,7 +1064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/installconfig/configuration/secureport.html" class="md-nav__link">
+      <a href="../../tutorial/installconfig/configuration/secureport.html" class="md-nav__link">
         
   
   
@@ -1087,7 +1087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/installconfig/configuration/setupfunctionalaccount.html" class="md-nav__link">
+      <a href="../../tutorial/installconfig/configuration/setupfunctionalaccount.html" class="md-nav__link">
         
   
   
@@ -1110,7 +1110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/installconfig/configuration/jwtconfig.html" class="md-nav__link">
+      <a href="../../tutorial/installconfig/configuration/jwtconfig.html" class="md-nav__link">
         
   
   
@@ -1133,7 +1133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/installconfig/configuration/admingroup.html" class="md-nav__link">
+      <a href="../../tutorial/installconfig/configuration/admingroup.html" class="md-nav__link">
         
   
   
@@ -1156,7 +1156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/installconfig/configuration/exposedb.html" class="md-nav__link">
+      <a href="../../tutorial/installconfig/configuration/exposedb.html" class="md-nav__link">
         
   
   
@@ -1242,7 +1242,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../tutorial/walkthrough/index.html" class="md-nav__link ">
+            <a href="../../tutorial/walkthrough/index.html" class="md-nav__link ">
               
   
   
@@ -1277,7 +1277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/walkthrough/lab-00.html" class="md-nav__link">
+      <a href="../../tutorial/walkthrough/lab-00.html" class="md-nav__link">
         
   
   
@@ -1300,7 +1300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/walkthrough/lab-01.html" class="md-nav__link">
+      <a href="../../tutorial/walkthrough/lab-01.html" class="md-nav__link">
         
   
   
@@ -1323,7 +1323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/walkthrough/lab-02.html" class="md-nav__link">
+      <a href="../../tutorial/walkthrough/lab-02.html" class="md-nav__link">
         
   
   
@@ -1346,7 +1346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/walkthrough/lab-03.html" class="md-nav__link">
+      <a href="../../tutorial/walkthrough/lab-03.html" class="md-nav__link">
         
   
   
@@ -1369,7 +1369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/walkthrough/lab-04.html" class="md-nav__link">
+      <a href="../../tutorial/walkthrough/lab-04.html" class="md-nav__link">
         
   
   
@@ -1392,7 +1392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/walkthrough/lab-05.html" class="md-nav__link">
+      <a href="../../tutorial/walkthrough/lab-05.html" class="md-nav__link">
         
   
   
@@ -1415,7 +1415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/walkthrough/lab-06.html" class="md-nav__link">
+      <a href="../../tutorial/walkthrough/lab-06.html" class="md-nav__link">
         
   
   
@@ -1438,7 +1438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/walkthrough/lab-07.html" class="md-nav__link">
+      <a href="../../tutorial/walkthrough/lab-07.html" class="md-nav__link">
         
   
   
@@ -1461,7 +1461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/walkthrough/lab-08.html" class="md-nav__link">
+      <a href="../../tutorial/walkthrough/lab-08.html" class="md-nav__link">
         
   
   
@@ -1484,7 +1484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/walkthrough/lab-09.html" class="md-nav__link">
+      <a href="../../tutorial/walkthrough/lab-09.html" class="md-nav__link">
         
   
   
@@ -1507,7 +1507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/walkthrough/lab-10.html" class="md-nav__link">
+      <a href="../../tutorial/walkthrough/lab-10.html" class="md-nav__link">
         
   
   
@@ -1530,7 +1530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/walkthrough/lab-11.html" class="md-nav__link">
+      <a href="../../tutorial/walkthrough/lab-11.html" class="md-nav__link">
         
   
   
@@ -1553,7 +1553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/walkthrough/downloadindex.html" class="md-nav__link">
+      <a href="../../tutorial/walkthrough/downloadindex.html" class="md-nav__link">
         
   
   
@@ -1630,7 +1630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/adminui.html" class="md-nav__link">
+      <a href="../../tutorial/adminui.html" class="md-nav__link">
         
   
   
@@ -1653,7 +1653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/postmancurl.html" class="md-nav__link">
+      <a href="../../tutorial/postmancurl.html" class="md-nav__link">
         
   
   
@@ -1676,7 +1676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/swagger.html" class="md-nav__link">
+      <a href="../../tutorial/swagger.html" class="md-nav__link">
         
   
   
@@ -1724,7 +1724,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../tutorial/odata/index.html" class="md-nav__link ">
+            <a href="../../tutorial/odata/index.html" class="md-nav__link ">
               
   
   
@@ -1759,7 +1759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/odata/excel.html" class="md-nav__link">
+      <a href="../../tutorial/odata/excel.html" class="md-nav__link">
         
   
   
@@ -1782,7 +1782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/odata/salesforce.html" class="md-nav__link">
+      <a href="../../tutorial/odata/salesforce.html" class="md-nav__link">
         
   
   
@@ -1848,7 +1848,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../tutorial/extensibility/index.html" class="md-nav__link ">
+            <a href="../../tutorial/extensibility/index.html" class="md-nav__link ">
               
   
   
@@ -1883,7 +1883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/extensibility/javaproject.html" class="md-nav__link">
+      <a href="../../tutorial/extensibility/javaproject.html" class="md-nav__link">
         
   
   
@@ -1906,7 +1906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/extensibility/openapi.html" class="md-nav__link">
+      <a href="../../tutorial/extensibility/openapi.html" class="md-nav__link">
         
   
   
@@ -1929,7 +1929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/extensibility/configjson.html" class="md-nav__link">
+      <a href="../../tutorial/extensibility/configjson.html" class="md-nav__link">
         
   
   
@@ -1952,7 +1952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/extensibility/businesslogic.html" class="md-nav__link">
+      <a href="../../tutorial/extensibility/businesslogic.html" class="md-nav__link">
         
   
   
@@ -1975,7 +1975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/extensibility/accesscontrol.html" class="md-nav__link">
+      <a href="../../tutorial/extensibility/accesscontrol.html" class="md-nav__link">
         
   
   
@@ -1998,7 +1998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/extensibility/deployment.html" class="md-nav__link">
+      <a href="../../tutorial/extensibility/deployment.html" class="md-nav__link">
         
   
   
@@ -2021,7 +2021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/extensibility/devcontainer.html" class="md-nav__link">
+      <a href="../../tutorial/extensibility/devcontainer.html" class="md-nav__link">
         
   
   
@@ -2096,7 +2096,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../howto/index.html" class="md-nav__link ">
+            <a href="../../howto/index.html" class="md-nav__link ">
               
   
   
@@ -2174,7 +2174,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../howto/install/index.html" class="md-nav__link ">
+            <a href="../../howto/install/index.html" class="md-nav__link ">
               
   
   
@@ -2209,7 +2209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/installconfig/index.html" class="md-nav__link">
+      <a href="../../tutorial/installconfig/index.html" class="md-nav__link">
         
   
   
@@ -2232,7 +2232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/install/symlink.html" class="md-nav__link">
+      <a href="../../howto/install/symlink.html" class="md-nav__link">
         
   
   
@@ -2255,7 +2255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/install/modifyconfig.html" class="md-nav__link">
+      <a href="../../howto/install/modifyconfig.html" class="md-nav__link">
         
   
   
@@ -2278,7 +2278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/install/cors.html" class="md-nav__link">
+      <a href="../../howto/install/cors.html" class="md-nav__link">
         
   
   
@@ -2301,7 +2301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/install/multiserver.html" class="md-nav__link">
+      <a href="../../howto/install/multiserver.html" class="md-nav__link">
         
   
   
@@ -2324,7 +2324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/install/notesclient.html" class="md-nav__link">
+      <a href="../../howto/install/notesclient.html" class="md-nav__link">
         
   
   
@@ -2347,7 +2347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/install/uninstall.html" class="md-nav__link">
+      <a href="../../howto/install/uninstall.html" class="md-nav__link">
         
   
   
@@ -2370,7 +2370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/install/passkey.html" class="md-nav__link">
+      <a href="../../howto/install/passkey.html" class="md-nav__link">
         
   
   
@@ -2393,7 +2393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/install/webauthn.html" class="md-nav__link">
+      <a href="../../howto/install/webauthn.html" class="md-nav__link">
         
   
   
@@ -2416,7 +2416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/install/oauthoscreen.html" class="md-nav__link">
+      <a href="../../howto/install/oauthoscreen.html" class="md-nav__link">
         
   
   
@@ -2439,7 +2439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/install/obtainauthenticationtoken.html" class="md-nav__link">
+      <a href="../../howto/install/obtainauthenticationtoken.html" class="md-nav__link">
         
   
   
@@ -2495,7 +2495,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../howto/web/index.html" class="md-nav__link ">
+            <a href="../../howto/web/index.html" class="md-nav__link ">
               
   
   
@@ -2530,7 +2530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/web/httpsproxy.html" class="md-nav__link">
+      <a href="../../howto/web/httpsproxy.html" class="md-nav__link">
         
   
   
@@ -2553,7 +2553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/web/httpsproxy2.html" class="md-nav__link">
+      <a href="../../howto/web/httpsproxy2.html" class="md-nav__link">
         
   
   
@@ -2623,7 +2623,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../howto/IdP/index.html" class="md-nav__link ">
+            <a href="../../howto/IdP/index.html" class="md-nav__link ">
               
   
   
@@ -2658,7 +2658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/IdP/configuredrapiIdP.html" class="md-nav__link">
+      <a href="../../howto/IdP/configuredrapiIdP.html" class="md-nav__link">
         
   
   
@@ -2681,7 +2681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/IdP/configureoidc.html" class="md-nav__link">
+      <a href="../../howto/IdP/configureoidc.html" class="md-nav__link">
         
   
   
@@ -2704,7 +2704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/IdP/configuringAD.html" class="md-nav__link">
+      <a href="../../howto/IdP/configuringAD.html" class="md-nav__link">
         
   
   
@@ -2727,7 +2727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/IdP/configuringCertificates.html" class="md-nav__link">
+      <a href="../../howto/IdP/configuringCertificates.html" class="md-nav__link">
         
   
   
@@ -2750,7 +2750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/IdP/configuringIdentityProvider.html" class="md-nav__link">
+      <a href="../../howto/IdP/configuringIdentityProvider.html" class="md-nav__link">
         
   
   
@@ -2773,7 +2773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/IdP/configuringKeycloak.html" class="md-nav__link">
+      <a href="../../howto/IdP/configuringKeycloak.html" class="md-nav__link">
         
   
   
@@ -2796,7 +2796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/IdP/keepsaml.html" class="md-nav__link">
+      <a href="../../howto/IdP/keepsaml.html" class="md-nav__link">
         
   
   
@@ -2819,7 +2819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/IdP/roundtripidp.html" class="md-nav__link">
+      <a href="../../howto/IdP/roundtripidp.html" class="md-nav__link">
         
   
   
@@ -2842,7 +2842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/IdP/adminuiidp.html" class="md-nav__link">
+      <a href="../../howto/IdP/adminuiidp.html" class="md-nav__link">
         
   
   
@@ -2909,6 +2909,8 @@
       
         
       
+        
+      
     
     
     
@@ -2924,7 +2926,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../howto/production/index.html" class="md-nav__link ">
+            <a href="../../howto/production/index.html" class="md-nav__link ">
               
   
   
@@ -2959,7 +2961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/changefilesize.html" class="md-nav__link">
+      <a href="../../howto/production/changefilesize.html" class="md-nav__link">
         
   
   
@@ -2982,7 +2984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/prodports.html" class="md-nav__link">
+      <a href="../../howto/production/prodports.html" class="md-nav__link">
         
   
   
@@ -3005,7 +3007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/customAPI.html" class="md-nav__link">
+      <a href="../../howto/production/customAPI.html" class="md-nav__link">
         
   
   
@@ -3028,7 +3030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/dominohttps.html" class="md-nav__link">
+      <a href="../../howto/production/dominohttps.html" class="md-nav__link">
         
   
   
@@ -3051,7 +3053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/hardening.html" class="md-nav__link">
+      <a href="../../howto/production/hardening.html" class="md-nav__link">
         
   
   
@@ -3074,7 +3076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/httpsprod.html" class="md-nav__link">
+      <a href="../../howto/production/httpsprod.html" class="md-nav__link">
         
   
   
@@ -3097,7 +3099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/reactjs.html" class="md-nav__link">
+      <a href="../../howto/production/reactjs.html" class="md-nav__link">
         
   
   
@@ -3120,7 +3122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/oauthinvstgtn.html" class="md-nav__link">
+      <a href="../../howto/production/oauthinvstgtn.html" class="md-nav__link">
         
   
   
@@ -3143,7 +3145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/configparam.html" class="md-nav__link">
+      <a href="../../howto/production/configparam.html" class="md-nav__link">
         
   
   
@@ -3166,7 +3168,30 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/computeform.html" class="md-nav__link">
+      <a href="../../howto/production/planning.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plan you application
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/production/computeform.html" class="md-nav__link">
         
   
   
@@ -3189,7 +3214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/roundtrip.html" class="md-nav__link">
+      <a href="../../howto/production/roundtrip.html" class="md-nav__link">
         
   
   
@@ -3212,7 +3237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/virtualsheet.html" class="md-nav__link">
+      <a href="../../howto/production/virtualsheet.html" class="md-nav__link">
         
   
   
@@ -3235,7 +3260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/signencrypt.html" class="md-nav__link">
+      <a href="../../howto/production/signencrypt.html" class="md-nav__link">
         
   
   
@@ -3258,7 +3283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/testformulas.html" class="md-nav__link">
+      <a href="../../howto/production/testformulas.html" class="md-nav__link">
         
   
   
@@ -3281,7 +3306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/versionupdate.html" class="md-nav__link">
+      <a href="../../howto/production/versionupdate.html" class="md-nav__link">
         
   
   
@@ -3347,7 +3372,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../howto/database/index.html" class="md-nav__link ">
+            <a href="../../howto/database/index.html" class="md-nav__link ">
               
   
   
@@ -3382,7 +3407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/database/editsourcejson.html" class="md-nav__link">
+      <a href="../../howto/database/editsourcejson.html" class="md-nav__link">
         
   
   
@@ -3405,7 +3430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/database/editviewcolumn.html" class="md-nav__link">
+      <a href="../../howto/database/editviewcolumn.html" class="md-nav__link">
         
   
   
@@ -3428,7 +3453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/database/enablingadb.html" class="md-nav__link">
+      <a href="../../howto/database/enablingadb.html" class="md-nav__link">
         
   
   
@@ -3451,7 +3476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/database/excludeddb.html" class="md-nav__link">
+      <a href="../../howto/database/excludeddb.html" class="md-nav__link">
         
   
   
@@ -3474,7 +3499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/database/exportsourcejson.html" class="md-nav__link">
+      <a href="../../howto/database/exportsourcejson.html" class="md-nav__link">
         
   
   
@@ -3497,7 +3522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/database/externalnames.html" class="md-nav__link">
+      <a href="../../howto/database/externalnames.html" class="md-nav__link">
         
   
   
@@ -3520,7 +3545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/database/pullviewdata.html" class="md-nav__link">
+      <a href="../../howto/database/pullviewdata.html" class="md-nav__link">
         
   
   
@@ -3588,7 +3613,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../howto/management/index.html" class="md-nav__link ">
+            <a href="../../howto/management/index.html" class="md-nav__link ">
               
   
   
@@ -3623,7 +3648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/management/checksettings.html" class="md-nav__link">
+      <a href="../../howto/management/checksettings.html" class="md-nav__link">
         
   
   
@@ -3646,7 +3671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/management/supportpackage.html" class="md-nav__link">
+      <a href="../../howto/management/supportpackage.html" class="md-nav__link">
         
   
   
@@ -3669,7 +3694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/management/disablemodule.html" class="md-nav__link">
+      <a href="../../howto/management/disablemodule.html" class="md-nav__link">
         
   
   
@@ -3692,7 +3717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/management/configsrc.html" class="md-nav__link">
+      <a href="../../howto/management/configsrc.html" class="md-nav__link">
         
   
   
@@ -3715,7 +3740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/management/usersmc.html" class="md-nav__link">
+      <a href="../../howto/management/usersmc.html" class="md-nav__link">
         
   
   
@@ -3738,7 +3763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/management/jwtmultiserver.html" class="md-nav__link">
+      <a href="../../howto/management/jwtmultiserver.html" class="md-nav__link">
         
   
   
@@ -3761,7 +3786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/management/suspendeduser.html" class="md-nav__link">
+      <a href="../../howto/management/suspendeduser.html" class="md-nav__link">
         
   
   
@@ -3784,7 +3809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/management/console.html" class="md-nav__link">
+      <a href="../../howto/management/console.html" class="md-nav__link">
         
   
   
@@ -3840,7 +3865,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../howto/VoltMX/index.html" class="md-nav__link ">
+            <a href="../../howto/VoltMX/index.html" class="md-nav__link ">
               
   
   
@@ -3875,7 +3900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/VoltMX/configuring-keep-idplite-with-identity-service.html" class="md-nav__link">
+      <a href="../../howto/VoltMX/configuring-keep-idplite-with-identity-service.html" class="md-nav__link">
         
   
   
@@ -3898,7 +3923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/VoltMX/setupoauthnsf.html" class="md-nav__link">
+      <a href="../../howto/VoltMX/setupoauthnsf.html" class="md-nav__link">
         
   
   
@@ -3954,7 +3979,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../howto/codesamples/index.html" class="md-nav__link ">
+            <a href="../../howto/codesamples/index.html" class="md-nav__link ">
               
   
   
@@ -3989,7 +4014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/codesamples/javascript.html" class="md-nav__link">
+      <a href="../../howto/codesamples/javascript.html" class="md-nav__link">
         
   
   
@@ -4012,7 +4037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/codesamples/js_sdk.html" class="md-nav__link">
+      <a href="../../howto/codesamples/js_sdk.html" class="md-nav__link">
         
   
   
@@ -4072,34 +4097,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
     
     
     
@@ -4115,7 +4112,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../topicguides/index.html" class="md-nav__link ">
+            <a href="../../topicguides/index.html" class="md-nav__link ">
               
   
   
@@ -4150,7 +4147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../topicguides/introducingrestapi.html" class="md-nav__link">
+      <a href="../../topicguides/introducingrestapi.html" class="md-nav__link">
         
   
   
@@ -4173,7 +4170,30 @@
   
   
     <li class="md-nav__item">
-      <a href="../topicguides/understanding.html" class="md-nav__link">
+      <a href="../../topicguides/usecases.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Use Cases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/understanding.html" class="md-nav__link">
         
   
   
@@ -4196,30 +4216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../topicguides/howkeepworks.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    How HCL Domino REST API works
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../topicguides/schemascope.html" class="md-nav__link">
+      <a href="../../topicguides/schemascope.html" class="md-nav__link">
         
   
   
@@ -4242,12 +4239,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../topicguides/schemabackup.html" class="md-nav__link">
+      <a href="../../topicguides/schemabackup.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Schema backup
+    Schema Backup
     
   </span>
   
@@ -4265,237 +4262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../topicguides/formmodes.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Form modes
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../topicguides/keepdifference.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Domino REST API is different
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../topicguides/keepFlows.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Domino REST API flows
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../topicguides/KeepFactory-and-caches.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Factories and Caches
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../topicguides/architecture.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Architectural decisions
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../topicguides/planning.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Planning your application
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../topicguides/barbican.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    The Barbican
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../topicguides/eventbus.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    EventBus
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../topicguides/httpHandler.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    HTTP handler
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../topicguides/dominojnx.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    DominoJNX
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../topicguides/agents.html" class="md-nav__link">
+      <a href="../../topicguides/agents.html" class="md-nav__link">
         
   
   
@@ -4518,35 +4285,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../topicguides/usecases.html" class="md-nav__link">
+      <a href="../../topicguides/configuringPorts.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Use cases
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../topicguides/keepasproxy.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Domino REST API and Proxy
+    Ports
     
   </span>
   
@@ -4593,11 +4337,11 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_20" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../topicguides/auxiliary/index.html" class="md-nav__link ">
+            <a href="../../topicguides/auxiliary/index.html" class="md-nav__link ">
               
   
   
@@ -4610,14 +4354,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5_20" id="__nav_5_20_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5_9" id="__nav_5_9_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_20_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_20">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_9">
             <span class="md-nav__icon md-icon"></span>
             Auxiliary services
           </label>
@@ -4632,7 +4376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../topicguides/auxiliary/idp.html" class="md-nav__link">
+      <a href="../../topicguides/auxiliary/idp.html" class="md-nav__link">
         
   
   
@@ -4655,7 +4399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../topicguides/auxiliary/webdav.html" class="md-nav__link">
+      <a href="../../topicguides/auxiliary/webdav.html" class="md-nav__link">
         
   
   
@@ -4678,7 +4422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../topicguides/auxiliary/odata.html" class="md-nav__link">
+      <a href="../../topicguides/auxiliary/odata.html" class="md-nav__link">
         
   
   
@@ -4701,7 +4445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../topicguides/auxiliary/ical.html" class="md-nav__link">
+      <a href="../../topicguides/auxiliary/ical.html" class="md-nav__link">
         
   
   
@@ -4724,7 +4468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../topicguides/auxiliary/healthmetrics.html" class="md-nav__link">
+      <a href="../../topicguides/auxiliary/healthmetrics.html" class="md-nav__link">
         
   
   
@@ -4747,7 +4491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../topicguides/auxiliary/management.html" class="md-nav__link">
+      <a href="../../topicguides/auxiliary/management.html" class="md-nav__link">
         
   
   
@@ -4766,111 +4510,6 @@
           </ul>
         </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../topicguides/notesprimer.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    The shiny web world - a primer
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_22" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../topicguides/extensibility/index.html" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    Extensibility
-    
-  </span>
-  
-
-            </a>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_22_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_22">
-            <span class="md-nav__icon md-icon"></span>
-            Extensibility
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../topicguides/configuringPorts.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Ports
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -4962,7 +4601,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="index.html" class="md-nav__link ">
+            <a href="../index.html" class="md-nav__link ">
               
   
   
@@ -5020,7 +4659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/installconfig/index.html" class="md-nav__link">
+      <a href="../../tutorial/installconfig/index.html" class="md-nav__link">
         
   
   
@@ -5043,7 +4682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="understandingconfig.html" class="md-nav__link">
+      <a href="../understandingconfig.html" class="md-nav__link">
         
   
   
@@ -5066,7 +4705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="functionalUsers.html" class="md-nav__link">
+      <a href="../functionalUsers.html" class="md-nav__link">
         
   
   
@@ -5086,43 +4725,10 @@
                 
   
   
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="hostingstatic.html" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    Hosting static applications
-    
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
   
   
     <li class="md-nav__item">
-      <a href="openapidefinitions.html" class="md-nav__link">
+      <a href="../openapidefinitions.html" class="md-nav__link">
         
   
   
@@ -5145,7 +4751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="accesscontrol.html" class="md-nav__link">
+      <a href="../accesscontrol.html" class="md-nav__link">
         
   
   
@@ -5191,11 +4797,11 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_8" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="schemacomponents/index.html" class="md-nav__link ">
+            <a href="../schemacomponents/index.html" class="md-nav__link ">
               
   
   
@@ -5208,14 +4814,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_6_8" id="__nav_6_8_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_8">
             <span class="md-nav__icon md-icon"></span>
             Schema Components
           </label>
@@ -5230,7 +4836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="schemacomponents/formdefinitions.html" class="md-nav__link">
+      <a href="../schemacomponents/formdefinitions.html" class="md-nav__link">
         
   
   
@@ -5253,7 +4859,7 @@
   
   
     <li class="md-nav__item">
-      <a href="schemacomponents/viewdefinitions.html" class="md-nav__link">
+      <a href="../schemacomponents/viewdefinitions.html" class="md-nav__link">
         
   
   
@@ -5276,7 +4882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="schemacomponents/agentdefinitions.html" class="md-nav__link">
+      <a href="../schemacomponents/agentdefinitions.html" class="md-nav__link">
         
   
   
@@ -5348,11 +4954,11 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_9" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="usingdominorestapi/index.html" class="md-nav__link ">
+            <a href="../usingdominorestapi/index.html" class="md-nav__link ">
               
   
   
@@ -5365,14 +4971,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_10">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_9">
             <span class="md-nav__icon md-icon"></span>
             Using Domino REST API
           </label>
@@ -5387,7 +4993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="usingdominorestapi/keepapplications.html" class="md-nav__link">
+      <a href="../usingdominorestapi/keepapplications.html" class="md-nav__link">
         
   
   
@@ -5410,7 +5016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="usingdominorestapi/keepcli.html" class="md-nav__link">
+      <a href="../usingdominorestapi/keepcli.html" class="md-nav__link">
         
   
   
@@ -5433,7 +5039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="usingdominorestapi/restapitask.html" class="md-nav__link">
+      <a href="../usingdominorestapi/restapitask.html" class="md-nav__link">
         
   
   
@@ -5456,7 +5062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="usingdominorestapi/roles.html" class="md-nav__link">
+      <a href="../usingdominorestapi/roles.html" class="md-nav__link">
         
   
   
@@ -5479,7 +5085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="usingdominorestapi/dataformats.html" class="md-nav__link">
+      <a href="../usingdominorestapi/dataformats.html" class="md-nav__link">
         
   
   
@@ -5502,7 +5108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="usingdominorestapi/encryptsign.html" class="md-nav__link">
+      <a href="../usingdominorestapi/encryptsign.html" class="md-nav__link">
         
   
   
@@ -5525,7 +5131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="usingdominorestapi/formnames.html" class="md-nav__link">
+      <a href="../usingdominorestapi/formnames.html" class="md-nav__link">
         
   
   
@@ -5548,7 +5154,7 @@
   
   
     <li class="md-nav__item">
-      <a href="usingdominorestapi/metrics.html" class="md-nav__link">
+      <a href="../usingdominorestapi/metrics.html" class="md-nav__link">
         
   
   
@@ -5571,7 +5177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="usingdominorestapi/modenames.html" class="md-nav__link">
+      <a href="../usingdominorestapi/modenames.html" class="md-nav__link">
         
   
   
@@ -5613,11 +5219,11 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_10_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_9_11" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="usingdominorestapi/richtext/index.html" class="md-nav__link ">
+            <a href="../usingdominorestapi/richtext/index.html" class="md-nav__link ">
               
   
   
@@ -5630,14 +5236,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_6_10_11" id="__nav_6_10_11_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_6_9_11" id="__nav_6_9_11_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_10_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_10_11">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_9_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_9_11">
             <span class="md-nav__icon md-icon"></span>
             Rich Text
           </label>
@@ -5652,7 +5258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="usingdominorestapi/richtext/conversion.html" class="md-nav__link">
+      <a href="../usingdominorestapi/richtext/conversion.html" class="md-nav__link">
         
   
   
@@ -5683,7 +5289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="usingdominorestapi/scopes.html" class="md-nav__link">
+      <a href="../usingdominorestapi/scopes.html" class="md-nav__link">
         
   
   
@@ -5706,7 +5312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="usingdominorestapi/logging.html" class="md-nav__link">
+      <a href="../usingdominorestapi/logging.html" class="md-nav__link">
         
   
   
@@ -5764,11 +5370,11 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_10" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="usingwebui/index.html" class="md-nav__link ">
+            <a href="../usingwebui/index.html" class="md-nav__link ">
               
   
   
@@ -5781,14 +5387,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_6_11" id="__nav_6_11_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_11">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_10">
             <span class="md-nav__icon md-icon"></span>
             Using Admin UI
           </label>
@@ -5803,7 +5409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="usingwebui/schemaui.html" class="md-nav__link">
+      <a href="../usingwebui/schemaui.html" class="md-nav__link">
         
   
   
@@ -5826,7 +5432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="usingwebui/scopeui.html" class="md-nav__link">
+      <a href="../usingwebui/scopeui.html" class="md-nav__link">
         
   
   
@@ -5849,7 +5455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="usingwebui/quickconfigui.html" class="md-nav__link">
+      <a href="../usingwebui/quickconfigui.html" class="md-nav__link">
         
   
   
@@ -5872,7 +5478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="usingwebui/appui.html" class="md-nav__link">
+      <a href="../usingwebui/appui.html" class="md-nav__link">
         
   
   
@@ -5895,7 +5501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="usingwebui/oauthconsentui.html" class="md-nav__link">
+      <a href="../usingwebui/oauthconsentui.html" class="md-nav__link">
         
   
   
@@ -5959,11 +5565,11 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_11" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="security/index.html" class="md-nav__link ">
+            <a href="../security/index.html" class="md-nav__link ">
               
   
   
@@ -5976,14 +5582,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_6_12" id="__nav_6_12_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_6_11" id="__nav_6_11_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_12">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_11">
             <span class="md-nav__icon md-icon"></span>
             Security
           </label>
@@ -5998,7 +5604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="security/authentication.html" class="md-nav__link">
+      <a href="../security/authentication.html" class="md-nav__link">
         
   
   
@@ -6021,7 +5627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="security/jwt.html" class="md-nav__link">
+      <a href="../security/jwt.html" class="md-nav__link">
         
   
   
@@ -6044,7 +5650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="security/configurationParameters.html" class="md-nav__link">
+      <a href="../security/configurationParameters.html" class="md-nav__link">
         
   
   
@@ -6067,7 +5673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="security/encryption.html" class="md-nav__link">
+      <a href="../security/encryption.html" class="md-nav__link">
         
   
   
@@ -6090,7 +5696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/VoltMX/setupoauthnsf.html" class="md-nav__link">
+      <a href="../../howto/VoltMX/setupoauthnsf.html" class="md-nav__link">
         
   
   
@@ -6113,7 +5719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="security/customIdp.html" class="md-nav__link">
+      <a href="../security/customIdp.html" class="md-nav__link">
         
   
   
@@ -6136,7 +5742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="security/securingKEEPEndpoints.html" class="md-nav__link">
+      <a href="../security/securingKEEPEndpoints.html" class="md-nav__link">
         
   
   
@@ -6159,7 +5765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="security/idpcompare.html" class="md-nav__link">
+      <a href="../security/idpcompare.html" class="md-nav__link">
         
   
   
@@ -6215,11 +5821,11 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_13" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_12" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="usertools/index.html" class="md-nav__link ">
+            <a href="../usertools/index.html" class="md-nav__link ">
               
   
   
@@ -6232,14 +5838,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_6_13" id="__nav_6_13_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_6_12" id="__nav_6_12_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_13_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_13">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_12">
             <span class="md-nav__icon md-icon"></span>
             User tools
           </label>
@@ -6254,7 +5860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="usertools/curl.html" class="md-nav__link">
+      <a href="../usertools/curl.html" class="md-nav__link">
         
   
   
@@ -6277,7 +5883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="usertools/postman.html" class="md-nav__link">
+      <a href="../usertools/postman.html" class="md-nav__link">
         
   
   
@@ -6300,7 +5906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="usertools/swagger.html" class="md-nav__link">
+      <a href="../usertools/swagger.html" class="md-nav__link">
         
   
   
@@ -6323,7 +5929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="usertools/bruno.html" class="md-nav__link">
+      <a href="../usertools/bruno.html" class="md-nav__link">
         
   
   
@@ -6351,15 +5957,85 @@
                 
   
   
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_13" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Extensibility
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_13" id="__nav_6_13_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_13_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_13">
+            <span class="md-nav__icon md-icon"></span>
+            Extensibility
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="sdk.html" class="md-nav__link">
+      <a href="howkeepworks.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Domino REST API SDKs
+    How HCL Domino REST API works
     
   </span>
   
@@ -6377,7 +6053,243 @@
   
   
     <li class="md-nav__item">
-      <a href="parameters.html" class="md-nav__link">
+      <a href="keepFlows.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domino REST API flows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="KeepFactory-and-caches.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Factories and Caches
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="barbican.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The Barbican
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    EventBus
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="eventbus.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    EventBus
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#flowchart" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flowchart
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flowchart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anatomy-of-the-eventbus-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anatomy of the EventBus message
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initial-request-header" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial request header
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initial-reply" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial reply
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-replies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data replies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reactive-wrapper" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reactive wrapper
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#todo-more-on-the-wrapper" class="md-nav__link">
+    <span class="md-ellipsis">
+      TODO: more on the wrapper
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="httpHandler.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTTP handler
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameters.html" class="md-nav__link">
         
   
   
@@ -6400,12 +6312,58 @@
   
   
     <li class="md-nav__item">
-      <a href="troubleshooting.html" class="md-nav__link">
+      <a href="../sdk.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domino REST API SDKs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../limitation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Limitations and considerations
     
   </span>
   
@@ -6444,11 +6402,11 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_17" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_18" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="quickreference/index.html" class="md-nav__link ">
+            <a href="../quickreference/index.html" class="md-nav__link ">
               
   
   
@@ -6461,14 +6419,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_6_17" id="__nav_6_17_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_6_18" id="__nav_6_18_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_17_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_17">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_18">
             <span class="md-nav__icon md-icon"></span>
             Quick reference
           </label>
@@ -6483,7 +6441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="quickreference/standards.html" class="md-nav__link">
+      <a href="../quickreference/standards.html" class="md-nav__link">
         
   
   
@@ -6506,7 +6464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="quickreference/glossary.html" class="md-nav__link">
+      <a href="../quickreference/glossary.html" class="md-nav__link">
         
   
   
@@ -6537,7 +6495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="support.html" class="md-nav__link">
+      <a href="../support.html" class="md-nav__link">
         
   
   
@@ -6560,7 +6518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="downloads.html" class="md-nav__link">
+      <a href="../downloads.html" class="md-nav__link">
         
   
   
@@ -6583,30 +6541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="admincheatsheet.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Admin cheat sheet
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ofba.html" class="md-nav__link">
+      <a href="../ofba.html" class="md-nav__link">
         
   
   
@@ -6629,7 +6564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="richtextension.html" class="md-nav__link">
+      <a href="../richtextension.html" class="md-nav__link">
         
   
   
@@ -6652,7 +6587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="deprecated.html" class="md-nav__link">
+      <a href="../deprecated.html" class="md-nav__link">
         
   
   
@@ -6675,7 +6610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docguide.html" class="md-nav__link">
+      <a href="../docguide.html" class="md-nav__link">
         
   
   
@@ -6720,6 +6655,83 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#flowchart" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flowchart
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flowchart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anatomy-of-the-eventbus-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anatomy of the EventBus message
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initial-request-header" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial request header
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initial-reply" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial reply
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-replies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data replies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reactive-wrapper" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reactive wrapper
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#todo-more-on-the-wrapper" class="md-nav__link">
+    <span class="md-ellipsis">
+      TODO: more on the wrapper
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -6737,10 +6749,94 @@
   
 
 
-<h1 id="hosting-static-applications">Hosting static applications</h1>
-<p>A typical use case for Domino REST API is to build a web UI with the flavor of the day web development framework like Angular, ReactJS, Swelte etc. These frameworks usually generate a <code>build</code> directory with a set of static files.</p>
-<p>You can copy that directory to <code>keepweb.d</code> in your Domino data directory and Domino REST API will serve them on the <code>/keepweb/</code> URL path. This eliminates the need for <a href="usingdominorestapi/keepapplications.html">CORS</a> configuration.</p>
-<p>This is similar to Domino's feature serving static files from its <code>domino/html</code> directory.</p>
+<h1 id="eventbus">EventBus</h1>
+<p>The <a href="https://vertx.io">Vert.x</a> EventBus is the nervous system of Domino REST API. Vert.x relies on an internal EventBus that can operate in a request/reply or a broadcast mode. For simulating a flowable (from reactive principles), we follow a pattern:</p>
+<ul>
+<li>When the HttpListener receives a request from the HttpClient, it forwards it to the WebHandler based on the OperationId.</li>
+<li>The WebHandler generates a temporary address to listen for results and forwards the request to the EventBus.</li>
+<li>The EventBus relays the request to the WorkerVerticle.</li>
+<li>The WorkerVerticle sends an acknowledgment to the EventBus and requests the DbHandler to perform an action.</li>
+<li>The DbHandler sends data to the temporary address in batches, until all the data is sent to the HttpListener.</li>
+<li>The HttpClient starts interacting with data as soon as it receives it. The data is received in batches.</li>
+<li>The header determines if it is Data, Error, or completion. (See below.)</li>
+<li>Once all the data is sent, the DbHandler sends 'end of data' notification back to the EventBus.</li>
+</ul>
+<h2 id="flowchart">Flowchart</h2>
+<p><img alt="FlowChart of our Eventbus" src="../../assets/images/EventBus.png" /></p>
+<div class="highlight"><pre><span></span><code>title<span class="w"> </span>EventBus<span class="w"> </span>use<span class="w"> </span><span class="k">in</span><span class="w"> </span>KEEP
+
+participant<span class="w"> </span>HttpClient
+participant<span class="w"> </span>HttpListener
+participant<span class="w"> </span>WebHandler
+participant<span class="w"> </span>EventBus
+participant<span class="w"> </span>WorkerVerticles
+participant<span class="w"> </span>DbHandler
+opt<span class="w"> </span>Startup
+<span class="w">   </span>HttpListener-&gt;WebHandler:<span class="w"> </span>load<span class="w"> </span>known<span class="w"> </span>handlers
+<span class="w">   </span>WorkerVerticles-&gt;DbHandler:<span class="w"> </span>load<span class="w"> </span>known<span class="w"> </span>handlers
+<span class="w">   </span>WorkerVerticles-&gt;EventBus:<span class="w"> </span>Subscribe<span class="w"> </span>to<span class="w"> </span>events<span class="se">\n</span>based<span class="w"> </span>on<span class="w"> </span>tags
+end
+
+HttpClient-&gt;HttpListener:<span class="w"> </span>GET/POST/PUT<span class="se">\n</span>PATCH/DELETE
+HttpListener-&gt;HttpListener:<span class="w"> </span>Validate<span class="w"> </span>against<span class="w"> </span>OpenAPI
+HttpListener-&gt;WebHandler:<span class="w"> </span>forward<span class="w"> </span>request<span class="se">\n</span>based<span class="w"> </span>on<span class="w"> </span>operationId
+note<span class="w"> </span>right<span class="w"> </span>of<span class="w"> </span>WebHandler:<span class="w"> </span>Transforms<span class="w"> </span>request<span class="se">\n</span>generate<span class="w"> </span>Temp<span class="w"> </span>address
+WebHandler-&gt;EventBus:<span class="w"> </span>subscribe<span class="w"> </span>to<span class="w"> </span>TEMP<span class="w"> </span>address
+WebHandler-&gt;EventBus:<span class="w"> </span>forward<span class="w"> </span>request
+EventBus-&gt;WorkerVerticles:<span class="w"> </span>forward<span class="w"> </span>request
+WorkerVerticles-&gt;EventBus:<span class="w"> </span>acknowledge<span class="w"> </span>request
+EventBus-&gt;WebHandler:<span class="w"> </span>acknowledge<span class="w"> </span>request
+WebHandler-&gt;HttpListener:<span class="w"> </span>Set<span class="w"> </span>response<span class="w"> </span>headers
+WorkerVerticles-&gt;DbHandler:<span class="w"> </span>request<span class="w"> </span>data
+loop<span class="w"> </span>Response<span class="w"> </span>data
+<span class="w">    </span>DbHandler-&gt;WorkerVerticles:<span class="w"> </span>provide<span class="w"> </span>data
+<span class="w">    </span>WorkerVerticles-&gt;EventBus:<span class="w"> </span>publish<span class="w"> </span>data<span class="se">\n</span>to<span class="w"> </span>TEMP<span class="w"> </span>address
+<span class="w">    </span>EventBus-&gt;WebHandler:<span class="w"> </span>forward<span class="w"> </span>data
+<span class="w">    </span>WebHandler-&gt;HttpListener:<span class="w"> </span>forward<span class="w"> </span>data
+<span class="w">    </span>HttpListener-&gt;HttpClient:<span class="w"> </span>chunked<span class="w"> </span>response
+end
+DbHandler-&gt;WorkerVerticles:End<span class="w"> </span>of<span class="w"> </span>data
+WorkerVerticles-&gt;EventBus:<span class="w"> </span>publish<span class="w"> </span>end<span class="se">\n</span>to<span class="w"> </span>TEMP<span class="w"> </span>address
+EventBus-&gt;WebHandler:<span class="w"> </span>notify<span class="w"> </span>end
+WebHandler-&gt;EventBus:<span class="w"> </span>unsubscribe<span class="w"> </span>TEMP<span class="w"> </span>address
+WebHandler-&gt;HttpListener:<span class="w"> </span>notify<span class="w"> </span>end
+HttpListener-&gt;HttpClient:<span class="w"> </span>response<span class="w"> </span>end
+</code></pre></div>
+<h3 id="anatomy-of-the-eventbus-message">Anatomy of the EventBus message</h3>
+<p>EventBus uses header values to transport the meta data.
+The body (usually JSON) has a "payload" property with the requested data.</p>
+<p><img alt="FlowChart of our Eventbus" src="../../assets/images/HTTPtoEventBus.png" /></p>
+<h2 id="initial-request-header">Initial request header</h2>
+<p>Below are the values in the initial request sent over the EventBus
+using <a href="https://vertx.io/docs/apidocs/io/vertx/core/eventbus/EventBus.html#request-java.lang.String-java.lang.Object-io.vertx.core.eventbus.DeliveryOptions-io.vertx.core.Handler-"><code>EventBus.request()</code></a></p>
+<ul>
+<li>db: The Domino REST API alias name of the requested database (<code>MAIL</code> for Quattro)</li>
+<li>jwtclaim: The JWT string the user authenticated with</li>
+<li>appId: (Optional) Id of the calling server app</li>
+<li>appSecret: (Optional) secret of the calling server app</li>
+<li>operationId: The operationId as defined in OpenApiSpec</li>
+<li>replyAddress: Address the handler will listen for replies</li>
+</ul>
+<h2 id="initial-reply">Initial reply</h2>
+<ul>
+<li>status: Could be "failure" or "success"</li>
+<li>cause: String with explanation of potential failure</li>
+<li>statuscode: Suggested HTTP Response code</li>
+<li>ErrorClass: Type of error based on <code>com.hcl.domino.keep.exceptions</code></li>
+</ul>
+<p>See also the <code>DeliveryOpts</code> class</p>
+<h2 id="data-replies">Data replies</h2>
+<p>Data reply is similar to the initial reply but with more options in <code>status</code>:</p>
+<ul>
+<li><code>data</code>: Actual data in body</li>
+<li><code>complete</code>: No more data to expect, no data in body</li>
+<li><code>failure</code> : as above, stating what went wrong</li>
+</ul>
+<h2 id="reactive-wrapper">Reactive wrapper</h2>
+<p>To simplify the creation of handler and requesters, helper classes are built.
+They encapsulate the process back and forth on the EventBus following the <a href="http://reactivex.io/">Reactive</a> pattern. This allows for flexible pre/post processing of data sent over the EventBus.</p>
+<h2 id="todo-more-on-the-wrapper">TODO: more on the wrapper</h2>
+<p>The wrapper classes can be found in the package <code>com.hcl.domino.keep.eventbus</code></p>
 
 
 
@@ -6761,7 +6857,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 12, 2023 12:29:29 UTC">July 12, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 27, 2025 17:10:45 UTC">June 27, 2025</span>
   </span>
 
     
@@ -6910,10 +7006,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
   </body>

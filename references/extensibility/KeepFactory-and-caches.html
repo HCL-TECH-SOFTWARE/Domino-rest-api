@@ -14,25 +14,25 @@
       
       
       
-        <link rel="canonical" href="https://opensource.hcltechsw.com/Domino-rest-api/topicguides/notesprimer.html">
+        <link rel="canonical" href="https://opensource.hcltechsw.com/Domino-rest-api/references/extensibility/KeepFactory-and-caches.html">
       
       
-        <link rel="prev" href="auxiliary/management.html">
+        <link rel="prev" href="keepFlows.html">
       
       
-        <link rel="next" href="extensibility/index.html">
+        <link rel="next" href="barbican.html">
       
       
-      <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+      <link rel="icon" href="../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
-        <title>The shiny web world - a primer - HCL Domino REST API Documentation</title>
+        <title>Factories and Caches - HCL Domino REST API Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
       
       
 
@@ -45,11 +45,11 @@
       
     
     
-      <link rel="stylesheet" href="../assets/css/keep_style.css">
+      <link rel="stylesheet" href="../../assets/css/keep_style.css">
     
-      <link rel="stylesheet" href="../assets/css/style.css">
+      <link rel="stylesheet" href="../../assets/css/style.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-shiny-web-world-a-primer" class="md-skip">
+        <a href="#factories-and-caches" class="md-skip">
           Skip to content
         </a>
       
@@ -136,12 +136,12 @@
             <div class="md-banner__inner md-grid md-typeset">
               
   You're not viewing the latest version.
-  <a href="../../latest/topicguides/notesprimer.html">
+  <a href="../../../latest/references/extensibility/KeepFactory-and-caches.html">
     <strong>Click here to go to latest.</strong>
   </a> 
 
             </div>
-            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL(".."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL("../.."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
           </aside>
         
       </div>
@@ -153,9 +153,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="HCL Domino REST API Documentation" class="md-header__button md-logo" aria-label="HCL Domino REST API Documentation" data-md-component="logo">
+    <a href="../../index.html" title="HCL Domino REST API Documentation" class="md-header__button md-logo" aria-label="HCL Domino REST API Documentation" data-md-component="logo">
       
-  <img src="../assets/images/HCL_KEEP_ICON.jpg" alt="logo">
+  <img src="../../assets/images/HCL_KEEP_ICON.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -172,7 +172,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              The shiny web world - a primer
+              Factories and Caches
             
           </span>
         </div>
@@ -258,7 +258,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../index.html" class="md-tabs__link">
+      <a href="../../index.html" class="md-tabs__link">
         
   
   
@@ -279,7 +279,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../whatsnew/index.html" class="md-tabs__link">
+        <a href="../../whatsnew/index.html" class="md-tabs__link">
           
   
   
@@ -301,7 +301,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../tutorial/index.html" class="md-tabs__link">
+        <a href="../../tutorial/index.html" class="md-tabs__link">
           
   
   
@@ -323,7 +323,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../howto/index.html" class="md-tabs__link">
+        <a href="../../howto/index.html" class="md-tabs__link">
           
   
   
@@ -341,13 +341,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="index.html" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../topicguides/index.html" class="md-tabs__link">
           
   
   
@@ -365,11 +363,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../references/index.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../index.html" class="md-tabs__link">
           
   
   
@@ -411,9 +411,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="HCL Domino REST API Documentation" class="md-nav__button md-logo" aria-label="HCL Domino REST API Documentation" data-md-component="logo">
+    <a href="../../index.html" title="HCL Domino REST API Documentation" class="md-nav__button md-logo" aria-label="HCL Domino REST API Documentation" data-md-component="logo">
       
-  <img src="../assets/images/HCL_KEEP_ICON.jpg" alt="logo">
+  <img src="../../assets/images/HCL_KEEP_ICON.jpg" alt="logo">
 
     </a>
     HCL Domino REST API Documentation
@@ -440,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../../index.html" class="md-nav__link">
         
   
   
@@ -489,7 +489,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../whatsnew/index.html" class="md-nav__link ">
+            <a href="../../whatsnew/index.html" class="md-nav__link ">
               
   
   
@@ -524,7 +524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../whatsnew/v1.1.4.html" class="md-nav__link">
+      <a href="../../whatsnew/v1.1.4.html" class="md-nav__link">
         
   
   
@@ -547,7 +547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../whatsnew/v1.1.3.html" class="md-nav__link">
+      <a href="../../whatsnew/v1.1.3.html" class="md-nav__link">
         
   
   
@@ -570,7 +570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../whatsnew/whatisnew.html" class="md-nav__link">
+      <a href="../../whatsnew/whatisnew.html" class="md-nav__link">
         
   
   
@@ -641,7 +641,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../tutorial/index.html" class="md-nav__link ">
+            <a href="../../tutorial/index.html" class="md-nav__link ">
               
   
   
@@ -676,7 +676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/quickstart.html" class="md-nav__link">
+      <a href="../../tutorial/quickstart.html" class="md-nav__link">
         
   
   
@@ -724,7 +724,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../tutorial/installconfig/index.html" class="md-nav__link ">
+            <a href="../../tutorial/installconfig/index.html" class="md-nav__link ">
               
   
   
@@ -792,7 +792,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../tutorial/installconfig/install/index.html" class="md-nav__link ">
+            <a href="../../tutorial/installconfig/install/index.html" class="md-nav__link ">
               
   
   
@@ -850,7 +850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/installconfig/install/downloaddrapi.html" class="md-nav__link">
+      <a href="../../tutorial/installconfig/install/downloaddrapi.html" class="md-nav__link">
         
   
   
@@ -873,7 +873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/installconfig/install/linux.html" class="md-nav__link">
+      <a href="../../tutorial/installconfig/install/linux.html" class="md-nav__link">
         
   
   
@@ -896,7 +896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/installconfig/install/win.html" class="md-nav__link">
+      <a href="../../tutorial/installconfig/install/win.html" class="md-nav__link">
         
   
   
@@ -919,7 +919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/installconfig/install/mac.html" class="md-nav__link">
+      <a href="../../tutorial/installconfig/install/mac.html" class="md-nav__link">
         
   
   
@@ -942,7 +942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/installconfig/install/docker.html" class="md-nav__link">
+      <a href="../../tutorial/installconfig/install/docker.html" class="md-nav__link">
         
   
   
@@ -1006,7 +1006,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../tutorial/installconfig/configuration/index.html" class="md-nav__link ">
+            <a href="../../tutorial/installconfig/configuration/index.html" class="md-nav__link ">
               
   
   
@@ -1041,7 +1041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/installconfig/configuration/connectivity.html" class="md-nav__link">
+      <a href="../../tutorial/installconfig/configuration/connectivity.html" class="md-nav__link">
         
   
   
@@ -1064,7 +1064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/installconfig/configuration/secureport.html" class="md-nav__link">
+      <a href="../../tutorial/installconfig/configuration/secureport.html" class="md-nav__link">
         
   
   
@@ -1087,7 +1087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/installconfig/configuration/setupfunctionalaccount.html" class="md-nav__link">
+      <a href="../../tutorial/installconfig/configuration/setupfunctionalaccount.html" class="md-nav__link">
         
   
   
@@ -1110,7 +1110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/installconfig/configuration/jwtconfig.html" class="md-nav__link">
+      <a href="../../tutorial/installconfig/configuration/jwtconfig.html" class="md-nav__link">
         
   
   
@@ -1133,7 +1133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/installconfig/configuration/admingroup.html" class="md-nav__link">
+      <a href="../../tutorial/installconfig/configuration/admingroup.html" class="md-nav__link">
         
   
   
@@ -1156,7 +1156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/installconfig/configuration/exposedb.html" class="md-nav__link">
+      <a href="../../tutorial/installconfig/configuration/exposedb.html" class="md-nav__link">
         
   
   
@@ -1242,7 +1242,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../tutorial/walkthrough/index.html" class="md-nav__link ">
+            <a href="../../tutorial/walkthrough/index.html" class="md-nav__link ">
               
   
   
@@ -1277,7 +1277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/walkthrough/lab-00.html" class="md-nav__link">
+      <a href="../../tutorial/walkthrough/lab-00.html" class="md-nav__link">
         
   
   
@@ -1300,7 +1300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/walkthrough/lab-01.html" class="md-nav__link">
+      <a href="../../tutorial/walkthrough/lab-01.html" class="md-nav__link">
         
   
   
@@ -1323,7 +1323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/walkthrough/lab-02.html" class="md-nav__link">
+      <a href="../../tutorial/walkthrough/lab-02.html" class="md-nav__link">
         
   
   
@@ -1346,7 +1346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/walkthrough/lab-03.html" class="md-nav__link">
+      <a href="../../tutorial/walkthrough/lab-03.html" class="md-nav__link">
         
   
   
@@ -1369,7 +1369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/walkthrough/lab-04.html" class="md-nav__link">
+      <a href="../../tutorial/walkthrough/lab-04.html" class="md-nav__link">
         
   
   
@@ -1392,7 +1392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/walkthrough/lab-05.html" class="md-nav__link">
+      <a href="../../tutorial/walkthrough/lab-05.html" class="md-nav__link">
         
   
   
@@ -1415,7 +1415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/walkthrough/lab-06.html" class="md-nav__link">
+      <a href="../../tutorial/walkthrough/lab-06.html" class="md-nav__link">
         
   
   
@@ -1438,7 +1438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/walkthrough/lab-07.html" class="md-nav__link">
+      <a href="../../tutorial/walkthrough/lab-07.html" class="md-nav__link">
         
   
   
@@ -1461,7 +1461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/walkthrough/lab-08.html" class="md-nav__link">
+      <a href="../../tutorial/walkthrough/lab-08.html" class="md-nav__link">
         
   
   
@@ -1484,7 +1484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/walkthrough/lab-09.html" class="md-nav__link">
+      <a href="../../tutorial/walkthrough/lab-09.html" class="md-nav__link">
         
   
   
@@ -1507,7 +1507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/walkthrough/lab-10.html" class="md-nav__link">
+      <a href="../../tutorial/walkthrough/lab-10.html" class="md-nav__link">
         
   
   
@@ -1530,7 +1530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/walkthrough/lab-11.html" class="md-nav__link">
+      <a href="../../tutorial/walkthrough/lab-11.html" class="md-nav__link">
         
   
   
@@ -1553,7 +1553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/walkthrough/downloadindex.html" class="md-nav__link">
+      <a href="../../tutorial/walkthrough/downloadindex.html" class="md-nav__link">
         
   
   
@@ -1630,7 +1630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/adminui.html" class="md-nav__link">
+      <a href="../../tutorial/adminui.html" class="md-nav__link">
         
   
   
@@ -1653,7 +1653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/postmancurl.html" class="md-nav__link">
+      <a href="../../tutorial/postmancurl.html" class="md-nav__link">
         
   
   
@@ -1676,7 +1676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/swagger.html" class="md-nav__link">
+      <a href="../../tutorial/swagger.html" class="md-nav__link">
         
   
   
@@ -1724,7 +1724,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../tutorial/odata/index.html" class="md-nav__link ">
+            <a href="../../tutorial/odata/index.html" class="md-nav__link ">
               
   
   
@@ -1759,7 +1759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/odata/excel.html" class="md-nav__link">
+      <a href="../../tutorial/odata/excel.html" class="md-nav__link">
         
   
   
@@ -1782,7 +1782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/odata/salesforce.html" class="md-nav__link">
+      <a href="../../tutorial/odata/salesforce.html" class="md-nav__link">
         
   
   
@@ -1848,7 +1848,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../tutorial/extensibility/index.html" class="md-nav__link ">
+            <a href="../../tutorial/extensibility/index.html" class="md-nav__link ">
               
   
   
@@ -1883,7 +1883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/extensibility/javaproject.html" class="md-nav__link">
+      <a href="../../tutorial/extensibility/javaproject.html" class="md-nav__link">
         
   
   
@@ -1906,7 +1906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/extensibility/openapi.html" class="md-nav__link">
+      <a href="../../tutorial/extensibility/openapi.html" class="md-nav__link">
         
   
   
@@ -1929,7 +1929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/extensibility/configjson.html" class="md-nav__link">
+      <a href="../../tutorial/extensibility/configjson.html" class="md-nav__link">
         
   
   
@@ -1952,7 +1952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/extensibility/businesslogic.html" class="md-nav__link">
+      <a href="../../tutorial/extensibility/businesslogic.html" class="md-nav__link">
         
   
   
@@ -1975,7 +1975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/extensibility/accesscontrol.html" class="md-nav__link">
+      <a href="../../tutorial/extensibility/accesscontrol.html" class="md-nav__link">
         
   
   
@@ -1998,7 +1998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/extensibility/deployment.html" class="md-nav__link">
+      <a href="../../tutorial/extensibility/deployment.html" class="md-nav__link">
         
   
   
@@ -2021,7 +2021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/extensibility/devcontainer.html" class="md-nav__link">
+      <a href="../../tutorial/extensibility/devcontainer.html" class="md-nav__link">
         
   
   
@@ -2096,7 +2096,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../howto/index.html" class="md-nav__link ">
+            <a href="../../howto/index.html" class="md-nav__link ">
               
   
   
@@ -2174,7 +2174,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../howto/install/index.html" class="md-nav__link ">
+            <a href="../../howto/install/index.html" class="md-nav__link ">
               
   
   
@@ -2209,7 +2209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/installconfig/index.html" class="md-nav__link">
+      <a href="../../tutorial/installconfig/index.html" class="md-nav__link">
         
   
   
@@ -2232,7 +2232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/install/symlink.html" class="md-nav__link">
+      <a href="../../howto/install/symlink.html" class="md-nav__link">
         
   
   
@@ -2255,7 +2255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/install/modifyconfig.html" class="md-nav__link">
+      <a href="../../howto/install/modifyconfig.html" class="md-nav__link">
         
   
   
@@ -2278,7 +2278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/install/cors.html" class="md-nav__link">
+      <a href="../../howto/install/cors.html" class="md-nav__link">
         
   
   
@@ -2301,7 +2301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/install/multiserver.html" class="md-nav__link">
+      <a href="../../howto/install/multiserver.html" class="md-nav__link">
         
   
   
@@ -2324,7 +2324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/install/notesclient.html" class="md-nav__link">
+      <a href="../../howto/install/notesclient.html" class="md-nav__link">
         
   
   
@@ -2347,7 +2347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/install/uninstall.html" class="md-nav__link">
+      <a href="../../howto/install/uninstall.html" class="md-nav__link">
         
   
   
@@ -2370,7 +2370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/install/passkey.html" class="md-nav__link">
+      <a href="../../howto/install/passkey.html" class="md-nav__link">
         
   
   
@@ -2393,7 +2393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/install/webauthn.html" class="md-nav__link">
+      <a href="../../howto/install/webauthn.html" class="md-nav__link">
         
   
   
@@ -2416,7 +2416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/install/oauthoscreen.html" class="md-nav__link">
+      <a href="../../howto/install/oauthoscreen.html" class="md-nav__link">
         
   
   
@@ -2439,7 +2439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/install/obtainauthenticationtoken.html" class="md-nav__link">
+      <a href="../../howto/install/obtainauthenticationtoken.html" class="md-nav__link">
         
   
   
@@ -2495,7 +2495,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../howto/web/index.html" class="md-nav__link ">
+            <a href="../../howto/web/index.html" class="md-nav__link ">
               
   
   
@@ -2530,7 +2530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/web/httpsproxy.html" class="md-nav__link">
+      <a href="../../howto/web/httpsproxy.html" class="md-nav__link">
         
   
   
@@ -2553,7 +2553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/web/httpsproxy2.html" class="md-nav__link">
+      <a href="../../howto/web/httpsproxy2.html" class="md-nav__link">
         
   
   
@@ -2623,7 +2623,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../howto/IdP/index.html" class="md-nav__link ">
+            <a href="../../howto/IdP/index.html" class="md-nav__link ">
               
   
   
@@ -2658,7 +2658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/IdP/configuredrapiIdP.html" class="md-nav__link">
+      <a href="../../howto/IdP/configuredrapiIdP.html" class="md-nav__link">
         
   
   
@@ -2681,7 +2681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/IdP/configureoidc.html" class="md-nav__link">
+      <a href="../../howto/IdP/configureoidc.html" class="md-nav__link">
         
   
   
@@ -2704,7 +2704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/IdP/configuringAD.html" class="md-nav__link">
+      <a href="../../howto/IdP/configuringAD.html" class="md-nav__link">
         
   
   
@@ -2727,7 +2727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/IdP/configuringCertificates.html" class="md-nav__link">
+      <a href="../../howto/IdP/configuringCertificates.html" class="md-nav__link">
         
   
   
@@ -2750,7 +2750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/IdP/configuringIdentityProvider.html" class="md-nav__link">
+      <a href="../../howto/IdP/configuringIdentityProvider.html" class="md-nav__link">
         
   
   
@@ -2773,7 +2773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/IdP/configuringKeycloak.html" class="md-nav__link">
+      <a href="../../howto/IdP/configuringKeycloak.html" class="md-nav__link">
         
   
   
@@ -2796,7 +2796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/IdP/keepsaml.html" class="md-nav__link">
+      <a href="../../howto/IdP/keepsaml.html" class="md-nav__link">
         
   
   
@@ -2819,7 +2819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/IdP/roundtripidp.html" class="md-nav__link">
+      <a href="../../howto/IdP/roundtripidp.html" class="md-nav__link">
         
   
   
@@ -2842,7 +2842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/IdP/adminuiidp.html" class="md-nav__link">
+      <a href="../../howto/IdP/adminuiidp.html" class="md-nav__link">
         
   
   
@@ -2909,6 +2909,8 @@
       
         
       
+        
+      
     
     
     
@@ -2924,7 +2926,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../howto/production/index.html" class="md-nav__link ">
+            <a href="../../howto/production/index.html" class="md-nav__link ">
               
   
   
@@ -2959,7 +2961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/changefilesize.html" class="md-nav__link">
+      <a href="../../howto/production/changefilesize.html" class="md-nav__link">
         
   
   
@@ -2982,7 +2984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/prodports.html" class="md-nav__link">
+      <a href="../../howto/production/prodports.html" class="md-nav__link">
         
   
   
@@ -3005,7 +3007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/customAPI.html" class="md-nav__link">
+      <a href="../../howto/production/customAPI.html" class="md-nav__link">
         
   
   
@@ -3028,7 +3030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/dominohttps.html" class="md-nav__link">
+      <a href="../../howto/production/dominohttps.html" class="md-nav__link">
         
   
   
@@ -3051,7 +3053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/hardening.html" class="md-nav__link">
+      <a href="../../howto/production/hardening.html" class="md-nav__link">
         
   
   
@@ -3074,7 +3076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/httpsprod.html" class="md-nav__link">
+      <a href="../../howto/production/httpsprod.html" class="md-nav__link">
         
   
   
@@ -3097,7 +3099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/reactjs.html" class="md-nav__link">
+      <a href="../../howto/production/reactjs.html" class="md-nav__link">
         
   
   
@@ -3120,7 +3122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/oauthinvstgtn.html" class="md-nav__link">
+      <a href="../../howto/production/oauthinvstgtn.html" class="md-nav__link">
         
   
   
@@ -3143,7 +3145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/configparam.html" class="md-nav__link">
+      <a href="../../howto/production/configparam.html" class="md-nav__link">
         
   
   
@@ -3166,7 +3168,30 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/computeform.html" class="md-nav__link">
+      <a href="../../howto/production/planning.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plan you application
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/production/computeform.html" class="md-nav__link">
         
   
   
@@ -3189,7 +3214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/roundtrip.html" class="md-nav__link">
+      <a href="../../howto/production/roundtrip.html" class="md-nav__link">
         
   
   
@@ -3212,7 +3237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/virtualsheet.html" class="md-nav__link">
+      <a href="../../howto/production/virtualsheet.html" class="md-nav__link">
         
   
   
@@ -3235,7 +3260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/signencrypt.html" class="md-nav__link">
+      <a href="../../howto/production/signencrypt.html" class="md-nav__link">
         
   
   
@@ -3258,7 +3283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/testformulas.html" class="md-nav__link">
+      <a href="../../howto/production/testformulas.html" class="md-nav__link">
         
   
   
@@ -3281,7 +3306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/production/versionupdate.html" class="md-nav__link">
+      <a href="../../howto/production/versionupdate.html" class="md-nav__link">
         
   
   
@@ -3347,7 +3372,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../howto/database/index.html" class="md-nav__link ">
+            <a href="../../howto/database/index.html" class="md-nav__link ">
               
   
   
@@ -3382,7 +3407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/database/editsourcejson.html" class="md-nav__link">
+      <a href="../../howto/database/editsourcejson.html" class="md-nav__link">
         
   
   
@@ -3405,7 +3430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/database/editviewcolumn.html" class="md-nav__link">
+      <a href="../../howto/database/editviewcolumn.html" class="md-nav__link">
         
   
   
@@ -3428,7 +3453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/database/enablingadb.html" class="md-nav__link">
+      <a href="../../howto/database/enablingadb.html" class="md-nav__link">
         
   
   
@@ -3451,7 +3476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/database/excludeddb.html" class="md-nav__link">
+      <a href="../../howto/database/excludeddb.html" class="md-nav__link">
         
   
   
@@ -3474,7 +3499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/database/exportsourcejson.html" class="md-nav__link">
+      <a href="../../howto/database/exportsourcejson.html" class="md-nav__link">
         
   
   
@@ -3497,7 +3522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/database/externalnames.html" class="md-nav__link">
+      <a href="../../howto/database/externalnames.html" class="md-nav__link">
         
   
   
@@ -3520,7 +3545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/database/pullviewdata.html" class="md-nav__link">
+      <a href="../../howto/database/pullviewdata.html" class="md-nav__link">
         
   
   
@@ -3588,7 +3613,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../howto/management/index.html" class="md-nav__link ">
+            <a href="../../howto/management/index.html" class="md-nav__link ">
               
   
   
@@ -3623,7 +3648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/management/checksettings.html" class="md-nav__link">
+      <a href="../../howto/management/checksettings.html" class="md-nav__link">
         
   
   
@@ -3646,7 +3671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/management/supportpackage.html" class="md-nav__link">
+      <a href="../../howto/management/supportpackage.html" class="md-nav__link">
         
   
   
@@ -3669,7 +3694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/management/disablemodule.html" class="md-nav__link">
+      <a href="../../howto/management/disablemodule.html" class="md-nav__link">
         
   
   
@@ -3692,7 +3717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/management/configsrc.html" class="md-nav__link">
+      <a href="../../howto/management/configsrc.html" class="md-nav__link">
         
   
   
@@ -3715,7 +3740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/management/usersmc.html" class="md-nav__link">
+      <a href="../../howto/management/usersmc.html" class="md-nav__link">
         
   
   
@@ -3738,7 +3763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/management/jwtmultiserver.html" class="md-nav__link">
+      <a href="../../howto/management/jwtmultiserver.html" class="md-nav__link">
         
   
   
@@ -3761,7 +3786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/management/suspendeduser.html" class="md-nav__link">
+      <a href="../../howto/management/suspendeduser.html" class="md-nav__link">
         
   
   
@@ -3784,7 +3809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/management/console.html" class="md-nav__link">
+      <a href="../../howto/management/console.html" class="md-nav__link">
         
   
   
@@ -3840,7 +3865,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../howto/VoltMX/index.html" class="md-nav__link ">
+            <a href="../../howto/VoltMX/index.html" class="md-nav__link ">
               
   
   
@@ -3875,7 +3900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/VoltMX/configuring-keep-idplite-with-identity-service.html" class="md-nav__link">
+      <a href="../../howto/VoltMX/configuring-keep-idplite-with-identity-service.html" class="md-nav__link">
         
   
   
@@ -3898,7 +3923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/VoltMX/setupoauthnsf.html" class="md-nav__link">
+      <a href="../../howto/VoltMX/setupoauthnsf.html" class="md-nav__link">
         
   
   
@@ -3954,7 +3979,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../howto/codesamples/index.html" class="md-nav__link ">
+            <a href="../../howto/codesamples/index.html" class="md-nav__link ">
               
   
   
@@ -3989,7 +4014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/codesamples/javascript.html" class="md-nav__link">
+      <a href="../../howto/codesamples/javascript.html" class="md-nav__link">
         
   
   
@@ -4012,12 +4037,466 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/codesamples/js_sdk.html" class="md-nav__link">
+      <a href="../../howto/codesamples/js_sdk.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     JavaScript SDK samples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../topicguides/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Topic guides
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Topic guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/introducingrestapi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducing the Domino REST API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/usecases.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Use Cases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/understanding.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Understanding HCL Domino REST API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/schemascope.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Schema & Scope
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/schemabackup.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Schema Backup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/agents.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agent processing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/configuringPorts.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../topicguides/auxiliary/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Auxiliary services
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_9" id="__nav_5_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_9">
+            <span class="md-nav__icon md-icon"></span>
+            Auxiliary services
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/auxiliary/idp.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Identity Provider (IdP)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/auxiliary/webdav.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    webDAV
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/auxiliary/odata.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OData
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/auxiliary/ical.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    iCal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/auxiliary/healthmetrics.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Health & metrics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/auxiliary/management.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Management console
     
   </span>
   
@@ -4056,6 +4535,8 @@
       
         
           
+        
+      
         
       
         
@@ -4116,16 +4597,16 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="index.html" class="md-nav__link ">
+            <a href="../index.html" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
-    Topic guides
+    References
     
   </span>
   
@@ -4133,16 +4614,16 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            Topic guides
+            References
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4155,12 +4636,12 @@
   
   
     <li class="md-nav__item">
-      <a href="introducingrestapi.html" class="md-nav__link">
+      <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Introducing the Domino REST API
+    System requirements
     
   </span>
   
@@ -4178,12 +4659,12 @@
   
   
     <li class="md-nav__item">
-      <a href="understanding.html" class="md-nav__link">
+      <a href="../../tutorial/installconfig/index.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Understanding HCL Domino REST API
+    Installation and configuration
     
   </span>
   
@@ -4192,6 +4673,1354 @@
     </li>
   
 
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../understandingconfig.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Understanding configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functionalUsers.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Functional accounts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openapidefinitions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OpenAPI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../accesscontrol.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Access control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../schemacomponents/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Schema Components
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_8" id="__nav_6_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            Schema Components
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schemacomponents/formdefinitions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Form definitions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schemacomponents/viewdefinitions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    View Definitions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schemacomponents/agentdefinitions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agent definitions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../usingdominorestapi/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Using Domino REST API
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_9">
+            <span class="md-nav__icon md-icon"></span>
+            Using Domino REST API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usingdominorestapi/keepapplications.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domino REST API Applications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usingdominorestapi/keepcli.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domino REST API CLI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usingdominorestapi/restapitask.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domino REST API task
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usingdominorestapi/roles.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domino REST API roles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usingdominorestapi/dataformats.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DataFormats
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usingdominorestapi/encryptsign.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Encryption, decryption, and signing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usingdominorestapi/formnames.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Form and Alias handling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usingdominorestapi/metrics.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Metrics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usingdominorestapi/modenames.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reserved Form mode names
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_9_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../usingdominorestapi/richtext/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Rich Text
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_9_11" id="__nav_6_9_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_9_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_9_11">
+            <span class="md-nav__icon md-icon"></span>
+            Rich Text
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usingdominorestapi/richtext/conversion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conversion table
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usingdominorestapi/scopes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scopes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usingdominorestapi/logging.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Logging
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../usingwebui/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Using Admin UI
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_10">
+            <span class="md-nav__icon md-icon"></span>
+            Using Admin UI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usingwebui/schemaui.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Schema Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usingwebui/scopeui.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scope Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usingwebui/quickconfigui.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Config
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usingwebui/appui.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Application Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usingwebui/oauthconsentui.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OAuth Consents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../security/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_11" id="__nav_6_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_11">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/authentication.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Auth\*
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/jwt.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JSON Web Token specification
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/configurationParameters.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/encryption.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Encryption Keys
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/VoltMX/setupoauthnsf.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Set up oauth.nsf
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/customIdp.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom Identity Provider (IdP)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/securingKEEPEndpoints.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Securing Domino REST API endpoints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/idpcompare.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comparing IdP Options
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_12" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../usertools/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    User tools
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_12" id="__nav_6_12_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_12">
+            <span class="md-nav__icon md-icon"></span>
+            User tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usertools/curl.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    curl
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usertools/postman.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Postman
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usertools/swagger.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Swagger UI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usertools/bruno.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bruno
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_13" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Extensibility
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_13" id="__nav_6_13_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_13_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_13">
+            <span class="md-nav__icon md-icon"></span>
+            Extensibility
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
               
             
               
@@ -4207,98 +6036,6 @@
   
   <span class="md-ellipsis">
     How HCL Domino REST API works
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="schemascope.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Schema & Scope
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="schemabackup.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Schema backup
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="formmodes.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Form modes
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="keepdifference.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Domino REST API is different
     
   </span>
   
@@ -4336,10 +6073,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="KeepFactory-and-caches.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Factories and Caches
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="KeepFactory-and-caches.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -4350,52 +6109,73 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="architecture.html" class="md-nav__link">
+      
         
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
-  <span class="md-ellipsis">
-    Architectural decisions
+  
     
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#keepfactory" class="md-nav__link">
+    <span class="md-ellipsis">
+      KeepFactory
+    </span>
+  </a>
   
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keepconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      KeepConfig
+    </span>
+  </a>
   
-    <li class="md-nav__item">
-      <a href="planning.html" class="md-nav__link">
-        
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#designcache" class="md-nav__link">
+    <span class="md-ellipsis">
+      DesignCache
+    </span>
+  </a>
   
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jwtmanager" class="md-nav__link">
+    <span class="md-ellipsis">
+      JWTManager
+    </span>
+  </a>
   
-  <span class="md-ellipsis">
-    Planning your application
-    
-  </span>
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loggedoutuserlist" class="md-nav__link">
+    <span class="md-ellipsis">
+      LoggedOutUserList
+    </span>
+  </a>
   
-
-      </a>
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4470,493 +6250,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="dominojnx.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    DominoJNX
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="agents.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Agent processing
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="usecases.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Use cases
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="keepasproxy.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Domino REST API and Proxy
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_20" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="auxiliary/index.html" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    Auxiliary services
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5_20" id="__nav_5_20_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_20_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_20">
-            <span class="md-nav__icon md-icon"></span>
-            Auxiliary services
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="auxiliary/idp.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Identity Provider (IdP)
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="auxiliary/webdav.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    webDAV
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="auxiliary/odata.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    OData
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="auxiliary/ical.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    iCal
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="auxiliary/healthmetrics.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Health & metrics
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="auxiliary/management.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Management console
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    The shiny web world - a primer
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="notesprimer.html" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    The shiny web world - a primer
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ports" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ports
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#json" class="md-nav__link">
-    <span class="md-ellipsis">
-      JSON
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#json-web-token-jwt" class="md-nav__link">
-    <span class="md-ellipsis">
-      JSON Web Token (JWT)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#oauth" class="md-nav__link">
-    <span class="md-ellipsis">
-      OAuth
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#certificates" class="md-nav__link">
-    <span class="md-ellipsis">
-      Certificates
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tls-ssl-http2" class="md-nav__link">
-    <span class="md-ellipsis">
-      TLS, SSL &amp; HTTP/2
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#openapi" class="md-nav__link">
-    <span class="md-ellipsis">
-      OpenAPI
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_22" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="extensibility/index.html" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    Extensibility
-    
-  </span>
-  
-
-            </a>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_22_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_22">
-            <span class="md-nav__icon md-icon"></span>
-            Extensibility
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
           </ul>
         </nav>
       
@@ -4972,1509 +6265,7 @@
   
   
     <li class="md-nav__item">
-      <a href="configuringPorts.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Ports
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../references/index.html" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    References
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            References
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    System requirements
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tutorial/installconfig/index.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Installation and configuration
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/understandingconfig.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Understanding configuration
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/functionalUsers.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Functional accounts
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/hostingstatic.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Hosting static applications
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/openapidefinitions.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    OpenAPI
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/accesscontrol.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Access control
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_9" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../references/schemacomponents/index.html" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    Schema Components
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_9">
-            <span class="md-nav__icon md-icon"></span>
-            Schema Components
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/schemacomponents/formdefinitions.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Form definitions
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/schemacomponents/viewdefinitions.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    View Definitions
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/schemacomponents/agentdefinitions.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Agent definitions
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_10" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../references/usingdominorestapi/index.html" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    Using Domino REST API
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_10">
-            <span class="md-nav__icon md-icon"></span>
-            Using Domino REST API
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/usingdominorestapi/keepapplications.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Domino REST API Applications
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/usingdominorestapi/keepcli.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Domino REST API CLI
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/usingdominorestapi/restapitask.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Domino REST API task
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/usingdominorestapi/roles.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Domino REST API roles
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/usingdominorestapi/dataformats.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    DataFormats
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/usingdominorestapi/encryptsign.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Encryption, decryption, and signing
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/usingdominorestapi/formnames.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Form and Alias handling
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/usingdominorestapi/metrics.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Metrics
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/usingdominorestapi/modenames.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Reserved Form mode names
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_10_11" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../references/usingdominorestapi/richtext/index.html" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    Rich Text
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_10_11" id="__nav_6_10_11_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_10_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_10_11">
-            <span class="md-nav__icon md-icon"></span>
-            Rich Text
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/usingdominorestapi/richtext/conversion.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Conversion table
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/usingdominorestapi/scopes.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Scopes
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/usingdominorestapi/logging.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Logging
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_11" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../references/usingwebui/index.html" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    Using Admin UI
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_11" id="__nav_6_11_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_11">
-            <span class="md-nav__icon md-icon"></span>
-            Using Admin UI
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/usingwebui/schemaui.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Schema Management
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/usingwebui/scopeui.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Scope Management
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/usingwebui/quickconfigui.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Quick Config
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/usingwebui/appui.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Application Management
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/usingwebui/oauthconsentui.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    OAuth Consents
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_12" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../references/security/index.html" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    Security
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_12" id="__nav_6_12_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_12">
-            <span class="md-nav__icon md-icon"></span>
-            Security
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/security/authentication.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Auth\*
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/security/jwt.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    JSON Web Token specification
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/security/configurationParameters.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Configuration
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/security/encryption.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Encryption Keys
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../howto/VoltMX/setupoauthnsf.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Set up oauth.nsf
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/security/customIdp.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Custom Identity Provider (IdP)
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/security/securingKEEPEndpoints.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Securing Domino REST API endpoints
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/security/idpcompare.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Comparing IdP Options
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_13" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../references/usertools/index.html" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    User tools
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_13" id="__nav_6_13_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_13_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_13">
-            <span class="md-nav__icon md-icon"></span>
-            User tools
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/usertools/curl.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    curl
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/usertools/postman.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Postman
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/usertools/swagger.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Swagger UI
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/usertools/bruno.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Bruno
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/sdk.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Domino REST API SDKs
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/parameters.html" class="md-nav__link">
+      <a href="../parameters.html" class="md-nav__link">
         
   
   
@@ -6497,12 +6288,58 @@
   
   
     <li class="md-nav__item">
-      <a href="../references/troubleshooting.html" class="md-nav__link">
+      <a href="../sdk.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domino REST API SDKs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../limitation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Limitations and considerations
     
   </span>
   
@@ -6541,11 +6378,11 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_17" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_18" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../references/quickreference/index.html" class="md-nav__link ">
+            <a href="../quickreference/index.html" class="md-nav__link ">
               
   
   
@@ -6558,14 +6395,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_6_17" id="__nav_6_17_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_6_18" id="__nav_6_18_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_17_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_17">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_18">
             <span class="md-nav__icon md-icon"></span>
             Quick reference
           </label>
@@ -6580,7 +6417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../references/quickreference/standards.html" class="md-nav__link">
+      <a href="../quickreference/standards.html" class="md-nav__link">
         
   
   
@@ -6603,7 +6440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../references/quickreference/glossary.html" class="md-nav__link">
+      <a href="../quickreference/glossary.html" class="md-nav__link">
         
   
   
@@ -6634,7 +6471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../references/support.html" class="md-nav__link">
+      <a href="../support.html" class="md-nav__link">
         
   
   
@@ -6657,7 +6494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../references/downloads.html" class="md-nav__link">
+      <a href="../downloads.html" class="md-nav__link">
         
   
   
@@ -6680,30 +6517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../references/admincheatsheet.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Admin cheat sheet
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/ofba.html" class="md-nav__link">
+      <a href="../ofba.html" class="md-nav__link">
         
   
   
@@ -6726,7 +6540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../references/richtextension.html" class="md-nav__link">
+      <a href="../richtextension.html" class="md-nav__link">
         
   
   
@@ -6749,7 +6563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../references/deprecated.html" class="md-nav__link">
+      <a href="../deprecated.html" class="md-nav__link">
         
   
   
@@ -6772,7 +6586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../references/docguide.html" class="md-nav__link">
+      <a href="../docguide.html" class="md-nav__link">
         
   
   
@@ -6824,63 +6638,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ports" class="md-nav__link">
+  <a href="#keepfactory" class="md-nav__link">
     <span class="md-ellipsis">
-      Ports
+      KeepFactory
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#json" class="md-nav__link">
+  <a href="#keepconfig" class="md-nav__link">
     <span class="md-ellipsis">
-      JSON
+      KeepConfig
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#json-web-token-jwt" class="md-nav__link">
+  <a href="#designcache" class="md-nav__link">
     <span class="md-ellipsis">
-      JSON Web Token (JWT)
+      DesignCache
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#oauth" class="md-nav__link">
+  <a href="#jwtmanager" class="md-nav__link">
     <span class="md-ellipsis">
-      OAuth
+      JWTManager
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#certificates" class="md-nav__link">
+  <a href="#loggedoutuserlist" class="md-nav__link">
     <span class="md-ellipsis">
-      Certificates
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tls-ssl-http2" class="md-nav__link">
-    <span class="md-ellipsis">
-      TLS, SSL &amp; HTTP/2
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#openapi" class="md-nav__link">
-    <span class="md-ellipsis">
-      OpenAPI
+      LoggedOutUserList
     </span>
   </a>
   
@@ -6905,122 +6701,91 @@
   
 
 
-<h1 id="the-shiny-web-world-a-primer">The shiny web world - a primer</h1>
-<!-- prettier-ignore -->
-<div class="admonition example">
-<p class="admonition-title">This is work in progress</p>
-<p>We are constantly working on improving Domino REST API's functionality and documentation. You have a documentation page which is not quite ready. Feel free to <a href="https://discord.com/invite/jmRHpDRnH4" title="Opens a new tab">feedback</a> what you would like to see here.</p>
-</div>
-<h2 id="ports">Ports</h2>
-<p>Communication between clients and servers require an address and a port (akin to building name and unit number). There is an <a href="https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers">official list</a> to look at. In Notes/Domino land we usually deal with client access (1352), SMTP (25), http (80) and https(443).</p>
-<div class="admonition info">
-<p class="admonition-title">Rule/Fact</p>
-<p><strong>Only one service can listen on a specific port at a given address</strong>. So when you have two web servers, only one can use the default ports.</p>
-</div>
-<p>The official port to protocol mapping serves as a simple shortcut when specifying destination locations:</p>
+<h1 id="factories-and-caches">Factories and Caches</h1>
+<h2 id="keepfactory">KeepFactory</h2>
+<p>The KeepFactory provides access to individual caches for:</p>
 <ul>
-<li><code>http://someserver.com/</code> is short for <code>http//someserver.com:80/</code></li>
-<li><code>https://someserver.com/</code> is short for <code>https//someserver.com:443/</code></li>
+<li>KeepConfig</li>
+<li>DesignCache</li>
+<li>LoggedOutUserList</li>
+<li>JWTManager</li>
 </ul>
-<p>The Domino REST API adds additional ports to be used. When a non-standard port is used, it can be any protocol, so <code>https://someserver.com:8880</code> is equally valid as <code>http://someserver.com:8880</code>. <strong>Valid</strong> doesn't mean <strong>working</strong>. Which protocol responds depends on the server configuration.</p>
-<p>Practical pranks you can play: reconfigure an http server, such as Domino's http task, to use port 443 for http and port 80 for https and watch the confusion. Don't do that to a production system.</p>
-<h2 id="json">JSON</h2>
-<p><a href="https://www.json.org/">JSON</a> is part of the operating system and programming language independent, human readable data (interchange) formats that include <a href="https://en.wikipedia.org/wiki/Comma-separated_values">CSV</a>, <a href="https://en.wikipedia.org/wiki/XML">XML</a>, <a href="https://en.wikipedia.org/wiki/JSON">JSON</a>, and <a href="https://en.wikipedia.org/wiki/YAML">YAML</a>.</p>
-<div class="admonition info">
-<p class="admonition-title">key value pairs</p>
-<p>JSON is a set of case-sentitive key-value pairs</p>
-</div>
-<p>The keys are strings and the values can be only a few data types: string, number, boolean, null, or JSON. Notably absent are integers and date/time formats or binary data.</p>
-<p>These shortcomings are mitigated in <a href="https://json-schema.org/">JSON Schema</a> that defines the missing data types. For example, a date is defined as String in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> Date format.</p>
-<p>JSON is both used for data exchange, popular in REST APIs, and configuration settings (replacing <a href="https://en.wikipedia.org/wiki/INI_file">ini</a> and <a href="https://en.wikipedia.org/wiki/.properties">properties</a> files).</p>
-<p>The Domino REST API makes heavy use of the JSON based <a href="https://www.openapis.org/">OpenAPI specification</a></p>
-<h2 id="json-web-token-jwt">JSON Web Token (JWT)</h2>
-<p>A JWT is a string with a fixed structure. It's composed of 3 strings in <a href="https://en.wikipedia.org/wiki/Base64">Base64</a> encoding joined by a <code>.</code> (dot). When decoded, the first part is JSON describing the signature algorithm and token type. The second part is also JSON, providing the actual information, while the third part is a digital signature.</p>
-<div class="admonition warning">
-<p class="admonition-title">NO encryption</p>
-<p>JWT are not encrypted, so they are not suitable to carry confidential information.</p>
-</div>
-<ul>
-<li>The signature "only" guarantees that the token hasn't been altered since signing.</li>
-<li>
-<p>For verification, you need access to the public key of the signer. For more information, see <a href="#oauth">OAuth</a>.</p>
-</li>
-<li>
-<p>The actual information could be anything JSON, but has defined elements like issue date and expiry when used as access token.</p>
-</li>
-</ul>
-<p>There is <a href="https://jwt.io/">more to learn about JWT</a>, including an easy tool to check.</p>
-<p>JWT is often used, including in the Domino REST API, as <a href="https://www.oauth.com/oauth2-servers/access-tokens/">Access Tokens</a> to gain authorized access to a server. To serve as an access token, it gets presented with the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization">Authorization</a> http(s) header as <code>Bearer [JWT Token]</code>.</p>
-<p>A reasonable good analogy: </p>
-<p>The JWT token is your concert ticket. At the entrance of the concert hall, security checks if the ticket is valid. They don't care how you did get it: ordered online, queued at the ticket booth, got it from an authorized reseller or won it from the local radio morning show. They only care if it's genuine.</p>
-<p>The same principle applies to JWT as access token. As long as the token is signed by a trusted issuer, commonly referred to as an Identity Provider or IdP, and is still valid, security lets you through. Of course, a valid "Adele" ticket won't get you into the "Taylor Swift" concert, so the content of the ticket matters.</p>
-<h2 id="oauth">OAuth</h2>
-<div class="admonition note">
-<p class="admonition-title">From the <a href="https://oauth.net/2/">official documentation</a></p>
-<p><em>OAuth 2.0 is the industry-standard protocol for authorization. OAuth 2.0 focuses on client developer simplicity while providing specific authorization flows for web applications, desktop applications, mobile phones, and living room devices. This specification and its extensions are being developed within the <a href="https://www.ietf.org/mailman/listinfo/oauth">IETF OAuth Working Group</a></em>.</p>
-</div>
-<p>In OAuth, two parties are usually involved. One is an Identity Provider (IdP), the place you log in and consent, and the other is a Service Provider (SP), the application that does the actual work.</p>
-<p>In an OAuth sequence, (colloquially referred to as <a href="https://medium.com/typeforms-engineering-blog/the-beginners-guide-to-oauth-dancing-4b8f3666de10">OAuth dance</a>) to obtain permission to act on a user's behalf (called an <a href="https://oauth.net/2/grant-types/">OAuth grant</a>), the users get directed to the IdP, where, after authentication, they're asked for consent that the application (the SP) acts on their behalf (the exact flow depends on <a href="https://oauth.net/2/grant-types/">the grant type</a>).</p>
-<p>The result of the dance is at least an access token and quite commonly a refresh token. The application uses the access token for interaction with the API. Ideally, access tokens are short lived, minutes rather than hours. On expiration, the application would use the refresh token to obtain a new access token without the need of user interaction. Refresh tokens can be issued with long validity, ranging from days, weeks, or months. If a refresh token is suspected to be compromised, it can be invalidated, so obtaining a new access token would fail and trigger the consent dialogue.</p>
-<div class="admonition tip">
-<p class="admonition-title">Lots to learn</p>
-<p>Make sure to <a href="https://oauth.net/2/">learn more</a> about this complex topic!</p>
-</div>
-<p>OAuth is an open and complex standard. To use its Authorization capabilities for Authentication, the <strong><a href="https://openid.net/">OpenID Foundation</a></strong> implemented a specific subset named <a href="https://openid.net/developers/how-connect-works/">OpenID Connect</a>. That's used here.</p>
-<h2 id="certificates">Certificates</h2>
-<p>Certificates (nothing new to Notes people, we had them in the <code>notes.id</code> for decades) in the internet world come in three flavors:</p>
+<p>It also provides a holder for a relevant user session, a KeepJnxSession object. This is why each instance of <code>AsyncDominoJNXRequest</code> creates a new KeepFactory object, to ensure no pollution of KeepJnxSessions.</p>
+<p>KeepFactory often needs to work differently for JUnit tests. This is why instances of <code>AbstractKeepVerticle</code> (and <code>AsyncDominoJNXRequest</code>) create their own instance of KeepFactory and have a setter.</p>
+<p>The KeepFactory is also used by the HttpListener and AbstractKeepDataVerticle to load handler classes according to the OpenAPI spec.</p>
+<p><img alt="Domino REST API Errors" src="../../assets/images/KeepFactory.png" /></p>
+<h2 id="keepconfig"><strong>KeepConfig</strong></h2>
+<p>The KeepConfig contains two main objects:</p>
 <ul>
 <li>
-<p>Issued by a recognized certificate authority <a href="https://en.wikipedia.org/wiki/Certificate_authority">CA</a> like <a href="https://letsencrypt.org">LetsEncypt</a></p>
-</li>
-<li>
-<p>Issued by a private or unrecognized CA</p>
-</li>
-<li>
-<p><a href="https://en.wikipedia.org/wiki/Self-signed_certificate">Self signed</a></p>
-</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Don't self sign</p>
-<p>Sounds like easy for test system, not worth the headache, go for your own <a href="https://www.wissel.net/blog/2019/10/create-your-own-ca.html">private CA</a></p>
-</div>
-<p>The important term here is <strong>recognized</strong>. All browsers ship with a list of recognized CA, by having a copy of their <a href="https://en.wikipedia.org/wiki/Public_key_certificate">Public keys</a>. One can amend this list by adding or removing public keys, something one better leaves to <a href="https://www.hcl-software.com/bigfix">automated tooling</a>.</p>
-<p>When dealing with other clients, for example your venerable Tomcat, the known CA list in the browser doesn't help. You need to add the cert where the application can find it. For example for Java, that's the <a href="https://jenkov.com/tutorials/java-cryptography/keystore.html">Java keystore</a> (remember <a href="https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html">keytool</a>).</p>
-<p>If you use self-signed (please don't), you have to add each and every cert to all the clients, using a private CA, only the CA's public keys.</p>
-<p>There is <a href="https://www.cloudflare.com/learning/ssl/how-does-public-key-encryption-work/">much to learn</a>, worth your time.</p>
-<h2 id="tls-ssl-http2">TLS, SSL &amp; HTTP/2</h2>
-<p>Any application available on the intranet or internet needs secure communication. The standard means for that is <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">TLS</a> - Transport-Layer-Security. Colloquially, the term <a href="https://www.rfc-editor.org/rfc/rfc6101">SSL</a> is used with <a href="https://www.digicert.com/what-is-an-ssl-certificate">cert vendors</a>, but implementation is almost always TLS - and should be. SSL is considered compromisable.</p>
-<p>Obtaining a valid certificate used to be a huge headache, but with the availability of <a href="https://letsencrypt.org">LetsEncrypt</a> it's now easy for internet facing systems. Domino has <a href="https://help.hcl-software.com/domino/14.0.0/admin/secu_le_managing-certs_from_LE.html">built-in support</a> to use LetsEncrypt.</p>
-<div class="admonition tip">
-<p class="admonition-title">Use a wildcard cert for internal systems</p>
-<p>Obtain a wildcard cert (*.yourdomain.net) using an internet facing system and use it for the internsl systems too. Does require proper local DNS setup</p>
-</div>
-<p>The current prevalent version of HTTP is <a href="https://www.rfc-editor.org/rfc/rfc9110.html">HTTP1.1</a>, a standard introduced <strong>last century</strong> (1995). Modern browsers (read: no IE) and contemporary web servers support <a href="https://en.wikipedia.org/wiki/HTTP/2">HTTP/2</a>. HTTP/2 requires a TLS connection, so you can't try it out using <code>http://localhost</code>. The Domino REST API uses HTTP/2 if a client supports it. All browsers do, but at the time of writing, <a href="https://www.postman.com/">Postman</a> didn't.</p>
-<p>HTTP/2 offers better security and shorter response times.</p>
-<h2 id="openapi">OpenAPI</h2>
-<p>The <a href="https://www.openapis.org/">OpenAPI specification</a> describes in a standardized way what to expect from an API. The specification, expressed in <a href="https://www.json.org/">JSON</a> or <a href="https://en.wikipedia.org/wiki/YAML">YAML</a>, is both machine readable and human readable (using a UI). It defines:</p>
+<p>A map of KeepApiInfo objects, one for each endpoint in the OpenAPI spec with an operationId. The key in the map is the operationId. The contents are loaded when Domino REST API loads. The KeepApiInfo object also checks whether it can work as a JSON handling endpoint, if it:</p>
 <ul>
-<li>The available endpoint URLs and supported methods</li>
-<li>Authentication required if any</li>
-<li>mandatory and optional parameters</li>
-<li>data formats to expect or provide</li>
-<li>external meta data</li>
+<li>responds with JSON </li>
+<li>receives only JSON or expects no body</li>
 </ul>
-<p>There is a rich eco system of tooling that allows to produce or consume OpenAPI specifications, here's just a small selection:</p>
+</li>
+<li>
+<p>A map of KeepDbInfo objects, one for each database exposed for Domino REST API access. The key in the map is the Domino REST API name for the database. The structure is:</p>
 <ul>
-<li>
-<p>UI to read and try the specs: <a href="https://swagger.io/tools/swagger-ui/">Swagger UI</a> and <a href="https://redocly.com/reference/">ReDoc</a></p>
+<li>ApiName</li>
+<li>FilePath</li>
+<li>Icon</li>
+<li>IconName</li>
+<li>Description</li>
+<li>List of owners, for reference purposes only</li>
+<li>FormulaEngine (currently just "domino", future plan will include OpenFormula)</li>
+<li>Whether or not it's active</li>
+<li>UNID of the Notes Document in Domino REST API Config database</li>
+<li>ConfigInfo, indicating:<ul>
+<li>Whether the database allows access from browsers (openAccess).</li>
+<li>Whether the database allows code to be submitted via the "/run/code" and "/run/codejs" endpoints (allowCode).</li>
+<li>Whether Domino Query Language (DQL) can be run against the database (dqlAccess).</li>
+<li>Formula (applied according to the formulaEngine) for more tightly constraining access to DQL (dqlAccessFormula).</li>
+<li>List of views that can be used from Domino REST API (availableViews).</li>
+<li>List of agents than can be run from Domino REST API (agents).</li>
+<li>List of stored procedures (code that the Domino REST API Administrator has added to be run) - NOT YET IMPLEMENTED (storedProcedures).</li>
+<li>List of people who must approve requests for external applications to use this database - NOT YET IMPLEMENTED (applicationAccessApprovers).</li>
+<li>Map of FormAccessModeInfo objects (formConfigs) where the modeName is the key. Every form exposed must have at least one FormAccessModeInfo for a modeName "default". Each FormAccessModeInfo contains:<ul>
+<li>ModeName</li>
+<li>List of fields exposed to read access (readAccessFields)</li>
+<li>List of fields exposed to write access (writeAccessFields)</li>
+<li>Formula (applied according to the formulaEngine) for read access (readAccessFormula)</li>
+<li>Formula (applied according to the formulaEngine) for write access (writeAccessFormula). This can include validation of the payload.</li>
+<li>Formula(s) to be applied for any GET requests for the form mode (onLoad)</li>
+<li>Formula(s) to be applied before saving any documents for this form mode (onSave)</li>
+</ul>
 </li>
-<li>
-<p>UI to create and edit: <a href="https://www.apicur.io/studio/">Apicurio Studio</a> and <a href="https://swagger.io/tools/swagger-editor/">Swagger Editor</a></p>
-</li>
-<li>
-<p>Tools to <a href="https://swagger.io/tools/swagger-codegen/">generate code</a> from a spec</p>
-</li>
-<li>
-<p>Libraries that consume a spec, create routes and enforce the defined constrains. For example <a href="https://vertx.io/docs/vertx-openapi/java/">Java</a>, <a href="https://www.npmjs.com/package/express-openapi-validator">NodeJS</a>, <a href="https://pypi.org/project/openapi-core/">Python</a>. There are many more.</p>
+<li>Whether the Input Translation and Input Validation formulas on the underlying Notes Form should be applied (computeWithForm).
+<!-- Whether a POST request should be rejected if the content doesn't conform with the list of fields expected for write access (strictInput). If set to false, any fields not in the writeAccessFields are just ignored.--></li>
+</ul>
 </li>
 </ul>
+</li>
+</ul>
+<p>The KeepConfig is also used to:</p>
+<ul>
+<li>Get and retrieve the system user name.</li>
+<li>Check if local users are allowed, managed via the GodMode environment variable.</li>
+<li>Scan and retrieve actual database names for the Domino REST API Admin module.</li>
+<li>Read the JSON OpenAPI spec.</li>
+</ul>
+<h2 id="designcache">DesignCache</h2>
+<p>This is a cache for a database's design. It's populated from DesignFetchdxlRequest. Requests for individual design elements automatically route through DesignFetchdxlRequest if the design hasn't yet been cached. There are two buckets of data:</p>
+<ul>
+<li><strong>bucket</strong>, containing the design extracted as a JSON object.</li>
+<li><strong>dxlbucket</strong>, containing the raw DXL.</li>
+</ul>
+<p>Entries are removed from the caches after 8 hours. There is also a specific endpoint to evict the whole cache.</p>
+<p>The design cache is used by the Domino REST API Admin module to select:</p>
+<ul>
+<li><strong>Views</strong> to <em>enable</em> for Domino REST API access.</li>
+<li><strong>Forms</strong> to <em>enable</em> for Domino REST API access.</li>
+<li><strong>Agents</strong> to <em>expose</em> for Domino REST API access. As a result, anyone using the Domino REST API Admin module must have a minimum of Designer access to the databases they are enabling for Domino REST API access.</li>
+</ul>
+<h2 id="jwtmanager">JWTManager</h2>
+<p>This is responsible for generating JWT tokens.</p>
+<h2 id="loggedoutuserlist">LoggedOutUserList</h2>
+<p>This uses an ExpiringMap to auto expire JWT tokens. The "/logout" endpoint also expires a JWT token. The expired tokens are checked by the "jwt" security handler, <code>ExpiringJwtHandler</code>.</p>
 
 
 
@@ -7041,7 +6806,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 1, 2024 10:51:27 UTC">August 1, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 27, 2025 17:10:45 UTC">June 27, 2025</span>
   </span>
 
     
@@ -7190,10 +6955,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
   </body>
