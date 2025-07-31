@@ -24,7 +24,7 @@ CORS mapping uses [Java Regular Expressions](https://www.w3schools.com/java/java
 
 Create a JSON file in `keepconfig.d`, for example `cors.json`, that contains one element per regex with the value `true`. If you need to temporarily disable an entry, you can set it to false. Make sure you understand [Domino REST API configuration](../../references/understandingconfig.md).
 
-The regex for `https://drapi.mycompany.com:8880` is `https:\\/\\/.drapi\\.mycompany\.com:8880$`
+The regex for `https://drapi.mycompany.com:8880` is `https:\\/\\/.drapi\\.mycompany\\.com:8880$`
 
 !!! note
 

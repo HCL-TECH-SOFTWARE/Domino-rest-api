@@ -142,7 +142,7 @@ The {{ variable.drapi }} documentation is based on the [Diátaxis framework](htt
 
     ---
 
-    Provides information on how the documentation is organized and on using the Domino REST API documentation.
+    Provides information on how documentation is organized and on using the Domino REST API documentation.
 
     ---
 
