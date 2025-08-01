@@ -6,6 +6,6 @@ nav:
     - Production: production
     - Database: database
     - Management console: management
-    - Volt MX: VoltMX
+#    - Volt MX: VoltMX
     - Code examples: codesamples
 

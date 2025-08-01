@@ -28,10 +28,6 @@ Working with databases, and enabling and configuring for REST access
 
 Tasks requiring access to the Management console
 
-## [Volt MX](VoltMX/index.md)
-
-Topics around the Volt MX integration of the REST API
-
 ## [Code examples](codesamples/index.md)
 
 Code samples to interact with Domino REST API 

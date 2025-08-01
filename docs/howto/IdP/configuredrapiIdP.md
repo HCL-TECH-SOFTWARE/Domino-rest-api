@@ -11,7 +11,7 @@ The `oauth.nsf` database exists in your Domino data directory. The Domino IdP us
 !!! note
 
     - If you are using Domino+Domino REST API docker image, the `oauth.nsf` should already be in the image but may not be fully configured.
-    - If for some reason you need to create the `oauth.nsf`, see [Set up oauth.nsf](../VoltMX/setupoauthnsf.md), and save it in your Domino data directory.
+    - If for some reason you need to create the `oauth.nsf`, see [Set up oauth.nsf](../../references/security//setupoauthnsf.md), and save it in your Domino data directory.
 
 --8<-- "onclientids.md"
 

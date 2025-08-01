@@ -43,8 +43,6 @@ Provides information related to the [installation and configuration of Domino RE
 
 - [Rich Text](usingdominorestapi/richtext/index.md)
 
-- [Metrics](usingdominorestapi/metrics.md)
-
 - [Reserved Form Modes](usingdominorestapi/modenames.md)
 
 ## Security
@@ -59,7 +57,7 @@ Provides information related to the [installation and configuration of Domino RE
 
 - [Encryption keys](security/encryption.md)
 
-- [Set up oauth.nsf](../howto/VoltMX/setupoauthnsf.md)
+- [Set up oauth.nsf](setupoauthnsf.md)
 
 - [Custom Identity Provider](security/customIdp.md)
 
