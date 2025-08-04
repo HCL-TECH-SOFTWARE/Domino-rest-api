@@ -57,7 +57,7 @@ Provides information related to the [installation and configuration of Domino RE
 
 - [Encryption keys](security/encryption.md)
 
-- [Set up oauth.nsf](setupoauthnsf.md)
+- [Set up oauth.nsf](security/setupoauthnsf.md)
 
 - [Custom Identity Provider](security/customIdp.md)
 
