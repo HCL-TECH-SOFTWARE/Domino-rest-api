@@ -85,17 +85,16 @@ The name of the entries must match the name used in versions of the [RestAPI ver
 | metric   | [metricsParameters](#metrics-parameters) | Parameter for vert.x metrics. |
 
 ### Metrics parameters
-
+<!--
 Here is a JSON representation of the resource:
 
 ```json
 {
   "enabled": true,
-  "jvmMetricsEnabled": true,
-  "metricuser": "metrics"
+  "jvmMetricsEnabled": true
 }
 ```
-
+-->
 | Property                  | Type             | Description                                                                                                                                                                                        |
 | :------------------------ | :--------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | disabledMetricsCategories | Array of Strings | Specified in the [MetricsDomain Java class](https://github.com/vert-x3/vertx-micrometer-metrics/blob/master/src/main/java/io/vertx/micrometer/MetricsDomain.java), for example `vertx.http.server` |
