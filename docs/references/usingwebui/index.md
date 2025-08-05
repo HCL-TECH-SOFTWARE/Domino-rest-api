@@ -11,7 +11,7 @@ The **Admin UI** provides a user interface to several Domino REST APIs. It thus 
 
 This is what the login page looks like.
 
-![Domino REST API](../../assets/images/AdminLogin.png)
+![Domino REST API](../../assets/images/AdminLogin.png){: style="height:70%;width:70%"}
 (Image: Castle [Johannisburg](https://en.wikipedia.org/wiki/Schloss_Johannisburg), Aschaffeburg, Germany)
 
 You'll need the administrator username and password to access the server.
@@ -38,7 +38,7 @@ This option enables users to log in with a passkey that enables signing in to we
 
 This option uses the Domino REST API IdP by default and implements the OAuth process requiring user consent to log in. You can log in to the **Admin UI** by clicking **LOG IN WITH OIDC**. The **DRAPI** option will be the only one available from the drop-down field. Click **LOG IN**.
 
-![HCL Domino Login](../../assets/images/AdminLogin3.png)
+![HCL Domino Login](../../assets/images/AdminLogin3.png){: style="height:70%;width:70%"}
 
 Enter you administrator username and password in the **Username** and **Password** fields in the **HCL Domino Login** page, and then click **Login**.  
 
@@ -54,7 +54,7 @@ Once configured, a **LOG IN WITH {configured IdP name}** button is available on 
 
 The following image shows an example of the **Admin UI** login page when the user configured their own external IdPs to log in to the **Admin UI**.
 
-![HCL Domino Login](../../assets/images/AdminUiLoginExternalIdP.png)
+![HCL Domino Login](../../assets/images/AdminUiLoginExternalIdP.png){: style="height:70%;width:70%"}
 
 ## Links
 
