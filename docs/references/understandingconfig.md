@@ -81,3 +81,51 @@ The actual result can be inspected on the Domino REST API management API, like [
 
 > JSON overlay doesn't allow you to **remove** JSON elements. So, most settings have an `active` parameter that
 > can be set to false in an overlay.
+
+
+<!--
+
+# Understanding Configuration in Domino REST API
+
+The Domino REST API configuration uses an **Overlay File System** approach. This method combines multiple configuration sources, layering them to produce a final, effective configuration.
+
+## Configuration Sources and Overlay Process
+
+1. **Base Configuration**  
+   The initial configuration is loaded from the installation directory or inside `jar` files. When a `jar` file contains the resource `/config/config.json`, that file contributes to the base configuration.
+
+2. **Overlay from `keepconfig.d` Directory**  
+   Next, the configuration is overlaid by JSON files located in the `keepconfig.d` directory within the Notes data directory. These files provide additional or overriding settings.
+
+3. **Environment Variables**  
+   Finally, environment variables can override any settings from the JSON files.
+
+## Configuration Hierarchy and Merge Rules
+
+- All configuration sources provide JSON data that gets overlaid on top of each other.
+- When two JSON objects contain the same key:
+  - The key’s value from the overlay source **replaces** the lower layer’s value.
+  - Arrays are **completely replaced**, not merged or appended.
+- JSON files in the `keepconfig.d` directory are applied in **alphabetical order**, meaning the last file loaded can override previous ones.
+- This order supports use cases like temporarily disabling settings by placing overriding values in a file with a name starting with `z-` to ensure it is processed last.
+
+For details on the underlying merging logic, see the [vert.x configuration overloading rules].
+
+## Practical Example
+
+Suppose you have the following configurations and environment setup:
+
+### config.json
+
+
+
+## Important Notes
+
+- **No JSON element removal**: The overlay system does **not** allow removal of keys or objects from lower layers.  
+- To disable or deactivate settings, use the `"active": false` flag or equivalent indicators without deleting keys.
+- The overlay logic ensures a controlled approach to configuration changes without losing base settings.
+
+You can inspect the final, active configuration via the Domino REST API management interface, especially on a local installation.
+
+
+-->
