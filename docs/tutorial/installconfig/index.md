@@ -18,7 +18,7 @@ After completing the installation and the post-installation tasks:
 
 - Learn about the [OpenAPI UI](../swagger.md).
 
-- Check [Understanding configuration](../../references/understandingconfig.md) once you are ready to tweak the default configuration so that you understand how to do it.
+- Check [Understanding configuration](../../references/configuration/understandingconfig.md) once you are ready to tweak the default configuration so that you understand how to do it.
 
 - Learn about [hosting static applications](../../references/usingdominorestapi/keepapplications.md#hosting-static-applications), often referred to as Single Page Applications (SPA) or browser apps. The [tutorial](../walkthrough/index.md) has [an example](../walkthrough/lab-07.md) that you can refer to.
 <!--
@@ -188,7 +188,7 @@ The file contains one parameter per line. Lines starting with `#` get ignored. V
 
 ## Configuration & Security
 
-Domino REST API is preconfigured with settings that allow you to get started right away. It will run on **http** (not https) on port **8880**. However, you should familiarize yourself with all [configuration parameters](../../references/parameters.md) and [security](../../references/security/index.md) settings before you deploy into a production environment.
+Domino REST API is preconfigured with settings that allow you to get started right away. It will run on **http** (not https) on port **8880**. However, you should familiarize yourself with all [configuration parameters](../../references/configuration/parameters.md) and [security](../../references/security/index.md) settings before you deploy into a production environment.
 
 
 !!!tip

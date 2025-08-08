@@ -13,7 +13,7 @@ Domino REST API is preconfigured with settings that allow you to get started rig
          - Make sure the **Management console** is secure. For more information, see [Functional Accounts](../../references/functionalUsers.md).
          - Credentials for the **Management console** aren't managed by the configured IdP, but are derived from the [configuration of functional accounts](../../references/functionalUsers.md).
 
-- Check the [Configuration parameters](../../references/parameters.md) to learn more about the configurable parameters to modify the settings.
+- Check the [Configuration parameters](../../references/configuration/parameters.md) to learn more about the configurable parameters to modify the settings.
 
 ## Procedure
 
@@ -58,18 +58,8 @@ to the JSON file.
 
 ## Additional information
 
-### Understanding configuration
+To get a better understanding of the core configuration concepts and parameters that enable effective management and customization of the Domino REST API, see the following topics:
 
-The configuration follows the concept of an [Overlay File System](https://en.wikipedia.org/wiki/OverlayFS). The base configuration is retrieved from the installation directory or `jar` files.
+- [Configuration management and overlay hierarchy](../../references/configuration/understandingconfig.md)
 
-When jar files contain a resource `/config/config.json`, that configuration file is added to total configuration.
-
-Then, it's overlaid with any JSON files in the `keepconfig.d` directory within the `notesdata` directory and then finally, with any environment parameters.
-
-### Hierarchy
-
-![The call hierarchy](../../assets/images/ActualConfiguration.png)
-
-All files contribute JSON, which are overlaid on top of each other. JSON elements with same names get overwritten. Arrays are replaced and not overwritten.
-
-The JSON files in `keepconfig.d` are processed in alphabetical order. Last entry wins. This processing order allows you, for example, to disable elements temporarily through settings in a `z-final-words.json` file without impacting the permanent configuration.
+- [Configuration parameters](../../references/configuration/parameters.md)

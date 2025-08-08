@@ -1,6 +1,6 @@
 # The config.json configuration
 
-DRAPI is driven by a [dynamic configuration](../../references/understandingconfig.md). To get your extension recognized you must provide the information what verticle will run your code and what classes implement your business logic. To do so a file `resources/config/config.json` is required:
+DRAPI is driven by a [dynamic configuration](../../references/configuration/understandingconfig.md). To get your extension recognized you must provide the information what verticle will run your code and what classes implement your business logic. To do so a file `resources/config/config.json` is required:
 
 ```json
 {

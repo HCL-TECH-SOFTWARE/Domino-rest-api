@@ -4,7 +4,7 @@ nav:
   - index.md
   - authentication.md
   - jwt.md
-  - configurationParameters.md
+#  - configurationParameters.md
   - encryption.md
   - setupoauthnsf.md
   - customIdp.md

@@ -18,7 +18,7 @@ Configure your external IdP in the configuration file. For more information, see
 
 ### Set up Admin UI external IdP login configuration
 
-Configure the `adminui` property in your chosen external IdP. For more information, see [JWT parameters](../../references/parameters.md#jwt-parameters).
+Configure the `adminui` property in your chosen external IdP. For more information, see [JWT parameters](../../references/configuration/parameters.md#jwt-parameters).
 
 ## Admin UI external IdP login
 

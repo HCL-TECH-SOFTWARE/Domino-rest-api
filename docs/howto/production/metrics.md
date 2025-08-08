@@ -8,7 +8,7 @@ The procedure guides you in configuring Domino REST API related to the exposure 
 
 ## Before you begin
 
-Check the [Metrics parameters](../../references/parameters.md#metrics-parameters) to learn and understand the parameters you can use in configuring Domino REST API to expose metrics.
+Check the [Metrics parameters](../../references/configuration/parameters.md#metrics-parameters) to learn and understand the parameters you can use in configuring Domino REST API to expose metrics.
 
 ## Procedure
 
@@ -29,7 +29,7 @@ Check the [Metrics parameters](../../references/parameters.md#metrics-parameters
         - Enabling `jvmMetricsEnabled` by setting it to `true` increases the volume of collected metrics data and may impact system performance. Only enable this option when troubleshooting is necessary.
         - Changing `enabled` to `false` prevents exposure of metrics on the dedicated port.
 
-3. Add metrics parameters in the JSON object as required to modify the configuration. See [Metrics parameters](../../references/parameters.md#metrics-parameters) for parameter details.
+3. Add metrics parameters in the JSON object as required to modify the configuration. See [Metrics parameters](../../references/configuration/parameters.md#metrics-parameters) for parameter details.
 
 4. Save the JSON file in the `keepconfig.d` directory.
 

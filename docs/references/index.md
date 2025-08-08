@@ -14,7 +14,15 @@ Provides information related to the [installation and configuration of Domino RE
 
 - [Functional accounts](functionalUsers.md)
 
-- [Understanding configuration](understandingconfig.md)
+
+
+## Configuration overview
+
+Covers the core configuration concepts and parameters that enable effective management and customization of the Domino REST API.
+
+- [Understanding configuration](configuration/understandingconfig.md)
+
+- [Configuration parameters](configuration/parameters.md)
 
 ## OpenAPI
 
@@ -53,7 +61,7 @@ Provides information related to the [installation and configuration of Domino RE
 
 - [JSON Web Token configuration](security/jwt.md)
 
-- [Configuration parameters](security/configurationParameters.md)
+<!-- [Configuration parameters](security/configurationParameters.md)-->
 
 - [Encryption keys](security/encryption.md)
 
@@ -72,10 +80,6 @@ Provides information related to the [installation and configuration of Domino RE
 - [Postman](usertools/postman.md)
 
 - [Swagger UI](usertools/swagger.md)
-
-## Configuration parameters
-
-To learn more information about parameters used in configuration, see [Configuration parameters](parameters.md)
 
 ## Domino REST API SDKs
 
