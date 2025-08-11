@@ -10,8 +10,6 @@ This section discusses and explains topics and concepts about HCL Domino REST AP
 
 - [Understanding Domino REST API](understanding.md)
 
-- [Schema and scopes](schemascope.md)
-
 - [Schema backup](schemabackup.md)
 
 - [Agent processing](agents.md)
@@ -22,7 +20,7 @@ This section discusses and explains topics and concepts about HCL Domino REST AP
 
 
 <!--
-
+- [Schema and scopes](schemascope.md)
 - [How HCL Domino REST API works](howkeepworks.md)
 - [Form modes](formmodes.md)
 - [Domino REST API is different](keepdifference.md)

@@ -1,8 +1,8 @@
 # Configuration management and overlay hierarchy
-
 <!--# Understanding configuration overlay in Domino REST API-->
+The Domino REST API comes with default configuration settings. Administrators can override these settings by placing JSON files containing new configurations into the `keepconfig.d` directory. Additionally, environment variables that are particularly useful in containerized environments can be employed to override some settings as well.
 
-The Domino REST API configuration uses an **Overlay File System** approach. This method combines multiple configuration sources, layering them to produce a final, effective configuration.
+The configuration of the Domino REST API follows an **Overlay File System** approach, which merges multiple configuration sources by layering them. This results in a final, effective configuration that combines the base settings, JSON files from `keepconfig.d`, and any applicable environment variables.
 
 ## Configuration sources and overlay process
 
@@ -14,7 +14,7 @@ The Domino REST API configuration uses an **Overlay File System** approach. This
 
 2. **Overlay from `keepconfig.d` directory**  
 
-    Next, the configuration is overlaid by JSON files located in the `keepconfig.d` directory within the Notes data directory. These files provide additional or overriding settings.
+    Next, the configuration is overlaid by JSON files located in the `keepconfig.d` directory within the Notes data directory. These files contain new configurations that provide additional or overriding settings.
 
 3. **Environment variables**  
 

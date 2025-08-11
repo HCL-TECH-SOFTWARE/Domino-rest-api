@@ -11,7 +11,7 @@ nav:
 #  - hostingstatic.md
   - OpenAPI: openapidefinitions.md
   - accesscontrol.md
-  - Schema Components: schemacomponents
+  - Schema and scope overview: schemacomponents
   - Using Domino REST API: usingdominorestapi
   - Using Admin UI: usingwebui
   - Security: security

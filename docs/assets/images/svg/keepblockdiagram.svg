@@ -171,7 +171,7 @@
         </a>
         <!-- Element Forms* -->
         <a
-            xlink:href="https://opensource.hcltechsw.com/Domino-rest-api/references/schemacomponents/formdefinitions.html"
+            xlink:href="https://opensource.hcltechsw.com/Domino-rest-api/references/schemacomponents/schemacomp.html#form-definitions"
             target="_blank">
             <g xmlns="http://www.w3.org/2000/svg" width="62.894" height="42.47"
                 transform="scale(1,1) translate(469.117,272.912)">
@@ -193,7 +193,7 @@
         </a>
         <!-- Element Views** -->
         <a
-            xlink:href="https://opensource.hcltechsw.com/Domino-rest-api/references/schemacomponents/viewdefinitions.html"
+            xlink:href="https://opensource.hcltechsw.com/Domino-rest-api/references/schemacomponents/schemacomp.html#view-definitions"
             target="_blank">
             <g xmlns="http://www.w3.org/2000/svg" width="62.894" height="42.47"
                 transform="scale(1,1) translate(555.543,328.54)">
@@ -215,7 +215,7 @@
         </a>
         <!-- Element Agents** -->
         <a
-            xlink:href="https://opensource.hcltechsw.com/Domino-rest-api/references/schemacomponents/agentdefinitions.html"
+            xlink:href="https://opensource.hcltechsw.com/Domino-rest-api/references/schemacomponents/schemacomp.html#agent-definitions"
             target="_blank">
             <g xmlns="http://www.w3.org/2000/svg" width="62.894" height="42.47"
                 transform="scale(1,1) translate(643.194,328.54)">
