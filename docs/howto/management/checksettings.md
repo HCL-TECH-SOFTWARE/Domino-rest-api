@@ -8,7 +8,12 @@ The procedure guides you on how to check the Domino REST API settings.
 
 ## Before you begin
 
-- You must have access to the **Management console** (Port 8889).
+You must have access to the **Management console**.
+
+!!! note
+
+         - Make sure the **Management console** is secure. For more information, see [Functional Accounts](../../references/functionalUsers.md).
+         - Credentials for the **Management console** aren't managed by the configured IdP, but are derived from the [configuration of functional accounts](../../references/functionalUsers.md).
 
 ## Procedure
 

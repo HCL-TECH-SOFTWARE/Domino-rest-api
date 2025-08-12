@@ -18,7 +18,7 @@ After completing the installation and the post-installation tasks:
 
 - Learn about the [OpenAPI UI](../swagger.md).
 
-- Check [Understanding configuration](../../references/configuration/understandingconfig.md) once you are ready to tweak the default configuration so that you understand how to do it.
+- Check [Configuration overview](../../references/configuration/understandingconfig.md) once you are ready to tweak the default configuration so that you understand how to do it.
 
 - Learn about [hosting static applications](../../references/usingdominorestapi/keepapplications.md#hosting-static-applications), often referred to as Single Page Applications (SPA) or browser apps. The [tutorial](../walkthrough/index.md) has [an example](../walkthrough/lab-07.md) that you can refer to.
 <!--

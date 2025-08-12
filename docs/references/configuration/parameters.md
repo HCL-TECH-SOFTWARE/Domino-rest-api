@@ -6,7 +6,7 @@ The topic details the wide range of configuration parameters available, as well 
 
 The Domino REST API comes with default settings stored in internal files `config.json` and `security.json`. **These files are not subject to user modifications**.
 
-To change a configuration parameter, you can either set an environment parameter or create a JSON file in the `keepconfig.d` directory. For detailed instructions, refer to [Modify configuration of Domino REST API](../../howto/install/modifyconfig.md).
+To change a configuration parameter, you can either set an environment parameter or create a JSON file in the `keepconfig.d` directory. For detailed instructions, refer to [Modify configuration of Domino REST API](../../howto/install/configparam.md).
 
 !!! warning
 
@@ -21,7 +21,7 @@ The Domino REST API ships with default settings in internal files `config.json` 
 
     Parameters are **case sensitive**
 
-To alter a parameter, either set an environment parameter, if one exists (there aren't that many) or create a JSON file in `keepconfig.d` by following the the steps in [Modify configuration of Domino REST API](../howto/install/modifyconfig.md).
+To alter a parameter, either set an environment parameter, if one exists (there aren't that many) or create a JSON file in `keepconfig.d` by following the the steps in [Modify configuration of Domino REST API](../howto/install/configparam.md).
 -->
 ## Environment
 
@@ -244,6 +244,9 @@ All values can be [over written](https://vertx.io/docs/vertx-config/java/#_overl
 
 ### Making excluded database files and directories available
 
+To learn more, see [Enable excluded database files and directories](../../howto/database/excludeddb.md).
+
+<!--
 `config.json` includes the following JSON object that defines the excluded NSF files and directories.
 
 ```json
@@ -265,3 +268,4 @@ All values can be [over written](https://vertx.io/docs/vertx-config/java/#_overl
 ```
 
 To make an NSF file or directory, defined in the JSON object, available in the list of databases available when you define a schema in the **Admin UI**, see [Enable excluded database files and directories](../../howto/database/excludeddb.md).
+-->

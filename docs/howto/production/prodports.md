@@ -30,7 +30,7 @@ Check the [configuration parameters](../../references/configuration/parameters.m
 
     !!! tip
 
-        Use a filename for the JSON file that reveals its purpose. To learn more on how JSON files in `keepconfig.d` are processed, see [Understanding configuration](../production/configparam.md#understanding-configuration).
+        Use a filename for the JSON file that reveals its purpose. To learn more on how JSON files in `keepconfig.d` are processed, see [Configuration management and overlay hierarchy](../../references/configuration/understandingconfig.md).
 
 4. Restart Domino REST API on all servers.
 

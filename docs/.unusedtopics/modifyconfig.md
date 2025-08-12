@@ -2,6 +2,9 @@
 
 ## About this task
 
+The Domino REST API is preconfigured with settings that allow you to get started right away. This task guides you on how to modify the preconfigured settings to modify the Domino REST API configuration. 
+
+
 The procedure guides you on how to modify the Domino REST API configuration. Be sure to check the [detailed explanation before proceeding](../../references/configuration/parameters.md#additional-information).
 
 ## Procedure

@@ -22,7 +22,7 @@ Topics to guide you in completing configuration goals and tasks in relation to d
 
 - [Investigate OAuth](oauthinvstgtn.md)
 
-- [Configure parameters](configparam.md)
+<!-- [Configure parameters](configparam.md)-->
 
 - [Plan your application](planning.md)
 

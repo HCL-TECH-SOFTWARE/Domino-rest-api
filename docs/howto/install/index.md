@@ -8,7 +8,7 @@ Topics to guide you in completing goals and tasks related to installation, confi
 
 - [Create symlink for Domino 14 and Domino REST API](symlink.md)
 
-- [Modify configuration of Domino REST API](modifyconfig.md)
+- [Modify configuration of Domino REST API](configparam.md)
 
 - [Configure CORS for AdminUI, OAuth and your apps](cors.md)
 

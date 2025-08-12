@@ -20,7 +20,7 @@ Provides information related to the [installation and configuration of Domino RE
 
 Covers the core configuration concepts and parameters that enable effective management and customization of the Domino REST API.
 
-- [Understanding configuration](configuration/understandingconfig.md)
+- [Configuration management and overlay hierarchy](configuration/understandingconfig.md)
 
 - [Configuration parameters](configuration/parameters.md)
 
