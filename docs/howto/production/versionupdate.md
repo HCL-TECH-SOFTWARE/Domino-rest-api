@@ -20,7 +20,7 @@ Follow the procedure based on the installation option you used when installing t
 
 !!! note
 
-    For more information on the parameters used for updating Domino REST API in Linux, Mac, and Windows, see [Explanation of parameters](../../tutorial/installconfig/index.md#explanation-of-parameters).
+    For more information on the parameters used for updating Domino REST API in Linux, Mac, and Windows, see [Installation command parameters](../../tutorial/installconfig/install/index.md#installation-command-parameters).
 
 ### Docker
 

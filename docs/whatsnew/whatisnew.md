@@ -740,7 +740,7 @@
     | KEEP branding examples|
     | ---- |
     | [Enabling a database](../howto/database/enablingadb.md) |
-    | [The Domino REST API CLI](../references/usingdominorestapi/keepcli.md#keepcmd) |
+    | [The Domino REST API CLI](../references/usingdominorestapi/keepcli.md) |
     | [Running Agents: keepAgents.nsf](../topicguides/agents.md#running-agents) |
     | [Parameters - AsyncAgentScheduler verticle: keepAgents.nsf](../references/configuration/parameters.md#asyncagentscheduler-verticle) |
     | [Domino REST API Roles](../references/usingdominorestapi/roles.md) |

@@ -32,7 +32,7 @@ When processing and using an incoming JWT from an external IdP, you need to conf
 |userIdentifierInLdapFormat|Use to configure Domino REST API to accept LDAP-format name. Must be configured with `userIdentifier`. Set the value to `true`.|
 
 !!!note
-    When processing and using an incoming JWT from an external IdP, there are 2 configuration modes that you can use to configure Domino REST API. One configuration mode uses the `providerUrl`, while the other uses `keyFile` and `kid`. To learn more, see [External JWT Provider](../security/authentication.md#external-jwt--oidc-providers). 
+    When processing and using an incoming JWT from an external IdP, there are 2 configuration modes that you can use to configure Domino REST API. One configuration mode uses the `providerUrl`, while the other uses `keyFile` and `kid`. To learn more, see [External JWT/OIDC provider](../security/authentication.md#external-jwtoidc-providers).
 
 Example configuration:
 
