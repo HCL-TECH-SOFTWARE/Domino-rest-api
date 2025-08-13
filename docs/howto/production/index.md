@@ -22,8 +22,6 @@ Topics to guide you in completing configuration goals and tasks in relation to d
 
 - [Investigate OAuth](oauthinvstgtn.md)
 
-<!-- [Configure parameters](configparam.md)-->
-
 - [Plan your application](planning.md)
 
 - [Provide your own logging configuration](logging.md)
@@ -31,8 +29,6 @@ Topics to guide you in completing configuration goals and tasks in relation to d
 - [Set up Office Round Trip Experience](roundtrip.md)
 
 - [Set up Virtual Spreadsheet](virtualsheet.md)
-
-<!-- [Set up External IdP for Office Round Trip Experience](roundtripidp.md)-->
 
 - [Set up Domino REST API for encryption, decryption, and signing](signencrypt.md)
 
