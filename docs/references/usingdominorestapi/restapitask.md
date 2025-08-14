@@ -16,16 +16,19 @@ Once the restapi task is loaded in the Domino console, you can use the following
 
 |Command|Effect|
 |:---|:---|
-|`load restapi`|Start the Domino REST API.|
-|`tell restapi quit`|End Domino REST API.|
-|`tell restapi reload`|Restart with new configuration.|
-|`tell restapi [show] info`|Show loaded components.|
-|`tell restapi [show] config`|Show current configuration.|
-|`tell restapi [show] status`|Show version information and state.|
+|`load restapi`|Starts the Domino REST API.|
+|`tell restapi quit`|Ends the Domino REST API.|
+|`tell restapi reload`|Restarts with new configuration.|
+|`tell restapi [show] info`|Shows loaded components.|
+|`tell restapi [show] config`|Shows current configuration.|
+|`tell restapi [show] status`|Shows version information and state.|
 |`tell restapi refresh`|Refreshes Domino REST API with new configuration.<br/><br/> Once this command is issued, new incoming requests will be blocked, returning an HTTP Error 503 response. The existing queue of requests will be processed, and once completed, the new configuration will take effect, allowing new requests to be accepted.|
-|`tell restapi idpstatus`|Show state of configured identity providers.|
-|`tell restapi support`|Create a support package.|
-|`tell restapi support -includensf`|Create a support package, including `KeepConfig.nsf`.|
+|`tell restapi idpstatus`|Shows the state of the configured identity providers.|
+|`tell restapi support`|Creates a support package.|
+|`tell restapi support -includensf`|Creates a support package, including `KeepConfig.nsf`.|
+|`tell restapi javadump`|Writes a Java Dump file to the data directory. The file contains human-readable information about the state of the Java Virtual Machine (JVM) and active threads, enabling developers and administrators to analyze and troubleshoot JVM behavior.|
+|`tell restapi heapdump`|Writes a dump file of the active Java heap to the data directory. The file is written in IBM's Portable Heap Dump (PHD) format and contains information about all active objects in the JVM.|
+|`tell restapi systemdump`|Writes a full dump file of the active JVM to the data directory. The file contains extensive information about the current Java state.|
 
 <!--|`tell restapi refresh cache [database] [application]`|Refreshes Domino REST API's database and application cache. Leave off optional parameters for both.|-->
 

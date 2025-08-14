@@ -10,10 +10,10 @@ nav:
     - oauthinvstgtn.md
     - configparam.md
     - planning.md
+    - drapiwithcollabora.md
     - computeform.md
     - roundtrip.md
     - virtualsheet.md
-    - drapiwithcollabora.md
 #    - roundtripidp.md
     - Set up for encryption, decryption, signing: signencrypt.md
     - testformulas.md
