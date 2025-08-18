@@ -1,6 +1,6 @@
 # References
 
---8<-- "feedback.md"
+<!--8<-- "feedback.md"-->
 
 This section provides technical references and descriptions for using HCL Domino REST API.
 
@@ -13,8 +13,6 @@ Provides the minimum [system requirements for Domino REST API](https://support.h
 Provides information related to the [installation and configuration of Domino REST API](../tutorial/installconfig/index.md).
 
 - [Functional accounts](functionalUsers.md)
-
-
 
 ## Configuration overview
 

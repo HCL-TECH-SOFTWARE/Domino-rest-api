@@ -28,6 +28,6 @@ In the steps below, the name of the application, and thus the folder name, will 
 4. Execute `npm run build`, or whatever build process you use.
 5. Rename `build` folder to `mydominoreact` and copy to the `keepweb.d` folder on your Domino server. To avoid the rename step, you can alter your build script to directly build into `mydominoreact` by adding to the `.env` file the entry `BUILD_PATH='./mydominoreact'`.
 
-## Let's connect
+<!--## Let's connect
 
---8<-- "feedback.md"
+"feedback.md"-->

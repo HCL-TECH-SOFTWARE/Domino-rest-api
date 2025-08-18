@@ -212,6 +212,6 @@ By frequently commiting to your local git, you work with the assurance that you 
 
     [OpenAPI specification](openapi.md)
 
-## Let's connect
+<!--## Let's connect
 
---8<-- "feedback.md"
+"feedback.md"-->

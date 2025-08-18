@@ -1,6 +1,6 @@
 # Topic guides
 
---8<-- "feedback.md"
+<!--8<-- "feedback.md"-->
 
 This section discusses and explains topics and concepts about HCL Domino REST API to help you gain a better understanding of how HCL Domino REST API works.
 

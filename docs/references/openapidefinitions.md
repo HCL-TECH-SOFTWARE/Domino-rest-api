@@ -87,6 +87,6 @@ We added the following data types:
 | x-keep-scope          | string                   | ANY, $SETUP -> scope requirements for endpoint          |
 | x-content-disposition | string                   | specify content use (attachment vs. inline)             |
 
-## Let's connect
+<!--## Let's connect
 
---8<-- "feedback.md"
+"feedback.md"-->

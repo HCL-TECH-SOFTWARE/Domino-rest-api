@@ -93,6 +93,8 @@ const drapiFetch = async (url, method, token, body) => {
 
 This is just an example, you need to add error handling. To deal with chunked responses, [check this out](https://www.wissel.net/blog/2023/07/handle-http-chunked-responses.html).
 
+<!--
 ## Let's connect
 
---8<-- "feedback.md"
+"feedback.md"
+-->

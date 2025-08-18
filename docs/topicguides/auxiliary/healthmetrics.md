@@ -26,6 +26,6 @@ Metrics are exposed on their own dedicated port, **METRICSPORT** in the config. 
 - [Healthcheck Port (8886)](../configuringPorts.md#healthcheck-port-8886)
 - [Port for Prometheus metrics (8890)](../configuringPorts.md#port-for-prometheus-metrics-8890)
 
-## Let's connect
+<!--## Let's connect
 
---8<-- "feedback.md"
+"feedback.md"-->

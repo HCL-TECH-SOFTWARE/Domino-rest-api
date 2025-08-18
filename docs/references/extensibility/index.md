@@ -66,6 +66,6 @@ The [vert.x](https://vertx.io/) runtime allows to deploy your own [verticles](ht
 
 The [tutorial](../../tutorial/extensibility/index.md) walks you through the example of a foundational approval service that can work on multiple, data compatible, databases.
 
-## Let's connect
+<!--## Let's connect
 
---8<-- "feedback.md"
+"feedback.md"-->

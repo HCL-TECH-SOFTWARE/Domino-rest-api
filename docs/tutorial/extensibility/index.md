@@ -40,6 +40,6 @@ While the intent is that Java extensibility APIs will be stable over time, the s
 
 Beyond the published DRAPI APIs, take care to not assume the presence of most specific dependencies within DRAPI's "libs" directory. Some dependencies - namely, domino-jnx-api and Vert.x - are almost guaranteed to remain consistent over time. Others, like specific utility libraries, are liable to change or be removed even between minor versions of DRAPI. The safest route is to use few third-party dependencies in your Java projects, and otherwise check each DRAPI version for changes.
 
-## Let's connect
+<!--## Let's connect
 
---8<-- "feedback.md"
+"feedback.md"-->

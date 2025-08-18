@@ -74,6 +74,6 @@ References
 
     Section under development
 
-## Let's connect
+<!--## Let's connect
 
---8<-- "feedback.md"
+"feedback.md"-->

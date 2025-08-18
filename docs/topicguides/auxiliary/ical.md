@@ -20,6 +20,6 @@ The iCalendar Standard is an open standard for exchanging calendar and schedulin
 - [RFC 5545](https://datatracker.ietf.org/doc/html/rfc5545) - Internet Calendaring and Scheduling Core Object Specification
 - [RFC 7986](https://datatracker.ietf.org/doc/html/rfc7986) - New Properties for iCalendar
 
-## Let's connect
+<!--## Let's connect
 
---8<-- "feedback.md"
+"feedback.md"-->

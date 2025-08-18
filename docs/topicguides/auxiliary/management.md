@@ -17,6 +17,6 @@ Check the [Management console](../../howto/management/index.md) how-to guides fo
 - [Using Domino Console](../../howto/management/console.md)
 - [Management Port (8889)](../configuringPorts.md#management-port-8889)
 
-## Let's connect
+<!--## Let's connect
 
---8<-- "feedback.md"
+"feedback.md"-->

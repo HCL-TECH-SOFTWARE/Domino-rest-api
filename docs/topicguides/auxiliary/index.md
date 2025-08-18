@@ -26,6 +26,6 @@ Cloud and Kubernetes compatible health monitoring and system metrics in [Prometh
 
 System functions using a protected port and a functional account.
 
-## Let's connect
+<!--## Let's connect
 
---8<-- "feedback.md"
+"feedback.md"-->

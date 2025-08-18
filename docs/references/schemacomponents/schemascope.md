@@ -52,6 +52,6 @@ References
 - [Databases, schemas and scopes](../../topicguides/understanding.md#databases-schemas-and-scopes)
 - [Form and Alias handling](../usingdominorestapi/formnames.md)
 
-## Let's Connect
+<!--## Let's Connect
 
---8<-- "feedback.md"
+"feedback.md"-->

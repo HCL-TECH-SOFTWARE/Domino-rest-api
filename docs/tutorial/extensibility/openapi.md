@@ -195,6 +195,6 @@ You can reference the full file [here as `openapi.eoffice.json`](openapi.eoffice
 
     [Creating the config.json](configjson.md)
 
-## Let's connect
+<!--## Let's connect
 
---8<-- "feedback.md"
+"feedback.md"-->
