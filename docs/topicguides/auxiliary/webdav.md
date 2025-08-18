@@ -21,6 +21,6 @@ WebDAV enables user agents to collaboratively create and edit content directly o
 - [OpenAPI definitions and specifications](../../references/openapidefinitions.md#webdav)
 - [RFC 4918](https://datatracker.ietf.org/doc/html/rfc4918) - HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV)
 
-## Let's connect
+<!--## Let's connect
 
---8<-- "feedback.md"
+"feedback.md"-->

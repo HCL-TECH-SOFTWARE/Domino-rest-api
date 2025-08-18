@@ -18,7 +18,7 @@ Configure your external IdP in the configuration file. For more information, see
 
 ### Set up OFBA configuration
 
-Configure the `ofba` property in your chosen external IdP. For more information, see [JWT parameters](../../references/parameters.md#jwt-parameters).
+Configure the `ofba` property in your chosen external IdP. For more information, see [JWT parameters](../../references/configuration/parameters.md#jwt-parameters).
 
 ## OFBA log in
 

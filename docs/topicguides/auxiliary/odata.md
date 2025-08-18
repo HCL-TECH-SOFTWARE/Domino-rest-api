@@ -16,6 +16,6 @@ OData doesn't use [JSON Schema](https://json-schema.org/) but its own definition
 
 - [Reserved Form mode names](../../references/usingdominorestapi/modenames.md#odata)
 
-## Let's connect
+<!--## Let's connect
 
---8<-- "feedback.md"
+"feedback.md"-->

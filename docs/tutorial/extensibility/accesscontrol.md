@@ -84,6 +84,6 @@ The modified code from [Business Logic](./businesslogic.md) would look like this
 
     [Deployment](deployment.md)
 
-## Let's connect
+<!--## Let's connect
 
---8<-- "feedback.md"
+"feedback.md"-->

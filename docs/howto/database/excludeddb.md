@@ -2,7 +2,7 @@
 
 ## About this task
 
-The list of databases available when you define a schema in the **Admin UI** is based on the complete list of NSF files, except for the excluded NSF files and NSF files in the excluded directories defined in the following JSON object in [config.json](../../references/parameters.md):
+The list of databases available when you define a schema in the **Admin UI** is based on the complete list of NSF files, except for the excluded NSF files and NSF files in the excluded directories defined in the following JSON object in `config.json`:
 
 ```json
 {
@@ -77,7 +77,8 @@ The procedure guides you on how to include the excluded NSF files and NSF files 
 
 4. Save the JSON file in the `keepconfig.d` directory.
 
-    !!!tip
-        Use a filename for the JSON file that reveals its purpose, such as `enable-names-nsf.json`. To learn more on how JSON files in `keepconfig.d` are processed, see [Understanding configuration](../production/configparam.md#understanding-configuration).
+    !!! tip
+
+        Use a filename for the JSON file that reveals its purpose, such as `enable-names-nsf.json`. To learn more on how JSON files in `keepconfig.d` are processed, see [configuration sources and overlay process](../../references/configuration/understandingconfig.md#configuration-sources-and-overlay-process).
 
 5. Restart Domino REST API on all servers.

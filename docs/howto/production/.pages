@@ -1,6 +1,7 @@
 nav:
     - index.md
     - changefilesize.md
+    - metrics.md
     - Configure ports: prodports.md
     - Customize API schemas and endpoints: customAPI.md
     - dominohttps.md
@@ -8,8 +9,9 @@ nav:
     - httpsprod.md
     - Host SPA with ReactJS: reactjs.md
     - oauthinvstgtn.md
-    - configparam.md
+#    - configparam.md
     - planning.md
+    - logging.md
     - drapiwithcollabora.md
     - computeform.md
     - roundtrip.md

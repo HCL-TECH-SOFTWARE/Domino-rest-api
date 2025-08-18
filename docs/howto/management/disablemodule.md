@@ -15,7 +15,7 @@ Guides you in enabling or disabling modules in your Domino REST API configuratio
     - Make sure the **Management console** is secure. For more information, see [Functional Accounts](../../references/functionalUsers.md).
     - Credentials for the **Management console** aren't managed by the configured IdP, but are derived from the [configuration of functional accounts](../../references/functionalUsers.md).
 
-- Check the [Configuration parameters](../../references/parameters.md) to learn more about the configurable parameters to modify the settings.
+- Check the [Configuration parameters](../../references/configuration/parameters.md) to learn more about the configurable parameters to modify the settings.
 
 ## Procedure
 

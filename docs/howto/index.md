@@ -1,8 +1,8 @@
 # How-to guides
 
---8<-- "feedback.md"
+<!--8<-- "feedback.md"-->
 
-This section intends to guide experienced users in completing key goals and tasks related to HCL Domino REST API. This section is divided into the following categories for easy reference:
+This section is designed to guide users in accomplishing essential goals and tasks related to the HCL Domino REST API. It's organized into the following categories for easy reference:
 
 ## [Installation](install/index.md)
 
@@ -27,10 +27,6 @@ Working with databases, and enabling and configuring for REST access
 ## [Management console](management/index.md)
 
 Tasks requiring access to the Management console
-
-## [Volt MX](VoltMX/index.md)
-
-Topics around the Volt MX integration of the REST API
 
 ## [Code examples](codesamples/index.md)
 

@@ -47,9 +47,9 @@ TCreating your own RichText processor is covered in [this reference entry](../..
 
 Creating your own API Endpoints requires more planning and a few more steps:
 
-1. Create your OpenAPI 3.0.x specification in JSON format. Be careful, the latest version of the OpenAPI specification is 3.1.x, which is due to Java8 limitations currently not supported in DRAPI 1.1.x. You need to save the specification in JSON format, we don't support YAML. Details about file location and naming can be found [in the tutorial](../../tutorial/extensibility)
-2. Create a Java [Maven](https://maven.apache.org/) project following the standard Maven layout. You will use the [parent module provided by JNX](https://central.sonatype.com/artifact/com.hcl.domino/domino-jnx-parent). Details can be found [in the tutorial](../../tutorial/extensibility)
-3. Create `src/main/resources/config/config.json`. In that file you point to your OpenAPI file, specify how endpoints get processed. While you can overwrite the configuration later in `keepconfig.d`, you want sensible defaults in that `config.json`. Make sure you understand [how configuration works](../../references/understandingconfig.md). Details can be found [in the tutorial](../../tutorial/extensibility/index.md)
+1. Create your OpenAPI 3.0.x specification in JSON format. Be careful, the latest version of the OpenAPI specification is 3.1.x, which is due to Java8 limitations currently not supported in DRAPI 1.1.x. You need to save the specification in JSON format, we don't support YAML. Details about file location and naming can be found [in the tutorial](../../tutorial/extensibility/index.md).
+2. Create a Java [Maven](https://maven.apache.org/) project following the standard Maven layout. You will use the [parent module provided by JNX](https://central.sonatype.com/artifact/com.hcl.domino/domino-jnx-parent). Details can be found [in the tutorial](../../tutorial/extensibility/index.md)
+3. Create `src/main/resources/config/config.json`. In that file you point to your OpenAPI file, specify how endpoints get processed. While you can overwrite the configuration later in `keepconfig.d`, you want sensible defaults in that `config.json`. Make sure you understand [how configuration works](../../references/configuration/understandingconfig.md). Details can be found [in the tutorial](../../tutorial/extensibility/index.md)
 4. Implement the class(es) that execute your business logic. As long as your API only sends JSON in and out, you will need to implement just one class that extends the abstract class `AsyncDominoJNXJson` and in that class a single method `process` which gives you access to a session, the database and the incoming request. You can use `@Annotations` to define access requirements. Details can be found [in the tutorial](../../tutorial/extensibility/index.md)
 5. Deployment is as simple as putting your jar into the `libs/` directory. For containerized deployments you can use a custom Domino container leveraging [jib](https://github.com/GoogleContainerTools/jib). Details can be found [in the tutorial](../../tutorial/extensibility/index.md)
 
@@ -66,6 +66,6 @@ The [vert.x](https://vertx.io/) runtime allows to deploy your own [verticles](ht
 
 The [tutorial](../../tutorial/extensibility/index.md) walks you through the example of a foundational approval service that can work on multiple, data compatible, databases.
 
-## Let's connect
+<!--## Let's connect
 
---8<-- "feedback.md"
+"feedback.md"-->

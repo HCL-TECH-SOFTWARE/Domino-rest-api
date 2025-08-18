@@ -205,6 +205,6 @@ Test using curl or Bruno
 
     [Access Control](accesscontrol.md)
 
-## Let's connect
+<!--## Let's connect
 
---8<-- "feedback.md"
+"feedback.md"-->

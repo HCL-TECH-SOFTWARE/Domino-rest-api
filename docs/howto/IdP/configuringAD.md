@@ -226,6 +226,8 @@ A few tips to troubleshoot the setup when the goalpost has been moved:
 
 - [Set up External IdP for Admin UI login](adminuiidp.md)
 
+<!--
 ## Let's connect
 
---8<-- "feedback.md"
+"feedback.md"
+-->

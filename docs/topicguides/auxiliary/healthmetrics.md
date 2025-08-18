@@ -22,10 +22,10 @@ Metrics are exposed on their own dedicated port, **METRICSPORT** in the config. 
 
 ## References
 
-- [Metrics](../../references/usingdominorestapi/metrics.md)
+- [Metrics](../../howto/production/metrics.md)
 - [Healthcheck Port (8886)](../configuringPorts.md#healthcheck-port-8886)
 - [Port for Prometheus metrics (8890)](../configuringPorts.md#port-for-prometheus-metrics-8890)
 
-## Let's connect
+<!--## Let's connect
 
---8<-- "feedback.md"
+"feedback.md"-->

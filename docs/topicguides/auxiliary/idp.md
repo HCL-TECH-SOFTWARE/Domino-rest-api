@@ -16,6 +16,6 @@ See the [Identity Provider](../../howto/IdP/index.md) topic page for a list of h
 
 - [Custom Identity Provider (IdP)](../../references/security/customIdp.md)
 
-## Let's connect
+<!--## Let's connect
 
---8<-- "feedback.md"
+"feedback.md"-->

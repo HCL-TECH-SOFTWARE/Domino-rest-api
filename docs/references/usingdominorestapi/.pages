@@ -9,11 +9,9 @@ nav:
   - dataformats.md
   - Encryption, decryption, and signing: encryptsign.md
   - formnames.md
-  - metrics.md
   - modenames.md
   - Rich Text: richtext
   - scopes.md
-#  - console.md
-  - logging.md
+
   
   

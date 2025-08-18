@@ -27,6 +27,7 @@ There are many reasons to keep these users separate from your enterprise directo
 
 For information on setting up a functional account, see [Set up a functional account](../tutorial/installconfig/configuration/setupfunctionalaccount.md).
 
+<!--
 ## Functional users configuration file
 
 Create a file `functionalUsers.json` in the directory `[NotesData]/keepconfig.d`. Add the following JSON structure:
@@ -97,8 +98,9 @@ The management endpoint (Port 8889) has, besides others, a utility function to s
 
 This creates the user "Doctor Notes" with the password `password` to access the management console.
 
-<!-- prettier-ignore -->
+
 !!! tip
 
     **Don't leave default passwords in your system**.
     When done with creating new salted passwords, securely back-up `tempmanagement.json` to prevent unauthorized access, and then restart Domino REST API. 
+-->
