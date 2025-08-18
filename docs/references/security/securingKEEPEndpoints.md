@@ -8,13 +8,13 @@ Domino REST API uses three endpoints:
 
 Only one must be reachable by users (humans or servers). Configure your firewall accordingly and eventually use [a proxy](../../howto/web/httpsproxy.md).
 
-To be able to securely and efficiently deploy Domino REST API into a production environment, you must understand how Domino REST API configuration works. See [Configuration](../security/configurationParameters.md) for a deeper dive.
+To be able to securely and efficiently deploy Domino REST API into a production environment, you must understand how Domino REST API configuration works. See [Configuration overview](../configuration/index.md) for a deeper dive.
 
 The Domino REST API configuration includes the Domino REST API binary directory, `keepconfig.d`, and environment variables.
 
 ![The call hierarchy](../../assets/images/ActualConfiguration.png)
 
-Examples of the default configuration settings are here, [config.json](../parameters.md). Whenever you do a new Domino REST API install, these settings and the `projectkeep.jar` file are overwritten, but any change made in `keepconfig.d` stays untouched.
+Examples of the default configuration settings are here, [config.json](../configuration/parameters.md). Whenever you do a new Domino REST API install, these settings and the `projectkeep.jar` file are overwritten, but any change made in `keepconfig.d` stays untouched.
 
 So it's necessary that your configuration changes reside in the `keepconfig.d` directory so that they persist when you reinstall or update your Domino REST API version.
 

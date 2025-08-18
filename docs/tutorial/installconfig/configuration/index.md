@@ -4,7 +4,7 @@ After installation, Domino REST API will run on port 8880 with HTTP and a transi
 
 !!! caution "Important"
 
-    - You should familiarize yourself with all [configuration parameters](../../../references/parameters.md) and [security](../../../references/security/index.md) settings before you deploy into a production environment.
+    - You should familiarize yourself with all [configuration parameters](../../../references/configuration/parameters.md) and [security](../../../references/security/index.md) settings before you deploy into a production environment.
     - Domino REST API honors all Domino access control mechanisms and doesn't allow anonymous access. For more information, see [Access Control](../../../references/accesscontrol.md).
 
 ## [Check connectivity](connectivity.md)
