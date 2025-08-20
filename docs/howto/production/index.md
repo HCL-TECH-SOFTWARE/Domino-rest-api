@@ -26,6 +26,8 @@ Topics to guide you in completing configuration goals and tasks in relation to d
 
 - [Provide your own logging configuration](logging.md)
 
+- [Run Domino REST API WOPI with Collabora container](drapiwithcollabora.md)
+
 - [Set up Office Round Trip Experience](roundtrip.md)
 
 - [Set up Virtual Spreadsheet](virtualsheet.md)
