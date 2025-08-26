@@ -162,7 +162,7 @@ It can be configured like:
 }
 ```
 
-The "oidc" is similar to "oidc-idpcat" or "jwt". The keys can be anything, like "any-name". This is the same idea as documented in [External JWT Provider configuration](../../references/security/authentication.md#external-jwt--oidc-providers).
+The "oidc" is similar to "oidc-idpcat" or "jwt". The keys can be anything, like "any-name". This is the same idea as documented in [External JWT Provider configuration](#external-jwtoidc-providers).
 
 | Items                                             | Description                                                                                                                 |
 | :------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------- |
