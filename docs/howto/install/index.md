@@ -8,7 +8,7 @@ Topics to guide you in completing goals and tasks related to installation, confi
 
 - [Create symlink for Domino 14 and Domino REST API](symlink.md)
 
-- [Modify configuration of Domino REST API](modifyconfig.md)
+- [Modify configuration of Domino REST API](configparam.md)
 
 - [Configure CORS for AdminUI, OAuth and your apps](cors.md)
 
@@ -26,6 +26,8 @@ Topics to guide you in completing goals and tasks related to installation, confi
 
 - [Obtain authentication token from HCL Container Repository](obtainauthenticationtoken.md)
 
+<!--
 ## Let's connect
 
---8<-- "feedback.md"
+"feedback.md"
+-->

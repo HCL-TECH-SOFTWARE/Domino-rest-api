@@ -53,7 +53,7 @@ That directory must contain you custom `authorization.html`. It doesn't need to 
 
 !!! tip "Use a name matching the purpose"
 
-    Use a filename for the JSON file that reveals its purpose. To learn more on how JSON files in `keepconfig.d` are processed, see [Understanding configuration](../production/configparam.md#understanding-configuration).
+    Use a filename for the JSON file that reveals its purpose. To learn more on how JSON files in `keepconfig.d` are processed, see [Configuration management and overlay hierarchy](../../references/configuration/understandingconfig.md).
 
 ### Modifying the HTML files
 

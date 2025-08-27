@@ -2,7 +2,10 @@
 
 ## About this task
 
-The procedure guides you on how to modify the Domino REST API configuration. Be sure to check the [detailed explanation before proceeding](../../references/parameters.md#remarks).
+The Domino REST API is preconfigured with settings that allow you to get started right away. This task guides you on how to modify the preconfigured settings to modify the Domino REST API configuration. 
+
+
+The procedure guides you on how to modify the Domino REST API configuration. Be sure to check the [detailed explanation before proceeding](../../references/configuration/parameters.md#additional-information).
 
 ## Procedure
 
@@ -19,7 +22,7 @@ The procedure guides you on how to modify the Domino REST API configuration. Be 
 3. Save the created JSON file in `keepconfig.d`. You can use any filename for the JSON file.
 
     !!!note
-        For more information on modifying the configuration, see [Overwriting the values](../../references/parameters.md#overwriting-the-values).
+        For more information on modifying the configuration, see [Overwriting the values](../../references/configuration/parameters.md#overwriting-the-values).
 
 4. Restart Domino REST API on all servers with this new configuration.
 

@@ -5,7 +5,7 @@ nav:
   - introducingrestapi.md
   - usecases.md
   - understanding.md
-  - schemascope.md
+#  - schemascope.md
   - schemabackup.md
   - agents.md
   - configuringPorts.md

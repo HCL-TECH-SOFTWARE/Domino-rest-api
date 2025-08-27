@@ -1,6 +1,6 @@
 # Topic guides
 
---8<-- "feedback.md"
+<!--8<-- "feedback.md"-->
 
 This section discusses and explains topics and concepts about HCL Domino REST API to help you gain a better understanding of how HCL Domino REST API works.
 
@@ -9,8 +9,6 @@ This section discusses and explains topics and concepts about HCL Domino REST AP
 - [Use cases](usecases.md)
 
 - [Understanding Domino REST API](understanding.md)
-
-- [Schema and scopes](schemascope.md)
 
 - [Schema backup](schemabackup.md)
 
@@ -22,7 +20,7 @@ This section discusses and explains topics and concepts about HCL Domino REST AP
 
 
 <!--
-
+- [Schema and scopes](schemascope.md)
 - [How HCL Domino REST API works](howkeepworks.md)
 - [Form modes](formmodes.md)
 - [Domino REST API is different](keepdifference.md)

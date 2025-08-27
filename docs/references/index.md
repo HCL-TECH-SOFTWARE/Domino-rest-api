@@ -1,6 +1,6 @@
 # References
 
---8<-- "feedback.md"
+<!--8<-- "feedback.md"-->
 
 This section provides technical references and descriptions for using HCL Domino REST API.
 
@@ -14,7 +14,13 @@ Provides information related to the [installation and configuration of Domino RE
 
 - [Functional accounts](functionalUsers.md)
 
-- [Understanding configuration](understandingconfig.md)
+## Configuration overview
+
+Covers the core configuration concepts and parameters that enable effective management and customization of the Domino REST API.
+
+- [Configuration management and overlay hierarchy](configuration/understandingconfig.md)
+
+- [Configuration parameters](configuration/parameters.md)
 
 ## OpenAPI
 
@@ -43,8 +49,6 @@ Provides information related to the [installation and configuration of Domino RE
 
 - [Rich Text](usingdominorestapi/richtext/index.md)
 
-- [Metrics](usingdominorestapi/metrics.md)
-
 - [Reserved Form Modes](usingdominorestapi/modenames.md)
 
 ## Security
@@ -55,11 +59,11 @@ Provides information related to the [installation and configuration of Domino RE
 
 - [JSON Web Token configuration](security/jwt.md)
 
-- [Configuration parameters](security/configurationParameters.md)
+<!-- [Configuration parameters](security/configurationParameters.md)-->
 
 - [Encryption keys](security/encryption.md)
 
-- [Set up oauth.nsf](../howto/VoltMX/setupoauthnsf.md)
+- [Set up oauth.nsf](security/setupoauthnsf.md)
 
 - [Custom Identity Provider](security/customIdp.md)
 
@@ -74,10 +78,6 @@ Provides information related to the [installation and configuration of Domino RE
 - [Postman](usertools/postman.md)
 
 - [Swagger UI](usertools/swagger.md)
-
-## Configuration parameters
-
-To learn more information about parameters used in configuration, see [Configuration parameters](parameters.md)
 
 ## Domino REST API SDKs
 

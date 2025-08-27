@@ -10,19 +10,24 @@ Domino REST API uses a Java-based installer, except for Docker, which uses a con
 
 ## Installation files
 
-**Starting Domino REST API v1.0.9**, there are four installation files available for download. Two files for Domino 12 and two files for Domino 14.
+**Starting Domino REST API v1.1.5**, there are 6 installation files available for download. Two files each for Domino 12, Domino 14, and Domino 14.5.
 
 *For example*:
 
-For Domino 12
+For Domino 14.5
 
-- `Domino_REST_API_V1.0.9_R12_Docker.tar.gz`
-- `Domino_REST_API_V1.0.9_R12_Installer.tar.gz`
+- `Domino_REST_API_V1.1.5_R14.5_Docker.tar.gz`
+- `Domino_REST_API_V1.1.5_R14.5_Installer.tar.gz`
 
 For Domino 14
 
-- `Domino_REST_API_V1.0.9_R14_Docker.tar.gz`
-- `Domino_REST_API_V1.0.9_R14_Installer.tar.gz`
+- `Domino_REST_API_V1.1.5_R14_Docker.tar.gz`
+- `Domino_REST_API_V1.1.5_R14_Installer.tar.gz`
+
+For Domino 12
+
+- `Domino_REST_API_V1.1.5_R12_Docker.tar.gz`
+- `Domino_REST_API_V1.1.5_R12_Installer.tar.gz`
 
 ## Procedure <!--Download via My HCLSoftware Portal-->
 

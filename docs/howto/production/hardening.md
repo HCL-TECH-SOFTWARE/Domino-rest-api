@@ -68,6 +68,6 @@ The name, as long as it ends in `.json`, can be chosen freely. It needs to be pl
 
 YMMV
 
-## Let's connect
+<!--## Let's connect
 
---8<-- "feedback.md"
+"feedback.md"-->

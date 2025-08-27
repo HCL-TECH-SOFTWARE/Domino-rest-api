@@ -47,4 +47,4 @@ This configuration will attempt to load a certificate matching the server's "Ful
 
 `TLSCertStoreName` can be a string or array. When multiple are specified, they will be matched to requests via SNI.
 
-For more information on creating or updating a JSON file, see [Modify configuration of Domino REST API](../install/modifyconfig.md).
+For more information on creating or updating a JSON file, see [Modify configuration of Domino REST API](../install/configparam.md).

@@ -8,6 +8,6 @@
 
     [Setting up a Development Container](devcontainer.md)
 
-## Let's connect
+<!--## Let's connect
 
---8<-- "feedback.md"
+"feedback.md"-->

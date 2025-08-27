@@ -33,7 +33,7 @@ Should Domino use a permanent JWT Key, we can use a public/private key pair and 
 
     These keys can be shared between Domino servers, allowing, for example, redirects to a different mail server.
 
-### External JWT / OIDC providers
+### External JWT/OIDC providers
 
 This is the configuration we would strongly suggest for outward facing Domino servers. Domino REST API can accept JWT tokens from multiple external providers.
 
@@ -143,7 +143,7 @@ The Domino REST API probes for the existence of various claims in the JWT token 
 
 ## OIDC
 
-OIDC (OpenID Connect) support lets you point at a standard OIDC provider like [Microsoft Entra ID formerly Azure Active Directory](../../howto/IdP/configuringAD.md) or [Keycloak](../../howto/IdP/configuringKeycloak.md). It's similar to the [External JWT Provider configuration](../../references/security/authentication.md#external-jwt--oidc-providers) when using `providerUrl`, but follows OIDC semantics a bit more internally - namely, it needs a client ID and client secret.
+OIDC (OpenID Connect) support lets you point at a standard OIDC provider like [Microsoft Entra ID formerly Azure Active Directory](../../howto/IdP/configuringAD.md) or [Keycloak](../../howto/IdP/configuringKeycloak.md). It's similar to the [External JWT/OIDC provider configuration](#external-jwtoidc-providers) when using `providerUrl`, but follows OIDC semantics a bit more internally - namely, it needs a client ID and client secret.
 
 It can be configured like:
 
@@ -162,7 +162,7 @@ It can be configured like:
 }
 ```
 
-The "oidc" is similar to "oidc-idpcat" or "jwt". The keys can be anything, like "any-name". This is the same idea as documented in [External JWT Provider configuration](../../references/security/authentication.md#external-jwt--oidc-providers).
+The "oidc" is similar to "oidc-idpcat" or "jwt". The keys can be anything, like "any-name". This is the same idea as documented in [External JWT Provider configuration](#external-jwtoidc-providers).
 
 | Items                                             | Description                                                                                                                 |
 | :------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------- |

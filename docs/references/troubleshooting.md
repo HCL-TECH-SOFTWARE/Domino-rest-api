@@ -2,21 +2,29 @@
 
 This reference intends to guide you in addressing common errors in installing and running the Domino REST API service. Common errors and their corresponding resolutions are described below:
 
+## Authentication has gotten slower
+
+Temporary files named `keyutil_<somename>_` in Domino’s temp directory aren't removed after creation, causing slow authentication processing and eventual login timeouts.
+
+**Solution**
+
+Navigate to Domino’s temp folder, look for files with filenames starting with `keyutil_`, and then remove these files.
+
 ## Domino Not Running (First-Time Setup)
 
 If Domino isn't up and running, see [Troubleshooting one-touch Domino Setup](https://help.hcltechsw.com/domino/14.0.0/admin/inst_onetouch_troubleshooting.html).
 
 ## REST API not responding
 
-You get a timeout error when trying to access `http://yourserver:8880`, wherein `yourserver` is the DNS name of your Domino server. 
+You get a timeout error when trying to access `http://yourserver:8880`, wherein `yourserver` is the DNS name of your Domino server.
 
 **Solution**
 
-You need to check if the REST API is loaded. 
+You need to check if the REST API is loaded.
 
-1. In the Domino server console, type `show tasks`. 
-2. If there is no `restapi` entry in the list, load it using `load restapi` in the Domino console. 
-3. If it's listed, shut it down with `tell restapi quit` before trying `load restapi`. 
+1. In the Domino server console, type `show tasks`.
+2. If there is no `restapi` entry in the list, load it using `load restapi` in the Domino console.
+3. If it's listed, shut it down with `tell restapi quit` before trying `load restapi`.
 4. Take note of any messages in case you need more support.
 
 <!----8<-- "iskeeprunning.md"-->
@@ -29,7 +37,7 @@ You get this error when you run the [sample script](../references/downloads.md) 
 > 2021-01-28 15:39:07 ERROR Launch:258 - Fatal
 > java.net.BindException: Address already in use
 
-**Solution** 
+**Solution**
 
 Stop the process that's using the jar file. Use the Windows Task Manager, or on a Mac/Linux, do this:
 
@@ -57,12 +65,13 @@ The following error is shown:
 
 ![KeepConfigDBError](../assets/images/KeepConfigError.png){: style="height:80%;width:80%"}
 
-**Solution** 
+**Solution**
 
 Delete the `KeepConfig.nsf` from the Notes data directory and restart the [sample script](../references/downloads.md).
 
 <!-- prettier-ignore -->
 !!! tip
+
     On Mac, the data directory path is `/Users/[userid]/Library/Application Support/HCL Notes Data/`.
 
 ## User ID and password being requested repeatedly when using Notes for Domino REST API testing

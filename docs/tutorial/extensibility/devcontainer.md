@@ -37,6 +37,6 @@ We start with a Java development image and add Domino and tooling
 
 --8<-- "future.md"
 
-## Let's connect
+<!--## Let's connect
 
---8<-- "feedback.md"
+"feedback.md"-->

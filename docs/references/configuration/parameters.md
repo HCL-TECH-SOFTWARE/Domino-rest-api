@@ -1,5 +1,18 @@
 # Configuration parameters
 
+The topic details the wide range of configuration parameters available, as well as a set of environment parameters. Understanding these parameters and their usage is essential for customizing, securing, and optimizing the Domino REST API.
+
+<!--The configuration is assembled from JSON files and a few selected environment parameters.-->Environment parameters are used because they're a common and convenient method for configuring instances in virtual environments such as Docker, IBM Cloud, and Kubernetes.
+
+The Domino REST API comes with default settings stored in internal files `config.json` and `security.json`. **These files are not subject to user modifications**.
+
+To change a configuration parameter, you can either set an environment parameter or create a JSON file in the `keepconfig.d` directory. For detailed instructions, refer to [Modify configuration of Domino REST API](../../howto/install/configparam.md).
+
+!!! warning
+
+    Parameters are case sensitive. 
+
+<!--
 The configuration is assembled from JSON files and a few selected environment parameters. We use those environment parameters because they're a commonly used way to configure instances in virtual environments such as Docker, IBM Cloud, and Kubernetes.
 
 The Domino REST API ships with default settings in internal files `config.json` and `security.json`. **These are internal files and not subject to user modifications**.
@@ -8,8 +21,8 @@ The Domino REST API ships with default settings in internal files `config.json` 
 
     Parameters are **case sensitive**
 
-To alter a parameter, either set an environment parameter, if one exists (there aren't that many) or create a JSON file in `keepconfig.d` by following the the steps in [Modify configuration of Domino REST API](../howto/install/modifyconfig.md).
-
+To alter a parameter, either set an environment parameter, if one exists (there aren't that many) or create a JSON file in `keepconfig.d` by following the the steps in [Modify configuration of Domino REST API](../howto/install/configparam.md).
+-->
 ## Environment
 
 --8<-- "environmentparam.md"
@@ -183,7 +196,7 @@ This is the verticle for managing WebHandlers. `worker`, `threadPoolName`, `thre
 | client_id          | String  | External IdP client ID to use for OFBA, defaults to `keepofba`.                                                              |
 | application_id_uri | String  | An optional property. Required when external IdP is **Microsoft Entra ID, formerly Azure Active Directory**. End with a `/`. |
 
-## Remarks
+## Additional information
 
 ### Named elements vs. arrays
 
@@ -231,6 +244,9 @@ All values can be [over written](https://vertx.io/docs/vertx-config/java/#_overl
 
 ### Making excluded database files and directories available
 
+To learn more, see [Enable excluded database files and directories](../../howto/database/excludeddb.md).
+
+<!--
 `config.json` includes the following JSON object that defines the excluded NSF files and directories.
 
 ```json
@@ -251,4 +267,5 @@ All values can be [over written](https://vertx.io/docs/vertx-config/java/#_overl
    }
 ```
 
-To make an NSF file or directory, defined in the JSON object, available in the list of databases available when you define a schema in the **Admin UI**, see [Enable excluded database files and directories](../howto/database/excludeddb.md).
+To make an NSF file or directory, defined in the JSON object, available in the list of databases available when you define a schema in the **Admin UI**, see [Enable excluded database files and directories](../../howto/database/excludeddb.md).
+-->

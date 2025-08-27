@@ -1,11 +1,12 @@
 # Tutorials
 
---8<-- "feedback.md"
+<!--8<-- "feedback.md"-->
 
 The tutorials intends to familiarize Domino REST API administrators and Notes or Web developers with the Domino REST API.
 
 <!-- prettier-ignore -->
 !!! note "Important"
+    
     Before starting the tutorial, make sure that Domino REST API is installed and running. For more information, see [Installation and configuration](../tutorial/installconfig/index.md).
 
 In this tutorial, we will use the database `Demo.nsf`. You can download it from [Downloadable resources](../references/downloads.md).

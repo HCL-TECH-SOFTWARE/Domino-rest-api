@@ -47,6 +47,8 @@ Activating the code panel **&#60;/&#62;** provides over 30 variations in various
 
 ![Postman provides code](../../assets/images/code/pm-provides-code.png)
 
+<!--
 ## Let's connect
 
---8<-- "feedback.md"
+ "feedback.md"
+-->

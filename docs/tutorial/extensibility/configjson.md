@@ -1,6 +1,6 @@
 # The config.json configuration
 
-DRAPI is driven by a [dynamic configuration](../../references/understandingconfig.md). To get your extension recognized you must provide the information what verticle will run your code and what classes implement your business logic. To do so a file `resources/config/config.json` is required:
+DRAPI is driven by a [dynamic configuration](../../references/configuration/understandingconfig.md). To get your extension recognized you must provide the information what verticle will run your code and what classes implement your business logic. To do so a file `resources/config/config.json` is required:
 
 ```json
 {
@@ -59,6 +59,6 @@ The class name gets derived from the tag and the OperationID specified in the Op
 
     [Implementing business logic](businesslogic.md)
 
-## Let's connect
+<!--## Let's connect
 
---8<-- "feedback.md"
+"feedback.md"-->

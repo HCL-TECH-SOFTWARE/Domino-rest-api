@@ -12,7 +12,7 @@ Second step is to create an OpenAPI 3.0.x specification. You can do that using n
 
 ## Creating the config.json
 
-DRAPI is driven by a [dynamic configuration](../../references/understandingconfig.md). In order to get your extension recognized you must provide the information what verticle will run your code and what classes implement your business logic. To do so a file `resources/config/config.json` is required
+DRAPI is driven by a [dynamic configuration](../../references/configuration/understandingconfig.md). In order to get your extension recognized you must provide the information what verticle will run your code and what classes implement your business logic. To do so a file `resources/config/config.json` is required
 
 ## Implementing business logic
 
@@ -40,6 +40,6 @@ While the intent is that Java extensibility APIs will be stable over time, the s
 
 Beyond the published DRAPI APIs, take care to not assume the presence of most specific dependencies within DRAPI's "libs" directory. Some dependencies - namely, domino-jnx-api and Vert.x - are almost guaranteed to remain consistent over time. Others, like specific utility libraries, are liable to change or be removed even between minor versions of DRAPI. The safest route is to use few third-party dependencies in your Java projects, and otherwise check each DRAPI version for changes.
 
-## Let's connect
+<!--## Let's connect
 
---8<-- "feedback.md"
+"feedback.md"-->

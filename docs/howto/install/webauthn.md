@@ -47,8 +47,8 @@ The procedure guides you to log in to both Domino REST API and Domino 14 using t
 
 4. Save the file in `.json` format inside the `keepconfig.d` directory.
 
-    !!!tip
-        Use a filename for the JSON file that reveals its purpose. To learn more on how JSON files in `keepconfig.d` are processed, see [Understanding configuration](../production/configparam.md#understanding-configuration).
+    !!! tip
+        Use a filename for the JSON file that reveals its purpose. To learn more on how JSON files in `keepconfig.d` are processed, see [Configuration management and overlay hierarchy](../../references/configuration/understandingconfig.md).
 
 5. Restart Domino REST API on all servers with this new configuration.
 

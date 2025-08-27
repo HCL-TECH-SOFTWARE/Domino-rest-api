@@ -22,7 +22,7 @@ CORS mapping uses [Java Regular Expressions](https://www.w3schools.com/java/java
 
     Regex can be hard to decipher and understand due to their syntax and flexibility. To test if a Regex does what you want, use an [online interactive tool](https://regex101.com/) for validation. Make sure to pick the Java flavor.
 
-Create a JSON file in `keepconfig.d`, for example `cors.json`, that contains one element per regex with the value `true`. If you need to temporarily disable an entry, you can set it to false. Make sure you understand [Domino REST API configuration](../../references/understandingconfig.md).
+Create a JSON file in `keepconfig.d`, for example `cors.json`, that contains one element per regex with the value `true`. If you need to temporarily disable an entry, you can set it to false. Make sure you understand [Domino REST API configuration](../../references/configuration/understandingconfig.md).
 
 The regex for `https://drapi.mycompany.com:8880` is `https:\\/\\/.drapi\\.mycompany\\.com:8880$`
 
@@ -93,6 +93,8 @@ const drapiFetch = async (url, method, token, body) => {
 
 This is just an example, you need to add error handling. To deal with chunked responses, [check this out](https://www.wissel.net/blog/2023/07/handle-http-chunked-responses.html).
 
+<!--
 ## Let's connect
 
---8<-- "feedback.md"
+"feedback.md"
+-->

@@ -5,18 +5,19 @@ nav:
 #  - What's new: whatsnew
   - System requirements: https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789
   - Installation and configuration: tutorial/installconfig/index.html
-  - understandingconfig.md
+  - Configuration overview: configuration
+#  - understandingconfig.md
   - Functional accounts: functionalUsers.md
 #  - hostingstatic.md
   - OpenAPI: openapidefinitions.md
   - accesscontrol.md
-  - Schema Components: schemacomponents
+  - Schema and scope overview: schemacomponents
   - Using Domino REST API: usingdominorestapi
   - Using Admin UI: usingwebui
   - Security: security
   - User tools: usertools
   - Extensibility: extensibility
-  - parameters.md
+#  - parameters.md
   - sdk.md
   - troubleshooting.md
   - limitation.md

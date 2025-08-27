@@ -8,7 +8,7 @@ The procedure guides you on how to create a new configuration setting to change 
 
 ## Before you begin
 
-Check the [configuration parameters](../../references/parameters.md) to learn the parameters and allowed port numbers to use in the new configuration setting.
+Check the [configuration parameters](../../references/configuration/parameters.md) to learn the parameters and allowed port numbers to use in the new configuration setting.
 
 ## Procedure
 
@@ -30,11 +30,11 @@ Check the [configuration parameters](../../references/parameters.md) to learn th
 
     !!! tip
 
-        Use a filename for the JSON file that reveals its purpose. To learn more on how JSON files in `keepconfig.d` are processed, see [Understanding configuration](../production/configparam.md#understanding-configuration).
+        Use a filename for the JSON file that reveals its purpose. To learn more on how JSON files in `keepconfig.d` are processed, see [Configuration management and overlay hierarchy](../../references/configuration/understandingconfig.md).
 
 4. Restart Domino REST API on all servers.
 
-<!--By default, the [ports](../../topicguides/configuringPorts.md) are set in Domino REST API and there's no supported way to change them other than creating a new configuration setting as specified in the [parameters](../../references/parameters.md).
+<!--By default, the [ports](../../topicguides/configuringPorts.md) are set in Domino REST API and there's no supported way to change them other than creating a new configuration setting as specified in the [parameters](../../references/configuration/parameters.md).
 
 ## Procedure
 
