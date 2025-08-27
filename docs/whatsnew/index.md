@@ -10,12 +10,12 @@ The What's new contains information about the latest features, improvements, fix
 
 ???+ info "Release summary"
 
-    Release date: August XX, 2025
+    Release date: September 3, 2025
 
     !!! danger "If you are upgrading from Domino REST API v1.1.2 or an earlier version, refer to important information regarding [CORS using Regex](v1.1.3.md#cors-is-now-using-regex)."
 
     - **6** Improvements
-    - **1** Resolved issue
+    - **3** Resolved issues
     <!-- **0** New features-->
     <!-- **0** Breaking change-->
     <!-- **X** Preview features-->
