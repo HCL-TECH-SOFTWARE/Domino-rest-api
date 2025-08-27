@@ -11,7 +11,7 @@
 # ${CONTAINER_HOSTNAME}                domino.acme.com
 # ${CONTAINER_VOLUMES}                 domino_keep_notesdata
 # ${CONTAINER_NAME}                    domino-keep-test02
-# ${CONTAINER_IMAGE}                   domino-rest-api:1.1.5-r12 <-- IF YOU ARE USING DOMINO 14, USE domino-rest-api:1.1.5-r14
+# ${CONTAINER_IMAGE}                   domino-rest-api:1.1.5-r12 <-- IF YOU ARE USING DOMINO 14, USE domino-rest-api:1.1.5-r14 - IF YOU ARE USING DOMINO 14.5, USE domino-rest-api:1.1.5-r145
 # ---
 # ${SERVERSETUP_ADMIN_CN}                     Peter Parker
 # ${SERVERSETUP_SERVER_DOMAINNAME}            MarvelPhase4  <- YOUR EXSISTING NOTES DOMAIN

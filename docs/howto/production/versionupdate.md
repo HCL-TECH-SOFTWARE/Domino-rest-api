@@ -25,7 +25,7 @@ Follow the procedure based on the installation option you used when installing t
 ### Docker
 
 1. Remove the existing docker container.
-2. If using the docker image from *My HCLSoftware Portal*, load the docker image using the following command: 
+2. If using the docker image from *My HCLSoftware portal*, load the docker image using the following command: 
 
     ```bash
 	docker load -i [name_of_tar_file].tar
