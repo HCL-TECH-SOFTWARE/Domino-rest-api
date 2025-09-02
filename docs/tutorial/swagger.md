@@ -106,7 +106,7 @@ You need to create a JWT token to get proper authorization to try out the endpoi
     }
     ```
 
-    ![SwaggerAPI](../assets/images/ApiSwagger.png)
+    ![SwaggerAPI](../assets/images/ApiSwagger.png){: style="height:80%;width:80%"}
 
 4. Observe what happens when you supply less fields.
 
@@ -117,35 +117,37 @@ You need to create a JWT token to get proper authorization to try out the endpoi
 
       Make sure that the scope name you entered is the same as the scope name you created for your schema.
 
-      ![SwaggerAPIViews](../assets/images/ApiSwaggerViews.png)
+      ![SwaggerAPIViews](../assets/images/ApiSwaggerViews.png){: style="height:80%;width:80%"}
 
 3. Check the **Server Response** to see the information on available views or folders.
 
-      ![SwaggerAPIViews](../assets/images/ApiSwaggerViews1.png)
+      ![SwaggerAPIViews](../assets/images/ApiSwaggerViews1.png){: style="height:80%;width:80%"}
 
 ## View specific Domino REST API database
 
 1. Select your specific Domino REST API database from the **Select a definition** drop-down list.
 
-      ![SwaggerAPIDatabase](../assets/images/drapidb1.png)
+      ![SwaggerAPIDatabase](../assets/images/drapidb1.png){: style="height:80%;width:80%"}
+
+      For example purposes, the Domino REST API database `demo` is going to be selected from the list.
 
 2. Review the endpoints.
 
-      1. Expand **data**, **authentication**, or **code**.
+      1. Expand the endpoint categories, such as **data**, **authentication**.
 
-         ![SwaggerAPIDatabase](../assets/images/drapidb3.png)
+         ![SwaggerAPIDatabase](../assets/images/drapidb3.png){: style="height:80%;width:80%"}
 
       2. Review the endpoints.
 
-         The admin and design APIs aren't included since they're not appropriate for accessing the demo database's data. The `dataSource` parameter is always "demo" because the OpenAPI specification is for that Domino REST API database.
+         The admin and design APIs aren't included since they're not appropriate for accessing the database's data. The value of the `dataSource` parameter always corresponds to the name of the selected Domino REST API database. Based on the example image, the value of the `dataSource` parameter is "demo" because the OpenAPI specification is for that Domino REST API database.
 
-         ![SwaggerAPIDatabase](../assets/images/ApiSwaggerDatabase.png)
+         ![SwaggerAPIDatabase](../assets/images/ApiSwaggerDatabase.png){: style="height:80%;width:80%"}
 
 3. Review the schemas at the bottom. If you haven't specified read/write fields on a form, you'll see the genericFormResponse/genericFormRequest. If you have specified read or write fields, you'll see a schema for `formName-modeName Responses`/`formName-modeName Requests`.
 
-      In the following example image, the read or write fields have been specified so you can see the schema for `formName-modeName Responses`/`formName-modeName Requests`. Wherein, the `formName` is *Customer* and the `modeName` is *default* and *dql*.
+      In the following example image, the read or write fields have been specified so you can see the schema for `formName-modeName Responses`/`formName-modeName Requests`. Wherein, the `formName` is *Customer* and the `modeName` is *default* and *odata*.
 
-      ![SwaggerAPIDatabase](../assets/images/drapidb2.png)
+      ![SwaggerAPIDatabase](../assets/images/drapidb2.png){: style="height:80%;width:80%"}
 
 
 You can share the specific Domino REST API database to other developers who also consume the Domino REST API for that database by copying the URL and then sending it to those developers.
