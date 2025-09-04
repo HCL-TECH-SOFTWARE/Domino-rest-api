@@ -77,7 +77,7 @@ Covers the core configuration concepts and parameters that enable effective mana
 
 - [Postman](usertools/postman.md)
 
-- [Swagger UI](usertools/swagger.md)
+<!-- [Swagger UI](usertools/swagger.md)-->
 
 ## Domino REST API SDKs
 

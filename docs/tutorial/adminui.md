@@ -13,9 +13,9 @@ You can download and use the example Domino database `Demo.nsf` to complete this
 
 ## Video tutorial
 
-You can watch the video for a visual walkthrough of using the Admin UI. The steps in the video closely follow the instructions in this topic and are intended to serve as a visual reference to enhance your understanding. The video shows you the instructions for logging in to the Admin UI, creating schemas and scopes, managing database forms, views, and agents, and configuring activated forms.
+You can watch the video for a visual walkthrough of using the Admin UI. The steps in the video closely follow the instructions in this topic and intend to serve as a visual reference to enhance your understanding. The video shows you the instructions for logging in to the Admin UI, creating schemas and scopes, managing database forms, views, and agents, and configuring activated forms.
 
-<div class="iframe-container"><iframe width="600" height="400" src="../assets/video/drapivideo1.mp4" allowfullscreen="true" title="Using Admin UI"></iframe></div>
+<div class="iframe-container"><iframe width="600" height="400" src="../assets/video/drapivideo1.mp4" title="Using Admin UI"></iframe></div>
 
 ## Log in to Admin UI
 
@@ -172,7 +172,7 @@ When finished with your configurations, you can log out from the **Admin UI**.
 - Everything you can perform via the Admin UI can also be done using Postman, curl, or Swagger UI. For more information, see the following tutorials:
 
     - [Using Postman and curl](./postmancurl.md)
-    - [OpenAPI UI](./swagger.md)
+    - [Swagger UI](./swagger.md)
 
 - Screenshots in the UI may vary depending on the version of Domino REST API you are using.
 

@@ -20,7 +20,7 @@ The procedure guides you on how to setup and use the Microsoft Office Round Trip
 1. Add a Microsoft Office file as an attachment to a Domino document.
 
     !!!tip
-        You can use the `POST /attachments/{unid}` endpoint in the [OpenAPI UI](../../tutorial/swagger.md) to add the file as attachment.
+        You can use the `POST /attachments/{unid}` endpoint in the [Swagger UI](../../tutorial/swagger.md) to add the file as attachment.
 
 2. Create a link to access the attached file. You can do this by either:
 
