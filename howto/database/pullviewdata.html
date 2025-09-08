@@ -24,7 +24,7 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
     
     
       
@@ -1725,7 +1725,7 @@
   
   
   <span class="md-ellipsis">
-    OpenAPI UI (a.k.a. Swagger)
+    Using Swagger UI
     
   </span>
   
@@ -5836,10 +5836,6 @@
       
         
       
-        
-      
-        
-      
     
     
     
@@ -5919,52 +5915,6 @@
   
   <span class="md-ellipsis">
     Postman
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../references/usertools/swagger.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Swagger UI
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../references/usertools/bruno.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Bruno
     
   </span>
   
@@ -6638,19 +6588,19 @@
 
 <h1 id="adjust-number-of-retrieved-entries-when-pulling-in-view-data">Adjust number of retrieved entries when pulling in view data</h1>
 <h2 id="about-this-task">About this task</h2>
-<p>The procedure guides you in adjusting the number of view entries or documents you can retrieve from a view with more than 1000 entries. Currently, a maximum of 1000 entries are returned when retrieving view data. </p>
+<p>The procedure guides you in adjusting the number of view entries or documents you can retrieve from a view with more than 1000 entries. Currently, a maximum of 1000 entries are returned when retrieving view data.</p>
 <h2 id="procedure">Procedure</h2>
 <h3 id="using-count-parameter">Using <code>count</code> parameter</h3>
-<p>To adjust the number of entries or documents you can retrieve from a view, use the <code>count</code> parameter. A default of 1000 entries is returned if the <code>count</code> parameter is not specified. Add the <code>count</code> parameter to your API request and specify a value to set how many entries are to be returned. </p>
+<p>To adjust the number of entries or documents you can retrieve from a view, use the <code>count</code> parameter. A default of 1000 entries is returned if the <code>count</code> parameter is not specified. Add the <code>count</code> parameter to your API request and specify a value to set how many entries are to be returned.</p>
 <p>For example, to retrieve all the entries from a view that has 1350 entries, set the value of the <code>count</code> parameter to 1350 or more to retrieve all view entries.</p>
 <p><code>(hostName)/api/v1/lists/(viewName)?dataSource=(scope)&amp;count=1350</code></p>
-<p><strong>Using the OpenAPI UI</strong></p>
+<p><strong>Using the Swagger UI</strong></p>
 <ol>
 <li>
 <p>Go to <a href="http://localhost:8880/openapi/index.html">Swagger UI</a>.</p>
 </li>
 <li>
-<p>Follow the authorization steps in <a href="../../tutorial/swagger.html#create-a-document-with-swagger-ui">Create a document with Swagger UI</a>.</p>
+<p>Follow the authorization steps in <a href="../../tutorial/swagger.html#authorize-with-jwt-token">Create a JWT token for authorization</a>.</p>
 </li>
 <li>
 <p>Go to and expand <strong>data</strong>, and then expand the <strong>GET /lists/{name}</strong> endpoint.</p>
@@ -6660,17 +6610,17 @@
 <li>Enter the name of the view in <strong>name</strong>, and then click <strong>Execute</strong>.</li>
 </ol>
 <h3 id="using-start-parameter">Using <code>start</code> parameter</h3>
-<p>You can also use the <code>start</code> parameter. Add the <code>start</code> parameter to your API request and specify at which entry should return values start. </p>
+<p>You can also use the <code>start</code> parameter. Add the <code>start</code> parameter to your API request and specify at which entry should return values start.</p>
 <p>For example, to retrieve all the entries from a view with 1350 entries, execute an API request to return 1000 entries. Execute another API request, but set the value of <code>start</code> parameter to 1000 as shown below.</p>
 <p><code>(hostName)/api/v1/lists/(viewName)?dataSource=(scope)&amp;start=1000</code></p>
 <p>This returns the remaining 350 entries not included in the returned entries in the first API request. </p>
-<p><strong>Using the OpenAPI UI</strong></p>
+<p><strong>Using the Swagger UI</strong></p>
 <ol>
 <li>
 <p>Go to <a href="http://localhost:8880/openapi/index.html">Swagger UI</a>.</p>
 </li>
 <li>
-<p>Follow the authorization steps in <a href="../../tutorial/swagger.html#create-a-document-with-swagger-ui">Create a document with Swagger UI</a>.</p>
+<p>Follow the authorization steps in <a href="../../tutorial/swagger.html#authorize-with-jwt-token">Create a JWT token for authorization</a>.</p>
 </li>
 <li>
 <p>Go to and expand <strong>data</strong>, and then expand the <strong>GET /lists/{name}</strong> endpoint.</p>
@@ -6700,7 +6650,7 @@ You have now retrieved 1000 entries of the view.</li>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 3, 2025 11:16:15 UTC">June 3, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 4, 2025 15:27:00 UTC">September 4, 2025</span>
   </span>
 
     
