@@ -31,7 +31,7 @@ Tutorials
 
 - [Manage database views](../../tutorial/adminui.md#manage-database-views)
 - [Verify the views for the demo database](../../tutorial/postmancurl.md#verify-the-views-for-the-demo-database)
-- [List views with Swagger UI](../../tutorial/swagger.md#list-views-with-swagger-ui)
+- [List views with Swagger UI](../../tutorial/swagger.md#list-views)
 
 How-to guide
 

@@ -44,9 +44,9 @@ You will, on successful login, receive a JSON response we can verify on [jwt.io]
 
 ![Successful local login](img/localLogin.png){: style="height:80%;width:80%"}
 
-### 2. Login using the OpenAPI UI
+### 2. Login using the Swagger UI
 
-The second tile on the landing page provides access to the openAPI UI (a.k.a Swagger).
+The second tile on the landing page provides access to the Swagger UI.
 
 ![Access to Swagger](img/swagger1.png){: style="height:80%;width:80%"}
 

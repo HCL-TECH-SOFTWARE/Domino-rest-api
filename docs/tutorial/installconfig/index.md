@@ -16,7 +16,7 @@ After completing the installation and the post-installation tasks:
 
 - Complete the [walkthrough tutorial](../walkthrough/index.md).
 
-- Learn about the [OpenAPI UI](../swagger.md).
+- Learn about the [Swagger UI](../swagger.md).
 
 - Check [Configuration overview](../../references/configuration/understandingconfig.md) once you are ready to tweak the default configuration so that you understand how to do it.
 

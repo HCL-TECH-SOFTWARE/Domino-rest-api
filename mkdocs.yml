@@ -50,7 +50,7 @@ copyright: >-
   <a href="#__consent">Change cookie settings</a>
 
 extra:
-  productversion: 1.1.3
+  productversion: 1.1.5
   flexnet_url: "https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/entitledDownloadFile.action?downloadPkgId=HCL%20Domino%20REST%20API%20Early%20Access%20Release"
   social:
     - icon: fontawesome/brands/github

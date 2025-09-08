@@ -2,23 +2,23 @@
 
 ## About this task
 
-The procedure guides you in adjusting the number of view entries or documents you can retrieve from a view with more than 1000 entries. Currently, a maximum of 1000 entries are returned when retrieving view data. 
+The procedure guides you in adjusting the number of view entries or documents you can retrieve from a view with more than 1000 entries. Currently, a maximum of 1000 entries are returned when retrieving view data.
 
 ## Procedure
 
 ### Using `count` parameter
 
-To adjust the number of entries or documents you can retrieve from a view, use the `count` parameter. A default of 1000 entries is returned if the `count` parameter is not specified. Add the `count` parameter to your API request and specify a value to set how many entries are to be returned. 
+To adjust the number of entries or documents you can retrieve from a view, use the `count` parameter. A default of 1000 entries is returned if the `count` parameter is not specified. Add the `count` parameter to your API request and specify a value to set how many entries are to be returned.
 
 For example, to retrieve all the entries from a view that has 1350 entries, set the value of the `count` parameter to 1350 or more to retrieve all view entries.
 
 `(hostName)/api/v1/lists/(viewName)?dataSource=(scope)&count=1350`
 
-**Using the OpenAPI UI**
+**Using the Swagger UI**
 
 1. Go to [Swagger UI](http://localhost:8880/openapi/index.html).
 
-2. Follow the authorization steps in [Create a document with Swagger UI](../../tutorial/swagger.md#create-a-document-with-swagger-ui).
+2. Follow the authorization steps in [Create a JWT token for authorization](../../tutorial/swagger.md#authorize-with-jwt-token).
 
 3. Go to and expand **data**, and then expand the **GET /lists/{name}** endpoint.
 4. Enter the scope name in **dataSource**.
@@ -27,7 +27,7 @@ For example, to retrieve all the entries from a view that has 1350 entries, set 
 
 ### Using `start` parameter
 
-You can also use the `start` parameter. Add the `start` parameter to your API request and specify at which entry should return values start. 
+You can also use the `start` parameter. Add the `start` parameter to your API request and specify at which entry should return values start.
 
 For example, to retrieve all the entries from a view with 1350 entries, execute an API request to return 1000 entries. Execute another API request, but set the value of `start` parameter to 1000 as shown below.
 
@@ -35,11 +35,11 @@ For example, to retrieve all the entries from a view with 1350 entries, execute 
 
 This returns the remaining 350 entries not included in the returned entries in the first API request. 
 
-**Using the OpenAPI UI**
+**Using the Swagger UI**
 
 1. Go to [Swagger UI](http://localhost:8880/openapi/index.html).
 
-2. Follow the authorization steps in [Create a document with Swagger UI](../../tutorial/swagger.md#create-a-document-with-swagger-ui).
+2. Follow the authorization steps in [Create a JWT token for authorization](../../tutorial/swagger.md#authorize-with-jwt-token).
 
 3. Go to and expand **data**, and then expand the **GET /lists/{name}** endpoint.
 4. Enter the scope name in **dataSource**, view name in **name**, and then click **Execute**.
