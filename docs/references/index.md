@@ -111,7 +111,7 @@ For information that administrator users need to know, see [Admin cheat sheet](a
 -->
 ## Extensions
 
-- [Extensions to open Microsoft Office in OFBA](ofba.md)
+<!-- [Extensions to open Microsoft Office in OFBA](ofba.md)-->
 
 - [Rich Text extensions](richtextension.md)
 
