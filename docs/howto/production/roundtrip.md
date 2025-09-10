@@ -132,9 +132,9 @@ The procedure guides you on how to set up and use the Microsoft Office Round Tri
 
 ## Additional information
 
-This section lists file extensions recognized by the Domino REST API for Office Forms Based Authentication.
+This section lists filename extensions recognized by the Domino REST API for Office Forms Based Authentication.
 
-|Application|File name extension|
+|Application|Filename extensions|
 |:---|:---|
 |Microsoft Word|`.doc`, `.docm`, `.docx`, `.dot`, `.dotm`, `.dotx` |
 |Microsoft PowerPoint|`.pot`, `.potm`, `.potx`, `.ppt`, `.pptm`, `.pptx`, `.pps`, `.ppsm`, `.ppsx`, `.sldm`, `.sldx`|
