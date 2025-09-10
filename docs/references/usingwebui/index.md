@@ -12,6 +12,7 @@ The **Admin UI** provides a user interface to several Domino REST APIs. It thus 
 This is what the login page looks like.
 
 ![Domino REST API](../../assets/images/AdminLogin.png){: style="height:70%;width:70%"}
+
 (Image: Castle [Johannisburg](https://en.wikipedia.org/wiki/Schloss_Johannisburg), Aschaffeburg, Germany)
 
 You'll need the administrator username and password to access the server.
