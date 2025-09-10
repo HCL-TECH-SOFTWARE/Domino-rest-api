@@ -3393,27 +3393,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#to-add-an-ms-office-attachment-and-create-a-link" class="md-nav__link">
+  <a href="#add-an-ms-office-attachment-and-create-a-link" class="md-nav__link">
     <span class="md-ellipsis">
-      To add an MS Office attachment and create a link
+      Add an MS Office attachment and create a link
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#to-access-and-edit-the-ms-office-file-attachment" class="md-nav__link">
+  <a href="#access-and-edit-the-ms-office-file-attachment" class="md-nav__link">
     <span class="md-ellipsis">
-      To access and edit the MS Office file attachment
+      Access and edit the MS Office file attachment
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#to-verify-your-updates-to-the-ms-office-file-attachment" class="md-nav__link">
+  <a href="#verify-updates-to-the-file-attachment" class="md-nav__link">
     <span class="md-ellipsis">
-      To verify your updates to the MS Office file attachment
+      Verify updates to the file attachment
     </span>
   </a>
   
@@ -4606,8 +4606,6 @@
       
         
           
-        
-      
         
       
         
@@ -6410,29 +6408,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/ofba.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Extensions used to open the Microsoft Office in OFBA
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../references/richtextension.html" class="md-nav__link">
         
   
@@ -6581,27 +6556,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#to-add-an-ms-office-attachment-and-create-a-link" class="md-nav__link">
+  <a href="#add-an-ms-office-attachment-and-create-a-link" class="md-nav__link">
     <span class="md-ellipsis">
-      To add an MS Office attachment and create a link
+      Add an MS Office attachment and create a link
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#to-access-and-edit-the-ms-office-file-attachment" class="md-nav__link">
+  <a href="#access-and-edit-the-ms-office-file-attachment" class="md-nav__link">
     <span class="md-ellipsis">
-      To access and edit the MS Office file attachment
+      Access and edit the MS Office file attachment
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#to-verify-your-updates-to-the-ms-office-file-attachment" class="md-nav__link">
+  <a href="#verify-updates-to-the-file-attachment" class="md-nav__link">
     <span class="md-ellipsis">
-      To verify your updates to the MS Office file attachment
+      Verify updates to the file attachment
     </span>
   </a>
   
@@ -6641,16 +6616,16 @@
 
 
 <h1 id="set-up-office-round-trip-experience">Set up Office Round Trip Experience</h1>
-<p>Microsoft<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> Office Round Trip Experience is a feature included in Domino REST API that simplifies editing of a supported Microsoft Office file attached to a Domino document. The feature enables you to access, edit, and save the changes to the attached file using the applicable Microsoft Office application without having to download and re-attach the file to the Domino document.</p>
+<p>Microsoft<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> Office Round Trip Experience is a feature in Domino REST API that simplifies editing of a supported Microsoft Office file attached to a Domino document. This feature enables you to access, edit, and save the changes to the attached file using the applicable Microsoft Office application without downloading and re-attaching the file to the Domino document.</p>
 <h2 id="about-this-task">About this task</h2>
-<p>The procedure guides you on how to setup and use the Microsoft Office Round Trip Experience feature included in Domino REST API.</p>
+<p>The procedure guides you on how to set up and use the Microsoft Office Round Trip Experience in Domino REST API.</p>
 <h2 id="before-you-begin">Before you begin</h2>
 <ul>
-<li>Make sure your computer has Microsoft Office installed or can access Office 365.</li>
-<li>You must run your Domino REST API in HTTPs.</li>
+<li>Make sure Microsoft Office is installed on your computer or you can access Office 365.</li>
+<li>Domino REST API must be running over HTTPS.</li>
 </ul>
 <h2 id="procedures">Procedures</h2>
-<h3 id="to-add-an-ms-office-attachment-and-create-a-link">To add an MS Office attachment and create a link</h3>
+<h3 id="add-an-ms-office-attachment-and-create-a-link">Add an MS Office attachment and create a link</h3>
 <ol>
 <li>
 <p>Add a Microsoft Office file as an attachment to a Domino document.</p>
@@ -6660,12 +6635,13 @@
 </div>
 </li>
 <li>
-<p>Create a link to access the attached file. You can do this by either:</p>
+<p>Create a link to access the attached file by either:</p>
 <ul>
 <li>
-<p>Manually creating the link to access the attached file using the following format.</p>
-<div class="highlight"><pre><span></span><code>&lt;scheme name&gt;:&lt;command name&gt;|u|&lt;DRAPI HTTPs hostname&gt;/api/webdav-v1/attachment/&lt;dataSource&gt;/&lt;document UNID&gt;/&lt;filename&gt;
+<p>Manually creating the link using the following format:</p>
+<div class="highlight"><pre><span></span><code>&lt;scheme name&gt;:&lt;command name&gt;|u|&lt;DRAPI HTTPS hostname&gt;/api/webdav-v1/attachment/&lt;dataSource&gt;/&lt;document UNID&gt;/&lt;filename&gt;
 </code></pre></div>
+<p>Where:</p>
 <table>
 <thead>
 <tr>
@@ -6676,14 +6652,14 @@
 <tbody>
 <tr>
 <td style="text-align: left;">scheme name</td>
-<td style="text-align: left;">Scheme name of Microsoft Office application</br></br>When Microsoft Office is installed, each scheme name is registered with the operating system to be handled by the Office product of the same name. Below is a list of scheme names:</br></br>ms-word</br>ms-powerpoint</br>ms-excel</br>ms-visio</br>ms-access</td>
+<td style="text-align: left;">Scheme name of Microsoft Office application</br></br>When Microsoft Office is installed, each scheme name is registered with the operating system to be handled by the Office product of the same name. Below is a list of scheme names:</br></br>ms-word</br>ms-powerpoint</br>ms-excel</br>ms-visio</br>ms-access</br>ms-project</br>ms-publisher</br>ms-infopath</td>
 </tr>
 <tr>
 <td style="text-align: left;">command name</td>
-<td style="text-align: left;">Describes the action that the application should perform.</br></br>ofv - to view the file attachment</br>ofe - to edit the file attachment</br></td>
+<td style="text-align: left;">Describes the action that the application should perform.</br></br><strong>ofv</strong> - to view the file attachment</br><strong>ofe</strong> - to edit the file attachment</br></td>
 </tr>
 <tr>
-<td style="text-align: left;">DRAPI HTTPs hostname</td>
+<td style="text-align: left;">DRAPI HTTPS hostname</td>
 <td style="text-align: left;">Domino REST API HTTPS hostname</td>
 </tr>
 <tr>
@@ -6707,11 +6683,8 @@
 <p>The link format is based on the <a href="https://learn.microsoft.com/en-us/office/client-developer/office-uri-schemes">Office URI Schemes</a>.</p>
 </div>
 </li>
-</ul>
-<p><strong>OR</strong></p>
-<ul>
 <li>
-<p>Using the <code>GET /attachmentnames/{unid}</code> endpoint to retrieve URLs to access the attached files.</p>
+<p>Or using the <code>GET /attachmentnames/{unid}</code> endpoint to retrieve URLs to access the attached files.</p>
 <div class="admonition caution">
 <p class="admonition-title">Important</p>
 <p>Make sure to set the value of the <code>includeProtocolUrl</code> query parameter to <code>true</code> to include the attachment URLs in the query response.</p>
@@ -6738,37 +6711,37 @@
 </ul>
 </li>
 </ol>
-<h3 id="to-access-and-edit-the-ms-office-file-attachment">To access and edit the MS Office file attachment</h3>
-<div class="admonition tip">
-<p class="admonition-title">Round-trip editing on Windows</p>
+<h3 id="access-and-edit-the-ms-office-file-attachment">Access and edit the MS Office file attachment</h3>
+<details class="tip">
+<summary>Recommendation for round-trip editing on Windows</summary>
 <p>For successfully performing round-trip editing on Windows, it's recommended to deactivate the protected view for files originating from the Internet before executing this procedure. To do this:</p>
 <ol>
-<li>Open the Microsoft application that you will use for round-trip editing.</li>
-<li>Click <strong>File</strong> &rarr; <strong>Options</strong>.</li>
-<li>Click <strong>Trust Center</strong> &rarr; <strong>Trust Center Settings</strong> &rarr; <strong>Protected View</strong>.</li>
+<li>Open the Microsoft application for round-trip editing.</li>
+<li>Go to <strong>File</strong> &rarr; <strong>Options</strong>.</li>
+<li>Select <strong>Trust Center</strong> &rarr; <strong>Trust Center Settings</strong> &rarr; <strong>Protected View</strong>.</li>
 <li>Clear the <strong>Enable Protected View for files originating from the Internet</strong> checkbox, and then click <strong>OK</strong>.</li>
 </ol>
-</div>
+</details>
 <ol>
 <li>Open the created link to the MS Office file attachment in a web browser.</li>
 <li>
 <p>In the Open MS Office application dialog, click <strong>Open</strong>.</p>
 <p>The following image shows an example of the <strong>Open Microsoft Word</strong> dialog when trying to open a Microsoft Word attachment.</p>
-<p><img alt="Open MS Office application" src="../../assets/images/SaveMSW.png" style="height:70%;width:70%" /></p>
+<p><img alt="Open MS Office application" src="../../assets/images/SaveMSW.png" style="height:50%;width:50%" /></p>
 </li>
 <li>
 <p>In the login dialog, enter your Domino REST API login credentials and click <strong>Login</strong>.</p>
 <p>The authentication is based on the <a href="https://learn.microsoft.com/en-us/openspecs/sharepoint_protocols/ms-ofba/30c7bbe9-b284-421f-b866-4e7ed4866027">Office Forms Based Authentication (OFBA)</a> protocol. This is necessary since browsers and office applications don't currently support cookie and header sharing.</p>
-<p><img alt="Login dialog" src="../../assets/images/ofbalogin.png" /></p>
+<p><img alt="Login dialog" src="../../assets/images/ofbalogin.png" style="height:50%;width:50%" /></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You might see a different login dialog with less functionality for OFBA when doing this on <strong>Windows</strong>. It's because some Microsoft applications in <strong>Windows</strong> still use <strong>Internet Explorer</strong>, and many of the functionalities we use in the original login dialog are unsupported.</p>
 </div>
 <p>The MS Office file attachment is now opened in the applicable MS Office application. In the following image, you see an opened MS Word document as an example.</p>
-<p><img alt="Example of opened Microsoft Word attachment" src="../../assets/images/rtmodify.png" /></p>
+<p><img alt="Example of opened Microsoft Word attachment" src="../../assets/images/rtmodify.png" style="height:80%;width:80%" /></p>
 </li>
 <li>
-<p>Edit the attachment.</p>
+<p>Edit the attachment as required.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Editing is only possible if the specified command name in the created link is <code>ofe</code>.</p>
@@ -6776,26 +6749,68 @@
 <p>As an example, the content of the opened MS Word document is changed from <em>Nothing to see here</em> to <em>Hello Sprint playback 114!!</em>.</p>
 </li>
 <li>
-<p>Save your changes, and close the MS Office application. You have now edited the attachment without downloading it and reattaching it again to the Domino document.</p>
+<p>Save your changes, and close the application. You have now edited the attachment without downloading and reattaching it to the Domino document.</p>
 </li>
 </ol>
-<h3 id="to-verify-your-updates-to-the-ms-office-file-attachment">To verify your updates to the MS Office file attachment</h3>
+<h3 id="verify-updates-to-the-file-attachment">Verify updates to the file attachment</h3>
 <ol>
-<li>Open the created link to the MS Office file attachment that you have edited in a web browser.</li>
+<li>Open the created link to the edited MS Office file attachment in a web browser.</li>
 <li>In the Open MS Office application dialog, click Open.</li>
 <li>
-<p>In the login dialog, enter your Domino REST API login credentials and click <strong>Login</strong>. The MS Office file attachment is now opened in applicable MS Office application and you can verify the updates that you have made.</p>
+<p>In the login dialog, enter your Domino REST API login credentials and click <strong>Login</strong>. The attachment opens in the applicable MS Office application, enabling you to verify the updates.</p>
 <p>As an example, the following image shows that the content of the edited Microsoft Word attachment has been updated.  </p>
-<p><img alt="Example of edited content" src="../../assets/images/rtsave.png" /></p>
+<p><img alt="Example of edited content" src="../../assets/images/rtsave.png" style="height:80%;width:80%" /></p>
 </li>
 </ol>
 <h2 id="additional-information">Additional information</h2>
-<p>For more information on MS Office file extensions recognized by <strong>Office Forms Based Authentication</strong>, see <a href="../../references/ofba.html">Extensions used to open Microsoft Office in OFBA</a>.</p>
+<p>This section lists filename extensions recognized by the Domino REST API for Office Forms Based Authentication.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Application</th>
+<th style="text-align: left;">Filename extensions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Microsoft Word</td>
+<td style="text-align: left;"><code>.doc</code>, <code>.docm</code>, <code>.docx</code>, <code>.dot</code>, <code>.dotm</code>, <code>.dotx</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Microsoft PowerPoint</td>
+<td style="text-align: left;"><code>.pot</code>, <code>.potm</code>, <code>.potx</code>, <code>.ppt</code>, <code>.pptm</code>, <code>.pptx</code>, <code>.pps</code>, <code>.ppsm</code>, <code>.ppsx</code>, <code>.sldm</code>, <code>.sldx</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Microsoft Excel</td>
+<td style="text-align: left;"><code>.xla</code>, <code>.xla</code>, <code>.xlm</code>, <code>.xls</code>, <code>.xlsb</code>, <code>.xlsm</code>, <code>.xlsx</code>, <code>.xlt</code>, <code>.xltm</code>, <code>.xltx</code>, <code>.xlw</code>, <code>.csv</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Microsoft Visio</td>
+<td style="text-align: left;"><code>.vdx</code>, <code>.vsd</code>, <code>.vsdx</code>, <code>.vss</code>, <code>.vst</code>, <code>.vsw</code>, <code>.vsx</code>, <code>.vtx</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Microsoft Access</td>
+<td style="text-align: left;"><code>.accda</code>, <code>.accdb</code>, <code>.accdc</code>, <code>.accde</code>, <code>.accdp</code>, <code>.accdr</code>, <code>.accdt</code>, <code>.accdu</code>, <code>.mdb</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Microsoft Project</td>
+<td style="text-align: left;"><code>.mpd</code>, <code>.mpp</code>, <code>.mpt</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Microsoft Publisher</td>
+<td style="text-align: left;"><code>.pub</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Microsoft InfoPath</td>
+<td style="text-align: left;"><code>.xsn</code>, <code>.xsf</code></td>
+</tr>
+</tbody>
+</table>
 <div class="footnote">
 <hr />
 <ol>
 <li id="fn:1">
-<p>Microsoft, Windows, and Office 365 are registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>Microsoft, Windows, Microsoft Office, Office 365, Microsoft Word, Microsoft PowerPoint, Microsoft Excel, Microsoft Visio, Microsoft Access, Microsoft Project, Microsoft Publisher, and Microsoft InfoPath are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
@@ -6819,7 +6834,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 4, 2025 15:27:00 UTC">September 4, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 10, 2025 09:28:55 UTC">September 10, 2025</span>
   </span>
 
     
