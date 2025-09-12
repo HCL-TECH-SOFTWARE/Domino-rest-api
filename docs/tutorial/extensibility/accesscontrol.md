@@ -1,16 +1,16 @@
-# Access Control
+# Access control
 
-DRAPI follows Domino's access control, there's no sidestepping. You can however tighten the screws to be very specific on individual access requirements.
+Domino REST API follows Domino's access control with no exceptions. However, you can further tighten the security to be very specific on individual access requirements.
 
-## Access Annotations
+## Access annotations
 
 You can decorate each request class with a series of [Java annotations](https://en.wikipedia.org/wiki/Java_annotation) to both document and early enforce access requirements:
 
-- `@MinimumAcl(AclLevel)` - specify the required ACL access. While e.g. Editor access suffices for updating a document, you can specify that this function requires Designer access
-- `@AclAttributes(AclAccessFlags)` - require specific flags like `CreateDocuments` or `CreateSharedFoldersViews`, all the checkboxes in the ACL
-- `@AclRoles(String[])` - User must have one of the roles to perform the operation
-- `@ServerAclSecurity(ServerAclType)` - required Server ACL entries like `SERVER_ADMIN`, `FULL_ADMIN`, `DATABASE_ADMIN` and more
-- `@ServerEclSecurity(ServerEclType)` - required execution permissions like `RUN_UNRESTRICTED_CODE`, `RUN_RESTRICTED_CODE` and `RUN_FORMULA`
+- `@MinimumAcl(AclLevel)` - Specifies the required ACL access. While *Editor* access suffices for updating a document, you can specify that this function requires *Designer* access.
+- `@AclAttributes(AclAccessFlags)` - Requires specific flags like `CreateDocuments` or `CreateSharedFoldersViews`, all the checkboxes in the ACL.
+- `@AclRoles(String[])` - User must have one of the roles to perform the operation.
+- `@ServerAclSecurity(ServerAclType)` - Requires Server ACL entries like `SERVER_ADMIN`, `FULL_ADMIN`, `DATABASE_ADMIN`, and more.
+- `@ServerEclSecurity(ServerEclType)` - Requires execution permissions like `RUN_UNRESTRICTED_CODE`, `RUN_RESTRICTED_CODE` and `RUN_FORMULA`.
 
 So your class could look like this:
 
@@ -28,7 +28,7 @@ public class SubmitDecision extends AsyncDominoJNXJson {
 
 ## Helper methods
 
-There are a number of helper methods available to perform common checks. Most of them can be found in the `KeepJnxSession`, or as static methods in `DocumentFunctions` check the JavaDoc for details:
+There are a number of helper methods available to perform common checks. Most of them can be found in the `KeepJnxSession`, or as static methods in `DocumentFunctions`. Check the JavaDoc for details:
 
 - `Optional<Document> session.getDocumentByUNID(request.db, unid, DocumentScope.VALID_DOCUMENTS_ONLY)`
 - `Document validateDocumentAccessRequest(final Database db, final String unid, final DocumentAccess docAccess, final Optional<KeepRequestId> requestId)`
@@ -49,10 +49,9 @@ final Document note = optionalNote.orElseThrow(() -> new KeepExceptionNotFound(K
 final Document note = optionalNote.orElse(() -> db.createDocument());
 ```
 
-## Priviledged operations
+## Privileged operations
 
-A typical requirement in web applications is the need for operation specific elevated priviledges. E.g. you want the default access for "ApprovalLog.nsf" to be Reader,
-so nobody can manually create or alter documents, but the code in `SubmitDecision` needs to be able to create. For this scenario, the `KeepJnxSession` allows to execute
+A typical requirement in web applications is the need for operation specific elevated privileges. An example is if you want the default access for "ApprovalLog.nsf" to be Reader so nobody can manually create or alter documents, but the code in `SubmitDecision` needs to be able to create. For this scenario, the `KeepJnxSession` allows to execute
 operations as the server, using server privileges.
 
 The modified code from [Business Logic](./businesslogic.md) would look like this:
@@ -75,14 +74,13 @@ The modified code from [Business Logic](./businesslogic.md) would look like this
     }
 ```
 
-!!! failure "With great powers..."
+!!! failure "Important"
 
-    ...come great responsibilites. While this allows to have tight access control,
-    it can backfire when not implemented carefully
+    While this allows to have tight access control, it can backfire when not implemented carefully.
 
-!!! info "Next"
+## Next
 
-    [Deployment](deployment.md)
+Proceed to [deployment](deployment.md).
 
 <!--## Let's connect
 

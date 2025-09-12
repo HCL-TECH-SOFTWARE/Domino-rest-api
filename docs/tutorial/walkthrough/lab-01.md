@@ -19,12 +19,12 @@ Four ways to login to the REST API
 
 The database `KeepConfig.nsf` uses the group `LocalKeepAdmins` for access control. So create that group in your Domino directory and assign your user to it.
 
-!!! danger "Use your own credentials"
+!!! note "Use your own credentials"
 
     The steps below use "KEEP Admin" and "passw0rd" as credentials.
     Replace those with the admin user on your Domino server.
 
-### 1. Login using the command line
+### Login using the command line
 
 ```bash
 curl --location --request POST "http://localhost:8880/api/v1/auth" \
@@ -34,17 +34,17 @@ curl --location --request POST "http://localhost:8880/api/v1/auth" \
 
 !!! note "All on one line"
 
-    The command above is one line. To make it more readable it is broken
+    The command above is one line. To make it more readable, it is broken
     into multiple lines using the "continuation character". On macOS/Linux
-    that is `\`, on Windows `^`.
+    that is `\`. On Windows, that is `^`.
 
 Alternative type `keep login`
 
-You will, on successful login, receive a JSON response we can verify on [jwt.io](https://jwt.io/).
+You will, on successful login, receive a JSON response that you can verify on [jwt.io](https://jwt.io/).
 
 ![Successful local login](img/localLogin.png){: style="height:80%;width:80%"}
 
-### 2. Login using the Swagger UI
+### Login using Swagger UI
 
 The second tile on the landing page provides access to the Swagger UI.
 
@@ -60,15 +60,15 @@ Check you have the correct port, protocol and host. For a local installation, th
 
 ![Access to Swagger](img/swagger2.png){: style="height:80%;width:80%"}
 
-Scroll down to `authentication`, expand `authLogin`, and click try it out. Fill in username and password.
+Scroll down to `authentication` and expand `authLogin`. Fill in the username and password, and click **Execute**.
 
 ![Access to Swagger](img/swagger3.png){: style="height:80%;width:80%"}
 
-The resulting bearer needs to be copied into form behind the button. [Access to Swagger](img/swagger4.png).
+Cppy the resulting bearer into the following form, which opens after clicking ![Access to Swagger](img/swagger4.png){: style="height:15%;width:15%"} button.
 
 ![Access to Swagger](img/swagger5.png){: style="height:80%;width:80%"}
 
-### 3. Login Admin UI
+### Login to Admin UI
 
 ![Admin Login](img/AdminLogin.png){: style="height:80%;width:80%"}
 
@@ -76,25 +76,25 @@ A successful login shows the Admin UI.
 
 ![Admin UI](img/AdminUI.png){: style="height:80%;width:80%"}
 
-### 4. Login using Postman
+### Login using Postman
 
-- Download Import the Postman [collection](../downloads/dachnug2023.postman_collection.json) and [environment](../downloads/dachnug2023.postman_environment.json)
+- Download the Postman [collection](../downloads/dachnug2023.postman_collection.json) and [environment](../downloads/dachnug2023.postman_environment.json).
 
 - Open the Lab1 folder, execute the first entry labeled "Login"
 
 The successful login shows the bearer token and 4 passed tests
 
-![Postman login](img/PostmanLogin.png)
+![Postman login](img/PostmanLogin.png){: style="height:60%;width:60%"}
 
 ## How to check
 
-- All methods return the bearer token. Copy the token and paste it in the [JWT Token checker](https://jwt.io/)
+- All methods return the bearer token. Copy the token and paste it in the [JWT Token checker](https://jwt.io/).
 
-- Each token has a different start/end time
+- Each token has a different start/end time.
 
 ## Things to explore
 
-- [Official Domino REST API documentation](https://opensource.hcltechsw.com/Domino-rest-api/index.html)
+- [Domino REST API documentation](https://opensource.hcltechsw.com/Domino-rest-api/index.html)
 
 - [Discord discussion](https://discord.com/invite/jmRHpDRnH4)
 
