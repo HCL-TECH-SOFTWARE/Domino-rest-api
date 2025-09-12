@@ -1,6 +1,6 @@
-# The config.json configuration
+# Create config.json
 
-DRAPI is driven by a [dynamic configuration](../../references/configuration/understandingconfig.md). To get your extension recognized you must provide the information what verticle will run your code and what classes implement your business logic. To do so a file `resources/config/config.json` is required:
+Domino REST API is driven by a [dynamic configuration](../../references/configuration/understandingconfig.md). To get your extension recognized, you must provide the information what verticle will run your code and what classes implement your business logic. To do so, a file `resources/config/config.json` is required:
 
 ```json
 {
@@ -51,13 +51,13 @@ DRAPI is driven by a [dynamic configuration](../../references/configuration/unde
 
 ## Determine the class names for the business logic
 
-![Keep Classes](../../assets/images/RequestClassNames.png)
+![Keep Classes](../../assets/images/RequestClassNames.png){: style="height:80%;width:80%"}
 
-The class name gets derived from the tag and the OperationID specified in the OpenAPI file. The tag gets mapped to a Java package name, while the OperationID forms the class name after the first letter gets captallized
+The class name gets derived from the tag and the OperationID specified in the OpenAPI file. The tag gets mapped to a Java package name, while the OperationID forms the class name after the first letter gets capitalized.
 
-!!! info "Next"
+## Next
 
-    [Implementing business logic](businesslogic.md)
+Proceed to [implement business logic](businesslogic.md).
 
 <!--## Let's connect
 

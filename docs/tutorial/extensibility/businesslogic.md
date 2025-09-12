@@ -1,6 +1,6 @@
-# Implementing business logic
+# Implement business logic
 
-To implement functionality two Java classes get involved. A handler class that takes in the http request and forwards it on the Eventbus and a dbrequest class that performs the database interaction.
+To implement the functionality, two Java classes are involved. One is a handler class that takes in the http request and forwards it on the Eventbus. The other is a dbrequest class that performs the database interaction.
 
 For the most common use case of JSON in/out, the default handler performs all the necessary actions, no custom code is required.
 
@@ -10,20 +10,20 @@ For the most common use case of JSON in/out, the default handler performs all th
 
 The handler is part of the initial REST processing which includes:
 
-- Checking the validity of the JWT Token
-- Ckecking the conformance to the API specification (all mandatory fields present, reject extra fields when specified so in the API)
-- Gather all parameters and body for the EventBus
-- Prepare response type chunked for Array or blob returns
+- checking the validity of the JWT Token
+- checking the conformance to the API specification (all mandatory fields present, reject extra fields when specified so in the API)
+- gather all parameters and body for the EventBus
+- prepare response type chunked for Array or blob returns
 
-All of that is take care of.
+All that are taken care of.
 
 ## DBRequests
 
-We have two OperationIDs to take care of: `getApprovals` and `submitDecision`. The will both act on the database specified in the `dataSource` query parameter and accept / return JSON data. There is some overlap in utility methods needed, we shall entertain a utility class for that. Both will extend the abstract class `AsyncDominoJNXJson` which only needs the method `process` to be implemented.
+There are two OperationIDs to take care of: `getApprovals` and `submitDecision`. They both act on the database specified in the `dataSource` query parameter and accept / return JSON data. There is some overlap in utility methods needed, we shall entertain a utility class for that. Both extend the abstract class `AsyncDominoJNXJson`, which only needs the method `process` to be implemented.
 
 ## Primer on DbRequestParameters<?>
 
-The class provides convenient access to everthing needed to implement a custom functionality:
+The class provides convenient access to everything needed to implement a custom functionality:
 
 | Property / Method        | Type           | Purpose                                            |
 | ------------------------ | -------------- | -------------------------------------------------- |
@@ -36,13 +36,13 @@ The class provides convenient access to everthing needed to implement a custom f
 
 There are a few more, check the JavaDoc for details.
 
-In a nutshell: the `process` method needs to call `emit()` at least once or throw an error. When the return type ia an array, it can call `emit()` multiple times.
+In a nutshell, the `process` method needs to call `emit()` at least once or throw an error. When the return type is an array, it can call `emit()` multiple times.
 
 ### Errors to throw
 
-While you can throw any [Exception](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html) to terminate a failed operation, DRAPI has a set of Exception classses that determine how the exception maps to a http status code.
+While you can throw any [Exception](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html) to terminate a failed operation, DRAPI has a set of Exception classes that determine how the exception maps to a http status code.
 
-![KEEP Exceptions](../../assets/images/KeepErrors.png)
+![KEEP Exceptions](../../assets/images/KeepErrors.png){: style="height:80%;width:80%"}
 
 ### GetApprovals
 
@@ -74,11 +74,11 @@ final static String APPROVAL_VIEW_NAME = "PendingApprovalByApprover";
   }
 ```
 
-A helper method `entryToJson` converts the `CollectionEntry` into a JsonObject that gets emitted back to HTTP as part of the resulting array. All the plumbing is taken care of.
+A helper method `entryToJson` converts the `CollectionEntry` into a JsonObject that gets emitted back to HTTP as part of the resulting array.
 
-!!! tip "Style: Optional over null"
+??? tip "Style: Optional over null"
 
-    Nobody likes [null](https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare/)(PointerExceptions). So as a style decision DRAPI doesn't return `null` (unless it's broken), but Java's [Optional](https://www.baeldung.com/java-optional), that makes intend in the code more visible.
+    Nobody likes [null](https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare/)(PointerExceptions). So as a style decision, DRAPI doesn't return `null` (unless it's broken), but Java's [Optional](https://www.baeldung.com/java-optional), that makes intend in the code more visible.
 
     Instead of
 
@@ -132,7 +132,7 @@ A helper method `entryToJson` converts the `CollectionEntry` into a JsonObject t
 
 ### SubmitDecision
 
-The code is similar simple. We check if the document exists, is an a state to be approved by the current user, record the decision in the ApprovalLog central database and update the document.
+The code is similar. You check if the document exists and is in a state to be approved by the current user, record the decision in the ApprovalLog central database, and update the document.
 
 ```java
  @Override
@@ -201,9 +201,9 @@ The code is similar simple. We check if the document exists, is an a state to be
 Compile the Jar and throw it into DRAPI's `libs` folder. Restart DRAPI and it should show up.
 Test using curl or Bruno
 
-!!! info "Next"
+## Next
 
-    [Access Control](accesscontrol.md)
+Proceed to [access control](accesscontrol.md).
 
 <!--## Let's connect
 

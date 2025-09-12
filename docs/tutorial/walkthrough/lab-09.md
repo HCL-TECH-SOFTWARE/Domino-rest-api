@@ -72,6 +72,6 @@ Navigate to the new URLs, you should be prompted with basic auth. Password is `s
 
 ## Things to explore
 
-- [Official Domino REST API documentation](https://opensource.hcltechsw.com/Domino-rest-api/index.html)
+- [Domino REST API documentation](https://opensource.hcltechsw.com/Domino-rest-api/index.html)
 
 - [Discord discussion](https://discord.com/invite/jmRHpDRnH4)
