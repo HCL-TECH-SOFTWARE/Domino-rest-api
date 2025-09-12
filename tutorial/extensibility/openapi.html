@@ -28,7 +28,7 @@
     
     
       
-        <title>OpenAPI 3.0.x specification - HCL Domino REST API Documentation</title>
+        <title>Create OpenAPI 3.0.x specification - HCL Domino REST API Documentation</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#openapi-30x-specification" class="md-skip">
+        <a href="#create-openapi-30x-specification" class="md-skip">
           Skip to content
         </a>
       
@@ -172,7 +172,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              OpenAPI 3.0.x specification
+              Create OpenAPI 3.0.x specification
             
           </span>
         </div>
@@ -1939,7 +1939,7 @@
   
   
   <span class="md-ellipsis">
-    Setting up the Java Maven project
+    Set up the Java Maven project
     
   </span>
   
@@ -1971,7 +1971,7 @@
   
   
   <span class="md-ellipsis">
-    OpenAPI 3.0.x specification
+    Create OpenAPI 3.0.x specification
     
   </span>
   
@@ -1984,7 +1984,7 @@
   
   
   <span class="md-ellipsis">
-    OpenAPI 3.0.x specification
+    Create OpenAPI 3.0.x specification
     
   </span>
   
@@ -2092,6 +2092,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2113,7 +2122,7 @@
   
   
   <span class="md-ellipsis">
-    The config.json configuration
+    Create config.json
     
   </span>
   
@@ -2136,7 +2145,7 @@
   
   
   <span class="md-ellipsis">
-    Implementing business logic
+    Implement business logic
     
   </span>
   
@@ -2159,7 +2168,7 @@
   
   
   <span class="md-ellipsis">
-    Access Control
+    Access control
     
   </span>
   
@@ -6626,6 +6635,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6645,29 +6663,33 @@
   
 
 
-<h1 id="openapi-30x-specification">OpenAPI 3.0.x specification</h1>
-<p>Second step is to create an OpenAPI 3.0.x specification. You can do that using notepad, but you want to use <a href="https://openapi.tools/#gui-editors">available tooling</a>. You could use the original <a href="https://editor.swagger.io/">Swagger Editor</a>, Redhat's <a href="https://www.apicur.io/">Apicurio</a> (Apicurito will suffice in most cases) or (what the creator of this tutorial liked best): <a href="https://apigit.com/">APIGit</a></p>
+<h1 id="create-openapi-30x-specification">Create OpenAPI 3.0.x specification</h1>
+<p>You will create an OpenAPI 3.0.x specification. It can be done using Notepad, but you want to use <a href="https://openapi.tools/#gui-editors">available tooling</a>. You can use <a href="https://editor.swagger.io/">Swagger Editor</a>, Redhat's <a href="https://www.apicur.io/">Apicurio</a> (Apicurito will suffice in most cases), or <a href="https://apigit.com/">APIGit</a>.</p>
 <h2 id="the-idea">The idea</h2>
-<p>The approval extension implements an approval system (simplified) that can work with any compliant database. A database is compliant when it has a view <code>pendingApprovalsByApprover</code> and a set of specified items in the document to be approved.</p>
-<p>We implement a base function, to give you an idea. The example easily can be extended to add notification, communication with external systems etc.
-You even could implement approvals for users who don't have write access to the document.</p>
-<div class="admonition warning">
+<p>The approval extension implements a simplified approval system that works with any compliant database. A database is compliant when it has a view <code>pendingApprovalsByApprover</code> and a set of specified items in the document to be approved.</p>
+<p>A base function is implemented to give you an idea. The example can be easily extended to add notification, communication with external systems, etc. You can even implement approvals for users who don't have write access to the document.</p>
+<div class="admonition note">
 <p class="admonition-title">JSON and file naming</p>
-<p>We support OpenApi's 3.0.x JSON format only.
-YAML or 3.1.x are not supported.</p>
-<p>The name of the file has to start with <code>openapi.</code> and end with <code>.json</code></p>
+<ul>
+<li>The OpenApi's 3.0.x JSON format is the only supported format. YAML or 3.1.x are not supported.</li>
+<li>The name of the file has to start with <code>openapi.</code> and end with <code>.json</code>.</li>
+</ul>
 </div>
 <h2 id="end-points">End Points</h2>
-<p>Our extension shall allow to retrieve a list of pending approvals, approve or reject a request or delegate the decision.</p>
+<p>The extension shall allow you to retrieve a list of pending approvals, to approve or reject a request, or to delegate the decision.</p>
 <h3 id="data-formats">Data formats</h3>
-<p>In a typical development cycle we would start with the URLs and leave the data format unspecified a Json object for an initial iteration. In a later iteration the schema gets specified in detail and locked down.</p>
-<div class="admonition warning">
+<p>In a typical development cycle, you would start with the URLs and leave the data format unspecified a JSON object for an initial iteration. In a later iteration, the schema gets specified in detail and locked down.</p>
+<div class="admonition note">
 <p class="admonition-title">Iterate your design</p>
-<p>To be clear: OpenAPI does NOT require big upfront design, but allows for convenient ever refining iterations.</p>
+<p>OpenAPI does NOT require big upfront design, but allows for convenient ever refining iterations.</p>
 </div>
-<p>For the sake of this tutorial we present the final structure.</p>
+<p>For this tutorial, the final structure is presented.</p>
 <h4 id="pending-approvals">Pending approvals</h4>
-<p>The Schema looks like this, the URL (see below) will return an array of them. Note: It is good practise to compose the object definiions. In this example <code>status</code> is a referenced definition.</p>
+<p>The Schema looks like the following. The URL (see below) will return an array of them.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It's good practice to compose the object definitions. In this example, <code>status</code> is a referenced definition.</p>
+</div>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -6709,9 +6731,9 @@ YAML or 3.1.x are not supported.</p>
 <span class="w">  </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
 <span class="p">}</span>
 </code></pre></div>
-<p><img alt="A pendig approval" src="../../assets/images/PendingApproval.png" /></p>
+<p><img alt="A pendig approval" src="../../assets/images/PendingApproval.png" style="height:80%;width:80%" /></p>
 <h4 id="decision">Decision</h4>
-<p>A decision submission needs: the unid, the new status and in case of a delegation the delegee. We reuse the appoval status. In a production level application you probably would have more fields.</p>
+<p>A decision submission needs the <code>unid</code>, the new <code>status</code>, and in case of a delegation, the <code>delegee</code>. The approval status is reused. In a production level application, you probably would have more fields.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -6730,17 +6752,17 @@ YAML or 3.1.x are not supported.</p>
 <span class="w">  </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
 <span class="p">}</span>
 </code></pre></div>
-<p><img alt="Approval decision" src="../../assets/images/ApprovalDecision.png" /></p>
+<p><img alt="Approval decision" src="../../assets/images/ApprovalDecision.png" style="height:80%;width:80%" /></p>
 <h3 id="urls">URLs</h3>
-<p>For our tutorial project a single URL <code>/appovals</code> with <code>GET</code> for the list and <code>POST</code> for the decision is sufficient.</p>
-<p><img alt="Get Approvals" src="../../assets/images/GetApprovals.png" /></p>
+<p>For this tutorial project, a single URL <code>/appovals</code> with <code>GET</code> for the list and <code>POST</code> for the decision is sufficient.</p>
+<p><img alt="Get Approvals" src="../../assets/images/GetApprovals.png" style="height:80%;width:80%" /></p>
 <p>Important elements are:</p>
 <ul>
-<li>security: jwt</li>
-<li>tag</li>
-<li>OperationId</li>
+<li>Security: jwt</li>
+<li>Tags</li>
+<li>Operation ID</li>
 </ul>
-<p>Tag and OperationId will form the package and class name <a href="configjson.html">later on</a>.</p>
+<p>Tags and OperationId will form the package and class name <a href="configjson.html">later on</a>.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;get&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;summary&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;get the list of approvals for the current user&quot;</span><span class="p">,</span>
@@ -6796,17 +6818,14 @@ YAML or 3.1.x are not supported.</p>
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="security">Security</h2>
-<p>We need to specify what authentication is available. It needs to match the security spec from DRAPI. the only supported value is <code>jwt</code>.</p>
-<p><img alt="JWT Security" src="../../assets/images/JWTSecurity.png" /></p>
+<p>You need to specify what authentication is available. It needs to match the security spec from DRAPI. The only supported value is <code>jwt</code>.</p>
+<p><img alt="JWT Security" src="../../assets/images/JWTSecurity.png" style="height:80%;width:80%" /></p>
 <h2 id="extensions">Extensions</h2>
-<p>There are a number of extensions <a href="../../references/openapidefinitions.html#custom-attributes">defined in DRAPI</a>, one can use to further refine the schema.</p>
-<p>Our result looks like this:</p>
-<p><img alt="Approval Swagger" src="../../assets/images/ApprovalSwagger.png" />.</p>
-<p>You can reference the full file <a href="openapi.eoffice.json">here as <code>openapi.eoffice.json</code></a></p>
-<div class="admonition info">
-<p class="admonition-title">Next</p>
-<p><a href="configjson.html">Creating the config.json</a></p>
-</div>
+<p>There are several extensions <a href="../../references/openapidefinitions.html#custom-attributes">defined in DRAPI</a> that can be used to further refine the schema. The result looks like this:</p>
+<p><img alt="Approval Swagger" src="../../assets/images/ApprovalSwagger.png" style="height:80%;width:80%" />.</p>
+<p>You can reference the full file <a href="openapi.eoffice.json">here as <code>openapi.eoffice.json</code></a>.</p>
+<h2 id="next">Next</h2>
+<p>Proceed to <a href="configjson.html">provide the config.json</a>.</p>
 <!--## Let's connect
 
 "feedback.md"-->
@@ -6830,7 +6849,7 @@ YAML or 3.1.x are not supported.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 18, 2025 11:09:20 UTC">August 18, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 12, 2025 12:17:41 UTC">September 12, 2025</span>
   </span>
 
     

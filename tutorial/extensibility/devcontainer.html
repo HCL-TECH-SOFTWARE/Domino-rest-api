@@ -1939,7 +1939,7 @@
   
   
   <span class="md-ellipsis">
-    Setting up the Java Maven project
+    Set up the Java Maven project
     
   </span>
   
@@ -1962,7 +1962,7 @@
   
   
   <span class="md-ellipsis">
-    OpenAPI 3.0.x specification
+    Create OpenAPI 3.0.x specification
     
   </span>
   
@@ -1985,7 +1985,7 @@
   
   
   <span class="md-ellipsis">
-    The config.json configuration
+    Create config.json
     
   </span>
   
@@ -2008,7 +2008,7 @@
   
   
   <span class="md-ellipsis">
-    Implementing business logic
+    Implement business logic
     
   </span>
   
@@ -2031,7 +2031,7 @@
   
   
   <span class="md-ellipsis">
-    Access Control
+    Access control
     
   </span>
   
@@ -6550,37 +6550,36 @@
 
 
 <h1 id="development-container">Development Container</h1>
-<p><a href="https://containers.dev/">Development Containers</a> is a Micosoft initiated open standard, extending the use case for containers (colloquial Docker) to development environments.
-Curently <a href="https://code.visualstudio.com/">VSCode</a> and <a href="https://www.jetbrains.com/idea/">IntelliJ</a> are supported.</p>
+<p><a href="https://containers.dev/">Development Containers</a> is a Microsoft initiated open standard, extending the use case for containers (colloquial Docker) to development environments. Curently, <a href="https://code.visualstudio.com/">VSCode</a> and <a href="https://www.jetbrains.com/idea/">IntelliJ</a> are supported.</p>
 <div class="admonition info">
 <p class="admonition-title">In a nutshell</p>
-<p>a devcontainer setup allows for a standardized development environment,
-so all tools and runtimes are available to the developer consistently.</p>
+<p>A devcontainer setup allows for a standardized development environment, so all tools and runtimes are available to the developer consistently.</p>
 </div>
-<p>We will walk through the steps required for a consistent DRAPI development experience. This includes a local Domino instance for testing.</p>
+<p>You can walk through the steps required for a consistent DRAPI development experience. This includes a local Domino instance for testing.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <ul>
 <li>
 <p>A container runtime:</p>
-</li>
-<li>
-<p><a href="https://www.docker.com/products/docker-desktop/">Docker desktop</a> (Win, Mac, Linux)</p>
-</li>
+<ul>
+<li><a href="https://www.docker.com/products/docker-desktop/">Docker desktop</a> (Win, Mac, Linux)</li>
 <li><a href="https://rancherdesktop.io/">Rancher desktop</a> (Win, Mac, Linux)</li>
 <li><a href="https://podman-desktop.io/">Podman desktop</a> (Win, Mac, Linux)</li>
 <li><a href="https://microk8s.io/">MicroK8s</a> (Linux)</li>
 <li><a href="https://orbstack.dev/">Orbstack</a> (Mac)</li>
 </ul>
-<p>Depending on your choice you might need to obtain a license, be sure to ckeck!</p>
-<ul>
-<li>a supported Ide</li>
-<li>The HCL <a href="https://opensource.hcltechsw.com/domino-container/">Domino Container</a> repository</li>
-<li>Your HCL credentials to obtain the Domino installer</li>
-<li>some patience and a few hours time</li>
+<p>Depending on your choice, you might need to obtain a license. Be sure to check.</p>
+</li>
+<li>
+<p>a supported IDE</p>
+</li>
+<li>the HCL <a href="https://opensource.hcltechsw.com/domino-container/">Domino Container</a> repository</li>
+<li>your HCL credentials to obtain the Domino installer</li>
 </ul>
+<!-- some patience and a few hours time-->
+
 <h2 id="initial-image">Initial image</h2>
-<p>We start with a Java development image and add Domino and tooling</p>
-<h2 id="devcontainer-and-scripts"><code>.devcontainer</code> and scripts</h2>
+<p>We start with a Java development image and add Domino and tooling.</p>
+<h2 id="devcontainer-and-scripts">.devcontainer and scripts</h2>
 <h2 id="side-cars-anyone">Side cars anyone?</h2>
 <!-- prettier-ignore -->
 <div class="admonition example">
@@ -6610,7 +6609,7 @@ so all tools and runtimes are available to the developer consistently.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 18, 2025 11:09:20 UTC">August 18, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 12, 2025 12:17:41 UTC">September 12, 2025</span>
   </span>
 
     

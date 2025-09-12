@@ -1449,36 +1449,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1-login-using-the-command-line" class="md-nav__link">
+  <a href="#login-using-the-command-line" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Login using the command line
+      Login using the command line
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-login-using-the-swagger-ui" class="md-nav__link">
+  <a href="#login-using-swagger-ui" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Login using the Swagger UI
+      Login using Swagger UI
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-login-admin-ui" class="md-nav__link">
+  <a href="#login-to-admin-ui" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Login Admin UI
+      Login to Admin UI
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-login-using-postman" class="md-nav__link">
+  <a href="#login-using-postman" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Login using Postman
+      Login using Postman
     </span>
   </a>
   
@@ -2088,7 +2088,7 @@
   
   
   <span class="md-ellipsis">
-    Setting up the Java Maven project
+    Set up the Java Maven project
     
   </span>
   
@@ -2111,7 +2111,7 @@
   
   
   <span class="md-ellipsis">
-    OpenAPI 3.0.x specification
+    Create OpenAPI 3.0.x specification
     
   </span>
   
@@ -2134,7 +2134,7 @@
   
   
   <span class="md-ellipsis">
-    The config.json configuration
+    Create config.json
     
   </span>
   
@@ -2157,7 +2157,7 @@
   
   
   <span class="md-ellipsis">
-    Implementing business logic
+    Implement business logic
     
   </span>
   
@@ -2180,7 +2180,7 @@
   
   
   <span class="md-ellipsis">
-    Access Control
+    Access control
     
   </span>
   
@@ -6610,36 +6610,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1-login-using-the-command-line" class="md-nav__link">
+  <a href="#login-using-the-command-line" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Login using the command line
+      Login using the command line
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-login-using-the-swagger-ui" class="md-nav__link">
+  <a href="#login-using-swagger-ui" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Login using the Swagger UI
+      Login using Swagger UI
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-login-admin-ui" class="md-nav__link">
+  <a href="#login-to-admin-ui" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Login Admin UI
+      Login to Admin UI
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-login-using-postman" class="md-nav__link">
+  <a href="#login-using-postman" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Login using Postman
+      Login using Postman
     </span>
   </a>
   
@@ -6704,26 +6704,26 @@
 <h2 id="steps-in-logging-in-to-the-rest-api">Steps in logging in to the REST API</h2>
 <h3 id="set-permissions">Set permissions</h3>
 <p>The database <code>KeepConfig.nsf</code> uses the group <code>LocalKeepAdmins</code> for access control. So create that group in your Domino directory and assign your user to it.</p>
-<div class="admonition danger">
+<div class="admonition note">
 <p class="admonition-title">Use your own credentials</p>
 <p>The steps below use "KEEP Admin" and "passw0rd" as credentials.
 Replace those with the admin user on your Domino server.</p>
 </div>
-<h3 id="1-login-using-the-command-line">1. Login using the command line</h3>
+<h3 id="login-using-the-command-line">Login using the command line</h3>
 <div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--location<span class="w"> </span>--request<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;http://localhost:8880/api/v1/auth&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">   </span>--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">   </span>--data-raw<span class="w"> </span><span class="s1">&#39;{&quot;username&quot; : &quot;KEEP Admin&quot;, &quot;password&quot; : &quot;passw0rd&quot;}&#39;</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">All on one line</p>
-<p>The command above is one line. To make it more readable it is broken
+<p>The command above is one line. To make it more readable, it is broken
 into multiple lines using the "continuation character". On macOS/Linux
-that is <code>\</code>, on Windows <code>^</code>.</p>
+that is <code>\</code>. On Windows, that is <code>^</code>.</p>
 </div>
 <p>Alternative type <code>keep login</code></p>
-<p>You will, on successful login, receive a JSON response we can verify on <a href="https://jwt.io/">jwt.io</a>.</p>
+<p>You will, on successful login, receive a JSON response that you can verify on <a href="https://jwt.io/">jwt.io</a>.</p>
 <p><img alt="Successful local login" src="img/localLogin.png" style="height:80%;width:80%" /></p>
-<h3 id="2-login-using-the-swagger-ui">2. Login using the Swagger UI</h3>
+<h3 id="login-using-swagger-ui">Login using Swagger UI</h3>
 <p>The second tile on the landing page provides access to the Swagger UI.</p>
 <p><img alt="Access to Swagger" src="img/swagger1.png" style="height:80%;width:80%" /></p>
 <p>Check you have the correct port, protocol and host. For a local installation, this is the set-up:</p>
@@ -6750,38 +6750,38 @@ that is <code>\</code>, on Windows <code>^</code>.</p>
 </tbody>
 </table>
 <p><img alt="Access to Swagger" src="img/swagger2.png" style="height:80%;width:80%" /></p>
-<p>Scroll down to <code>authentication</code>, expand <code>authLogin</code>, and click try it out. Fill in username and password.</p>
+<p>Scroll down to <code>authentication</code> and expand <code>authLogin</code>. Fill in the username and password, and click <strong>Execute</strong>.</p>
 <p><img alt="Access to Swagger" src="img/swagger3.png" style="height:80%;width:80%" /></p>
-<p>The resulting bearer needs to be copied into form behind the button. <a href="img/swagger4.png">Access to Swagger</a>.</p>
+<p>Cppy the resulting bearer into the following form, which opens after clicking <img alt="Access to Swagger" src="img/swagger4.png" style="height:15%;width:15%" /> button.</p>
 <p><img alt="Access to Swagger" src="img/swagger5.png" style="height:80%;width:80%" /></p>
-<h3 id="3-login-admin-ui">3. Login Admin UI</h3>
+<h3 id="login-to-admin-ui">Login to Admin UI</h3>
 <p><img alt="Admin Login" src="img/AdminLogin.png" style="height:80%;width:80%" /></p>
 <p>A successful login shows the Admin UI.</p>
 <p><img alt="Admin UI" src="img/AdminUI.png" style="height:80%;width:80%" /></p>
-<h3 id="4-login-using-postman">4. Login using Postman</h3>
+<h3 id="login-using-postman">Login using Postman</h3>
 <ul>
 <li>
-<p>Download Import the Postman <a href="../downloads/dachnug2023.postman_collection.json">collection</a> and <a href="../downloads/dachnug2023.postman_environment.json">environment</a></p>
+<p>Download the Postman <a href="../downloads/dachnug2023.postman_collection.json">collection</a> and <a href="../downloads/dachnug2023.postman_environment.json">environment</a>.</p>
 </li>
 <li>
 <p>Open the Lab1 folder, execute the first entry labeled "Login"</p>
 </li>
 </ul>
 <p>The successful login shows the bearer token and 4 passed tests</p>
-<p><img alt="Postman login" src="img/PostmanLogin.png" /></p>
+<p><img alt="Postman login" src="img/PostmanLogin.png" style="height:60%;width:60%" /></p>
 <h2 id="how-to-check">How to check</h2>
 <ul>
 <li>
-<p>All methods return the bearer token. Copy the token and paste it in the <a href="https://jwt.io/">JWT Token checker</a></p>
+<p>All methods return the bearer token. Copy the token and paste it in the <a href="https://jwt.io/">JWT Token checker</a>.</p>
 </li>
 <li>
-<p>Each token has a different start/end time</p>
+<p>Each token has a different start/end time.</p>
 </li>
 </ul>
 <h2 id="things-to-explore">Things to explore</h2>
 <ul>
 <li>
-<p><a href="https://opensource.hcltechsw.com/Domino-rest-api/index.html">Official Domino REST API documentation</a></p>
+<p><a href="https://opensource.hcltechsw.com/Domino-rest-api/index.html">Domino REST API documentation</a></p>
 </li>
 <li>
 <p><a href="https://discord.com/invite/jmRHpDRnH4">Discord discussion</a></p>
@@ -6813,7 +6813,7 @@ that is <code>\</code>, on Windows <code>^</code>.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 4, 2025 15:27:00 UTC">September 4, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 12, 2025 12:17:41 UTC">September 12, 2025</span>
   </span>
 
     

@@ -28,7 +28,7 @@
     
     
       
-        <title>The config.json configuration - HCL Domino REST API Documentation</title>
+        <title>Create config.json - HCL Domino REST API Documentation</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-configjson-configuration" class="md-skip">
+        <a href="#create-configjson" class="md-skip">
           Skip to content
         </a>
       
@@ -172,7 +172,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              The config.json configuration
+              Create config.json
             
           </span>
         </div>
@@ -1939,7 +1939,7 @@
   
   
   <span class="md-ellipsis">
-    Setting up the Java Maven project
+    Set up the Java Maven project
     
   </span>
   
@@ -1962,7 +1962,7 @@
   
   
   <span class="md-ellipsis">
-    OpenAPI 3.0.x specification
+    Create OpenAPI 3.0.x specification
     
   </span>
   
@@ -1994,7 +1994,7 @@
   
   
   <span class="md-ellipsis">
-    The config.json configuration
+    Create config.json
     
   </span>
   
@@ -2007,7 +2007,7 @@
   
   
   <span class="md-ellipsis">
-    The config.json configuration
+    Create config.json
     
   </span>
   
@@ -2049,6 +2049,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2070,7 +2079,7 @@
   
   
   <span class="md-ellipsis">
-    Implementing business logic
+    Implement business logic
     
   </span>
   
@@ -2093,7 +2102,7 @@
   
   
   <span class="md-ellipsis">
-    Access Control
+    Access control
     
   </span>
   
@@ -6494,6 +6503,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6513,8 +6531,8 @@
   
 
 
-<h1 id="the-configjson-configuration">The config.json configuration</h1>
-<p>DRAPI is driven by a <a href="../../references/configuration/understandingconfig.html">dynamic configuration</a>. To get your extension recognized you must provide the information what verticle will run your code and what classes implement your business logic. To do so a file <code>resources/config/config.json</code> is required:</p>
+<h1 id="create-configjson">Create config.json</h1>
+<p>Domino REST API is driven by a <a href="../../references/configuration/understandingconfig.html">dynamic configuration</a>. To get your extension recognized, you must provide the information what verticle will run your code and what classes implement your business logic. To do so, a file <code>resources/config/config.json</code> is required:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;versions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;eoffice&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -6593,12 +6611,10 @@
 </tbody>
 </table>
 <h2 id="determine-the-class-names-for-the-business-logic">Determine the class names for the business logic</h2>
-<p><img alt="Keep Classes" src="../../assets/images/RequestClassNames.png" /></p>
-<p>The class name gets derived from the tag and the OperationID specified in the OpenAPI file. The tag gets mapped to a Java package name, while the OperationID forms the class name after the first letter gets captallized</p>
-<div class="admonition info">
-<p class="admonition-title">Next</p>
-<p><a href="businesslogic.html">Implementing business logic</a></p>
-</div>
+<p><img alt="Keep Classes" src="../../assets/images/RequestClassNames.png" style="height:80%;width:80%" /></p>
+<p>The class name gets derived from the tag and the OperationID specified in the OpenAPI file. The tag gets mapped to a Java package name, while the OperationID forms the class name after the first letter gets capitalized.</p>
+<h2 id="next">Next</h2>
+<p>Proceed to <a href="businesslogic.html">implement business logic</a>.</p>
 <!--## Let's connect
 
 "feedback.md"-->
@@ -6622,7 +6638,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 18, 2025 11:09:20 UTC">August 18, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 12, 2025 12:17:41 UTC">September 12, 2025</span>
   </span>
 
     

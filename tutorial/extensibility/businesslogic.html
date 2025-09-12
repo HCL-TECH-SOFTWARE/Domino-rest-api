@@ -28,7 +28,7 @@
     
     
       
-        <title>Implementing business logic - HCL Domino REST API Documentation</title>
+        <title>Implement business logic - HCL Domino REST API Documentation</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#implementing-business-logic" class="md-skip">
+        <a href="#implement-business-logic" class="md-skip">
           Skip to content
         </a>
       
@@ -172,7 +172,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Implementing business logic
+              Implement business logic
             
           </span>
         </div>
@@ -1939,7 +1939,7 @@
   
   
   <span class="md-ellipsis">
-    Setting up the Java Maven project
+    Set up the Java Maven project
     
   </span>
   
@@ -1962,7 +1962,7 @@
   
   
   <span class="md-ellipsis">
-    OpenAPI 3.0.x specification
+    Create OpenAPI 3.0.x specification
     
   </span>
   
@@ -1985,7 +1985,7 @@
   
   
   <span class="md-ellipsis">
-    The config.json configuration
+    Create config.json
     
   </span>
   
@@ -2017,7 +2017,7 @@
   
   
   <span class="md-ellipsis">
-    Implementing business logic
+    Implement business logic
     
   </span>
   
@@ -2030,7 +2030,7 @@
   
   
   <span class="md-ellipsis">
-    Implementing business logic
+    Implement business logic
     
   </span>
   
@@ -2123,6 +2123,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2144,7 +2153,7 @@
   
   
   <span class="md-ellipsis">
-    Access Control
+    Access control
     
   </span>
   
@@ -6596,6 +6605,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6615,23 +6633,23 @@
   
 
 
-<h1 id="implementing-business-logic">Implementing business logic</h1>
-<p>To implement functionality two Java classes get involved. A handler class that takes in the http request and forwards it on the Eventbus and a dbrequest class that performs the database interaction.</p>
+<h1 id="implement-business-logic">Implement business logic</h1>
+<p>To implement the functionality, two Java classes are involved. One is a handler class that takes in the http request and forwards it on the Eventbus. The other is a dbrequest class that performs the database interaction.</p>
 <p>For the most common use case of JSON in/out, the default handler performs all the necessary actions, no custom code is required.</p>
 <p><img alt="Default handler" src="../../assets/images/HTTPtoEventBus.png" /></p>
 <h2 id="handlers">Handlers</h2>
 <p>The handler is part of the initial REST processing which includes:</p>
 <ul>
-<li>Checking the validity of the JWT Token</li>
-<li>Ckecking the conformance to the API specification (all mandatory fields present, reject extra fields when specified so in the API)</li>
-<li>Gather all parameters and body for the EventBus</li>
-<li>Prepare response type chunked for Array or blob returns</li>
+<li>checking the validity of the JWT Token</li>
+<li>checking the conformance to the API specification (all mandatory fields present, reject extra fields when specified so in the API)</li>
+<li>gather all parameters and body for the EventBus</li>
+<li>prepare response type chunked for Array or blob returns</li>
 </ul>
-<p>All of that is take care of.</p>
+<p>All that are taken care of.</p>
 <h2 id="dbrequests">DBRequests</h2>
-<p>We have two OperationIDs to take care of: <code>getApprovals</code> and <code>submitDecision</code>. The will both act on the database specified in the <code>dataSource</code> query parameter and accept / return JSON data. There is some overlap in utility methods needed, we shall entertain a utility class for that. Both will extend the abstract class <code>AsyncDominoJNXJson</code> which only needs the method <code>process</code> to be implemented.</p>
+<p>There are two OperationIDs to take care of: <code>getApprovals</code> and <code>submitDecision</code>. They both act on the database specified in the <code>dataSource</code> query parameter and accept / return JSON data. There is some overlap in utility methods needed, we shall entertain a utility class for that. Both extend the abstract class <code>AsyncDominoJNXJson</code>, which only needs the method <code>process</code> to be implemented.</p>
 <h2 id="primer-on-dbrequestparameters">Primer on DbRequestParameters&lt;?&gt;</h2>
-<p>The class provides convenient access to everthing needed to implement a custom functionality:</p>
+<p>The class provides convenient access to everything needed to implement a custom functionality:</p>
 <table>
 <thead>
 <tr>
@@ -6674,10 +6692,10 @@
 </tbody>
 </table>
 <p>There are a few more, check the JavaDoc for details.</p>
-<p>In a nutshell: the <code>process</code> method needs to call <code>emit()</code> at least once or throw an error. When the return type ia an array, it can call <code>emit()</code> multiple times.</p>
+<p>In a nutshell, the <code>process</code> method needs to call <code>emit()</code> at least once or throw an error. When the return type is an array, it can call <code>emit()</code> multiple times.</p>
 <h3 id="errors-to-throw">Errors to throw</h3>
-<p>While you can throw any <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html">Exception</a> to terminate a failed operation, DRAPI has a set of Exception classses that determine how the exception maps to a http status code.</p>
-<p><img alt="KEEP Exceptions" src="../../assets/images/KeepErrors.png" /></p>
+<p>While you can throw any <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html">Exception</a> to terminate a failed operation, DRAPI has a set of Exception classes that determine how the exception maps to a http status code.</p>
+<p><img alt="KEEP Exceptions" src="../../assets/images/KeepErrors.png" style="height:80%;width:80%" /></p>
 <h3 id="getapprovals">GetApprovals</h3>
 <p>The <code>process</code> method can look like this:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">final</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">APPROVAL_VIEW_NAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;PendingApprovalByApprover&quot;</span><span class="p">;</span>
@@ -6703,10 +6721,10 @@
 
 <span class="w">  </span><span class="p">}</span>
 </code></pre></div>
-<p>A helper method <code>entryToJson</code> converts the <code>CollectionEntry</code> into a JsonObject that gets emitted back to HTTP as part of the resulting array. All the plumbing is taken care of.</p>
-<div class="admonition tip">
-<p class="admonition-title">Style: Optional over null</p>
-<p>Nobody likes <a href="https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare/">null</a>(PointerExceptions). So as a style decision DRAPI doesn't return <code>null</code> (unless it's broken), but Java's <a href="https://www.baeldung.com/java-optional">Optional</a>, that makes intend in the code more visible.</p>
+<p>A helper method <code>entryToJson</code> converts the <code>CollectionEntry</code> into a JsonObject that gets emitted back to HTTP as part of the resulting array.</p>
+<details class="tip">
+<summary>Style: Optional over null</summary>
+<p>Nobody likes <a href="https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare/">null</a>(PointerExceptions). So as a style decision, DRAPI doesn't return <code>null</code> (unless it's broken), but Java's <a href="https://www.baeldung.com/java-optional">Optional</a>, that makes intend in the code more visible.</p>
 <p>Instead of</p>
 <div class="highlight"><pre><span></span><code><span class="n">SomeObject</span><span class="w"> </span><span class="n">some</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">someFunction</span><span class="p">();</span>
 <span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">some</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -6724,7 +6742,7 @@
 <span class="n">someOptional</span><span class="p">().</span><span class="na">ifPresent</span><span class="p">(</span><span class="k">this</span><span class="p">::</span><span class="n">doTheGoodCase</span><span class="p">);</span>
 <span class="c1">// Java &gt; 8 has more options, check them out</span>
 </code></pre></div>
-</div>
+</details>
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">COLUMN_NAMES</span><span class="w"> </span><span class="o">=</span>
 <span class="w">      </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="s">&quot;requestor&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;value&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;status&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;subject&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;submission&quot;</span><span class="p">);</span>
 
@@ -6751,7 +6769,7 @@
 <span class="w">  </span><span class="p">}</span>
 </code></pre></div>
 <h3 id="submitdecision">SubmitDecision</h3>
-<p>The code is similar simple. We check if the document exists, is an a state to be approved by the current user, record the decision in the ApprovalLog central database and update the document.</p>
+<p>The code is similar. You check if the document exists and is in a state to be approved by the current user, record the decision in the ApprovalLog central database, and update the document.</p>
 <div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nd">@Override</span>
 <span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">process</span><span class="p">(</span><span class="n">DbRequestParameters</span><span class="o">&lt;</span><span class="n">JsonObject</span><span class="o">&gt;</span><span class="w"> </span><span class="n">request</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
 
@@ -6815,10 +6833,8 @@
 <h2 id="testing">Testing</h2>
 <p>Compile the Jar and throw it into DRAPI's <code>libs</code> folder. Restart DRAPI and it should show up.
 Test using curl or Bruno</p>
-<div class="admonition info">
-<p class="admonition-title">Next</p>
-<p><a href="accesscontrol.html">Access Control</a></p>
-</div>
+<h2 id="next">Next</h2>
+<p>Proceed to <a href="accesscontrol.html">access control</a>.</p>
 <!--## Let's connect
 
 "feedback.md"-->
@@ -6842,7 +6858,7 @@ Test using curl or Bruno</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 18, 2025 11:09:20 UTC">August 18, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 12, 2025 12:17:41 UTC">September 12, 2025</span>
   </span>
 
     
