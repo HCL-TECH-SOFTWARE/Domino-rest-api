@@ -23,21 +23,21 @@ Run a custom NodeJS application that interacts with the Domino Rest API
 5. Edit the `package.json`.
 6. Edit the `setup.json` and add the values from **Lab05-Create Application** and also add values from the **Lab-04-Scope**.
 
-    !!!note
+    !!! note
+
         As a user, you must know what are the needed fields to be modified to run the `setup.json`.
 
 7. On your Terminal in your IDE, run `npm install`
 8. Run `npm start`. You must start your browser to check.
 
-
 ## How to check
 
-- navigate to http://localhost:3000 - UI should show
-- retrieve data
+- Navigate to http://localhost:3000 - UI should show
+- Retrieve data
 
 ## Things to explore
 
-- [Official Domino REST API documentation](https://opensource.hcltechsw.com/Domino-rest-api/index.html)
+- [Domino REST API documentation](https://opensource.hcltechsw.com/Domino-rest-api/index.html)
 
 - [Discord discussion](https://discord.com/invite/jmRHpDRnH4)
 

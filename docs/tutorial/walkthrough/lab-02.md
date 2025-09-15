@@ -5,7 +5,7 @@
 ## What you will learn:
 
 - Navigate the Admin UI
-- Configure the "Approval Central" database using the admin UI
+- Configure the "Approval Central" database using the Admin UI
 - Difference between **Schema** and **Scope**
 
 ## Prerequisites
@@ -22,7 +22,7 @@
 
     ![Quick config](img/AdminUIExpanded.png){: style="height:80%;width:80%"}
 
-3.  Fill in the form.
+3. Fill in the form.
 
     - **Schema Name**: default
     - **Scope Name**: approvals
@@ -35,7 +35,7 @@
 ### Alternative steps
 
 - Use request in Postman's Lab 01 **Create QuickConfig for ApprovalCentral**
-- Use curl, postman or the KEEP cli to post this JSON:
+- Use curl, Postman or the KEEP cli to post this JSON:
 
 ```json
 {
@@ -48,7 +48,7 @@
 
 ## How to check
 
-In the Admin UI you will find one entry each for schema and scope:
+In the Admin UI, you will find one entry each for schema and scope:
 
 ![Scope available](img/scopeAvailable.png){: style="height:70%;width:70%"}
 
@@ -62,13 +62,13 @@ In the Admin UI you will find one entry each for schema and scope:
 
 ## Things to explore
 
-- [Official Domino REST API documentation](https://opensource.hcltechsw.com/Domino-rest-api/index.html)
+- [Domino REST API documentation](https://opensource.hcltechsw.com/Domino-rest-api/index.html)
 
 - [Discord discussion](https://discord.com/invite/jmRHpDRnH4)
 
-- Check the Swagger UI for the new entry
-- Use POSTMAN to create a second quick config using recipe.nsf
-- Open Domino Designer to check resources
+- Check the Swagger UI for the new entry.
+- Use POSTMAN to create a second quick config using recipe.nsf.
+- Open Domino Designer to check resources.
 
   ![Schema in Designer](img/schemaInDesigner.png){: style="height:70%;width:70%"}
 

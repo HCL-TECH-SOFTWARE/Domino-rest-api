@@ -40,7 +40,7 @@ Check [`http://localhost:8880/.well-known/openid-configuration`](http://localhos
 
 ## Things to explore
 
-- [Official Domino REST API documentation](https://opensource.hcltechsw.com/Domino-rest-api/index.html)
+- [Domino REST API documentation](https://opensource.hcltechsw.com/Domino-rest-api/index.html)
 
 - [Discord discussion](https://discord.com/invite/jmRHpDRnH4)
 

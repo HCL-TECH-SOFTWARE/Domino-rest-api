@@ -20,20 +20,20 @@ A database can expose different sets of information based on different schema.
 
 1. In the Admin UI, select "Database Management - REST API"
 2. Click **Schemas** from the navigation pane.
-2. On the **Schema Management**, click **Add Schema**".
-3. Select `ApprovalCentral.nsf` from the **Available Databases**.
-4. Fill in Schema Name: `training`
+3. On the **Schema Management**, click **Add Schema**".
+4. Select `ApprovalCentral.nsf` from the **Available Databases**.
+5. Fill in Schema Name: `training`
 
     ![Add Schema](img/AddSchema.png)
 
-5. Switch to the "NSF View"
+6. Switch to the "NSF View"
 
     ![NSF View](img/nsfView.png)
 
     ![TrainingSchema](img/TrainingSchema.png)
 
-6. Click to edit the `training` schema.
-7. Under the **Database Forms**, configure only  the form `Training`.
+7. Click to edit the `training` schema.
+8. Under the **Database Forms**, configure only  the form `Training`.
 
     | Field    |  Type  |   Access   |
     | -------- | :----: | :--------: |
@@ -46,8 +46,7 @@ A database can expose different sets of information based on different schema.
     !!! warning "Important" 
         Don't forget to save.
 
-8. On the **Databse Views**, the view `(TrainingApprovals)`, and `PendingApprovals` must set to `active`.
-
+9. On the **Databse Views**, the view `(TrainingApprovals)`, and `PendingApprovals` must set to `active`.
 
 ### Create scope
 
@@ -81,12 +80,12 @@ Alternative `POST` to `/api/setup-v1/admin/scope`
 
 - Retrieve list of schemas for `ApprovalCentral.nsf`.
 - Retrieve list of scopes.
-- Check admin UI.
-- Login with limit to scope `trainingcorp` and look at data in POSTMAN
+- Check Admin UI.
+- Login with limit to scope `trainingcorp` and look at data in POSTMAN.
 
 ## Things to explore
 
-- [Official Domino REST API documentation](https://opensource.hcltechsw.com/Domino-rest-api/index.html)
+- [Domino REST API documentation](https://opensource.hcltechsw.com/Domino-rest-api/index.html)
 
 - [Discord discussion](https://discord.com/invite/jmRHpDRnH4)
 - Login with a limited scope and try to access the other scope's data.
