@@ -25,7 +25,9 @@ Once the restapi task is loaded in the Domino console, you can use the following
 |`tell restapi refresh`|Refreshes Domino REST API with new configuration.<br/><br/> Once this command is issued, new incoming requests will be blocked, returning an HTTP Error 503 response. The existing queue of requests will be processed, and once completed, the new configuration will take effect, allowing new requests to be accepted.|
 |`tell restapi idpstatus`|Shows the state of the configured identity providers.|
 |`tell restapi support`|Creates a support package.|
-|`tell restapi support -includensf`|Creates a support package, including `KeepConfig.nsf`.|
+|`tell restapi support -includensf`|Creates a support package, including the `KeepConfig.nsf`.|
+|`tell restapi support -includedumps`|Creates a support package, including the Java Dump file, dump file of the active Java heap, and full dump file of the active JVM.|
+|`tell restapi support -includensf -includedumps`|Creates a support package, including the `KeepConfig.nsf`, the Java Dump file, dump file of the active Java heap, and full dump file of the active JVM.|
 |`tell restapi javadump`|Writes a Java Dump file to the data directory. The file contains human-readable information about the state of the Java Virtual Machine (JVM) and active threads, enabling developers and administrators to analyze and troubleshoot JVM behavior.|
 |`tell restapi heapdump`|Writes a dump file of the active Java heap to the data directory. The file is written in IBM's Portable Heap Dump (PHD) format and contains information about all active objects in the JVM.|
 |`tell restapi systemdump`|Writes a full dump file of the active JVM to the data directory. The file contains extensive information about the current Java state.|
