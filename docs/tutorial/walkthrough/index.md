@@ -2,7 +2,7 @@
 
 ## Overview
 
-The tutorial guides you through using and configuring the Domino REST API using:
+The walkthrough guides you step-by-step on using and configuring the Domino REST API using:
 
 - Command line
 - Postman
@@ -38,7 +38,7 @@ Make sure you have the following setup:
 
 !!! danger "Important"
 
-    **Don't use** a production server for this tutorial as configuration changes will be made. It is recommended to use a temporary local server.
+    **Don't use** a production server for this walkthrough as configuration changes will be made. It is recommended to use a temporary local server.
 
 ### Skills required
 
@@ -96,7 +96,7 @@ See the menu on the left for the sequence.
     - experience in Java programming
     - experience with JavaScript and NodeJS
 
-<!--## Conduct
+## Conduct
 
 - ask questions
 - try things out
