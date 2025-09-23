@@ -13,7 +13,7 @@ How to run a custom NodeJS application that interacts with the Domino REST API.
 
 ## Procedure
 
-1. Download and extract the [apps-src.zip](../downloads/apps-src.zip) file from the `source for all apps` in a folder.
+1. Download and extract the [apps-src.zip](../downloads/apps-src.zip) file from the [source for all apps](downloadindex.md#resource-materials) in a folder.
 
     The `apps-src.zip` contains 3 folders. In this activity, you are going to use the *DominoOAuth* folder.
 

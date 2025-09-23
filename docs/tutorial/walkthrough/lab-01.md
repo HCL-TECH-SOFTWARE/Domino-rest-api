@@ -62,11 +62,13 @@ On successful login, you receive a JSON response containing a token that you can
 
 3. Scroll down to `authentication` and expand `authLogin`. Fill in the username and password, and click **Execute**.
 
-    ![Access to Swagger](img/swagger3.png){: style="height:70%;width:70%"}
+    ![Access to Swagger](../../assets/images/ApiSwaggerLogin.png){: style="height:70%;width:70%"}
 
-4. C0py the generated bearer token into the following form, which opens after clicking ![Access to Swagger](img/swagger4.png){: style="height:15%;width:15%"} button.
+4. Copy the generated bearer token into the following form, which opens after clicking ![Access to Swagger](img/swagger4.png){: style="height:15%;width:15%"} button.
 
-    ![Access to Swagger](img/swagger5.png){: style="height:70%;width:70%"}
+    ![Access to Swagger](../../assets/images/TokenJwt1.png){: style="height:70%;width:70%"}
+
+5. Click **Authorize**.
 
 #### Log in to Admin UI
 
@@ -76,7 +78,7 @@ On successful login, you receive a JSON response containing a token that you can
 
 2. Fill in your username and password, and click **LOGIN**.
 
-    ![Admin Login](img/AdminLogin.png){: style="height:70%;width:70%"}
+    ![Admin Login](../../assets/images/AdminLogin.png){: style="height:70%;width:70%"}
 
     A successful login shows the Admin UI.
 

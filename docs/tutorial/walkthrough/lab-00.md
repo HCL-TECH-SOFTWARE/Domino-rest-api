@@ -50,7 +50,7 @@
 
     You should see a page similar to the following:
 
-    ![Landing page](img/landingPage.png){: style="height:70%;width:70%"}
+    ![Landing page](img/landingPage.png){: style="height:75%;width:75%"}
 
 ## Things to explore
 

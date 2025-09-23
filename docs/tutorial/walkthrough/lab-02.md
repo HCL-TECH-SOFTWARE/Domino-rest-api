@@ -19,7 +19,7 @@ The procedure guides you in creating a schema and a scope using **Quick Config**
 1. Log in to **Admin UI**.
 2. Expand the side panel and click **Quick Config**.
 
-    ![Quick config](img/AdminUIExpanded.png){: style="height:80%;width:80%"}
+    ![Quick config](img/AdminUIExpanded.png){: style="height:70%;width:70%"}
 
 3. Select `ApprovalCentral.nsf` from **Available Databases**, and fill in the form.
 
@@ -27,7 +27,7 @@ The procedure guides you in creating a schema and a scope using **Quick Config**
     - **Scope Name**: approvals
     - **Description & Schema Icon**: at your discretion
 
-    ![Quick config](img/QuickConfig.png){: style="height:80%;width:80%"}
+    ![Quick config](img/QuickConfig.png){: style="height:70%;width:70%"}
 
 4. Click **Add**.
 
@@ -51,9 +51,9 @@ The procedure guides you in creating a schema and a scope using curl, Postman, o
 
 In the **Admin UI**, you will find one entry each for schema and scope as shown:
 
-![Scope available](img/scopeAvailable.png){: style="height:70%;width:70%"}
-
 ![Schema available](img/schemaAvailable.png){: style="height:70%;width:70%"}
+
+![Scope available](img/scopeAvailable.png){: style="height:70%;width:70%"}
 
 You can also check the following URLs:
 
@@ -99,7 +99,7 @@ Proceed to [Lab 03 - Schema exploration](lab-03.md).
 1. Log in to Admin UI.
 2. Click on **Quick Config**.
 
-    ![Quick config](img/AdminUIExpanded.png){: style="height:80%;width:80%"}
+    ![Quick config](img/AdminUIExpanded.png){: style="height:70%;width:70%"}
 
 3. Fill in the form.
 
@@ -107,7 +107,7 @@ Proceed to [Lab 03 - Schema exploration](lab-03.md).
     - **Scope Name**: approvals
     - **Description & Schema Icon**: at your discretion
 
-    ![Quick config](img/QuickConfig.png){: style="height:80%;width:80%"}
+    ![Quick config](img/QuickConfig.png){: style="height:70%;width:70%"}
 
 4. Click **Add**.
 

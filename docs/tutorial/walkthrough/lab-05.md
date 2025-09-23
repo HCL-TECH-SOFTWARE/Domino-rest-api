@@ -21,7 +21,7 @@ How to configure credentials for an app to log in *on your behalf* with a limite
 2. On the **Application Management**, click **Add Application**.
 3. Fill in the fields as shown in the following image.
 
-    ![Create application](img/createApp.png)
+    ![Create application](img/createApp.png){: style="height:50%;width:50%"}
 
     - The callback URLs must be provided by the developer or the admin, and need to match.
     - Add scopes as desired.

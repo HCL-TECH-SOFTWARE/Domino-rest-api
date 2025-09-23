@@ -35,13 +35,13 @@
     | Status            | string | read-only  |
     | CurrentApprover   | names  | read-only  |
 
-    Check the box "compute with form"
+    ![Decision mode](img/DecisionScope1.png){: style="height:80%;width:80%"}
 
-    ![Decision mode](img/DecisionScope.png){: style="height:70%;width:70%"}
+    ![additional modes](img/EquipmentModes1.png){: style="height:50%;width:50%"}
 
-    ![additional modes](img/EquipmentModes.png){: style="height:70%;width:70%"}
+5. Click the **Compute with Form** toggle to the on position. For more information, see [Set compute with form](../../howto/production/computeform.md).
 
-5. Save your changes.
+6. Save your changes.
 
 ## How to verify
 

@@ -16,19 +16,21 @@ How to expose different sets of information from a database using different sche
 
 1. In the **Admin UI**, select **Database Management - REST API** or click **Schemas** from the navigation pane.
 2. On the **Schema Management** page, click **Add Schema**.
-3. Select `ApprovalCentral.nsf` from the **Database**.
-4. Fill in the **Schema Name** with `training` and the other fields as shown.
+3. In the **Add New Schema** dialog, click **Create Schema**.
+4. Select `ApprovalCentral.nsf` from the **Database**.
+5. Fill in the **Schema Name** with `training` and the other fields as shown.
 
-    ![Add Schema](img/AddSchema.png)
-5. Click **Add**.
-6. On the **Schema Management** page, switch the page view to **NSF View**.
+    ![Add Schema](img/AddSchema.png){: style="height:30%;width:30%"}
 
-    ![NSF View](img/nsfView.png)
+6. Click **Save Schema**.
+7. On the **Schema Management** page, switch the page view to **NSF View**.
 
-    ![TrainingSchema](img/TrainingSchema.png)
+    ![NSF View](img/nsfView.png){: style="height:40%;width:40%"}
 
-7. Click the `training` schema to edit.
-8. Under the **Database Forms**, configure only the form `Training`.
+    ![TrainingSchema](img/TrainingSchema.png){: style="height:80%;width:80%"}
+
+8. Click the `training` schema to edit.
+9. Under the **Database Forms**, configure only the form `Training`.
 
     | Field    |  Type  |   Access   |
     | -------- | :----: | :--------: |
@@ -36,10 +38,9 @@ How to expose different sets of information from a database using different sche
     | from     | names  | read-write |
     | Training | string | read-write |
 
-9. Set the **Formula for Write Access** to `@false`
-
-10. Click **Save**.
-11. Go to **Databse Views**, and then activate views `(TrainingApprovals)` and `(PendingApprovals)`.
+10. Set the **Formula for Write Access** to `@false`
+11. Click **Save**.
+12. Go to **Databse Views**, and then activate views `(TrainingApprovals)` and `(PendingApprovals)`.
 
 ### Create scope
 
@@ -52,7 +53,7 @@ How to expose different sets of information from a database using different sche
 
 5. Click **Add**. The new scope is added to your scopes list.
 
-    ![Added scope](img/AddScope.png)
+    ![Added scope](img/AddScope.png){: style="height:50%;width:50%"}
 
 Alternatively, you can use `POST` to `/api/setup-v1/admin/scope`
 
