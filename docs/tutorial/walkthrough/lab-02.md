@@ -14,7 +14,7 @@
 
 ## Procedure
 
-The procedure guides you in creating a schema and a scope using **Quick Config** in the Admin UI. 
+The procedure guides you in creating a schema and a scope using **Quick Config** in the Admin UI.
 
 1. Log in to **Admin UI**.
 2. Expand the side panel and click **Quick Config**.

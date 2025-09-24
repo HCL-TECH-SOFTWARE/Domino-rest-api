@@ -27,7 +27,7 @@ How to expose different sets of information from a database using different sche
 
     ![NSF View](img/nsfView.png){: style="height:40%;width:40%"}
 
-    ![TrainingSchema](img/TrainingSchema.png){: style="height:80%;width:80%"}
+    ![TrainingSchema](img/TrainingSchema.png){: style="height:60%;width:60%"}
 
 8. Click the `training` schema to edit.
 9. Under the **Database Forms**, configure only the form `Training`.
@@ -53,7 +53,7 @@ How to expose different sets of information from a database using different sche
 
 5. Click **Add**. The new scope is added to your scopes list.
 
-    ![Added scope](img/AddScope.png){: style="height:50%;width:50%"}
+    ![Added scope](img/AddScope.png){: style="height:40%;width:40%"}
 
 Alternatively, you can use `POST` to `/api/setup-v1/admin/scope`
 

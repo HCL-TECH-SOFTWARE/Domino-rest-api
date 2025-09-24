@@ -15,6 +15,9 @@ Your Domino server must be running.
 ## Procedure
 
 1. Access [http://localhost:8889](http://localhost:8889).
+
+    ![Management console](../../assets/images/mngmntconsole.png){: style="height:70%;width:70%"}
+
 2. Enter a name in the **Certificate Name** field, and click **Create IdP Certificate**.
 
     !!! note
@@ -28,6 +31,7 @@ Your Domino server must be running.
 - Check the `keepconfig.d` directory. You should see new files matching the entered certificate name.
 
     For example, if you entered `KeepLabIdP` as your certificate name, you should see the following files in `keepconfig.d`:
+    
     - `KeepLabIdP.json`
     - `KeepLabIdP.cert.pem`
     - `KeepLabIdP.private.key.pem`
@@ -39,7 +43,7 @@ When you copy these files to another server, the JWT issued by the first server 
 
 Check [`http://localhost:8880/.well-known/openid-configuration`](http://localhost:8880/.well-known/openid-configuration).
 
-![OpenID config](img/Openidconfig.png)
+![OpenID config](img/Openidconfig.png){: style="height:70%;width:70%"}
 
 ## Things to explore
 

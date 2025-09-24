@@ -22,6 +22,7 @@ You must have access to the **Management console**.
     Make sure the **Management console** is secure. For more information, see [Functional Accounts](../../references/functionalUsers.md).
 
 1. Log in to the **Management console** (Port 8889).
+
    ![Management console](../../assets/images/mngmntconsole.png)
 
     <!-- prettier-ignore -->
