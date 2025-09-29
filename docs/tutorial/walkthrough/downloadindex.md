@@ -5,7 +5,9 @@ hide:
 
 # Downloads
 
-Here you can find all the resource materials for the workshop and for completing the exercises: 
+This topic provides all the necessary resource materials required for the capability walkthrough and to complete the exercises.
+
+## Resource materials
 
 - [DominoAutoConfig.json](../downloads/DominoAutoConfig.json)
 
@@ -33,10 +35,9 @@ Put the command line utilities somewhere on your path. On Linux/macOS, that's ty
 
 - [curl](https://curl.se/download.html)
 
-On Linux/macOS, when it isn't already available, you can use your packet manager:
+    On Linux/macOS, when it isn't already available, you can use your packet manager to install curl:
 
-- `brew install curl` (macOS)
+    - `brew install curl` (macOS)
+    - `sudo dnf install curl` (Redhat/Centos)
+    - `sudo apt install curl` (Debian/Ubuntu)
 
-- `sudo dnf install curl` (Redhat/Centos)
-
-- `sudo apt install curl` (Debian/Ubuntu)
