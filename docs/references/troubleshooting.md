@@ -118,7 +118,7 @@ If the Domino REST API stops working or crashes, it may be due to insufficient J
 
 2. Increase Java heap size.
 
-    1. Determine the maximum physical memory currently available to the Domino REST API. This is the amount of memory the Domino REST API can use.
+    1. Determine the maximum physical memory you want to allocate for the Domino REST API to use.
     2. Increase the heap memory allocated to Domino REST API by setting the value of the `KeepJavaHeapInMB` setting in the `notes.ini` file to the desired amount of memory in megabytes.
 
         For example, to allocate 32 GB, set:
