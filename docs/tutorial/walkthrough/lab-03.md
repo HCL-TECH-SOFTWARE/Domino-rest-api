@@ -1,5 +1,72 @@
 # Lab 03 - Schema exploration
 
+## What you will learn
+
+- Understanding a form mode
+- Understanding a field group
+- Formulas to control access
+
+## Before you begin
+
+- You have completed [Lab 02 - Quick config](lab-02.md).
+- Your Domino server must be running.
+
+## Procedure
+
+!!! note
+
+    Before you start altering the schema, use **Postman**, as outlined in [How to verify](#how-to-verify), to observe the API behavior before and after altering the schema.
+
+1. In Admin UI, edit the `default` schema of `ApprovalsCentral.nsf`, and select the Equipment form.
+2. In mode `default`, add the following fields to a `field group` named *stuff*.
+
+    - childRN
+    - Comments
+    - Cost
+    - Equipment
+
+3. Add new modes: dql, (needs fields), raw (doesn't need fields).
+4. Add a new mode `decision` with 4 fields:
+
+    | Name              |  Type  |   Access   |
+    | ----------------- | :----: | :--------: |
+    | completedApprover | names  | write-only |
+    | newHistory        | string | write-only |
+    | Status            | string | read-only  |
+    | CurrentApprover   | names  | read-only  |
+
+    ![Decision mode](img/DecisionScope1.png){: style="height:80%;width:80%"}
+
+    ![additional modes](img/EquipmentModes1.png){: style="height:50%;width:50%"}
+
+5. Click the **Compute with Form** toggle to the on position. For more information, see [Set compute with form](../../howto/production/computeform.md).
+
+6. Save your changes.
+
+## How to verify
+
+- Use Postman to retrieve a document using the default mode before and after your changes.
+- Try using the `/raw` endpoint before and after creating the "raw" mode.
+- Try a dql query before and after creating the dql mode.
+- Observe the difference before and after the addition of the field groups.
+
+## Things to explore
+
+- [Domino REST API documentation](https://opensource.hcltechsw.com/Domino-rest-api/index.html)
+
+- [Discord discussion](https://discord.com/invite/jmRHpDRnH4)
+
+- Change the formula for read/write access to exclude your default user and observe the API reaction in Postman.
+- Try the **Test Formula** button in the mode.
+- Change the write access for default to `Status = "" | Status = "draft"`.
+- Observe the difference when "compute with form" is checked.
+- Modify a field Name, and check if the output changes.
+
+## Next step
+
+Proceed to [Lab 04 - Additional scope & schema](lab-04.md).
+
+<!--
 ## Duration 30 min
 
 ## What you will learn:
@@ -61,3 +128,4 @@ Before you start altering the schema, use **Postman**, as outlined in _How to ch
 - Change the write access for default to `Status = "" | Status = "draft"`.
 - Observe the difference when "compute with form" is checked.
 - Modify a field Name, do you see the output changing?
+-->
