@@ -103,3 +103,26 @@ You get a CORS error when trying to access the **Admin UI**.
 **Solution**:
 
 You need to configure CORS. For more information, see [Configure CORS for AdminUI, OAuth and your applications](../howto/install/cors.md).
+
+## Domino REST API stops working or crashes
+
+If the Domino REST API stops working or crashes, it may be due to insufficient Java heap memory.
+
+**Solution**:
+
+1. Check for Java heap memory issues.
+
+    1. Review the `domino-keep.log` and `domino-keep.*.log` files located in the `IBM_TECHNICAL_SUPPORT` subdirectory of your `Notes/Domino` data directory.
+    2. Look for error messages indicating low memory or heap space issues, such as `java.lang.OutOfMemoryError: Java heap space`.
+    3. If there are errors, increase the Java heap size.
+
+2. Increase Java heap size.
+
+    1. Determine the maximum physical memory you want to allocate for the Domino REST API to use.
+    2. Increase the heap memory allocated to Domino REST API by setting the value of the `KeepJavaHeapInMB` setting in the `notes.ini` file to the desired amount of memory in megabytes.
+
+        For example, to allocate 32 GB, set:
+
+        `KeepJavaHeapInMB=32000`
+
+3. Save the changes and restart the Domino REST API.
