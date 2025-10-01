@@ -79,7 +79,7 @@ Alternately, to share certificates without the certificate store, follow [the ex
 
 ## Limit admin access
 
-You don't need access to the AdminUI on your spoke servers, it only increases the possibility of replication conflicts by an absent-minded admin. The capability walkthrough [Lab 11](../../tutorial/walkthrough/lab-11.md#disable-admin-endpoints-and-ui) outlines the steps to take to disable both the Admin UI and the Admin endpoints. Create a file `keepconfig.d/disableadmin.json` and copy it to all spokes, but not the hub.
+You don't need access to the Admin UI on your spoke servers, it only increases the possibility of replication conflicts by an absent-minded admin. The capability walkthrough [Lab 11](../../tutorial/walkthrough/lab-11.md#disable-admin-endpoints-and-ui) outlines the steps to disable both the Admin UI and the Admin endpoints. Create a file `keepconfig.d/disableadmin.json` and copy it to all spokes, but not the hub.
 
 ```json
 {

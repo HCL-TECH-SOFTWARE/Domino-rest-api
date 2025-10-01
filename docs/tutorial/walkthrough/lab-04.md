@@ -1,5 +1,87 @@
 # Lab 04 - Additional scope & schema
 
+## What you will learn
+
+How to expose different sets of information from a database using different schemas.
+
+## Before your begin
+
+- You have completed [Lab 03 - Schema exploration](lab-03.md).
+- Your Domino server must be running.
+- Postman is available.
+
+## Procedure
+
+### Create schema
+
+1. In the **Admin UI**, select **Database Management - REST API** or click **Schemas** from the navigation pane.
+2. On the **Schema Management** page, click **Add Schema**.
+3. In the **Add New Schema** dialog, click **Create Schema**.
+4. Select `ApprovalCentral.nsf` from the **Database**.
+5. Fill in the **Schema Name** with `training` and the other fields as shown.
+
+    ![Add Schema](img/AddSchema.png){: style="height:30%;width:30%"}
+
+6. Click **Save Schema**.
+7. On the **Schema Management** page, switch the page view to **NSF View**.
+
+    ![NSF View](img/nsfView.png){: style="height:40%;width:40%"}
+
+    ![TrainingSchema](img/TrainingSchema.png){: style="height:60%;width:60%"}
+
+8. Click the `training` schema to edit.
+9. Under the **Database Forms**, configure only the form `Training`.
+
+    | Field    |  Type  |   Access   |
+    | -------- | :----: | :--------: |
+    | Form     | string | read-write |
+    | from     | names  | read-write |
+    | Training | string | read-write |
+
+10. Set the **Formula for Write Access** to `@false`
+11. Click **Save**.
+12. Go to **Databse Views**, and then activate views `(TrainingApprovals)` and `(PendingApprovals)`.
+
+### Create scope
+
+1. Click **Scopes** from the navigation pane.
+2. Click **Add Scope** on the **Scope Management** page.
+3. Select the schema `training` under the `ApprovalCentral.nsf` from the **Available Schema**.
+4. Fill in the **Scope Name** as `trainingcorp`, and enter details in the **Description**.
+  
+    Leave the **Server** and **Maximum Level Access** as they are.
+
+5. Click **Add**. The new scope is added to your scopes list.
+
+    ![Added scope](img/AddScope.png){: style="height:40%;width:40%"}
+
+Alternatively, you can use `POST` to `/api/setup-v1/admin/scope`
+
+```json
+{
+  "apiName": "trainingcorp",
+  "createSchema": false,
+  "description": "Subset Training for XY Training Inc",
+  "iconName": "handshake",
+  "isActive": true,
+  "nsfPath": "ApprovalCentral.nsf",
+  "schemaName": "training",
+  "server": "*"
+}
+```
+
+## How to verify
+
+- Retrieve the list of schemas for `ApprovalCentral.nsf`.
+- Retrieve the list of scopes.
+- Check the **Admin UI**.
+- Login with limit to scope `trainingcorp` and look at data in Postman.
+
+## Next step
+
+Proceed to [Lab 05 - Create an application](lab-05.md).
+
+<!--
 Rationale: An external training provider shall get access to Name and Course, but neither cost nor approval flows.
 
 ## Duration 10 min
@@ -89,3 +171,4 @@ Alternative `POST` to `/api/setup-v1/admin/scope`
 
 - [Discord discussion](https://discord.com/invite/jmRHpDRnH4)
 - Login with a limited scope and try to access the other scope's data.
+-->
