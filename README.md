@@ -25,6 +25,31 @@ Perform the following steps to contribute to the documentation.
 
     Perform the following steps to test and preview how your changes render as HTML using MkDocs.
 
+    **Using [Visual Studio Code Dev Container](https://code.visualstudio.com/docs/devcontainers/containers)**
+
+    Make sure to install the "Dev Containers" extension for Visual Studio Code.
+
+    1. Run `makedocker.sh` to create a Docker image called keepdocs:latest.
+
+        `Dockerfile` and `makedocker` scripts are included in the repository to build the required Docker image. Macs with M1 chips need a different base image, so M1 users must use the M1-specific scripts and images.
+
+    2. Create a `.devcontainer` directory in the root of the repo.
+    3. Create a `devcontainer.json` file in the `.devcontainer` directory. The `devcontainer.json` file has the following content:
+
+        ```json
+        {
+        "image": "keepdocs:latest"
+        }
+        ```
+
+        Make sure to change the `image` tag if you used the M1-variant script.
+
+    4. Open the **Command Palette**, and then search for and select **Dev Containers: Reopen in Container**.
+
+        VS Code will reopen with your project folder loaded inside the container. You can confirm this by opening the Terminal in VS Code, where the working directory path will start with "/workspaces/".
+
+    5. Run the command `mkdocs serve` and then open `https://localhost:8000` in your browser to check your changes.
+
     **Using MkDocs locally**
 
     1. [Install MkDocs](https://www.mkdocs.org/user-guide/installation/) (if not already installed) to build and preview the documentation locally.
@@ -41,30 +66,6 @@ Perform the following steps to contribute to the documentation.
         Make sure you're in the same directory as the `mkdocs.yml` configuration file when running the `mkdocs serve` command.
 
     4. Open `http://127.0.0.1:8000` in your browser to check the formatting, links, and rendering of your changes.
-
-    **Using [Visual Studio Code Dev Container](https://code.visualstudio.com/docs/devcontainers/containers)**
-
-    Make sure to install the "Dev Containers" extension for Visual Studio Code.
-
-    1. Run `makedocker.sh` to create a Docker image called keepdocs:latest.
-
-        `Dockerfile` and `makedocker` scripts are included in the repository to build the required Docker image. Macs with M1 chips need a different base image, so M1 users must use the M1-specific scripts and images.
-
-    2. Create a `.devcontainer` directory in the root of the repo.
-    3. Create a `devcontainer.json` file in the `.devcontainer` directory. The `devcontainer.json` file has the following content:
-
-        ```json
-        {
-        "image": "keepdocs:latest"
-        }
-        
-        Make sure to change the `image` tag if you used the M1-variant script.
-
-    4. Open the **Command Palette**, and then search for and select **Dev Containers: Reopen in Container**.
-
-        VS Code will reopen with your project folder loaded inside the container. You can confirm this by opening the Terminal in VS Code, where the working directory path will start with "/workspaces/".
-
-    5. Run the command `mkdocs serve` and then open `https://localhost:8000` in your browser to check your changes.
 
 3. Submit your documentation changes.
 
