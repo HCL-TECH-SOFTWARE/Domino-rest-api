@@ -61,7 +61,7 @@ Make sure to install the **Dev Containers** extension for Visual Studio Code.
 
 4. Respond to review comments and update your PR as needed until approved.
 
-    Once the pull request is approved and merged, your changes will be published on the documentation site.
+Once the pull request is approved and merged, your changes will be published on the documentation site.
 
 ## Raising Issues
 
@@ -69,7 +69,7 @@ If you find any inaccuracies on a page, you can create an issue. Make sure to pr
 
 ## Feeedback
 
-Join the Domino REST API conversation in the HCL Domino forum at the [HCLSoftware Digital Solutions Community Forum](https://developer.ds.hcl-software.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}, or connect with the community on the [OpenNTF Discord channel](https://discord.com/invite/jmRHpDRnH4 "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}.
+Join the Domino REST API conversation in the HCL Domino forum at the [HCLSoftware Digital Solutions Community Forum](https://developer.ds.hcl-software.com/), or connect with the community on the [OpenNTF Discord channel](https://discord.com/invite/jmRHpDRnH4).
 
 ## Set up GitHub email notifications
 
