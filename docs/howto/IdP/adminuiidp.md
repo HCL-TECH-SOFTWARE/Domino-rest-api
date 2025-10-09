@@ -28,6 +28,10 @@ Configure the `adminui` property in your chosen external IdP. For more informati
 
 Once configured, the Admin UI login should look like the following example image. In the example image, _Keycloak_ is used as the external IdP.
 
+!!! note
+
+    Make sure to add `{DRAPI_HOST}/admin/ui/callback` as a redirect URI in your chosen IdP.
+
 ![external IdP for Admin UI login](../../assets/images/AdminUiLoginExternalIdP.png)
 
 Clicking **Sign in with {external_idp_name}** commences the authorization code flow.
@@ -53,7 +57,7 @@ The following is an example configuration for Azure IdP:
       "algorithm": "RS256",
       "adminui": {
         "active": true,
-        "client_id": "keepadminui",
+        "client_id": "{client_id}",
         "application_id_uri": "api://dominorest/"
       }
     }
@@ -73,7 +77,7 @@ The following is an example configuration for Keycloak IdP:
       "providerUrl": "https://{keycloak_host}/realms/{realm_name}",
       "adminui": {
         "active": true,
-        "client_id": "keepadminui"
+        "client_id": "{client_id}"
       }
     }
   }
