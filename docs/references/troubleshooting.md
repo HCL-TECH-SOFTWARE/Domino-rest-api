@@ -2,33 +2,6 @@
 
 This reference intends to guide you in addressing common errors in installing and running the Domino REST API service. Common errors and their corresponding resolutions are described below:
 
-## Authentication has gotten slower
-
-Temporary files named `keyutil_<somename>_` in Domino’s temp directory aren't removed after creation, causing slow authentication processing and eventual login timeouts.
-
-**Solution**
-
-Navigate to Domino’s temp folder, look for files with filenames starting with `keyutil_`, and then remove these files.
-
-## Domino Not Running (First-Time Setup)
-
-If Domino isn't up and running, see [Troubleshooting one-touch Domino Setup](https://help.hcltechsw.com/domino/14.0.0/admin/inst_onetouch_troubleshooting.html).
-
-## REST API not responding
-
-You get a timeout error when trying to access `http://yourserver:8880`, wherein `yourserver` is the DNS name of your Domino server.
-
-**Solution**
-
-You need to check if the REST API is loaded.
-
-1. In the Domino server console, type `show tasks`.
-2. If there is no `restapi` entry in the list, load it using `load restapi` in the Domino console.
-3. If it's listed, shut it down with `tell restapi quit` before trying `load restapi`.
-4. Take note of any messages in case you need more support.
-
-<!----8<-- "iskeeprunning.md"-->
-
 ## Address already in use error
 
 You get this error when you run the [sample script](../references/downloads.md) with the sample Notes database:
@@ -46,13 +19,13 @@ ps -eaf | grep launch.class
 kill -9 [pid number]
 ```
 
-## Unable to start the Domino REST API Domino task after updating configuration to use https
+## Authentication has gotten slower
 
-The `KeepManagementURL` setting in your `notes.ini` is the URL needed for the Domino REST API Domino task to talk to the Java side of Domino REST API. By default this is set to `http`. 
+Temporary files named `keyutil_<somename>_` in Domino’s temp directory aren't removed after creation, causing slow authentication processing and eventual login timeouts.
 
 **Solution**
 
-After updating the URL to `https`, run `load restapi`. For more information, see [Domino REST API task](../references/usingdominorestapi/restapitask.md).
+Navigate to Domino’s temp folder, look for files with filenames starting with `keyutil_`, and then remove these files.
 
 ## Database is not fully initialized error
 
@@ -69,40 +42,78 @@ The following error is shown:
 
 Delete the `KeepConfig.nsf` from the Notes data directory and restart the [sample script](../references/downloads.md).
 
-<!-- prettier-ignore -->
 !!! tip
 
     On Mac, the data directory path is `/Users/[userid]/Library/Application Support/HCL Notes Data/`.
 
-## User ID and password being requested repeatedly when using Notes for Domino REST API testing
+## Domino Not Running (First-Time Setup)
 
-Sometimes on the initial starting up of the Domino REST API or creation of KeepConfig and KeepAgents databases, or doing things like creating a folder in mail database, you are prompted for user ID and password repeatedly. This happens if the **Don't prompt for a password** checkbox under **User Security** isn't selected or if it gets reset based on the organization's policy.
+If Domino isn't up and running, see [Troubleshooting one-touch Domino Setup](https://help.hcltechsw.com/domino/14.0.0/admin/inst_onetouch_troubleshooting.html).
 
-**Solution**:
+## Domino REST API not responding
 
-1. Stop your Domino REST API debugging session.
-2. Go into Notes, and then select **File** &rarr; **Security** &rarr; **User Security**.
-3. Select the **Don't prompt for a password from other Notes-based programs (reduces security)** checkbox.
-4. Exit Notes and restart your Domino REST API debugging session.
+You get a timeout error when trying to access `http://yourserver:8880`, wherein `yourserver` is the DNS name of your Domino server.
 
-This setting can get reset each time you start Notes depending upon your organization's Policy, in which case, you'll need to enable it again.
+**Solution**
 
-## Getting an empty response when executing an API request method after a server upgrade
+You need to check if the REST API is loaded.
 
-Check if the schema and the scope still exist. The schema is stored in the database the schema is for, while the scope is stored in `KeepConfig.nsf`. There is a probability that the schema is missing. One possible reason for this is that the server upgrade replaced the design of the database, as opposed to just refreshing the design. Replacing the design removes all the design elements in the database, including the schema, and updates it with the latest design from a template. It can happen to both the system and non-system databases.
+1. In the Domino server console, type `show tasks`.
+2. If there is no `restapi` entry in the list, load it using `load restapi` in the Domino console.
+3. If it's listed, shut it down with `tell restapi quit` before trying `load restapi`.
+4. Take note of any messages in case you need more support.
 
-**Solution**:
+## Domino REST API starts then stops working
 
-- You can create a new schema and scope and repeat the API request method.  
-- You can then protect the individual design elements of your database, including the new schema you created. For more information, see the [related topic](https://help.hcl-software.com/dom_designer/14.0.0/basic/H_TO_COPY_AN_INDIVIDUAL_DESIGN_ELEMENT_STEPS_MIDTOPIC_182746832029234956.html) in the *Domino Designer* documentation.
-
-## Getting a CORS error while trying to go into the Admin UI
-
-You get a CORS error when trying to access the **Admin UI**.
+This issue may be caused by conflicting libraries.
 
 **Solution**:
 
-You need to configure CORS. For more information, see [Configure CORS for AdminUI, OAuth and your applications](../howto/install/cors.md).
+1. Identify conflicting libraries.
+
+    !!! tip
+
+        Common conflicts involve the `Log4j` library.
+
+    1. Review the Domino REST API libraries in `{Domino REST API-install-directory}\libs`.
+    2. Compare these libraries with the libraries in `{DominoProgramDir}\jvm\lib\ext`.
+    3. Identify any conflicting libraries between the two locations.
+    
+        !!! note
+        
+            The library names may not match exactly.
+
+2. Move the conflicting libraries from `{DominoProgramDir}\jvm\lib\ext` to `{DominoProgramDir}\ndext`.
+3. Restart the Domino REST API.
+
+**Expected result**
+
+The Domino REST API should start and function properly.
+
+*If Domino REST API does not start*:
+
+1. Examine `domino-keep.log` for `Failed to load resource {pathToDominoData}\keepconfig.d\{somefile.json}` error, where `{somefile.json}` is the file name of the configuration JSON file with an error.
+
+    The possible causes of this error are:  
+
+    - The configuration JSON file is an invalid JSON.
+    - The file contains unescaped or improperly escaped characters.
+    - The file is not UTF-8 encoded.
+    - The file does not use the US charset.
+
+2. Correct the configuration JSON file using a local JSON validator, such as VS Code or Notepad++ with a JSON plugin.
+
+    !!! tip
+
+        Avoid using online validators as the file may contain customer data.
+
+3. Restart the Domino REST API.
+
+*If Domino REST API still fails to start*:
+
+1. Set `KeepAddinLogging=true` in the `notes.ini` file.
+2. Restart the Domino REST API.
+3. Collect logs, such as `console.log`, `domino-keep.log`, etc., and contact [Support](support.md) for further assistance.
 
 ## Domino REST API stops working or crashes
 
@@ -126,3 +137,41 @@ If the Domino REST API stops working or crashes, it may be due to insufficient J
         `KeepJavaHeapInMB=32000`
 
 3. Save the changes and restart the Domino REST API.
+
+## Getting a CORS error while trying to go into the Admin UI
+
+You get a CORS error when trying to access the **Admin UI**.
+
+**Solution**:
+
+You need to configure CORS. For more information, see [Configure CORS for AdminUI, OAuth and your applications](../howto/install/cors.md).
+
+## Getting an empty response when executing an API request method after a server upgrade
+
+Check if the schema and the scope still exist. The schema is stored in the database the schema is for, while the scope is stored in `KeepConfig.nsf`. There is a probability that the schema is missing. One possible reason for this is that the server upgrade replaced the design of the database, as opposed to just refreshing the design. Replacing the design removes all the design elements in the database, including the schema, and updates it with the latest design from a template. It can happen to both the system and non-system databases.
+
+**Solution**:
+
+- You can create a new schema and scope and repeat the API request method.  
+- You can then protect the individual design elements of your database, including the new schema you created. For more information, see the [related topic](https://help.hcl-software.com/dom_designer/14.0.0/basic/H_TO_COPY_AN_INDIVIDUAL_DESIGN_ELEMENT_STEPS_MIDTOPIC_182746832029234956.html) in the *Domino Designer* documentation.
+
+## Unable to start the Domino REST API Domino task after updating configuration to use https
+
+The `KeepManagementURL` setting in your `notes.ini` is the URL needed for the Domino REST API Domino task to talk to the Java side of Domino REST API. By default this is set to `http`. 
+
+**Solution**
+
+After updating the URL to `https`, run `load restapi`. For more information, see [Domino REST API task](../references/usingdominorestapi/restapitask.md).
+
+## User ID and password being requested repeatedly when using Notes for Domino REST API testing
+
+Sometimes on the initial starting up of the Domino REST API or creation of KeepConfig and KeepAgents databases, or doing things like creating a folder in mail database, you are prompted for user ID and password repeatedly. This happens if the **Don't prompt for a password** checkbox under **User Security** isn't selected or if it gets reset based on the organization's policy.
+
+**Solution**:
+
+1. Stop your Domino REST API debugging session.
+2. Go into Notes, and then select **File** &rarr; **Security** &rarr; **User Security**.
+3. Select the **Don't prompt for a password from other Notes-based programs (reduces security)** checkbox.
+4. Exit Notes and restart your Domino REST API debugging session.
+
+This setting can get reset each time you start Notes depending upon your organization's Policy, in which case, you'll need to enable it again.
