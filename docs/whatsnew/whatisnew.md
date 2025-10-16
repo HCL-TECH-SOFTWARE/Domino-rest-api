@@ -484,13 +484,13 @@
     - Added endpoint `GET v1/attachmentnames/{unid}` to return a list of attachments attached to this document.
     - Added endpoint `GET v1/preview` to list endpoints that are marked as preview, may be considered beta endpoints.
     
-    - Added ability to view and revoke OAuth consents in the AdminUI via the [OAuth Consents](../references/usingwebui/oauthconsentui.md#oauth-consents) pane.
+    - Added ability to view and revoke OAuth consents in the Admin UI via the [OAuth Consents](../references/usingwebui/oauthconsentui.md#oauth-consents) pane.
     
     **Improvements**
 
-    - Added the ability to [clone form modes](../references/usingwebui/schemaui.md#clone-a-mode) and [compare form modes](../references/usingwebui/schemaui.md#compare-modes) in the AdminUI.
+    - Added the ability to [clone form modes](../references/usingwebui/schemaui.md#clone-a-mode) and [compare form modes](../references/usingwebui/schemaui.md#compare-modes) in the Admin UI.
     
-    - Added the ability to [export a schema](../howto/database/exportsourcejson.md) and [import a schema](../references/usingwebui/schemaui.md#import-a-schema) in the AdminUI.
+    - Added the ability to [export a schema](../howto/database/exportsourcejson.md) and [import a schema](../references/usingwebui/schemaui.md#import-a-schema) in the Admin UI.
     
     - Added search feature in **Schema Management** to easily look for forms, views, and agents.  
     - Added ability to configure or unconfigure all database forms at the same time.

@@ -10,11 +10,11 @@ The Domino REST API doesn't expose any database to HTTP(S) by default. Enabling 
 
     ![Domino Designer with Domino REST API](../../assets/images/KeepSchemaFileResource2.png)
 
-    Most people will use [**Schema and Scope Management UI**](../../references/usingwebui/schemaui.md), also known as the **AdminUI**, to modify the schema. This can also be done through the API.
+    Most people will use [**Schema and Scope Management UI**](../../references/usingwebui/schemaui.md), also known as the **Admin UI**, to modify the schema. This can also be done through the API.
 
     A brave developer could use Domino designer to create or update the schema. If you manually modify your schema make sure to refresh the schema cache, see [**Domino REST API task**](../../references/usingdominorestapi/restapitask.md#domino-rest-api-task-commands) for details.
 
-2. **Link a schema to a scope** The scope configuration is stored in the `KeepConfig.nsf` database. This separation of `scope` and `schema` means multiple scopes can link to a single schema. You use the scope name when performing all CRUD operations, it's the value to the query param `dataSource`. You can create the scope using the API or the AdminUI.
+2. **Link a schema to a scope** The scope configuration is stored in the `KeepConfig.nsf` database. This separation of `scope` and `schema` means multiple scopes can link to a single schema. You use the scope name when performing all CRUD operations, it's the value to the query param `dataSource`. You can create the scope using the API or the Admin UI.
 
 3. Optional **Create an OAuth application** When you use Domino REST API as your IdP, you can create one or more OAuth applications that can access one or more of the defined scopes.
 
@@ -26,7 +26,7 @@ Since the exact terminology is long winded and colloquially often no distinction
 
 ![From DB to schema to scope](../../assets/images/KeepSchemaToApp.png)
 
-While the AdminUI helps to generate a Domino REST API schema from an existing form, there no technical need for a form to be present, other than the possibility to open the Notes document in a Notes client too. Creating such a Schema requires direct post to the API.
+While the Admin UI helps to generate a Domino REST API schema from an existing form, there no technical need for a form to be present, other than the possibility to open the Notes document in a Notes client too. Creating such a Schema requires direct post to the API.
 
 ## Schema components
 
@@ -41,7 +41,7 @@ The high level entry contains a few properties and the collection of forms, view
 | Entry                       | Description                                                                              |
 | --------------------------- | ---------------------------------------------------------------------------------------- |
 | **schemaName**              | internal name, matches the JSON filename in Domino design                               |
-| **description**             | visible in AdminUI                                                                       |
+| **description**             | visible in Admin UI                                                                       |
 | **nsfPath**                 | path to nsf relative to data directory                                                   |
 | **iconName**                | name of the icon (fixed set) used in the UI. Alternative `icon` can contain a Base64 svg |
 | **isActive**                | Can the API be used now                                                                  |
@@ -158,7 +158,7 @@ By assigning the fields `Name`, `age` and `fruit` the **fieldGroup** `LostBoys`,
 
 ### Form aliases
 
-The form aliases object allows to specify additional values in the form item to be mapped to the form configuration in the schema. The AdminUI will use form alias information extracted from the database design, but the API isn't bound to these settings
+The form aliases object allows to specify additional values in the form item to be mapped to the form configuration in the schema. The Admin UI will use form alias information extracted from the database design, but the API isn't bound to these settings
 
 ### Sample Schema
 
@@ -166,7 +166,7 @@ The form aliases object allows to specify additional values in the form item to 
 
 ## Enabling a database via Schema and Scope
 
-Follow the tutorial for instructions on how to do this using [AdminUI](../../tutorial/adminui.md) or [Postman or curl](../../tutorial/postmancurl.md).
+Follow the tutorial for instructions on how to do this using [Admin UI](../../tutorial/adminui.md) or [Postman or curl](../../tutorial/postmancurl.md).
 
 It's worth noting that all the actions that you can do using the Admin UI can also be done using Postman, curl, or any similar tool.
 Below are some examples to perform additional actions for database and application management, like adding a database, listing views, agents, and forms, and listing and adding application.

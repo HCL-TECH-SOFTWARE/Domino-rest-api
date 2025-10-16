@@ -1,4 +1,4 @@
-# Configure CORS for AdminUI, OAuth and your applications
+# Configure CORS for Admin UI, OAuth and your applications
 
 ## About this task
 

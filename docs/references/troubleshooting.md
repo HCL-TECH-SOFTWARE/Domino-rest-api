@@ -138,13 +138,28 @@ If the Domino REST API stops working or crashes, it may be due to insufficient J
 
 3. Save the changes and restart the Domino REST API.
 
-## Getting a CORS error while trying to go into the Admin UI
+## Getting a CORS error logging into Admin UI or when executing APIs
 
-You get a CORS error when trying to access the **Admin UI**.
+You get a CORS error when logging into the **Admin UI** or when executing APIs.
+
+!!! note
+
+    Domino REST API v1.1.2 through v1.1.5 do not display a CORS error when logging into the **Admin UI**. Instead, after clicking the **LOG IN** button, the login fails without any error message. If you are experiencing this issue, the CORS error will still appear in the browser's **Developer Tools**.
+
+    To check if your error is related to CORS: 
+    
+    1. Open the **Admin UI** login page in your browser.
+    2. Open the **Developer Tools** by right-clicking anywhere on the webpage and choosing **Inspect** or **Inspect Element** from the context menu. Alternatively, you can use keyboard shortcuts: press **F12** or **Ctrl+Shift+I** on Windows or Linux, or **Cmd+Option+I** on a Mac.
+    3. Select the **Network** tab and ensure that **Console** is visible at the bottom. 
+    
+        If **Console** is not visible, click the action menu represented by the three vertical dots in the top-right corner of the **Developer Tools** window and select **Show console drawer**.
+
+    4. Go to the **Admin UI** login page, and then log in to the **Admin UI**.
+    5. Go to the **Developer Tools** and check the **Console** under the **Network** tab to see the CORS error. You may need to scroll to see all the error messages.
 
 **Solution**:
 
-You need to configure CORS. For more information, see [Configure CORS for AdminUI, OAuth and your applications](../howto/install/cors.md).
+You need to configure CORS. For more information, see [Configure CORS for Admin UI, OAuth and your applications](../howto/install/cors.md).
 
 ## Getting an empty response when executing an API request method after a server upgrade
 
