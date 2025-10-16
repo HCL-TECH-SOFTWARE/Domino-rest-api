@@ -24,7 +24,7 @@ We don't try to boil the ocean, but follow Antoine de Saint-Exupéry who proclai
 - The Domino REST API configuration determines what items can be read/written per form and mode.
 - The Admin UI provides access to the field names of the form, but the API lets you specify any field name.
 - If an item doesn't exist in a document, it doesn't get returned.
-- When you have multiple forms with the same name, the AdminUI will pick one, we don't guarantee which one.
+- When you have multiple forms with the same name, the Admin UI will pick one, we don't guarantee which one.
 - Same applies for views: we pick the first we find. Unique aliases or names help to avoid ambiguity.
 - When an item name is not specified in the configuration, you can't read or write it.
 - We translate Rich Text to HTML/MIME. This is one way. We don't translate MIME back to Rich Text.

@@ -13,7 +13,7 @@ In this tutorial, we will use the database `Demo.nsf`. You can download it from 
 
 ## What's Next
 
-This tutorial includes multiple sections. You will see how to add a database to the Domino REST API configuration so that its content can be accessed by the Domino REST API. You will also perform basic actions like viewing the list of databases, checking the views and forms, creating a document, deleting a document and more. Each of these actions can be performed using the AdminUI or Postman/curl.
+This tutorial includes multiple sections. You will see how to add a database to the Domino REST API configuration so that its content can be accessed by the Domino REST API. You will also perform basic actions like viewing the list of databases, checking the views and forms, creating a document, deleting a document and more. Each of these actions can be performed using the Admin UI or Postman/curl.
 
 <!-- prettier-ignore -->
 !!! tip Quickstart for the busy professional
