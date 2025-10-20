@@ -57,7 +57,7 @@ This workshop is designed for a duration of 3.5 h (210 min) and covers the use a
 
 - Command line
 - POSTMAN (or your favorite REST client)
-- Domino REST AdminUI
+- Domino REST Admin UI
 - Code examples
 
 ## Agenda

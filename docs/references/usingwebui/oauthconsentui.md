@@ -7,7 +7,7 @@ Select **Consents** from the side navigation pane to access the **OAuth Consents
 The **OAuth Consents** page shows available OAuth consents. 
 
 !!!note
-    Users logged into the AdminUI that are in the `LocalKeepAdmins` group or are Managers in the `oauth.nsf` ACL will see all user consents and can revoke them as well.
+    Users logged into the Admin UI that are in the `LocalKeepAdmins` group or are Managers in the `oauth.nsf` ACL will see all user consents and can revoke them as well.
 
 [![OAuth Consent page](../../assets/images/oauthConsent.png)](../../assets/images/oauthConsent.png "Click to open in a new tab"){: target="_blank" rel="noopener noreferrer"}
 

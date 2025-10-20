@@ -6,14 +6,14 @@ The tutorials intends to familiarize Domino REST API administrators and Notes or
 
 <!-- prettier-ignore -->
 !!! note "Important"
-    
+
     Before starting the tutorial, make sure that Domino REST API is installed and running. For more information, see [Installation and configuration](../tutorial/installconfig/index.md).
 
 In this tutorial, we will use the database `Demo.nsf`. You can download it from [Downloadable resources](../references/downloads.md).
 
 ## What's Next
 
-This tutorial includes multiple sections. You will see how to add a database to the Domino REST API configuration so that its content can be accessed by the Domino REST API. You will also perform basic actions like viewing the list of databases, checking the views and forms, creating a document, deleting a document and more. Each of these actions can be performed using the AdminUI or Postman/curl.
+This tutorial includes multiple sections. You will see how to add a database to the Domino REST API configuration so that its content can be accessed by the Domino REST API. You will also perform basic actions like viewing the list of databases, checking the views and forms, creating a document, deleting a document and more. Each of these actions can be performed using the Admin UI or Postman/curl.
 
 <!-- prettier-ignore -->
 !!! tip Quickstart for the busy professional

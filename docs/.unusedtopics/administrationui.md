@@ -358,7 +358,7 @@ This opens the **OAuth Consents** pane.
 ![Revoke](../../assets/images/oauthConsent.png){: style="height:80%;width:80%"}
 
 !!!note
-    Users logged into the AdminUI that are in the `LocalKeepAdmins` group or are Managers in the `oauth.nsf` ACL will see all user consents and can revoke them as well.
+    Users logged into the Admin UI that are in the `LocalKeepAdmins` group or are Managers in the `oauth.nsf` ACL will see all user consents and can revoke them as well.
 
 ### View OAuth consent details
 

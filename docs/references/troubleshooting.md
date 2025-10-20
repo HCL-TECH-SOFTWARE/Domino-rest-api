@@ -102,7 +102,7 @@ You get a CORS error when trying to access the **Admin UI**.
 
 **Solution**:
 
-You need to configure CORS. For more information, see [Configure CORS for AdminUI, OAuth and your applications](../howto/install/cors.md).
+You need to configure CORS. For more information, see [Configure CORS for Admin UI, OAuth and your applications](../howto/install/cors.md).
 
 ## Domino REST API stops working or crashes
 
