@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # References
 
 <!--8<-- "feedback.md"-->

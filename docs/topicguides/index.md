@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Topic guides
 
 <!--8<-- "feedback.md"-->

@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # What's new
 
 The What's new contains information about the latest features, improvements, fixes, and changes, which include breaking changes, related to Domino REST API. Kindly read them carefully.
