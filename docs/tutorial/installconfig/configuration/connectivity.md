@@ -51,7 +51,7 @@ curl -v http://domino.acme.com:8880/api
 Try the following commands, which **MUST fail** with "connection denied" by your firewall.
 
 ```bash
-curl -v http://domino.acme.com:8880/metrics
+curl -v http://domino.acme.com:8890/metrics
 curl -v http://domino.acme.com:8889/
 curl -v http://domino.acme.com:8886/
 ```
@@ -130,7 +130,7 @@ curl -v http://domino.acme.com:8880/api
 Try the following ones and they **MUST fail** with "connection denied" by your firewall
 
 ```bash
-curl -v http://domino.acme.com:8880/metrics
+curl -v http://domino.acme.com:8890/metrics
 curl -v http://domino.acme.com:8889/
 curl -v http://domino.acme.com:8886/
 ```
