@@ -72,7 +72,7 @@ The HTML file contains only HTML and links to CSS and JavaScript. It does not co
 | `{{ claims }}`        | Repeat element for each scope requested, closes with `{{ claims }}` |
 | `{{ logoURL }}`       | Points to the scope icon configured in the Admin UI                  |
 | `{{ claim }}`         | Scope name as configured in the Admin UI                             |
-| `{{ description }}`   | Scope description as configure in the Admin UI                       |
+| `{{ description }}`   | Scope description as configured in the Admin UI                       |
 | `{{ client_id }}`     | UniqueId of the requesting application                              |
 | `{{ state }}`         | application state, required by OAUTH flow (don't touch)             |
 | `{{ redirect_uri }}`  | sends you to your app, configured in Admin UI (don't touch)          |
