@@ -12,7 +12,7 @@ By _convention_, documents contain an item with the name `Form` pointing to what
 
 Furthermore, a document might be viewed with different forms and/or change the value of its form item during its lifetime.
 
-These free for all capabilities aren't suitable to be exposed in an API. An API that states "You will get something JSON, but we can't tell what" is of limited use. Therefore, we considered how to define the shape of data to expose. Our initial approach was to just use the form design at runtime, but found this too limiting. Now the _Scope and Schema management UI_ (a.k.a. AdminUI) uses form design as input for a schema definition that's close to [JSON Schema](https://json-schema.org). Our resulting decisions/constrains are:
+These free for all capabilities aren't suitable to be exposed in an API. An API that states "You will get something JSON, but we can't tell what" is of limited use. Therefore, we considered how to define the shape of data to expose. Our initial approach was to just use the form design at runtime, but found this too limiting. Now the _Scope and Schema management UI_ (a.k.a. Admin UI) uses form design as input for a schema definition that's close to [JSON Schema](https://json-schema.org). Our resulting decisions/constrains are:
 
 - We use the value of the `form` item to link a document to 1:n schemas.
 - Documents without a `form` item aren't available in the API, but can contribute to views/forms.

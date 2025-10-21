@@ -10,7 +10,7 @@ Topics to guide you in completing goals and tasks related to installation, confi
 
 - [Modify configuration of Domino REST API](configparam.md)
 
-- [Configure CORS for AdminUI, OAuth and your apps](cors.md)
+- [Configure CORS for Admin UI, OAuth and your apps](cors.md)
 
 - [Install the Domino REST API on multiple servers](multiserver.md)
 

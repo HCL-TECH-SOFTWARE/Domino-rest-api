@@ -29,4 +29,4 @@ The Domino REST API **does NOT** support anonymous access.
 
 ## Access via curl / Postman
 
-Direct access to configuration via `curl` or `Postman` has the same access requirements as the AdminUI. The request header needs to have a `Authorization: Bearer heading` with a valid [JWT](../references/security/jwt.md) token. Since direct access doesn't perform lookups, only access to the target database, `KeepConfig.nsf` for administrators and the application databases for developers will need to be set correctly.
+Direct access to configuration via `curl` or `Postman` has the same access requirements as the Admin UI. The request header needs to have a `Authorization: Bearer heading` with a valid [JWT](../references/security/jwt.md) token. Since direct access doesn't perform lookups, only access to the target database, `KeepConfig.nsf` for administrators and the application databases for developers will need to be set correctly.

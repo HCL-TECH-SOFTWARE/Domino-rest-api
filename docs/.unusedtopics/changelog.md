@@ -6,7 +6,7 @@ This page lists the changes in each release. For the latest version information,
 
 - Update vert.x to 4.3.3
 - Update all Java dependencies
-- Fixed large amount of AdminUI and other bugs
+- Fixed large amount of Admin UI and other bugs
 - Installer for Windows and Linux (Java command line) available (Container image too)
 - Updated Postman examples
 - Updated landing page

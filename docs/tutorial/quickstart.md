@@ -7,7 +7,7 @@ This guide allows new users with working experience in HCL Notes and HCL Domino 
 
 - [Install](installconfig/index.md) and run the REST API
 
-- Follow [the tutorials](../tutorial/index.md) to learn about [AdminUI](../tutorial/adminui.md)
+- Follow [the tutorials](../tutorial/index.md) to learn about [Admin UI](../tutorial/adminui.md)
 
 - Read the introduction to the concepts, especially [schemas and scopes](../topicguides/understanding.md)
 

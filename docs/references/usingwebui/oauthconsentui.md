@@ -6,12 +6,14 @@ Select **Consents** from the side navigation pane to access the **OAuth Consents
 
 The **OAuth Consents** page shows available OAuth consents. 
 
-!!!note
-    Users logged into the AdminUI that are in the `LocalKeepAdmins` group or are Managers in the `oauth.nsf` ACL will see all user consents and can revoke them as well.
+!!! note
+
+    Users logged into the Admin UI that are in the `LocalKeepAdmins` group or are Managers in the `oauth.nsf` ACL will see all user consents and can revoke them as well.
 
 [![OAuth Consent page](../../assets/images/oauthConsent.png)](../../assets/images/oauthConsent.png "Click to open in a new tab"){: target="_blank" rel="noopener noreferrer"}
 
-!!!tip
+!!! tip
+
     - Use the **Search User** or **Search App Name** search fields to search a specific OAuth consent.
     - Use the **User** and **App Name** sorting arrow icons to sort the OAuth consents by user or app name in an alphabetical or reverse alphabetical order. 
     - Set the number of OAuth consents displayed on the page by selecting a value from **Rows per page**.
@@ -24,14 +26,16 @@ The **OAuth Consents** page shows available OAuth consents.
 
 - Click the expand arrow icon corresponding to a user in the list to show OAuth consent details, such as scope and URL.
 
-!!!tip
-    Clicking the collapse arrow icon corresponding to the user in the list with shown OAuth consent details hides the shown details. 
+!!! tip
+
+    Clicking the collapse arrow icon corresponding to the user in the list with shown OAuth consent details hides the shown details.
 
 **To show details of all OAuth consents**
 
 - Click **Expand all** to show details of all the OAuth consents.
 
-!!!tip
+!!! tip
+
     Clicking **Collapse all** hides the details of all the OAuth consents. 
 
 ## Filter OAuth consents
@@ -53,12 +57,13 @@ For more information on the filters, refer to the following table:
 |Token Expiration|Select All to display all OAuth consents regardless of token expiration.<br/><br/>Select **None** to display OAuth consents without token expiration.<br/><br/>Select **Custom** and then select a specific token expiration date from the date picker to show only OAuth consents with token expiration matching the selected token expiration date.|
 |Scopes|Select the scopes to show only OAuth consents with scopes matching the selected scopes.|
 
-!!!tip
+!!! tip
+
     Click **Reset** to clear all filters. 
 
 ## Revoke authorized user
 
 1. Click **Revoke** corresponding to the authorized user in the list that you want the authorization revoked.
-2. In the **Revoke Consent** dialog, click **Yes**. 
+2. In the **Revoke Consent** dialog, click **Yes**.
 
 The user is now removed from the authorized users list.
