@@ -20,32 +20,36 @@ Once the restapi task is loaded in the Domino console, you can use the following
 |`tell restapi quit`|Ends the Domino REST API.|
 |`tell restapi reload`|Restarts with new configuration.|
 |`tell restapi [show] info`|Shows loaded components.|
-|`tell restapi [show] config`|Shows current configuration.|
+|`tell restapi [show] config`|Shows current configuration.</br></br>You can add a JSON pointer parameter together with the console command to display specific configuration value instead of the entire JSON configuration. The parameter can be any first-level JSON key in the JSON configuration.</br></br>For example, running `tell restapi config oidc`, where `oidc` is the parameter, shows only the effective configuration for the *oidc* section of the configuration.|
 |`tell restapi [show] status`|Shows version information and state.|
 |`tell restapi refresh`|Refreshes Domino REST API with new configuration.<br/><br/> Once this command is issued, new incoming requests will be blocked, returning an HTTP Error 503 response. The existing queue of requests will be processed, and once completed, the new configuration will take effect, allowing new requests to be accepted.|
 |`tell restapi idpstatus`|Shows the state of the configured identity providers.|
 |`tell restapi support`|Creates a support package.|
-|`tell restapi support -includensf`|Creates a support package, including `KeepConfig.nsf`.|
+|`tell restapi support -includensf`|Creates a support package, including the `KeepConfig.nsf`.|
+|`tell restapi support -includedumps`|Creates a support package, including the Java Dump file, dump file of the active Java heap, and full dump file of the active JVM.|
+|`tell restapi support -includensf -includedumps`|Creates a support package, including the `KeepConfig.nsf`, the Java Dump file, dump file of the active Java heap, and full dump file of the active JVM.|
 |`tell restapi javadump`|Writes a Java Dump file to the data directory. The file contains human-readable information about the state of the Java Virtual Machine (JVM) and active threads, enabling developers and administrators to analyze and troubleshoot JVM behavior.|
 |`tell restapi heapdump`|Writes a dump file of the active Java heap to the data directory. The file is written in IBM's Portable Heap Dump (PHD) format and contains information about all active objects in the JVM.|
 |`tell restapi systemdump`|Writes a full dump file of the active JVM to the data directory. The file contains extensive information about the current Java state.|
 
 <!--|`tell restapi refresh cache [database] [application]`|Refreshes Domino REST API's database and application cache. Leave off optional parameters for both.|-->
 
+## Domino REST API settings for notes.ini
+
 The following are settings that can be set in the notes.ini
 
-| Setting                 | Requirement | Description                                                                                       |
+| Setting | Requirement | Description |
 | ----------------------- | ----------- | ------------------------------------------------------------------------------------------------- |
-| `KeepInstallDir`        | required    | Where Domino REST API is installed                                                                |
-| `KeepJavaHome`          | optional    | Use a different Java binary than the one in {dominoBin}/jvm                                       |
-| `KeepManagementURL`     | optional    | Domino REST API management URL if different than http://localhost:8889                            |
-| `KeepNumAttachAttempts` | optional    | Number of attempts to get status of Domino REST API launch (default 10). There is a 3-second interval between attempts.  |
-| `KeepLaunchWaitSecs`    | optional    | Number of seconds to wait before executing java command (default 0)                               |
-| **RESERVED**            |             | Only use when directed by support                                                                 |
-| `KeepLogConfigFile`     | optional    | Path to an alternate [Log4j2](https://logging.apache.org/log4j/2.x/index.html) configuration file |
-| `KeepCurlLogging`       | optional    | default `false`, prints curl commands to console                                                  |
-| `KeepAddinLogging`        | optional    | default `false`, prints debug statements for the restapi task                                      |
-| `KeepJavaHeapInMB`        | optional    | Amount of heap memory in Megabytes that should be allocated to Domino REST API.                                     |
+| `KeepInstallDir` | required | Where Domino REST API is installed |
+| `KeepJavaHome` | optional | Use a different Java binary than the one in {dominoBin}/jvm |
+| `KeepManagementURL` | optional | Domino REST API management URL if different than http://localhost:8889 |
+| `KeepNumAttachAttempts` | optional | Number of attempts to get status of Domino REST API launch (default 10). There is a 3-second interval between attempts. |
+| `KeepLaunchWaitSecs` | optional | Number of seconds to wait before executing java command (default 0) |
+| **RESERVED** |             | Only use when directed by support |
+| `KeepLogConfigFile` | optional | Path to an alternate [Log4j2](https://logging.apache.org/log4j/2.x/index.html) configuration file |
+| `KeepCurlLogging` | optional | default `false`, prints curl commands to console |
+| `KeepAddinLogging` | optional | default `false`, prints debug statements for the restapi task |
+| `KeepJavaHeapInMB` | optional | Amount of heap memory in Megabytes that should be allocated to Domino REST API. |
 
 
 !!! danger "Keep the KeepManagementURL parameter current"
