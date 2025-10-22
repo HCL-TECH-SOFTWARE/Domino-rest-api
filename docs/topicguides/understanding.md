@@ -31,7 +31,7 @@ These free for all capabilities aren't suitable to be exposed in an API. An API 
 
 ## Who Are You? It Depends
 
-Domino provides its own source of identity, the Domino directory. However this isn't the only option in use in customer environments. Furthermore, applications need to access data **on your behalf**. To accommodate this Domino REST API uses [JWT](https://jwt.io) tokens, defined [scopes](../references/usingdominorestapi/scopes.md) and an [OAuth 2.0](https://oauth.net/2/) compliant authorization service:
+Domino provides its own source of identity, the Domino directory. However this isn't the only option in use in customer environments. Furthermore, applications need to access data **on your behalf**. To accommodate this Domino REST API uses [JWT](https://jwt.io) tokens, defined [scopes](../references/schemacomponents/scopes.md) and an [OAuth 2.0](https://oauth.net/2/) compliant authorization service:
 
 - Authorization is provided using a JWT token defining permitted scope and user identity.
 - Direct login is provided for users, it can be deactivated.

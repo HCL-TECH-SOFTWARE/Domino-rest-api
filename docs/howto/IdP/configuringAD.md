@@ -61,7 +61,7 @@ The next step is to add the client credentials. Your application will need the *
 3. Select **Add a scope**.
 4. Specify the scope's attributes in the **Add a scope** pane.
 
-      Ensure admins and users can consent and that the scope is set to **Enabled**. For more information about scopes in Domino REST API, see [scopes reference](../../references/usingdominorestapi/scopes.md) and [scope topic guide](../../topicguides/understanding.md#databases-schemas-and-scopes).
+      Ensure admins and users can consent and that the scope is set to **Enabled**. For more information about scopes in Domino REST API, see [scopes reference](../../references/schemacomponents/scopes.md) and [scope topic guide](../../topicguides/understanding.md#databases-schemas-and-scopes).
 
       ![Azure app registration](../../assets/images/configuringAD-09.png){: style="height:70%;width:70%"}
 

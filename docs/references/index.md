@@ -5,34 +5,33 @@ hide:
 
 # References
 
-<!--8<-- "feedback.md"-->
+This section provides technical descriptions, configuration parameters, access control settings, troubleshooting steps, and other essential information for using HCL Domino REST API. It provides resources to help users effectively configure, manage, and utilize the Domino REST API.<!--This section provides technical references and descriptions for using HCL Domino REST API.-->
 
-This section provides technical references and descriptions for using HCL Domino REST API.
+## [System requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789)
 
-## System requirements
+Specifies the minimum system requirements necessary to install and run the Domino REST API, ensuring compatibility and optimal performance.<!--Provides the minimum system requirements for Domino REST API.-->
 
-Provides the minimum [system requirements for Domino REST API](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789).
+## [Installation and configuration](../tutorial/installconfig/index.md)
 
-## Installation and configuration
+Outlines the steps to install the Domino REST API and the necessary configuration tasks after installation to complete a production-ready deployment, ensuring full capability and a secure interface for your Domino applications.
 
-Provides information related to the [installation and configuration of Domino REST API](../tutorial/installconfig/index.md).
-
-- [Functional accounts](functionalUsers.md)
-
-## Configuration overview
+## [Configuration overview](configuration/index.md)
 
 Covers the core configuration concepts and parameters that enable effective management and customization of the Domino REST API.
 
-- [Configuration management and overlay hierarchy](configuration/understandingconfig.md)
+## [Functional accounts](functionalUsers.md)
 
-- [Configuration parameters](configuration/parameters.md)
+Describes functional accounts for accessing Domino REST API ports, each serving different purposes and requiring distinct access controls and security settings.
 
-## OpenAPI
+## [OpenAPI](openapidefinitions.md)
 
-[OpenAPI](openapidefinitions.md) definition and specifications
+ Discusses OpenAPI definitions and specifications.
+
 ## Access control
 
 [Access control for various parts of the REST API](accesscontrol.md)
+
+## Schema and scope overview
 
 ## Using Domino REST API
 
@@ -50,11 +49,11 @@ Covers the core configuration concepts and parameters that enable effective mana
 
 - [Form and Alias handling](usingdominorestapi/formnames.md)
 
-- [Scopes](usingdominorestapi/scopes.md)
-
 - [Rich Text](usingdominorestapi/richtext/index.md)
 
 - [Reserved Form Modes](usingdominorestapi/modenames.md)
+
+## Using Admin UI
 
 ## Security
 
@@ -84,6 +83,8 @@ Covers the core configuration concepts and parameters that enable effective mana
 
 <!-- [Swagger UI](usertools/swagger.md)-->
 
+## Extensibility
+
 ## Domino REST API SDKs
 
 List of available [Domino REST API SDKs](sdk.md)
@@ -96,11 +97,9 @@ For addressing common errors in installing and running the Domino REST API servi
 
 Outlines known limitations and important considerations for using the Domino REST API. To learn more, see [Limitations and constrains](limitation.md).
 
-## Quick reference
+## Standard and glossary
 
-- [Standards](quickreference/standards.md) used by Domino REST API
-
-- [Glossary](quickreference/glossary.md)
+[Reference](standards.md) of standards and commonly used terms for the Domino REST API.
 
 ## Contact support
 
@@ -114,7 +113,7 @@ For scripts, Postman collections, sample databases, and more, see [Downloads](do
 
 For information that administrator users need to know, see [Admin cheat sheet](admincheatsheet.md).
 -->
-## Extensions
+## Rich Text extensions
 
 <!-- [Extensions to open Microsoft Office in OFBA](ofba.md)-->
 
@@ -123,6 +122,8 @@ For information that administrator users need to know, see [Admin cheat sheet](a
 ## Deprecated features
 
 [Deprecated features](deprecated.md) from the current and earlier releases
+
+## Guide to documentation
 
 ## Documentation references
 

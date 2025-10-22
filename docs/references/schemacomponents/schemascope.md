@@ -33,7 +33,7 @@ Tutorials
 - [Lab 04 - Additional scope & schema](../../tutorial/walkthrough/lab-04.md)
 - [Using Postman and curl to create a scope](../../tutorial/postmancurl.md#create-a-scope)
 - [Using Postman and curl to create a schema](../../tutorial/postmancurl.md#create-a-schema)
-- [Steps in creating a schema and scope in Quick Config](../../tutorial/walkthrough/lab-02.md#steps-in-creating-a-schema-and-scope-in-quick-config)
+- [Steps in creating a schema and scope in Quick Config](../../tutorial/walkthrough/lab-02.md#procedure)
 
 How-to guides
 
@@ -47,7 +47,7 @@ How-to guides
 References
 
 - [Schema Management](../usingwebui/schemaui.md)
-- [Scopes](../usingdominorestapi/scopes.md)
+- [Scopes](../schemacomponents/scopes.md)
 - [Scope Management](../usingwebui/scopeui.md)
 - [Databases, schemas and scopes](../../topicguides/understanding.md#databases-schemas-and-scopes)
 - [Form and Alias handling](../usingdominorestapi/formnames.md)
