@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Scheme and scope overview
 
 Introduces key concepts essential to working with and using the Domino REST API.

@@ -1,5 +1,7 @@
 # Health & metrics
 
+## Overview
+
 Cloud and Kubernetes compatible health monitoring and system metrics in [Prometheus](https://prometheus.io/) format.
 
 ## How it works
@@ -25,7 +27,3 @@ Metrics are exposed on their own dedicated port, **METRICSPORT** in the config. 
 - [Metrics](../../howto/production/metrics.md)
 - [Healthcheck Port (8886)](../configuringPorts.md#healthcheck-port-8886)
 - [Port for Prometheus metrics (8890)](../configuringPorts.md#port-for-prometheus-metrics-8890)
-
-<!--## Let's connect
-
-"feedback.md"-->

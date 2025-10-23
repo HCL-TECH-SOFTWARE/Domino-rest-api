@@ -1,8 +1,6 @@
----
-title: Downloads
----
+# Downloads
 
-# Downloadable assets to get you started
+Downloadable assets to get you started in using the Domino REST API.
 
 ## Domino REST API
 
@@ -22,6 +20,7 @@ Download from [My HCLSoftware Portal](https://my.hcltechsw.com/){: target="_blan
 
     <!-- prettier-ignore -->
     !!! note ".env"
+
         Rename this file to `.env` and update your values before use.
 
 ## Postman

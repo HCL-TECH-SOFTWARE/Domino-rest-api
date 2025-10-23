@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Configuration overview
 
 This topic covers the core configuration concepts and parameters that enable effective management and customization of the Domino REST API.

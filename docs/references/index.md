@@ -27,43 +27,33 @@ Describes functional accounts for accessing Domino REST API ports, each serving 
 
  Discusses OpenAPI definitions and specifications.
 
-## Access control
+## [Access control](accesscontrol.md)
 
-[Access control for various parts of the REST API](accesscontrol.md)
+Details responsibilities and access rights of key roles and discusses application access, anonymous access, and access requirements for certain tools.
 
-## Schema and scope overview
+## [Schema and scope overview](schemacomponents/index.md)
 
-## Using Domino REST API
+Introduces key concepts essential to working with and using the Domino REST API.
 
-- [Overview](usingdominorestapi/index.md)
+## [Using Domino REST API](usingdominorestapi/index.md)
 
-- [Domino REST API CLI](usingdominorestapi/keepcli.md)
+Provides essential information for effectively using the Domino REST API.
 
-- [Domino REST API task](usingdominorestapi/restapitask.md)
+## [Using Admin UI](usingwebui/index.md)
 
-- [Domino REST API roles](usingdominorestapi/roles.md)
+Introduces the web-based, intuitive interface that allows users to manage schemas, scopes, and applications.
 
-- [Domino REST API Applications](usingdominorestapi/keepapplications.md)
+## [Security](security/index.md)
 
-- [DataFormats](usingdominorestapi/dataformats.md)
-
-- [Form and Alias handling](usingdominorestapi/formnames.md)
-
-- [Rich Text](usingdominorestapi/richtext/index.md)
-
-- [Reserved Form Modes](usingdominorestapi/modenames.md)
-
-## Using Admin UI
-
-## Security
-
+Describes the multi-layered security measures implemented by the Domino REST API.
+<!--
 - [Security overview](security/index.md)
 
 - [Auth\*](security/authentication.md)
 
 - [JSON Web Token configuration](security/jwt.md)
 
-<!-- [Configuration parameters](security/configurationParameters.md)-->
+<!-- [Configuration parameters](security/configurationParameters.md)
 
 - [Encryption keys](security/encryption.md)
 
@@ -72,9 +62,11 @@ Describes functional accounts for accessing Domino REST API ports, each serving 
 - [Custom Identity Provider](security/customIdp.md)
 
 - [Securing Domino REST API endpoints](security/securingKEEPEndpoints.md)
+-->
+## [User tools](usertools/index.md)
 
-## User tools
-
+List of tools you can use when dealing with REST APIs.
+<!--
 - [Overview](usertools/index.md)
 
 - [curl](usertools/curl.md)
@@ -83,47 +75,49 @@ Describes functional accounts for accessing Domino REST API ports, each serving 
 
 <!-- [Swagger UI](usertools/swagger.md)-->
 
-## Extensibility
+## [Extensibility](extensibility/index.md)
 
-## Domino REST API SDKs
+Introduces the required fundamental understanding of the architecture, tooling, and extension points to ease the extensibility of the Domino REST API.
 
-List of available [Domino REST API SDKs](sdk.md)
+## [Domino REST API SDKs](sdk.md)
 
-## Troubleshooting
+List of available Domino REST API SDKs
 
-For addressing common errors in installing and running the Domino REST API service, see [Troubleshooting](troubleshooting.md)
+## [Troubleshooting](troubleshooting.md)
 
-## Limitations and constraints
+Details common errors in installing and running the Domino REST API service and their corresponding resolutions.
 
-Outlines known limitations and important considerations for using the Domino REST API. To learn more, see [Limitations and constrains](limitation.md).
+## [Limitations and constraints](limitation.md)
 
-## Standard and glossary
+Outlines known limitations and important considerations for using the Domino REST API.
 
-[Reference](standards.md) of standards and commonly used terms for the Domino REST API.
+## [Standards and glossary](standards.md)
 
-## Contact support
+List of standards and commonly used terms for the Domino REST API.
 
-Helps you understand what information to provide to ensure that your support needs are addressed effectively. To learn more, see [Contact support](support.md)
+## [Contact support](support.md)
 
-## Downloads
+Helps you understand what information to provide to ensure that your support needs are addressed effectively. 
 
-For scripts, Postman collections, sample databases, and more, see [Downloads](downloads.md).
+## [Downloads](downloads.md)
+
+Downloadable assets to get you started in using the Domino REST API.
 
 <!--## Admin cheat sheet
 
 For information that administrator users need to know, see [Admin cheat sheet](admincheatsheet.md).
 -->
-## Rich Text extensions
+## [Rich Text extensions](richtextension.md)
 
-<!-- [Extensions to open Microsoft Office in OFBA](ofba.md)-->
+Details how users can have or use their own implementation of Rich Text processors to better meet specific needs and enhance Rich Text representation.
 
-- [Rich Text extensions](richtextension.md)
+## [Deprecated features](deprecated.md)
 
-## Deprecated features
+List of deprecated features along with recommended alternatives to ensure a smooth transition and continued compatibility with current and future versions of the Domino REST API.
 
-[Deprecated features](deprecated.md) from the current and earlier releases
+## [Guide to documentation](docguide.md)
 
-## Guide to documentation
+Provides information on using the Domino REST API documentation.
 
 ## Documentation references
 
