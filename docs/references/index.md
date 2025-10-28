@@ -5,7 +5,7 @@ hide:
 
 # References
 
-This section provides technical descriptions, configuration parameters, access control settings, troubleshooting steps, and other essential information for using HCL Domino REST API. It provides resources to help users effectively configure, manage, and utilize the Domino REST API.<!--This section provides technical references and descriptions for using HCL Domino REST API.-->
+This section provides technical descriptions, configuration parameters, access control settings, troubleshooting steps, and other essential information for using HCL Domino REST API. It provides resources to help you effectively configure, manage, and utilize the Domino REST API.<!--This section provides technical references and descriptions for using HCL Domino REST API.-->
 
 ## [System requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789)
 
@@ -46,6 +46,11 @@ Introduces the web-based, intuitive interface that allows users to manage schema
 ## [Security](security/index.md)
 
 Describes the multi-layered security measures implemented by the Domino REST API.
+
+## [Extensibility](extensibility/index.md)
+
+Introduces the required fundamental understanding of the architecture, tooling, and extension points to ease the extensibility of the Domino REST API.
+
 <!--
 - [Security overview](security/index.md)
 
@@ -62,11 +67,11 @@ Describes the multi-layered security measures implemented by the Domino REST API
 - [Custom Identity Provider](security/customIdp.md)
 
 - [Securing Domino REST API endpoints](security/securingKEEPEndpoints.md)
--->
-## [User tools](usertools/index.md)
+
+## [User tools](usertools.md)
 
 List of tools you can use when dealing with REST APIs.
-<!--
+
 - [Overview](usertools/index.md)
 
 - [curl](usertools/curl.md)
@@ -74,10 +79,6 @@ List of tools you can use when dealing with REST APIs.
 - [Postman](usertools/postman.md)
 
 <!-- [Swagger UI](usertools/swagger.md)-->
-
-## [Extensibility](extensibility/index.md)
-
-Introduces the required fundamental understanding of the architecture, tooling, and extension points to ease the extensibility of the Domino REST API.
 
 ## [Domino REST API SDKs](sdk.md)
 
@@ -91,6 +92,10 @@ Details common errors in installing and running the Domino REST API service and 
 
 Outlines known limitations and important considerations for using the Domino REST API.
 
+## [Rich Text extensions](richtextension.md)
+
+Details how users can have or use their own implementation of Rich Text processors to better meet specific needs and enhance Rich Text representation.
+
 ## [Standards and glossary](standards.md)
 
 List of standards and commonly used terms for the Domino REST API.
@@ -98,6 +103,10 @@ List of standards and commonly used terms for the Domino REST API.
 ## [Contact support](support.md)
 
 Helps you understand what information to provide to ensure that your support needs are addressed effectively. 
+
+## [User tools](usertools.md)
+
+List of tools you can use when dealing with REST APIs.
 
 ## [Downloads](downloads.md)
 
@@ -107,9 +116,6 @@ Downloadable assets to get you started in using the Domino REST API.
 
 For information that administrator users need to know, see [Admin cheat sheet](admincheatsheet.md).
 -->
-## [Rich Text extensions](richtextension.md)
-
-Details how users can have or use their own implementation of Rich Text processors to better meet specific needs and enhance Rich Text representation.
 
 ## [Deprecated features](deprecated.md)
 
@@ -127,7 +133,7 @@ Provides information on using the Domino REST API documentation.
 
 [HCL Volt MX Go Documentation](https://opensource.hcltechsw.com/voltmxgo-documentation/)
 
-- Provides documentation and release information about HCL Volt MX Go. 
+- Provides documentation and release information about HCL Volt MX Go.
 
 ## Acknowledgements
 

@@ -15,18 +15,19 @@ nav:
   - Using Domino REST API: usingdominorestapi
   - Using Admin UI: usingwebui
   - Security: security
-  - User tools: usertools
+#  - User tools: usertools
   - Extensibility: extensibility
 #  - parameters.md
   - sdk.md
   - troubleshooting.md
   - limitation.md
+  - richtextension.md
   - Standards and glossary: standards.md
 #  - Quick reference: quickreference
   - support.md
+  - usertools.md
   - downloads.md
 #  - admincheatsheet.md
 #  - ofba.md
-  - richtextension.md
   - deprecated.md
   - docguide.md
