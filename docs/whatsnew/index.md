@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # What's new
 
 The What's new contains information about the latest features, improvements, fixes, and changes, which include breaking changes, related to Domino REST API. Kindly read them carefully.
@@ -10,13 +15,13 @@ The What's new contains information about the latest features, improvements, fix
 
 ???+ info "Release summary"
 
-    Release date: MMMM DD, 2025
+    Release date: November DD, 2025
 
     !!! danger "If you are upgrading from Domino REST API v1.1.2 or an earlier version, refer to important information regarding [CORS using Regex](v1.1.3.md#cors-is-now-using-regex)."
 
-    - **2** New features
-    - **2** Improvements
-    - **0** Resolved issues
+    - **3** New features
+    - **9** Improvements
+    <!-- **0** Resolved issues-->
     <!-- **0** New features-->
     <!-- **0** Breaking change-->
     <!-- **X** Preview features-->

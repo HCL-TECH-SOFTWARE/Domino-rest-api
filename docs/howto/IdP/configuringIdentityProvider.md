@@ -68,7 +68,7 @@ wherein:
 
 - `iss` stands for _Issuer_ and refers to the name of the IdP providing the claim.
 - `sub` stands for _Subject_ and refers to the full qualified X500 expanded Notes name, which starts with `CN=`.
-- `scope` refers to the databases and services that the user accesses. For more information, see [Scopes](../../references/usingdominorestapi/scopes.md).
+- `scope` refers to the databases and services that the user accesses. For more information, see [Scopes](../../references/schemacomponents/scopes.md).
 
 - `iat` stands for _Issued at_ and refers to the epoch time of creation.
 - `exp` stands for _Expiry_ and refers to the epoch time of expiration. It must fit into `maxJwtDuration` number of minutes.

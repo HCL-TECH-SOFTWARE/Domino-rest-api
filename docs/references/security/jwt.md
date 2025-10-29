@@ -12,7 +12,7 @@ When issuing a valid JWT, the payload of the JWT may include the following param
 |exp|Integer|Stands for *Expiry Time* and identifies the expiration time on or after which the JWT must not be accepted for processing. The expiration time must coincide with the defined value of the `maxJwtDuration` parameter. Its value is a NumericDate value.|
 |aud|Array|Stands for *Audience* and identifies the recipient that the JWT is intended for. Its only value is `Domino` (case-sensitive).|
 |CN|String|Stands for *Common Name* and has the same definition and values as the `sub` claim.|
-|scope|String|Refers to the databases and services that the user accesses. The values must be a space-separated list of database aliases, `Mail`, `$SETUP`, and/or `$DATA`.</br></br> For more information, see [Scopes](../usingdominorestapi/scopes.md)|
+|scope|String|Refers to the databases and services that the user accesses. The values must be a space-separated list of database aliases, `Mail`, `$SETUP`, and/or `$DATA`.</br></br> For more information, see [Scopes](../schemacomponents/scopes.md)|
 |email|String|Email address of the user whose Domino credentials were used to issue the JWT.|
 
 When processing and using an incoming JWT from an external IdP, you need to configure Domino REST API by creating a JSON file in `keepconfig.d`. The JSON file may include the following keys:

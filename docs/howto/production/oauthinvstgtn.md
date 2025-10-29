@@ -2,7 +2,7 @@
 
 ## About this task
 
-Guides you into OAuth authentication to use Domino REST API using [Bruno](../../references/usertools/bruno.md).
+Guides you into OAuth authentication to use Domino REST API using [Bruno](../../references/usertools.md).
 
 ## Before you begin
 

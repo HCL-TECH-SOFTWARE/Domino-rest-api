@@ -401,8 +401,8 @@
 
     {
       "title": "Scopes",
-      "old": "howkeepworks/scopes.html",
-      "new": "references/usingdominorestapi/scopes.html"
+      "old": "references/usingdominorestapi/scopes.html",
+      "new": "references/schemacomponents/scopes.html"
     },
 
     {
@@ -419,14 +419,14 @@
 
     {
       "title": "Glossary",
-      "old": "references/glossary.html",
-      "new": "references/quickreference/glossary.html"
+      "old": "references/quickreference/glossary.html",
+      "new": "references/standards.html"
     },
 
     {
       "title": "Standards",
-      "old": "references/standards.html",
-      "new": "references/quickreference/standards.html"
+      "old": "references/quickreference/standards.html",
+      "new": "references/standards.html"
     },
 
     {

@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Tutorials
 
 <!--8<-- "feedback.md"-->

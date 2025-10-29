@@ -119,7 +119,7 @@ In this example, you will learn and create a realm, a user, client scopes, clien
 
 5. Click **Client scopes**.
 
-      Each Domino REST API scope in Domino, that you want to make accessible in Keycloak, will need a client scope in Keycloak. This includes all named scopes (the lowercase ones), and the [special scopes](../../references/usingdominorestapi/scopes.md) like `$DATA` or `MAIL`.
+      Each Domino REST API scope in Domino, that you want to make accessible in Keycloak, will need a client scope in Keycloak. This includes all named scopes (the lowercase ones), and the [special scopes](../../references/schemacomponents/scopes.md) like `$DATA` or `MAIL`.
 
       Click **Create client scope**. Creating a client scope doesn't automatically expose it, for that, assign it to one or more clients. In this example, create a client scope named `demo`.
 

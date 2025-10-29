@@ -6,7 +6,7 @@ Good security isn't a one-trick pony, but a combination of factors.
 
 Here are what we implemented:
 
-- We use [Open Standards](../quickreference/standards.md) wherever appropriate. Standards enjoy more scrutiny from more eyeballs.
+- [Open Standards](../standards.md#standards) are used wherever appropriate. Standards enjoy more scrutiny from more eyeballs.
 
 - Domino REST API uses the [Eclipse Vert.x Framework](https://vertx.io), which supports many different versions of [SSL certificates](https://vertx.io/docs/vertx-core/java/#ssl) such as:
 
