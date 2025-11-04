@@ -49,7 +49,32 @@ The Domino REST API documentation is rendered using [Markdown](https://en.wikipe
 
 ### curl
 
-curl can be used to interact with the Domino REST APIs for hands-on practice. Additionally, the [JSONPlaceholder](https://jsonplaceholder.typicode.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:15px;width:15px"} site offers a safe, online REST API with fake data, allowing you to test and hone your curl skills without any risk. You can also check the following links to learn more about curl:
+curl can be used to interact with the Domino REST APIs for hands-on practice. Additionally, the [JSONPlaceholder](https://jsonplaceholder.typicode.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:15px;width:15px"} site offers a safe, online REST API with fake data, allowing you to test and hone your curl skills without any risk.
+
+curl is installed by default in the latest Mac and Windows systems. If you have installed **Git Bash** on your system, you can run curl commands directly from the Git Bash window without installing any other applications. In case you need to download curl for Windows, check the [curl download site](https://curl.haxx.se/windows/).
+
+The basic layout of a curl command is `curl [options] [URL]`, where:
+
+- `[options]` - Optional flags that modify the behavior of the curl command.
+- `[URL]` - Specifies one or more URLs from which to retrieve or send data.
+
+To see all the options, use `curl --help`.
+
+??? tip "Commonly-used options"
+
+    | Command Option               | Description                                                           |
+    | :--------------------------- | :-------------------------------------------------------------------- |
+    | -d, --data \<data\>          | HTTP POST data (that is the data payload for a post request)          |
+    | -i, --include                | Include response headers in the output                                |
+    | -I, --head                   | Show document info only (that is just the header)                     |
+    | -K, --config \<file\>        | Read config from a file (that is to get options from a file)          |
+    | -o, --output \<file\>        | Write response to a file instead of stdout                            |
+    | -O, --remote-name            | Write output to a file named as the remote file (that is to download a file) |
+    | -u, --user \<user:password\> | Server user and password (authentication)                             |
+    | -v, --verbose                | Make the operation more talkative                                     |
+    | -X, --request \<command\>    | Specify request command to use (that is a PUT command is: -X PUT)     |
+
+You can also check the following links to learn more about curl:
 
 - [curl Home Page](https://curl.se/)
 
@@ -66,7 +91,10 @@ After installing Postman, you need to configure it to use the Domino REST APIs b
 Download the Collection and Environment files from the [Downloads](downloads.md#postman) page, and then import them into Postman. For more information on importing to Postman, see [Data import and export in Postman](https://learning.postman.com/docs/getting-started/importing-and-exporting/importing-and-exporting-overview/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:15px;width:15px"}. After importing the files, you need to get authenticated as most Domino REST API calls require authentication. To do that:
 
 - Go to the **Collections** tab, and then select **Domino REST API** &rarr; **Authentication** &rarr; **Admin Login**.
-- In the Body section, enter **username** as *John Doe* and **password** as *password*, then click **Send** to log in.
+
+    ![Auth Example](../assets/images/AuthExample.png)
+
+- In the **Body** section, enter *John Doe* as the value of `"username"` and *password* as the value of `"password"`, then click **Send** to log in.
 
 Alternatively, you can set your credentials using the environment variables `AdminName` and `AdminPassword`. For more information on, see [Reuse data with variables and environments in Postman](https://learning.postman.com/docs/sending-requests/variables/variables-intro/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:15px;width:15px"}.
 
