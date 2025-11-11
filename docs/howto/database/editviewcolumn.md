@@ -2,9 +2,13 @@
 
 ## About this task
 
+!!! note
+
+    You don’t need to edit the database view if the database view design meets your requirements. Only edit it if you want to select specific columns or assign meaningful external names to the columns.
+
 The procedures guide you in editing a database view of a schema so you can:
 
-- select the columns you want to include in the view 
+- select the columns you want to include in the view
 - edit the external name of each selected column
 - reset an edited view to its initial state
 
@@ -19,7 +23,7 @@ The view should be in **Active** status. For more information, see [Activate a v
 1. Log in to the Domino REST API Admin UI and click **Database Management - REST API**.
 2. Select a schema on the **Schema Management** page.
 3. Click **Database Views** from the menu bar. 
-4. Click the pencil icon corresponding to the name of the view you want to edit. The **Edit (view name) Columns** page opens. 
+4. Click the pencil icon corresponding to the name of the view you want to edit. The **Edit (view name) Columns** page opens.
 5. From the left pane, select the columns that you want to include in the view. The names of the selected columns should appear in the right pane under **Column Name**.
 
     !!! tip
