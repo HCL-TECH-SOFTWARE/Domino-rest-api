@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # What's new
 
 The What's new contains information about the latest features, improvements, fixes, and changes, which include breaking changes, related to Domino REST API. Kindly read them carefully.
@@ -6,9 +11,26 @@ The What's new contains information about the latest features, improvements, fix
 
     Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](../references/deprecated.md).
 
-## Domino REST API v1.1.5
+## Domino REST API v1.1.6
 
 ???+ info "Release summary"
+
+    Release date: November 18, 2025
+
+    !!! danger "If you are upgrading from Domino REST API v1.1.2 or an earlier version, refer to important information regarding [CORS using Regex](v1.1.3.md#cors-is-now-using-regex)."
+
+    - **4** New features
+    - **8** Improvements
+    <!-- **0** Resolved issues-->
+    <!-- **0** New features-->
+    <!-- **0** Breaking change-->
+    <!-- **X** Preview features-->
+
+[Read the full details](v1.1.6.md)
+
+## Domino REST API v1.1.5
+
+??? info "Release summary"
 
     Release date: September 3, 2025
 

@@ -1,9 +1,15 @@
-# Standards
+# Standards and Glossary
 
-We love open standards, there are [so many to pick from](https://xkcd.com/927/).
+Provides a reference of standards and commonly used terms for the Domino REST API.
+
+## Standards
+
+Open standards are implemented whenever possible because they are more thoroughly scrutinized, have broader support, and facilitate easier interaction.
+
+<!--We love open standards, there are [so many to pick from](https://xkcd.com/927/).
 When possible, we implement those since they are better scrutinized, have wider support, and make interaction easier.
 
-In alphabetical order:
+In alphabetical order:-->
 
 - [ECMA-404](https://www.json.org/json-en.html): The JSON Data Interchange Standard (since XML is old and binary formats...)
 
@@ -42,3 +48,39 @@ In alphabetical order:
 - [RFC 7807](https://tools.ietf.org/html/rfc7807): Problem details for HTTP APIs
 
 - [RFC 8681](https://jmap.io/spec-mail.html): JSON implementation of mail and others
+
+## Glossary
+
+Commonly used terms for the Domino REST API.
+
+### JKS
+
+Java KeyStore, a repository of security certificates used for SSL encryption. Includes authorization and public and private keys.
+
+### JWT
+
+JSON Web Token, used for authentication between two trusted systems.
+
+### NSF
+
+Notes file system
+
+### PEM
+
+Base64 ASCII encoding security certificates used for SSL encryption. Includes authorization and public, private, and root keys.
+
+### PIM
+
+Personal Information Management such as mail calendar, contact, notebook/journals, tasks/todo's
+
+### PKS
+
+Security certificates used for SSL encryption.
+
+### keepconfig.d
+
+Directory where you can modify some of Domino REST API's settings. Located in your Domino data directory for all platforms. For example, in Linux, it's in **`/local/notesdata/keepconfig.d`**. In Windows, it's in **`C:\Domino\Data\keepconfig.d`**.
+
+### domino-keep.log
+
+The default file for storing logs. It's stored in the subdirectory `IBM_TECHNICAL_SUPPORT` of your `Notes/Domino` data directory. For more information, see [Logging](../howto/production/logging.md).

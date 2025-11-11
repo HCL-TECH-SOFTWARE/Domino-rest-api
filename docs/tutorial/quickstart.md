@@ -115,7 +115,7 @@ Based on your interest, start by exploring the following sections of this docume
 
 # Quickstart
 
-Welcome to the Domino REST API Quickstart guide. This guide is designed to help users with working experience in HCL Notes and HCL Domino to quickly install, configure, and start using Domino REST API. By following this guide, you'll get the Domino REST API up and running, understand the core concepts, and successfully perform your first API requests using tools like Swagger UI, Postman, or curl.
+This guide is designed to help users with working experience in HCL Notes and HCL Domino to quickly install, configure, and start using Domino REST API. By following this guide, you'll get the Domino REST API up and running, understand the core concepts, and successfully perform your first API requests using tools like Swagger UI, Postman, or curl.
 
 ## Step 1: Download the Domino REST API
 

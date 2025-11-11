@@ -1,13 +1,18 @@
 # Using Postman and curl
 
-This tutorial shows how to use Domino REST API using Postman and curl. Download the database `Demo.nsf` from [Resources](../references/downloads.md) and follow along. We also have a Postman collection and environment under [Resources](../references/downloads.md) to download and use for getting up to speed fast.
+This tutorial shows how to use Domino REST API using Postman and curl. To follow the tutorial:
 
-!!!note
-    You must install Postman and curl on your workstation. For more information, see [Postman](../references/usertools/postman.md) and [curl](../references/usertools/curl.md). 
+- [Download](../references/downloads.md#demonsf) the database `Demo.nsf`.
+- [Download](../references/downloads.md#postman) and use the Postman collection and environment.
+
+!!! note
+
+    You must install Postman and curl on your workstation. For more information, see [User tools](../references/usertools.md).
+    
 
 ## Prepare database access
 
-Download `Demo.nsf` from [Resources](../references/downloads.md) and save it in the Notes data directory.
+- Download `Demo.nsf` from [Resources](../references/downloads.md) and save it in the Notes data directory.
 
 ## Login
 

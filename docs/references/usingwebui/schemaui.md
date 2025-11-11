@@ -91,7 +91,11 @@ The `nsf` database file and schema are added to the schema list.
 1. Select a schema from the list of schemas to load the details.
 2. Select **Database Forms** from the menu bar to show the list of all the forms for the selected database schema.
 
-      ![List Forms](../../assets/images/ListOfForms2.png)
+    !!! tip
+
+        Click the **Show Active** toggle to the on position to only show active forms.
+
+      ![List Forms](../../assets/images/ListOfForms2.png){: style="height:70%;width:70%"}
 
 ## Add new form schema
 
@@ -274,7 +278,11 @@ Use this function to see the differences between the modes of a selected form. T
 1. Select a schema from the list of schemas to load the details.
 2. Select **Database Views** from the menu bar. This lists all the views for the selected schema.
 
-      ![List Views](../../assets/images/ListOfViews1.png)
+    !!! tip
+
+        Click the **Show Active** toggle to the on position to only show active views.
+
+      ![List Views](../../assets/images/ListOfViews1.png){: style="height:70%;width:70%"}
 
 ## Activate a view
 
@@ -303,7 +311,11 @@ See [Edit a database view of a schema](../../howto/database/editviewcolumn.md) f
 1. Select a schema from the list of schemas to load the details.
 2. Select **Database Agents** from the menu bar. This lists all the Agents for the selected database.
 
-      ![List Agents](../../assets/images/ListOfAgents.png)
+    !!! tip
+
+        Click the **Show Active** toggle to the on position to only show active agents.
+
+      ![List Agents](../../assets/images/ListOfAgents.png){: style="height:70%;width:70%"}
 
 ## Activate an agent
 

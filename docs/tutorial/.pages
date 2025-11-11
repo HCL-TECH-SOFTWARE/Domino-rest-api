@@ -4,11 +4,12 @@ nav:
   - index.md
   - quickstart.md
   - Installation and configuration: installconfig
-  - Walk through: walkthrough
-  - ToDo Database tutorial: https://opensource.hcltechsw.com/domino-keep-tutorials/pages/todo/index
-  - From Scratch tutorial: https://opensource.hcltechsw.com/domino-keep-tutorials/pages/domino-new/index
+  - Capability walkthrough: walkthrough
   - adminui.md
   - postmancurl.md
   - swagger.md
   - OData: odata
   - extensibility
+  - Domino ToDo Database tutorial: https://opensource.hcltechsw.com/domino-keep-tutorials/pages/todo/index
+  - New Domino Database tutorial: https://opensource.hcltechsw.com/domino-keep-tutorials/pages/domino-new/index
+  

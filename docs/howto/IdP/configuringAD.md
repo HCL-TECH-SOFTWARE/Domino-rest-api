@@ -61,7 +61,7 @@ The next step is to add the client credentials. Your application will need the *
 3. Select **Add a scope**.
 4. Specify the scope's attributes in the **Add a scope** pane.
 
-      Ensure admins and users can consent and that the scope is set to **Enabled**. For more information about scopes in Domino REST API, see [scopes reference](../../references/usingdominorestapi/scopes.md) and [scope topic guide](../../topicguides/understanding.md#databases-schemas-and-scopes).
+      Ensure admins and users can consent and that the scope is set to **Enabled**. For more information about scopes in Domino REST API, see [scopes reference](../../references/schemacomponents/scopes.md) and [scope topic guide](../../topicguides/understanding.md#databases-schemas-and-scopes).
 
       ![Azure app registration](../../assets/images/configuringAD-09.png){: style="height:70%;width:70%"}
 
@@ -143,26 +143,24 @@ All URLs are retrievable by accessing the _OpenID Connect_ metadata document, co
 
       ```json
       {
-      "jwt": {
-         "AzureAD01": {
-            "active": true,
-            "providerUrl": "https://login.microsoftonline.com/[your-tennantid-here]/v2.0/.well-known/openid-configuration",
-            "aud": "[your application id-here]",
-            "iss": "https://sts.windows.net/[your-tennantid-here]/",
-            "algorithm": "RS256"
-         }
-      }
+            "jwt": {
+                  "AzureIdP": {
+                        "active": true,
+                        "providerUrl": "https://login.microsoftonline.com/[your-tennantid-here]/v2.0/.well-known/openid-configuration",
+                        "aud": "[your-client-id-here]",
+                        "iss": "https://sts.windows.net/[your-tennantid-here]/",
+                        "algorithm": "RS256"
+                  }
+            }
       }
       ```
 
       Remarks:
 
       - The `AzureAD01` isn't a fixed value. Pick anything that makes it clear for you. Use the value as the filename too.
-
-      - The `aud` parameter is the Application ID in [Expose an API](#api-definition) (the `id` parameter in the manifest, **not** the Application ID URI).
-
+      - The `aud` parameter is the Application ID in [Add credentials](#add-credentials).
       - The `iss` parameter might be different from what the `openid-configuration` reports. Compare the values. It has been noticed that the URL changed from `https://login.microsoftonline.com/[your-tennantid-here]/v2.0` to `https://sts.windows.net/[your-tennantid-here]/`, if that's so you need to specify it here.
-      - Currently, Azure AD doesn't return the `alg` claim in the `jwks_uri`. Uou have to specify it here.
+      - Currently, Azure AD doesn't return the `alg` claim in the `jwks_uri`. You have to specify it here.
 
 3. Restart Domino REST API.
 

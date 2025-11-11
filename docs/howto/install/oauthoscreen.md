@@ -2,11 +2,11 @@
 
 !!! warning "Expert understanding required!"
 
-    Modifiying the consent screen is **not** for the faint of heart and should only be attempted when corporate identity mandates altering the look and feel. Exercise caution when attempting this. You must be proficient in HTML, CSS, CSP and Javascript.
+    Modifying the look and feel of the consent screen is a complex process and should only be attempted due to corporate identity requirements. Proceed with caution and ensure you are proficient in HTML, CSS, CSP, and JavaScript.
 
-![Consent Screen](../../assets/images/consentscreen.png)
+![Consent Screen](../../assets/images/consentscreen.png){: style="height:60%;width:60%"}
 
-The OAuth consent screen uses 3 files:
+The OAuth consent screen, as shown by the example image above, uses 3 files:
 
 - `authorization.html` located in `resources/oauth`
 - `authorization.css` located in `resources/webroot`
@@ -31,7 +31,7 @@ Steps to be taken to alter the look & feel of the consent screen
 
 !!! error "Content Security Policy in place!"
 
-    The consent screen uses a tight [CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP), You can't use inline CSS or JavaScript or load CSS or JavaScript from a different server.
+    The consent screen uses a tight [CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP). You can't use inline CSS or JavaScript, or load CSS or JavaScript from a different server.
 
 ## Procedure
 
