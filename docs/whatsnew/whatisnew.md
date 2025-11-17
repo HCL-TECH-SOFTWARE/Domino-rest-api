@@ -110,7 +110,7 @@
 
     **Others**
 
-    - Added [tip for ensuring successful round-trip editing on Windows](../howto/production/roundtrip.md#to-access-and-edit-the-ms-office-file-attachment).
+    - Added [tip for ensuring successful round-trip editing on Windows](../howto/production/roundtrip.md#access-and-edit-the-ms-office-file-attachment).
     
     - Added **Bruno** as one of the tools you can use when dealing with REST APIs. For more information, see [Bruno](../references/usertools.md).
     
