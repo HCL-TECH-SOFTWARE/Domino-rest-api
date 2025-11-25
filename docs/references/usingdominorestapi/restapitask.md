@@ -31,6 +31,9 @@ Once the restapi task is loaded in the Domino console, you can use the following
 |`tell restapi javadump`|Writes a Java Dump file to the data directory. The file contains human-readable information about the state of the Java Virtual Machine (JVM) and active threads, enabling developers and administrators to analyze and troubleshoot JVM behavior.|
 |`tell restapi heapdump`|Writes a dump file of the active Java heap to the data directory. The file is written in IBM's Portable Heap Dump (PHD) format and contains information about all active objects in the JVM.|
 |`tell restapi systemdump`|Writes a full dump file of the active JVM to the data directory. The file contains extensive information about the current Java state.|
+|`tell restapi jfr start`|Starts Java Flight Recorder (JFR) profiling.|
+|`tell restapi jfr stop`|Stops JFR profiling.|
+|`tell restapi jfr dump`|Writes dump files that contain detailed JFR profiling information. These dump files are useful for diagnosing, analyzing, and troubleshooting the behavior of Java applications and the JVM.|
 
 <!--|`tell restapi refresh cache [database] [application]`|Refreshes Domino REST API's database and application cache. Leave off optional parameters for both.|-->
 
