@@ -26,7 +26,7 @@ Access is on a per form basis
 - Landing page
 - postman endpoints
 
-## What's next
+## Next step
 
 Continue this tutorial for your use case:
 
