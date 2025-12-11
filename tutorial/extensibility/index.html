@@ -7385,17 +7385,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#future-versions-and-breaking-changes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Future versions and breaking changes
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -7418,29 +7407,24 @@
 
 <h1 id="extensibility-tutorial">Extensibility tutorial</h1>
 <p>The tutorial guides you through the creation of a custom URL endpoint that handles the approval and rejection of generic requests. To follow along, you need to be familiar with Java and Domino.</p>
-<h2 id="set-up-the-maven-java-project">Set up the Maven Java project</h2>
-<p>First step is to set up the Java project. It will use a published parent project and libraries installed with your Domino REST API installation.</p>
-<h2 id="create-openapi-specification">Create OpenAPI specification</h2>
+<div class="admonition warning">
+<p class="admonition-title">Future versions and breaking changes</p>
+<p>Although the goal is for Java extensibility APIs to remain stable over time, their details are more likely to change between major versions compared to the published REST API endpoints. Be sure to review the release notes for any version changes that might impact Java extensions.</p>
+</div>
+<h2 id="set-up-the-maven-java-project"><a href="javaproject.html">Set up the Maven Java project</a></h2>
+<p>The first step is to set up the Java project. It will use a published parent project and libraries installed with your Domino REST API installation.</p>
+<h2 id="create-openapi-specification"><a href="openapi.html">Create OpenAPI specification</a></h2>
 <p>The second step is to create an OpenAPI 3.0.x specification. It can be done using Notepad, but you want to use <a href="https://openapi.tools/#gui-editors">available tooling</a>. You can use <a href="https://editor.swagger.io/">Swagger Editor</a>, Redhat's <a href="https://www.apicur.io/">Apicurio</a>, or <a href="https://apigit.com/">APIGit</a>.</p>
-<h2 id="create-the-configjson">Create the config.json</h2>
+<h2 id="create-the-configjson"><a href="configjson.html">Create the config.json</a></h2>
 <p>Domino REST API is driven by a <a href="../../references/configuration/understandingconfig.html">dynamic configuration</a>. To get your extension recognized, you must provide the information what verticle will run your code and what classes implement your business logic. To do so, a file <code>resources/config/config.json</code> is required.</p>
-<h2 id="implement-business-logic">Implement business logic</h2>
+<h2 id="implement-business-logic"><a href="businesslogic.html">Implement business logic</a></h2>
 <p>To implement the functionality, two Java classes are involved. One is a handler class that takes in the http request and forwards it on the Eventbus. The other is a dbrequest class that performs the database interaction.</p>
 <p>For the most common use case of JSON in/out, the default handler performs all the necessary actions, no custom code is required.</p>
-<h2 id="access-control">Access Control</h2>
+<h2 id="access-control"><a href="accesscontrol.html">Access Control</a></h2>
 <p>Domino REST API follows Domino's access control with no exceptions. However, you can further tighten the security to be very specific on individual access requirements.</p>
-<h2 id="deployment">Deployment</h2>
-<h2 id="setting-up-a-devcontainer">Setting up a devcontainer</h2>
+<h2 id="deployment"><a href="deployment.html">Deployment</a></h2>
+<h2 id="setting-up-a-devcontainer"><a href="devcontainer.html">Setting up a devcontainer</a></h2>
 <p>This step is strictly optional. It can, after the initial setup steps, improve your developer experience by creating a well-known development environment.</p>
-<div class="admonition info">
-<p class="admonition-title">Next</p>
-<p><a href="javaproject.html">Set up the Maven Java project</a></p>
-</div>
-<h2 id="future-versions-and-breaking-changes">Future versions and breaking changes</h2>
-<p>While the intent is that Java extensibility APIs will be stable over time, the specifics are more likely to change across major versions than the published REST API endpoints. Be sure to check the release notes for any changes between versions that may affect Java extensions.</p>
-<!--## Let's connect
-
-"feedback.md"-->
 
 
 
@@ -7461,7 +7445,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 12, 2025 12:17:41 UTC">September 12, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 11, 2025 09:48:31 UTC">December 11, 2025</span>
   </span>
 
     
