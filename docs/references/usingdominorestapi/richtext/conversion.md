@@ -11,9 +11,9 @@ Incoming Rich Text is the Rich Text JSON specified on the request body as the va
 
 The following table is a matrix for submitted types together with its supported `createAdditional` switches and how it's stored as.
 
-!!!note
+!!! note
+
     `createAdditional` is an optional property in the Rich Text JSON that you use to specify what **alternative** types to create additionally from the original content. It saves a `multipart/alternative` MIME that contains the original content type and the specified types in the `create additional` property. Currently, the available values for `createAdditional` are ***plain*** and ***html***.
-    
 
 | Submitted type        | createAdditional | Stored as                                                               | Example                                           |
 |-----------------------|------------------|-------------------------------------------------------------------------|---------------------------------------------------|

@@ -1,6 +1,6 @@
 # Rich Text extension
 
-Rich Text extension is for customers or users that prefer to have or use their own implementation of Rich Text processor. Users will be able to adjust it to meet their own needs, resulting in a better representation of their Rich Text.
+Rich Text extension is for customers or users that prefer to have or use their own implementation of Rich Text processor. Users can customize it to better represent their Rich Text content.
 
 ## Extend Domino REST API Rich Text
 
@@ -8,7 +8,7 @@ Starting Domino REST API version `1.0.12`, you can now add Rich Text processors 
 
 ## Built-in Rich Text processors
 
-There has been no change for the existing processors, namely:
+The following existing processors have been unchanged:
 
 - mime
 - html
@@ -22,7 +22,7 @@ There are a number of things you should set up before you can create an extensio
 ### Install KEEP core and extension JARs
 
 1. Install Domino REST API using the Domino REST API installer.
-2. Find `keep-core-<version>.jar` and `keep-extension-<version>.jar` in the **Domino REST API install directory** and do a **Maven** install using the following command:
+2. Find `keep-core-<version>.jar` and `keep-extension-<version>.jar` in the Domino REST API install directory, and do a **Maven** install using the following command:
 
   ```shell
   mvn install:install-file -Dfile=<path-to-keep-core-jar>
@@ -57,11 +57,11 @@ This adds **KEEP Core** and the extension module to your local Maven M2 reposito
 
 4. Save the `pom.xml` after adding the dependency.
 
-!!!note
-    The **`scope`** is set to **`provided`** because you don't want the dependency to be compiled together with your Rich Text extension as you will be putting the extension JAR alongside the DRAPI JARs. The DRAPI JARs contain all the dependencies that your extension JAR needs.
+!!! note
 
-!!!note
-    Though DRAPI has many transitive dependencies, those listed in the `keep-extension` module directly are considered safe to rely on. Others may change in any version.
+    - The **`scope`** is set to **`provided`** because you don't want the dependency to be compiled together with your Rich Text extension as you will be putting the extension JAR alongside the Domino REST API JAR files. The Domino REST API JAR files contain all the dependencies that your extension JAR needs.
+
+    - Though Domino REST API has many transitive dependencies, those listed in the `keep-extension` module directly are considered safe to rely on. Others may change in any version.
 
 ### Creating your own Rich Text processors
 
@@ -75,10 +75,12 @@ This processes how the incoming Rich Text JSON is saved in the `richtext` field.
 
 There are four built-in incoming Rich Text processors:
 
-- `multipart/mixed` - used by default if `type` in Rich Text JSON doesn't equate to any existing Rich Text processor.
+- `multipart/mixed`[^1]
 - `text/plain`
 - `text/markdown`
 - `text/html`
+
+[^1]: Used by default if `type` in Rich Text JSON doesn't match any existing Rich Text processor.
 
 ##### Creating your own incoming Rich Text processor
 

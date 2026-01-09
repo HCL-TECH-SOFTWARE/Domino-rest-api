@@ -86,8 +86,8 @@ Domino REST API has an extensible architecture that allows it to serve multiple 
 
 ### Web GUI for Schema, Scope and App management
 
-We provide a [Web UI](../references/usingwebui/index.md) that facilitates managing schemas, scopes, and applications.
+We provide a [web UI](../references/usingwebui/index.md) that facilitates managing schemas, scopes, and applications.
 
 ### Design, admin and data
 
-Along with the application design and admin features, Domino REST API allows CRUD operations on documents, retrieval of collections (aka views and folders), execution of queries and submission of access control,and design and code, while maintaining and extending Domino’s security model.
+Along with the application design and admin features, Domino REST API allows CRUD operations on documents, retrieval of collections (aka views and folders), execution of queries and submission of access control, and design and code, while maintaining and extending Domino’s security model.

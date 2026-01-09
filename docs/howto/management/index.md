@@ -12,3 +12,4 @@ Topics to guide you in completing goals and tasks about Domino REST API requirin
 - [JWT multi server](jwtmultiserver.md)
 - [Release suspended users](suspendeduser.md)
 - [Use Domino console](console.md)
+- [Use Management console for encryption operations](encryptionops.md)
