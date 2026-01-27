@@ -1,6 +1,6 @@
 # Customize OAuth consent screen
 
-!!! warning "Expert understanding required!"
+!!! warning "Important"
 
     Modifying the look and feel of the consent screen is a complex process and should only be attempted due to corporate identity requirements. Proceed with caution and ensure you are proficient in HTML, CSS, CSP, and JavaScript.
 

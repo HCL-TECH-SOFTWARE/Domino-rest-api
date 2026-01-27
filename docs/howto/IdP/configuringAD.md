@@ -177,7 +177,7 @@ All URLs are retrievable by accessing the _OpenID Connect_ metadata document, co
 2. Extract the zip file.
 3. Navigate to the directory and run the web server using the following command:
 
-    !!! note "NodeJS required"
+    !!! note
 
         You need a current [NodeJS](https://nodejs.org/en) version installed.
 
@@ -186,7 +186,7 @@ All URLs are retrievable by accessing the _OpenID Connect_ metadata document, co
     node server.js
     ```
 
-    !!! warning "No production use of the code"
+    !!! warning
 
         Do **NOT** use this code in production.
 
@@ -194,10 +194,11 @@ All URLs are retrievable by accessing the _OpenID Connect_ metadata document, co
 
     ![Azure app registration](../../assets/images/configuringAD-20.png){: style="height:70%;width:70%"}
 
-!!! note "Include the Application ID URI"
+!!! note
 
-    When you specify the scopes, you need to include the "Include the Application ID URI" in the test form. The URI will be stripped from the resulting JWT token.
-    So to get `scp : "$DATA MAIL demo"` in the JWT, you must specify `api://dominorest/$DATA api://dominorest/MAIL api://dominorest/demo` where `api://dominorest` is whatever you specified as **Application ID URI**.
+    When specifying scopes, include the **Include the Application ID URI** in the test form. The URI gets stripped from the resulting JWT token.
+
+    So to get `scp : "$DATA MAIL demo"` in the JWT, specify `api://dominorest/$DATA api://dominorest/MAIL api://dominorest/demo` where `api://dominorest` is whatever you specified as **Application ID URI**.
 
 Azure redirects you to the `/redirect` URL. Typically, this page would auto process, but you want to marvel at the authorization code. When you click **Exchange token**, the ExpressJS server exchanges the code for a JWT and returns the list of configured endpoints as example. You can't do this with the browser alone, [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) prevents it.
 

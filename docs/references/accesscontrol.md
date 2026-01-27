@@ -14,12 +14,16 @@ The [Domino API Administrator](../references/usingdominorestapi/roles.md#dominod
 The [Domino Developer](../references/usingdominorestapi/roles.md#domino-developer) creates **schemas**. A schema resides in the individual database. To create, update, or delete a schema, they need `Designer` access to the application database. Access to `KeepConfig.nsf` can be as little as `Reader`,which is the default.
 
 <!-- prettier-ignore -->
-!!! note "Roles aren't mutually exclusive"
-    The various roles aren't mutually exclusive. A user can have both administrator and developer roles. In this case, they need the sum of access rights.
+!!! note
 
+    The roles are not mutually exclusive. A user can have both administrator and developer roles. In such cases, their access rights combine, giving them the total set of permissions from both roles.
+
+<!--
+The various roles aren't mutually exclusive. A user can have both administrator and developer roles. In this case, they need the sum of access rights.
+-->
 ## Application access
 
-The Domino REST API provides its own IdP (Identity Provider) implementation following OIDC standards. Applications are configured using a `client_id` and a `client_secret` to request access on behalf of an user.
+The Domino REST API provides its own IdP (Identity Provider) implementation following OIDC standards. Applications are configured using a `client_id` and a `client_secret` to request access on behalf of a user.
 
 When an enterprise IdP shall be used, the resulting `AccessToken` needs to comply with the [Domino REST API JWT specification](../references/security/jwt.md).
 

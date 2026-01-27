@@ -16,7 +16,7 @@ The four different ways to log in to the Domino REST API.
 
 The database `KeepConfig.nsf` uses the group `LocalKeepAdmins` for access control. You need to create this group in your Domino directory and assign your user account to this group.
 
-!!! note "Use your own credentials"
+!!! note
 
     The steps below use "KEEP Admin" and "passw0rd" as credentials. Replace those with the admin user on your Domino server.
 
@@ -32,7 +32,7 @@ curl --location --request POST "http://localhost:8880/api/v1/auth" \
    --data-raw '{"username" : "KEEP Admin", "password" : "passw0rd"}'
 ```
 
-!!! note "All on one line"
+!!! note
 
     The curl command above is one line. To enhance readability, it is broken
     into multiple lines using the "continuation character". On macOS/Linux

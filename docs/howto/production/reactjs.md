@@ -3,9 +3,9 @@
 
 The Domino REST API allows hosting [SPA](https://en.wikipedia.org/wiki/Single-page_application) in its `keepweb.d` directory. This page highlights the procedure to make this work with [ReactJS](https://react.dev).
 
-!!! warning "This is not a ReactJS tutorial"
+!!! warning
 
-    When you are not familiar with ReactJS, this is not the place for you. Rather, learn [open standards](https://www.webcomponents.org). But if you insist, check these [tutorials](https://www.google.com/search?q=react+tutorial+2023).
+    If you’re not familiar with ReactJS, this topic may not be the best starting point. Instead, consider learning about [open standards](https://www.webcomponents.org). However, if you’d like to explore React anyway, you can check out these [tutorials](https://www.google.com/search?q=react+tutorial+2023).
 
 ## Before you begin
 
@@ -19,7 +19,8 @@ In the steps below, the name of the application, and thus the folder name, will 
 
 1. To ensure proper path resolution, you need to add `PUBLIC_URL=/keepweb/mypromydominoreactject` parameter to `.env` file.
 
-    !!!note
+    !!! note
+
         `keepweb` can be something else in your configuration.
         
 2. Reconfigure React to use [HashRouter](https://reactrouter.com/en/main/router-components/hash-router) instead of [BrowserRouter](https://reactrouter.com/en/main/router-components/browser-router).

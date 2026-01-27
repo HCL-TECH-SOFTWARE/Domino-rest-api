@@ -33,6 +33,7 @@ This is used to run an agent in real time. The payload expects at least `agentNa
 <!-- prettier ignore -->
 
 !!! warning "Caution"
+
     Might not be supported on current version.
 
 This is used to run an agent in real time, passing the `unid` of a document to use as context and the `returnMode` to use to generate the response for the agent. If `returnMode` was not specified or does not exist, the default `{"agentResponse":"done"}` response is returned.
@@ -45,6 +46,7 @@ This is used to run an agent in real time, passing the `unid` of a document to u
 
 <!-- prettier-ignore -->
 !!! warning "Caution"
+
     Might not be supported on current version.
 
 This is used to run an agent asynchronously via Domino REST API. A successful response contains a status of "processing" and a uuid for the request. The uuid can be used to check the status of the agent (GET **/run/agentAsync/{uuid}**) or cancel the agent (DELETE **/run/agentAsync/{uuid}**). The payload is of the format:

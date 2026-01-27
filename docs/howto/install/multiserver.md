@@ -1,9 +1,8 @@
 # Deploy DRAPI to multiple servers
 
-The Domino REST API is designed to be able to share configuration between multiple servers. To do this succesfully, you need to plan carefully and follow the steps outlined here.
-Sharing configuration works not only for tightly coupled systems, but also for servers that ate just on the same org or even across Domain boundaries (as long as trust and replication are setup correctly and working).
+The Domino REST API is designed to support sharing configuration across multiple servers. To do this effectively, plan the deployment carefully and follow the steps outlined here. Configuration sharing works not only for tightly coupled systems, but also for servers within the same organization and even across domain boundaries, provided that trust relationships and replication are correctly configured and functioning.
 
-!!! warning "Not everything is shared"
+!!! warning "Important"
 
     Settings in `KeepConfig.nsf`, mostly scopes and oauth applications replicate. Configuration settings in `keepconfig.d` and `keepweb.d` are per server. When you want to share those, you need to manually copy them over.
 
@@ -113,7 +112,7 @@ You don't need access to the Admin UI on your spoke servers, it only increases t
 }
 ```
 
-!!! warning "Swagger UI"
+!!! warning
 
     This also disables the Swagger UI. So use a tool like [Bruno](https://www.usebruno.com/) instead.
 

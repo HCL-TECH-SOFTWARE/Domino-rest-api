@@ -2,9 +2,11 @@
 
 Sample code to interact with the Domino REST API in JavaScript. No additional libraries have been harmed.
 
-!!! note "Know your runtime"
+!!! note
 
-    The [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) API is ubiquitous in browsers, but available only in current versions of server side JavaScript environments like NodeJS (so check your documentation).
+    **Know your runtime.**
+
+    The [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) API works in all modern browsers. However, it is only available in current versions of the server-side JavaScript environments, such as NodeJS, so always check the documentation. 
 
 We will look at three functions that can give you a head start.
 

@@ -27,11 +27,11 @@ Should Domino use a permanent JWT Key, we can use a public/private key pair and 
 }
 ```
 
-!!! tip "Pro tip"
+!!! tip
 
-    The management UI (Port 8889) provides a one click option to create such key pairs and configuration entry stored in `keepconfig.d`
+    The **Management console** UI (port 8889) offers a one-click option to generate key pairs and configuration entry, which are stored in `keepconfig.d`.
 
-    These keys can be shared between Domino servers, allowing, for example, redirects to a different mail server.
+    These keys can be shared across Domino servers, enabling, for example, redirects to a different mail server.
 
 ### External JWT/OIDC providers
 
@@ -86,10 +86,11 @@ Alternatively, the public key and issuer information can be added to the configu
 }
 ```
 
-!!! warning "Keep the certs secure"
+!!! warning
 
-    It's the responsibility of the administrator to save key files in secure locations.
-    The better way is to [use the certstore.nsf](../../howto/install/multiserver.md#shared-jwt-keys-to-login-to-drapi)
+    **Keep certificates secure.**
+
+    Administrators must store key files in secure locations. For the best approach, [use the certstore.nsf](../../howto/install/multiserver.md#shared-jwt-keys-to-login-to-drapi).
 
 ### JWT Payload
 
@@ -132,7 +133,7 @@ By default, Domino REST API will expect that incoming tokens contain a Domino-fo
 
 ### Name resolution
 
-The Domino REST API probes for the existence of various claims in the JWT token to determine the user name. The claims are probed in the following sequence. On the first available claim, the probing stops.
+The Domino REST API probes for the existence of various claims in the JWT token to determine the username. The claims are probed in the following sequence. On the first available claim, the probing stops.
 
 1. keep.user.attr.dominoDn
 2. CN
@@ -166,7 +167,7 @@ The "oidc" is similar to "oidc-idpcat" or "jwt". The keys can be anything, like 
 
 | Items | Description |
 | :--- | :--- |
-| `active` | **Optional**, and can be useful for setting to false to temporarily disable something without deleting the config entirely. |
+| `active` | **Optional**</br></br>Temporarily disables something without deleting the config entirely when set to `false`. |
 | `providerURL` | It's the OIDC-provider-specific URL. It's in a form common for Keycloak, but Azure and others look different. |
 | `clientId` | It's the configured client ID from the OIDC provider. It is strongly recommended to use `Domino` as client name. |
 | `clientSecret` | It's the generated client secret from the OIDC provider, usually a randomly-generated hex string. |
@@ -174,9 +175,11 @@ The "oidc" is similar to "oidc-idpcat" or "jwt". The keys can be anything, like 
 
 ### OIDC with idpcat authentication
 
-!!! tip "We strongly recommend this option"
+!!! tip
 
-    The `OIDC idpcat` support lets you use providers configured in `idpcat.nsf` ("IdP Catalog") starting with Domino 14. To know more about creating `idpcat.nsf`, see [Configuring trusted OIDC providers](https://help.hcltechsw.com/domino/14.0.0/admin/secu_config_http_bearer_auth_t.html?hl=idp%2Ccatalog)
+    **This option is strongly recommended.**
+
+    The `OIDC idpcat` support lets you use providers configured in `idpcat.nsf` ("IdP Catalog") starting with Domino 14. To know more about creating `idpcat.nsf`, see [Configuring trusted OIDC providers](https://help.hcltechsw.com/domino/14.0.0/admin/secu_config_http_bearer_auth_t.html?hl=idp%2Ccatalog).
 
 The configuration is as follows in Domino REST API:
 
@@ -198,18 +201,18 @@ The configuration is as follows in Domino REST API:
 }
 ```
 
-| Items                                             | Description                                                                                                                               |
-| :------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------------------------- |
-| `active`                                          | **Optional** - Can be useful for setting to `false` to temporarily disable something without deleting the config entirely.                |
-| `providerUrl`                                     | It's the OIDC-provider-specific URL. It's in a form common for Keycloak, but Azure and others look different.                             |
-| `scope`                                           | A scope that is expected to be included in the token from the OIDC provider.                                                              |
-| `aud`                                             | A string or array of strings of audiences expected to be included in the token.                                                           |
-| `additionalClientIds`                             | **Optional** - Can be a string or array of strings of client IDs beyond the one configured in `idpcat.nsf` that will be considered valid. |
-| `userIdentifier` and `userIdentifierInLdapFormat` | **Optional**                                                                                                                              |
-| `microsoft`                                       | **Optional** - Can be used to enable MS-Azure-specific workarounds internally                                                             |
-| `allowExpired`                                    | **Optional**- Can be used to consider even expired tokens valid. This should generally only be used during development.                   |
+| Items |Description |
+| :--- | :--- |
+| `active` | **Optional**<br/><br/>Temporarily disables something without deleting the config entirely when set to `false`. |
+| `providerUrl` | It's the OIDC-provider-specific URL. It's in a form common for Keycloak, but Azure and others look different. |
+| `scope` | A scope that is expected to be included in the token from the OIDC provider. |
+| `aud` | A string or array of strings of audiences expected to be included in the token. |
+| `additionalClientIds` | **Optional**<br/><br/>Accepts either a single string or an array of strings representing client IDs, in addition to the one configured in `idpcat.nsf`, that will be recognized as valid. |
+| `userIdentifier` and `userIdentifierInLdapFormat` | **Optional** |
+| `microsoft` | **Optional**<br/><br/>Enables MS-Azure-specific workarounds internally. |
+| `allowExpired` | **Optional**<br/><br/>Allows expired tokens to be treated as valid. This option should typically be used only during development.                  |
 
-!!! note 
+!!! note
 
     - You can use `oidc-idpcat` authentication in the same places that "JWT" config blocks were used previously, just with some coordination with core Domino. 
     - "JWT" will work the same on Domino 14. There's no conflict if Domino REST API and Domino have completely distinct authentication providers. 
@@ -254,7 +257,7 @@ The following configuration allows Domino REST API to use Domino as an OIDC prov
 
 | Items | Description |
 | :--- | :--- |
-| `active` | **Optional** - Can be useful for setting to `false` to temporarily disable something without deleting the config entirely. |
+| `active` | **Optional**<br/><br/>Temporarily disables something without deleting the config entirely when set to `false`. |
 | `providerUrl` | The base URL that includes the name of the OIDC Domino server.<br/><br/>For example: `https://auth.mydomains.com/auth/protocol/oidc`|
 | `clientId` | It's the configured client ID from the OIDC provider. It's strongly recommended to use `Domino` as client name. |
 | `clientSecret` | It's the generated client secret from the OIDC provider, usually a randomly generated hex string. |
