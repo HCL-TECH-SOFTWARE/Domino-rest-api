@@ -6,7 +6,9 @@ Topics to guide you in completing goals and tasks about Identity Provider in rel
 
 - [Configure Domino Rest API IdP](configuredrapiIdP.md)
 
-- [Configure Domino REST API to Use an OIDC Provider](configureoidc.md)
+- [Configure Domino REST API to use an OIDC Provider](configureoidc.md)
+
+- [Configure Domino REST API to use Domino 14.5 as OIDC provider](configdomino145oidc.md)
 
 - [Configure Microsoft Entra ID as IdP](configuringAD.md)
 

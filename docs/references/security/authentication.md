@@ -235,7 +235,7 @@ Check [Configure Domino REST API to use an OIDC provider](../../howto/IdP/config
 
 !!! note "This is a preview feature in the Domino REST API v1.1.4 release, and applies to HCL Domino v14.5 or later only."
 
-Starting with HCL Domino v14.5, the Domino HTTP task can act as an OIDC identity provider. This feature allows administrators to leverage their existing Domino HTTP authentication experience to authenticate end users with applications, servers, and services that support OIDC.
+Starting with HCL Domino v14.5, the Domino HTTP task can act as an OIDC identity provider. This feature allows administrators to leverage their existing Domino HTTP authentication experience to authenticate end users with applications, servers, and services that support OIDC. For more information, see [Configure Domino REST API to use Domino 14.5 as OIDC provider](../../howto/IdP/configdomino145oidc.md).
 
 The following configuration allows Domino REST API to use Domino as an OIDC provider:
 
