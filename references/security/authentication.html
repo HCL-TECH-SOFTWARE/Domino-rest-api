@@ -27,15 +27,15 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Auth\* - HCL Domino REST API Documentation</title>
+        <title>Auth* - HCL Domino REST API Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -174,7 +174,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Auth\*
+              Auth*
             
           </span>
         </div>
@@ -3071,6 +3071,8 @@
       
         
       
+        
+      
     
     
     
@@ -3166,6 +3168,34 @@
     
   
     Configure Domino REST API to use an OIDC provider
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/IdP/configdomino145oidc.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configure Domino REST API to use Domino 14.5 as OIDC provider
   
 
     
@@ -6532,7 +6562,7 @@
   <span class="md-ellipsis">
     
   
-    Auth\*
+    Auth*
   
 
     
@@ -6550,7 +6580,7 @@
   <span class="md-ellipsis">
     
   
-    Auth\*
+    Auth*
   
 
     
@@ -6576,6 +6606,62 @@
       On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#oidc-with-idpcat-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OIDC with idpcat authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OIDC with idpcat authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#domino-as-an-oidc-provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Domino as an OIDC provider
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oidc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OIDC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OIDC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#differences-between-oidc-and-oidc-idpcat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Differences between oidc and oidc-idpcat
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#jwt-authorization" class="md-nav__link">
@@ -6627,56 +6713,6 @@
     <span class="md-ellipsis">
       
         Name resolution
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#oidc" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OIDC
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="OIDC">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#oidc-with-idpcat-authentication" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OIDC with idpcat authentication
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#differences-between-oidc-and-oidc-idpcat" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Differences between oidc and oidc-idpcat
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#domino-as-an-oidc-provider" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Domino as an OIDC provider
       
     </span>
   </a>
@@ -7491,6 +7527,62 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#oidc-with-idpcat-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OIDC with idpcat authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OIDC with idpcat authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#domino-as-an-oidc-provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Domino as an OIDC provider
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oidc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OIDC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OIDC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#differences-between-oidc-and-oidc-idpcat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Differences between oidc and oidc-idpcat
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#jwt-authorization" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7552,56 +7644,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#oidc" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OIDC
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="OIDC">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#oidc-with-idpcat-authentication" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OIDC with idpcat authentication
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#differences-between-oidc-and-oidc-idpcat" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Differences between oidc and oidc-idpcat
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#domino-as-an-oidc-provider" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Domino as an OIDC provider
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#client-ids" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7649,9 +7691,209 @@
 <p class="admonition-title">You have choices for your IdP</p>
 <p>There are multiple ways to configure an external IdP in the Domino REST API: <code>jwt</code>, <code>oidc</code>, and <code>oidc-idpcat</code>. When in doubt, use <code>oidc-idpcat</code>. Read the <a href="/Domino-rest-api/references/security/idpcompare.html">comparison</a> for details.</p>
 </div>
-<p>Domino REST API offers a built-in endpoint to exchange your Domino credentials for a valid JSON Web Token (JWT). This page describes the setup of <strong>external JWT identity providers</strong> (IdP).</p>
+<!--Domino REST API offers a built-in endpoint to exchange your Domino credentials for a valid JSON Web Token (JWT). This page describes the setup of **external JWT identity providers** (IdP).-->
+
+<h2 id="oidc-with-idpcat-authentication">OIDC with idpcat authentication</h2>
+<div class="admonition tip">
+<p class="admonition-title">We strongly recommend this option</p>
+<p>The <code>OIDC idpcat</code> support lets you use providers configured in <code>idpcat.nsf</code> ("IdP Catalog") starting with Domino 14. To know more about creating <code>idpcat.nsf</code>, see <a href="https://help.hcltechsw.com/domino/14.5.0/admin/secu_config_http_bearer_auth_t.html?hl=idp%2Ccatalog">Configuring trusted OIDC providers</a></p>
+</div>
+<p>The configuration is as follows in Domino REST API:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;oidc-idpcat&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;any-name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;active&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;providerUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://some.keycloak.server/auth/realms/some-realm&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$DATA&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;aud&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;account&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;additionalClientIds&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;keep-local&quot;</span><span class="p">],</span>
+<span class="w">      </span><span class="nt">&quot;userIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dn&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;userIdentifierInLdapFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;microsoft&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;allowExpired&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Items</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>active</code></td>
+<td style="text-align: left;"><strong>Optional</strong> - Can be useful for setting to <code>false</code> to temporarily disable something without deleting the config entirely.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>providerUrl</code></td>
+<td style="text-align: left;">It's the OIDC-provider-specific URL. It's in a form common for Keycloak, but Azure and others look different.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>scope</code></td>
+<td style="text-align: left;">A scope that is expected to be included in the token from the OIDC provider.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>aud</code></td>
+<td style="text-align: left;">A string or array of strings of audiences expected to be included in the token.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>additionalClientIds</code></td>
+<td style="text-align: left;"><strong>Optional</strong> - Can be a string or array of strings of client IDs beyond the one configured in <code>idpcat.nsf</code> that will be considered valid.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>userIdentifier</code> and <code>userIdentifierInLdapFormat</code></td>
+<td style="text-align: left;"><strong>Optional</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>microsoft</code></td>
+<td style="text-align: left;"><strong>Optional</strong> - Can be used to enable MS-Azure-specific workarounds internally</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>allowExpired</code></td>
+<td style="text-align: left;"><strong>Optional</strong>- Can be used to consider even expired tokens valid. This should generally only be used during development.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>You can use <code>oidc-idpcat</code> authentication in the same places that "JWT" config blocks were used previously, just with some coordination with core Domino. </li>
+<li>"JWT" will work the same on Domino 14. There's no conflict if Domino REST API and Domino have completely distinct authentication providers. </li>
+<li>
+<p>"oidc-idpcat" comes into play if you:</p>
+<ul>
+<li>want both Domino REST API and core Domino to use the same provider.</li>
+<li>are on Domino 14 or greater. There's no harm if you use "jwt" or "oidc" without configuring Domino, or even if they happen to point to the same location.</li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="domino-as-an-oidc-provider">Domino as an OIDC provider</h3>
+<div class="admonition note">
+<p class="admonition-title">This feature is available starting in the Domino REST API v1.1.4 release and applies only to HCL Domino v14.5 or later.</p>
+</div>
+<p>Starting with HCL Domino v14.5, the Domino HTTP task can act as an OIDC identity provider. This feature allows administrators to leverage their existing Domino HTTP authentication experience to authenticate end users with applications, servers, and services that support OIDC. For more information, see <a href="../../howto/IdP/configdomino145oidc.html">Configure Domino REST API to use Domino 14.5 as OIDC provider</a>.</p>
+<p>The following configuration allows Domino REST API to use Domino as an OIDC provider:</p>
+<!--
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;domino-oidc-idpcat&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;active&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;providerUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://&lt;domino oidc server&gt;/auth/protocol/oidc&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;clientId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;some-clientid&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;clientSecret&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;some-clientsecret&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Domino.user.all&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;aud&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://&lt;Domino REST API DNS name&gt;&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+</code></pre></div>
+-->
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;oidc-idpcat&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;domino-oidc-idpcat&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;active&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;providerUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://&lt;domino oidc server&gt;/auth/protocol/oidc&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$DATA&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;aud&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;some-audience&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Items</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>active</code></td>
+<td style="text-align: left;"><strong>Optional</strong> - Can be useful for setting to <code>false</code> to temporarily disable something without deleting the config entirely.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>providerUrl</code></td>
+<td style="text-align: left;">The base URL that includes the name of the OIDC Domino server.<br/><br/>For example: <code>https://auth.mydomains.com/auth/protocol/oidc</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>scope</code></td>
+<td style="text-align: left;">A scope that is expected to be included in the token from the OIDC provider. For example, <code>$DATA</code>,<code>email</code>, etc.<!--The scopes are <code>openid</code>, <code>email</code>, <code>profile</code>, <code>$DATA</code>, <code>Domino.user.all</code>. <code>Domino.user.all</code> is used for Domino HTTP.--></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>aud</code></td>
+<td style="text-align: left;">A string or array of strings of audiences expected to be included in the token. The value of the <code>aud</code> key can be set to <code>https://&lt;Domino REST API DNS name&gt;</code> to match what Domino HTTP expects.</td>
+</tr>
+</tbody>
+</table>
+<!--| `clientId` | It's the configured client ID from the OIDC provider. It's strongly recommended to use `Domino` as client name. |
+| `clientSecret` | It's the generated client secret from the OIDC provider, usually a randomly generated hex string. |-->
+
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>The Domino REST API configuration <strong>MUST NOT</strong> specify <code>additionalClientIds</code>. </p>
+</div>
+<h2 id="oidc">OIDC</h2>
+<p>OIDC (OpenID Connect) support lets you point at a standard OIDC provider like <a href="../../howto/IdP/configuringAD.html">Microsoft Entra ID formerly Azure Active Directory</a> or <a href="../../howto/IdP/configuringKeycloak.html">Keycloak</a>. It's similar to the <a href="#external-jwtoidc-providers">External JWT/OIDC provider configuration</a> when using <code>providerUrl</code>, but follows OIDC semantics a bit more internally - namely, it needs a client ID and client secret.</p>
+<p>It can be configured like:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;oidc&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;any-name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;active&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;providerUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://some.keycloak.server/auth/realms/some-realm&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;clientId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;some-clientid&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;clientSecret&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;some-clientsecret&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;userIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dn&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;userIdentifierInLdapFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The "oidc" is similar to "oidc-idpcat" or "jwt". The keys can be anything, like "any-name". This is the same idea as documented in <a href="#external-jwtoidc-providers">External JWT Provider configuration</a>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Items</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>active</code></td>
+<td style="text-align: left;"><strong>Optional</strong>, and can be useful for setting to false to temporarily disable something without deleting the config entirely.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>providerURL</code></td>
+<td style="text-align: left;">It's the OIDC-provider-specific URL. It's in a form common for Keycloak, but Azure and others look different.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>clientId</code></td>
+<td style="text-align: left;">It's the configured client ID from the OIDC provider. It is strongly recommended to use <code>Domino</code> as client name.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>clientSecret</code></td>
+<td style="text-align: left;">It's the generated client secret from the OIDC provider, usually a randomly-generated hex string.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>userIdentifier</code> and <code>userIdentifierInLdapFormat</code></td>
+<td style="text-align: left;"><strong>Optional</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="differences-between-oidc-and-oidc-idpcat">Differences between <code>oidc</code> and <code>oidc-idpcat</code></h3>
+<p>In general, <code>oidc</code> and <code>oidc-idpcat</code> achieve the same goal, which is to use a complete OIDC provider. The advantages of using the "oidc-idpcat" variation are as follows:</p>
+<ul>
+<li>If you've previously configured OIDC for standard Domino, you may reuse parts of the configuration, such as putting the client ID and client secret in a single location.</li>
+<li>Since Domino handles contacting the OIDC provider and caching keys, you benefit from that shared cache as well as shared diagnostics (for example, using notes.ini options for extra logging on the console).</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In general, you'd use any of these ("jwt", "oidc", "oidc-idpcat") when you either want to or have to have an external identity provider like Keycloak or Microsoft Entra ID, formerly Azure Active Directory, and have those tokens be usable for Domino REST API calls. Using either "jwt"-with-providerUrl or either of the "oidc" ones will let Domino REST API use standard OIDC endpoints to handle key lookup, avoiding the need to copy and paste signer keys into the Domino REST API config.</p>
+</div>
+<p>Check <a href="../../howto/IdP/configureoidc.html">Configure Domino REST API to use an OIDC provider</a>.</p>
 <h2 id="jwt-authorization">JWT Authorization</h2>
-<p>All actions in Domino REST API are secured with JWT. For starters, Domino provides a login endpoint that issues a valid JWT token to access Domino REST API in exchange for Domino credentials (user name and http password).</p>
+<p>All actions in Domino REST API are secured with JWT. For starters, Domino provides a login endpoint that issues a valid JWT token to access Domino REST API in exchange for Domino credentials (username and HTTP password).</p>
 <p>The Domino generated JWT:</p>
 <ul>
 <li>Uses a random symmetric key that changes on every Domino REST API restart and is stored only in memory.</li>
@@ -7669,7 +7911,7 @@
 <span class="p">}</span>
 </code></pre></div>
 <div class="admonition tip">
-<p class="admonition-title">Pro tip</p>
+<p class="admonition-title">Tip</p>
 <p>The management UI (Port 8889) provides a one click option to create such key pairs and configuration entry stored in <code>keepconfig.d</code></p>
 <p>These keys can be shared between Domino servers, allowing, for example, redirects to a different mail server.</p>
 </div>
@@ -7761,197 +8003,6 @@ The better way is to <a href="../../howto/install/multiserver.html#shared-jwt-ke
 <li>email</li>
 <li>sub</li>
 </ol>
-<h2 id="oidc">OIDC</h2>
-<p>OIDC (OpenID Connect) support lets you point at a standard OIDC provider like <a href="../../howto/IdP/configuringAD.html">Microsoft Entra ID formerly Azure Active Directory</a> or <a href="../../howto/IdP/configuringKeycloak.html">Keycloak</a>. It's similar to the <a href="#external-jwtoidc-providers">External JWT/OIDC provider configuration</a> when using <code>providerUrl</code>, but follows OIDC semantics a bit more internally - namely, it needs a client ID and client secret.</p>
-<p>It can be configured like:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;oidc&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;any-name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;active&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;providerUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://some.keycloak.server/auth/realms/some-realm&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;clientId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;some-clientid&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;clientSecret&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;some-clientsecret&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;userIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dn&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;userIdentifierInLdapFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>The "oidc" is similar to "oidc-idpcat" or "jwt". The keys can be anything, like "any-name". This is the same idea as documented in <a href="#external-jwtoidc-providers">External JWT Provider configuration</a>.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Items</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>active</code></td>
-<td style="text-align: left;"><strong>Optional</strong>, and can be useful for setting to false to temporarily disable something without deleting the config entirely.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>providerURL</code></td>
-<td style="text-align: left;">It's the OIDC-provider-specific URL. It's in a form common for Keycloak, but Azure and others look different.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>clientId</code></td>
-<td style="text-align: left;">It's the configured client ID from the OIDC provider. It is strongly recommended to use <code>Domino</code> as client name.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>clientSecret</code></td>
-<td style="text-align: left;">It's the generated client secret from the OIDC provider, usually a randomly-generated hex string.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>userIdentifier</code> and <code>userIdentifierInLdapFormat</code></td>
-<td style="text-align: left;"><strong>Optional</strong></td>
-</tr>
-</tbody>
-</table>
-<h3 id="oidc-with-idpcat-authentication">OIDC with idpcat authentication</h3>
-<div class="admonition tip">
-<p class="admonition-title">We strongly recommend this option</p>
-<p>The <code>OIDC idpcat</code> support lets you use providers configured in <code>idpcat.nsf</code> ("IdP Catalog") starting with Domino 14. To know more about creating <code>idpcat.nsf</code>, see <a href="https://help.hcltechsw.com/domino/14.0.0/admin/secu_config_http_bearer_auth_t.html?hl=idp%2Ccatalog">Configuring trusted OIDC providers</a></p>
-</div>
-<p>The configuration is as follows in Domino REST API:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;oidc-idpcat&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;any-name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;active&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;providerUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://some.keycloak.server/auth/realms/some-realm&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$DATA&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;aud&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;account&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;additionalClientIds&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;keep-local&quot;</span><span class="p">],</span>
-<span class="w">      </span><span class="nt">&quot;userIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dn&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;userIdentifierInLdapFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;microsoft&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;allowExpired&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Items</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>active</code></td>
-<td style="text-align: left;"><strong>Optional</strong> - Can be useful for setting to <code>false</code> to temporarily disable something without deleting the config entirely.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>providerUrl</code></td>
-<td style="text-align: left;">It's the OIDC-provider-specific URL. It's in a form common for Keycloak, but Azure and others look different.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>scope</code></td>
-<td style="text-align: left;">A scope that is expected to be included in the token from the OIDC provider.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>aud</code></td>
-<td style="text-align: left;">A string or array of strings of audiences expected to be included in the token.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>additionalClientIds</code></td>
-<td style="text-align: left;"><strong>Optional</strong> - Can be a string or array of strings of client IDs beyond the one configured in <code>idpcat.nsf</code> that will be considered valid.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>userIdentifier</code> and <code>userIdentifierInLdapFormat</code></td>
-<td style="text-align: left;"><strong>Optional</strong></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>microsoft</code></td>
-<td style="text-align: left;"><strong>Optional</strong> - Can be used to enable MS-Azure-specific workarounds internally</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>allowExpired</code></td>
-<td style="text-align: left;"><strong>Optional</strong>- Can be used to consider even expired tokens valid. This should generally only be used during development.</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<ul>
-<li>You can use <code>oidc-idpcat</code> authentication in the same places that "JWT" config blocks were used previously, just with some coordination with core Domino. </li>
-<li>"JWT" will work the same on Domino 14. There's no conflict if Domino REST API and Domino have completely distinct authentication providers. </li>
-<li>
-<p>"oidc-idpcat" comes into play if you:</p>
-<ul>
-<li>want both Domino REST API and core Domino to use the same provider.</li>
-<li>are on Domino 14 or greater. There's no harm if you use "jwt" or "oidc" without configuring Domino, or even if they happen to point to the same location.</li>
-</ul>
-</li>
-</ul>
-</div>
-<h3 id="differences-between-oidc-and-oidc-idpcat">Differences between <code>oidc</code> and <code>oidc-idpcat</code></h3>
-<p>In general, <code>oidc</code> and <code>oidc-idpcat</code> achieve the same goal, which is to use a complete OIDC provider. The advantages of using the "oidc-idpcat" variation are as follows:</p>
-<ul>
-<li>If you've previously configured OIDC for standard Domino, you may reuse parts of the configuration, such as putting the client ID and client secret in a single location.</li>
-<li>Since Domino handles contacting the OIDC provider and caching keys, you benefit from that shared cache as well as shared diagnostics (for example, using notes.ini options for extra logging on the console).</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In general, you'd use any of these ("jwt", "oidc", "oidc-idpcat") when you either want to or have to have an external identity provider like Keycloak or Microsoft Entra ID, formerly Azure Active Directory, and have those tokens be usable for Domino REST API calls. Using either "jwt"-with-providerUrl or either of the "oidc" ones will let Domino REST API use standard OIDC endpoints to handle key lookup, avoiding the need to copy and paste signer keys into the Domino REST API config.</p>
-</div>
-<p>Check <a href="../../howto/IdP/configureoidc.html">Configure Domino REST API to use an OIDC provider</a>.</p>
-<h3 id="domino-as-an-oidc-provider">Domino as an OIDC provider</h3>
-<div class="admonition note">
-<p class="admonition-title">This is a preview feature in the Domino REST API v1.1.4 release, and applies to HCL Domino v14.5 or later only.</p>
-</div>
-<p>Starting with HCL Domino v14.5, the Domino HTTP task can act as an OIDC identity provider. This feature allows administrators to leverage their existing Domino HTTP authentication experience to authenticate end users with applications, servers, and services that support OIDC.</p>
-<p>The following configuration allows Domino REST API to use Domino as an OIDC provider:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;domino-oidc-idpcat&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;active&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;providerUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://&lt;domino oidc server&gt;/auth/protocol/oidc&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;clientId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;some-clientid&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;clientSecret&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;some-clientsecret&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Domino.user.all&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;aud&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://&lt;Domino REST API DNS name&gt;&quot;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-</code></pre></div>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Items</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>active</code></td>
-<td style="text-align: left;"><strong>Optional</strong> - Can be useful for setting to <code>false</code> to temporarily disable something without deleting the config entirely.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>providerUrl</code></td>
-<td style="text-align: left;">The base URL that includes the name of the OIDC Domino server.<br/><br/>For example: <code>https://auth.mydomains.com/auth/protocol/oidc</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>clientId</code></td>
-<td style="text-align: left;">It's the configured client ID from the OIDC provider. It's strongly recommended to use <code>Domino</code> as client name.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>clientSecret</code></td>
-<td style="text-align: left;">It's the generated client secret from the OIDC provider, usually a randomly generated hex string.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>scope</code></td>
-<td style="text-align: left;">A scope that is expected to be included in the token from the OIDC provider. The scopes are <code>openid</code>, <code>email</code>, <code>profile</code>, <code>$DATA</code>, <code>Domino.user.all</code>. <code>Domino.user.all</code> is used for Domino HTTP.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>aud</code></td>
-<td style="text-align: left;">A string or array of strings of audiences expected to be included in the token. The value of the <code>aud</code> key is set to <code>https://&lt;Domino REST API DNS name&gt;</code> to match what Domino HTTP expects.</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition caution">
-<p class="admonition-title">Caution</p>
-<p>The Domino REST API configuration <strong>MUST NOT</strong> specify <code>additionalClientIds</code>. </p>
-</div>
 <h2 id="client-ids">Client Ids</h2>
 <p>When configuring an external IdP using OIDC or OIDC-idpcat, you need to provide a clientId. It's recommended to use <code>Domino</code>, but the admins of your IdP might have other ideas. In any case, that's the clientId for the REST server. It's <em>NOT</em> the one for the Admin UI or the Office Forms Based Authentication (OFBA) for attachment editing. To be fully operational, you need to configure at least three clients on your IdP:</p>
 <ul>
@@ -7967,8 +8018,8 @@ IdP client configurations.</p>
 </div>
 <h2 id="domino-rest-api-and-oauth">Domino REST API and OAuth</h2>
 <p>Domino REST API is designed to consume an access token. This token can be the result of an OAuth dance or simply the result of an exchange of Domino credentials. The Domino REST API provides an IdP that does the OAuth dance.</p>
-<p><img alt="Flow Diagram" src="../../assets/images/WebAuth.png" /></p>
-<p><img alt="Flow Diagram2" src="../../assets/images/FlowDiagramKeep.png" /></p>
+<p><img alt="Flow Diagram" src="../../assets/images/WebAuth.png" style="height:80%;width:80%" /></p>
+<p><img alt="Flow Diagram2" src="../../assets/images/FlowDiagramKeep.png" style="height:80%;width:80%" /></p>
 
 
 
@@ -7989,7 +8040,7 @@ IdP client configurations.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 26, 2025 16:00:26 UTC">August 26, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 30, 2026 09:55:26 UTC">January 30, 2026</span>
   </span>
 
     
@@ -8140,10 +8191,10 @@ IdP client configurations.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
