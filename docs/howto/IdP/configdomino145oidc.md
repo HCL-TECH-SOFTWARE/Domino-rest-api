@@ -7,6 +7,7 @@ This guide walks you through configuring HCL Domino 14.5 as an OIDC provider and
 ## Before you begin
 
 - Ensure that Domino 14.5 is installed.
+- Ensure that Domino REST API v1.1.4 or later is installed.
 
 ## Procedure
 
@@ -16,7 +17,7 @@ This guide walks you through configuring HCL Domino 14.5 as an OIDC provider and
 
 1. Create two Internet site documents in the Domino Directory (`names.nsf`), one for the OIDC provider and another one as a placeholder website to trust it.
 
-    Domino requires at least one Internet site document mapped to the server to be configured to trust JWTs before C calls will work. The Internet site document for the OIDC provider cannot serve this role, so you need a second one.
+    Domino requires at least one Internet site document mapped to the server to be configured for it to trust. The Internet site document for the OIDC provider cannot serve this role, so you need a second one.
 
     The configured host names in the Internet site documents must point to the same server and also have usable TLS certificates in `certstore.nsf`.
 
@@ -56,9 +57,9 @@ This guide walks you through configuring HCL Domino 14.5 as an OIDC provider and
 
     !!! tip
 
-        - For **Audience(s)**, you can set the value to any value as long as you use the same value later when configuring Domino REST API.
+        - For **Audience(s)**, you can set the value to any value as long as you use the same value later when configuring Domino REST API as shown in the example configuration below. 
         - For **Scope(s)**, `$DATA` is useful for the Domino REST API as it allows you to access everything you have access rights to. You can also narrow it down to give per-app access.
-        - For **Redirect URI(s)**, you can set them to your actual login destination. 
+        - For **Redirect URI(s)**, you can set them to your actual login flow destination. 
 
 4. Configure a trusted OIDC provider.
 
@@ -90,7 +91,7 @@ This guide walks you through configuring HCL Domino 14.5 as an OIDC provider and
         | :--- | :--- |
         | `active` | **Optional** - Can be useful for setting to `false` to temporarily disable something without deleting the config entirely. |
         | `providerUrl` | The base URL that includes the name of the OIDC Domino server.<br/><br/>Example: `https://auth.h.test.us/auth/protocol/oidc`<br/>The provided example is based on the details in the example configuration shown in the example images.|
-        | `scope` | A scope that is expected to be included in the token from the OIDC provider. The scopes are `openid`, `email`, `profile`, `$DATA`, `Domino.user.all`. `Domino.user.all` is used for Domino HTTP. |
+        | `scope` | A scope that is expected to be included in the token from the OIDC provider. For example, `$DATA`,`email`, etc.|
         | `aud` | A string or array of strings of audiences expected to be included in the token. Make sure to use the same value as set in the registered OAuth Client.|
 
     3. Save the JSON file in the `keepconfig.d` directory.

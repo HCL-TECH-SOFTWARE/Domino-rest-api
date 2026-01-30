@@ -52,7 +52,7 @@ The configuration is as follows in Domino REST API:
 
 ### Domino as an OIDC provider
 
-!!! note "This is a preview feature in the Domino REST API v1.1.4 release, and applies to HCL Domino v14.5 or later only."
+!!! note "This feature is available starting in the Domino REST API v1.1.4 release and applies only to HCL Domino v14.5 or later."
 
 Starting with HCL Domino v14.5, the Domino HTTP task can act as an OIDC identity provider. This feature allows administrators to leverage their existing Domino HTTP authentication experience to authenticate end users with applications, servers, and services that support OIDC. For more information, see [Configure Domino REST API to use Domino 14.5 as OIDC provider](../../howto/IdP/configdomino145oidc.md).
 
@@ -88,7 +88,7 @@ The following configuration allows Domino REST API to use Domino as an OIDC prov
 | :--- | :--- |
 | `active` | **Optional** - Can be useful for setting to `false` to temporarily disable something without deleting the config entirely. |
 | `providerUrl` | The base URL that includes the name of the OIDC Domino server.<br/><br/>For example: `https://auth.mydomains.com/auth/protocol/oidc`|
-| `scope` | A scope that is expected to be included in the token from the OIDC provider. The scopes are `openid`, `email`, `profile`, `$DATA`, `Domino.user.all`. `Domino.user.all` is used for Domino HTTP. |
+| `scope` | A scope that is expected to be included in the token from the OIDC provider. For example, `$DATA`,`email`, etc.<!--The scopes are `openid`, `email`, `profile`, `$DATA`, `Domino.user.all`. `Domino.user.all` is used for Domino HTTP.--> |
 | `aud` | A string or array of strings of audiences expected to be included in the token. The value of the `aud` key can be set to `https://<Domino REST API DNS name>` to match what Domino HTTP expects.|
 
 <!--| `clientId` | It's the configured client ID from the OIDC provider. It's strongly recommended to use `Domino` as client name. |

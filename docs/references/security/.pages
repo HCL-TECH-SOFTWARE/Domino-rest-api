@@ -2,7 +2,7 @@ title: Security
 
 nav:
   - index.md
-  - authentication.md
+  - Auth*: authentication.md
   - jwt.md
 #  - configurationParameters.md
   - encryption.md
