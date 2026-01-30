@@ -2,6 +2,7 @@ nav:
     - index.md
     - configuredrapiIdP.md
     - configureoidc.md
+    - configdomino145oidc.md
     - configuringAD.md
     - configuringCertificates.md
     - configuringIdentityProvider.md
