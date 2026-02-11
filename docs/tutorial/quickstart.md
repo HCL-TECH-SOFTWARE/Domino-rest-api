@@ -83,7 +83,7 @@ The [Postman collection](../references/downloads.md) has sample interactions wit
 - **Domino developer** creates the **schema** that defines what data can be accessed in a nsf database.
 - **Domino administrator** creates and activates the **scope** that defines how the data can be accessed. Also creates (optional) OAuth compatible applications with `client_id` and `client_secret` properties.
 - **Volt MX administrator** configures Volt MX's foundry middleware to interact with Domino REST API using the foundry Domino REST API adapter
-- **Application developer** develops applications leveraging Domino REST API Endpoints, Volt MX services and front-end tools like Volt MX Iris, VS Code or any tools and framework of choice
+- **Application developer** develops applications leveraging Domino REST API Endpoints, Volt MX services and front-end tools like Volt Iris, VS Code or any tools and framework of choice
 
 Read more about them in [Domino REST API roles](../references/usingdominorestapi/roles.md).
 
@@ -169,9 +169,9 @@ After installation, complete the [post-installation steps](https://opensource.hc
 
 - **Domino Administrator:** Creates and activates scopes and configures OAuth-compatible applications with client IDs and secrets.
 
-- **Volt MX Administrator:** Configures middleware integration with Volt MX Foundry.
+- **Volt MX Administrator:** Configures middleware integration with Volt Foundry.
 
-- **Application Developer:** Builds applications consuming Domino REST API endpoints via tools like Volt MX Iris, VS Code, or other frameworks.
+- **Application Developer:** Builds applications consuming Domino REST API endpoints via tools like Volt Iris, VS Code, or other frameworks.
 
 Learn more about [Domino REST API roles](https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/roles.html).
 

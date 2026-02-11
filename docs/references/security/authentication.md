@@ -2,8 +2,6 @@
 
 --8<-- "pickYourAuth.md"
 
-<!--Domino REST API offers a built-in endpoint to exchange your Domino credentials for a valid JSON Web Token (JWT). This page describes the setup of **external JWT identity providers** (IdP).-->
-
 ## OIDC with idpcat authentication
 
 !!! tip "We strongly recommend this option"
@@ -57,20 +55,7 @@ The configuration is as follows in Domino REST API:
 Starting with HCL Domino v14.5, the Domino HTTP task can act as an OIDC identity provider. This feature allows administrators to leverage their existing Domino HTTP authentication experience to authenticate end users with applications, servers, and services that support OIDC. For more information, see [Configure Domino REST API to use Domino 14.5 as OIDC provider](../../howto/IdP/configdomino145oidc.md).
 
 The following configuration allows Domino REST API to use Domino as an OIDC provider:
-<!--
-```json
-{
-  "domino-oidc-idpcat": {
-      "active": true,
-      "providerUrl": "https://<domino oidc server>/auth/protocol/oidc",
-      "clientId": "some-clientid",
-      "clientSecret": "some-clientsecret",
-      "scope": "Domino.user.all",
-      "aud": "https://<Domino REST API DNS name>"
-    }
-  }
-```
--->
+
 ```json
 {
   "oidc-idpcat": {
@@ -90,9 +75,6 @@ The following configuration allows Domino REST API to use Domino as an OIDC prov
 | `providerUrl` | The base URL that includes the name of the OIDC Domino server.<br/><br/>For example: `https://auth.mydomains.com/auth/protocol/oidc`|
 | `scope` | A scope that is expected to be included in the token from the OIDC provider. For example, `$DATA`,`email`, etc.<!--The scopes are `openid`, `email`, `profile`, `$DATA`, `Domino.user.all`. `Domino.user.all` is used for Domino HTTP.--> |
 | `aud` | A string or array of strings of audiences expected to be included in the token. The value of the `aud` key can be set to `https://<Domino REST API DNS name>` to match what Domino HTTP expects.|
-
-<!--| `clientId` | It's the configured client ID from the OIDC provider. It's strongly recommended to use `Domino` as client name. |
-| `clientSecret` | It's the generated client secret from the OIDC provider, usually a randomly generated hex string. |-->
 
 !!! caution
 
