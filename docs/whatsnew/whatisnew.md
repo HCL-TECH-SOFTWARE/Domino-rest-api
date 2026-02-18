@@ -3,7 +3,8 @@
 <!-- prettier-ignore -->
 !!! note "Important"
 
-    - Items marked in <span style="color:red">**red**</span> are API changes that may impact your applications and should be reviewed before upgrading.
+    - Items marked in <span style="color: red; font-weight: bold;">red</span>
+    are API changes that may impact your applications and should be reviewed before upgrading.
     - Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](../references/deprecated.md).
 
 ??? info "v1.1.2 - What's new or changed"

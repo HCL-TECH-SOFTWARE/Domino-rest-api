@@ -102,11 +102,11 @@ The table below shows, for each submitted type, which `createAdditional` options
 | multipart/alternative | - | multipart/alternative | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./incoming/multipart-alternative.md "Click to open the example")    |
 | text/plain | - | text/plain | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./incoming/text-plain.md "Click to open the example") |
 | text/html | - | text/html | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./incoming/text-html.md "Click to open the example") |
-| text/html | plain | - multipart/alternative<br/>- text/html | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./incoming/text-html+plain.md "Click to open the example") |
+| text/html | plain | - multipart/alternative<br/>- text/html | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./incoming/text-html-plain.md "Click to open the example") |
 | text/markdown | - | text/markdown | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./incoming/text-markdown.md "Click to open the example") |
-| text/markdown | plain | - multipart/alternative<br/>- text/markdown<br/>- text/plain | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./incoming/text-markdown+plain.md "Click to open the example") |
-| text/markdown | html | - multipart/alternative<br/>- text/markdown<br/>- text/html | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./incoming/text-markdown+html.md "Click to open the example") |
-| text/markdown | plain, html | - multipart/alternative<br/>- text/markdown<br/>- text/plain<br/>- text/html | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./incoming/text-markdown+plain+html.md "Click to open the example") |
+| text/markdown | plain | - multipart/alternative<br/>- text/markdown<br/>- text/plain | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./incoming/text-markdown-plain.md "Click to open the example") |
+| text/markdown | html | - multipart/alternative<br/>- text/markdown<br/>- text/html | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./incoming/text-markdown-html.md "Click to open the example") |
+| text/markdown | plain, html | - multipart/alternative<br/>- text/markdown<br/>- text/plain<br/>- text/html | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./incoming/text-markdown-plain-html.md "Click to open the example") |
 
 !!! warning
 

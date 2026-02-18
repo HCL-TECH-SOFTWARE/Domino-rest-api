@@ -262,13 +262,12 @@ Use this function to see the differences between the modes of a selected form. T
 
 ![Compare Mode](../../assets/images/compareMode.png)
 
-!!! note
+!!! info
 
     - A field available in only one mode is highlighted, and then indicated as **Field not existing** in the other mode. 
-    - Fields with differences are highlighted. 
-
-!!! tip
-    - Click the **Show only fields with differences** toggle to only show fields with differences.
+    - Click the **Show only fields and formulas with differences** toggle to only show fields and formulas with differences.
+    - Fields with differences are highlighted.
+    - Formulas with differences are highlighted and marked with a <span style="color:red">red dot</span>.
     - In case there are too many fields, and you want to find a specific field, you can enter the field name in the **Search Field** to only display the specific field if available.
     - Click **Add New Column** to add more modes in the comparison.
     - Click the close icon to close the **Mode Compare - <form name\>** page.

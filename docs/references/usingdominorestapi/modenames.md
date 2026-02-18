@@ -1,5 +1,35 @@
-# Reserved Form mode names
+# Reserved Form Mode names
 
+In the Domino REST API, Form Modes specify what data can be read or written to documents using the form name in their form item. You can create any name as long as it is in lowercase and has no special characters, but there are certain Form Mode names that are reserved and have specific purposes.  
+
+## default
+
+The `default` mode is the standard mode used when:
+
+- reading or creating documents
+- there is no explicitly specified `mode=` parameter
+
+## dql
+
+The `dql` mode specifies what fields are returned when querying documents using [DQL](https://help.hcltechsw.com/dom_designer/12.0.1/basic/dql_overview.html). If a form does not include a `dql` mode, no data for that form will be returned in DQL queries.
+
+## odata
+
+The `odata` mode defines what data the OData endpoints will expose for the form. Domino REST API supports the [Open Data Protocol (OData)](https://www.odata.org), and if a form does not have an `odata` mode, OData queries won't return any data for that form.
+
+## raw
+
+The `raw` mode is used by the `/api/v1/raw` endpoint. When a client requests data via `/api/v1/raw`, the form must have a `raw` mode defined, and the current user must have access permission as expressed in the `@formula` of the `raw` mode definition. Because this mode can expose all fields without transformation, it is typically restricted to administrators or support users only.
+
+!!! note
+
+    `raw` returns all fields exactly as stored, without translation or adjustment.
+
+## vsheet
+
+The `vsheet` mode is used by the [Virtual Spreadsheet](../../howto/production/virtualsheet.md) feature. It must include all fields on the form because it allows view-like editing where changes are saved back to documents. If a `vsheet` mode is missing, the Virtual Spreadsheet functionality cannot save edits.
+
+<!--
 Use form modes to specify what data can be read or written to documents using the form name in their form item. While you are free to pick any name (lower case, no special characters), there are names with a special purpose, namely:
 
 ## default
@@ -24,3 +54,5 @@ The [Virtual Spreadsheet feature](../../howto/production/virtualsheet.md) uses t
 
 !!!note
     `raw` mode returns all fields without translation or adjustment.
+
+-->

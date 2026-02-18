@@ -21,11 +21,11 @@ The following table is a matrix for submitted types together with its supported 
 | multipart/alternative | -                | multipart/alternative                                                   | [Example](./incoming/multipart-alternative.md)    |
 | text/plain            | -                | text/plain                                                              | [Example](./incoming/text-plain.md)               |
 | text/html             | -                | text/html                                                               | [Example](./incoming/text-html.md)                |
-| text/html             | plain            | - multipart/alternative<br>- text/html                                    | [Example](./incoming/text-html+plain.md)          |
+| text/html             | plain            | - multipart/alternative<br>- text/html                                    | [Example](./incoming/text-html-plain.md)          |
 | text/markdown         | -                | text/markdown                                                           | [Example](./incoming/text-markdown.md)            |
-| text/markdown         | plain            | - multipart/alternative<br/>- text/markdown<br/>- text/plain                | [Example](./incoming/text-markdown+plain.md)      |
-| text/markdown         | html             | - multipart/alternative<br>- text/markdown<br>- text/html                 | [Example](./incoming/text-markdown+html.md)       |
-| text/markdown         | plain, html      | - multipart/alternative<br>- text/markdown<br>- text/plain<br>- text/html | [Example](./incoming/text-markdown+plain+html.md) |
+| text/markdown         | plain            | - multipart/alternative<br/>- text/markdown<br/>- text/plain                | [Example](./incoming/text-markdown-plain.md)      |
+| text/markdown         | html             | - multipart/alternative<br>- text/markdown<br>- text/html                 | [Example](./incoming/text-markdown-html.md)       |
+| text/markdown         | plain, html      | - multipart/alternative<br>- text/markdown<br>- text/plain<br>- text/html | [Example](./incoming/text-markdown-plain-html.md) |
 
 !!!warning
     Updating the `richtext` field in Notes client may alter what Domino REST API has stored in it. For example, a stored `multipart/alternative` gets overwritten if the `richtext` field is updated using the Notes client.
