@@ -13,7 +13,7 @@ For more information about scopes, see [Schema and Scope](../schemacomponents/sc
 
     You can also access the **Scope Management** page by clicking **Scopes** in the side navigation pane.
 
-## View available scopes
+## View scopes
 
 On the **Scope Management** page, you can see existing scopes in different layouts:
 

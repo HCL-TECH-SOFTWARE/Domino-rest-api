@@ -1,5 +1,136 @@
 # Schema Management
 
+## Overview
+
+The Schema Management page in the Admin UI allows you to define, view, and modify schemas, which determine what data is accessible via the REST API for reading and writing.
+
+The schema is the shape of data available and is a JSON file in the design resources of the Domino database. It gets created by a developer with *Designer* access to the Domino database. This creates an alias to the schema. This, along with a scope, provides access to the database via the Domino REST API. One Domino database can have multiple schemas, which is useful to provide different data sets or different levels of access to data.
+
+For more information on schemas, see [Schema and Scope](../schemacomponents/schemascope.md).
+
+## Access Schema Management
+
+1. Log in to the **Admin UI**.
+2. On the home page, select **Database Management - REST API** to open the **Schema Management** page.
+
+    You can also access the **Schema Management** page by clicking **Schemas** in the side navigation pane.
+
+## View schemas
+
+On the **Schema Management** page, you can see existing schemas in different layouts:
+
+- Stack View
+- Card View
+- Alphabetical View
+- NSF View
+
+![List Database](../../assets/images/ListSchemas.PNG)
+
+Use the **Search** field and the search filter to find schemas by **Schema Name** or by **NSF Name**.
+
+## Add a schema
+
+You can add a schema by [creating your own schema](#create-a-schema) or [importing a schema](#import-a-schema).
+
+### Create a schema
+
+1. On the **Schema Management** page, click **Add Schema**.
+
+      ![Add schema](../../assets/images/addSchema.png)
+
+2. In the **Add New Schema** dialog, click **Create Schema**.
+
+      ![Create a schema ](../../assets/images/createSchema.png){: style="height:80%;width:80%"}
+
+3. In the **Create Schema** dialog:
+
+      1. Select a database from the **Database** drop-down list.
+
+         You can also enter the database name in the **Database** field to filter the list of available databases.
+
+      2. Select an **Icon**.
+      3. Enter a **Schema Name** and a **Schema Description**.
+      4. Click **Save Schema**.
+
+### Import a schema
+
+Use this option if you want to import a new schema from a JSON file produced by [exporting database schema as JSON file](../../howto/database/exportsourcejson.md).
+
+1. On the **Schema management** page, click **Add Schema**.
+2. In the **Add New Schema** dialog, click **Import Schema**.
+3. Select the JSON database file and click **Open**. The JSON database file is the exported file from another database or within your server.
+
+4. In the **Import Schema** dialog:
+      1. Choose the `.nsf` database file from the **Import Into Database** dropdown list. The default `.nsf` is from the imported database JSON file.
+      2. Update the **Icon**, **Schema Name**, **Schema Description**, and **Formula Engine** as needed.
+      3. Click **Save Schema**.
+
+The `nsf` database file and schema are added to the schema list.
+
+!!! note
+
+    The imported schema name must be unique. You'll be warned if you try to save a schema to a database that already has a schema with the same name.
+
+## Edit a schema
+
+1. On the **Schema Management** page, select the schema you want to edit.
+2. In the schema details card, click the edit icon.
+
+      ![Edit icon](../../assets/images/editschema.png){: style="height:50%;width:50%"}
+
+3. In the **Edit Schema** dialog, you can:
+
+      - Select a new icon from the drop-down icon list.
+      - Update the **Description** field.
+      - Enter a valid Notes formula in **DQL Formula** to limit DQL usage. 
+
+        The formula must evaluate to `@True` for DQL to be allowed. The default is `@True`, which means no limitations.
+
+      - Update the **Configuration** settings.
+
+      |Configuration setting|Description|
+      |----|----|
+      |DQL Access|Allows DQL queries to run against the elements of the schema. A mode named `dql` must be created on each form specifying the fields allowed for that form.|
+      |In $DATA Scope|Makes the schema available in the system `$DATA` scope. Disable to limit access to the schema to those with the specific scope.|
+      |Enable Code|*feature under development*|
+      |Require Revision|Requires the provision of the correct revision version of the document to update the document through an update endpoint.|
+      |Prevent Design Refresh|Flags the schema written to the database so the Domino design task won't replace or delete the schema.|
+
+    ![Edit schema dialog](../../assets/images/editschema1.png){: style="height:80%;width:80%"}
+
+4. Click **Save**.
+
+## List database forms
+
+On the **Schema management** page, select a schema. The **Database Forms** tab is displayed by default showing all the forms for the selected schema.
+
+You can click the **Show Active** toggle to the on position to only show active forms.
+
+![List Forms](../../assets/images/ListOfForms2.png){: style="height:70%;width:70%"}
+
+## Add new form schema
+
+The **Add New Form Schema** feature enables the creation of a new custom form through which you can set up a schema. The feature doesn't create a new form on the backend, so it won't exist in the database. Everything related to the new form is contained within the schema. Therefore, if you delete the form, it's only removed from the list of forms on the **Database Forms** tab.
+
+1. Click **Add New Form Schema**.
+2. In the **Add New Form Schema** dialog, enter your schema name and click **Create**.
+3. On the **Schema Management - <schema name\>** page, select a form from the **Show fields from** dropdown field to display the fields of the selected form. You can also select **All Fields** from the dropdown field to display all the fields from all the available forms.
+4. Select the fields that you want to add to the mode.
+5. Configure the **Field Setting** and **Mode Settings** as needed for each added field.
+6. Click **Save**.
+
+The new form is now added to the list of forms and has an **Active** status.
+
+!!!note
+     - The form created using this feature can't be deactivated and can only be deleted. To delete the form, click the menu icon beside the form's status and select **Delete**. In the **WARNING: Deleting Custom Form** dialog, click **Yes** to confirm.
+     - You can identify a custom form by the marker beside the form name and by the *custom form* text below the form name.
+
+
+
+
+
+
+
 Select **Database Management - REST API** from the home page or **Schemas** from the side navigation pane to access the **Schema Management** page.
 
 ## View available database schemas
