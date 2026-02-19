@@ -95,9 +95,9 @@ Use the following API to send the OAuth authorization request. Make sure to add 
 
 ![Bruno send OAuth auth request API](../../assets/images/bruno20.png)
 
-### Send OAuth authorization request after an HTTP 302 response 
+### Send OAuth authorization request after an HTTP 302 response
 
-Use the following API to send the OAuth authorization request after getting an HTTP 302 response. 
+Use the following API to send the OAuth authorization request after getting an HTTP 302 response.
 
 ![Bruno send OAuth auth request API after 302](../../assets/images/bruno21.png)
 
