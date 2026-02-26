@@ -24,6 +24,8 @@ There are multiple options for logging in to the Domino REST API **Admin UI**, d
 
 ![Domino REST API](../../assets/images/AdminLogin.png){: style="height:70%;width:70%"}
 
+(Image: Castle [Johannisburg](https://en.wikipedia.org/wiki/Schloss_Johannisburg), Aschaffeburg, Germany)
+
 ### Log in with password
 
 To use this option, enter your Domino administrator credentials in the **Username** and **Password** fields, then click **LOG IN**.

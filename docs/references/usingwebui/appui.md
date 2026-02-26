@@ -27,14 +27,14 @@ On the page, you can:
 
 ## Add an application
 
-1. Click **Add Application**.
+1. On the **Application Management** page, click **Add Application**.
 2. In the **Add New Application** pane that appears:
 
-    - Enter a name for your application in the Application Name field.
-    - Provide details to describe its use in the Description field.
+    - Enter a name for your application in the **Application Name** field.
+    - Provide details to describe its use in the **Description** field.
     - Provide the callback URLs.
-    - Enter the startup page of the application
-    - Choose the scope.
+    - Enter the application startup page in the **Startup Page** application.
+    - Choose the **Scope**.
     - Enter contact details.
     - Choose an **App Icon** to help visually identify the application.
     - Click **Add**.
@@ -58,7 +58,7 @@ The new application appears in the **Application Management** page.
     This only applies to applications that use app secret as authentication method. This is not needed if you use PKCE as the authentication method. 
 
 - If you want to generate an app secret for an application without a configured app secret, click the **Click to Generate Secret** text.
-- If you want to regenerate the app secret of an application, click the **Click to Generate Secret** icon&nbsp;![app secret icon](../../assets/images/appsecreticon.png){: style="height:2%;width:2%"}.
+- If you want to regenerate the app secret of an application, click the icon&nbsp;![app secret icon](../../assets/images/appsecreticon.png){: style="height:2%;width:2%"} and then click **Yes** in the confirmation dialog.
 
 ## Filter applications
 

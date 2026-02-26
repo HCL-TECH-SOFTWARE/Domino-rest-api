@@ -22,7 +22,7 @@ The procedure guides you on how to set up and use the Virtual Spreadsheet featur
 1. Choose an active view that you want to open.
 
     !!!tip
-        - To get a list of your views from your target schema, see [List available database views](../../references/usingwebui/schemaui.md#list-available-database-views).
+        - To get a list of your views from your target schema, see [List available database views](../../references/usingwebui/schemaui.md#list-database-views).
         - You can set up the view schema however you wish as Virtual Spreadsheet respects the configured view schema.
 
 2. Create a [`vsheet`](../../references/usingdominorestapi/modenames.md#vsheet) mode for each form that your view exposes by following the steps for [adding a mode](../../references/usingwebui/schemaui.md#add-a-mode).

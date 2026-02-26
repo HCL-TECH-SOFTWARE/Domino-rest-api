@@ -65,7 +65,7 @@ Use this option if you want to import a new schema from a JSON file produced by 
 
 <!--Use this option if you have a schema that you want to share across multiple databases or even into the same database. Follow the procedure of exporting a schema here [Export database schema as JSON file ](../../howto/database/exportsourcejson.md).-->
 
-1. On the **Schema management page**, click **Add Schema**.
+1. On the **Schema Management** page, click **Add Schema**.
 2. In the **Add New Schema** dialog, click **Import Schema**.
       
       <!--![import schema](../../assets/images/importSchema.png)-->
