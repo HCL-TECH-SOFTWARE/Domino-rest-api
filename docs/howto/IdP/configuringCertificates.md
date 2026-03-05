@@ -47,13 +47,15 @@ To get valid certificates, use any of the following approaches:
 ```
 
 <!-- prettier-ignore -->
-!!! Info
-    The JSON file is automatically created when you [use the Domino REST API management API (Port 8889)](../../references/security/encryption.md) to create the files.
+!!! info
+
+    The JSON file is automatically created when you [use the Domino REST API management API (Port 8889)](../../howto/management/encryptionops.md) to create the files.
 
 ## Configure certificates for JWT validation
 
 <!-- prettier-ignore -->
 !!! note
+
     PEM-formatted keys (RSA/EC) are supported.
 
 <!--To configure certificates for JWT validation-->

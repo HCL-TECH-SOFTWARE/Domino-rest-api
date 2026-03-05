@@ -68,13 +68,13 @@ When using DRAPI as your JWT provider, as opposed to an external identity provid
 
 `MyCertForKeep` needs to match an existing certificate chain in certstore.nsf.
 
-You can generate the certificate chain using DRAPI, use the Management Console to [generate the Keys for JWT](../../references/security/encryption.md#using-the-management-console-for-encryption-operations). As of 2025, you should prefer [EC](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography) certificates. This will create certificates in the certificate store using the common name of the Domino server and configure the local server to use it.
+You can generate the certificate chain using DRAPI, use the Management Console to [generate the Keys for JWT](../management/encryptionops.md). As of 2025, you should prefer [EC](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography) certificates. This will create certificates in the certificate store using the common name of the Domino server and configure the local server to use it.
 
 To enable access to this certificate for other servers, open the [certificate store database](https://help.hcl-software.com/domino/14.0.0/admin/secu_le_using_certificate_manager.html) and find the newly created certificate document. In that document, modify the **Servers with access\*\*** field to include the other Domino servers that will access it, and click **Submit Request**. This causes the Certificate Manager to encrypt the certificate in a way compatible with each named server.
 
 Then, set the `KeepCertStoreNameJWT` notes.ini parameter on each server to the common name of the first server, for example `MyServer`.
 
-Alternately, to share certificates without the certificate store, follow [the example](../../references/security/encryption.md#example-of-how-to-create-and-set-up-domino-rest-api-on-multiple-domino-servers-to-use-the-same-jwt-keys) and copy the 4 files across servers.
+Alternately, to share certificates without the certificate store, follow [the steps](../management/jwtmultiserver.md) and copy the 4 files across servers.
 
 ## Limit admin access
 

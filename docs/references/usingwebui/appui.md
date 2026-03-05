@@ -67,7 +67,7 @@ Use the Filter (funnel icon) to narrow the displayed list of applications based 
 |Filter|What it controls|
 |:---|:---|
 |Status| Shows active, inactive, or all applications|
-|Authentication Method| Shows all applications, those that use app secret, those that use app secret with app secret generated, those that use app secret without a generated app secret, or those that use PKCE|
+|Authentication Method| Shows all applications, those that use app secret, those that use app secret with app secret generated, those that use app secret without a generated app secret, or those that use PKCE. |
 
 Click **Reset** to clear all filters.
 
@@ -75,7 +75,7 @@ Click **Reset** to clear all filters.
 
 On the **Application Management** page, click **OAuth Consents**. The **OAuth Consents** dialog opens.
 
-All the information and features in the **OAuth Consents** dialog are the same to the information and features in the **OAuth Consents** page. For more information, see [OAUth Consents](oauthconsentui.md).
+All the information and features in the **OAuth Consents** dialog are the same to the information and features in the **OAuth Consents** page. For more information, see [OAuth Consents](oauthconsentui.md).
 
 <!--
 Select **Application Management - OAUTH** from the home page or **Applications** from the side navigation pane to access the **Application Management** page.
@@ -141,5 +141,5 @@ For more information on the filters, refer to the following table:
 
 On the **Application Management** page, click **OAuth Consents**. The **OAuth Consents** dialog opens.
 
-All the information and features in the **OAuth Consents** dialog are the same to the information and features in the **OAuth Consents** page. For more information, see [OAUth Consents](oauthconsentui.md).
+All the information and features in the **OAuth Consents** dialog are the same to the information and features in the **OAuth Consents** page. For more information, see [OAuth Consents](oauthconsentui.md).
 -->

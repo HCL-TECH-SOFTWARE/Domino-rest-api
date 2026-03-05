@@ -89,21 +89,21 @@ const loadApprovals = async (bearer, status) => {
 
 ## Processing list results
 
-The Domino REST API uses chunked returns ([RFC9112](https://tools.ietf.org/html/rfc9112#section-7.1)) for anything that returns an array and thus could return a lot of data. Instead of calling `await response.json()`, we use the [http stream API](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API). Browsers implement that API in native code for speedy processing. A fetch request returns a [readable stream](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream) that can be processed using a [TransformStream](https://developer.mozilla.org/en-US/docs/Web/API/TransformStream) (a stream that is both readable and writable) to then be consumed by a [writeable stream](https://developer.mozilla.org/en-US/docs/Web/API/WritableStream). There are a few steps involved:
+The Domino REST API uses chunked returns ([RFC9112](https://tools.ietf.org/html/rfc9112#section-7.1)) for anything that returns an array and thus could return a lot of data. Instead of calling `await response.json()`, we use the [HTTP Streams API](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API). Browsers implement that API in native code for speedy processing. A fetch request returns a [readable stream](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream) that can be processed using a [TransformStream](https://developer.mozilla.org/en-US/docs/Web/API/TransformStream) (a stream that is both readable and writable) to then be consumed by a [writable stream](https://developer.mozilla.org/en-US/docs/Web/API/WritableStream). There are a few steps involved:
 
 ![Stream Steps](../../assets/images/StreamSteps.jpg)
 
-All of these steps get tied together using the `pipeThrough` method calls. Lets look at it step by step:
+All of these steps get tied together using the `pipeThrough` method calls. Let's look at it step by step:
 
 ### Byte to String
 
-The first part "**Byte to String**" is build-in using a [`TextDecoderStream`](https://developer.mozilla.org/en-US/docs/Web/API/TextDecoderStream). As a result, we get a stream of characters and we now chop into parts.
+The first part "**Byte to String**" is built-in using a [`TextDecoderStream`](https://developer.mozilla.org/en-US/docs/Web/API/TextDecoderStream). As a result, we get a stream of characters, and we now chop into parts.
 
 ### String to lines
 
 String to lines is our first [`TransformStream`](https://developer.mozilla.org/en-US/docs/Web/API/TransformStream). An instance needs to implement two methods:
 
-- `transform(imcoming, controlle)` reads incoming data and eventually call the controller's `enqueue(output)` method 0:n times
+- `transform(incoming, controller)` reads incoming data and eventually call the controller's `enqueue(output)` method 0:n times
 - `flush(controller)` called for cleanup
 
 In our case, the incoming character stream is chopped into lines.
@@ -137,7 +137,7 @@ We chop of the leading `[` and trailing `]` and user `JSON.parse()`. In producti
 const parseJSON = () => {
   return new TransformStream({
     transform(chunk, controller) {
-      // IGONRES THE [ and ]
+      // IGNORES THE [ and ]
       if (chunk.endsWith(',')) {
         controller.enqueue(JSON.parse(chunk.slice(0, -1)));
       } else if (chunk.endsWith('}')) {
@@ -189,7 +189,7 @@ const updateUI = (parent) => {
 
 ### Putting it all together
 
-With the object instances in place, we can stick the pipe together to execute the flow
+With the object instances in place, we can stick the pipe together to execute the flow based on [this article](https://wissel.net/blog/2023/07/handle-http-chunked-responses.html).
 
 ```js
 const insertPoint = document.getElementById('resultTableBody');
@@ -201,8 +201,6 @@ await httpResponse.body
   .pipeThrough(rowMaker())
   .pipeTo(updateUI(insertPoint));
 ```
-
-based on [this article](https://wissel.net/blog/2023/07/handle-http-chunked-responses.html).
 
 ## Considerations
 

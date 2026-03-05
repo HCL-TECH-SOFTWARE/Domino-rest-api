@@ -43,7 +43,7 @@ The **Filter** pane allows you to filter which OAuth consents to display based o
 |Token Expiration|Shows consents regardless of token expiration, with token expiration, or matching a specific token expiration date.|
 |Scopes|Shows consents matching selected scopes.|
 
-**To use the filters**
+To use the filters:
 
 1. Click **All filters** to open the **Filter** pane.
 2. Set desired conditions.
@@ -60,7 +60,6 @@ When an application should no longer have access to a user’s resources:
 3. Confirm by clicking **Yes** in the **Revoke Consent** dialog.
 
 The consent is immediately removed, and the app will no longer have ongoing delegated access.
-
 
 <!--
 Select **Consents** from the side navigation pane to access the **OAuth Consents** page, which allows the current user to view and revoke available OAuth consents. 

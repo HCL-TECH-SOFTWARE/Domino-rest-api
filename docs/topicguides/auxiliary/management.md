@@ -15,6 +15,6 @@ Check the [Management console](../../howto/management/index.md) how-to guides fo
 
 ## References
 
-- [Using the Management Console for encryption operations](../../references/security/encryption.md#using-the-management-console-for-encryption-operations)
+- [Use Management Console for encryption operations](../../howto/management/encryptionops.md)
 - [Using Domino Console](../../howto/management/console.md)
 - [Management Port (8889)](../configuringPorts.md#management-port-8889)

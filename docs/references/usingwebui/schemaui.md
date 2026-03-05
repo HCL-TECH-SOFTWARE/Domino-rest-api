@@ -82,7 +82,7 @@ You can add a schema by creating your own schema or importing a schema.
 
       - Select a new icon from the drop-down icon list.
       - Update the **Description** field.
-      - Enter a valid Notes formula in **DQL Formula** to limit DQL usage. 
+      - Enter a valid Notes formula in **DQL Formula** to limit DQL usage.
 
         The formula must evaluate to `@True` for DQL to be allowed. The default is `@True`, which means no limitations.
 
@@ -94,7 +94,7 @@ You can add a schema by creating your own schema or importing a schema.
       |In $DATA Scope|Makes the schema available in the system `$DATA` scope. Disable to limit access to the schema to those with the specific scope.|
       |Enable Code|*feature under development*|
       |Require Revision|Requires the provision of the correct revision version of the document to update the document through an update endpoint.|
-      |Prevent Design Refresh|Flags the schema written to the database so the Domino design task won't replace or delete the schema.|
+      |Prevent Design Refresh|Flags the schema written to the database, so the Domino design task won't replace or delete the schema.|
 
     ![Edit schema dialog](../../assets/images/editschema1.png){: style="height:80%;width:80%"}
 
@@ -157,10 +157,10 @@ You can activate forms one at a time or simultaneously.
 
 1. On the **Database Forms** tab, click the pencil icon corresponding to the activated form that you want to edit.
 
-    [![dbforms](../../assets/images/dbforms.png)](../../assets/images/dbforms.png "Click to open in a new tab"){: target="_blank" rel="noopener noreferrer"}
+    [![Database forms](../../assets/images/dbforms.png)](../../assets/images/dbforms.png "Click to open in a new tab"){: target="_blank" rel="noopener noreferrer"}
 
     !!!note
-        Clicking the pencil icon corresponding to an inactive form shows the **Activate Form** dialog, which requires you to confirm the activation of the form. If you click **OK**, the form is activated, and you are directed to the form **Access Mode** page. 
+        Clicking the pencil icon corresponding to an inactive form shows the **Activate Form** dialog, which requires you to confirm the activation of the form. If you click **OK**, the form is activated, and you are directed to the form **Access Mode** page.
 
     The **Access Mode** page opens showing the `default` access mode.
 
@@ -173,7 +173,7 @@ You can activate forms one at a time or simultaneously.
     !!! tip
 
         - Click **Add All Fields** icon to add all the available fields to the form.
-        - Click **Refresh List of Fields** icon to refresh the list of avaialble fields.
+        - Click **Refresh List of Fields** icon to refresh the list of available fields.
         - Use the **Search Field** search box to search for a field by field name.
         - Hover over the **Info** icon beside the field name to show the field property. The field can be *editable*, which means that the field has **Read/Write** access setting. The field can also be either *computed*, *computed when composed*, or *computed for display*, which means that the field has **Read Only** access setting.
         - Enter a custom field name in the **Add custom field** and click the **+** icon to add a custom field to the form.
@@ -252,7 +252,7 @@ You can activate forms one at a time or simultaneously.
 
       [![mode list](../../assets/images/modeList.png)](../../assets/images/modeList.png "Click to open in a new tab"){: target="_blank" rel="noopener noreferrer"}
 
-4. Add fields and set the read or write access formula for each of the added fields. 
+4. Add fields and set the read or write access formula for each of the added fields.
 5. Click **Save**.
 
 ## Clone a mode
@@ -262,7 +262,7 @@ Use **Clone Mode** to add a new mode based on an existing mode in the same schem
 1. On the **Database Forms** tab, click the pencil icon corresponding to the activated form that you want to clone a mode. The form **Access Mode** page opens showing the `default` access mode.
 2. From the **Mode** dropdown list, choose the mode you want to clone, for example the `default` mode.
 3. Click **Clone Mode**.
-4. In the **Clone <mode name\>** dialog, enter the name of the mode and click **Save**. 
+4. In the **Clone <mode name\>** dialog, enter the name of the mode and click **Save**.
 
       The new mode cloned from an existing mode is now available. You can remove or add fields to the new mode and read or write access formula for each of the fields.
 
@@ -511,7 +511,7 @@ All forms are now activated with default settings and have **Active** status.
 
 1. On the **Database Forms** tab, click the pencil icon corresponding to the activated form that you want to edit.
 
-    [![dbforms](../../assets/images/dbforms.png)](../../assets/images/dbforms.png "Click to open in a new tab"){: target="_blank" rel="noopener noreferrer"}
+    [![database forms](../../assets/images/dbforms.png)](../../assets/images/dbforms.png "Click to open in a new tab"){: target="_blank" rel="noopener noreferrer"}
 
     !!!note
         Clicking the pencil icon corresponding to an inactive form shows the **Activate Form** dialog, which requires you to confirm the activation of the form. If you click **OK**, the form is activated, and you are directed to the form **Access Mode** page. 
@@ -527,7 +527,7 @@ All forms are now activated with default settings and have **Active** status.
     !!! tip
 
         - Click **Add All Fields** icon to add all the available fields to the form.
-        - Click **Refresh List of Fields** icon to refresh the list of avaialble fields.
+        - Click **Refresh List of Fields** icon to refresh the list of available fields.
         - Use the **Search Field** search box to search for a field by field name.
         - Hover over the **Info** icon beside the field name to show the field property. The field can be *editable*, which means that the field has **Read/Write** access setting. The field can also be either *computed*, *computed when composed*, or *computed for display*, which means that the field has **Read Only** access setting.
         - Enter a custom field name in the **Add custom field** and click the **+** icon to add a custom field to the form.

@@ -36,7 +36,7 @@ To use this option, enter your Domino administrator credentials in the **Usernam
 
 ### Log in with passkey
 
-This option allows you to log in using a passkey, which enables passwordless authentication. Authentication may be performed using device-based mechanisms such as biometrics, PIN, or pattern. For more information on how to log in with passkey, see [Use passkey to log in to Admin UI](../../howto/install/passkey.md).
+This login option lets you sign in with a passkey instead of a password. Your device authenticates you using methods such as biometrics, a PIN, or a pattern. To learn how to log in with a passkey, see [Use a passkey to log in to the Admin UI](../../howto/install/passkey.md).
 
 ### Log in with OIDC
 
@@ -72,15 +72,8 @@ The OIDC login option uses the Domino REST API IdP (identity provider) by defaul
         2. Click **LOG IN**.
         3. Use your external IdP authentication credentials and follow the provider’s login instructions.
 
-
-
-
-
-
-
 <!--
 The **Admin UI** provides a user interface to several Domino REST APIs. It thus serves as an example of what a [React](https://reactjs.org/) application using the Domino REST APIs is capable of. It covers schema, scope, and app management. Anything that can be done using the Admin UI can also be done using Postman, curl, Swagger UI, or similar tools. There are [tutorials](../../tutorial/index.md) to walk you through the same.
-
 
 !!! note
 

@@ -109,7 +109,7 @@ The following are settings that can be set in the `notes.ini`.
 | :--- | :---- | :---- |
 | `KeepInstallDir` | required | Where Domino REST API is installed |
 | `KeepJavaHome` | optional | Use a different Java binary than the one in {dominoBin}/jvm |
-| `KeepManagementURL` | optional | Domino REST API management URL if different than http://localhost:8889 |
+| `KeepManagementURL` | optional | Domino REST API management URL if different from http://localhost:8889 |
 | `KeepNumAttachAttempts` | optional | Number of attempts to get status of Domino REST API launch (default 10). There is a 3-second interval between attempts. |
 | `KeepLaunchWaitSecs` | optional | Number of seconds to wait before executing java command (default 0) |
 
