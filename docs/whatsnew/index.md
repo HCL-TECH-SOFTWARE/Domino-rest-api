@@ -21,7 +21,7 @@ The What's new contains information about the latest features, improvements, fix
 
     - **5** New features
     - **5** Improvements
-    <!-- **0** Resolved issues-->
+    - **1** Resolved issues
     <!-- **0** New features-->
     <!-- **0** Breaking change-->
     <!-- **X** Preview features-->
