@@ -9,11 +9,11 @@ The procedures guide you on configuring Microsoft Entra ID, formerly Azure Activ
 
 --8<-- "onclientids.md"
 
-## Configure in Azure Portal
+## Configuration in Azure Portal
 
 ### Register an application
 
-1. Go to the [Azure portal)](https://portal.azure.com){: target="\_blank"} and sign in.
+1. Go to the [Azure portal](https://portal.azure.com){: target="\_blank"} and sign in.
 
     !!! tip
 
@@ -26,7 +26,7 @@ The procedures guide you on configuring Microsoft Entra ID, formerly Azure Activ
       |:---|:---|
       |Name|Enter a descriptive name for the application.|
       |Supported account types|Choose who can sign in.|
-      |Redirect URI|Specify where authentication responses should be sent<br/><br/>If you aren't sure about the value to use, use `http://localhost:8080/redirect/`. You can change this later on the **Authentication** page.|
+      |Redirect URI|Specify where authentication responses should be sent.<br/><br/>Select **Web** as the platform and use `{{origin}}/redirect/` as the Redirect URI.<br/>where: `{{origin}}` is a template placeholder for the base URL where the Domino REST API server is hosted.<br/><br/>If you aren't sure about the value to use, use `http://localhost:8080/redirect/`. You can change this later on the **Authentication** page.|
 
       [![Azure app registration](../../assets/images/entraID1.png){: style="height:70%;width:70%"}](../../assets/images/entraID1.png){: target="_blank" rel="noopener noreferrer"}
 
@@ -115,7 +115,7 @@ The following example image shows how it would look after adding the scopes.
 2. On the **Redirect URI configuration** tab:
 
       - Make sure you have localhost for local development and https-based URLs for your test, staging, and/or production systems specified.
-      - Make sure that the redirect URL ends with `/`.
+      - Use `{{origin}}/redirect/` as the Redirect URI. `{{origin}}` is a template placeholder for the base URL where the Domino REST API server is hosted.
 
       [![Azure app registration](../../assets/images/entraID12.png){: style="height:70%;width:70%"}](../../assets/images/entraID12.png){: target="_blank" rel="noopener noreferrer"}
 
@@ -307,13 +307,13 @@ All URLs are retrievable by accessing the _OpenID Connect_ metadata document, co
       - The `aud` parameter should have the value of the **Application (client) ID** that can be checked on the **Overview** page of the application in the Azure portal.
       - The `iss` parameter should have a value of the `OpenID Connect metadata document` endpoint without the `/.well-known/openid-configuration` suffix.
 
-            You can also check the value of the `iss` parameter by pasting the `OpenID Connect metadata document` endpoint on a browser and check the `issuer` key. The value of the issuer key is the value to be used for the `iss` parameter. 
+           You can also check the value of the `iss` parameter by pasting the `OpenID Connect metadata document` endpoint on a browser and check the `issuer` key. The value of the issuer key is the value to be used for the `iss` parameter.
 
-            [![Azure app registration](../../assets/images/entraID15.png){: style="height:60%;width:60%"}](../../assets/images/entraID15.png){: target="_blank" rel="noopener noreferrer"}
+           [![Azure app registration](../../assets/images/entraID15.png){: style="height:60%;width:60%"}](../../assets/images/entraID15.png){: target="_blank" rel="noopener noreferrer"}
 
       - Currently, Azure AD doesn't return the `alg` claim in the `jwks_uri`. You have to specify it here.
 
-3. Restart Domino REST API.
+3. Save the changes and restart Domino REST API.
 
 !!! danger "Azure AD / Entra ID is a moving target"
 

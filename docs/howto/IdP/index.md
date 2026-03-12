@@ -20,8 +20,8 @@ Topics to guide you in completing goals and tasks about Identity Provider in rel
 
 - [Configure Domino REST API as SAML identity provider](keepsaml.md)
 
-- [Set up External IdP for Office Round Trip Experience](roundtripidp.md)
+- [Set up an External IdP for Office Round Trip Experience](roundtripidp.md)
 
-- [Set up External IdP for Admin UI login](adminuiidp.md)
+- [Set up an External IdP for Admin UI login](adminuiidp.md)
 
 --8<-- "onclientids.md"

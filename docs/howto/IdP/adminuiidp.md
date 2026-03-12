@@ -1,4 +1,4 @@
-# Set up external IdP for Admin UI login
+# Set up an external IdP for Admin UI login
 
 ## About this task
 
@@ -44,7 +44,7 @@ Configure an external IdP of your choice. For more information, see [configuring
 
     4. Click **Register**.
 
-    After the registration, you will see the **Overview** page. It is recommended to take note of the displayed values as they might be required for the application configuration.
+    After the registration, you will see the **Overview** page. Take note of the value of the **Application (client) ID**.
 
 2. Add client credentials.
 
@@ -53,7 +53,14 @@ Configure an external IdP of your choice. For more information, see [configuring
     3. Click **Add**.
     4. Record the client secret Value. This secret value is never displayed again after you leave the page.
 
-3. Configure API permissions.
+3. Add the Application ID URI.
+
+    1. Under **Manage**, select **Expose an API**.
+    2. At the top of the page, select **Add** next to **Application ID URI**.
+
+      This defaults to `api://<application-client-id>`. Take note of this value as it is needed in the configuration in the Domino REST API.
+
+4. Configure API permissions.
 
     1. Under **Manage**, select **API permissions**. The **API permissions** page opens with the `User.Read` permission already configured.
     2. Click **Add a permission**. The **Request API permissions** pane opens.
@@ -70,13 +77,13 @@ Configure an external IdP of your choice. For more information, see [configuring
     5. Click **Grant admin consent for {your tenant}** to grant admin consent to the permissions configured for the application.
     6. In the **Grant admin consent confirmation** dialog, click **Yes**. After granting consent, the permissions that required admin consent are shown as having consent granted.
 
-4. Assign an owner.
+5. Assign an owner.
 
     1. Under **Manage**, select **Owners**, and then select **Add owners**. The **Owners** pane opens.
     2. Search for and select the user account that you want to be an owner of the application.
     3. Click **Select** to add the user account that you chose as an owner of the application.
 
-5. Check authentication.
+6. Check authentication.
 
     1. Under **Manage**, select **Authentication**.
     2. On the **Redirect URI configuration** tab, make sure that the selected and entered values are correct.
@@ -84,7 +91,7 @@ Configure an external IdP of your choice. For more information, see [configuring
     4. On the **Settings** tab, make sure **Access token** is selected.
     5. Click **Save** if you make any changes.
 
-6. Adjust app manifest.
+7. Adjust app manifest.
 
     1. Under **Manage**, select **Manifest**. A web-based manifest editor opens, allowing you to edit the manifest.
     2. Change the value of `accessTokenAcceptedVersion` from `null` to `2`.
@@ -99,7 +106,7 @@ Configure an external IdP of your choice. For more information, see [configuring
 
     3. Click **Save**.
 
-7. Check application endpoints.
+8. Check application endpoints.
 
     Select **Endpoints** in the top menu to open the **Endpoints** page, which shows the authentication endpoints for the application. Take note of the following endpoints:
 
@@ -120,15 +127,19 @@ To use the configured external IdP for Admin UI login, you need to include the `
     ```json
         "adminui": {
             "active": true,
-            "client_id": "[name of application]",
-            "application_id_uri": "[value of the Application (client) ID]"
+            "client_id": "[value of Application (client) ID]",
+            "application_id_uri": "[value of the Application ID URI]"
       }
     ```
 
     where:
 
-    - The `client_id` parameter should have the value of the descriptive name you provided for the registered application in Azure portal.
-    - The `application_id_uri` parameter should have the value of the **Application (client) ID** that can be checked on the **Overview** page of the application in the Azure portal.
+    - The `client_id` parameter should have the value of the **Application (client) ID** of the registered application in Azure portal.
+    - The `application_id_uri` parameter should have the value of the **Application ID URI** of the registered application in Azure portal. It should end with `/`.
+
+    Check the **Overview** page of the application in the Azure portal. Refer to the following example image:
+
+    [![Azure app registration](../../assets/images/entraID19.png){: style="height:70%;width:70%"}](../../assets/images/entraID19.png){: target="_blank" rel="noopener noreferrer"}
 
     After adding the JSON object, the configuration should be similar to the following:
 
@@ -137,29 +148,33 @@ To use the configured external IdP for Admin UI login, you need to include the `
             "jwt": {
                   "AzureIdP": {
                         "active": true,
-                        "providerUrl": "[value of the OpenID Connect metadata document endpoint]",
-                        "aud": "[value of the Application (client) ID]",
-                        "iss": "[iss value]",
+                        "providerUrl": "[value of the OpenID Connect metadata document endpoint of the app used by the Domino REST API server]",
+                        "aud": "[value of the Application (client) ID of the app used by the Domino REST API server]",
+                        "iss": "[issuer value]",
                         "algorithm": "RS256",
                         "adminui": {
                               "active": true,
-                              "client_id": "[name of application]",
-                              "application_id_uri": "[value of the Application (client) ID]"
+                              "client_id": "[value of Application (client) ID]",
+                              "application_id_uri": "[value of the Application ID URI]"
                         }
                   }
             }
       }
       ```
 
-    See [Configuration in Domino REST API](../IdP/configuringAD.md#configuration-in-domino-rest-api) for details of the Microsoft Entra ID configuration.
+    For more information on the definitions and values of the `providerUrl`, `aud`, and `iss` keys, see [Configuration in Domino REST API](../IdP/configuringAD.md#configuration-in-domino-rest-api) for details of the Microsoft Entra ID configuration.
 
-3. Restart Domino REST API.
+3. Save the changes and restart Domino REST API.
 
 ## Additional information
 
 ### Admin UI external IdP login
 
 The Admin UI shows the OIDC logins and the Domino REST API login, which uses the Domino REST API IdP. To prevent the Admin UI from showing all IdP logins, set the value of the `AdminUIOIDCLogin` parameter to `false`. To disable the login with password button, set the `AdminUIKeepLogin` parameter to `false`. For more information on how to modify the configuration, see [Modify configuration parameters](../install/configparam.md).
+
+!!! note
+
+    Admin UI external IdP login uses authorization code flow with PKCE.
 
 ### Example Admin UI configuration to use Keycloak as external IdP
 
