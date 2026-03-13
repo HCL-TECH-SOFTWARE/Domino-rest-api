@@ -25,7 +25,7 @@ Configure an external IdP of your choice. For more information, see [configuring
 
 1. Register an application.
 
-    1. Go to the [Azure portal)](https://portal.azure.com){: target="\_blank"} and sign in.
+    1. Go to the [Azure portal](https://portal.azure.com){: target="\_blank"} and sign in.
 
         !!! tip
 
@@ -40,7 +40,7 @@ Configure an external IdP of your choice. For more information, see [configuring
         |Supported account types|Choose who can sign in.|
         |Redirect URI|Specify where authentication responses should be sent.<br/><br/>Select **Single-page application (SPA)** as the platform and use `{{origin}}/admin/ui/callback` as the Redirect URI.<br/><br/>where: `{{origin}}` is a template placeholder for the base URL where the Domino REST API server is hosted.|
 
-        [![Azure app registration](../../assets/images/entraID16.png){: style="height:70%;width:70%"}](../../assets/images/entraID16.png){: target="_blank" rel="noopener noreferrer"}
+        ![Azure app registration](../../assets/images/entraID16.png){: style="height:70%;width:70%"}
 
     4. Click **Register**.
 
@@ -50,15 +50,22 @@ Configure an external IdP of your choice. For more information, see [configuring
 
     1. Under **Manage**, select **Certificates &amp; secrets** &rarr; **Client secrets** &rarr; **New client secret**.
     2. Add a description for your client secret, and select an expiration for the secret or specify a custom lifetime.
+
+        ![Azure app registration](../../assets/images/entraID31.png){: style="height:70%;width:70%"}
+
     3. Click **Add**.
-    4. Record the client secret Value. This secret value is never displayed again after you leave the page.
+    4. Record the client secret **Value**. This secret value is never displayed again after you leave the page.
+
+        ![Azure app registration](../../assets/images/entraID32.png){: style="height:70%;width:70%"}
 
 3. Add the Application ID URI.
 
     1. Under **Manage**, select **Expose an API**.
     2. At the top of the page, select **Add** next to **Application ID URI**.
 
-      This defaults to `api://<application-client-id>`. Take note of this value as it is needed in the configuration in the Domino REST API.
+        This defaults to `api://<application-client-id>`. Take note of this value as it is needed in the configuration in the Domino REST API.
+
+        ![Azure app registration](../../assets/images/entraID33.png){: style="height:70%;width:70%"}
 
 4. Configure API permissions.
 
@@ -66,30 +73,43 @@ Configure an external IdP of your choice. For more information, see [configuring
     2. Click **Add a permission**. The **Request API permissions** pane opens.
     3. Select the **APIs my organization uses** tab, and then select the application you configured for use by the Domino REST API server from the list. See the [Before you begin](#before-you-begin) section for details.
 
-        [![Azure app registration](../../assets/images/entraID17.png){: style="height:70%;width:70%"}](../../assets/images/entraID17.png){: target="_blank" rel="noopener noreferrer"}
+        ![Azure app registration](../../assets/images/entraID17.png){: style="height:70%;width:70%"}
+
+        In the example image, it shows the selection of the **DRAPI-API** application, which is the application used by the Domino REST API server as stated in the [Before you begin](#before-you-begin) section.
 
     4. Under **Select permissions**, select the required scopes and click **Add permissions**. Make sure that the scopes `$SETUP` and `$DATA` are selected.
 
-        [![Azure app registration](../../assets/images/entraID18.png){: style="height:70%;width:70%"}](../../assets/images/entraID18.png){: target="_blank" rel="noopener noreferrer"}
+        ![Azure app registration](../../assets/images/entraID18.png){: style="height:70%;width:70%"}
 
         After adding permissions, you should see the selected permissions under **Configured permissions** on the **API permissions** page.
 
     5. Click **Grant admin consent for {your tenant}** to grant admin consent to the permissions configured for the application.
     6. In the **Grant admin consent confirmation** dialog, click **Yes**. After granting consent, the permissions that required admin consent are shown as having consent granted.
 
+        ![Azure app registration](../../assets/images/entraID34.png){: style="height:70%;width:70%"}
+
 5. Assign an owner.
 
     1. Under **Manage**, select **Owners**, and then select **Add owners**. The **Owners** pane opens.
     2. Search for and select the user account that you want to be an owner of the application.
+
+        ![Azure app registration](../../assets/images/entraID11.png){: style="height:70%;width:70%"}
+
     3. Click **Select** to add the user account that you chose as an owner of the application.
 
 6. Check authentication.
 
     1. Under **Manage**, select **Authentication**.
     2. On the **Redirect URI configuration** tab, make sure that the selected and entered values are correct.
+
+        ![Azure app registration](../../assets/images/entraID35.png){: style="height:70%;width:70%"}
+
     3. On the **Supported accounts** tab, make sure the correct supported account type is selected.
     4. On the **Settings** tab, make sure **Access token** is selected.
-    5. Click **Save** if you make any changes.
+
+        ![Azure app registration](../../assets/images/entraID36.png){: style="height:70%;width:70%"}
+
+    5. Click **Save** if you made any changes.
 
 7. Adjust app manifest.
 
@@ -139,7 +159,7 @@ To use the configured external IdP for Admin UI login, you need to include the `
 
     Check the **Overview** page of the application in the Azure portal. Refer to the following example image:
 
-    [![Azure app registration](../../assets/images/entraID19.png){: style="height:70%;width:70%"}](../../assets/images/entraID19.png){: target="_blank" rel="noopener noreferrer"}
+    ![Azure app registration](../../assets/images/entraID37.png){: style="height:70%;width:70%"}
 
     After adding the JSON object, the configuration should be similar to the following:
 
