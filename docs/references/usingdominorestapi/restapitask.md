@@ -93,6 +93,10 @@ Use these commands when deeper troubleshooting is needed so you can generate var
 
 Use these commands to start and stop Java Flight Recorder (JFR) profiling and generating diagnostic dumps.
 
+!!! warning "Important"
+
+    Only run these console commands when advised by the Support team, as these commands are intended for diagnostic purposes.
+
 |Command|Purpose|
 |:---|:---|
 |`tell restapi jfr start`|Starts JFR profiling.|

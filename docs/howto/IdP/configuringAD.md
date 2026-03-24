@@ -2,12 +2,21 @@
 
 ## About this task
 
-The procedures guide you on configuring Microsoft Entra ID, formerly Azure Active Directory, as an IdP. Microsoft Entra ID has its own ideas about JWT compatibility:
+The procedures guide you on configuring Microsoft Entra ID, formerly Azure Active Directory, as an IdP.
 
-- The `aud` property is fixed to the ID of the application, not as commonly, the URL of the target system.
-- There is no `scope` property, but instead `scp` to describe the requested scopes.
+## Client Ids
 
---8<-- "onclientids.md"
+When configuring Microsoft Entra ID as your external identity provider (IdP), you must specify a client ID. This value must match the application (client) ID of the client application you configure in Microsoft Entra ID.
+
+The client ID described here applies only to the Domino REST API server. Separate client IDs (application registrations) are required to support the Admin UI and Office Forms Based Authentication (OFBA).
+
+To learn more about configuring Microsoft Entra ID for the Admin UI or Office Forms Based Authentication (OFBA), see the related topics:
+
+- [Set up External IdP for Office Round Trip Experience](roundtripidp.md)
+
+- [Set up External IdP for Admin UI login](adminuiidp.md)
+
+<!--8<-- "onclientids.md"-->
 
 ## Configuration in Azure Portal
 
@@ -372,6 +381,19 @@ A few tips to troubleshoot the setup when the goalpost has been moved:
 - Compare the `aud` value from the JWT token with the `aud` value of the configuration file. Adjust the configuration file if different.
 - Check the `scp`, which is Microsoft's "alternative" to `scope`, and make sure it has the expected values matching the settings in the application configuration in the Admin UI. Adjust the scope in the DRAPI application (Admin UI) or your AzureAD IdP settings.
 
+## Additional information
+
+Microsoft Entra ID follows OAuth 2.0 and OpenID Connect standards, but uses some Microsoft-specific conventions for JWT claims:
+
+- The `aud` claim identifies the target API and is typically set to the application ID, App ID URI (for example, `api://<client-id>`), or a resource URL.
+- Instead of a `scope` claim, access tokens use the `scp` claim to represent delegated permissions.
+
+<!--
+Microsoft Entra ID has its own ideas about JWT compatibility:
+
+- The `aud` property is fixed to the ID of the application, not as commonly, the URL of the target system.
+- There is no `scope` property, but instead `scp` to describe the requested scopes.
+-->
 ## Rinse and repeat
 
 - [Set up External IdP for Office Round Trip Experience](roundtripidp.md)

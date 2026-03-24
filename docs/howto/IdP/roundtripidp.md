@@ -4,7 +4,13 @@
 
 This task explains how to configure an external identity provider (IdP) for login to the Office Round Trip Experience.
 
---8<-- "onclientids.md"
+## Cliend Ids
+
+When configuring an external identity provider using OpenID Connect (OIDC) or OIDC-idpcat with HCL Domino and the Domino REST API, you must specify a client ID. The default recommendation is to use Domino as the client ID for the Domino REST API server. However, your identity provider administrator might require a different value depending on your organization’s configuration.
+
+A separate client ID is required to support Office Forms Based Authentication. To do this, you need to configure a separate client in your external IdP. You may specify the value of the client ID, or it might depend on your organization’s IdP configuration.
+
+<!--8<-- "onclientids.md"-->
 
 ## Before you begin
 
@@ -18,7 +24,13 @@ Configure an external IdP of your choice. For more information, see [configuring
 
     When configuring your external IdP, make sure to set `{{origin}}/api/webdav-v1/login/callback` as one of your redirect URIs.
 
-### Setup Microsoft Entra ID as external IdP for Admin UI login
+### Setup Microsoft Entra ID as external IdP for Office Forms Based Authentication
+
+!!! note
+
+    When configuring Microsoft Entra ID as your external identity provider (IdP), you must specify a client ID. This value must match the application (client) ID of the client application you configure in Microsoft Entra ID.
+
+    The client ID described here applies only to the Office Forms Based Authentication. A separate client ID (application registration) is required to support the Domino REST API server. For more information, see [Configure Microsoft Entra ID as IdP](configuringAD.md).
 
 1. Register an application.
 
@@ -196,9 +208,11 @@ Once configured, the login UI for OFBA should look like the following example im
 
 Clicking **Sign in with {external_idp_name}** commences the authorization code flow.
 
+<!--
 !!! note
 
     Office Round Trip Experience external IdP login uses authorization code flow with PKCE.
+-->
 
 ### Example OFBA configuration to use Keycloak as external IdP
 
