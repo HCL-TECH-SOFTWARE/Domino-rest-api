@@ -38,10 +38,21 @@ To learn more about Domino Certificate Manager, see [Managing TLS certificates w
 
 This configuration will attempt to load a certificate matching the server's "Fully qualified Internet host name" from the server document, either directly or with a matching wildcard certificate. To specify one or more certificate host names to load, use this configuration:
 
+Example 1:
+
 ```json
 {
     "TLSCertStore" : true,
     "TLSCertStoreName" : ["foo.bar.com", "api.bar.com"]
+}
+```
+
+Example 2 (showing wildcard usage):
+
+```json
+{
+    "TLSCertStore" : true,
+    "TLSCertStoreName" : ["*.bar.com"]
 }
 ```
 
