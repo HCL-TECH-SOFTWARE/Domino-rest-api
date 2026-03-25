@@ -6,6 +6,8 @@ Topics to guide you in completing configuration goals and tasks in relation to d
 
 - [Change file size limit](changefilesize.md)
 
+- [Change timeout for retrieving data from Domino](timeout.md)
+
 - [Configure metrics](metrics.md)
 
 - [Configure Ports](prodports.md)
