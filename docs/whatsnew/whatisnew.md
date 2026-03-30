@@ -3,7 +3,8 @@
 <!-- prettier-ignore -->
 !!! note "Important"
 
-    - Items marked in <span style="color:red">**red**</span> are API changes that may impact your applications and should be reviewed before upgrading.
+    - Items marked in <span style="color: red; font-weight: bold;">red</span>
+    are API changes that may impact your applications and should be reviewed before upgrading.
     - Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](../references/deprecated.md).
 
 ??? info "v1.1.2 - What's new or changed"
@@ -110,7 +111,7 @@
 
     **Others**
 
-    - Added [tip for ensuring successful round-trip editing on Windows](../howto/production/roundtrip.md#to-access-and-edit-the-ms-office-file-attachment).
+    - Added [tip for ensuring successful round-trip editing on Windows](../howto/production/roundtrip.md#access-and-edit-the-ms-office-file-attachment).
     
     - Added **Bruno** as one of the tools you can use when dealing with REST APIs. For more information, see [Bruno](../references/usertools.md).
     
@@ -490,7 +491,7 @@
 
     - Added the ability to [clone form modes](../references/usingwebui/schemaui.md#clone-a-mode) and [compare form modes](../references/usingwebui/schemaui.md#compare-modes) in the Admin UI.
     
-    - Added the ability to [export a schema](../howto/database/exportsourcejson.md) and [import a schema](../references/usingwebui/schemaui.md#import-a-schema) in the Admin UI.
+    - Added the ability to [export a schema](../howto/database/exportsourcejson.md) and [import a schema](../references/usingwebui/schemaui.md#add-a-schema) in the Admin UI.
     
     - Added search feature in **Schema Management** to easily look for forms, views, and agents.  
     - Added ability to configure or unconfigure all database forms at the same time.

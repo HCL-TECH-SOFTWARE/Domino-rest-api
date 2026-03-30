@@ -1,17 +1,28 @@
 # Quick Config
-   
-The **Quick Config** enables you to create a schema and a scope at the same time. 
 
-**To quick configure a schema and a scope**:
+## Overview
 
-1. Click **Quick Config** from the side navigation pane. The **Quick Config** pane opens.
+The **Quick Config** page in the **Admin UI** lets you create a schema and an associated scope in one operation.
+
+## Use Quick Config
+
+1. Open the **Admin UI**.
+2. From the side navigation pane, choose **Quick Config**. The **Quick Config** pane opens.
 
     ![Quick Config](../../assets/images/quickconfig1.png)
 
-2. Search and select a database from the list of **Available Databases**.
-3. Enter the **Schema Name**, **Scope Name**, and **Description**.
-4. Choose a **Schema Icon**.
-5. Choose **Additional Modes** as required.
-5. Click **Add**.
+3. In **Available Databases**, search for and select the target database you want to enable for REST access.
+4. Provide the basic details:
 
-After completing the steps, you can now see the created schema on the **Schema Management** page and the created scope on the **Scope Management** page. 
+    - **Schema Name**: A descriptive name for the schema.
+    - **Scope Name**: A unique identifier for this schema’s scope.
+    - **Description**: Add notes about what this configuration is for.
+
+5. Choose a **Schema Icon** to help visually identify this schema.
+6. Choose **Additional Modes** as required.
+7. Click **Add**.
+
+After completing these steps:
+
+- The created schema appears on the **Schema Management** page.
+- The created scope appears on the **Scope Management** page.

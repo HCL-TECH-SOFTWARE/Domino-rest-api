@@ -8,7 +8,7 @@ The approval extension implements a simplified approval system that works with a
 
 A base function is implemented to give you an idea. The example can be easily extended to add notification, communication with external systems, etc. You can even implement approvals for users who don't have write access to the document.
 
-!!! note "JSON and file naming"
+!!! note
 
     - The OpenApi's 3.0.x JSON format is the only supported format. YAML or 3.1.x are not supported.
     - The name of the file has to start with `openapi.` and end with `.json`.
@@ -21,9 +21,9 @@ The extension shall allow you to retrieve a list of pending approvals, to approv
 
 In a typical development cycle, you would start with the URLs and leave the data format unspecified a JSON object for an initial iteration. In a later iteration, the schema gets specified in detail and locked down.
 
-!!! note "Iterate your design"
+!!! note
 
-    OpenAPI does NOT require big upfront design, but allows for convenient ever refining iterations.
+    OpenAPI does NOT require extensive upfront design, but supports convenient and ever refining iterations.
 
 For this tutorial, the final structure is presented.
 

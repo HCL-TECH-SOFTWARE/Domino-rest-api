@@ -2,7 +2,9 @@
 
 <!-- prettier-ignore -->
 !!! danger "**Domino REST API on Notes Client**"
-    The HCL Domino REST API is designed for use with the HCL Domino server. The ability to deploy it to a Notes client on Windows or macOS is provided for your convenience so you can evaluate and experiment. You can explore the API without setting up an HCL Domino server.<br />
+
+    The HCL Domino REST API is designed for use with the HCL Domino server. The ability to deploy it to a Notes client on Windows or macOS is provided for your convenience so you can evaluate and experiment. You can explore the API without setting up an HCL Domino server.
+    
     **This setup is not supported for any production use**. HCL Support won't entertain tickets for it.
 
 ## About this task
@@ -20,7 +22,7 @@ The procedure guides you to try the Domino REST API with a sample demo Notes dat
 
 ## Procedure
 
-1.  Locate your Notes Data directory:
+1. Locate your Notes Data directory:
 
     1. Open the HCL Notes Desktop Client.
     2. Go to the menu **Preferences**.
@@ -28,8 +30,8 @@ The procedure guides you to try the Domino REST API with a sample demo Notes dat
 
        For Mac, it's under `/Users/[userid]/Library/Application Support/HCL Notes Data/`.
 
-2.  Place `Demo.nsf` in the Notes data folder.
-3.  Create a functional users file to specify local Domino REST API Users:
+2. Place `Demo.nsf` in the Notes data folder.
+3. Create a functional users file to specify local Domino REST API Users:
 
     1. Locate your Notes Data directory and find the subdirectory named `keepconfig.d`.
     2. Create a new json file in the `keepconfig.d` directory. You can use any filename as long as the extension is json. As an example, you can use `localusers.json`.
@@ -60,25 +62,28 @@ The procedure guides you to try the Domino REST API with a sample demo Notes dat
     }
     ```
 
-    !!! note 
-        The json file creates temporary users that Domino REST API recognizes while the API is running. The users include a Management API user and 2 local users. To use these users, you may need to add their CN to the Database's ACL. `John Doe/Mauraders` should already be in the `Demo.nsf`'s ACL. The password for each user is `password`. For more information, see [Functional Accounts](../../references/functionalUsers.md).
+    !!! note
 
-4.  Open an elevated terminal and navigate to where Domino REST API was installed.
-5.  Run either the Windows cmd file (`runrestapi.cmd`) or Mac bash script (`runrestapi.sh`) that was installed by the installer.
+        The JSON file creates temporary users that Domino REST API recognizes while the API is running. The users include a Management API user and 2 local users. To use these users, you may need to add their CN to the Database's ACL. `John Doe/Mauraders` should already be in the `Demo.nsf`'s ACL. The password for each user is `password`. For more information, see [Functional Accounts](../../references/functionalUsers.md).
+
+4. Open an elevated terminal and navigate to where Domino REST API was installed.
+5. Run either the Windows cmd file (`runrestapi.cmd`) or Mac bash script (`runrestapi.sh`) that was installed by the installer.
 
     On Mac, you may have to change file permission to execute the script. To do that, issue the command:
 
     > `chmod 755 runrestapi.sh`
 
     <!-- prettier-ignore -->
-    !!! note "Beware of the JRE"
+    !!! warning
+
         For different versions of Notes, the Notes JRE path in the script may vary. You may need to change the path in the script.
 
-6.  When prompted for a password for your notes.id file in the Java window, enter your password in that Java window. If any error occurs, stop the running process (kill -9 for Mac) and restart the script. For more information, see [Troubleshooting guide](../../references/troubleshooting.md).
+6. When prompted for a password for your notes.id file in the Java window, enter your password in that Java window. If any error occurs, stop the running process (kill -9 for Mac) and restart the script. For more information, see [Troubleshooting guide](../../references/troubleshooting.md).
 
     <!-- prettier-ignore -->
-    !!! tip "Password Prompt"
-        To avoid being prompted for a password each time you start the Domino REST API, go to **File > Security > User Security** in your HCL Notes Client, and then select the *Don't prompt for a password from other Notes-based programs** checkbox in the *Security Basics* tab.
+    !!! tip
+
+        To avoid being prompted for a password each time you start the Domino REST API, go to **File > Security > User Security** in your HCL Notes Client, and then select the **Don't prompt for a password from other Notes-based programs** checkbox in the **Security Basics** tab.
 
     ![OpenAPI](../../assets/images/NotesSecurityPasswordOption.png){: .scale-img-seventy-five-percent }
 

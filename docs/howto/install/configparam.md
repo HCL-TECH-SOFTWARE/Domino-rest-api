@@ -79,12 +79,10 @@ The default configuration entry that you will see in the **Config** tab in the *
 
 ```json
 {
-  /* Lots of JSON here */
   "enabledProtocols": {
     "TLSv1.3": false,
     "TLSv1.2": true
   }
-  /* more JSON here */
 }
 ```
 

@@ -12,14 +12,14 @@ The REST API uses the information from the document's form item to determine acc
 
 The approach follows the same principle as the Notes client or the Domino HTTP task, just the lookup source is the schema and not the list of forms in the design.
 
-!!! warning "Form item normalization"
+!!! warning
 
-    The REST API does "normalize" the value of the form item. The returned form item is the (last) alias of the found form configuration. The stored document is not altered.
+    The REST API *normalizes* the value of the form item. The returned form item corresponds to the last alias of the found form configuration. The stored document itself remains unchanged.
 
 ![Form and Alias](../../assets/images/FormAndAlias2.png)
 
 ## The rationale
 
-In contemporary development understanding we have label/value pairs. To normalize Notes documents we follow this pattern with the form name being the label and the last item being the value.
+In contemporary development understanding, there are label/value pairs. To normalize Notes documents, we follow this pattern, using the form name as the label and the last item as the value.
 
-Aliases inbetween are considered "variations" we remove from API use to simplify access for outside developers.
+Any intermediate aliases are treated as variations and are excluded from API use to simplify access for external developers.

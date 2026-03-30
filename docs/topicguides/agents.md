@@ -14,7 +14,7 @@ One of the differentiators for Domino compared to some other NoSQL databases is 
 -->
 ## Running Agents
 
-There are three ways to run an agent via Domino REST API:
+There are 2 ways to run an agent via Domino REST API:
 
 ### **POST: /run/agent**
 
@@ -30,21 +30,19 @@ This is used to run an agent in real time. The payload expects at least `agentNa
 
 ### **POST: /run/agentWithContext**
 
-<!-- prettier ignore -->
-
 !!! warning "Caution"
+
     Might not be supported on current version.
 
 This is used to run an agent in real time, passing the `unid` of a document to use as context and the `returnMode` to use to generate the response for the agent. If `returnMode` was not specified or does not exist, the default `{"agentResponse":"done"}` response is returned.
 
-<!-- prettier-ignore -->
 !!! note
     The calling HTTP thread will be tied up until the agent finishes, so this should only be used for short-running agents.
 
-### **POST:/run/agentAsync**
+<!--### **POST:/run/agentAsync**
 
-<!-- prettier-ignore -->
 !!! warning "Caution"
+
     Might not be supported on current version.
 
 This is used to run an agent asynchronously via Domino REST API. A successful response contains a status of "processing" and a uuid for the request. The uuid can be used to check the status of the agent (GET **/run/agentAsync/{uuid}**) or cancel the agent (DELETE **/run/agentAsync/{uuid}**). The payload is of the format:
@@ -74,8 +72,9 @@ The properties are:
 | `method`           | HTTP Method to use for the callbackUrl and callbackUrlError.                                                                               |
 | `payload`          | A JSON object to pass into then agent. This can contain any additional information the agent needs to use.                                 |
 
-This process creates a document in **KeepAgents.nsf** to track processing of the agents. You can check that in the Notes Client, with the UUID, or query with an API.
+This process creates a document in **KeepAgents.nsf** to track processing of the agents. You can check that in the Notes Client, with the UUID, or query with an API.-->
 
+<!--
 ## Asynchronous Agent Scheduler
 
 The asynchronous agent scheduler picks up and processes asynchronous agents. The **threads** property in the config.json defines how many agents can be run asynchronously, by default **10**. Multiple agents within the same database and even multiple instances of the same agent can be run simultaneously. Any additional agents are queued up for processing once a thread becomes available.
@@ -83,6 +82,7 @@ The asynchronous agent scheduler picks up and processes asynchronous agents. The
 Domino REST API can still be stopped with agents running or queued. In this scenario, running agents will be cancelled and set to the status "CANCELLED". Because we can't know if it will cause problems to restart the agents, you will need to manually review and, if necessary, start the agent again or complete any remedial data fixup.
 
 Any queued agents will be picked up for processing when the server restarts.
+-->
 
 ## Triggers
 

@@ -57,19 +57,27 @@ openssl pkcs8 -topk8 -nocrypt -in privatekey_ec.pem -out privatekey.pem
 openssl ec -in privatekey.pem -pubout -out publickey.pem
 ```
 
+## Additional information
+
+Check how to use the [Management Console for encryption operations](../../howto/management/encryptionops.md) to learn more.
+
+You can also check the [JWT Multi-Server](../../howto/management/jwtmultiserver.md) guide to learn how to set up Domino REST API on multiple Domino servers to use the same JWT keys.
+<!--
 ## Using the Management Console for encryption operations
 
-The management UI offers convenience functions for encryption and certificate related activities.
+The Management Console (UI) provides convenient functions for encryption and certificate-related tasks.
 
 ![Domino REST API Management Console](../../assets/images/mngmntconsole.png)
 
 ### Hashing a salted password
 
+The shutdown key and the metrics credential password are stored in the Domino REST API configuration `.ini` files, salted and hashed. To change one of them, enter a password in the **Salt this** text field and click **Salt**. The salted and hashed version of the entered password will be shown, and you can copy and use it in a configuration JSON file.
+
 The shutdown key, as well as the metrics credential password are stored salted and hashed in the Domino REST API configuration ini files. To change one of them, the `salt` button can be used to compute a replacement value. Enter the password, it isn't hidden here, click on `Salt` and the salted and hashed version will be shown in the UI, where you can copy & paste it for use in a configuration json file.
 
 ### Generate keys and certificates for SAML and JWT
 
-Domino REST API used X509 certificates and a public/private key pair for [SAML](../../howto/IdP/keepsaml.md) interaction with the Domino R12 IDVault<!-- [IDVault](TODO: link to vault) -->. The management console offers a convenient way to generate those and the needed configuration entries.
+Domino REST API used X509 certificates and a public/private key pair for [SAML](../../howto/IdP/keepsaml.md) interaction with the Domino R12 IDVault [IDVault](TODO: link to vault). The management console offers a convenient way to generate those and the needed configuration entries.
 
 Note: You need access to the Domino server's file system to collect the keys/cert.
 {: .alert .alert-danger}
@@ -95,7 +103,7 @@ The 4 files get created in your `keepconfig.d` directory. Distribute them to all
   "JwtAlgorithm": "RSA"
 }
 ```
-
+<!--
 ## Example of how to create and set up Domino REST API on multiple Domino servers to use the same JWT keys
 
 - Log in to the Management console (Port 8889).
@@ -113,3 +121,4 @@ The 4 files get created in your `keepconfig.d` directory. Distribute them to all
 
 - Copy these 4 files to your other Domino servers into the `[notesdata]/keepconfig.d` directory.
 - Restart Domino REST API on all servers with this new configuration and they will now share the same JWT keys.
+-->

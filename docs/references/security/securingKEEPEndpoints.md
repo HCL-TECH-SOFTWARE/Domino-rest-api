@@ -4,7 +4,7 @@ title: Securing Domino REST API endpoints
 
 Domino REST API uses three endpoints:
 
-![Domino REST API Endpoints](../../assets/images/PortUse.png)
+![Domino REST API Endpoints](../../assets/images/PortUse.png){: style="height:70%;width:70%"}
 
 Only one must be reachable by users (humans or servers). Configure your firewall accordingly and eventually use [a proxy](../../howto/web/httpsproxy.md).
 
@@ -12,7 +12,7 @@ To be able to securely and efficiently deploy Domino REST API into a production 
 
 The Domino REST API configuration includes the Domino REST API binary directory, `keepconfig.d`, and environment variables.
 
-![The call hierarchy](../../assets/images/ActualConfiguration.png)
+![The call hierarchy](../../assets/images/ActualConfiguration.png){: style="height:70%;width:70%"}
 
 Examples of the default configuration settings are here, [config.json](../configuration/parameters.md). Whenever you do a new Domino REST API install, these settings and the `projectkeep.jar` file are overwritten, but any change made in `keepconfig.d` stays untouched.
 

@@ -1,6 +1,7 @@
 nav:
     - index.md
     - changefilesize.md
+    - timeout.md
     - metrics.md
     - Configure ports: prodports.md
     - Customize API schemas and endpoints: customAPI.md

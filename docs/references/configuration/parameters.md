@@ -185,16 +185,16 @@ This is the verticle for managing WebHandlers. `worker`, `threadPoolName`, `thre
 | Property           | Type    | Description                                                                                                                  |
 | ------------------ | ------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | active             | Boolean | Set to `true` to enable the use of external IdP in Admin UI login.                                                           |
-| client_id          | String  | External IdP client ID to use for Admin UI login, defaults to `keepadminui`.                                                 |
-| application_id_uri | String  | An optional property. Required when external IdP is **Microsoft Entra ID, formerly Azure Active Directory**. End with a `/`. |
+| client_id          | String  | External IdP client ID to use for Admin UI login. <!--defaults to `keepadminui`.-->                                                 |
+| application_id_uri | String  | An optional property. Required when external IdP is **Microsoft Entra ID, formerly Azure Active Directory**. Ends with a `/`. |
 
 ## JWT OFBA parameters
 
 | Property           | Type    | Description                                                                                                                  |
 | ------------------ | ------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | active             | Boolean | Set to `true` to enable the use of external IdP in OFBA.                                                                     |
-| client_id          | String  | External IdP client ID to use for OFBA, defaults to `keepofba`.                                                              |
-| application_id_uri | String  | An optional property. Required when external IdP is **Microsoft Entra ID, formerly Azure Active Directory**. End with a `/`. |
+| client_id          | String  | External IdP client ID to use for OFBA. <!--defaults to `keepofba`.-->                                                              |
+| application_id_uri | String  | An optional property. Required when external IdP is **Microsoft Entra ID, formerly Azure Active Directory**. Ends with a `/`. |
 
 ## Additional information
 

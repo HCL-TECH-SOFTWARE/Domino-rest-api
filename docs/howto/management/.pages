@@ -8,3 +8,4 @@ nav:
     - jwtmultiserver.md
     - suspendeduser.md
     - console.md
+    - encryptionops.md

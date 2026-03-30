@@ -2,13 +2,20 @@
 
 <!-- prettier-ignore -->
 !!! info "Background"
-    [Rich Text (RTF)](https://en.wikipedia.org/wiki/Rich_Text_Format) was specified by Microsoft in 1987. Notes/Domino uses a similar specification. It's essentially a container format designed to host [plain text](https://www.youtube.com/watch?v=_mZBa3sqTrI), formatted text, images, attachments, embedded objects and layout information. It's [white space sensitive](https://twitter.com/jordwalke/status/1272431278868987904), a fancy term for being able to "format" something by hitting the space key repeatedly.
 
-    The container formats today that resemble these capabilities are [ECMA-376 (ISO/IEC-29500)](https://www.ecma-international.org/publications-and-standards/standards/ecma-376/) (a.k.a Office Open XML), [ISO/IEC 26300:2006](http://www.oasis-open.org/committees/download.php/19274/OpenDocument-v1.0ed2-cs1.pdf) (a.k.a Open Document Format), which are both XML based and [MIME (RFC 1341)](https://datatracker.ietf.org/doc/html/rfc1341) which is widely used in eMail. The XML formats, mainly used in word processors aren't native to the web, while MIME doesn't prescribe (it is **multipurpose** after all) its content parts **and** isn't native to web browsers.
+    [Rich Text (RTF)](https://en.wikipedia.org/wiki/Rich_Text_Format) was specified by Microsoft in 1987. Notes/Domino uses a similar specification. It's essentially a container format designed to host [plain text](https://www.youtube.com/watch?v=_mZBa3sqTrI), formatted text, images, attachments, embedded objects and layout information. It's whitespace sensitive, a term for formatting achieved by repeatedly pressing the space key.
+
+    Modern container formats with similar capabilities include [ECMA-376 (ISO/IEC-29500)](https://www.ecma-international.org/publications-and-standards/standards/ecma-376/) (Office Open XML) and [ISO/IEC 26300:2006](http://www.oasis-open.org/committees/download.php/19274/OpenDocument-v1.0ed2-cs1.pdf) (Open Document Format), which are both XML-based, and [MIME (RFC 1341)](https://datatracker.ietf.org/doc/html/rfc1341), which is widely used in email. The XML formats, common in word processors, are not native to the web. MIME, being multipurpose, does not prescribe content parts and is not native to web browsers.
+
+<!--
+
+Rich Text Format (RTF), specified by Microsoft in 1987, uses a similar specification in Notes/Domino. Rich Text Format (RTF) It is a container format designed to host plain text, formatted text, images, attachments, embedded objects, and layout information. It is whitespace sensitive—a term for formatting achieved by repeatedly pressing the space key.
+
+The container formats today that resemble these capabilities are [ECMA-376 (ISO/IEC-29500)](https://www.ecma-international.org/publications-and-standards/standards/ecma-376/) (a.k.a Office Open XML), [ISO/IEC 26300:2006](http://www.oasis-open.org/committees/download.php/19274/OpenDocument-v1.0ed2-cs1.pdf) (a.k.a Open Document Format), which are both XML based and [MIME (RFC 1341)](https://datatracker.ietf.org/doc/html/rfc1341) which is widely used in eMail. The XML formats, mainly used in word processors aren't native to the web, while MIME doesn't prescribe (it is **multipurpose** after all) its content parts **and** isn't native to web browsers.-->  
 
 ## Defining Rich Text
 
-Any field you want to access in Domino REST API needs to be defined [in a schema](../../../howto/database/enablingadb.md), using the correct data format.
+Any field you want to access in the Domino REST API must be defined in a [schema](../../../howto/database/enablingadb.md). To define a Rich Text field, use the correct data format:
 
 ```json
 {
@@ -18,7 +25,7 @@ Any field you want to access in Domino REST API needs to be defined [in a schema
 }
 ```
 
-This enables the correct, within the means of the API, processing of Rich Text for both read and write.
+This enables the correct Rich Text processing for both read and write within the means of the API.
 
 ## Reading Rich Text
 
@@ -26,13 +33,12 @@ There are 6 ways to retrieve Rich Text:
 
 - As part of the regular `/document/{unid}` URL or a list operation using `&documents=true`
 - Using the `/query` URL
-- Using the `/richtext/markdown/{unid}` endpoint that returns markdown, which is quite lossy but easy to digest
-
+- Using the `/richtext/markdown/{unid}` endpoint that returns markdown, which is lossy but highly readable
 - Using the `/richtext/mime/{unid}` endpoint that returns a [MIME](https://datatracker.ietf.org/doc/html/rfc1341) representation of a Notes Rich Text
-- Using the `/bulk/unid` URL
 - Using `/richtext/plain/{unid}` endpoint that returns a stream of plain unformatted text
+- Using the `/bulk/unid` URL
 
-By default, the following APIs return Rich Text as MIME, but you can specify a different format by using the `richTextAs=` URL parameter. The valid formats are `html`, `mime`, `md`, and `plain`.
+The following APIs return Rich Text as MIME by default. You can specify a different format by using the `richTextAs=` URL parameter, and setting its value to `html`, `mime`, `md`, or `plain`.
 
 - `/document/{unid}`
 - `/query`
@@ -47,9 +53,10 @@ The request response may include the parameters identified in the table below.
 
 <!-- prettier-ignore -->
 !!! note
+
     **There is no Rich Text on the web**.
-    Domino REST API does **NOT** attempt to write back data in the original Lotus Notes (ca 1989) Rich Text format, but will use [MIME](https://datatracker.ietf.org/doc/html/rfc1341) with multipart content. 
-    The Notes client can process and render this for display, but can't edit it without first converting it. Try to avoid editing on both sides.
+    
+    Domino REST API does **NOT** attempt to write back data in the original Lotus Notes (ca 1989) Rich Text format, but will use [MIME](https://datatracker.ietf.org/doc/html/rfc1341) with multipart content. The Notes client can process and render this for display, but can't edit it without first converting it. Try to avoid editing on both sides.
 
 A submission to a `richtext` field as part of a `POST /document/{unid}` needs to look like this:
 
@@ -66,14 +73,65 @@ A submission to a `richtext` field as part of a `POST /document/{unid}` needs to
 
 |Parameter|Details|
 |----|----|
-|type|Its value must be a valid content type. It can be `text/[subtype]`, `image/[subtype]` or `multipart/[subtype]`.</br></br>- `text/[subtype]` is mainly `html` but could be `css` or `javascript`.</br></br>- `image/[subtype]` can be any image type that works in the API. But for rendering in the Notes client, stick to `jpg`, `png` or `svg`.</br></br>- `multipart/[subtype]` can be `mixed` or `form-data`, There is a subtle difference, see examples below.|
-|encoding|Its value can be either be `PLAIN` or `BASE64`. When using `PLAIN`, you have to escape all quotes so we recommend `BASE64`.|
-|headers| [MIME](https://datatracker.ietf.org/doc/html/rfc1341) headers used to, for example, determine attachment names.</br></br>Example: `"Content-Disposition: inline; filename=\"KEEPLogo.png\";",`|
+|type|Its value must be a valid content type:</br></br>- `text/[subtype]` is mainly `html` but could be `css` or `javascript`.</br></br>- `image/[subtype]` can be any image type that works in the API. But for rendering in the Notes client, stick to `jpg`, `png` or `svg`.</br></br>- `multipart/[subtype]` can be `mixed` or `form-data`. There is a subtle difference, see the examples below.|
+|encoding|Its value can be `PLAIN` or `BASE64`. When using `PLAIN`, you have to escape all quotes, so `BASE64` is recommended.|
+|headers| [MIME](https://datatracker.ietf.org/doc/html/rfc1341) headers used to, for example, determine attachment names.</br></br>Example:</br>`"Content-Disposition: inline; filename=\"KEEPLogo.png\";",`|
 |content|Base64 encoded content|
+
+## Converting Rich Text
+
+The following information specify how incoming Rich Text and outgoing Rich Text are converted.
+
+!!! note
+
+    All incoming and outgoing conversions shown here are the default processes. See [Extending Rich Text](../../../references/richtextension.md) for instructions on extending Rich Text processing.
+
+### Incoming Rich Text
+
+Incoming Rich Text is the Rich Text JSON passed in the request body as the value of a `richtext` field.
+
+The table below shows, for each submitted type, which `createAdditional` options are supported and how the content is stored.
+
+!!! info
+
+    `createAdditional` is an optional property in the Rich Text JSON that lets you specify what **alternative** content types should be generated from the original content. It causes the API to save a `multipart/alternative` MIME part that includes both the original content type and the additional types specified in the `createAdditional` property. Currently, the allowed values for `createAdditional` are **plain** and **html**.
+
+| Submitted type | createAdditional | Stored as | Example |
+| :--- | :--- | :--- | :--- |
+| multipart/mixed | - | multipart/mixed |  [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./incoming/multipart-mixed.md "Click to open the example") |
+| multipart/alternative | - | multipart/alternative | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./incoming/multipart-alternative.md "Click to open the example")    |
+| text/plain | - | text/plain | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./incoming/text-plain.md "Click to open the example") |
+| text/html | - | text/html | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./incoming/text-html.md "Click to open the example") |
+| text/html | plain | - multipart/alternative<br/>- text/html | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./incoming/text-html-plain.md "Click to open the example") |
+| text/markdown | - | text/markdown | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./incoming/text-markdown.md "Click to open the example") |
+| text/markdown | plain | - multipart/alternative<br/>- text/markdown<br/>- text/plain | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./incoming/text-markdown-plain.md "Click to open the example") |
+| text/markdown | html | - multipart/alternative<br/>- text/markdown<br/>- text/html | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./incoming/text-markdown-html.md "Click to open the example") |
+| text/markdown | plain, html | - multipart/alternative<br/>- text/markdown<br/>- text/plain<br/>- text/html | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./incoming/text-markdown-plain-html.md "Click to open the example") |
+
+!!! warning
+
+    Updating the `richtext` field in Notes client may alter what Domino REST API has stored in it. For example, a stored `multipart/alternative` gets overwritten if the `richtext` field is updated using the Notes client.
+
+### Outgoing Rich Text
+
+Outgoing Rich Text is how the value of the `richtext` field is shown in the response body.
+
+The following table shows the content of the `richtext` field, its different `richTextAs` values, and their corresponding results.
+
+| Content | richTextAs | Result type | Example |
+| :--- | :--- | :--- | :--- |
+| Rich Text | mime | multipart/mixed | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./outgoing/richtext-mime.md) |
+| Rich Text | html | text/html | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./outgoing/richtext-html.md)  |
+| Rich Text | plain | text/plain | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./outgoing/richtext-plain.md) |
+| Rich Text | markdown | text/markdown | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./outgoing/richtext-markdown.md) |
+| MIME | mime | multipart/mixed | [Ex.1](./outgoing/mime-mime-1.md)<br/>[Ex.2](./outgoing/mime-mime-2.md) |
+| MIME | html | text/html<br/><br/>Fallback:<br/>text/markdown &rarr; html | [Ex.1](./outgoing/mime-html-1.md)<br/>[Ex.2](./outgoing/mime-html-2.md)<br/>[Ex.3](./outgoing/mime-html-3.md)<br/>[Ex.4](./outgoing/mime-html-4.md) |
+| MIME | markdown | text/markdown<br/><br/>Fallback:<br/>text/html &rarr; markdown | [Ex.1](./outgoing/mime-markdown-1.md)<br/>[Ex.2](./outgoing/mime-markdown-2.md)<br/>[Ex.3](./outgoing/mime-markdown-3.md)<br/>[Ex.4](./outgoing/mime-markdown-4.md) |
+| MIME | plain | text/plain<br/><br/>Fallback:<br/>- text/html &rarr; plain<br/>- text/markdown &rarr; plain      | [Ex.1](./outgoing/mime-plain-1.md)<br/>[Ex.2](./outgoing/mime-plain-2.md)<br/>[Ex.3](./outgoing/mime-plain-3.md)<br/>[Ex.4](./outgoing/mime-plain-4.md)<br/>[Ex.5](./outgoing/mime-plain-5.md) |
 
 ## Examples
 
-Pulling in a file into your mime requires `multipart/form-data` and would look like this:
+To include a file into your MIME requires `multipart/form-data` and would look like this:
 
 ```bash
 MIME-Version: 1.0
@@ -97,7 +155,7 @@ this is the attachment text
 --XXXXboundary text--
 ```
 
-Posting this to e.g. a Teamroom database would look like this:
+Posting this to a database would look like this:
 
 ```json
 {
@@ -130,11 +188,12 @@ Posting this to e.g. a Teamroom database would look like this:
     ```
 
 </details>
-### Flat JSON submissions (a.k.a Inception mode)
 
-If your consuming service can't deal with the Rich Text JSON structure, you can wrap the JSON structure into a Base64 encoded String.
+### Flat JSON submissions (Inception mode)
 
-So you have the `content` element, which most likely is already Base64 encoded wrapped a second time into Base64. To clarify, you start with:
+If your consuming service cannot handle the Rich Text JSON structure, you can wrap that JSON in a Base64‑encoded string.
+
+In this case, the `content` element that is typically already Base64‑encoded becomes part of a second layer of Base64 encoding. For example, start with:
 
 ```json
 {
@@ -145,15 +204,13 @@ So you have the `content` element, which most likely is already Base64 encoded w
 }
 ```
 
-Then convert this to Base64:
+Then encode this entire JSON object as Base64. The conversion result might look like:
 
-<div>
-Conversion result
-<div style="word-break: break-all; overflow-wrap: break-word; white-space: pre-wrap;">
+```text
 ewogICJ0eXBlIjogImltYWdlL3BuZyIsCiAgImVuY29kaW5nIjogImJhc2U2NCIsCiAgImNvbnRlbnQiOiAiLUVuY29kZWQgYmFzZTY0IGhlcmUtIgp9
-</div></div>
+```
 
-To finally submit it as String (other fields omitted for clarity):
+Finally, submit it as a String (other fields omitted for clarity):
 
 ```json
 {
@@ -167,15 +224,15 @@ YMMV
 
 ### Reading back attachments submitted through MIME
 
-The name of any attachment can be seen, when your form mode contains the virtual field `$FILES` (case sensitive) and you retrieve the document using the `/document` endpoint. Using the `/attachments/{unid}/{attachmentName}` endpoint, they can be retrieved in their binary format.
+The name of an attachment is visible when your form mode includes the virtual field `$FILES` (case-sensitive) and you retrieve the document using the `/document` endpoint. You can then download attachments in binary format using the `/attachments/{unid}/{attachmentName}` endpoint.
 
-<!-- prettier-ignore -->
 !!! note
-     Currently, the attachments aren't picked up by the `@AttachmentNames` formula until they get saved in Notes client once - working on it.
 
-### Further reading
+    Currently, attachments are not returned by the `@AttachmentNames` formula until the document has been saved once in the Notes client.
 
-To be successful in composing MIME payloads, make yourself familiar with the specification and more explanations:
+## Additional information
+
+To be successful in composing MIME payloads, familiarize yourself with the specification. Check the links for more information:
 
 - [W3C Multipart specification](https://www.w3.org/Protocols/rfc1341/7_2_Multipart.html)
 
@@ -185,8 +242,10 @@ To be successful in composing MIME payloads, make yourself familiar with the spe
 
 - [MIME type sniffing by WHATWG](https://mimesniff.spec.whatwg.org/#understanding-mime-types)
 
-- [Java code examples with MIME](https://www.programcreek.com/java-api-examples/?api=org.apache.http.entity.mime.MIME)
-
 - [Oracle definition on MIME](https://docs.oracle.com/cd/E19146-01/819-2630/abumi/index.html)
 
 - [Wikipedia on MultiPart](https://en.wikipedia.org/wiki/MIME#Multipart_subtypes)
+
+<!--
+ [Java code examples with MIME](https://www.programcreek.com/java-api-examples/?api=org.apache.http.entity.mime.MIME)
+site cannot be reached anymore-->

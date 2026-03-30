@@ -69,7 +69,9 @@ Alternatively, you can use `POST` to `/api/setup-v1/admin/application/{{CLIENT_I
 }
 ```
 
-!!! warning "App Secrets can't be retrieved"
+!!! warning
+
+    **App Secrets can't be retrieved**.
 
     Once you leave the app screen where the App Secret is displayed, the generated secret is no longer accessible, as it is securely stored using salted hashing, preventing it from being transformed back to its original form.
 

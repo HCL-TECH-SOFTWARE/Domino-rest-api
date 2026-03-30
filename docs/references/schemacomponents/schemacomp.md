@@ -16,7 +16,7 @@ Tutorials
 
 References
 
-- [List available database forms](../usingwebui/schemaui.md#list-available-database-forms)
+- [List available database forms](../usingwebui/schemaui.md#list-database-forms)
 - [Add new form schema](../usingwebui/schemaui.md#add-new-form-schema)
 - [Activate a form](../usingwebui/schemaui.md#activate-a-form)
 - [Change form configuration](../usingwebui/schemaui.md#change-form-configuration)
@@ -39,7 +39,7 @@ How-to guide
 
 References
 
-- [List available database views](../usingwebui/schemaui.md#list-available-database-views)
+- [List available database views](../usingwebui/schemaui.md#list-database-views)
 - [Activate a view](../usingwebui/schemaui.md#activate-a-view)
 - [Edit a view](../usingwebui/schemaui.md#edit-a-view)
 
@@ -59,7 +59,7 @@ Tutorials
 
 How-to guide
 
-- [List available agents in the Admin UI](../usingwebui/schemaui.md#list-available-database-agents)
+- [List available agents in the Admin UI](../usingwebui/schemaui.md#list-database-agents)
 - [Activate an agent in the Admin UI](../usingwebui/schemaui.md#activate-an-agent)
 
 References

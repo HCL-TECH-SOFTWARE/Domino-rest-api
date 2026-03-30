@@ -55,7 +55,7 @@ The new schema is available and visible on the **Schema Management** page. If no
 
 !!! tip
 
-    - You also have the option of importing an schema. For more information, see [Import a schema](../../../references/usingwebui/schemaui.md#import-a-schema).
+    - You also have the option of importing an schema. For more information, see [Add a schema](../../../references/usingwebui/schemaui.md#add-a-schema).
 
 ### Activate a form
 

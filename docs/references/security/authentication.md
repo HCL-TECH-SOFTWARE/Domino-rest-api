@@ -2,8 +2,6 @@
 
 --8<-- "pickYourAuth.md"
 
-<!--Domino REST API offers a built-in endpoint to exchange your Domino credentials for a valid JSON Web Token (JWT). This page describes the setup of **external JWT identity providers** (IdP).-->
-
 ## OIDC with idpcat authentication
 
 !!! tip "We strongly recommend this option"
@@ -57,20 +55,7 @@ The configuration is as follows in Domino REST API:
 Starting with HCL Domino v14.5, the Domino HTTP task can act as an OIDC identity provider. This feature allows administrators to leverage their existing Domino HTTP authentication experience to authenticate end users with applications, servers, and services that support OIDC. For more information, see [Configure Domino REST API to use Domino 14.5 as OIDC provider](../../howto/IdP/configdomino145oidc.md).
 
 The following configuration allows Domino REST API to use Domino as an OIDC provider:
-<!--
-```json
-{
-  "domino-oidc-idpcat": {
-      "active": true,
-      "providerUrl": "https://<domino oidc server>/auth/protocol/oidc",
-      "clientId": "some-clientid",
-      "clientSecret": "some-clientsecret",
-      "scope": "Domino.user.all",
-      "aud": "https://<Domino REST API DNS name>"
-    }
-  }
-```
--->
+
 ```json
 {
   "oidc-idpcat": {
@@ -90,9 +75,6 @@ The following configuration allows Domino REST API to use Domino as an OIDC prov
 | `providerUrl` | The base URL that includes the name of the OIDC Domino server.<br/><br/>For example: `https://auth.mydomains.com/auth/protocol/oidc`|
 | `scope` | A scope that is expected to be included in the token from the OIDC provider. For example, `$DATA`,`email`, etc.<!--The scopes are `openid`, `email`, `profile`, `$DATA`, `Domino.user.all`. `Domino.user.all` is used for Domino HTTP.--> |
 | `aud` | A string or array of strings of audiences expected to be included in the token. The value of the `aud` key can be set to `https://<Domino REST API DNS name>` to match what Domino HTTP expects.|
-
-<!--| `clientId` | It's the configured client ID from the OIDC provider. It's strongly recommended to use `Domino` as client name. |
-| `clientSecret` | It's the generated client secret from the OIDC provider, usually a randomly generated hex string. |-->
 
 !!! caution
 
@@ -167,9 +149,9 @@ Should Domino use a permanent JWT Key, we can use a public/private key pair and 
 
 !!! tip
 
-    The management UI (Port 8889) provides a one click option to create such key pairs and configuration entry stored in `keepconfig.d`
+    The **Management console** UI (port 8889) offers a one-click option to generate key pairs and configuration entry, which are stored in `keepconfig.d`.
 
-    These keys can be shared between Domino servers, allowing, for example, redirects to a different mail server.
+    These keys can be shared across Domino servers, enabling, for example, redirects to a different mail server.
 
 ### External JWT/OIDC providers
 
@@ -224,10 +206,11 @@ Alternatively, the public key and issuer information can be added to the configu
 }
 ```
 
-!!! warning "Keep the certs secure"
+!!! warning
 
-    It's the responsibility of the administrator to save key files in secure locations.
-    The better way is to [use the certstore.nsf](../../howto/install/multiserver.md#shared-jwt-keys-to-login-to-drapi)
+    **Keep certificates secure.**
+
+    Administrators must store key files in secure locations. For the best approach, [use the certstore.nsf](../../howto/install/multiserver.md#shared-jwt-keys-to-login-to-drapi).
 
 ### JWT Payload
 
@@ -270,7 +253,7 @@ By default, Domino REST API will expect that incoming tokens contain a Domino-fo
 
 ### Name resolution
 
-The Domino REST API probes for the existence of various claims in the JWT token to determine the user name. The claims are probed in the following sequence. On the first available claim, the probing stops.
+The Domino REST API probes for the existence of various claims in the JWT token to determine the username. The claims are probed in the following sequence. On the first available claim, the probing stops.
 
 1. keep.user.attr.dominoDn
 2. CN
