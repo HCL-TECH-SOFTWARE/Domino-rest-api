@@ -27,7 +27,7 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -504,6 +504,8 @@
       
         
       
+        
+      
     
     
     
@@ -554,6 +556,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/v1.1.7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domino REST API v1.1.7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -3363,7 +3393,7 @@
   <span class="md-ellipsis">
     
   
-    Set up external IdP for Office Round Trip Experience
+    Set up an external IdP for the Office Round Trip Experience
   
 
     
@@ -3391,7 +3421,7 @@
   <span class="md-ellipsis">
     
   
-    Set up external IdP for Admin UI IdP
+    Set up an external IdP for Admin UI login
   
 
     
@@ -3424,6 +3454,8 @@
       
         
           
+        
+      
         
       
         
@@ -3529,6 +3561,34 @@
     
   
     Change file size limit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/production/timeout.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Change timeout for retrieving data from Domino
   
 
     
@@ -4338,6 +4398,8 @@
       
         
       
+        
+      
     
     
     
@@ -4601,6 +4663,34 @@
     
   
     Use Domino Console
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/management/encryptionops.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use Management console for encryption operations
   
 
     
@@ -6110,7 +6200,7 @@
   <span class="md-ellipsis">
     
   
-    Reserved Form mode names
+    Reserved Form Mode names
   
 
     
@@ -6135,8 +6225,6 @@
       
         
           
-        
-      
         
       
     
@@ -6171,11 +6259,6 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_6_9_10" id="__nav_6_9_10_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
           </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_9_10_label" aria-expanded="false">
@@ -6189,34 +6272,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../usingdominorestapi/richtext/conversion.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Conversion table
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
               
             
           </ul>
@@ -6409,10 +6464,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#view-available-scopes" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        View available scopes
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-scope-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access Scope Management
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#view-scopes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        View scopes
       
     </span>
   </a>
@@ -7432,10 +7509,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#view-available-scopes" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        View available scopes
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-scope-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access Scope Management
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#view-scopes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        View scopes
       
     </span>
   </a>
@@ -7496,65 +7595,145 @@
 
 
 <h1 id="scope-management">Scope Management</h1>
-<p>Select <strong>Database Management - Activation</strong> from the home page or <strong>Scopes</strong> from the side navigation pane to access the <strong>Scope Management</strong> page.</p>
-<h2 id="view-available-scopes">View available scopes</h2>
-<p>The <strong>Scope Management</strong> page shows the available scopes.</p>
+<h2 id="overview">Overview</h2>
+<p>The <strong>Scope Management</strong> page in the <strong>Admin UI</strong> lets you manage scopes. A scope is a name or identifier used to access a Domino database via the REST API, where each scope points to a specific schema in the database. A database can have many schemas for different use cases and a schema can be pointed to by more than one scope.</p>
+<p>For more information about scopes, see <a href="../schemacomponents/schemascope.html">Schema and Scope</a> and <a href="../schemacomponents/scopes.html">Scopes</a>.</p>
+<h2 id="access-scope-management">Access Scope Management</h2>
+<ol>
+<li>Log in to the <strong>Admin UI</strong>.</li>
+<li>
+<p>On the home page, select <strong>Database Management - Activation</strong> to open the <strong>Scope Management</strong> page.</p>
+<p>You can also access the <strong>Scope Management</strong> page by clicking <strong>Scopes</strong> in the side navigation pane.</p>
+</li>
+</ol>
+<h2 id="view-scopes">View scopes</h2>
+<p>On the <strong>Scope Management</strong> page, you can see existing scopes in different layouts:</p>
+<ul>
+<li>Stack View</li>
+<li>Card View</li>
+<li>Alphabetical View</li>
+<li>NSF View</li>
+</ul>
 <p><img alt="Scopes" src="../../assets/images/Scopes.png" /></p>
-<p>You can arrange the scopes in <strong>Stack View</strong>, <strong>Card View</strong>, <strong>Alphabetical View</strong>, or <strong>NSF View</strong>. There is also a provision to search through the list either via <strong>Scope Name</strong> or <strong>NSF Name</strong>.</p>
+<p>Use the <strong>Search</strong> field and the search filter to find scopes by <strong>Scope Name</strong> or by <strong>NSF Name</strong>.</p>
 <h2 id="add-a-scope">Add a scope</h2>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>A scope points to a schema that's contained in a database. A database can have many schemas for different use cases and a schema can be pointed to by more than one scope.</p>
-</div>
+<p>A Domino administrator typically creates scopes after a developer has created the corresponding schema.</p>
 <ol>
 <li>
-<p>On the <strong>Scope Management</strong> page, click <strong>Add Scope</strong> to add a database.</p>
+<p>On the <strong>Scope Management</strong> page, click <strong>Add Scope</strong></p>
 <p><img alt="Create Database Scope" src="../../assets/images/CreateDatabaseBlue.png" /></p>
 </li>
 <li>
-<p>Under <strong>Available Schema</strong>, select the schema that the scope will belong to.</p>
+<p>Under <strong>Available Schema</strong>, select the schema to associate with the new scope.</p>
 </li>
 <li>
-<p>Under <strong>Add New Scope</strong>, fill in the form and click <strong>Add</strong>.</p>
+<p>Under <strong>Add New Scope</strong>, fill in the fields:</p>
 <ul>
+<li><strong>Scope Name</strong> — Enter a name for the scope.</li>
+<li><strong>Description</strong> — Describe what this scope represents.</li>
 <li>
-<p>For the <strong>Server</strong> field, enter the name of the server the scope is available on, or leave it blank for the current server. The value of the entered name must be either the server's hierarchical name or in canonical format. See the following examples for reference:</p>
-<ul>
-<li>MyServer/MyOrg</li>
-<li>CN=MyServer/O=MyOrg</li>
-</ul>
+<p><strong>Server</strong> — Enter the name of the Domino server where this scope will be available or leave blank to use the current server.</p>
+<p>The server name must be either the server's hierarchical name, for example MyServer/MyOrg or in canonical format, for example CN=MyServer/O=MyOrg.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Accessing a scope on a different server will always return an <strong>HTTP 302 response</strong>. The server to be redirected to will be dictated by the <code>Fully qualified Internet hostname</code> from the <strong>server connection document</strong> of the server that owns the scope.</p>
 </div>
 </li>
 <li>
-<p>For the <strong>Maximum Access Level</strong>, the default is <strong>Editor</strong>. You can set it to another value to set the scope's maximum access anyone using the scope has. </p>
-</li>
-</ul>
-</li>
-</ol>
-<p><img alt="Configure Database" src="../../assets/images/AddNewDatabase.png" /></p>
+<p><strong>Maximum Access Level</strong> — Select the level of access permitted through this scope, with the default set to <em>Editor</em>. This setting defines the maximum level of access available via the Domino REST API but does not override the database ACL. A user’s effective access is determined by the lower of their assigned ACL permissions and the scope’s configured maximum access level.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <strong>Maximum Access Level</strong> prevents an app that has inherited a user's access rights when the user grants the app access from unauthorized altering of schemas or access control lists.  To know more about what each access level allows and to whom the access level is assigned, see <a href="https://help.hcltechsw.com/domino/14.0.0/admin/conf_accesslevelsintheacl_c.html">Access levels in the ACL</a>.</p>
 </div>
-<h2 id="edit-a-scope">Edit a scope</h2>
-<ol>
-<li>On the <strong>Scope Management</strong> page, click the scope that you want to edit. </li>
-<li>In the <strong>Edit Scope</strong> pane, edit the details that you want to change.</li>
-<li>Click <strong>Update</strong>.</li>
+</li>
+<li>
+<p><strong>Scope Icon</strong> - Choose an icon to help visually identify the scope.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>Add</strong> to create the scope.</p>
+</li>
 </ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You can only edit the <strong>Description</strong>, <strong>Server</strong>, <strong>Maximum Access Level</strong>, and <strong>Scope Icon</strong>. </p>
-</div>
+<p><img alt="Configure Database" src="../../assets/images/AddNewDatabase.png" /></p>
+<h2 id="edit-a-scope">Edit a scope</h2>
+<p>To modify an existing scope:</p>
+<ol>
+<li>On the <strong>Scope Management</strong> page, click the scope you want to update.</li>
+<li>
+<p>In the <strong>Edit Scope</strong> pane, update the fields that you need to change. You can edit the following fields:</p>
+<ul>
+<li>Description</li>
+<li>Server</li>
+<li>Maximum Access Level</li>
+<li>Scope Icon</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>Update</strong> to save your changes.</p>
+</li>
+</ol>
 <h2 id="delete-a-scope">Delete a scope</h2>
 <ol>
-<li>On the <strong>Scope Management</strong> page, click the scope that you want to delete.</li>
-<li>In the <strong>Edit Scope</strong> pane, click <strong>Delete</strong>. </li>
-<li>In the delete confirmation dialog, click <strong>Yes</strong>. </li>
+<li>On the <strong>Scope Management</strong> page, click the scope you want to delete.</li>
+<li>In the <strong>Edit Scope</strong> pane, click <strong>Delete</strong>.</li>
+<li>In the confirmation dialog, click <strong>Yes</strong>.</li>
 </ol>
+<p>Deleting a scope removes its API access mapping but does not delete the underlying schema or database. Ensure no client applications depend on this scope before deleting it.</p>
+<!--
+Select **Database Management - Activation** from the home page or **Scopes** from the side navigation pane to access the **Scope Management** page.
+
+## View available scopes
+
+The **Scope Management** page shows the available scopes.
+
+![Scopes](../../assets/images/Scopes.png)
+
+You can arrange the scopes in **Stack View**, **Card View**, **Alphabetical View**, or **NSF View**. There is also a provision to search through the list either via **Scope Name** or **NSF Name**.
+
+## Add a scope
+
+!!!tip
+    A scope points to a schema that's contained in a database. A database can have many schemas for different use cases and a schema can be pointed to by more than one scope.
+
+1. On the **Scope Management** page, click **Add Scope** to add a database.
+
+      ![Create Database Scope](../../assets/images/CreateDatabaseBlue.png)
+
+2. Under **Available Schema**, select the schema that the scope will belong to.
+3. Under **Add New Scope**, fill in the form and click **Add**.
+
+    - For the **Server** field, enter the name of the server the scope is available on, or leave it blank for the current server. The value of the entered name must be either the server's hierarchical name or in canonical format. See the following examples for reference:
+
+        - MyServer/MyOrg
+        - CN=MyServer/O=MyOrg
+
+        !!!note
+            Accessing a scope on a different server will always return an **HTTP 302 response**. The server to be redirected to will be dictated by the `Fully qualified Internet hostname` from the **server connection document** of the server that owns the scope.
+
+    - For the **Maximum Access Level**, the default is **Editor**. You can set it to another value to set the scope's maximum access anyone using the scope has. 
+
+![Configure Database](../../assets/images/AddNewDatabase.png)
+
+!!!note
+    The **Maximum Access Level** prevents an app that has inherited a user's access rights when the user grants the app access from unauthorized altering of schemas or access control lists.  To know more about what each access level allows and to whom the access level is assigned, see [Access levels in the ACL](https://help.hcltechsw.com/domino/14.0.0/admin/conf_accesslevelsintheacl_c.html).
+
+## Edit a scope
+
+1. On the **Scope Management** page, click the scope that you want to edit. 
+2. In the **Edit Scope** pane, edit the details that you want to change.
+3. Click **Update**.
+
+!!!note
+    You can only edit the **Description**, **Server**, **Maximum Access Level**, and **Scope Icon**. 
+
+## Delete a scope
+
+1. On the **Scope Management** page, click the scope that you want to delete.
+2. In the **Edit Scope** pane, click **Delete**. 
+3. In the delete confirmation dialog, click **Yes**. 
+
+-->
 
 
 
@@ -7575,7 +7754,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 20, 2024 17:17:00 UTC">September 20, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 19, 2026 13:35:09 UTC">February 19, 2026</span>
   </span>
 
     

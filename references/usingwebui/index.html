@@ -17,7 +17,7 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/Domino-rest-api/references/usingwebui/index.html">
       
       
-        <link rel="prev" href="../usingdominorestapi/richtext/conversion.html">
+        <link rel="prev" href="../usingdominorestapi/richtext/index.html">
       
       
         <link rel="next" href="schemaui.html">
@@ -27,7 +27,7 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -504,6 +504,8 @@
       
         
       
+        
+      
     
     
     
@@ -554,6 +556,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/v1.1.7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domino REST API v1.1.7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -3363,7 +3393,7 @@
   <span class="md-ellipsis">
     
   
-    Set up external IdP for Office Round Trip Experience
+    Set up an external IdP for the Office Round Trip Experience
   
 
     
@@ -3391,7 +3421,7 @@
   <span class="md-ellipsis">
     
   
-    Set up external IdP for Admin UI IdP
+    Set up an external IdP for Admin UI login
   
 
     
@@ -3424,6 +3454,8 @@
       
         
           
+        
+      
         
       
         
@@ -3529,6 +3561,34 @@
     
   
     Change file size limit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/production/timeout.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Change timeout for retrieving data from Domino
   
 
     
@@ -4338,6 +4398,8 @@
       
         
       
+        
+      
     
     
     
@@ -4601,6 +4663,34 @@
     
   
     Use Domino Console
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/management/encryptionops.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use Management console for encryption operations
   
 
     
@@ -6110,7 +6200,7 @@
   <span class="md-ellipsis">
     
   
-    Reserved Form mode names
+    Reserved Form Mode names
   
 
     
@@ -6135,8 +6225,6 @@
       
         
           
-        
-      
         
       
     
@@ -6171,11 +6259,6 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_6_9_10" id="__nav_6_9_10_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
           </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_9_10_label" aria-expanded="false">
@@ -6189,34 +6272,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../usingdominorestapi/richtext/conversion.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Conversion table
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
               
             
           </ul>
@@ -7399,17 +7454,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Links
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -7432,42 +7476,7 @@
 
 <h1 id="using-admin-ui">Using Admin UI</h1>
 <h2 id="overview">Overview</h2>
-<p>The <strong>Admin UI</strong> provides a user interface to several Domino REST APIs. It thus serves as an example of what a <a href="https://reactjs.org/">React</a> application using the Domino REST APIs is capable of. It covers schema, scope, and app management. Anything that can be done using the Web UI can also be done using Postman, curl, Swagger UI, or similar tools. There are <a href="../../tutorial/index.html">tutorials</a> to walk you through the same.</p>
-<!-- prettier-ignore -->
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The screenshots in this section may vary. The screenshots are based on the latest Domino REST API snapshots. Make sure you're up-to-date.</p>
-</div>
-<p>This is what the login page looks like.</p>
-<p><img alt="Domino REST API" src="../../assets/images/AdminLogin.png" style="height:70%;width:70%" /></p>
-<p>(Image: Castle <a href="https://en.wikipedia.org/wiki/Schloss_Johannisburg">Johannisburg</a>, Aschaffeburg, Germany)</p>
-<p>You'll need the administrator username and password to access the server.</p>
-<p>To use a Domino database in Domino REST API, it must be configured for use in the API. Download <code>Demo.nsf</code> from <a href="../downloads.html">Resources</a> and save it in the Notes data directory. Then login to the Domino REST API <strong>Admin UI</strong> using the administrator username and password.</p>
-<h2 id="log-in-options">Log in options</h2>
-<p>There are options for logging in to the Domino REST API <strong>Admin UI</strong>.</p>
-<h3 id="log-in-with-password">Log in with password</h3>
-<p>This option uses your Domino administrator username and password. You can log in to the <strong>Admin UI</strong> by entering your administrator username and password in the <strong>Username</strong> and <strong>Password</strong> fields, and clicking <strong>LOG IN</strong>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you have set up an external IdP to access the <strong>Admin UI</strong>, the <strong>Username</strong> and <strong>Password</strong> fields will not be visible by default. To display these fields, click <strong>LOG IN WITH PASSWORD</strong>. This allows you to enter your credentials and use the <em>Log in with password</em> option.</p>
-</div>
-<h3 id="log-in-with-passkey">Log in with passkey</h3>
-<p>This option enables users to log in with a passkey that enables signing in to websites without remembering and managing passwords using a biometric sensor, PIN, or pattern. For more information on how to log in with passkey, see <a href="../../howto/install/passkey.html">Use passkey to log in to Admin UI</a>.</p>
-<h3 id="log-in-with-oidc">Log in with OIDC</h3>
-<p>This option uses the Domino REST API IdP by default and implements the OAuth process requiring user consent to log in. You can log in to the <strong>Admin UI</strong> by clicking <strong>LOG IN WITH OIDC</strong>. The <strong>DRAPI</strong> option will be the only one available from the drop-down field. Click <strong>LOG IN</strong>.</p>
-<p><img alt="HCL Domino Login" src="../../assets/images/AdminLogin3.png" style="height:70%;width:70%" /></p>
-<p>Enter you administrator username and password in the <strong>Username</strong> and <strong>Password</strong> fields in the <strong>HCL Domino Login</strong> page, and then click <strong>Login</strong>.  </p>
-<p><img alt="HCL Domino Login" src="../../assets/images/AdminLogin2.png" style="height:70%;width:70%" /></p>
-<p>If you have configured an external IdP to log in to the Admin UI, the <em>Log in with OIDC</em> will be the default login option. For more information on the needed configuration, see <a href="../../howto/IdP/adminuiidp.html">Set up Admin UI external IdP login configuration</a>.</p>
-<p>You can log in to the <strong>Admin UI</strong> by selecting your external IdP from the down-down list, and clicking <strong>LOG IN</strong>. Use your external IdP authentication credentials and follow succeeding login instructions.</p>
-<!--If you have configured an external IdP to log in to the **Admin UI** and is only available after performing some configurations. For more information on the needed configurations, see [Set up Admin UI external IdP login configuration](../../howto/IdP/adminuiidp.md).
-
-Once configured, a **LOG IN WITH {configured IdP name}** button is available on the **Admin UI** login page. You can log in to the **Admin UI** by clicking **LOG IN WITH {configured IdP name}**, using your IdP authentication credentials to log in, and following succeeding login instructions.-->
-
-<p>The following image shows an example of the <strong>Admin UI</strong> login page when the user configured their own external IdPs to log in to the <strong>Admin UI</strong>.</p>
-<p><img alt="HCL Domino Login" src="../../assets/images/AdminUiLoginExternalIdP.png" style="height:70%;width:70%" /></p>
-<h2 id="links">Links</h2>
-<p>From the <strong>Admin UI</strong>, you can access the following:</p>
+<p>The <strong>Admin UI</strong> provides a browser‑based user interface to several Domino REST APIs. It demonstrates what a <a href="https://reactjs.org/">React</a> application using the Domino REST APIs is capable of and includes functionality for:</p>
 <ul>
 <li>
 <p><a href="schemaui.html">Schema Management</a></p>
@@ -7485,6 +7494,133 @@ Once configured, a **LOG IN WITH {configured IdP name}** button is available on 
 <p><a href="oauthconsentui.html">OAuth Consents</a></p>
 </li>
 </ul>
+<p>Anything you can perform with the <strong>Admin UI</strong> can also be done using tools such as Postman, curl, Swagger UI. <a href="../../tutorial/index.html">Tutorials</a> are available that walk through performing these tasks using different tools.</p>
+<p>To use a Domino database in Domino REST API, it must be configured for use in the API. As an example, download the sample Domino database <code>Demo.nsf</code> from <a href="../downloads.html">Resources</a> and save it in your Domino server's Notes data directory. Then login to the <strong>Admin UI</strong> using an administrator account and configure the Domino database.</p>
+<h2 id="log-in-options">Log in options</h2>
+<p>There are multiple options for logging in to the Domino REST API <strong>Admin UI</strong>, depending on how the system is configured.</p>
+<p><img alt="Domino REST API" src="../../assets/images/AdminLogin.png" style="height:70%;width:70%" /></p>
+<p>(Image: Castle <a href="https://en.wikipedia.org/wiki/Schloss_Johannisburg">Johannisburg</a>, Aschaffeburg, Germany)</p>
+<h3 id="log-in-with-password">Log in with password</h3>
+<p>To use this option, enter your Domino administrator credentials in the <strong>Username</strong> and <strong>Password</strong> fields, then click <strong>LOG IN</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If an external identity provider (IdP) has been configured for <strong>Admin UI</strong> access, the <strong>Username</strong> and <strong>Password</strong> fields may not be visible by default. To use this login option, click <strong>LOG IN WITH PASSWORD</strong> to display the fields.</p>
+</div>
+<h3 id="log-in-with-passkey">Log in with passkey</h3>
+<p>This login option lets you sign in with a passkey instead of a password. Your device authenticates you using methods such as biometrics, a PIN, or a pattern. To learn how to log in with a passkey, see <a href="../../howto/install/passkey.html">Use a passkey to log in to the Admin UI</a>.</p>
+<h3 id="log-in-with-oidc">Log in with OIDC</h3>
+<p>The OIDC login option uses the Domino REST API IdP (identity provider) by default and implements the OAuth login flow requiring user consent.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>If an external identity provider has been configured to log in to the Admin UI, the <em>Log in with OIDC</em> will be the default login option. For information about configuring an external IdP for Admin UI login, see <a href="../../howto/IdP/adminuiidp.html">Set up Admin UI external IdP login configuration</a>.</p>
+</div>
+<p><strong>To log in</strong>:</p>
+<ol>
+<li>Click <strong>LOG IN WITH OIDC</strong>.</li>
+<li>
+<p>Select the identity provider.</p>
+<ul>
+<li>
+<p>If only the default Domino REST API IdP option is available:</p>
+<ol>
+<li>
+<p>Click <strong>LOG IN</strong>.</p>
+<p><img alt="HCL Domino Login" src="../../assets/images/AdminLogin3.png" style="height:70%;width:70%" /></p>
+</li>
+<li>
+<p>Enter your administrator username and password on the <strong>HCL Domino Login</strong> screen.</p>
+<p><img alt="HCL Domino Login" src="../../assets/images/AdminLogin2.png" style="height:70%;width:70%" /></p>
+</li>
+<li>
+<p>Click <strong>Login</strong>.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>If an external identity provider has been configured:</p>
+<ol>
+<li>
+<p>Select the desired IdP from the drop-down list.</p>
+<p><img alt="HCL Domino Login" src="../../assets/images/AdminUiLoginExternalIdP.png" style="height:70%;width:70%" /></p>
+</li>
+<li>
+<p>Click <strong>LOG IN</strong>.</p>
+</li>
+<li>Use your external IdP authentication credentials and follow the provider’s login instructions.</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<!--
+The **Admin UI** provides a user interface to several Domino REST APIs. It thus serves as an example of what a [React](https://reactjs.org/) application using the Domino REST APIs is capable of. It covers schema, scope, and app management. Anything that can be done using the Admin UI can also be done using Postman, curl, Swagger UI, or similar tools. There are [tutorials](../../tutorial/index.md) to walk you through the same.
+
+!!! note
+
+    The screenshots in this section may vary depending on your version of the Domino REST API.
+
+This is what the login page looks like.
+
+![Domino REST API](../../assets/images/AdminLogin.png){: style="height:70%;width:70%"}
+
+(Image: Castle [Johannisburg](https://en.wikipedia.org/wiki/Schloss_Johannisburg), Aschaffeburg, Germany)
+
+You'll need the administrator username and password to access the server.
+
+To use a Domino database in Domino REST API, it must be configured for use in the API. Download `Demo.nsf` from [Resources](../../references/downloads.md) and save it in the Notes data directory. Then login to the Domino REST API **Admin UI** using the administrator username and password.
+
+## Log in options
+
+There are options for logging in to the Domino REST API **Admin UI**.
+
+### Log in with password
+
+This option uses your Domino administrator username and password. You can log in to the **Admin UI** by entering your administrator username and password in the **Username** and **Password** fields, and clicking **LOG IN**.
+
+!!! note
+
+    If you have set up an external IdP to access the **Admin UI**, the **Username** and **Password** fields will not be visible by default. To display these fields, click **LOG IN WITH PASSWORD**. This allows you to enter your credentials and use the *Log in with password* option.
+
+### Log in with passkey
+
+This option enables users to log in with a passkey that enables signing in to websites without remembering and managing passwords using a biometric sensor, PIN, or pattern. For more information on how to log in with passkey, see [Use passkey to log in to Admin UI](../../howto/install/passkey.md).
+
+### Log in with OIDC
+
+This option uses the Domino REST API IdP by default and implements the OAuth process requiring user consent to log in. You can log in to the **Admin UI** by clicking **LOG IN WITH OIDC**. The **DRAPI** option will be the only one available from the drop-down field. Click **LOG IN**.
+
+![HCL Domino Login](../../assets/images/AdminLogin3.png){: style="height:70%;width:70%"}
+
+Enter you administrator username and password in the **Username** and **Password** fields in the **HCL Domino Login** page, and then click **Login**.  
+
+![HCL Domino Login](../../assets/images/AdminLogin2.png){: style="height:70%;width:70%"}
+
+If you have configured an external IdP to log in to the Admin UI, the *Log in with OIDC* will be the default login option. For more information on the needed configuration, see [Set up Admin UI external IdP login configuration](../../howto/IdP/adminuiidp.md).
+
+You can log in to the **Admin UI** by selecting your external IdP from the down-down list, and clicking **LOG IN**. Use your external IdP authentication credentials and follow succeeding login instructions.
+
+<!--If you have configured an external IdP to log in to the **Admin UI** and is only available after performing some configurations. For more information on the needed configurations, see [Set up Admin UI external IdP login configuration](../../howto/IdP/adminuiidp.md).
+
+Once configured, a **LOG IN WITH {configured IdP name}** button is available on the **Admin UI** login page. You can log in to the **Admin UI** by clicking **LOG IN WITH {configured IdP name}**, using your IdP authentication credentials to log in, and following succeeding login instructions.-->
+
+<!--The following image shows an example of the **Admin UI** login page when the user configured their own external IdPs to log in to the **Admin UI**.
+
+![HCL Domino Login](../../assets/images/AdminUiLoginExternalIdP.png){: style="height:70%;width:70%"}
+
+## Links
+
+From the **Admin UI**, you can access the following:
+
+- [Schema Management](schemaui.md)
+
+- [Scope Management](scopeui.md)
+
+- [Quick Config](quickconfigui.md)
+
+- [Application Management](appui.md)
+
+- [OAuth Consents](oauthconsentui.md)
+
 <!--## Database Management - REST API
 
 Select **Database Management - REST API** from the home page.-->
@@ -7508,7 +7644,7 @@ Select **Database Management - REST API** from the home page.-->
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 9, 2025 16:57:55 UTC">September 9, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 5, 2026 14:07:10 UTC">March 5, 2026</span>
   </span>
 
     

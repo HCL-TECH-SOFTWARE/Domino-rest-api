@@ -27,7 +27,7 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -504,6 +504,8 @@
       
         
       
+        
+      
     
     
     
@@ -554,6 +556,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/v1.1.7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domino REST API v1.1.7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -3363,7 +3393,7 @@
   <span class="md-ellipsis">
     
   
-    Set up external IdP for Office Round Trip Experience
+    Set up an external IdP for the Office Round Trip Experience
   
 
     
@@ -3391,7 +3421,7 @@
   <span class="md-ellipsis">
     
   
-    Set up external IdP for Admin UI IdP
+    Set up an external IdP for Admin UI login
   
 
     
@@ -3424,6 +3454,8 @@
       
         
           
+        
+      
         
       
         
@@ -3529,6 +3561,34 @@
     
   
     Change file size limit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/production/timeout.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Change timeout for retrieving data from Domino
   
 
     
@@ -4338,6 +4398,8 @@
       
         
       
+        
+      
     
     
     
@@ -4601,6 +4663,34 @@
     
   
     Use Domino Console
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/management/encryptionops.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use Management console for encryption operations
   
 
     
@@ -6110,7 +6200,7 @@
   <span class="md-ellipsis">
     
   
-    Reserved Form mode names
+    Reserved Form Mode names
   
 
     
@@ -6135,8 +6225,6 @@
       
         
           
-        
-      
         
       
     
@@ -6171,11 +6259,6 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_6_9_10" id="__nav_6_9_10_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
           </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_9_10_label" aria-expanded="false">
@@ -6189,34 +6272,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../usingdominorestapi/richtext/conversion.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Conversion table
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
               
             
           </ul>
@@ -7688,11 +7743,9 @@
 <h1 id="auth">Auth*</h1>
 <!-- prettier-ignore -->
 <div class="admonition warning">
-<p class="admonition-title">You have choices for your IdP</p>
+<p class="admonition-title">Important</p>
 <p>There are multiple ways to configure an external IdP in the Domino REST API: <code>jwt</code>, <code>oidc</code>, and <code>oidc-idpcat</code>. When in doubt, use <code>oidc-idpcat</code>. Read the <a href="/Domino-rest-api/references/security/idpcompare.html">comparison</a> for details.</p>
 </div>
-<!--Domino REST API offers a built-in endpoint to exchange your Domino credentials for a valid JSON Web Token (JWT). This page describes the setup of **external JWT identity providers** (IdP).-->
-
 <h2 id="oidc-with-idpcat-authentication">OIDC with idpcat authentication</h2>
 <div class="admonition tip">
 <p class="admonition-title">We strongly recommend this option</p>
@@ -7777,19 +7830,6 @@
 </div>
 <p>Starting with HCL Domino v14.5, the Domino HTTP task can act as an OIDC identity provider. This feature allows administrators to leverage their existing Domino HTTP authentication experience to authenticate end users with applications, servers, and services that support OIDC. For more information, see <a href="../../howto/IdP/configdomino145oidc.html">Configure Domino REST API to use Domino 14.5 as OIDC provider</a>.</p>
 <p>The following configuration allows Domino REST API to use Domino as an OIDC provider:</p>
-<!--
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;domino-oidc-idpcat&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;active&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;providerUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://&lt;domino oidc server&gt;/auth/protocol/oidc&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;clientId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;some-clientid&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;clientSecret&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;some-clientsecret&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Domino.user.all&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;aud&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://&lt;Domino REST API DNS name&gt;&quot;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-</code></pre></div>
--->
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;oidc-idpcat&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;domino-oidc-idpcat&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -7827,9 +7867,6 @@
 </tr>
 </tbody>
 </table>
-<!--| `clientId` | It's the configured client ID from the OIDC provider. It's strongly recommended to use `Domino` as client name. |
-| `clientSecret` | It's the generated client secret from the OIDC provider, usually a randomly generated hex string. |-->
-
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
 <p>The Domino REST API configuration <strong>MUST NOT</strong> specify <code>additionalClientIds</code>. </p>
@@ -7912,8 +7949,8 @@
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>The management UI (Port 8889) provides a one click option to create such key pairs and configuration entry stored in <code>keepconfig.d</code></p>
-<p>These keys can be shared between Domino servers, allowing, for example, redirects to a different mail server.</p>
+<p>The <strong>Management console</strong> UI (port 8889) offers a one-click option to generate key pairs and configuration entry, which are stored in <code>keepconfig.d</code>.</p>
+<p>These keys can be shared across Domino servers, enabling, for example, redirects to a different mail server.</p>
 </div>
 <h3 id="external-jwtoidc-providers">External JWT/OIDC providers</h3>
 <p>This is the configuration we would strongly suggest for outward facing Domino servers. Domino REST API can accept JWT tokens from multiple external providers.</p>
@@ -7956,9 +7993,9 @@
 <span class="p">}</span>
 </code></pre></div>
 <div class="admonition warning">
-<p class="admonition-title">Keep the certs secure</p>
-<p>It's the responsibility of the administrator to save key files in secure locations.
-The better way is to <a href="../../howto/install/multiserver.html#shared-jwt-keys-to-login-to-drapi">use the certstore.nsf</a></p>
+<p class="admonition-title">Warning</p>
+<p><strong>Keep certificates secure.</strong></p>
+<p>Administrators must store key files in secure locations. For the best approach, <a href="../../howto/install/multiserver.html#shared-jwt-keys-to-login-to-drapi">use the certstore.nsf</a>.</p>
 </div>
 <h3 id="jwt-payload">JWT Payload</h3>
 <p>The JWT requires the following format (Additional entries get ignored):</p>
@@ -7994,7 +8031,7 @@ The better way is to <a href="../../howto/install/multiserver.html#shared-jwt-ke
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="name-resolution">Name resolution</h3>
-<p>The Domino REST API probes for the existence of various claims in the JWT token to determine the user name. The claims are probed in the following sequence. On the first available claim, the probing stops.</p>
+<p>The Domino REST API probes for the existence of various claims in the JWT token to determine the username. The claims are probed in the following sequence. On the first available claim, the probing stops.</p>
 <ol>
 <li>keep.user.attr.dominoDn</li>
 <li>CN</li>
@@ -8004,18 +8041,32 @@ The better way is to <a href="../../howto/install/multiserver.html#shared-jwt-ke
 <li>sub</li>
 </ol>
 <h2 id="client-ids">Client Ids</h2>
-<p>When configuring an external IdP using OIDC or OIDC-idpcat, you need to provide a clientId. It's recommended to use <code>Domino</code>, but the admins of your IdP might have other ideas. In any case, that's the clientId for the REST server. It's <em>NOT</em> the one for the Admin UI or the Office Forms Based Authentication (OFBA) for attachment editing. To be fully operational, you need to configure at least three clients on your IdP:</p>
+<p>When configuring an external identity provider using OpenID Connect (OIDC) or OIDC-idpcat with HCL Domino and the Domino REST API, you must specify a client ID. The default recommendation is to use <code>Domino</code> as the client ID for the Domino REST API server. However, your identity provider administrator might require a different value depending on your organization’s configuration.</p>
+<p>Separate client IDs (application registrations) are required to support the Admin UI and Office Forms Based Authentication (OFBA). To support these features, configure at least the following clients in your identity provider:</p>
 <ul>
-<li><code>Domino</code> for the server (client secret might be handeled by <code>idpcat.nsf</code>).</li>
-<li><code>keepadminui</code> for the Domino REST API admin client. If you also want to use your IdP for Domino REST API Admin UI login.</li>
-<li><code>keepofba</code> for the Office document round trip experience. If you also want to use your IdP for Domino REST API OFBA round trip editing authentication.</li>
-<li>One each for your custom client applications (with clientSecret for servers or PKCE for clients).</li>
+<li>A client used by the Domino REST API server. You can name the client <code>Domino</code> or any descriptive name. The client secret might be managed through <code>idpcat.nsf</code>.</li>
+<li>A client used by the Domino REST API Admin UI. You can name the client <code>keepadminui</code> or any descriptive name. Configure this client if you want administrators to authenticate through the external identity provider.</li>
+<li>A client used for OFBA round-trip editing of Office documents. You can name the client <code>keepofba</code> or any descriptive name.</li>
 </ul>
-<div class="admonition tip">
-<p class="admonition-title">Use the internal IdP as learning resource</p>
-<p>The application configuration provided by the internal IdP makes it easy to configure and retrieve client-specific JWT that have all the required fields. Test your application with that and use the defined properties, scopes foremost, to requests the external
-IdP client configurations.</p>
-</div>
+<p>You should also create separate clients for each custom application that connects to the Domino REST API.</p>
+<!--
+- Use a client secret for server-side applications.
+- Use PKCE for public or browser-based clients.
+-->
+<!--
+When configuring an external IdP using OIDC or OIDC-idpcat, you need to provide a clientId. It's recommended to use `Domino`, but the admins of your IdP might have other ideas. In any case, that's the clientId for the REST server. It's _NOT_ the one for the Admin UI or the Office Forms Based Authentication (OFBA) for attachment editing. To be fully operational, you need to configure at least three clients on your IdP:
+
+- `Domino` for the server (client secret might be handeled by `idpcat.nsf`).
+- `keepadminui` for the Domino REST API admin client. If you also want to use your IdP for Domino REST API Admin UI login.
+- `keepofba` for the Office document round trip experience. If you also want to use your IdP for Domino REST API OFBA round trip editing authentication.
+- One each for your custom client applications (with clientSecret for servers or PKCE for clients).
+
+!!! tip "Use the internal IdP as learning resource"
+
+    The application configuration provided by the internal IdP makes it easy to configure and retrieve client-specific JWT that have all the required fields. Test your application with that and use the defined properties, scopes foremost, to requests the external
+    IdP client configurations.
+-->
+
 <h2 id="domino-rest-api-and-oauth">Domino REST API and OAuth</h2>
 <p>Domino REST API is designed to consume an access token. This token can be the result of an OAuth dance or simply the result of an exchange of Domino credentials. The Domino REST API provides an IdP that does the OAuth dance.</p>
 <p><img alt="Flow Diagram" src="../../assets/images/WebAuth.png" style="height:80%;width:80%" /></p>
@@ -8040,7 +8091,7 @@ IdP client configurations.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 30, 2026 09:55:26 UTC">January 30, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 11, 2026 15:48:46 UTC">February 11, 2026</span>
   </span>
 
     

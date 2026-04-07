@@ -27,7 +27,7 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -504,6 +504,8 @@
       
         
       
+        
+      
     
     
     
@@ -554,6 +556,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/v1.1.7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domino REST API v1.1.7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -3368,7 +3398,7 @@
   <span class="md-ellipsis">
     
   
-    Set up external IdP for Office Round Trip Experience
+    Set up an external IdP for the Office Round Trip Experience
   
 
     
@@ -3396,7 +3426,7 @@
   <span class="md-ellipsis">
     
   
-    Set up external IdP for Admin UI IdP
+    Set up an external IdP for Admin UI login
   
 
     
@@ -3429,6 +3459,8 @@
       
         
           
+        
+      
         
       
         
@@ -3534,6 +3566,34 @@
     
   
     Change file size limit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../production/timeout.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Change timeout for retrieving data from Domino
   
 
     
@@ -4343,6 +4403,8 @@
       
         
       
+        
+      
     
     
     
@@ -4606,6 +4668,34 @@
     
   
     Use Domino Console
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../management/encryptionops.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use Management console for encryption operations
   
 
     
@@ -6288,7 +6378,7 @@
   <span class="md-ellipsis">
     
   
-    Reserved Form mode names
+    Reserved Form Mode names
   
 
     
@@ -6313,8 +6403,6 @@
       
         
           
-        
-      
         
       
     
@@ -6349,11 +6437,6 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_6_9_10" id="__nav_6_9_10_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
           </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_9_10_label" aria-expanded="false">
@@ -6367,34 +6450,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../references/usingdominorestapi/richtext/conversion.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Conversion table
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
               
             
           </ul>
@@ -7664,8 +7719,9 @@
 <h1 id="javascript">JavaScript</h1>
 <p>Sample code to interact with the Domino REST API in JavaScript. No additional libraries have been harmed.</p>
 <div class="admonition note">
-<p class="admonition-title">Know your runtime</p>
-<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch"><code>fetch</code></a> API is ubiquitous in browsers, but available only in current versions of server side JavaScript environments like NodeJS (so check your documentation).</p>
+<p class="admonition-title">Note</p>
+<p><strong>Know your runtime.</strong></p>
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch"><code>fetch</code></a> API works in all modern browsers. However, it is only available in current versions of the server-side JavaScript environments, such as NodeJS, so always check the documentation. </p>
 </div>
 <p>We will look at three functions that can give you a head start.</p>
 <h2 id="url-collection">URL collection</h2>
@@ -7733,15 +7789,15 @@
 <span class="p">};</span>
 </code></pre></div>
 <h2 id="processing-list-results">Processing list results</h2>
-<p>The Domino REST API uses chunked returns (<a href="https://tools.ietf.org/html/rfc9112#section-7.1">RFC9112</a>) for anything that returns an array and thus could return a lot of data. Instead of calling <code>await response.json()</code>, we use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API">http stream API</a>. Browsers implement that API in native code for speedy processing. A fetch request returns a <a href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream">readable stream</a> that can be processed using a <a href="https://developer.mozilla.org/en-US/docs/Web/API/TransformStream">TransformStream</a> (a stream that is both readable and writable) to then be consumed by a <a href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStream">writeable stream</a>. There are a few steps involved:</p>
+<p>The Domino REST API uses chunked returns (<a href="https://tools.ietf.org/html/rfc9112#section-7.1">RFC9112</a>) for anything that returns an array and thus could return a lot of data. Instead of calling <code>await response.json()</code>, we use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Streams_API">HTTP Streams API</a>. Browsers implement that API in native code for speedy processing. A fetch request returns a <a href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream">readable stream</a> that can be processed using a <a href="https://developer.mozilla.org/en-US/docs/Web/API/TransformStream">TransformStream</a> (a stream that is both readable and writable) to then be consumed by a <a href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStream">writable stream</a>. There are a few steps involved:</p>
 <p><img alt="Stream Steps" src="../../assets/images/StreamSteps.jpg" /></p>
-<p>All of these steps get tied together using the <code>pipeThrough</code> method calls. Lets look at it step by step:</p>
+<p>All of these steps get tied together using the <code>pipeThrough</code> method calls. Let's look at it step by step:</p>
 <h3 id="byte-to-string">Byte to String</h3>
-<p>The first part "<strong>Byte to String</strong>" is build-in using a <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoderStream"><code>TextDecoderStream</code></a>. As a result, we get a stream of characters and we now chop into parts.</p>
+<p>The first part "<strong>Byte to String</strong>" is built-in using a <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoderStream"><code>TextDecoderStream</code></a>. As a result, we get a stream of characters, and we now chop into parts.</p>
 <h3 id="string-to-lines">String to lines</h3>
 <p>String to lines is our first <a href="https://developer.mozilla.org/en-US/docs/Web/API/TransformStream"><code>TransformStream</code></a>. An instance needs to implement two methods:</p>
 <ul>
-<li><code>transform(imcoming, controlle)</code> reads incoming data and eventually call the controller's <code>enqueue(output)</code> method 0:n times</li>
+<li><code>transform(incoming, controller)</code> reads incoming data and eventually call the controller's <code>enqueue(output)</code> method 0:n times</li>
 <li><code>flush(controller)</code> called for cleanup</li>
 </ul>
 <p>In our case, the incoming character stream is chopped into lines.</p>
@@ -7769,7 +7825,7 @@
 <span class="kd">const</span><span class="w"> </span><span class="nx">parseJSON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">TransformStream</span><span class="p">({</span>
 <span class="w">    </span><span class="nx">transform</span><span class="p">(</span><span class="nx">chunk</span><span class="p">,</span><span class="w"> </span><span class="nx">controller</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="c1">// IGONRES THE [ and ]</span>
+<span class="w">      </span><span class="c1">// IGNORES THE [ and ]</span>
 <span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">chunk</span><span class="p">.</span><span class="nx">endsWith</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="nx">controller</span><span class="p">.</span><span class="nx">enqueue</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">chunk</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">)));</span>
 <span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">chunk</span><span class="p">.</span><span class="nx">endsWith</span><span class="p">(</span><span class="s1">&#39;}&#39;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
@@ -7811,7 +7867,7 @@ You could use a more sophisticated approach using parameters to drive the table 
 <span class="p">};</span>
 </code></pre></div>
 <h3 id="putting-it-all-together">Putting it all together</h3>
-<p>With the object instances in place, we can stick the pipe together to execute the flow</p>
+<p>With the object instances in place, we can stick the pipe together to execute the flow based on <a href="https://wissel.net/blog/2023/07/handle-http-chunked-responses.html">this article</a>.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">insertPoint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;resultTableBody&#39;</span><span class="p">);</span>
 <span class="k">await</span><span class="w"> </span><span class="nx">httpResponse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">);</span>
 <span class="k">await</span><span class="w"> </span><span class="nx">httpResponse</span><span class="p">.</span><span class="nx">body</span>
@@ -7821,7 +7877,6 @@ You could use a more sophisticated approach using parameters to drive the table 
 <span class="w">  </span><span class="p">.</span><span class="nx">pipeThrough</span><span class="p">(</span><span class="nx">rowMaker</span><span class="p">())</span>
 <span class="w">  </span><span class="p">.</span><span class="nx">pipeTo</span><span class="p">(</span><span class="nx">updateUI</span><span class="p">(</span><span class="nx">insertPoint</span><span class="p">));</span>
 </code></pre></div>
-<p>based on <a href="https://wissel.net/blog/2023/07/handle-http-chunked-responses.html">this article</a>.</p>
 <h2 id="considerations">Considerations</h2>
 <ul>
 <li>
@@ -7859,7 +7914,7 @@ You could use a more sophisticated approach using parameters to drive the table 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 27, 2023 15:24:23 UTC">September 27, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 5, 2026 14:07:10 UTC">March 5, 2026</span>
   </span>
 
     

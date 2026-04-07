@@ -17,7 +17,7 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/Domino-rest-api/howto/codesamples/index.html">
       
       
-        <link rel="prev" href="../management/console.html">
+        <link rel="prev" href="../management/encryptionops.html">
       
       
         <link rel="next" href="javascript.html">
@@ -27,7 +27,7 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -504,6 +504,8 @@
       
         
       
+        
+      
     
     
     
@@ -554,6 +556,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/v1.1.7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domino REST API v1.1.7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -3368,7 +3398,7 @@
   <span class="md-ellipsis">
     
   
-    Set up external IdP for Office Round Trip Experience
+    Set up an external IdP for the Office Round Trip Experience
   
 
     
@@ -3396,7 +3426,7 @@
   <span class="md-ellipsis">
     
   
-    Set up external IdP for Admin UI IdP
+    Set up an external IdP for Admin UI login
   
 
     
@@ -3429,6 +3459,8 @@
       
         
           
+        
+      
         
       
         
@@ -3534,6 +3566,34 @@
     
   
     Change file size limit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../production/timeout.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Change timeout for retrieving data from Domino
   
 
     
@@ -4343,6 +4403,8 @@
       
         
       
+        
+      
     
     
     
@@ -4606,6 +4668,34 @@
     
   
     Use Domino Console
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../management/encryptionops.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use Management console for encryption operations
   
 
     
@@ -6112,7 +6202,7 @@
   <span class="md-ellipsis">
     
   
-    Reserved Form mode names
+    Reserved Form Mode names
   
 
     
@@ -6137,8 +6227,6 @@
       
         
           
-        
-      
         
       
     
@@ -6173,11 +6261,6 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_6_9_10" id="__nav_6_9_10_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
           </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_9_10_label" aria-expanded="false">
@@ -6191,34 +6274,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../references/usingdominorestapi/richtext/conversion.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Conversion table
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
               
             
           </ul>
@@ -7398,7 +7453,7 @@
 
 
 <h1 id="code-examples">Code examples</h1>
-<p>The Domino REST API can be called by any http library in any language following these simple steps:</p>
+<p>The Domino REST API can be called by any HTTP library in any language following these simple steps:</p>
 <ol>
 <li>
 <p>Obtain a valid <a href="https://en.wikipedia.org/wiki/JSON_Web_Token">JWT</a> Access Token from your configured Identity provider. Out of the box, that would be your REST enabled Domino server using a <code>POST</code> request with JSON <code>username</code> and <code>password</code> as body to the URL <code>/api/v1/auth</code>. In the resulting JSON, the <code>bearer</code> is your JWT Access Token.</p>
@@ -7446,7 +7501,7 @@
 <ol>
 <li>
 <p>Have an environment and set the collection to <code>No Auth</code>.</p>
-<p><img alt="Postman NoAUth" src="../../assets/images/code/pm-collection.png" /></p>
+<p><img alt="Postman No Auth" src="../../assets/images/code/pm-collection.png" /></p>
 </li>
 <li>
 <p>Have a login action that pulls username/password from the environment (you have to add them there).</p>
@@ -7455,7 +7510,7 @@
 <li>
 <p>Use the Tests tab to capture the Bearer.</p>
 <p><img alt="Postman Capture bearer" src="../../assets/images/code/pm-login02.png" /></p>
-<p>This simplifies operation. running the login action won't require manual copy &amp; paste bearer information anymore</p>
+<p>This simplifies operation. Running the login action won't require manual copy &amp; paste bearer information anymore.</p>
 </li>
 <li>
 <p>In all operations, set the <code>Authorization</code> header to <code>Bearer {{ AUTH_KEY }}</code>.</p>
@@ -7463,7 +7518,7 @@
 </li>
 </ol>
 <h3 id="postman-provides-code">Postman provides code</h3>
-<p>Activating the code panel <strong>&#60;/&#62;</strong> provides over 30 variations in various programming languages, including shell scripting (curl / powershell), how to code a given call.</p>
+<p>Activating the code panel <strong>&#60;/&#62;</strong> provides over 30 variations in various programming languages, including shell scripting (curl / PowerShell), how to code a given call.</p>
 <p><img alt="Postman provides code" src="../../assets/images/code/pm-provides-code.png" /></p>
 <!--
 ## Let's connect
@@ -7490,7 +7545,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 18, 2025 11:09:20 UTC">August 18, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 5, 2026 14:07:10 UTC">March 5, 2026</span>
   </span>
 
     

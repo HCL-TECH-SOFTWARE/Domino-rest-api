@@ -27,11 +27,11 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Set up external IdP for Admin UI IdP - HCL Domino REST API Documentation</title>
+        <title>Set up an external IdP for Admin UI login - HCL Domino REST API Documentation</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#set-up-external-idp-for-admin-ui-idp" class="md-skip">
+        <a href="#set-up-an-external-idp-for-admin-ui-login" class="md-skip">
           Skip to content
         </a>
       
@@ -174,7 +174,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Set up external IdP for Admin UI IdP
+              Set up an external IdP for Admin UI login
             
           </span>
         </div>
@@ -504,6 +504,8 @@
       
         
       
+        
+      
     
     
     
@@ -554,6 +556,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/v1.1.7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domino REST API v1.1.7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -3370,7 +3400,7 @@
   <span class="md-ellipsis">
     
   
-    Set up external IdP for Office Round Trip Experience
+    Set up an external IdP for the Office Round Trip Experience
   
 
     
@@ -3407,7 +3437,7 @@
   <span class="md-ellipsis">
     
   
-    Set up external IdP for Admin UI IdP
+    Set up an external IdP for Admin UI login
   
 
     
@@ -3425,7 +3455,7 @@
   <span class="md-ellipsis">
     
   
-    Set up external IdP for Admin UI IdP
+    Set up an external IdP for Admin UI login
   
 
     
@@ -3453,17 +3483,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#client-ids" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Client Ids
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#about-this-task" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3475,33 +3494,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
+  <a href="#client-ids" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configuration
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#set-up-external-idp" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Set up external IdP
+        Client Ids
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#set-up-admin-ui-external-idp-login-configuration" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#before-you-begin" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Set up Admin UI external IdP login configuration
+        Before you begin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-up-an-external-idp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Set up an external IdP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Set up an external IdP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup-microsoft-entra-id-as-external-idp-for-admin-ui-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup Microsoft Entra ID as external IdP for Admin UI login
       
     </span>
   </a>
@@ -3514,6 +3544,46 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#set-up-admin-ui-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Set up Admin UI configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Set up Admin UI configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-up-admin-ui-configuration-to-use-microsoft-entra-id-as-external-idp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Set up Admin UI configuration to use Microsoft Entra ID as external IdP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional information
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#admin-ui-external-idp-login" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3523,35 +3593,12 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Examples
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Examples">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#azure" class="md-nav__link">
+  <a href="#example-admin-ui-configuration-to-use-keycloak-as-external-idp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Azure
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#keycloak" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Keycloak
+        Example Admin UI configuration to use Keycloak as external IdP
       
     </span>
   </a>
@@ -3591,6 +3638,8 @@
       
         
           
+        
+      
         
       
         
@@ -3696,6 +3745,34 @@
     
   
     Change file size limit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../production/timeout.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Change timeout for retrieving data from Domino
   
 
     
@@ -4505,6 +4582,8 @@
       
         
       
+        
+      
     
     
     
@@ -4768,6 +4847,34 @@
     
   
     Use Domino Console
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../management/encryptionops.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use Management console for encryption operations
   
 
     
@@ -6272,7 +6379,7 @@
   <span class="md-ellipsis">
     
   
-    Reserved Form mode names
+    Reserved Form Mode names
   
 
     
@@ -6297,8 +6404,6 @@
       
         
           
-        
-      
         
       
     
@@ -6333,11 +6438,6 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_6_9_10" id="__nav_6_9_10_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
           </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_9_10_label" aria-expanded="false">
@@ -6351,34 +6451,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../references/usingdominorestapi/richtext/conversion.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Conversion table
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
               
             
           </ul>
@@ -7499,17 +7571,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#client-ids" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Client Ids
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#about-this-task" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7521,33 +7582,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
+  <a href="#client-ids" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configuration
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#set-up-external-idp" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Set up external IdP
+        Client Ids
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#set-up-admin-ui-external-idp-login-configuration" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#before-you-begin" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Set up Admin UI external IdP login configuration
+        Before you begin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-up-an-external-idp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Set up an external IdP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Set up an external IdP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup-microsoft-entra-id-as-external-idp-for-admin-ui-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup Microsoft Entra ID as external IdP for Admin UI login
       
     </span>
   </a>
@@ -7560,6 +7632,46 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#set-up-admin-ui-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Set up Admin UI configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Set up Admin UI configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-up-admin-ui-configuration-to-use-microsoft-entra-id-as-external-idp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Set up Admin UI configuration to use Microsoft Entra ID as external IdP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional information
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#admin-ui-external-idp-login" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7569,35 +7681,12 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Examples
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Examples">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#azure" class="md-nav__link">
+  <a href="#example-admin-ui-configuration-to-use-keycloak-as-external-idp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Azure
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#keycloak" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Keycloak
+        Example Admin UI configuration to use Keycloak as external IdP
       
     </span>
   </a>
@@ -7629,50 +7718,310 @@
   
 
 
-<h1 id="set-up-external-idp-for-admin-ui-idp">Set up external IdP for Admin UI IdP</h1>
-<h2 id="client-ids">Client Ids</h2>
-<p>When configuring an external IdP using OIDC or OIDC-idpcat, you need to provide a clientId. It's recommended to use <code>Domino</code>, but the admins of your IdP might have other ideas. In any case, that's the clientId for the REST server. It's <em>NOT</em> the one for the Admin UI or the Office Forms Based Authentication (OFBA) for attachment editing. To be fully operational, you need to configure at least three clients on your IdP:</p>
-<ul>
-<li><code>Domino</code> for the server (client secret might be handeled by <code>idpcat.nsf</code>).</li>
-<li><code>keepadminui</code> for the Domino REST API admin client. If you also want to use your IdP for Domino REST API Admin UI login.</li>
-<li><code>keepofba</code> for the Office document round trip experience. If you also want to use your IdP for Domino REST API OFBA round trip editing authentication.</li>
-<li>One each for your custom client applications (with clientSecret for servers or PKCE for clients).</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Use the internal IdP as learning resource</p>
-<p>The application configuration provided by the internal IdP makes it easy to configure and retrieve client-specific JWT that have all the required fields. Test your application with that and use the defined properties, scopes foremost, to requests the external
-IdP client configurations.</p>
-</div>
+<h1 id="set-up-an-external-idp-for-admin-ui-login">Set up an external IdP for Admin UI login</h1>
 <h2 id="about-this-task">About this task</h2>
-<p>You can add your own IdP to use for Admin UI login. This uses a PKCE login flow.</p>
-<h2 id="configuration">Configuration</h2>
-<h3 id="set-up-external-idp">Set up external IdP</h3>
-<p>Configure your external IdP in the configuration file. For more information, see <a href="index.html">configuring external IdP</a> for configuring an external IdP of your choice.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<p>The task guides you in setting up an external IdP to use for logging in to the <strong>Admin UI</strong>. <!--This uses a PKCE login flow.--></p>
+<h2 id="client-ids">Client Ids</h2>
+<p>When configuring an external identity provider using OpenID Connect (OIDC) or OIDC-idpcat with HCL Domino and the Domino REST API, you must specify a client ID. The default recommendation is to use Domino as the client ID for the Domino REST API server. However, your identity provider administrator might require a different value depending on your organization’s configuration.</p>
+<p>A separate client ID is required to support the Admin UI. To do this, you need to configure a separate client in your external IdP. You may specify the value of the client ID, or it might depend on your organization’s IdP configuration.</p>
+<!--8<-- "onclientids.md"-->
+
+<h2 id="before-you-begin">Before you begin</h2>
+<p>If you are going to use Microsoft Entra ID as your external IdP:</p>
+<ul>
+<li>Make sure you have already registered an application in the Azure portal for use by the Domino REST API server. For more information, see <a href="configuringAD.html">Configure Microsoft Entra ID as IdP</a>.</li>
+<li>Make sure the that scope <code>$SETUP</code> is added to the registered application for use by the Domino REST API server.</li>
+</ul>
+<h2 id="set-up-an-external-idp">Set up an external IdP</h2>
+<p>Configure an external IdP of your choice. For more information, see <a href="index.html">configuring external IdP</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
 <p>When configuring your external IdP, make sure to set <code>{{ origin }}/admin/ui/callback</code> as one of your redirect URIs.</p>
 </div>
-<h3 id="set-up-admin-ui-external-idp-login-configuration">Set up Admin UI external IdP login configuration</h3>
-<p>Configure the <code>adminui</code> property in your chosen external IdP. For more information, see <a href="../../references/configuration/parameters.html#jwt-parameters">JWT parameters</a>.</p>
-<h2 id="admin-ui-external-idp-login">Admin UI external IdP login</h2>
+<h3 id="setup-microsoft-entra-id-as-external-idp-for-admin-ui-login">Setup Microsoft Entra ID as external IdP for Admin UI login</h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
+<p>When configuring Microsoft Entra ID as your external identity provider (IdP), you must specify a client ID. This value must match the application (client) ID of the client application you configure in Microsoft Entra ID.</p>
+<p>The client ID described here applies only to the Admin UI. A separate client ID (application registration) is required to support the Domino REST API server. For more information, see <a href="configuringAD.html">Configure Microsoft Entra ID as IdP</a>.</p>
+</div>
+<ol>
+<li>
+<p>Register an application.</p>
+<ol>
+<li>
+<p>Go to the <a href="https://portal.azure.com" target="_blank">Azure portal</a> and sign in.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Make sure you’re in the correct directory. Select your profile icon in the upper-right corner of the Azure portal, then select <strong>Switch directory</strong>. Use an account in the same directory where you plan to register the application.</p>
+</div>
+</li>
+<li>
+<p>In <strong>Microsoft Entra ID</strong>, select <strong>App registrations</strong>, then select <strong>New registration</strong>.</p>
+</li>
+<li>
+<p>On the <strong>App registrations</strong> page, enter the application registration details described in the following table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Form input name</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Name</td>
+<td style="text-align: left;">Enter a descriptive name for the application.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Supported account types</td>
+<td style="text-align: left;">Choose who can sign in.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Redirect URI</td>
+<td style="text-align: left;">Specify where authentication responses should be sent.<br/><br/>Select <strong>Single-page application (SPA)</strong> as the platform and use <code>{{ origin }}/admin/ui/callback</code> as the Redirect URI.<br/><br/>where: <code>{{ origin }}</code> is a template placeholder for the base URL where the Domino REST API server is hosted.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Azure app registration" src="../../assets/images/entraID16.png" style="height:70%;width:70%" /></p>
+</li>
+<li>
+<p>Click <strong>Register</strong>.</p>
+</li>
+</ol>
+<p>After the registration, you will see the <strong>Overview</strong> page. Take note of the value of the <strong>Application (client) ID</strong>.</p>
+</li>
+<li>
+<p>Add client credentials.</p>
+<ol>
+<li>Under <strong>Manage</strong>, select <strong>Certificates &amp; secrets</strong> &rarr; <strong>Client secrets</strong> &rarr; <strong>New client secret</strong>.</li>
+<li>
+<p>Add a description for your client secret, and select an expiration for the secret or specify a custom lifetime.</p>
+<p><img alt="Azure app registration" src="../../assets/images/entraID31.png" style="height:70%;width:70%" /></p>
+</li>
+<li>
+<p>Click <strong>Add</strong>.</p>
+</li>
+<li>
+<p>Record the client secret <strong>Value</strong>. This secret value is never displayed again after you leave the page.</p>
+<p><img alt="Azure app registration" src="../../assets/images/entraID32.png" style="height:70%;width:70%" /></p>
+</li>
+</ol>
+</li>
+<li>
+<p>Add the Application ID URI.</p>
+<ol>
+<li>Under <strong>Manage</strong>, select <strong>Expose an API</strong>.</li>
+<li>
+<p>At the top of the page, select <strong>Add</strong> next to <strong>Application ID URI</strong>.</p>
+<p>This defaults to <code>api://&lt;application-client-id&gt;</code>. Take note of this value as it is needed in the configuration in the Domino REST API.</p>
+<p><img alt="Azure app registration" src="../../assets/images/entraID33.png" style="height:70%;width:70%" /></p>
+</li>
+</ol>
+</li>
+<li>
+<p>Configure API permissions.</p>
+<ol>
+<li>Under <strong>Manage</strong>, select <strong>API permissions</strong>. The <strong>API permissions</strong> page opens with the <code>User.Read</code> permission already configured.</li>
+<li>Click <strong>Add a permission</strong>. The <strong>Request API permissions</strong> pane opens.</li>
+<li>
+<p>Select the <strong>APIs my organization uses</strong> tab, and then select the application you configured for use by the Domino REST API server from the list. See the <a href="#before-you-begin">Before you begin</a> section for details.</p>
+<p><img alt="Azure app registration" src="../../assets/images/entraID17.png" style="height:70%;width:70%" /></p>
+<p>In the example image, it shows the selection of the <strong>DRAPI-API</strong> application, which is the application used by the Domino REST API server as stated in the <a href="#before-you-begin">Before you begin</a> section.</p>
+</li>
+<li>
+<p>Under <strong>Select permissions</strong>, select the required scopes and click <strong>Add permissions</strong>. Make sure that the scopes <code>$SETUP</code> and <code>$DATA</code> are selected.</p>
+<p><img alt="Azure app registration" src="../../assets/images/entraID18.png" style="height:70%;width:70%" /></p>
+<p>After adding permissions, you should see the selected permissions under <strong>Configured permissions</strong> on the <strong>API permissions</strong> page.</p>
+</li>
+<li>
+<p>Click <strong>Grant admin consent for {your tenant}</strong> to grant admin consent to the permissions configured for the application.</p>
+</li>
+<li>
+<p>In the <strong>Grant admin consent confirmation</strong> dialog, click <strong>Yes</strong>. After granting consent, the permissions that required admin consent are shown as having consent granted.</p>
+<p><img alt="Azure app registration" src="../../assets/images/entraID34.png" style="height:70%;width:70%" /></p>
+</li>
+</ol>
+</li>
+<li>
+<p>Assign an owner.</p>
+<ol>
+<li>Under <strong>Manage</strong>, select <strong>Owners</strong>, and then select <strong>Add owners</strong>. The <strong>Owners</strong> pane opens.</li>
+<li>
+<p>Search for and select the user account that you want to be an owner of the application.</p>
+<p><img alt="Azure app registration" src="../../assets/images/entraID11.png" style="height:70%;width:70%" /></p>
+</li>
+<li>
+<p>Click <strong>Select</strong> to add the user account that you chose as an owner of the application.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Check authentication.</p>
+<ol>
+<li>Under <strong>Manage</strong>, select <strong>Authentication</strong>.</li>
+<li>
+<p>On the <strong>Redirect URI configuration</strong> tab, make sure that the selected and entered values are correct.</p>
+<p><img alt="Azure app registration" src="../../assets/images/entraID35.png" style="height:70%;width:70%" /></p>
+</li>
+<li>
+<p>On the <strong>Supported accounts</strong> tab, make sure the correct supported account type is selected.</p>
+</li>
+<li>
+<p>On the <strong>Settings</strong> tab, make sure <strong>Access token</strong> is selected.</p>
+<p><img alt="Azure app registration" src="../../assets/images/entraID36.png" style="height:70%;width:70%" /></p>
+</li>
+<li>
+<p>Click <strong>Save</strong> if you made any changes.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Adjust app manifest.</p>
+<ol>
+<li>Under <strong>Manage</strong>, select <strong>Manifest</strong>. A web-based manifest editor opens, allowing you to edit the manifest.</li>
+<li>
+<p>Change the value of <code>accessTokenAcceptedVersion</code> from <code>null</code> to <code>2</code>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Before changing</label><label for="__tabbed_1_2">After changing</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="Azure app registration" src="../../assets/images/configuringAD-16.png" style="height:60%;width:60%" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="Azure app registration" src="../../assets/images/configuringAD-17.png" style="height:60%;width:60%" /></p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Click <strong>Save</strong>.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Check application endpoints.</p>
+<p>Select <strong>Endpoints</strong> in the top menu to open the <strong>Endpoints</strong> page, which shows the authentication endpoints for the application. Take note of the following endpoints:</p>
+<ul>
+<li><code>OpenID Connect metadata document</code></li>
+<li><code>OAuth 2.0 authorization endpoint (v2)</code></li>
+<li><code>OAuth 2.0 token endpoint (v2)</code></li>
+</ul>
+</li>
+</ol>
+<h2 id="set-up-admin-ui-configuration">Set up Admin UI configuration</h2>
+<p>To use the configured external IdP for Admin UI login, you need to include the <code>adminui</code> property in the configuration file of external IdP saved in <code>keepconfig.d</code>. For more information about the <code>adminui</code> property, see <a href="../../references/configuration/parameters.html#jwt-parameters">JWT parameters</a>.</p>
+<h3 id="set-up-admin-ui-configuration-to-use-microsoft-entra-id-as-external-idp">Set up Admin UI configuration to use Microsoft Entra ID as external IdP</h3>
+<ol>
+<li>
+<p>Open the JSON file you used in configuring Domino REST API to use Microsoft Entra ID as an external IdP that is saved in the <code>[notesdata]/keepconfig.d</code> directory.</p>
+</li>
+<li>
+<p>Add the following JSON object to the Microsoft Entra ID configuration in the JSON file.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">&quot;adminui&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;active&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;client_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[value of Application (client) ID]&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;application_id_uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[value of the Application ID URI]&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+</code></pre></div>
+<p>where:</p>
+<ul>
+<li>The <code>client_id</code> parameter should have the value of the <strong>Application (client) ID</strong> of the registered application in Azure portal.</li>
+<li>The <code>application_id_uri</code> parameter should have the value of the <strong>Application ID URI</strong> of the registered application in Azure portal. It should end with <code>/</code>.</li>
+</ul>
+<p>Check the <strong>Overview</strong> page of the application in the Azure portal. Refer to the following example image:</p>
+<p><img alt="Azure app registration" src="../../assets/images/entraID37.png" style="height:70%;width:70%" /></p>
+<p>After adding the JSON object, the configuration should be similar to the following:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;jwt&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;AzureIdP&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">&quot;active&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;providerUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[value of the OpenID Connect metadata document endpoint of the app used by the Domino REST API server]&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;aud&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[value of the Application (client) ID of the app used by the Domino REST API server]&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;iss&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[issuer value]&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;algorithm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;RS256&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;adminui&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">&quot;active&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;client_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[value of Application (client) ID]&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;application_id_uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[value of the Application ID URI]&quot;</span>
+<span class="w">                  </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>For more information on the definitions and values of the <code>providerUrl</code>, <code>aud</code>, and <code>iss</code> keys, see <a href="configuringAD.html#configuration-in-domino-rest-api">Configuration in Domino REST API</a> for details of the Microsoft Entra ID configuration.</p>
+</li>
+<li>
+<p>Save the changes and restart Domino REST API.</p>
+</li>
+</ol>
+<h2 id="additional-information">Additional information</h2>
+<h3 id="admin-ui-external-idp-login">Admin UI external IdP login</h3>
 <p>The Admin UI shows the OIDC logins and the Domino REST API login, which uses the Domino REST API IdP. To prevent the Admin UI from showing all IdP logins, set the value of the <code>AdminUIOIDCLogin</code> parameter to <code>false</code>. To disable the login with password button, set the <code>AdminUIKeepLogin</code> parameter to <code>false</code>. For more information on how to modify the configuration, see <a href="../install/configparam.html">Modify configuration parameters</a>.</p>
-</div>
-<p>Once configured, the Admin UI login should look like the following example image. In the example image, <em>Keycloak</em> is used as the external IdP.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Make sure to add <code>{DRAPI_HOST}/admin/ui/callback</code> as a redirect URI in your chosen IdP.</p>
-</div>
-<p><img alt="external IdP for Admin UI login" src="../../assets/images/AdminUiLoginExternalIdP.png" /></p>
-<p>Clicking <strong>Sign in with {external_idp_name}</strong> commences the authorization code flow.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Admin UI external IdP login uses authorization code flow with PKCE.</p>
-</div>
-<h2 id="examples">Examples</h2>
-<h3 id="azure">Azure</h3>
-<p>The following is an example configuration for Azure IdP:</p>
+<!--
+!!! note
+
+    Admin UI external IdP login uses authorization code flow with PKCE.
+-->
+
+<h3 id="example-admin-ui-configuration-to-use-keycloak-as-external-idp">Example Admin UI configuration to use Keycloak as external IdP</h3>
+<p>The following is an example configuration for Keycloak IdP:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;jwt&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;KeycloakIdP&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;active&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;providerUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://{keycloak_host}/realms/{realm_name}&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;adminui&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;active&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;client_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{client_id}&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<!--
+## About this task
+
+You can add your own IdP to use for Admin UI login. This uses a PKCE login flow.
+
+## Configuration
+
+### Set up external IdP
+
+Configure your external IdP in the configuration file. For more information, see [configuring external IdP](../IdP/index.md) for configuring an external IdP of your choice.
+
+!!! note
+
+    When configuring your external IdP, make sure to set `{{ origin }}/admin/ui/callback` as one of your redirect URIs.
+
+### Set up Admin UI external IdP login configuration
+
+Configure the `adminui` property in your chosen external IdP. For more information, see [JWT parameters](../../references/configuration/parameters.md#jwt-parameters).
+
+## Admin UI external IdP login
+
+!!! note
+
+    The Admin UI shows the OIDC logins and the Domino REST API login, which uses the Domino REST API IdP. To prevent the Admin UI from showing all IdP logins, set the value of the `AdminUIOIDCLogin` parameter to `false`. To disable the login with password button, set the `AdminUIKeepLogin` parameter to `false`. For more information on how to modify the configuration, see [Modify configuration parameters](../install/configparam.md).
+
+Once configured, the Admin UI login should look like the following example image. In the example image, _Keycloak_ is used as the external IdP.
+
+!!! note
+
+    Make sure to add `{DRAPI_HOST}/admin/ui/callback` as a redirect URI in your chosen IdP.
+
+![external IdP for Admin UI login](../../assets/images/AdminUiLoginExternalIdP.png)
+
+Clicking **Sign in with {external_idp_name}** commences the authorization code flow.
+
+!!! note
+
+    Admin UI external IdP login uses authorization code flow with PKCE.
+
+## Examples
+
+### Azure
+
+The following is an example configuration for Azure IdP:
+
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;jwt&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;AzureIdP&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -7690,8 +8039,11 @@ IdP client configurations.</p>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="keycloak">Keycloak</h3>
-<p>The following is an example configuration for Keycloak IdP:</p>
+
+### Keycloak
+
+The following is an example configuration for Keycloak IdP:
+
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;jwt&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;KeycloakIdP&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -7705,6 +8057,7 @@ IdP client configurations.</p>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+-->
 
 
 
@@ -7725,7 +8078,7 @@ IdP client configurations.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 9, 2025 17:05:01 UTC">October 9, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 24, 2026 18:19:51 UTC">March 24, 2026</span>
   </span>
 
     

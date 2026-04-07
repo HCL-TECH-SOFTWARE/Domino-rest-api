@@ -27,7 +27,7 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -504,6 +504,8 @@
       
         
       
+        
+      
     
     
     
@@ -554,6 +556,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/v1.1.7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domino REST API v1.1.7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -3363,7 +3393,7 @@
   <span class="md-ellipsis">
     
   
-    Set up external IdP for Office Round Trip Experience
+    Set up an external IdP for the Office Round Trip Experience
   
 
     
@@ -3391,7 +3421,7 @@
   <span class="md-ellipsis">
     
   
-    Set up external IdP for Admin UI IdP
+    Set up an external IdP for Admin UI login
   
 
     
@@ -3424,6 +3454,8 @@
       
         
           
+        
+      
         
       
         
@@ -3529,6 +3561,34 @@
     
   
     Change file size limit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/production/timeout.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Change timeout for retrieving data from Domino
   
 
     
@@ -4338,6 +4398,8 @@
       
         
       
+        
+      
     
     
     
@@ -4601,6 +4663,34 @@
     
   
     Use Domino Console
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/management/encryptionops.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use Management console for encryption operations
   
 
     
@@ -6183,7 +6273,7 @@
   <span class="md-ellipsis">
     
   
-    Reserved Form mode names
+    Reserved Form Mode names
   
 
     
@@ -6208,8 +6298,6 @@
       
         
           
-        
-      
         
       
     
@@ -6244,11 +6332,6 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_6_9_10" id="__nav_6_9_10_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
           </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_9_10_label" aria-expanded="false">
@@ -6262,34 +6345,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="richtext/conversion.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Conversion table
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
               
             
           </ul>
@@ -7459,13 +7514,13 @@
 <p>The REST API uses the information from the document's form item to determine access by looking at the configuration loaded from the active schema accessed through the scope.</p>
 <p>The approach follows the same principle as the Notes client or the Domino HTTP task, just the lookup source is the schema and not the list of forms in the design.</p>
 <div class="admonition warning">
-<p class="admonition-title">Form item normalization</p>
-<p>The REST API does "normalize" the value of the form item. The returned form item is the (last) alias of the found form configuration. The stored document is not altered.</p>
+<p class="admonition-title">Warning</p>
+<p>The REST API <em>normalizes</em> the value of the form item. The returned form item corresponds to the last alias of the found form configuration. The stored document itself remains unchanged.</p>
 </div>
 <p><img alt="Form and Alias" src="../../assets/images/FormAndAlias2.png" /></p>
 <h2 id="the-rationale">The rationale</h2>
-<p>In contemporary development understanding we have label/value pairs. To normalize Notes documents we follow this pattern with the form name being the label and the last item being the value.</p>
-<p>Aliases inbetween are considered "variations" we remove from API use to simplify access for outside developers.</p>
+<p>In contemporary development understanding, there are label/value pairs. To normalize Notes documents, we follow this pattern, using the form name as the label and the last item as the value.</p>
+<p>Any intermediate aliases are treated as variations and are excluded from API use to simplify access for external developers.</p>
 
 
 
@@ -7486,7 +7541,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 12, 2023 12:29:29 UTC">July 12, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 27, 2026 15:15:05 UTC">January 27, 2026</span>
   </span>
 
     

@@ -27,7 +27,7 @@
       
       
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -504,6 +504,8 @@
       
         
       
+        
+      
     
     
     
@@ -554,6 +556,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../whatsnew/v1.1.7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domino REST API v1.1.7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -3363,7 +3393,7 @@
   <span class="md-ellipsis">
     
   
-    Set up external IdP for Office Round Trip Experience
+    Set up an external IdP for the Office Round Trip Experience
   
 
     
@@ -3391,7 +3421,7 @@
   <span class="md-ellipsis">
     
   
-    Set up external IdP for Admin UI IdP
+    Set up an external IdP for Admin UI login
   
 
     
@@ -3424,6 +3454,8 @@
       
         
           
+        
+      
         
       
         
@@ -3529,6 +3561,34 @@
     
   
     Change file size limit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/production/timeout.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Change timeout for retrieving data from Domino
   
 
     
@@ -4338,6 +4398,8 @@
       
         
       
+        
+      
     
     
     
@@ -4601,6 +4663,34 @@
     
   
     Use Domino Console
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/management/encryptionops.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use Management console for encryption operations
   
 
     
@@ -5056,30 +5146,8 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#postrunagentasync" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        POST:/run/agentAsync
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#asynchronous-agent-scheduler" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Asynchronous Agent Scheduler
-      
-    </span>
-  </a>
   
 </li>
       
@@ -6227,7 +6295,7 @@
   <span class="md-ellipsis">
     
   
-    Reserved Form mode names
+    Reserved Form Mode names
   
 
     
@@ -6252,8 +6320,6 @@
       
         
           
-        
-      
         
       
     
@@ -6288,11 +6354,6 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_6_9_10" id="__nav_6_9_10_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
           </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_9_10_label" aria-expanded="false">
@@ -6306,34 +6367,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../references/usingdominorestapi/richtext/conversion.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Conversion table
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
               
             
           </ul>
@@ -7485,30 +7518,8 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#postrunagentasync" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        POST:/run/agentAsync
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#asynchronous-agent-scheduler" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Asynchronous Agent Scheduler
-      
-    </span>
-  </a>
   
 </li>
       
@@ -7556,7 +7567,7 @@ One of the differentiators for Domino compared to some other NoSQL databases is 
     For further clarification, a developer can use the `/design/agents?dataSource=` endpoint to get full information about properties of an agent. The **@validForKeep** property will confirm whether or not the agent can be used from Domino REST API. ***This does not (currently) introspect the LotusScript to check for NotesUI classes. It only uses the triggers to identify agents that cannot be called from outside the Notes Client.***
 -->
 <h2 id="running-agents">Running Agents</h2>
-<p>There are three ways to run an agent via Domino REST API:</p>
+<p>There are 2 ways to run an agent via Domino REST API:</p>
 <h3 id="post-runagent"><strong>POST: /run/agent</strong></h3>
 <p>This is used to run an agent in real time. The payload expects at least <code>agentName</code> to define which agent to trigger. <strong>NOTE:</strong> the calling HTTP thread will be tied up until the agent finishes, so this should only be used for short-running agents. This is designed to simulate running an agent using the "?OpenAgent" URL endpoint. Any content from LotusScript <code>print</code> statements will be returned as the HTTP response or, if no print statements are used <code>{"agentResponse":"done"}</code>. In addition, <code>NotesSession.documentContext</code> will get an in-memory document with the following properties:</p>
 <ul>
@@ -7569,25 +7580,23 @@ One of the differentiators for Domino compared to some other NoSQL databases is 
 <li><strong>REQUEST_CONTENT</strong> set to any additional content from the payload.</li>
 </ul>
 <h3 id="post-runagentwithcontext"><strong>POST: /run/agentWithContext</strong></h3>
-<!-- prettier ignore -->
-
 <div class="admonition warning">
 <p class="admonition-title">Caution</p>
 <p>Might not be supported on current version.</p>
 </div>
 <p>This is used to run an agent in real time, passing the <code>unid</code> of a document to use as context and the <code>returnMode</code> to use to generate the response for the agent. If <code>returnMode</code> was not specified or does not exist, the default <code>{"agentResponse":"done"}</code> response is returned.</p>
-<!-- prettier-ignore -->
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The calling HTTP thread will be tied up until the agent finishes, so this should only be used for short-running agents.</p>
 </div>
-<h3 id="postrunagentasync"><strong>POST:/run/agentAsync</strong></h3>
-<!-- prettier-ignore -->
-<div class="admonition warning">
-<p class="admonition-title">Caution</p>
-<p>Might not be supported on current version.</p>
-</div>
-<p>This is used to run an agent asynchronously via Domino REST API. A successful response contains a status of "processing" and a uuid for the request. The uuid can be used to check the status of the agent (GET <strong>/run/agentAsync/{uuid}</strong>) or cancel the agent (DELETE <strong>/run/agentAsync/{uuid}</strong>). The payload is of the format:</p>
+<!--### **POST:/run/agentAsync**
+
+!!! warning "Caution"
+
+    Might not be supported on current version.
+
+This is used to run an agent asynchronously via Domino REST API. A successful response contains a status of "processing" and a uuid for the request. The uuid can be used to check the status of the agent (GET **/run/agentAsync/{uuid}**) or cancel the agent (DELETE **/run/agentAsync/{uuid}**). The payload is of the format:
+
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;agentName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;processJson&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;runAsServer&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
@@ -7600,46 +7609,30 @@ One of the differentiators for Domino compared to some other NoSQL databases is 
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>The properties are:</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>agentName</code></td>
-<td>Name of the agent in this Domino REST API Database to run</td>
-</tr>
-<tr>
-<td><code>runAsServer</code></td>
-<td>True if the agent should be run under the server's access. <strong><em>Note This cannot be used if the agent has the "Run As Web User" flag set.</em></strong></td>
-</tr>
-<tr>
-<td><code>callbackUrl</code></td>
-<td>A URL for Domino REST API to send a response to once the agent has completed.</td>
-</tr>
-<tr>
-<td><code>callbackUrlError</code></td>
-<td>A URL for Domino REST API to send to if the agent fails.</td>
-</tr>
-<tr>
-<td><code>method</code></td>
-<td>HTTP Method to use for the callbackUrl and callbackUrlError.</td>
-</tr>
-<tr>
-<td><code>payload</code></td>
-<td>A JSON object to pass into then agent. This can contain any additional information the agent needs to use.</td>
-</tr>
-</tbody>
-</table>
-<p>This process creates a document in <strong>KeepAgents.nsf</strong> to track processing of the agents. You can check that in the Notes Client, with the UUID, or query with an API.</p>
-<h2 id="asynchronous-agent-scheduler">Asynchronous Agent Scheduler</h2>
-<p>The asynchronous agent scheduler picks up and processes asynchronous agents. The <strong>threads</strong> property in the config.json defines how many agents can be run asynchronously, by default <strong>10</strong>. Multiple agents within the same database and even multiple instances of the same agent can be run simultaneously. Any additional agents are queued up for processing once a thread becomes available.</p>
-<p>Domino REST API can still be stopped with agents running or queued. In this scenario, running agents will be cancelled and set to the status "CANCELLED". Because we can't know if it will cause problems to restart the agents, you will need to manually review and, if necessary, start the agent again or complete any remedial data fixup.</p>
-<p>Any queued agents will be picked up for processing when the server restarts.</p>
+
+The properties are:
+
+| Property           | Description                                                                                                                                |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `agentName`        | Name of the agent in this Domino REST API Database to run                                                                                  |
+| `runAsServer`      | True if the agent should be run under the server's access. **_Note This cannot be used if the agent has the "Run As Web User" flag set._** |
+| `callbackUrl`      | A URL for Domino REST API to send a response to once the agent has completed.                                                              |
+| `callbackUrlError` | A URL for Domino REST API to send to if the agent fails.                                                                                   |
+| `method`           | HTTP Method to use for the callbackUrl and callbackUrlError.                                                                               |
+| `payload`          | A JSON object to pass into then agent. This can contain any additional information the agent needs to use.                                 |
+
+This process creates a document in **KeepAgents.nsf** to track processing of the agents. You can check that in the Notes Client, with the UUID, or query with an API.-->
+
+<!--
+## Asynchronous Agent Scheduler
+
+The asynchronous agent scheduler picks up and processes asynchronous agents. The **threads** property in the config.json defines how many agents can be run asynchronously, by default **10**. Multiple agents within the same database and even multiple instances of the same agent can be run simultaneously. Any additional agents are queued up for processing once a thread becomes available.
+
+Domino REST API can still be stopped with agents running or queued. In this scenario, running agents will be cancelled and set to the status "CANCELLED". Because we can't know if it will cause problems to restart the agents, you will need to manually review and, if necessary, start the agent again or complete any remedial data fixup.
+
+Any queued agents will be picked up for processing when the server restarts.
+-->
+
 <h2 id="triggers">Triggers</h2>
 <p>Certain triggers like selected documents or programmatic collections like <code>unprocessedDocuments</code> only make sense in Notes Client. Other triggers like "Before Mail Arrives" only make sense in the context of server scheduling. LotusScript UI classes for interacting with the Notes Client will cause an agent to error if you attempt to run it from outside the context of the Notes Client.</p>
 <p>For further clarification, a developer can use the <code>/design/agents?dataSource=</code> endpoint to get full information about properties of an agent. The <strong>@validForKeep</strong> property will confirm whether or not the agent can be used from Domino REST API. <strong><em>This does not (currently) introspect the LotusScript to check for NotesUI classes. It only uses the triggers to identify agents that cannot be called from outside the Notes Client.</em></strong></p>
@@ -7663,7 +7656,7 @@ One of the differentiators for Domino compared to some other NoSQL databases is 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 26, 2025 15:30:18 UTC">June 26, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 11, 2026 19:12:26 UTC">March 11, 2026</span>
   </span>
 
     

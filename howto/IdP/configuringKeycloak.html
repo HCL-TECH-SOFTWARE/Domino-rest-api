@@ -27,7 +27,7 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -504,6 +504,8 @@
       
         
       
+        
+      
     
     
     
@@ -554,6 +556,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/v1.1.7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domino REST API v1.1.7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -3541,7 +3571,7 @@
   <span class="md-ellipsis">
     
   
-    Set up external IdP for Office Round Trip Experience
+    Set up an external IdP for the Office Round Trip Experience
   
 
     
@@ -3569,7 +3599,7 @@
   <span class="md-ellipsis">
     
   
-    Set up external IdP for Admin UI IdP
+    Set up an external IdP for Admin UI login
   
 
     
@@ -3602,6 +3632,8 @@
       
         
           
+        
+      
         
       
         
@@ -3707,6 +3739,34 @@
     
   
     Change file size limit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../production/timeout.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Change timeout for retrieving data from Domino
   
 
     
@@ -4516,6 +4576,8 @@
       
         
       
+        
+      
     
     
     
@@ -4779,6 +4841,34 @@
     
   
     Use Domino Console
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../management/encryptionops.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use Management console for encryption operations
   
 
     
@@ -6283,7 +6373,7 @@
   <span class="md-ellipsis">
     
   
-    Reserved Form mode names
+    Reserved Form Mode names
   
 
     
@@ -6308,8 +6398,6 @@
       
         
           
-        
-      
         
       
     
@@ -6344,11 +6432,6 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_6_9_10" id="__nav_6_9_10_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
           </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_9_10_label" aria-expanded="false">
@@ -6362,34 +6445,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../references/usingdominorestapi/richtext/conversion.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Conversion table
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
               
             
           </ul>
@@ -7655,18 +7710,32 @@
 <p><a href="https://www.keycloak.org/">Keycloak</a> is an Open Source Identity and Access Management solution sponsored by <a href="https://www.redhat.com/en">RedHat</a>.</p>
 <p>Keycloak can be used to produce JWT Access Token for Domino REST API. Keycloak has many features like default configuration, user federation, identity brokering and social login. Those are topics not covered here. Consult the <a href="https://duckduckgo.com/?q=keycloak+tutorial&amp;ia=web">Keycloak Tutorial</a> or the <a href="https://www.keycloak.org/documentation">Keycloak documentation</a> to learn more. This page focuses on the settings required for Domino REST API.</p>
 <h2 id="client-ids">Client Ids</h2>
-<p>When configuring an external IdP using OIDC or OIDC-idpcat, you need to provide a clientId. It's recommended to use <code>Domino</code>, but the admins of your IdP might have other ideas. In any case, that's the clientId for the REST server. It's <em>NOT</em> the one for the Admin UI or the Office Forms Based Authentication (OFBA) for attachment editing. To be fully operational, you need to configure at least three clients on your IdP:</p>
+<p>When configuring an external identity provider using OpenID Connect (OIDC) or OIDC-idpcat with HCL Domino and the Domino REST API, you must specify a client ID. The default recommendation is to use <code>Domino</code> as the client ID for the Domino REST API server. However, your identity provider administrator might require a different value depending on your organization’s configuration.</p>
+<p>Separate client IDs (application registrations) are required to support the Admin UI and Office Forms Based Authentication (OFBA). To support these features, configure at least the following clients in your identity provider:</p>
 <ul>
-<li><code>Domino</code> for the server (client secret might be handeled by <code>idpcat.nsf</code>).</li>
-<li><code>keepadminui</code> for the Domino REST API admin client. If you also want to use your IdP for Domino REST API Admin UI login.</li>
-<li><code>keepofba</code> for the Office document round trip experience. If you also want to use your IdP for Domino REST API OFBA round trip editing authentication.</li>
-<li>One each for your custom client applications (with clientSecret for servers or PKCE for clients).</li>
+<li>A client used by the Domino REST API server. You can name the client <code>Domino</code> or any descriptive name. The client secret might be managed through <code>idpcat.nsf</code>.</li>
+<li>A client used by the Domino REST API Admin UI. You can name the client <code>keepadminui</code> or any descriptive name. Configure this client if you want administrators to authenticate through the external identity provider.</li>
+<li>A client used for OFBA round-trip editing of Office documents. You can name the client <code>keepofba</code> or any descriptive name.</li>
 </ul>
-<div class="admonition tip">
-<p class="admonition-title">Use the internal IdP as learning resource</p>
-<p>The application configuration provided by the internal IdP makes it easy to configure and retrieve client-specific JWT that have all the required fields. Test your application with that and use the defined properties, scopes foremost, to requests the external
-IdP client configurations.</p>
-</div>
+<p>You should also create separate clients for each custom application that connects to the Domino REST API.</p>
+<!--
+- Use a client secret for server-side applications.
+- Use PKCE for public or browser-based clients.
+-->
+<!--
+When configuring an external IdP using OIDC or OIDC-idpcat, you need to provide a clientId. It's recommended to use `Domino`, but the admins of your IdP might have other ideas. In any case, that's the clientId for the REST server. It's _NOT_ the one for the Admin UI or the Office Forms Based Authentication (OFBA) for attachment editing. To be fully operational, you need to configure at least three clients on your IdP:
+
+- `Domino` for the server (client secret might be handeled by `idpcat.nsf`).
+- `keepadminui` for the Domino REST API admin client. If you also want to use your IdP for Domino REST API Admin UI login.
+- `keepofba` for the Office document round trip experience. If you also want to use your IdP for Domino REST API OFBA round trip editing authentication.
+- One each for your custom client applications (with clientSecret for servers or PKCE for clients).
+
+!!! tip "Use the internal IdP as learning resource"
+
+    The application configuration provided by the internal IdP makes it easy to configure and retrieve client-specific JWT that have all the required fields. Test your application with that and use the defined properties, scopes foremost, to requests the external
+    IdP client configurations.
+-->
+
 <h2 id="about-this-task">About this task</h2>
 <p>This section describes key concepts and provides the steps required to configure Keycloak successfully for Domino REST API.</p>
 <h2 id="keycloak-concepts">Keycloak concepts</h2>

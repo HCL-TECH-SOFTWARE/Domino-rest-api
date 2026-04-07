@@ -27,11 +27,11 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Reserved Form mode names - HCL Domino REST API Documentation</title>
+        <title>Reserved Form Mode names - HCL Domino REST API Documentation</title>
       
     
     
@@ -174,7 +174,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reserved Form mode names
+              Reserved Form Mode names
             
           </span>
         </div>
@@ -504,6 +504,8 @@
       
         
       
+        
+      
     
     
     
@@ -554,6 +556,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/v1.1.7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domino REST API v1.1.7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -3363,7 +3393,7 @@
   <span class="md-ellipsis">
     
   
-    Set up external IdP for Office Round Trip Experience
+    Set up an external IdP for the Office Round Trip Experience
   
 
     
@@ -3391,7 +3421,7 @@
   <span class="md-ellipsis">
     
   
-    Set up external IdP for Admin UI IdP
+    Set up an external IdP for Admin UI login
   
 
     
@@ -3424,6 +3454,8 @@
       
         
           
+        
+      
         
       
         
@@ -3529,6 +3561,34 @@
     
   
     Change file size limit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/production/timeout.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Change timeout for retrieving data from Domino
   
 
     
@@ -4338,6 +4398,8 @@
       
         
       
+        
+      
     
     
     
@@ -4601,6 +4663,34 @@
     
   
     Use Domino Console
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/management/encryptionops.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use Management console for encryption operations
   
 
     
@@ -6121,7 +6211,7 @@
   <span class="md-ellipsis">
     
   
-    Reserved Form mode names
+    Reserved Form Mode names
   
 
     
@@ -6139,7 +6229,7 @@
   <span class="md-ellipsis">
     
   
-    Reserved Form mode names
+    Reserved Form Mode names
   
 
     
@@ -6243,8 +6333,6 @@
           
         
       
-        
-      
     
     
     
@@ -6277,11 +6365,6 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_6_9_10" id="__nav_6_9_10_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
           </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_9_10_label" aria-expanded="false">
@@ -6295,34 +6378,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="richtext/conversion.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Conversion table
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
               
             
           </ul>
@@ -7517,22 +7572,53 @@
   
 
 
-<h1 id="reserved-form-mode-names">Reserved Form mode names</h1>
-<p>Use form modes to specify what data can be read or written to documents using the form name in their form item. While you are free to pick any name (lower case, no special characters), there are names with a special purpose, namely:</p>
+<h1 id="reserved-form-mode-names">Reserved Form Mode names</h1>
+<p>In the Domino REST API, Form Modes specify what data can be read or written to documents using the form name in their form item. You can create any name as long as it is in lowercase and has no special characters, but there are certain Form Mode names that are reserved and have specific purposes.  </p>
 <h2 id="default">default</h2>
-<p>The <code>default</code> mode is, as the name implies, the default when creating or reading documents and in the absence of an explicitly specified <code>mode=</code> parameter</p>
+<p>The <code>default</code> mode is the standard mode used when:</p>
+<ul>
+<li>reading or creating documents</li>
+<li>there is no explicitly specified <code>mode=</code> parameter</li>
+</ul>
 <h2 id="dql">dql</h2>
-<p>When data is queried by <a href="https://help.hcltechsw.com/dom_designer/12.0.1/basic/dql_overview.html">DQL</a>, forms need a <code>dql</code> mode to return values. The mode specified what data gets returned. If a form doesn't have a <code>dql</code> mode, no data will be returned for that form in a DQL query.</p>
+<p>The <code>dql</code> mode specifies what fields are returned when querying documents using <a href="https://help.hcltechsw.com/dom_designer/12.0.1/basic/dql_overview.html">DQL</a>. If a form does not include a <code>dql</code> mode, no data for that form will be returned in DQL queries.</p>
 <h2 id="odata">odata</h2>
-<p>The <code>odata</code> mode lets you define the data that comes through OData endpoints. The API support the OData standard <a href="https://www.odata.org">Open Data Protocol(OData)</a>. If a form doesn't have an <code>odata</code> mode, then an OData won't return any data for that form.</p>
+<p>The <code>odata</code> mode defines what data the OData endpoints will expose for the form. Domino REST API supports the <a href="https://www.odata.org">Open Data Protocol (OData)</a>, and if a form does not have an <code>odata</code> mode, OData queries won't return any data for that form.</p>
 <h2 id="raw">raw</h2>
-<p>Needed for <code>/api/v1/raw</code> endpoint. The endpoint <code>/api/v1/raw</code> will only return data when the mode <code>raw</code> exists for the form requested and the user has the permission, expressed in the @formula of the raw mode definition. Typically you want to restrict raw access to admin and support users.</p>
-<h2 id="vsheet">vsheet</h2>
-<p>The <a href="../../howto/production/virtualsheet.html">Virtual Spreadsheet feature</a> uses the <code>vsheet</code> mode to save the changes made on each view entry to its respective document. It's recommended that this mode contains all fields that the form has. The Virtual Spreadsheet feature won't be able to save any changes without this mode.</p>
+<p>The <code>raw</code> mode is used by the <code>/api/v1/raw</code> endpoint. When a client requests data via <code>/api/v1/raw</code>, the form must have a <code>raw</code> mode defined, and the current user must have access permission as expressed in the <code>@formula</code> of the <code>raw</code> mode definition. Because this mode can expose all fields without transformation, it is typically restricted to administrators or support users only.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><code>raw</code> mode returns all fields without translation or adjustment.</p>
+<p><code>raw</code> returns all fields exactly as stored, without translation or adjustment.</p>
 </div>
+<h2 id="vsheet">vsheet</h2>
+<p>The <code>vsheet</code> mode is used by the <a href="../../howto/production/virtualsheet.html">Virtual Spreadsheet</a> feature. It must include all fields on the form because it allows view-like editing where changes are saved back to documents. If a <code>vsheet</code> mode is missing, the Virtual Spreadsheet functionality cannot save edits.</p>
+<!--
+Use form modes to specify what data can be read or written to documents using the form name in their form item. While you are free to pick any name (lower case, no special characters), there are names with a special purpose, namely:
+
+## default
+
+The `default` mode is, as the name implies, the default when creating or reading documents and in the absence of an explicitly specified `mode=` parameter
+
+## dql
+
+When data is queried by [DQL](https://help.hcltechsw.com/dom_designer/12.0.1/basic/dql_overview.html), forms need a `dql` mode to return values. The mode specified what data gets returned. If a form doesn't have a `dql` mode, no data will be returned for that form in a DQL query.
+
+## odata
+
+The `odata` mode lets you define the data that comes through OData endpoints. The API support the OData standard [Open Data Protocol(OData)](https://www.odata.org). If a form doesn't have an `odata` mode, then an OData won't return any data for that form.
+
+## raw
+
+Needed for `/api/v1/raw` endpoint. The endpoint `/api/v1/raw` will only return data when the mode `raw` exists for the form requested and the user has the permission, expressed in the @formula of the raw mode definition. Typically you want to restrict raw access to admin and support users.
+
+## vsheet
+
+The [Virtual Spreadsheet feature](../../howto/production/virtualsheet.md) uses the `vsheet` mode to save the changes made on each view entry to its respective document. It's recommended that this mode contains all fields that the form has. The Virtual Spreadsheet feature won't be able to save any changes without this mode.
+
+!!!note
+    `raw` mode returns all fields without translation or adjustment.
+
+-->
 
 
 
@@ -7553,7 +7639,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 19, 2024 12:14:07 UTC">June 19, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 18, 2026 17:08:06 UTC">February 18, 2026</span>
   </span>
 
     

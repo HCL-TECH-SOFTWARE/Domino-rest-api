@@ -27,7 +27,7 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -504,6 +504,8 @@
       
         
       
+        
+      
     
     
     
@@ -554,6 +556,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/v1.1.7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domino REST API v1.1.7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -3530,7 +3560,7 @@
   <span class="md-ellipsis">
     
   
-    Set up external IdP for Office Round Trip Experience
+    Set up an external IdP for the Office Round Trip Experience
   
 
     
@@ -3558,7 +3588,7 @@
   <span class="md-ellipsis">
     
   
-    Set up external IdP for Admin UI IdP
+    Set up an external IdP for Admin UI login
   
 
     
@@ -3591,6 +3621,8 @@
       
         
           
+        
+      
         
       
         
@@ -3696,6 +3728,34 @@
     
   
     Change file size limit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/production/timeout.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Change timeout for retrieving data from Domino
   
 
     
@@ -4505,6 +4565,8 @@
       
         
       
+        
+      
     
     
     
@@ -4768,6 +4830,34 @@
     
   
     Use Domino Console
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/management/encryptionops.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use Management console for encryption operations
   
 
     
@@ -6272,7 +6362,7 @@
   <span class="md-ellipsis">
     
   
-    Reserved Form mode names
+    Reserved Form Mode names
   
 
     
@@ -6297,8 +6387,6 @@
       
         
           
-        
-      
         
       
     
@@ -6333,11 +6421,6 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_6_9_10" id="__nav_6_9_10_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
           </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_9_10_label" aria-expanded="false">
@@ -6351,34 +6434,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../references/usingdominorestapi/richtext/conversion.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Conversion table
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
               
             
           </ul>
@@ -7635,7 +7690,7 @@
 <p>The approval extension implements a simplified approval system that works with any compliant database. A database is compliant when it has a view <code>pendingApprovalsByApprover</code> and a set of specified items in the document to be approved.</p>
 <p>A base function is implemented to give you an idea. The example can be easily extended to add notification, communication with external systems, etc. You can even implement approvals for users who don't have write access to the document.</p>
 <div class="admonition note">
-<p class="admonition-title">JSON and file naming</p>
+<p class="admonition-title">Note</p>
 <ul>
 <li>The OpenApi's 3.0.x JSON format is the only supported format. YAML or 3.1.x are not supported.</li>
 <li>The name of the file has to start with <code>openapi.</code> and end with <code>.json</code>.</li>
@@ -7646,8 +7701,8 @@
 <h3 id="data-formats">Data formats</h3>
 <p>In a typical development cycle, you would start with the URLs and leave the data format unspecified a JSON object for an initial iteration. In a later iteration, the schema gets specified in detail and locked down.</p>
 <div class="admonition note">
-<p class="admonition-title">Iterate your design</p>
-<p>OpenAPI does NOT require big upfront design, but allows for convenient ever refining iterations.</p>
+<p class="admonition-title">Note</p>
+<p>OpenAPI does NOT require extensive upfront design, but supports convenient and ever refining iterations.</p>
 </div>
 <p>For this tutorial, the final structure is presented.</p>
 <h4 id="pending-approvals">Pending approvals</h4>
@@ -7815,7 +7870,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 12, 2025 12:17:41 UTC">September 12, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 27, 2026 15:15:05 UTC">January 27, 2026</span>
   </span>
 
     

@@ -14,24 +14,24 @@
       
       
       
-        <link rel="canonical" href="https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/incoming/text-html%2Bplain.html">
+        <link rel="canonical" href="https://opensource.hcltechsw.com/Domino-rest-api/references/usingdominorestapi/richtext/incoming/text-markdown-plain-html.html">
       
       
-        <link rel="prev" href="multipart-mixed.html">
+        <link rel="prev" href="text-markdown-html.html">
       
       
-        <link rel="next" href="text-html.html">
+        <link rel="next" href="text-markdown-plain.html">
       
       
         
       
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Example: Incoming text/html + plain - HCL Domino REST API Documentation</title>
+        <title>Example: Incoming text/markdown + plain + html - HCL Domino REST API Documentation</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#example-incoming-texthtml-plain" class="md-skip">
+        <a href="#example-incoming-textmarkdown-plain-html" class="md-skip">
           Skip to content
         </a>
       
@@ -138,7 +138,7 @@
             <div class="md-banner__inner md-grid md-typeset">
               
   You're not viewing the latest version.
-  <a href="../../../../../latest/references/usingdominorestapi/richtext/incoming/text-html%2Bplain.html">
+  <a href="../../../../../latest/references/usingdominorestapi/richtext/incoming/text-markdown-plain-html.html">
     <strong>Click here to go to latest.</strong>
   </a> 
 
@@ -174,7 +174,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Example: Incoming text/html + plain
+              Example: Incoming text/markdown + plain + html
             
           </span>
         </div>
@@ -504,6 +504,8 @@
       
         
       
+        
+      
     
     
     
@@ -554,6 +556,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../whatsnew/v1.1.7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domino REST API v1.1.7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -3363,7 +3393,7 @@
   <span class="md-ellipsis">
     
   
-    Set up external IdP for Office Round Trip Experience
+    Set up an external IdP for the Office Round Trip Experience
   
 
     
@@ -3391,7 +3421,7 @@
   <span class="md-ellipsis">
     
   
-    Set up external IdP for Admin UI IdP
+    Set up an external IdP for Admin UI login
   
 
     
@@ -3424,6 +3454,8 @@
       
         
           
+        
+      
         
       
         
@@ -3529,6 +3561,34 @@
     
   
     Change file size limit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../howto/production/timeout.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Change timeout for retrieving data from Domino
   
 
     
@@ -4338,6 +4398,8 @@
       
         
       
+        
+      
     
     
     
@@ -4601,6 +4663,34 @@
     
   
     Use Domino Console
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../howto/management/encryptionops.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use Management console for encryption operations
   
 
     
@@ -6112,7 +6202,7 @@
   <span class="md-ellipsis">
     
   
-    Reserved Form mode names
+    Reserved Form Mode names
   
 
     
@@ -6139,8 +6229,6 @@
       
         
           
-        
-      
         
       
     
@@ -6175,11 +6263,6 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_6_9_10" id="__nav_6_9_10_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
           </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_9_10_label" aria-expanded="true">
@@ -6193,34 +6276,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../conversion.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Conversion table
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
               
             
           </ul>
@@ -7352,26 +7407,35 @@
   
 
 
-<h1 id="example-incoming-texthtml-plain">Example: Incoming text/html + plain</h1>
-<p>Let's say you want to save the following <code>text/html</code> content in a <code>richtext</code> field:</p>
-<div class="highlight"><pre><span></span><code>&lt;b&gt;this is the body text&lt;/b&gt;
+<h1 id="example-incoming-textmarkdown-plain-html">Example: Incoming text/markdown + plain + html</h1>
+<p>Let's say you want to save the following <code>text/markdown</code> content in a <code>richtext</code> field:</p>
+<div class="highlight"><pre><span></span><code>**this is the body text**
 </code></pre></div>
-<p>Additionally, let's say you also want to create a <code>plain</code> alternative of the <code>text/html</code> content. You then use the following Rich Text JSON:</p>
+<p>Additionally, let's say you also want to create a <code>plain</code> and <code>html</code> alternative of the <code>text/markdown</code> content. You then use the following Rich Text JSON:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text/html&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text/markdown&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;encoding&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PLAIN&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;b&gt;this is the body text&lt;/b&gt;&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;createAdditional&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;plain&quot;</span>
+<span class="w">  </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;**this is the body text**&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;createAdditional&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;plain,html&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Multiple entries for <code>createAdditional</code> should be comma-separated.</p>
+</div>
 <p>This saves a <code>multipart/alternative</code> MIME:</p>
 <div class="highlight"><pre><span></span><code>MIME-Version: 1.0
 Content-Type: multipart/alternative; 
   boundary=&quot;XXXXboundary text&quot;
 --XXXXboundary text
+Content-Type: text/markdown
+
+**this is the body text**
+--XXXXboundary text
 Content-Type: text/html
 
-&lt;b&gt;this is the body text&lt;/b&gt;
+&lt;p&gt;&lt;strong&gt;this is the body text&lt;/strong&gt;&lt;/p&gt;
+
 --XXXXboundary text
 Content-Type: text/plain
 

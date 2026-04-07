@@ -162,6 +162,14 @@ p a img:hover{
   details.note{
     font-size: medium;
   }
+
+  details.tip{
+    font-size: medium;
+  }
+
+  details.example{
+    font-size: medium;
+  }
   /*
   the following css is for making the link in the table bold when hovered
   */

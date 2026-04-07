@@ -27,7 +27,7 @@
       
       
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -504,6 +504,8 @@
       
         
       
+        
+      
     
     
     
@@ -554,6 +556,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../whatsnew/v1.1.7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domino REST API v1.1.7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -3363,7 +3393,7 @@
   <span class="md-ellipsis">
     
   
-    Set up external IdP for Office Round Trip Experience
+    Set up an external IdP for the Office Round Trip Experience
   
 
     
@@ -3391,7 +3421,7 @@
   <span class="md-ellipsis">
     
   
-    Set up external IdP for Admin UI IdP
+    Set up an external IdP for Admin UI login
   
 
     
@@ -3424,6 +3454,8 @@
       
         
           
+        
+      
         
       
         
@@ -3529,6 +3561,34 @@
     
   
     Change file size limit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/production/timeout.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Change timeout for retrieving data from Domino
   
 
     
@@ -4338,6 +4398,8 @@
       
         
       
+        
+      
     
     
     
@@ -4601,6 +4663,34 @@
     
   
     Use Domino Console
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/management/encryptionops.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use Management console for encryption operations
   
 
     
@@ -6110,7 +6200,7 @@
   <span class="md-ellipsis">
     
   
-    Reserved Form mode names
+    Reserved Form Mode names
   
 
     
@@ -6135,8 +6225,6 @@
       
         
           
-        
-      
         
       
     
@@ -6171,11 +6259,6 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_6_9_10" id="__nav_6_9_10_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
           </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_9_10_label" aria-expanded="false">
@@ -6189,34 +6272,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="usingdominorestapi/richtext/conversion.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Conversion table
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
               
             
           </ul>
@@ -7147,37 +7202,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#extend-domino-rest-api-rich-text" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Extend Domino REST API Rich Text
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#outgoing-rich-text-processor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outgoing Rich Text processor
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#built-in-rich-text-processors" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#incoming-rich-text-processor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Built-in Rich Text processors
+        Incoming Rich Text processor
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#set-up-extending-rich-text" class="md-nav__link">
+  <a href="#create-a-rich-text-extension" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Set up extending Rich Text
+        Create a Rich Text extension
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Set up extending Rich Text">
+    <nav class="md-nav" aria-label="Create a Rich Text extension">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -7191,130 +7263,62 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#create-a-rich-text-extension-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a Rich Text extension project
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-your-rich-text-processor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create your Rich Text processor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create your Rich Text processor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-incoming-rich-text-processor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create incoming Rich Text processor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-outgoing-rich-text-processor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create outgoing Rich Text processor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#extend-rich-text" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Extend Rich Text
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Extend Rich Text">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#set-up-rich-text-extension-project" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Set up Rich Text extension project
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#creating-your-own-rich-text-processors" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Creating your own Rich Text processors
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Creating your own Rich Text processors">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#incoming-rich-text-processor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Incoming Rich Text processor
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Incoming Rich Text processor">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#built-in-incoming-rich-text-processors" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Built-in incoming Rich Text processors
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#creating-your-own-incoming-rich-text-processor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Creating your own incoming Rich Text processor
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#outgoing-rich-text-processor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Outgoing Rich Text processor
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Outgoing Rich Text processor">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#built-in-outgoing-rich-text-processors" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Built-in outgoing Rich Text processors
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#creating-your-own-outgoing-rich-text-processor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Creating your own outgoing Rich Text processor
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#apply-the-rich-text-extension" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7324,24 +7328,24 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#try-it-out" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#test-your-rich-text-extension" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Try it out
+        Test your Rich Text extension
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Try it out">
+    <nav class="md-nav" aria-label="Test your Rich Text extension">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#try-the-incoming-rich-text-processor" class="md-nav__link">
+  <a href="#test-your-incoming-rich-text-processor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Try the incoming Rich Text processor
+        Test your incoming Rich Text processor
       
     </span>
   </a>
@@ -7349,18 +7353,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#try-the-outgoing-rich-text-processor" class="md-nav__link">
+  <a href="#test-your-outgoing-rich-text-processor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Try the outgoing Rich Text processor
+        Test your outgoing Rich Text processor
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -7609,37 +7608,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#extend-domino-rest-api-rich-text" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Extend Domino REST API Rich Text
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#outgoing-rich-text-processor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outgoing Rich Text processor
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#built-in-rich-text-processors" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#incoming-rich-text-processor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Built-in Rich Text processors
+        Incoming Rich Text processor
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#set-up-extending-rich-text" class="md-nav__link">
+  <a href="#create-a-rich-text-extension" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Set up extending Rich Text
+        Create a Rich Text extension
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Set up extending Rich Text">
+    <nav class="md-nav" aria-label="Create a Rich Text extension">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -7653,130 +7669,62 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#create-a-rich-text-extension-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a Rich Text extension project
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-your-rich-text-processor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create your Rich Text processor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create your Rich Text processor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-incoming-rich-text-processor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create incoming Rich Text processor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-outgoing-rich-text-processor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create outgoing Rich Text processor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#extend-rich-text" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Extend Rich Text
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Extend Rich Text">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#set-up-rich-text-extension-project" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Set up Rich Text extension project
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#creating-your-own-rich-text-processors" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Creating your own Rich Text processors
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Creating your own Rich Text processors">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#incoming-rich-text-processor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Incoming Rich Text processor
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Incoming Rich Text processor">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#built-in-incoming-rich-text-processors" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Built-in incoming Rich Text processors
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#creating-your-own-incoming-rich-text-processor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Creating your own incoming Rich Text processor
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#outgoing-rich-text-processor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Outgoing Rich Text processor
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Outgoing Rich Text processor">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#built-in-outgoing-rich-text-processors" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Built-in outgoing Rich Text processors
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#creating-your-own-outgoing-rich-text-processor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Creating your own outgoing Rich Text processor
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#apply-the-rich-text-extension" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7786,24 +7734,24 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#try-it-out" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#test-your-rich-text-extension" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Try it out
+        Test your Rich Text extension
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Try it out">
+    <nav class="md-nav" aria-label="Test your Rich Text extension">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#try-the-incoming-rich-text-processor" class="md-nav__link">
+  <a href="#test-your-incoming-rich-text-processor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Try the incoming Rich Text processor
+        Test your incoming Rich Text processor
       
     </span>
   </a>
@@ -7811,18 +7759,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#try-the-outgoing-rich-text-processor" class="md-nav__link">
+  <a href="#test-your-outgoing-rich-text-processor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Try the outgoing Rich Text processor
+        Test your outgoing Rich Text processor
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -7852,84 +7795,360 @@
 
 
 <h1 id="rich-text-extension">Rich Text extension</h1>
-<p>Rich Text extension is for customers or users that prefer to have or use their own implementation of Rich Text processor. Users will be able to adjust it to meet their own needs, resulting in a better representation of their Rich Text.</p>
-<h2 id="extend-domino-rest-api-rich-text">Extend Domino REST API Rich Text</h2>
-<p>Starting Domino REST API version <code>1.0.12</code>, you can now add Rich Text processors for Domino REST API.</p>
-<h2 id="built-in-rich-text-processors">Built-in Rich Text processors</h2>
-<p>There has been no change for the existing processors, namely:</p>
+<h2 id="overview">Overview</h2>
+<p>The Rich Text extension enables you to implement custom Rich Text processors. This allows customization to meet specific needs and improves how Rich Text is represented. <strong>Starting with Domino REST API version 1.0.12</strong>, you can add Rich Text processors for the Domino REST API.</p>
+<h3 id="outgoing-rich-text-processor">Outgoing Rich Text processor</h3>
+<p>The outgoing Rich Text processor handles how saved data in a <code>richtext</code> field appears when returned as a response to a <code>GET</code> request. The value of the <code>richTextAs</code> query parameter is used to determine the outgoing Rich Text processor to use. The Domino REST API includes these built-in outgoing Rich Text processors:</p>
 <ul>
 <li>mime</li>
 <li>html</li>
 <li>markdown</li>
 <li>plain</li>
 </ul>
-<h2 id="set-up-extending-rich-text">Set up extending Rich Text</h2>
-<p>There are a number of things you should set up before you can create an extension.</p>
+<h3 id="incoming-rich-text-processor">Incoming Rich Text processor</h3>
+<p>The incoming Rich Text processor handles how incoming Rich Text JSON is saved in the <code>richtext</code> field. The value of the <code>type</code> property in the Rich Text JSON is used to determine the incoming Rich Text processor to use. The Domino REST API includes these built-in incoming Rich Text processors:</p>
+<ul>
+<li>multipart/mixed <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
+<li>text/plain</li>
+<li>text/markdown</li>
+<li>text/html</li>
+</ul>
+<h2 id="create-a-rich-text-extension">Create a Rich Text extension</h2>
 <h3 id="install-keep-core-and-extension-jars">Install KEEP core and extension JARs</h3>
+<p>Before creating a Rich Text extension, install <strong>KEEP Core</strong> and extension JARs to your local Maven repository.</p>
 <ol>
 <li>Install Domino REST API using the Domino REST API installer.</li>
-<li>Find <code>keep-core-&lt;version&gt;.jar</code> and <code>keep-extension-&lt;version&gt;.jar</code> in the <strong>Domino REST API install directory</strong> and do a <strong>Maven</strong> install using the following command:</li>
-</ol>
+<li>Locate <code>keep-core-&lt;version&gt;.jar</code> and <code>keep-extension-&lt;version&gt;.jar</code> in the Domino REST API install directory.</li>
+<li>
+<p>Install both JARs to you local Maven M2 repository using the following commands:</p>
 <div class="highlight"><pre><span></span><code>mvn<span class="w"> </span>install:install-file<span class="w"> </span>-Dfile<span class="o">=</span>&lt;path-to-keep-core-jar&gt;
 mvn<span class="w"> </span>install:install-file<span class="w"> </span>-Dfile<span class="o">=</span>&lt;path-to-keep-extension-jar&gt;
 </code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Replace <code>&lt;path-to-keep-core-jar&gt;</code> with the path to <code>keep-core-&lt;version&gt;.jar</code> and <code>&lt;path-to-keep-extension-jar&gt;</code> with the path to <code>keep-extension-&lt;version&gt;.jar</code>.</p>
+</div>
+</li>
+</ol>
 <p>This adds <strong>KEEP Core</strong> and the extension module to your local Maven M2 repository.</p>
-<h2 id="extend-rich-text">Extend Rich Text</h2>
-<h3 id="set-up-rich-text-extension-project">Set up Rich Text extension project</h3>
+<h3 id="create-a-rich-text-extension-project">Create a Rich Text extension project</h3>
+<p>Create a Maven project for your Rich Text extension.</p>
 <ol>
 <li>
-<p>Create a new project for the Rich Text extension by creating a new Maven project using the following command:</p>
+<p>Run the following command to create a new Maven project:</p>
 <div class="highlight"><pre><span></span><code>mvn<span class="w"> </span>archetype:generate<span class="w"> </span>-DgroupId<span class="o">=</span>com.example<span class="w"> </span>-DartifactId<span class="o">=</span>richtext-extension<span class="w"> </span>-DarchetypeArtifactId<span class="o">=</span>maven-archetype-quickstart<span class="w"> </span>-DarchetypeVersion<span class="o">=</span><span class="m">1</span>.4<span class="w"> </span>-DinteractiveMode<span class="o">=</span><span class="nb">false</span>
 </code></pre></div>
-<p>The command generates a directory called <code>richtext-extension</code>, including a <code>src</code> folder and a <code>pom.xml</code> file.</p>
+<p>This creates the <code>richtext-extension</code> directory that includes a <code>src</code> folder and a <code>pom.xml</code> file.</p>
 </li>
 <li>
-<p>Open the <code>pom.xml</code> file and change the settings of <code>maven.compiler.source</code> and <code>maven.compiler.target</code> to <code>1.8</code> for Domino r12. For Domino r14, change it to <code>17</code>.</p>
+<p>Update the <code>pom.xml</code> file.</p>
+<ol>
+<li>
+<p>Set <code>maven.compiler.source</code> and <code>maven.compiler.target</code> to:</p>
+<ul>
+<li><code>1.8</code> for Domino r12</li>
+<li><code>17</code> for Domino r14</li>
+</ul>
 </li>
 <li>
-<p>Under the dependencies section, include the extension JAR you installed earlier:</p>
+<p>Under <code>dependency</code>, include the extension JAR you installed earlier:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">&lt;dependency&gt;</span>
 <span class="w">  </span><span class="nt">&lt;groupId&gt;</span>com.hcl.domino.keep<span class="nt">&lt;/groupId&gt;</span>
 <span class="w">  </span><span class="nt">&lt;artifactId&gt;</span>keep-extension<span class="nt">&lt;/artifactId&gt;</span>
-<span class="w">  </span><span class="nt">&lt;version&gt;</span>1.33.0<span class="nt">&lt;/version&gt;</span><span class="w"> </span><span class="cm">&lt;!-- your Keep version --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;version&gt;</span>1.33.0<span class="nt">&lt;/version&gt;</span><span class="w"> </span><span class="cm">&lt;!-- your Domino REST API version --&gt;</span>
 <span class="w">  </span><span class="nt">&lt;scope&gt;</span>provided<span class="nt">&lt;/scope&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span>
 </code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>
+<p>The <code>scope</code> is set to <code>provided</code> so that the dependency is not compiled with your Rich Text extension, as you will be putting the extension JAR alongside the Domino REST API JARs. The Domino REST API JARs contain all the dependencies that your extension JAR needs. </p>
 </li>
 <li>
-<p>Save the <code>pom.xml</code> after adding the dependency.</p>
+<p>While Domino REST API has many transitive dependencies, only those directly listed in <code>keep-extension</code> are safe to rely on. Others may change between versions.</p>
+</li>
+</ul>
+</div>
 </li>
 </ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The <strong><code>scope</code></strong> is set to <strong><code>provided</code></strong> because you don't want the dependency to be compiled together with your Rich Text extension as you will be putting the extension JAR alongside the DRAPI JARs. The DRAPI JARs contain all the dependencies that your extension JAR needs.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Though DRAPI has many transitive dependencies, those listed in the <code>keep-extension</code> module directly are considered safe to rely on. Others may change in any version.</p>
-</div>
-<h3 id="creating-your-own-rich-text-processors">Creating your own Rich Text processors</h3>
-<p>There are 2 different interfaces that you can implement to create your own Rich Text processor, <code>IncomingRichtextProcessor</code> and <code>OutgoingRichtextProcessor</code>.</p>
-<h4 id="incoming-rich-text-processor">Incoming Rich Text processor</h4>
-<p>This processes how the incoming Rich Text JSON is saved in the <code>richtext</code> field. This processor makes use of the <code>type</code> property in Rich Text JSON to determine what incoming Rich Text processor to use.</p>
-<h5 id="built-in-incoming-rich-text-processors">Built-in incoming Rich Text processors</h5>
-<p>There are four built-in incoming Rich Text processors:</p>
+</li>
+<li>
+<p>Save your changes.</p>
+</li>
+</ol>
+<h3 id="create-your-rich-text-processor">Create your Rich Text processor</h3>
+<p>You can implement two interfaces, <code>IncomingRichtextProcessor</code> and <code>OutgoingRichtextProcessor</code>, to create your own Rich Text processor.</p>
+<details class="info">
+<summary><code>IncomingRichtextProcessor</code> methods</summary>
+<p>The <code>IncomingRichtextProcessor</code> has three methods:</p>
 <ul>
-<li><code>multipart/mixed</code> - used by default if <code>type</code> in Rich Text JSON doesn't equate to any existing Rich Text processor.</li>
-<li><code>text/plain</code></li>
-<li><code>text/markdown</code></li>
-<li><code>text/html</code></li>
+<li><code>getProcessorName</code> returns a <em>string</em> representing the name of the incoming Rich Text processor. It checks the name of the incoming Rich Text processor against the value of the <code>type</code> property in the Rich Text JSON to determine if the incoming Rich Text processor should be used. </li>
+<li><code>process</code> checks if the incoming content of the Rich Text JSON is MIME, and returns it as a <code>Buffer</code> if it is. If it is not, it constructs a MIME using the Rich Text JSON properties and returns the constructed MIME as a <code>Buffer</code>. You can override this method to control how you want to save the incoming Rich Text.</li>
+<li><code>getPriority</code>, by default, returns <code>0</code>. You can override this method to set which incoming Rich Text processor to use when multiple processors share the same name. The higher the set value, the higher the priority. </li>
 </ul>
-<h5 id="creating-your-own-incoming-rich-text-processor">Creating your own incoming Rich Text processor</h5>
+</details>
+<details class="info">
+<summary><code>OutgoingRichtextProcessor</code> methods</summary>
+<p>The <code>OutgoingRichtextProcessor</code> has three methods:</p>
+<ul>
+<li>
+<p><code>getProcessorName</code> returns a <em>string</em> representing the name of the outgoing Rich Text processor. It checks the name of the outgoing Rich Text processor against the value of the <code>richTextAs</code> query parameter of the GET request to determine if the outgoing Rich Text processor should be used.</p>
+</li>
+<li>
+<p><code>process</code> is an abstract method that can be overwritten to specify how to represent the Rich Text content in the response.</p>
+</li>
+<li>
+<p><code>getPriority</code>, by default, returns 0. You can override this method to set which outgoing Rich Text processor to use when multiple processors share the same name. The higher the set value, the higher the priority.</p>
+</li>
+</ul>
+</details>
+<h4 id="create-incoming-rich-text-processor">Create incoming Rich Text processor</h4>
 <ol>
 <li>
 <p>Create a class that implements <code>IncomingRichtextProcessor</code>.</p>
-<p>Currently, <code>IncomingRichtextProcessor</code> has three methods. Two of which have default implementations.</p>
-<p><code>getProcessorName</code> is an abstract method that should return a <code>String</code> that represents the name of the incoming Rich Text processor. It checks this against the <code>type</code> property of a Rich Text JSON to determine if this incoming processor should be used.</p>
-<p><code>process</code> is a method that has a default implementation. By default, it checks if the incoming <code>content</code> of the Rich Text JSON looks like a mime and directly returns it as a <code>Buffer</code>. If not, it manually constructs a mime using the Rich Text JSON properties, and return the constructed mime as a <code>Buffer</code>. You are also free to override this method and control how you want to save the incoming Rich Text.</p>
-<p><code>getPriority</code> is a default method that returns <code>0</code>. You can leave this method be, unless you have an incoming Rich Text processor that has the same return value of <code>getProcessorName</code> with other existing incoming Rich Text processors. The higher the number, the higher the priority.</p>
-<p>An example incoming Rich Text processor will be:</p>
+<details class="example">
+<summary>Example</summary>
+<p>The following code shows an example Java class that implements <code>IncomingRichtextProcessor</code> interface to create an incoming Rich Text processor. This custom processor overrides the normal processing of incoming rich text JSON data by converting the received Rich Text JSON content and saves "Hi!" as a text/plain MIME part in the <code>richtext</code> field.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.example</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Optional</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Set</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.hcl.domino.keep.info.richtext.CreateAdditional</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.hcl.domino.keep.info.richtext.RichtextMimeHelper</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.hcl.domino.keep.info.richtext.spi.IncomingRichtextProcessor</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">io.vertx.core.buffer.Buffer</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">io.vertx.core.json.JsonObject</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Always saves &quot;Hi!&quot; as a text/plain mime regardless of what&#39;s inside the Rich Text JSON</span>
+<span class="cm">*/</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AlwaysHiIncomingRichtextProcessor</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">IncomingRichtextProcessor</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">  </span><span class="nd">@Override</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getProcessorName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;alwayshi&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nd">@Override</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">Optional</span><span class="o">&lt;</span><span class="n">Buffer</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">process</span><span class="p">(</span><span class="n">JsonObject</span><span class="w"> </span><span class="n">richJson</span><span class="p">,</span><span class="w"> </span><span class="kt">byte</span><span class="o">[]</span><span class="w"> </span><span class="n">contentBytes</span><span class="p">,</span>
+<span class="w">      </span><span class="kd">final</span><span class="w"> </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">CreateAdditional</span><span class="o">&gt;</span><span class="w"> </span><span class="n">createAdditional</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="n">Optional</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RichtextMimeHelper</span><span class="p">.</span><span class="na">plain2mime</span><span class="p">(</span><span class="s">&quot;Hi!&quot;</span><span class="p">.</span><span class="na">getBytes</span><span class="p">());</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">mime</span><span class="p">.</span><span class="na">isPresent</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">Optional</span><span class="p">.</span><span class="na">empty</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">Optional</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">Buffer</span><span class="p">.</span><span class="na">buffer</span><span class="p">(</span><span class="n">mime</span><span class="p">.</span><span class="na">get</span><span class="p">()));</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+</details>
+</li>
+<li>
+<p>Create a file in the <code>src/main/resources/META-INF/services</code> directory named <code>com.hcl.domino.keep.info.richtext.spi.IncomingRichtextProcessor</code>.</p>
+</li>
+<li>
+<p>Edit the created file to include all your created Rich Text processors. For example:</p>
+<div class="highlight"><pre><span></span><code>com.example.AlwaysHiIncomingRichtextProcessor
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>All classes declared in this file must exist and implement the <code>IncomingRichtextProcessor</code> interface. Otherwise, Domino REST API will fail to load them, causing an error.</p>
+</div>
+</li>
+</ol>
+<h4 id="create-outgoing-rich-text-processor">Create outgoing Rich Text processor</h4>
+<ol>
+<li>
+<p>Create a class that implements <code>OutgoingRichtextProcessor</code>.</p>
+<details class="example">
+<summary>Example</summary>
+<p>The following code shows an example Java class that implements the <code>OutgoingRichtextProcessor</code> to create a custom outgoing Rich Text processor. This custom processor intercepts rich text items from Domino documents and always returns a fixed JSON response containing “Hello!” as plain text, ignoring the actual document content. </p>
+<div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.example</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.hcl.domino.DominoClient</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.hcl.domino.data.Document</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.hcl.domino.keep.info.richtext.spi.OutgoingRichtextProcessor</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">io.vertx.core.json.JsonObject</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Always returns &quot;Hello!&quot; in the content of the Rich Text JSON response.</span>
+<span class="cm">*/</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AlwaysHelloRichtextProcessor</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">OutgoingRichtextProcessor</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">  </span><span class="nd">@Override</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getProcessorName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;alwayshello&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nd">@Override</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">JsonObject</span><span class="w"> </span><span class="nf">process</span><span class="p">(</span><span class="n">DominoClient</span><span class="w"> </span><span class="n">client</span><span class="p">,</span><span class="w"> </span><span class="n">Document</span><span class="w"> </span><span class="n">doc</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">itemName</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JsonObject</span><span class="p">()</span>
+<span class="w">        </span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;text/plain&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;encoding&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;plain&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;content&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hello!&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+</details>
+</li>
+<li>
+<p>Create a file within the <code>src/main/resources/META-INF/services</code> directory named <code>com.hcl.domino.keep.info.richtext.spi.OutgoingRichtextProcessor</code>.</p>
+</li>
+<li>
+<p>Edit the created file to include all your created Rich Text processors. For example:</p>
+<div class="highlight"><pre><span></span><code>com.example.AlwaysHelloRichtextProcessor
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>All classes declared in this file must exist and implement the <code>OutgoingRichtextProcessor</code> interface. Otherwise, Domino REST API will fail to load them, causing an error.</p>
+</div>
+</li>
+</ol>
+<h2 id="apply-the-rich-text-extension">Apply the Rich Text extension</h2>
+<p>Once you have created your Rich Text extension, you now need to build and deploy it.</p>
+<ol>
+<li>
+<p>Build the JAR file for the Rich Text extension by running the following command in your project root:</p>
+<div class="highlight"><pre><span></span><code>mvn<span class="w"> </span>clean<span class="w"> </span>package
+</code></pre></div>
+<p>This generates <code>richtext-extension-1.0-SNAPSHOT.jar</code> in the <code>target/</code> directory.</p>
+</li>
+<li>
+<p>Copy the generated JAR file to your Domino REST API installation directory, where the KEEP JARs are located.</p>
+</li>
+</ol>
+<h2 id="test-your-rich-text-extension">Test your Rich Text extension</h2>
+<p>After building and deploying your Rich Text extension, you can now test it.</p>
+<h3 id="test-your-incoming-rich-text-processor">Test your incoming Rich Text processor</h3>
+<p>Create a form with a <code>richtext</code> field and ensure the value of the type property matches the name of your incoming Rich Text processor. As shown in the following example, the <code>richtext</code> field is <code>rtfield</code> and the value of the <code>type</code> property is set to <code>alwayshi</code>, which is returned by the <code>getProcessorName()</code> method of the example incoming Rich Text processor.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="err">...</span>
+<span class="w">  </span><span class="nt">&quot;Form&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SampleForm&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;rtField&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;alwayshi&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;encoding&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;plain&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;my content&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="err">...</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Before executing the request, make sure to set the value of the <code>richTextAs</code> query parameter to <code>plain</code>, so you can verify the value of the <code>richtext</code> field in plain text. After executing the request, you should get the following JSON for the <code>richtext</code> field:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text/plain&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;encoding&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;plain&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hi!&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="test-your-outgoing-rich-text-processor">Test your outgoing Rich Text processor</h3>
+<p>To test your outgoing Rich Text processor, you can call any API that has a <code>richTextAs</code> query parameter. You just need to make sure that the value of the <code>richTextAs</code> query parameter is set to the name of your processor.</p>
+<p>For example, using <code>AlwaysHelloRichtextProcessor</code> whose <code>getProcessorName()</code> method returns <code>alwayshello</code>, and performing an API call with <code>richTextAs=alwayshello</code>, you should get the following JSON value for the <code>richtext</code> fields:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text/plain&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;encoding&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;plain&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hello!&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<!--
+Rich Text extension is for customers or users that prefer to have or use their own implementation of Rich Text processor. Users can customize it to better represent their Rich Text content.
+
+## Extend Domino REST API Rich Text
+
+Starting Domino REST API version `1.0.12`, you can now add Rich Text processors for Domino REST API.
+
+## Built-in Rich Text processors
+
+The following existing processors have been unchanged:
+
+- mime
+- html
+- markdown
+- plain
+
+## Set up extending Rich Text
+
+There are a number of things you should set up before you can create an extension.
+
+### Install KEEP core and extension JARs
+
+1. Install Domino REST API using the Domino REST API installer.
+2. Find `keep-core-<version>.jar` and `keep-extension-<version>.jar` in the Domino REST API install directory, and do a **Maven** install using the following command:
+
+  <div class="highlight"><pre><span></span><code>mvn<span class="w"> </span>install:install-file<span class="w"> </span>-Dfile<span class="o">=</span>&lt;path-to-keep-core-jar&gt;
+mvn<span class="w"> </span>install:install-file<span class="w"> </span>-Dfile<span class="o">=</span>&lt;path-to-keep-extension-jar&gt;
+</code></pre></div>
+
+This adds **KEEP Core** and the extension module to your local Maven M2 repository.
+
+## Extend Rich Text
+
+### Set up Rich Text extension project
+
+1. Create a new project for the Rich Text extension by creating a new Maven project using the following command:
+
+    <div class="highlight"><pre><span></span><code>mvn<span class="w"> </span>archetype:generate<span class="w"> </span>-DgroupId<span class="o">=</span>com.example<span class="w"> </span>-DartifactId<span class="o">=</span>richtext-extension<span class="w"> </span>-DarchetypeArtifactId<span class="o">=</span>maven-archetype-quickstart<span class="w"> </span>-DarchetypeVersion<span class="o">=</span><span class="m">1</span>.4<span class="w"> </span>-DinteractiveMode<span class="o">=</span><span class="nb">false</span>
+</code></pre></div>
+
+    The command generates a directory called `richtext-extension`, including a `src` folder and a `pom.xml` file.
+
+2. Open the `pom.xml` file and change the settings of `maven.compiler.source` and `maven.compiler.target` to `1.8` for Domino r12. For Domino r14, change it to `17`.
+3. Under the dependencies section, include the extension JAR you installed earlier:
+
+    <div class="highlight"><pre><span></span><code><span class="nt">&lt;dependency&gt;</span>
+<span class="w">  </span><span class="nt">&lt;groupId&gt;</span>com.hcl.domino.keep<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">  </span><span class="nt">&lt;artifactId&gt;</span>keep-extension<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">  </span><span class="nt">&lt;version&gt;</span>1.33.0<span class="nt">&lt;/version&gt;</span><span class="w"> </span>--<span class="w"> </span>your<span class="w"> </span>Keep<span class="w"> </span>version<span class="w"> </span>--
+<span class="w">  </span><span class="nt">&lt;scope&gt;</span>provided<span class="nt">&lt;/scope&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div>
+
+4. Save the `pom.xml` after adding the dependency.
+
+!!! note
+
+    - The **`scope`** is set to **`provided`** because you don't want the dependency to be compiled together with your Rich Text extension as you will be putting the extension JAR alongside the Domino REST API JAR files. The Domino REST API JAR files contain all the dependencies that your extension JAR needs.
+
+    - Though Domino REST API has many transitive dependencies, those listed in the `keep-extension` module directly are considered safe to rely on. Others may change in any version.
+
+### Creating your own Rich Text processors
+
+There are 2 different interfaces that you can implement to create your own Rich Text processor, `IncomingRichtextProcessor` and `OutgoingRichtextProcessor`.
+
+#### Incoming Rich Text processor
+
+This processes how the incoming Rich Text JSON is saved in the `richtext` field. This processor makes use of the `type` property in Rich Text JSON to determine what incoming Rich Text processor to use.
+
+##### Built-in incoming Rich Text processors
+
+There are four built-in incoming Rich Text processors:
+
+- `multipart/mixed`[^1]
+- `text/plain`
+- `text/markdown`
+- `text/html`
+
+[^1]: Used by default if `type` in Rich Text JSON doesn't match any existing Rich Text processor.
+
+##### Creating your own incoming Rich Text processor
+
+1. Create a class that implements `IncomingRichtextProcessor`.
+
+    Currently, `IncomingRichtextProcessor` has three methods. Two of which have default implementations.
+
+    `getProcessorName` is an abstract method that should return a `String` that represents the name of the incoming Rich Text processor. It checks this against the `type` property of a Rich Text JSON to determine if this incoming processor should be used.
+
+    `process` is a method that has a default implementation. By default, it checks if the incoming `content` of the Rich Text JSON looks like a mime and directly returns it as a `Buffer`. If not, it manually constructs a mime using the Rich Text JSON properties, and return the constructed mime as a `Buffer`. You are also free to override this method and control how you want to save the incoming Rich Text.
+
+    `getPriority` is a default method that returns `0`. You can leave this method be, unless you have an incoming Rich Text processor that has the same return value of `getProcessorName` with other existing incoming Rich Text processors. The higher the number, the higher the priority.
+
+    An example incoming Rich Text processor will be:
+
+    <div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.example</span><span class="p">;</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Optional</span><span class="p">;</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Set</span><span class="p">;</span>
@@ -7964,40 +8183,45 @@ mvn<span class="w"> </span>install:install-file<span class="w"> </span>-Dfile<sp
 
 <span class="p">}</span>
 </code></pre></div>
-</li>
-<li>
-<p>Create a file within the <code>src/main/resources/META-INF/services</code> directory and name the file <code>com.hcl.domino.keep.info.richtext.spi.IncomingRichtextProcessor</code>.</p>
-</li>
-<li>
-<p>Edit the file <code>com.hcl.domino.keep.info.richtext.spi.IncomingRichtextProcessor</code> and include all the Rich Text extensions you created, such as:</p>
-<div class="highlight"><pre><span></span><code>com.example.AlwaysHiIncomingRichtextProcessor
+
+2. Create a file within the `src/main/resources/META-INF/services` directory and name the file `com.hcl.domino.keep.info.richtext.spi.IncomingRichtextProcessor`.
+
+3. Edit the file `com.hcl.domino.keep.info.richtext.spi.IncomingRichtextProcessor` and include all the Rich Text extensions you created, such as:
+
+    <div class="highlight"><pre><span></span><code>com.example.AlwaysHiIncomingRichtextProcessor
 </code></pre></div>
-</li>
-</ol>
-<div class="admonition warning">
-<p class="admonition-title">Important</p>
-<p>All classes declared in this file must exist and implement the <code>IncomingRichtextProcessor</code> class. Otherwise, an error occurs when attempting to load this using Domino REST API.</p>
-</div>
-<h4 id="outgoing-rich-text-processor">Outgoing Rich Text processor</h4>
-<p>This processes how the saved data in a <code>richtext</code> field is shown when returned as a response to a GET request. This processor uses the value of the <code>richTextAs</code> query parameter to know which outgoing Rich Text processor to use.</p>
-<h5 id="built-in-outgoing-rich-text-processors">Built-in outgoing Rich Text processors</h5>
-<p>There are four built-in outgoing Rich Text processors:</p>
-<ul>
-<li><code>mime</code></li>
-<li><code>plain</code></li>
-<li><code>markdown</code></li>
-<li><code>html</code></li>
-</ul>
-<h5 id="creating-your-own-outgoing-rich-text-processor">Creating your own outgoing Rich Text processor</h5>
-<ol>
-<li>
-<p>Create a class that implements <code>OutgoingRichtextProcessor</code>.</p>
-<p>Currently, <code>OutgoingRichtextProcessor</code> has three methods. One of which has default implementations.</p>
-<p><code>getProcessorName</code> is an abstract method that should return a <code>String</code> that represents the name of this incoming Rich Text processor. It checks this against the <code>richTextAs</code> query parameter of the GET request to know which outgoing Rich Text processor to use.</p>
-<p><code>process</code> is an abstract method that can be overwritten to specify how to represent the Rich Text content in the response.</p>
-<p><code>getPriority</code> is a default method that returns <code>0</code>. You can leave this method be, unless you have an outgoing Rich Text processor that has the same return value of <code>getProcessorName</code> with other existing outgoing Rich Text processors. The higher the number, the higher the priority.</p>
-<p>An example outgoing Rich Text processor would be:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.example</span><span class="p">;</span>
+
+!!!warning "Important"
+    All classes declared in this file must exist and implement the `IncomingRichtextProcessor` class. Otherwise, an error occurs when attempting to load this using Domino REST API.
+
+#### Outgoing Rich Text processor
+
+This processes how the saved data in a `richtext` field is shown when returned as a response to a GET request. This processor uses the value of the `richTextAs` query parameter to know which outgoing Rich Text processor to use.
+
+##### Built-in outgoing Rich Text processors
+
+There are four built-in outgoing Rich Text processors:
+
+- `mime`
+- `plain`
+- `markdown`
+- `html`
+
+##### Creating your own outgoing Rich Text processor
+
+1. Create a class that implements `OutgoingRichtextProcessor`.
+
+    Currently, `OutgoingRichtextProcessor` has three methods. One of which has default implementations.
+
+    `getProcessorName` is an abstract method that should return a `String` that represents the name of this incoming Rich Text processor. It checks this against the `richTextAs` query parameter of the GET request to know which outgoing Rich Text processor to use.
+
+    `process` is an abstract method that can be overwritten to specify how to represent the Rich Text content in the response.
+
+    `getPriority` is a default method that returns `0`. You can leave this method be, unless you have an outgoing Rich Text processor that has the same return value of `getProcessorName` with other existing outgoing Rich Text processors. The higher the number, the higher the priority.
+
+    An example outgoing Rich Text processor would be:
+
+    <div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.example</span><span class="p">;</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">com.hcl.domino.DominoClient</span><span class="p">;</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">com.hcl.domino.data.Document</span><span class="p">;</span>
@@ -8025,28 +8249,32 @@ mvn<span class="w"> </span>install:install-file<span class="w"> </span>-Dfile<sp
 
 <span class="p">}</span>
 </code></pre></div>
-</li>
-<li>
-<p>Create a file within the <code>src/main/resources/META-INF/services</code> directory and name the file <code>com.hcl.domino.keep.info.richtext.spi.OutgoingRichtextProcessor</code>.</p>
-</li>
-<li>
-<p>Edit the file <code>com.hcl.domino.keep.info.richtext.spi.OutgoingRichtextProcessor</code> and include all the Rich Text extensions you created, such as:</p>
-<div class="highlight"><pre><span></span><code>com.example.AlwaysHelloRichtextProcessor
+
+2. Create a file within the `src/main/resources/META-INF/services` directory and name the file `com.hcl.domino.keep.info.richtext.spi.OutgoingRichtextProcessor`.
+
+3. Edit the file `com.hcl.domino.keep.info.richtext.spi.OutgoingRichtextProcessor` and include all the Rich Text extensions you created, such as:
+
+    <div class="highlight"><pre><span></span><code>com.example.AlwaysHelloRichtextProcessor
 </code></pre></div>
-</li>
-</ol>
-<div class="admonition warning">
-<p class="admonition-title">Important</p>
-<p>All classes declared in this file must exist and implement the <code>OutgoingRichtextProcessor</code> class. Otherwise, an error occurs when attempting to load this using Domino REST API.</p>
-</div>
-<h3 id="apply-the-rich-text-extension">Apply the Rich Text extension</h3>
-<p>Once you have finished creating your Rich Text extensions, it's time to use it. Create the JAR file for the Rich Text extension by running the following command:</p>
-<div class="highlight"><pre><span></span><code>mvn<span class="w"> </span>clean<span class="w"> </span>package
+
+!!!warning "Important"
+    All classes declared in this file must exist and implement the `OutgoingRichtextProcessor` class. Otherwise, an error occurs when attempting to load this using Domino REST API.
+
+### Apply the Rich Text extension
+
+Once you have finished creating your Rich Text extensions, it's time to use it. Create the JAR file for the Rich Text extension by running the following command:
+
+  <div class="highlight"><pre><span></span><code>mvn<span class="w"> </span>clean<span class="w"> </span>package
 </code></pre></div>
-<p>This creates a JAR file inside the target directory with the name <code>richtext-extension-1.0-SNAPSHOT.jar</code>. Copy this JAR file and paste it into where your KEEP JARs are at (Domino REST API directory).</p>
-<h3 id="try-it-out">Try it out</h3>
-<h4 id="try-the-incoming-rich-text-processor">Try the incoming Rich Text processor</h4>
-<p>Create a form that has a <code>richtext</code> field in it. An example response body would be:</p>
+
+This creates a JAR file inside the target directory with the name `richtext-extension-1.0-SNAPSHOT.jar`. Copy this JAR file and paste it into where your KEEP JARs are at (Domino REST API directory).
+
+### Try it out
+
+#### Try the incoming Rich Text processor
+
+Create a form that has a `richtext` field in it. An example response body would be:
+
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="err">...</span>
 <span class="w">  </span><span class="nt">&quot;Form&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SampleForm&quot;</span><span class="p">,</span>
@@ -8058,24 +8286,42 @@ mvn<span class="w"> </span>install:install-file<span class="w"> </span>-Dfile<sp
 <span class="w">  </span><span class="err">...</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Notice that the <code>type</code> in the Rich Text JSON is set to the name of your own incoming Rich Text processor <code>alwayshi</code>.</p>
-<p>Before executing the request, you should set the value of <code>richTextAs</code> query parameter to <code>plain</code> so you can verify the value of the <code>richtext</code> field in plain text.</p>
-<p>After executing the request, you should get the following JSON for the <code>richtext</code> field:</p>
+
+Notice that the `type` in the Rich Text JSON is set to the name of your own incoming Rich Text processor `alwayshi`.
+
+Before executing the request, you should set the value of `richTextAs` query parameter to `plain` so you can verify the value of the `richtext` field in plain text.
+
+After executing the request, you should get the following JSON for the `richtext` field:
+
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text/plain&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;encoding&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;plain&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hi!&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h4 id="try-the-outgoing-rich-text-processor">Try the outgoing Rich Text processor</h4>
-<p>To try it out, you can call any API that has a <code>richTextAs</code> query parameter, and set its value to your processor name.</p>
-<p>For example, if you use the <code>AlwaysHelloRichtextProcessor</code>, since its <code>getProcessorName</code> method returns <code>alwayshello</code>, if you do an API and set <code>richTextAs=alwayshello</code>, you should get the following JSON value for the <code>richtext</code> fields:</p>
+
+#### Try the outgoing Rich Text processor
+
+To try it out, you can call any API that has a `richTextAs` query parameter, and set its value to your processor name.
+
+For example, if you use the `AlwaysHelloRichtextProcessor`, since its `getProcessorName` method returns `alwayshello`, if you do an API and set `richTextAs=alwayshello`, you should get the following JSON value for the `richtext` fields:
+
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text/plain&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;encoding&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;plain&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hello!&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
+-->
+
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Used by default if the value of the <code>type</code> property in the Rich Text JSON doesn't equate to any existing Rich Text processor.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -8096,7 +8342,7 @@ mvn<span class="w"> </span>install:install-file<span class="w"> </span>-Dfile<sp
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 13, 2024 17:16:37 UTC">August 13, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 11, 2026 15:48:46 UTC">February 11, 2026</span>
   </span>
 
     
