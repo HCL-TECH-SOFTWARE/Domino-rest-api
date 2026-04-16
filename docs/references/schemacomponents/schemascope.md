@@ -24,6 +24,8 @@ The scope is the name under which a database is presented to REST API consumers.
 
 Each scope is mapped to an NSF database, which is currently `KeepConfig.nsf`, through an entry in the REST directory. Managing scopes is the responsibility of the Domino administrator.
 
+For more information, see [Scopes](scopes.md).
+
 ## Useful links
 
 Tutorials

@@ -95,7 +95,7 @@
         </g>
         <!-- Element DRAPI Schema -->
         <a
-            xlink:href="https://opensource.hcltechsw.com/Domino-rest-api/topicguides/schemascope.html#schema"
+            xlink:href="https://opensource.hcltechsw.com/Domino-rest-api/references/schemacomponents/schemascope.html#schema"
             target="_blank">
             <g xmlns="http://www.w3.org/2000/svg" width="85.201" height="56.966"
                 transform="scale(1,1) translate(576.199,231.327)">
@@ -144,7 +144,7 @@
         </a>
         <!-- Element Big NSF icon-->
         <a
-            xlink:href="https://help.hcl-software.com/domino/14.0.0/admin/admn_managingdatabases_c.html"
+            xlink:href="https://help.hcl-software.com/domino/14.5.1/admin/admn_managingdatabases_c.html"
             target="_blank">
             <g xmlns="http://www.w3.org/2000/svg" width="132.391" height="173.983"
                 transform="scale(1,1) translate(724.029,213.368)">
@@ -314,7 +314,7 @@
         </a>
         <!-- Element DRAPI Scope -->
         <a
-            xlink:href="https://opensource.hcltechsw.com/Domino-rest-api/topicguides/schemascope.html#scope"
+            xlink:href="https://opensource.hcltechsw.com/Domino-rest-api/references/schemacomponents/schemascope.html#scope"
             target="_blank">
             <g xmlns="http://www.w3.org/2000/svg" width="85.201" height="56.966"
                 transform="scale(1,1) translate(343.963,137.01)">
@@ -335,8 +335,8 @@
             </g>
         </a>
         <!-- Element Form Modes -->
-        <a xlink:href=""
-            target="">
+        <a xlink:href="https://opensource.hcltechsw.com/Domino-rest-api/references/extensibility/barbican.html#form-modes"
+            target="_blank">
             <g xmlns="http://www.w3.org/2000/svg" width="62.894" height="42.47"
                 transform="scale(1,1) translate(469.117,328.54)">
                 <g id="9c647119-cdc0-469a-8eb8-987721b1ddf9">
@@ -444,7 +444,7 @@
         </g>
         <!-- Element Speechbubble on top of big nsf icon-->
         <a
-            xlink:href="https://opensource.hcltechsw.com/Domino-rest-api/topicguides/schemascope.html#schema"
+            xlink:href="https://opensource.hcltechsw.com/Domino-rest-api/references/schemacomponents/schemascope.html#schema"
             target="_blank">
             <g xmlns="http://www.w3.org/2000/svg" width="115.794" height="106.933"
                 transform="scale(1,1) translate(656.152,124.394)">
@@ -752,7 +752,7 @@
         </a>
         <!-- Element Text with * and ** -->
         <a
-            xlink:href="https://opensource.hcltechsw.com/Domino-rest-api/topicguides/schemascope.html#schema"
+            xlink:href="https://opensource.hcltechsw.com/Domino-rest-api/references/schemacomponents/schemascope.html#schema"
             target="_blank">
             <g xmlns="http://www.w3.org/2000/svg" width="353.483" height="31.25"
                 transform="scale(1,1) translate(332.349,387.351)">
