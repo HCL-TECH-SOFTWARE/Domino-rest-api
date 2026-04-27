@@ -316,7 +316,9 @@
     
         - *date-time* when the **datetime** field with date and time is selected.
         - *date* when the **datetime** field with only date is selected.
-        - *string* when the **datetime** field with only time is selected.  
+        - *string* when the **datetime** field with only time is selected.
+
+        For more information, see [Set the correct field type for a datetime field in a form schema](../howto/production/datetime.md).  
 
     - Changed the **Inactive-Active** toggle for activating a form on the **Database Forms** page in the **Admin UI** to a 3-dot icon menu that displays available options when clicked.
     - Added an **Activate Form** dialog in the **Admin UI** to get user confirmation for activating an inactive form when the user clicks the edit icon corresponding to an inactive form.
