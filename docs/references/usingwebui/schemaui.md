@@ -185,6 +185,7 @@ You can activate forms one at a time or simultaneously.
 
         - Click the **Multi-Value** toggle to the on position to specify a **Field Group**. The **Multi-Value** toggle isn't clickable to the off position if you specified a field group.
         - Click the **Required** toggle to the on position to specify that the field is a required field. When set to the on position, the word *Required* is added below the name of the field in the added field list.
+        - When you add a *datetime* field to a form schema, ensure that you select the appropriate field type. For more information, see [Set the correct field type for a datetime field](../../howto/production/datetime.md).
 
     !!!note "Encryption feature"
 
