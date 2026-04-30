@@ -21,12 +21,17 @@ Check the [configuration parameters](../../references/configuration/parameters.m
     {
     "PORT": 8857,
     "MANAGMENTPORT": 9000,
-    "METRICSPORT": 8890,
-    "HEALTHCHECKPORT": 8886
+    "METRICSPORT": 8877,
+    "HEALTHCHECKPORT": 8865
     }
     ```
 
-    The example JSON object will change the port number of the main API port from 8880, which is the default, to 8857. The example will also change the port number of the port for accessing the Management Console from 8889, which is the default, to 9000.
+    The example JSON object changes the following port numbers:
+
+    - Main API port: from 8880 (default) to 8857
+    - Management Console port: from 8889 (default) to 9000
+    - Prometheus metrics port: from 8890 (default) to 8877
+    - Health check port: from 8890 (default) to 8865
 
 3. Save the JSON file in the `keepconfig.d` directory.
 
