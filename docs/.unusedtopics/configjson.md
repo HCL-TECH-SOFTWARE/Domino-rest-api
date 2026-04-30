@@ -181,7 +181,7 @@ A current `config.json` has the following top-level properties. These properties
 
 | Property                 | Type                                           | Description                                                                                                                                           |
 | :----------------------- | :--------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| MANAGEMENTPORT           | int (0 to 65353)                               | (default 8889) Commands regarding the runtime, such as config and shutdown, should only be exposed to an admin network workstation.                   |
+| MANAGMENTPORT           | int (0 to 65353)                               | (default 8889) Commands regarding the runtime, such as config and shutdown, should only be exposed to an admin network workstation.                   |
 | METRICSPORT              | int (0 to 65353)                               | (default 8890) Port for Prometheus metrics.                                                                                                           |
 | Firehoseport             | int (0 to 65353)                               | (default 42424) Port for Firehose to successfully deliver data to custom HTTP endpoints.                                                              |
 | PORT                     | int (0 to 65353)                               | (default 8880) The port for regular API access.                                                                                                       |

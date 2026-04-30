@@ -20,7 +20,9 @@ Check the [configuration parameters](../../references/configuration/parameters.m
     ```json
     {
     "PORT": 8857,
-    "MANAGEMENTPORT": 9000
+    "MANAGMENTPORT": 9000,
+    "METRICSPORT": 8890,
+    "HEALTHCHECKPORT": 8886
     }
     ```
 
