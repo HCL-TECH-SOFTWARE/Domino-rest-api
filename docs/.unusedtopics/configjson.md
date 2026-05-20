@@ -5,7 +5,7 @@ Domino REST API reads all config.json from Domino REST API core and deployed ext
 ```json
 {
   "PORT": 8880,
-  "MANAGMENTPORT": 8889,
+  "MANAGEMENTPORT": 8889,
   "METRICSPORT": 8890,
   "HEALTHCHECKPORT": 8886,
   "FIREHOSEPORT": 42424,
@@ -181,7 +181,7 @@ A current `config.json` has the following top-level properties. These properties
 
 | Property                 | Type                                           | Description                                                                                                                                           |
 | :----------------------- | :--------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| MANAGMENTPORT           | int (0 to 65353)                               | (default 8889) Commands regarding the runtime, such as config and shutdown, should only be exposed to an admin network workstation.                   |
+| MANAGEMENTPORT           | int (0 to 65353)                               | (default 8889) Commands regarding the runtime, such as config and shutdown, should only be exposed to an admin network workstation.                   |
 | METRICSPORT              | int (0 to 65353)                               | (default 8890) Port for Prometheus metrics.                                                                                                           |
 | Firehoseport             | int (0 to 65353)                               | (default 42424) Port for Firehose to successfully deliver data to custom HTTP endpoints.                                                              |
 | PORT                     | int (0 to 65353)                               | (default 8880) The port for regular API access.                                                                                                       |

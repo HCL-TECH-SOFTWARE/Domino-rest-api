@@ -11,9 +11,26 @@ The What's new contains information about the latest features, improvements, fix
 
     Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](../references/deprecated.md).
 
-## Domino REST API v1.1.7
+## Domino REST API v1.1.8
 
 ???+ info "Release summary"
+
+    Release date: MMMM D, 2026
+
+    !!! danger "If you are upgrading from Domino REST API v1.1.2 or an earlier version, refer to important information regarding [CORS using Regex](v1.1.3.md#cors-is-now-using-regex)."
+
+    - **0** New features
+    - **5** Improvements
+    - **0** Resolved issues
+    <!-- **0** New features-->
+    <!-- **0** Breaking change-->
+    <!-- **X** Preview features-->
+
+[Read the full details](v1.1.8.md)
+
+## Domino REST API v1.1.7
+
+??? info "Release summary"
 
     Release date: April 7, 2026
 
