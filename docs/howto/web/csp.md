@@ -10,6 +10,20 @@ This task guides you on how to configure [Content Security Policy](https://devel
 - Make sure you have the necessary access to files and permission to restart the Domino REST API service if required.
 - Review the external resources used by your application, such as APIs, fonts, scripts, and hosted assets.
 
+## Planning
+
+A restrictive CSP provides a first layer of defense against content injection attacks. Spending time to tighten CSP rules can significantly improve application security. [Learn more about CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"} and use the [CSP builder tool](https://report-uri.com/home/generate "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"}.
+
+Start by implementing a strict CSP configuration and enabling report-only mode first. In this mode, the browser logs CSP violations without blocking content, allowing you to identify the required resource sources and make adjustment to the policy before enforcement.  
+
+Example of a strict CSP configuration that reports CSP violation that you can add to the `manifest.json`.
+
+```json
+{
+    "csp": "default-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; script-src 'nonce-YOUR_SERVER_NONCE' 'strict-dynamic'; img-src 'self' data:; font-src 'self'; connect-src 'self'; report-uri /api/csp-violation-report;"
+}
+```
+
 ## Procedure
 
 1. Go to your application folder in the `keepweb.d` directory, and open the `manifest.json` file.
