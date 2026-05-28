@@ -1,0 +1,5 @@
+nav:
+    - index.md
+    - Configure CSP for front-end app: csp.md
+    - httpsproxy.md
+    - httpsproxy2.md
