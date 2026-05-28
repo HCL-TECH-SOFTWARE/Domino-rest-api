@@ -20,7 +20,7 @@
         <link rel="prev" href="../install/obtainauthenticationtoken.html">
       
       
-        <link rel="next" href="httpsproxy.html">
+        <link rel="next" href="csp.html">
       
       
         
@@ -2961,6 +2961,8 @@
       
         
       
+        
+      
     
     
     
@@ -3011,6 +3013,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="csp.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configure CSP for front-end app
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -7417,6 +7447,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reverse-proxy-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reverse proxy configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -7441,6 +7501,8 @@
 <p class="admonition-title">This is work in progress</p>
 <p>We are constantly working on improving Domino REST API's functionality and documentation. You have a documentation page which is not quite ready. Feel free to <a href="https://discord.com/invite/jmRHpDRnH4" title="Opens a new tab">feedback</a> what you would like to see here.</p>
 </div>
+<p>This section provides how-to guides for configuring web access to Domino REST API, including reverse proxy setup and related web security configuration.</p>
+<h2 id="reverse-proxy-configuration">Reverse proxy configuration</h2>
 <p>The Domino REST API operates on separate ports, enabling you to manage access to sensitive information through a proxy, a firewall, or both. You can configure a proxy on the same machine, on a different machine, or utilize your firewall as a proxy.</p>
 <p><img alt="Ports in use" src="../../assets/images/PortUse.png" style="height:60%;width:60%" /></p>
 <p>The example procedures provided below guide you in using <strong>nginx</strong> as a proxy, but take note that the Domino REST API is compatible with any type of proxy.</p>
@@ -7453,6 +7515,10 @@
 <li>
 <p><a href="httpsproxy2.html">Configure nginx as HTTPS proxy - single domain</a></p>
 </li>
+</ul>
+<h2 id="security-configuration">Security configuration</h2>
+<ul>
+<li><a href="csp.html">Configure CSP for front-end application hosted in the <code>keepweb.d</code> directory</a></li>
 </ul>
 
 
@@ -7474,7 +7540,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 8, 2025 15:39:30 UTC">July 8, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 26, 2026 15:44:47 UTC">May 26, 2026</span>
   </span>
 
     
