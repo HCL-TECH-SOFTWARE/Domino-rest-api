@@ -3,7 +3,7 @@ hide:
   - toc
 ---
 
-# Tutotials
+# Tutorials
 
 The tutorials are designed to familiarize Domino REST API administrators, as well as Notes and web developers, with the features and usage of the Domino REST API.
 

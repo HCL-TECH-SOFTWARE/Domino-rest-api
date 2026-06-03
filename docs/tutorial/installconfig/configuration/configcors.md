@@ -120,3 +120,7 @@ Regular expressions can be difficult to read and validate due to their syntax an
 !!! note
 
     When a regular expression is specified in JSON, each backslash (`\`) must be escaped as `\\`.
+
+## Next step
+
+Proceed to [Check connectivity](connectivity.md).
