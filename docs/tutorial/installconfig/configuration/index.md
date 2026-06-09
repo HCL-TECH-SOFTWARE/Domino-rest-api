@@ -7,6 +7,10 @@ After installation, Domino REST API will run on port 8880 with HTTP and a transi
     - You should familiarize yourself with all [configuration parameters](../../../references/configuration/parameters.md) and [security](../../../references/security/index.md) settings before you deploy into a production environment.
     - Domino REST API honors all Domino access control mechanisms and doesn't allow anonymous access. For more information, see [Access Control](../../../references/accesscontrol.md).
 
+## [Configure CORS](configcors.md)
+
+Configuring Cross-Origin Resource Sharing (CORS) allows approved web applications, the **Admin UI**, and OAuth clients to securely access Domino REST API from different domains, hosts, or ports.
+
 ## [Check connectivity](connectivity.md)
 
 After the installation, make sure connectivity works.

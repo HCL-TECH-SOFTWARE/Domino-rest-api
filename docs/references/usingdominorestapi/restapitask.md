@@ -64,7 +64,8 @@ Use these commands for refreshing and restarting the Domino REST API from the Do
 |Command|Purpose|
 |:---|:---|
 |`tell restapi refresh`|Refreshes Domino REST API with new configuration.<br/><br/>When issuing this command, new incoming requests will be blocked, returning an HTTP Error 503 response. The existing queue of requests will be processed, and once completed, the new configuration will take effect, allowing new requests to be accepted.|
-|`tell restapi reload`|Restarts with new configuration.|
+|`tell restapi refresh cache`|Reloads all schemas, scopes, and applications into the cache.<br/><br/>Run this command after manually updating a schema, scope, or application so that the updates are immediately implemented and available.|
+|`tell restapi reload`|Restarts Domino REST API with new configuration.|
 
 ### Create support packages
 

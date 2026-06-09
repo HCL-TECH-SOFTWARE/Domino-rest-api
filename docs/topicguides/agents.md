@@ -6,7 +6,6 @@ title: Agent processing
 
 One of the differentiators for Domino compared to some other NoSQL databases is the ability for agents to store business logic, workflow processing logic or ad hoc data processing. Moreover, this can be stored in Domino's Formula Language, LotusScript (Lotus's VB-like generic scripting language, only surviving in HCL Notes) or Java. A context document can be passed into the agent, a selection formula can be set via simple settings, or the agent itself can define the document set to run on.
 
-
 !!! note "About triggers"
     Certain triggers like selected documents or programmatic collections like `unprocessedDocuments` only make sense in Notes Client. Other triggers like "Before Mail Arrives" only make sense in the context of server scheduling. LotusScript UI classes for interacting with the Notes Client will cause an agent to error if you attempt to run it from outside the context of the Notes Client.
 
@@ -18,7 +17,43 @@ There are 2 ways to run an agent via Domino REST API:
 
 ### **POST: /run/agent**
 
-This is used to run an agent in real time. The payload expects at least `agentName` to define which agent to trigger. **NOTE:** the calling HTTP thread will be tied up until the agent finishes, so this should only be used for short-running agents. This is designed to simulate running an agent using the "?OpenAgent" URL endpoint. Any content from LotusScript `print` statements will be returned as the HTTP response or, if no print statements are used `{"agentResponse":"done"}`. In addition, `NotesSession.documentContext` will get an in-memory document with the following properties:
+This endpoint is used to run an agent in real time.
+
+!!! note
+  
+    The calling HTTP thread will be tied up until the agent finishes, so this should only be used for short-running agents. This is designed to simulate running an agent using the "?OpenAgent" URL endpoint. 
+
+To set the agent name in the body of the request, refer to the following example:
+
+Example: `{ "agentName" : "myAgent" }`
+
+The agent's response will be `{"agentResponse":"done"}` when completed.
+
+To return a different response:
+
+- Use the Print command in LotusScript.
+
+    Example: `Print "LotusScript agent was successful."`
+
+- Print to the PrintWriter attached to the agent output in Java.
+
+    Example:
+
+    ```java
+    PrintWriter pw = getAgentOutput();
+    pw.println("Java agent was successful.");
+    ```
+
+The print output will be stored as a JSON value in the `agentResponse` key of the response, so you must properly escape your print statements for JSON.
+
+Example:
+
+- For LotusScript: `Print "{""jsonkey"" : ""Some json value""}"`
+- For Java: `pw.println("{\"jsonkey\" : \"Some json value\"}");`
+
+If you did not properly escape the output, your response will be `{"agentResponse":"done"}`.
+
+In addition, `NotesSession.documentContext` will get an in-memory document with the following properties:
 
 - **REQUEST_METHOD** set to "KEEP". This can be used to identify how the agent was triggered, for contextual processing.
 - **CONTENT_TYPE** set to "application/json".
@@ -37,6 +72,7 @@ This is used to run an agent in real time. The payload expects at least `agentNa
 This is used to run an agent in real time, passing the `unid` of a document to use as context and the `returnMode` to use to generate the response for the agent. If `returnMode` was not specified or does not exist, the default `{"agentResponse":"done"}` response is returned.
 
 !!! note
+
     The calling HTTP thread will be tied up until the agent finishes, so this should only be used for short-running agents.
 
 <!--### **POST:/run/agentAsync**
