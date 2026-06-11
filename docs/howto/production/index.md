@@ -14,6 +14,8 @@ Topics to guide you in completing configuration goals and tasks in relation to d
 
 - [Customize available API schemas and endpoints](customAPI.md)
 
+- [Enable CalDav, CardDav, and DXL extension APIs](davdxl.md)
+
 - [Enable HTTPS using Domino Certificate Manager](dominohttps.md)
 
 - [Hardened production setup](hardening.md)

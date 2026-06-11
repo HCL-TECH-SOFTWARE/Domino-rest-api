@@ -38,7 +38,7 @@ There are 6 ways to retrieve Rich Text:
 - Using `/richtext/plain/{unid}` endpoint that returns a stream of plain unformatted text
 - Using the `/bulk/unid` URL
 
-The following APIs return Rich Text as MIME by default. You can specify a different format by using the `richTextAs=` URL parameter, and setting its value to `html`, `mime`, `md`, or `plain`.
+The following APIs return Rich Text as HTML by default. You can specify a different format by using the `richTextAs=` URL parameter, and setting its value to `html`, `mime`, `md`, or `plain`.
 
 - `/document/{unid}`
 - `/query`
@@ -48,6 +48,10 @@ The following APIs return Rich Text as MIME by default. You can specify a differ
 - `/lists/{name}` (when using the `documents=true` parameter)
 
 The request response may include the parameters identified in the table below.
+
+!!! tip
+
+    Starting Domino REST API v1.1.5, users can now request the raw composite data from an HCL Notes rich text item by setting the `richTextAs` query parameter of an applicable endpoint to `compositedata`. When used, the returned value will be a BASE64-encoded byte array of composite data structures.
 
 ## Writing Rich Text
 

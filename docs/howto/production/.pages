@@ -5,6 +5,7 @@ nav:
     - metrics.md
     - Configure ports: prodports.md
     - Customize API schemas and endpoints: customAPI.md
+    - davdxl.md
     - dominohttps.md
     - hardening.md
     - httpsprod.md
