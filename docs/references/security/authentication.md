@@ -33,8 +33,8 @@ The configuration is as follows in Domino REST API:
 | `active` | **Optional** - Can be useful for setting to `false` to temporarily disable something without deleting the config entirely. |
 | `providerUrl` | It's the OIDC-provider-specific URL. It's in a form common for Keycloak, but Azure and others look different. |
 | `scope` | A scope that is expected to be included in the token from the OIDC provider. |
-| `aud` | A string or array of strings of audiences expected to be included in the token. |
-| `additionalClientIds` | **Optional** - Can be a string or array of strings of client IDs beyond the one configured in `idpcat.nsf` that will be considered valid. |
+| `aud` | A string or an array of strings that specifies audiences expected to be included in the token. |
+| `additionalClientIds` | **Optional** - A string or an array of strings that specifies additional valid client IDs beyond the client ID configured in `idpcat.nsf`. |
 | `userIdentifier` and `userIdentifierInLdapFormat` | **Optional** |
 | `microsoft` | **Optional** - Can be used to enable MS-Azure-specific workarounds internally |
 | `allowExpired` | **Optional**- Can be used to consider even expired tokens valid. This should generally only be used during development. |
@@ -71,14 +71,17 @@ The following configuration allows Domino REST API to use Domino as an OIDC prov
 
 | Items | Description |
 | :--- | :--- |
-| `active` | **Optional** - Can be useful for setting to `false` to temporarily disable something without deleting the config entirely. |
+| `active` | **Optional** - Can be set to `false` to temporarily disable the configuration without deleting the configuration. |
 | `providerUrl` | The base URL that includes the name of the OIDC Domino server.<br/><br/>For example: `https://auth.mydomains.com/auth/protocol/oidc`|
 | `scope` | A scope that is expected to be included in the token from the OIDC provider. For example, `$DATA`,`email`, etc.<!--The scopes are `openid`, `email`, `profile`, `$DATA`, `Domino.user.all`. `Domino.user.all` is used for Domino HTTP.--> |
-| `aud` | A string or array of strings of audiences expected to be included in the token. The value of the `aud` key can be set to `https://<Domino REST API DNS name>` to match what Domino HTTP expects.|
+| `aud` | A string or an array of strings that specifies audiences expected to be included in the token. The value of the `aud` property can be set to `https://<Domino REST API DNS name>` to match what Domino HTTP expects.|
+| `additionalClientIds` | **Optional** - A string or an array of strings that specifies all valid client IDs. Any client ID not listed in this property is rejected.|
 
 !!! caution
 
-    The Domino REST API configuration **MUST NOT** specify `additionalClientIds`. 
+    The `additionalClientIds` property can now be used in the Domino REST API configuration **only** when using HCL Domino 14.5.1 or later. The property is not supported in HCL Domino 14.5.
+    
+    When using `additionalClientIds`, every client ID that should be accepted as valid must be included in the `additionalClientIds` array. 
 
 ## OIDC
 
