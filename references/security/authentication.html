@@ -7880,11 +7880,11 @@
 </tr>
 <tr>
 <td style="text-align: left;"><code>aud</code></td>
-<td style="text-align: left;">A string or array of strings of audiences expected to be included in the token.</td>
+<td style="text-align: left;">A string or an array of strings that specifies audiences expected to be included in the token.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>additionalClientIds</code></td>
-<td style="text-align: left;"><strong>Optional</strong> - Can be a string or array of strings of client IDs beyond the one configured in <code>idpcat.nsf</code> that will be considered valid.</td>
+<td style="text-align: left;"><strong>Optional</strong> - A string or an array of strings that specifies additional valid client IDs beyond the client ID configured in <code>idpcat.nsf</code>.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>userIdentifier</code> and <code>userIdentifierInLdapFormat</code></td>
@@ -7941,7 +7941,7 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><code>active</code></td>
-<td style="text-align: left;"><strong>Optional</strong> - Can be useful for setting to <code>false</code> to temporarily disable something without deleting the config entirely.</td>
+<td style="text-align: left;"><strong>Optional</strong> - Can be set to <code>false</code> to temporarily disable the configuration without deleting the configuration.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>providerUrl</code></td>
@@ -7953,13 +7953,18 @@
 </tr>
 <tr>
 <td style="text-align: left;"><code>aud</code></td>
-<td style="text-align: left;">A string or array of strings of audiences expected to be included in the token. The value of the <code>aud</code> key can be set to <code>https://&lt;Domino REST API DNS name&gt;</code> to match what Domino HTTP expects.</td>
+<td style="text-align: left;">A string or an array of strings that specifies audiences expected to be included in the token. The value of the <code>aud</code> property can be set to <code>https://&lt;Domino REST API DNS name&gt;</code> to match what Domino HTTP expects.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>additionalClientIds</code></td>
+<td style="text-align: left;"><strong>Optional</strong> - A string or an array of strings that specifies all valid client IDs. Any client ID not listed in this property is rejected.</td>
 </tr>
 </tbody>
 </table>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
-<p>The Domino REST API configuration <strong>MUST NOT</strong> specify <code>additionalClientIds</code>. </p>
+<p>The <code>additionalClientIds</code> property can now be used in the Domino REST API configuration <strong>only</strong> when using HCL Domino 14.5.1 or later. The property is not supported in HCL Domino 14.5.</p>
+<p>When using <code>additionalClientIds</code>, every client ID that should be accepted as valid must be included in the <code>additionalClientIds</code> array. </p>
 </div>
 <h2 id="oidc">OIDC</h2>
 <p>OIDC (OpenID Connect) support lets you point at a standard OIDC provider like <a href="../../howto/IdP/configuringAD.html">Microsoft Entra ID formerly Azure Active Directory</a> or <a href="../../howto/IdP/configuringKeycloak.html">Keycloak</a>. It's similar to the <a href="#external-jwtoidc-providers">External JWT/OIDC provider configuration</a> when using <code>providerUrl</code>, but follows OIDC semantics a bit more internally - namely, it needs a client ID and client secret.</p>
@@ -8181,7 +8186,7 @@ When configuring an external IdP using OIDC or OIDC-idpcat, you need to provide 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 11, 2026 15:48:46 UTC">February 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 15, 2026 11:50:26 UTC">June 15, 2026</span>
   </span>
 
     
