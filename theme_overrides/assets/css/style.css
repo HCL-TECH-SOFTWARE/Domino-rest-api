@@ -184,7 +184,8 @@
 .dropdown-content a:hover {
     background-color: #ddd;
   /*the following was added as part of the June 2025 update*/
-    color: #ffffff;
+    color: #212121;
+    font-weight: 900;
 }
 
 .dropdown:hover .dropdown-content {display: block;}
@@ -409,3 +410,6 @@ text-align: center;
       margin-left: 65px;
   } */
   
+  .md-tabs__link:hover {
+      font-weight: 900;
+  }
