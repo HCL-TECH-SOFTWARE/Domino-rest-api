@@ -1,9 +1,69 @@
-{% extends "main.html" %} {% block extrahead %}
-<link rel="stylesheet" href="/Domino-rest-api/assets/css/main.404.css" />
-<link rel="stylesheet" href="/Domino-rest-api/assets/css/keep_style.css" />
-<link rel="stylesheet" href="/Domino-rest-api/assets/css/style.css" />
+{% extends "main.html" %}
+
+{% block extrahead %}
+
+{{ super() }}
+
+<style>
+  /* Hide both sidebars */
+  /* Hide the TOC everywhere */
+.md-sidebar--secondary {
+    display: none !important;
+}
+
+/* Hide the primary sidebar only on larger screens */
+@media screen and (min-width: 76.25em) {
+    .md-sidebar--primary {
+        display: none !important;
+    }
+
+    .md-main__inner {
+        grid-template-columns: 1fr !important;
+    }
+
+    .md-content {
+        max-width: none !important;
+        margin: 0 !important;
+    }
+}
+</style>
+
 <script
-  src="/Domino-rest-api/assets/js/handle404.js"
-  type="text/javascript"
+ src="/Domino-rest-api/assets/js/handle404.js"
+ type="text/javascript"
 ></script>
+{% endblock %}
+
+{% block content %}
+<div class="md-content">
+ <article class="md-content__inner md-typeset">
+   <h1>404 - Not found</h1>
+   <p>
+     The HCL Domino REST API documentation site is regularly reorganized
+     to better meet end-user needs.
+   </p>
+   <div id="error404Message"></div>
+   <p>
+     If the page you are looking for isn't available, refer to the table
+     below for the updated location of the topic. Alternatively, you can browse the latest HCL Domino REST API
+    documentation by visiting <a href="{{ 'index.html' | url }}">the documentation home page</a>.
+  </p>
+   <table>
+     <thead>
+       <tr>
+         <th>Topic title</th>
+         <th>Previous link</th>
+         <th>Current link</th>
+       </tr>
+     </thead>
+     <tbody id="linkBody">
+     </tbody>
+   </table>
+   <script>
+     const locationPrefix = "{{ config.site_url }}";
+     bootstrap(locationPrefix);
+   </script>
+   
+ </article>
+</div>
 {% endblock %}
