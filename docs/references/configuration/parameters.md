@@ -218,7 +218,7 @@ The `config.json` in the Jar has the entry for the `setup` API as:
     }
 ```
 
-When you supply your own `some.json` in the `config.d` directory:
+When you supply your own `some.json` in the `keepconfig.d` directory:
 
 ```json
     "versions": {
