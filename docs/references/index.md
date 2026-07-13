@@ -84,6 +84,10 @@ List of tools you can use when dealing with REST APIs.
 
 List of available Domino REST API SDKs
 
+## [DXL extension API endpoints](dxlAPIs.md)
+
+Describes the DXL extension API endpoints, including their HTTP method, path, required ACL, and purpose.
+
 ## [Troubleshooting](troubleshooting.md)
 
 Details common errors in installing and running the Domino REST API service and their corresponding resolutions.

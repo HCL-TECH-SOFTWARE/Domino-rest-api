@@ -19,6 +19,7 @@ nav:
   - Extensibility: extensibility
 #  - parameters.md
   - sdk.md
+  - dxlAPIs.md
   - troubleshooting.md
   - limitation.md
   - richtextension.md
