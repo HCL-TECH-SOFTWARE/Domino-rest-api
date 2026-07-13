@@ -5848,10 +5848,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Vert.x parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#metrics-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5859,11 +5858,6 @@
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -7823,10 +7817,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Vert.x parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#metrics-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7834,11 +7827,6 @@
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -8128,8 +8116,8 @@ To alter a parameter, either set an environment parameter, if one exists (there 
 </tr>
 <tr>
 <td style="text-align: left;">vertx</td>
-<td style="text-align: left;"><a href="#vertx-parameters">vertxParameters</a></td>
-<td style="text-align: left;">Parameters to hand to the start of vert.x, see <a href="https://vertx.io/docs/apidocs/io/vertx/core/VertxOptions.html">the vert.x documentation</a> for details.</td>
+<td style="text-align: left;"><a href="#vertx-parameters">Vert.x parameters</a></td>
+<td style="text-align: left;">Parameters controlling threads and blocking threads. For more information, see <a href="https://vertx.io/docs/apidocs/io/vertx/core/VertxOptions.html">the vert.x documentation</a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">ServerDirectDBAccess</td>
@@ -8157,7 +8145,7 @@ To alter a parameter, either set an environment parameter, if one exists (there 
 <td style="text-align: left;">Set to <code>true</code> to allow local mail file</td>
 </tr>
 <tr>
-<td style="text-align: left;">⁠showDeprecatedEndpoints</td>
+<td style="text-align: left;">showDeprecatedEndpoints</td>
 <td style="text-align: left;">Boolean</td>
 <td style="text-align: left;">True to allow access to deprecated endpoints / APIs</td>
 </tr>
@@ -8189,17 +8177,17 @@ To alter a parameter, either set an environment parameter, if one exists (there 
 <tr>
 <td style="text-align: left;">TokenCookie</td>
 <td style="text-align: left;">Boolean</td>
-<td style="text-align: left;">(default <code>false</code>) Set to <code>true</code> to allow Domino REST API to send back JWT as cookie named <code>KeepToken</code>. The cookie expiry is the same as the JWT expiry. It immediately expires when logout is called.</td>
+<td style="text-align: left;">Set to <code>true</code> to allow Domino REST API to send back JWT as cookie named <code>KeepToken</code>. The cookie expiry is the same as the JWT expiry. It immediately expires when logout is called.</br></br>Default: <code>false</code></td>
 </tr>
 <tr>
 <td style="text-align: left;">AdminUIKeepLogin</td>
 <td style="text-align: left;">Boolean</td>
-<td style="text-align: left;">(default <code>true</code>) If set to <code>true</code>, displays the username and password login in the Admin UI login page. If this and <code>AdminUIOIDCLogin</code> are set to <code>false</code>, the Admin UI login page behaves as if this is set to <code>true</code>.</td>
+<td style="text-align: left;">If set to <code>true</code>, displays the username and password login in the Admin UI login page. If this and <code>AdminUIOIDCLogin</code> are set to <code>false</code>, the Admin UI login page behaves as if this is set to <code>true</code>.</br></br>Default: <code>true</code></td>
 </tr>
 <tr>
 <td style="text-align: left;">AdminUIOIDCLogin</td>
 <td style="text-align: left;">Boolean</td>
-<td style="text-align: left;">(default <code>true</code>) If set to <code>true</code>, displays the IdP logins in the Admin UI login page.</td>
+<td style="text-align: left;">If set to <code>true</code>, displays the IdP logins in the Admin UI login page.</br></br>Default: <code>true</code></td>
 </tr>
 <tr>
 <td style="text-align: left;">WopiSessionSeconds</td>
@@ -8220,6 +8208,11 @@ To alter a parameter, either set an environment parameter, if one exists (there 
 <td style="text-align: left;">WebdavLockSeconds</td>
 <td style="text-align: left;">int</td>
 <td style="text-align: left;">Duration of Webdav lock in seconds. Should be less than or the same as <code>WebdavSessionSeconds</code>. Default is <code>300</code> (5 minutes).</td>
+</tr>
+<tr>
+<td style="text-align: left;">metrics</td>
+<td style="text-align: left;"><a href="#metrics-parameters">metricsParameters</a></td>
+<td style="text-align: left;">Parameter for vert.x metrics.</td>
 </tr>
 </tbody>
 </table>
@@ -8279,7 +8272,7 @@ To alter a parameter, either set an environment parameter, if one exists (there 
 </tbody>
 </table>
 <h2 id="version-parameters">Version parameters</h2>
-<p>Versions has a named list of entries with two parameters:</p>
+<p>Versions have a named list of entries with two parameters:</p>
 <table>
 <thead>
 <tr>
@@ -8318,13 +8311,18 @@ To alter a parameter, either set an environment parameter, if one exists (there 
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">metric</td>
-<td style="text-align: left;"><a href="#metrics-parameters">metricsParameters</a></td>
-<td style="text-align: left;">Parameter for vert.x metrics.</td>
+<td style="text-align: left;">maxEventLoopExecuteTime</td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;">The maximum amount of time, in milliseconds, before Vert.x flags the event loop as blocked.</br></br>Default: 30000</td>
+</tr>
+<tr>
+<td style="text-align: left;">workerPoolSize</td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;">The maximum number of worker threads used for blocking operations.</br></br>Increase the value if blocking requests are timing out or not completing, since the worker pool is exhausted. Setting the value too high increases resource consumption and may reduce server performance if there are insufficient system resources.</br></br>Default: 20</td>
 </tr>
 </tbody>
 </table>
-<h3 id="metrics-parameters">Metrics parameters</h3>
+<h2 id="metrics-parameters">Metrics parameters</h2>
 <!--
 Here is a JSON representation of the resource:
 
@@ -8573,26 +8571,26 @@ Here is a JSON representation of the resource:
 <table>
 <thead>
 <tr>
-<th>Property</th>
-<th>Type</th>
-<th>Description</th>
+<th style="text-align: left;">Property</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>active</td>
-<td>Boolean</td>
-<td>Set to <code>true</code> to enable the use of external IdP in Admin UI login.</td>
+<td style="text-align: left;">active</td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;">Set to <code>true</code> to enable the use of external IdP in Admin UI login.</td>
 </tr>
 <tr>
-<td>client_id</td>
-<td>String</td>
-<td>External IdP client ID to use for Admin UI login. <!--defaults to <code>keepadminui</code>.--></td>
+<td style="text-align: left;">client_id</td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">External IdP client ID to use for Admin UI login. <!--defaults to <code>keepadminui</code>.--></td>
 </tr>
 <tr>
-<td>application_id_uri</td>
-<td>String</td>
-<td>An optional property. Required when external IdP is <strong>Microsoft Entra ID, formerly Azure Active Directory</strong>. Ends with a <code>/</code>.</td>
+<td style="text-align: left;">application_id_uri</td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">An optional property. Required when external IdP is <strong>Microsoft Entra ID, formerly Azure Active Directory</strong>. Ends with a <code>/</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -8600,26 +8598,26 @@ Here is a JSON representation of the resource:
 <table>
 <thead>
 <tr>
-<th>Property</th>
-<th>Type</th>
-<th>Description</th>
+<th style="text-align: left;">Property</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>active</td>
-<td>Boolean</td>
-<td>Set to <code>true</code> to enable the use of external IdP in OFBA.</td>
+<td style="text-align: left;">active</td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;">Set to <code>true</code> to enable the use of external IdP in OFBA.</td>
 </tr>
 <tr>
-<td>client_id</td>
-<td>String</td>
-<td>External IdP client ID to use for OFBA. <!--defaults to <code>keepofba</code>.--></td>
+<td style="text-align: left;">client_id</td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">External IdP client ID to use for OFBA. <!--defaults to <code>keepofba</code>.--></td>
 </tr>
 <tr>
-<td>application_id_uri</td>
-<td>String</td>
-<td>An optional property. Required when external IdP is <strong>Microsoft Entra ID, formerly Azure Active Directory</strong>. Ends with a <code>/</code>.</td>
+<td style="text-align: left;">application_id_uri</td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">An optional property. Required when external IdP is <strong>Microsoft Entra ID, formerly Azure Active Directory</strong>. Ends with a <code>/</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -8635,7 +8633,7 @@ Here is a JSON representation of the resource:
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div>
-<p>When you supply your own <code>some.json</code> in the <code>config.d</code> directory:</p>
+<p>When you supply your own <code>some.json</code> in the <code>keepconfig.d</code> directory:</p>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">&quot;versions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;setup&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="nt">&quot;active&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
@@ -8697,7 +8695,7 @@ To make an NSF file or directory, defined in the JSON object, available in the l
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 30, 2026 09:03:27 UTC">April 30, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 13, 2026 15:33:22 UTC">July 13, 2026</span>
   </span>
 
     
