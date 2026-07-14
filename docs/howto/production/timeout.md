@@ -15,6 +15,10 @@ The procedure guides you on how to change the timeout for retrieving data from D
     }
     ```
 
+    !!! warning "Important"
+
+        The `httpIdleTimeout` parameter must be defined as the sole entry in its own configuration JSON file. It must not be added to a JSON file that contains other configuration parameters, as this may result in configuration errors.
+
 3. Change the value of the `httpIdleTimeout` parameter to your preferred timeout value in seconds.
 In the example, the timeout is set to 300 seconds or 5 minutes.
 

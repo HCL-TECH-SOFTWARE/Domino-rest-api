@@ -95,6 +95,10 @@ The name of the entries must match the name used in versions of the [RestAPI ver
 
 ## Vert.x parameters
 
+!!! warning "Important"
+
+    The `maxEventLoopExecuteTime` and `workerPoolSize` parameters must be defined in their own configuration JSON file. Both parameters can be included together in the same JSON file, but the file **must not contain** any other configuration parameters, as this may result in configuration errors.
+
 |Property|Type|Description|
 |:---|:---|:---|
 |maxEventLoopExecuteTime|int|The maximum amount of time, in milliseconds, before Vert.x flags the event loop as blocked.</br></br>Default: 30000|
