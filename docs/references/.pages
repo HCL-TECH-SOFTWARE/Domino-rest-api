@@ -19,7 +19,7 @@ nav:
   - Extensibility: extensibility
 #  - parameters.md
   - sdk.md
-  - dxlAPIs.md
+  - DXL Extension APIs: dxl
   - troubleshooting.md
   - limitation.md
   - richtextension.md
