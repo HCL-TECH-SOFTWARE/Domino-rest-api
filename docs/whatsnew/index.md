@@ -19,10 +19,10 @@ The What's new contains information about the latest features, improvements, fix
 
     !!! danger "If you are upgrading from Domino REST API v1.1.2 or an earlier version, refer to important information regarding [CORS using Regex](v1.1.3.md#cors-is-now-using-regex)."
 
-    - **1** Experimental features
+    - **3** Experimental features
     - **3** New features
-    - **17** Improvements
-    - **0** Resolved issues
+    - **20** Improvements
+    <!-- **0** Resolved issues-->
     <!-- **0** New features-->
     <!-- **0** Breaking change-->
     <!-- **X** Preview features-->

@@ -67,6 +67,36 @@ We named this API in honor of an [Apache project](https://poi.apache.org/) that 
 
 [Open the `openapi.wopi.json` file](../assets/downloads/openapi.wopi.json)
 
+## CalDAV
+
+!!! warning
+
+    The CalDAV Extension APIs are experimental and not yet supported for production use.
+
+The **CalDAV Extension APIs** enable calendar interoperability by allowing clients to access and manage Domino calendar data using the CalDAV protocol.
+
+[Open the `openapi.caldav.json` file](../assets/downloads/openapi.caldav.json)
+
+## CardDAV
+
+!!! warning
+
+    The CardDAV Extension APIs are experimental and not yet supported for production use.
+
+The **CardDAV Extension APIs** enable calendar interoperability by allowing clients to access and manage Domino calendar data using the CalDAV protocol.
+
+[Open the `openapi.carddav.json` file](../assets/downloads/openapi.carddav.json)
+
+## DXL
+
+!!! warning
+
+    The DXL Extension APIs are experimental and not yet supported for production use.
+
+The **DXL Extension APIs** extends Domino design management capabilities by enabling programmatic access to Domino design elements through DXL-based operations.
+
+[Open the `openapi.dxlext.json` file](../assets/downloads/openapi.dxlext.json)
+
 ## OpenAPI extensions
 
 The OpenAPI specification is extensible, for one you can define new data types beyond [the default types](https://spec.openapis.org/oas/v3.0.3#schema-object) and you can introduce new method attributes prefixed with `x-`.
@@ -79,14 +109,10 @@ We added the following data types:
 
 ### Custom attributes
 
-| Name                  | Value                    | Purpose                                                 |
-| --------------------- | ------------------------ | ------------------------------------------------------- |
-| x-keep-version        | number                   | active since which API version, governed by config.json |
-| x-keep-nofly          | enum (SERVER,CLIENT,EOS) | In which mode client, server, light is this unavailable |
-| x-preview             | boolean                  | Is the endpoint available as preview only               |
-| x-keep-scope          | string                   | ANY, $SETUP -> scope requirements for endpoint          |
-| x-content-disposition | string                   | specify content use (attachment vs. inline)             |
-
-<!--## Let's connect
-
-"feedback.md"-->
+| Name | Value | Purpose |
+| :--- | :--- | :--- |
+| x-keep-version | number | Active since which API version, governed by `config.json` |
+| x-keep-nofly | enum (SERVER,CLIENT,EOS) | In which mode client, server, light is this unavailable |
+| x-preview | boolean | Is the endpoint available as preview only |
+| x-keep-scope | string | ANY, $SETUP -> scope requirements for endpoint |
+| x-content-disposition | string | specify content use (attachment vs. inline) |
