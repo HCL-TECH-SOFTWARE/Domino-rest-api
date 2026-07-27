@@ -1,6 +1,14 @@
 # Auth\*
 
---8<-- "pickYourAuth.md"
+## Overview
+
+There are many ways to configure an external IdP in the Domino REST API. Refer to the following table for details and refer to the [comparison](../security/idpcompare.md) for more information.
+
+|Authentication option|Description|When to use|
+|:---|:---|:---|
+|[OIDC with idpcat authentication](#oidc-with-idpcat-authentication)|Uses OpenID Connect for authentication while leveraging the Domino Identity Provider Catalog (IDPCAT) to map authenticated users to Domino identities. The IDPCAT database stores Identity Provider configurations and user mapping information, enabling Domino to associate external identities with Notes/Domino users.</br></br>This authentication option is the strongly recommended option to use.|Use when your Domino environment is configured with IDPCAT for federated authentication, or when Domino users must be mapped from external identities to existing Domino identities while maintaining Domino security and access control.|
+|[OIDC](#oidc)|Uses OpenID Connect to authenticate users through an external Identity Provider (IdP) such as Keycloak and Microsoft Entra ID. The user is redirected to the IdP to sign in, and Domino REST API trusts the returned ID and access tokens. This provides standards-based Single Sign-On (SSO) and centralized identity management.|Use when you want users to authenticate interactively via an enterprise Identity Provider that enables single sign-on and centralized identity management.|
+|[JWT Authorization](#jwt-authorization)|Uses a JSON Web Token (JWT) issued by a trusted identity provider. The Domino REST API validates the token and authorizes access based on its claims, including user identity, roles, and scopes.|Use when you have a system that authenticates users or services and can provide a trusted JWT to the Domino REST API.|
 
 ## OIDC with idpcat authentication
 
@@ -39,7 +47,7 @@ The configuration is as follows in Domino REST API:
 | `microsoft` | **Optional** - Can be used to enable MS-Azure-specific workarounds internally |
 | `allowExpired` | **Optional**- Can be used to consider even expired tokens valid. This should generally only be used during development. |
 
-!!! note 
+!!! note
 
     - You can use `oidc-idpcat` authentication in the same places that "JWT" config blocks were used previously, just with some coordination with core Domino. 
     - "JWT" will work the same on Domino 14. There's no conflict if Domino REST API and Domino have completely distinct authentication providers. 
@@ -108,7 +116,7 @@ The "oidc" is similar to "oidc-idpcat" or "jwt". The keys can be anything, like 
 
 | Items | Description |
 | :--- | :--- |
-| `active` | **Optional**, and can be useful for setting to false to temporarily disable something without deleting the config entirely. |
+| `active` | **Optional**. Set to *false* in order to disable the feature without deleting its configuration.|
 | `providerURL` | It's the OIDC-provider-specific URL. It's in a form common for Keycloak, but Azure and others look different. |
 | `clientId` | It's the configured client ID from the OIDC provider. It is strongly recommended to use `Domino` as client name. |
 | `clientSecret` | It's the generated client secret from the OIDC provider, usually a randomly-generated hex string. |
@@ -135,7 +143,7 @@ The Domino generated JWT:
 
 - Uses a random symmetric key that changes on every Domino REST API restart and is stored only in memory.
 - Works with one Domino server.
-- Can be disabled in Domino REST API configuration with `"disableDominoLogin" :true` .
+- Can be disabled in Domino REST API configuration with `"disableDominoLogin" :true`.
 
 Should Domino use a permanent JWT Key, we can use a public/private key pair and add it to the Domino REST API configuration:
 
@@ -235,7 +243,7 @@ All elements need to be present. “Audience” must be set to “Domino” and 
 - MAIL allows a request to attempt to access the mail file of a given user. Access is limited by Domino’s ACL entries.
 - $DATA allows a request to attempt to access any database configured for Domino REST API access. Access is limited by Domino’s ACL entries. Users can only access databases that grant them access in the ACL.
 <!-- - $DECRYPT (WIP) Allow to decrypt documents secured with encryption. Without that parameter no access to an ID in the ID vault is attempted. -->
-- [KeepDBAliasName] allows a request to attempt to access a database configured under that alias name. Access is limited by Domino’s ACL.
+- `KeepDBAliasName` allows a request to attempt to access a database configured under that alias name. Access is limited by Domino’s ACL.
 
 ### Distinguished Names
 
