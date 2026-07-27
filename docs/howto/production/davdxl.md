@@ -2,11 +2,15 @@
 
 ## About this task
 
-This task guides you on how to enable the CalDAV, CardDAV, and DXL extension APIs to extend Domino REST API support for calendar and contact synchronization, as well as Domino XML data exchange. By default, the CalDAV, CardDAV, and DXL extension APIs are disabled as they are **experimental and not officially supported**.
+This task guides you on how to enable the CalDAV, CardDAV, and DXL extension APIs to extend Domino REST API support for calendar and contact synchronization, as well as Domino XML data exchange.
 
-!!! note
+!!! warning "Important"
 
-    The task is only applicable starting from Domino REST API v1.1.8 release.
+    - **The CalDAV, CardDAV, and DXL Extension APIs are experimental and are provided for users to try and evaluate. They are not yet supported for production use.** 
+    
+        For any feedback, questions, or issues, you may post them in the [OpenNTF Discord channel](https://discord.com/invite/jmRHpDRnH4 "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"}.
+
+    - The task is only applicable starting from Domino REST API v1.1.8 release.
 
 ## Before your begin
 

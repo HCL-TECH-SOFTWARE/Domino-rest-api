@@ -1,0 +1,1407 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "title": "HCL Domino REST API DXL Extension APIs",
+        "version": "1.0.0",
+        "description": "Experimental : Full-featured database design management: \ndatabase properties, per-element CRUD",
+        "x-experimental": true
+    },
+    "servers": [
+        {
+            "url": "/api/dxl",
+            "description": "DXL extension API"
+        }
+    ],
+    "paths": {
+        "/database": {
+            "get": {
+                "tags": [
+                    "dxlext"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/nsfPath"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Database properties"
+                    },
+                    "404": {
+                        "description": "Database not found"
+                    }
+                },
+                "security": [
+                    {
+                        "jwt": [
+                        ]
+                    }
+                ],
+                "operationId": "getDatabaseProperties",
+                "summary": "Get database properties",
+                "description": "Returns database title, replica ID, file path, template info, and launch settings",
+                "x-keep-version": 1
+            },
+            "put": {
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/DatabaseProperties"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "tags": [
+                    "dxlext"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/nsfPath"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Import result log"
+                    },
+                    "400": {
+                        "description": "Invalid request"
+                    },
+                    "403": {
+                        "description": "Insufficient access (MANAGER required)"
+                    }
+                },
+                "security": [
+                    {
+                        "jwt": [
+                        ]
+                    }
+                ],
+                "operationId": "updateDatabaseProperties",
+                "summary": "Update database properties",
+                "description": "Updates database launch settings (open to frameset, page, etc.) and title",
+                "x-keep-version": 1
+            }
+        },
+        "/designsummary": {
+            "get": {
+                "tags": [
+                    "dxlext"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/nsfPath"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Design summary grouped by type"
+                    },
+                    "404": {
+                        "description": "Database not found"
+                    }
+                },
+                "security": [
+                    {
+                        "jwt": [
+                        ]
+                    }
+                ],
+                "operationId": "getDesignSummary",
+                "summary": "Get a full design inventory of the database",
+                "description": "Returns every design element in the database grouped by type. Each element includes its name, aliases, UNID, and note ID. No DXL is returned, keeping the response lightweight.",
+                "x-keep-version": 1
+            }
+        },
+        "/helpdoc/{docType}": {
+            "get": {
+                "tags": [
+                    "dxlext"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/nsfPath"
+                    },
+                    {
+                        "$ref": "#/components/parameters/docType"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Help document with DXL"
+                    },
+                    "400": {
+                        "description": "Invalid docType"
+                    },
+                    "404": {
+                        "description": "Help document not found in database"
+                    }
+                },
+                "security": [
+                    {
+                        "jwt": [
+                        ]
+                    }
+                ],
+                "operationId": "getHelpDocument",
+                "summary": "Get the About or Using document as DXL",
+                "description": "Exports the database's About (NoteID 0xFFFF0002) or Using (NoteID 0xFFFF0100) help document as DXL. These are special notes present in every NSF.",
+                "x-keep-version": 1
+            },
+            "put": {
+                "requestBody": {
+                    "content": {
+                        "text/xml": {
+                            "schema": {
+                                "type": "string"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "tags": [
+                    "dxlext"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/nsfPath"
+                    },
+                    {
+                        "$ref": "#/components/parameters/docType"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Import result"
+                    },
+                    "400": {
+                        "description": "Invalid DXL or docType"
+                    },
+                    "403": {
+                        "description": "Insufficient access (DESIGNER required)"
+                    }
+                },
+                "security": [
+                    {
+                        "jwt": [
+                        ]
+                    }
+                ],
+                "operationId": "updateHelpDocument",
+                "summary": "Create or replace the About or Using document",
+                "description": "Imports DXL to create or replace the database's About or Using help document. The DXL body should be a <helpaboutdocument> or <helpusingdocument> element (as produced by the GET endpoint). The imported note is signed with the current user's identity.",
+                "x-keep-version": 1
+            },
+            "delete": {
+                "tags": [
+                    "dxlext"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/nsfPath"
+                    },
+                    {
+                        "$ref": "#/components/parameters/docType"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Deletion confirmed"
+                    },
+                    "400": {
+                        "description": "Invalid docType"
+                    },
+                    "403": {
+                        "description": "Insufficient access (DESIGNER required)"
+                    },
+                    "404": {
+                        "description": "Help document not found in database"
+                    }
+                },
+                "security": [
+                    {
+                        "jwt": [
+                        ]
+                    }
+                ],
+                "operationId": "deleteHelpDocument",
+                "summary": "Delete the About or Using document",
+                "description": "Permanently removes the database's About or Using help document. The database will behave as though no help document was ever set.",
+                "x-keep-version": 1
+            }
+        },
+        "/dbicon": {
+            "get": {
+                "tags": [
+                    "dxlext"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/nsfPath"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Icon note with DXL"
+                    },
+                    "404": {
+                        "description": "Icon note not found in database"
+                    }
+                },
+                "security": [
+                    {
+                        "jwt": [
+                        ]
+                    }
+                ],
+                "operationId": "getDbIcon",
+                "summary": "Get the database icon note as DXL",
+                "description": "Exports the database icon note (NoteID 0xFFFF0010, DocumentClass.ICON) as DXL. This is the special note that controls the workspace icon — distinct from the $DBIcon image resource.",
+                "x-keep-version": 1
+            },
+            "put": {
+                "requestBody": {
+                    "content": {
+                        "text/xml": {
+                            "schema": {
+                                "type": "string"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "tags": [
+                    "dxlext"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/nsfPath"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Import result"
+                    },
+                    "400": {
+                        "description": "Invalid DXL"
+                    },
+                    "403": {
+                        "description": "Insufficient access (DESIGNER required)"
+                    }
+                },
+                "security": [
+                    {
+                        "jwt": [
+                        ]
+                    }
+                ],
+                "operationId": "updateDbIcon",
+                "summary": "Create or replace the database icon note",
+                "description": "Imports DXL to create or replace the database icon note. The DXL body should be an <iconnote> element (as produced by the GET endpoint). The imported note is signed with the current user's identity. Launch settings are automatically preserved across the replacement.",
+                "x-keep-version": 1
+            },
+            "delete": {
+                "tags": [
+                    "dxlext"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/nsfPath"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Deletion confirmed"
+                    },
+                    "403": {
+                        "description": "Insufficient access (DESIGNER required)"
+                    },
+                    "404": {
+                        "description": "Icon note not found in database"
+                    }
+                },
+                "security": [
+                    {
+                        "jwt": [
+                        ]
+                    }
+                ],
+                "operationId": "deleteDbIcon",
+                "summary": "Delete the database icon note",
+                "description": "Permanently removes the database icon note. The database will revert to the default Domino icon on the workspace.",
+                "x-keep-version": 1
+            }
+        },
+        "/{type}": {
+            "get": {
+                "tags": [
+                    "dxlext"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/nsfPath"
+                    },
+                    {
+                        "$ref": "#/components/parameters/type"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Array of design element summaries"
+                    },
+                    "400": {
+                        "description": "Unknown design type"
+                    }
+                },
+                "security": [
+                    {
+                        "jwt": [
+                        ]
+                    }
+                ],
+                "operationId": "listDesignElements",
+                "summary": "List design elements by type",
+                "description": "Returns name, UNID, note ID, and $Flags for every element of the given type. The flags field is omitted when empty.",
+                "x-keep-version": 1
+            }
+        },
+        "/frameset/{name}/layout": {
+            "get": {
+                "tags": [
+                    "dxlext"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/nsfPath"
+                    },
+                    {
+                        "$ref": "#/components/parameters/name"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Frameset layout JSON"
+                    },
+                    "404": {
+                        "description": "Frameset not found"
+                    }
+                },
+                "security": [
+                    {
+                        "jwt": [
+                        ]
+                    }
+                ],
+                "operationId": "getFramesetLayout",
+                "summary": "Get frameset layout as JSON",
+                "description": "Returns the frameset structure as an orientation/sizes/content tree",
+                "x-keep-version": 1
+            },
+            "put": {
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/FramesetLayout"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "tags": [
+                    "dxlext"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/nsfPath"
+                    },
+                    {
+                        "$ref": "#/components/parameters/name"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Import result"
+                    },
+                    "400": {
+                        "description": "Invalid layout"
+                    },
+                    "403": {
+                        "description": "Insufficient access (DESIGNER required)"
+                    }
+                },
+                "security": [
+                    {
+                        "jwt": [
+                        ]
+                    }
+                ],
+                "operationId": "putFramesetLayout",
+                "summary": "Create or replace a frameset from JSON layout",
+                "description": "Converts the JSON layout to DXL and imports it. Creates the frameset if it does not exist.",
+                "x-keep-version": 1
+            }
+        },
+        "/outline/{name}/entries": {
+            "get": {
+                "tags": [
+                    "dxlext"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/nsfPath"
+                    },
+                    {
+                        "$ref": "#/components/parameters/name"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Outline entries JSON"
+                    },
+                    "404": {
+                        "description": "Outline not found"
+                    }
+                },
+                "security": [
+                    {
+                        "jwt": [
+                        ]
+                    }
+                ],
+                "operationId": "getOutlineEntries",
+                "summary": "Get outline entry tree as JSON",
+                "description": "Returns the outline's entry hierarchy as a label/target/children tree. Supports both flat level-based and nested DXL formats, including imageref properties.",
+                "x-keep-version": 1
+            },
+            "put": {
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/OutlineEntries"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "tags": [
+                    "dxlext"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/nsfPath"
+                    },
+                    {
+                        "$ref": "#/components/parameters/name"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Import result"
+                    },
+                    "400": {
+                        "description": "Invalid entries"
+                    },
+                    "403": {
+                        "description": "Insufficient access (DESIGNER required)"
+                    }
+                },
+                "security": [
+                    {
+                        "jwt": [
+                        ]
+                    }
+                ],
+                "operationId": "putOutlineEntries",
+                "summary": "Create or replace an outline from JSON entries",
+                "description": "Converts the JSON entry tree to flat DXL with level attributes for hierarchy and imports it. Supports nested children arrays and optional imageref per entry. Creates the outline if it does not exist.",
+                "x-keep-version": 1
+            }
+        },
+        "/validate": {
+            "post": {
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "tags": [
+                    "dxlext"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/nsfPath"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Validation result — valid flag, errors array, warnings array, and raw log"
+                    }
+                },
+                "security": [
+                    {
+                        "jwt": [
+                        ]
+                    }
+                ],
+                "operationId": "validateDxl",
+                "summary": "Validate DXL without importing",
+                "description": "Two-pass validation: XML well-formedness check, then a dry-run importer pass with all options set to IGNORE so nothing is written to the database. Returns errors and warnings from the importer log.",
+                "x-keep-version": 1
+            }
+        },
+        "/import": {
+            "post": {
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "tags": [
+                    "dxlext"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/nsfPath"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Job accepted — contains jobId and initial status"
+                    },
+                    "400": {
+                        "description": "Missing or invalid DXL"
+                    },
+                    "403": {
+                        "description": "Insufficient access (DESIGNER required)"
+                    }
+                },
+                "security": [
+                    {
+                        "jwt": [
+                        ]
+                    }
+                ],
+                "operationId": "startImport",
+                "summary": "Start an async DXL import",
+                "description": "Accepts a DXL string and starts an import in the background. Returns a jobId immediately. Poll `GET /import/{jobId}` for status.",
+                "x-keep-version": 1
+            }
+        },
+        "/import/{jobId}": {
+            "get": {
+                "tags": [
+                    "dxlext"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/nsfPath"
+                    },
+                    {
+                        "name": "jobId",
+                        "description": "Job ID returned by POST /import",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Job status and result (when complete)"
+                    },
+                    "404": {
+                        "description": "Job not found or expired"
+                    }
+                },
+                "security": [
+                    {
+                        "jwt": [
+                        ]
+                    }
+                ],
+                "operationId": "getImportStatus",
+                "summary": "Poll import job status",
+                "description": "Returns the current status of an async DXL import job. Status is one of: pending, running, complete, error.",
+                "x-keep-version": 1
+            }
+        },
+        "/acl": {
+            "get": {
+                "tags": [
+                    "dxlext"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/nsfPath"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "ACL entries array and roles array"
+                    },
+                    "403": {
+                        "description": "Insufficient access (MANAGER required)"
+                    }
+                },
+                "security": [
+                    {
+                        "jwt": [
+                        ]
+                    }
+                ],
+                "operationId": "getAcl",
+                "summary": "Get database ACL",
+                "description": "Returns all ACL entries and the list of roles defined in the database",
+                "x-keep-version": 1
+            }
+        },
+        "/acl/entry/{aclEntryName}": {
+            "put": {
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AclEntry"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "tags": [
+                    "dxlext"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/nsfPath"
+                    },
+                    {
+                        "$ref": "#/components/parameters/aclEntryName"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The saved ACL entry"
+                    },
+                    "400": {
+                        "description": "Invalid level, unknown roles, or missing fields"
+                    },
+                    "403": {
+                        "description": "Insufficient access (MANAGER required)"
+                    }
+                },
+                "security": [
+                    {
+                        "jwt": [
+                        ]
+                    }
+                ],
+                "operationId": "upsertAclEntry",
+                "summary": "Create or update an ACL entry",
+                "description": "Creates the named ACL entry if it does not exist, or replaces it with the supplied level, roles, type, and flags",
+                "x-keep-version": 1
+            },
+            "delete": {
+                "tags": [
+                    "dxlext"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/nsfPath"
+                    },
+                    {
+                        "$ref": "#/components/parameters/aclEntryName"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Deletion confirmed"
+                    },
+                    "400": {
+                        "description": "Entry not found or protected"
+                    },
+                    "403": {
+                        "description": "Insufficient access (MANAGER required)"
+                    }
+                },
+                "security": [
+                    {
+                        "jwt": [
+                        ]
+                    }
+                ],
+                "operationId": "deleteAclEntry",
+                "summary": "Delete an ACL entry",
+                "description": "Removes the named entry from the ACL. -Default- and LocalDomainServers are protected and cannot be removed.",
+                "x-keep-version": 1
+            }
+        },
+        "/export": {
+            "get": {
+                "tags": [
+                    "dxlext"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/nsfPath"
+                    },
+                    {
+                        "name": "full",
+                        "description": "Set to true for a full database export (includes ACL, properties, and all design elements)",
+                        "schema": {
+                            "default": false,
+                            "type": "boolean"
+                        },
+                        "in": "query",
+                        "required": false
+                    },
+                    {
+                        "name": "types",
+                        "description": "Comma-separated list of design element types to export (e.g. form,view,frameset)",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "in": "query",
+                        "required": false
+                    },
+                    {
+                        "name": "include",
+                        "description": "Set to 'properties' to include database properties DXL alongside filtered type export",
+                        "schema": {
+                            "enum": [
+                                "properties"
+                            ],
+                            "type": "string"
+                        },
+                        "in": "query",
+                        "required": false
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "DXL export result"
+                    },
+                    "400": {
+                        "description": "Neither full nor types parameter supplied"
+                    }
+                },
+                "security": [
+                    {
+                        "jwt": [
+                        ]
+                    }
+                ],
+                "operationId": "exportDesign",
+                "summary": "Export design elements as DXL",
+                "description": "Exports design elements as a DXL `<database>` document. Defaults to a full database export when no parameters are supplied. Use `types=form,view,...` for a filtered export by element type. Combine `types` with `include=properties` to also return database properties DXL.",
+                "x-keep-version": 1
+            }
+        },
+        "/{type}/{name}": {
+            "get": {
+                "tags": [
+                    "dxlext"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/nsfPath"
+                    },
+                    {
+                        "$ref": "#/components/parameters/type"
+                    },
+                    {
+                        "$ref": "#/components/parameters/name"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Design element with DXL"
+                    },
+                    "404": {
+                        "description": "Element not found"
+                    }
+                },
+                "security": [
+                    {
+                        "jwt": [
+                        ]
+                    }
+                ],
+                "operationId": "getDesignElement",
+                "summary": "Export a single design element as DXL",
+                "description": "Returns the design element's DXL in a JSON wrapper",
+                "x-keep-version": 1
+            },
+            "put": {
+                "requestBody": {
+                    "content": {
+                        "text/xml": {
+                            "schema": {
+                                "type": "string"
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "tags": [
+                    "dxlext"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/nsfPath"
+                    },
+                    {
+                        "$ref": "#/components/parameters/type"
+                    },
+                    {
+                        "$ref": "#/components/parameters/name"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Import result"
+                    },
+                    "400": {
+                        "description": "Invalid DXL"
+                    },
+                    "403": {
+                        "description": "Insufficient access (DESIGNER required)"
+                    }
+                },
+                "security": [
+                    {
+                        "jwt": [
+                        ]
+                    }
+                ],
+                "operationId": "updateDesignElement",
+                "summary": "Import a design element from DXL",
+                "description": "Creates or replaces the named design element from a raw DXL body. The imported element is automatically signed with the current user's identity, so agents and script libraries are immediately runnable.",
+                "x-keep-version": 1
+            },
+            "delete": {
+                "tags": [
+                    "dxlext"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/nsfPath"
+                    },
+                    {
+                        "$ref": "#/components/parameters/type"
+                    },
+                    {
+                        "$ref": "#/components/parameters/name"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Deletion confirmed"
+                    },
+                    "403": {
+                        "description": "Insufficient access (DESIGNER required)"
+                    },
+                    "404": {
+                        "description": "Element not found"
+                    }
+                },
+                "security": [
+                    {
+                        "jwt": [
+                        ]
+                    }
+                ],
+                "operationId": "deleteDesignElement",
+                "summary": "Delete a design element",
+                "description": "Permanently deletes the named design element from the database",
+                "x-keep-version": 1
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "AclEntry": {
+                "required": [
+                    "level"
+                ],
+                "type": "object",
+                "properties": {
+                    "level": {
+                        "description": "Access level for this entry",
+                        "enum": [
+                            "NOACCESS",
+                            "DEPOSITOR",
+                            "READER",
+                            "AUTHOR",
+                            "EDITOR",
+                            "DESIGNER",
+                            "MANAGER"
+                        ],
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "Entry type — PERSON, GROUP, or SERVER",
+                        "enum": [
+                            "PERSON",
+                            "GROUP",
+                            "SERVER",
+                            ""
+                        ],
+                        "type": "string"
+                    },
+                    "roles": {
+                        "description": "Roles assigned to this entry (must already exist in the ACL)",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "flags": {
+                        "description": "Additional ACL flags (e.g. NODELETE_DOCUMENT, PUBLICWRITER)",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "ImportRequest": {
+                "required": [
+                    "dxl"
+                ],
+                "type": "object",
+                "properties": {
+                    "dxl": {
+                        "description": "Full DXL string to import (must include <database> wrapper)",
+                        "type": "string"
+                    },
+                    "options": {
+                        "type": "object",
+                        "properties": {
+                            "designOption": {
+                                "description": "How to handle existing design elements",
+                                "default": "replaceElseCreate",
+                                "enum": [
+                                    "replaceElseCreate",
+                                    "replaceElseIgnore",
+                                    "ignoreElseCreate",
+                                    "create",
+                                    "ignore"
+                                ],
+                                "type": "string"
+                            },
+                            "documentsOption": {
+                                "description": "How to handle documents in the DXL",
+                                "default": "ignore",
+                                "enum": [
+                                    "replaceElseCreate",
+                                    "replaceElseIgnore",
+                                    "ignoreElseCreate",
+                                    "create",
+                                    "ignore"
+                                ],
+                                "type": "string"
+                            },
+                            "replaceDbProperties": {
+                                "description": "Whether to update database-level properties from the DXL",
+                                "default": false,
+                                "type": "boolean"
+                            }
+                        }
+                    }
+                }
+            },
+            "FramesetLayout": {
+                "required": [
+                    "orientation",
+                    "sizes"
+                ],
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "Frameset name (may be omitted — taken from path param)",
+                        "type": "string"
+                    },
+                    "alias": {
+                        "type": "string"
+                    },
+                    "hide": {
+                        "description": "e.g. 'web' to hide from browser",
+                        "type": "string"
+                    },
+                    "orientation": {
+                        "enum": [
+                            "rows",
+                            "columns"
+                        ],
+                        "type": "string"
+                    },
+                    "sizes": {
+                        "description": "Size per row/column, e.g. ['239px','1','18px']",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "spacing": {
+                        "type": "string"
+                    },
+                    "borderWidth": {
+                        "type": "string"
+                    },
+                    "borderColor": {
+                        "type": "string"
+                    },
+                    "content": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/FrameContent"
+                        }
+                    }
+                }
+            },
+            "FrameContent": {
+                "required": [
+                    "type"
+                ],
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "enum": [
+                            "frame",
+                            "frameset"
+                        ],
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "Frame name (frames only)",
+                        "type": "string"
+                    },
+                    "targetFrame": {
+                        "description": "Default target frame for links",
+                        "type": "string"
+                    },
+                    "scrolling": {
+                        "enum": [
+                            "never",
+                            "always",
+                            "auto"
+                        ],
+                        "type": "string"
+                    },
+                    "border3d": {
+                        "type": "boolean"
+                    },
+                    "marginWidth": {
+                        "type": "string"
+                    },
+                    "marginHeight": {
+                        "type": "string"
+                    },
+                    "target": {
+                        "type": "object",
+                        "properties": {
+                            "kind": {
+                                "enum": [
+                                    "page",
+                                    "view",
+                                    "form",
+                                    "frameset",
+                                    "url"
+                                ],
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "orientation": {
+                        "description": "Nested framesets only",
+                        "enum": [
+                            "rows",
+                            "columns"
+                        ],
+                        "type": "string"
+                    },
+                    "sizes": {
+                        "description": "Nested framesets only",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "spacing": {
+                        "description": "Nested framesets only",
+                        "type": "string"
+                    },
+                    "content": {
+                        "description": "Nested framesets only",
+                        "type": "array",
+                        "items": {
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "OutlineEntries": {
+                "required": [
+                    "entries"
+                ],
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "Outline name (may be omitted — taken from path param)",
+                        "type": "string"
+                    },
+                    "alias": {
+                        "type": "string"
+                    },
+                    "entries": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/OutlineEntry"
+                        }
+                    }
+                }
+            },
+            "OutlineEntry": {
+                "required": [
+                    "label"
+                ],
+                "type": "object",
+                "properties": {
+                    "label": {
+                        "description": "Display text for this entry",
+                        "type": "string"
+                    },
+                    "alias": {
+                        "type": "string"
+                    },
+                    "frame": {
+                        "description": "Target frame name for links opened from this entry",
+                        "type": "string"
+                    },
+                    "expanded": {
+                        "description": "Whether this entry is expanded by default",
+                        "type": "boolean"
+                    },
+                    "imageref": {
+                        "description": "Image resource name displayed next to this entry (e.g. 'view.png')",
+                        "type": "string"
+                    },
+                    "target": {
+                        "description": "Where this entry navigates to",
+                        "type": "object",
+                        "properties": {
+                            "kind": {
+                                "enum": [
+                                    "view",
+                                    "form",
+                                    "page",
+                                    "frameset",
+                                    "navigator",
+                                    "url"
+                                ],
+                                "type": "string"
+                            },
+                            "name": {
+                                "description": "Design element name (all kinds except url)",
+                                "type": "string"
+                            },
+                            "url": {
+                                "description": "URL (kind=url only)",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "children": {
+                        "description": "Nested outline entries — same structure as parent entries",
+                        "type": "array",
+                        "items": {
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "DatabaseProperties": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "description": "Database title",
+                        "type": "string"
+                    },
+                    "notes": {
+                        "description": "Notes client launch settings",
+                        "type": "object",
+                        "properties": {
+                            "whenOpened": {
+                                "description": "What to open when the database is opened in Notes",
+                                "enum": [
+                                    "openaboutdocument",
+                                    "openframeset",
+                                    "restorelastview",
+                                    "openfirstdocument",
+                                    "openpage",
+                                    "openxpage",
+                                    "opencompapp"
+                                ],
+                                "type": "string"
+                            },
+                            "framesetName": {
+                                "description": "Frameset to open (whenOpened=openframeset)",
+                                "type": "string"
+                            },
+                            "pageName": {
+                                "description": "Page to open (whenOpened=openpage)",
+                                "type": "string"
+                            },
+                            "showAboutDocument": {
+                                "enum": [
+                                    "firstopen",
+                                    "firstopenandchanged",
+                                    "never"
+                                ],
+                                "type": "string"
+                            },
+                            "restoreLastView": {
+                                "type": "boolean"
+                            },
+                            "previewDefault": {
+                                "enum": [
+                                    "bottom",
+                                    "bottomright",
+                                    "right"
+                                ],
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "web": {
+                        "description": "Web browser launch settings",
+                        "type": "object",
+                        "properties": {
+                            "whenOpened": {
+                                "enum": [
+                                    "page",
+                                    "view",
+                                    "url",
+                                    "doclink"
+                                ],
+                                "type": "string"
+                            },
+                            "target": {
+                                "description": "Page name, view name, or URL depending on whenOpened",
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "parameters": {
+            "nsfPath": {
+                "name": "nsfPath",
+                "description": "Relative path to the NSF file on the Domino server",
+                "schema": {
+                    "type": "string"
+                },
+                "in": "query",
+                "required": true
+            },
+            "type": {
+                "name": "type",
+                "description": "Design element type: form, subform, view, folder, frameset, page, agent, scriptlibrary, sharedfield, sharedcolumn, navigator, outline, imageresource, fileresource",
+                "schema": {
+                    "type": "string"
+                },
+                "in": "path",
+                "required": true
+            },
+            "name": {
+                "name": "name",
+                "description": "Name of the design element",
+                "schema": {
+                    "type": "string"
+                },
+                "in": "path",
+                "required": true
+            },
+            "docType": {
+                "name": "docType",
+                "description": "Help document type: 'about' (NoteID 0xFFFF0002) or 'using' (NoteID 0xFFFF0100)",
+                "schema": {
+                    "enum": [
+                        "about",
+                        "using"
+                    ],
+                    "type": "string"
+                },
+                "in": "path",
+                "required": true
+            },
+            "aclEntryName": {
+                "name": "aclEntryName",
+                "description": "ACL entry name (e.g. CN=User/O=Org, -Default-, a group name)",
+                "schema": {
+                    "type": "string"
+                },
+                "in": "path",
+                "required": true
+            }
+        },
+        "securitySchemes": {
+            "jwt": {
+                "scheme": "bearer",
+                "type": "http",
+                "description": "Token based auth"
+            }
+        }
+    },
+    "security": [
+        {
+            "jwt": [
+            ]
+        },
+        {
+
+        }
+    ],
+    "tags": [
+        {
+            "name": "dxlext",
+            "description": "DXL extension: database design management"
+        }
+    ]
+}
