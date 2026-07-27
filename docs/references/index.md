@@ -84,13 +84,13 @@ List of tools you can use when dealing with REST APIs.
 
 List of available Domino REST API SDKs
 
-## [DXL extension APIs endpoints](dxl/index.md)
+## [DXL Extension API](dxl/index.md)
 
 !!! warning "Important"
 
     **The DXL Extension API is experimental and is provided for users to try and evaluate. It is not yet supported for production use.**
 
-Describes the DXL extension API endpoints, including their HTTP method, path, required ACL, and purpose.
+Introduces the DXL Extension API, its capabilities, endpoints, and current features.
 
 ## [Troubleshooting](troubleshooting.md)
 

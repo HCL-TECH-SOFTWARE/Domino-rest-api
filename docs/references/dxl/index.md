@@ -8,7 +8,7 @@
 
     For any feedback, questions, or issues, you may post them in the [OpenNTF Discord channel](https://discord.com/invite/jmRHpDRnH4 "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"}.
 
-This topic introduces the DXL Extension API, its capabilities, and current features.
+This topic introduces the DXL Extension API, its capabilities, endpoints, and current features.
 
 ## [DXL Extension API guide](dxlguide.md)
 
