@@ -33,7 +33,7 @@ In this example, you will learn and create a realm, a user, client scopes, clien
 1. Login to Keycloak.
 2. Create a realm.
 
-      1. Click the **Keycloak** dropdown menu at the top left corner, and then click **Create Realm**.
+      1. Click the **Keycloak** dropdown menu in the top left corner, and then click **Create Realm**.
 
          ![Create realm](../../assets/images/keyrealm.png)
 
@@ -63,7 +63,7 @@ In this example, you will learn and create a realm, a user, client scopes, clien
          Creating an attribute is optional. `CN` is used here to store the Domino style name, such as `CN=John Doe/O=Mauraders`.
 
          1. Click **Create Attribute**.
-         2. Fill in the fields applicable to your project. Mandatory fields are marked with with red asterisk <span style="color: red;">\*</span>.
+         2. Fill in the fields applicable to your project. Mandatory fields are marked with red asterisk <span style="color: red;">\*</span>.
 
          3. Fill in the **Attribute name**. For example `CN`
 
@@ -85,7 +85,7 @@ In this example, you will learn and create a realm, a user, client scopes, clien
 
          ![Create users screen](../../assets/images/keyusers.png)
 
-      3. Fill in the mandatory fields as minimum requirements to save. You can see here the user profile **attribute** you created on the **Realm Settings**. For example, _Domino common name_. For a direct access grant you must have first name, last name and eMail, even if they're not marked mandatory.
+      3. Fill in the mandatory fields as minimum requirements to save. You can see here the user profile **attribute** you created on the **Realm Settings**. For example, _Domino common name_. For direct access grant, you must provide a first name, a last name, and an email, even if they're not marked mandatory.
 
          Fill in the following:
 
@@ -105,7 +105,7 @@ In this example, you will learn and create a realm, a user, client scopes, clien
 
       5. On your user details, for example user `harrychen`, click the **Credential** tab.
 
-         You need configure [User credentials](https://www.keycloak.org/docs/latest/server_admin/#ref-user-credentials_server_administration_guide). For this example username and password are used, but it could be a social or federated login. Check [Keycloak](https://www.keycloak.org/docs/latest/server_admin/#ref-user-credentials_server_administration_guide) for details.
+         You need to configure [User credentials](https://www.keycloak.org/docs/latest/server_admin/#ref-user-credentials_server_administration_guide). For this example username and password are used, but it could be a social or federated login. Check [Keycloak](https://www.keycloak.org/docs/latest/server_admin/#ref-user-credentials_server_administration_guide) for details.
 
          1. Click **Set password**.
 
@@ -169,19 +169,19 @@ In this example, you will learn and create a realm, a user, client scopes, clien
 
       4. On **Login Settings** section, click **Save**.
 
-         ![login settings and save screen](../../assets/images/keyURI.png)
+         ![Login settings and save screen](../../assets/images/keyURI.png)
 
 7. On the saved client's ID, for example **thespian**, click **Clients scopes** tab.
 
-   1. Click the **thespian-dedicated**. This is the client's dedicated scope once the client is created. It is used to hold mappers that are independent from scopes, like user attributes.
+   1. Click the **thespian-dedicated**. This is the client's dedicated scope once the client is created. It is used to hold mappers that are independent of scopes, like user attributes.
 
       ![Add client scope screen](../../assets/images/keydedicated.png)
 
    2. Click **Configure new mapper** or if there are existing mappers, click **Add mappers** &rarr; **by Configuration**. You need to add few mappers inside the dedicated client scope.
 
-      In this example, you need to have 2 **Audience** mappers and 1 **User Atrribute**, inside the **thespian-dedicated** client scope.
+      In this example, you need to have 2 **Audience** mappers and 1 **User Attribute**, inside the **thespian-dedicated** client scope.
 
-      ![add a new new mapper screen](../../assets/images/keynewmapper.png)
+      ![Add a new mapper screen](../../assets/images/keynewmapper.png)
 
       Mapper-1 as **Audience** mapper
 
@@ -206,12 +206,13 @@ In this example, you will learn and create a realm, a user, client scopes, clien
       Mapper-3 as **User Attribute** mapper
 
       1. Click the **User Attribute** mapping in the list.
-      2. Fill in the mapper name, for example `DominoNameAttr`.
-      3. Fill in the **User Attribute**, as `CN`.
-      4. Fill in the **Token Claim Name** as `CN`.
-      5. Choose `String`from the dropdown menu of **Claim JSON Type**.
-      6. Set **Add to access token** toggle to `On` position.
-      7. Click **Save**.
+      2. Fill in the:
+         - mapper name, for example `DominoNameAttr`.
+         - **User Attribute**, as `CN`.
+         - **Token Claim Name** as `CN`.
+      3. Choose `String`from the dropdown menu of **Claim JSON Type**.
+      4. Set **Add to access token** toggle to `On` position.
+      5. Click **Save**.
 
          ![Mapper-3](../../assets/images/keymapper3.png)
 
@@ -223,17 +224,17 @@ In this example, you will learn and create a realm, a user, client scopes, clien
 
       2. Click the **Add client scope**.
 
-         ![add client scope screen](../../assets/images/keyaddscopes.png)
+         ![Add client scope screen](../../assets/images/keyaddscopes.png)
 
       3. Check the name of the client scopes you would like to add on your **thespian** client scope, for example `demo` and `$DATA`, and click **Add** and choose **Default** option.
 
-         ![add client scopes to client ](../../assets/images/keycommon.png)
+         ![Add client scopes to client ](../../assets/images/keycommon.png)
 
       4. Click **Client Scope** &rarr; **Evaluate** tab.
       5. Fill in or select applicable **Users**.
       6. Click **Generated access token**.
 
-         ![generate access token screen](../../assets/images/keyevaluate.png)
+         ![Generate access token screen](../../assets/images/keyevaluate.png)
 
 ## SPA applications
 
@@ -247,7 +248,7 @@ An SPA (Single Page App) or a mobile client can't keep a client secret. For thos
 
 ## Configure the Domino REST API
 
-You can find the full explanation [here](./configuringIdentityProvider.md). For the short version:
+For the full explanation, see [Configure an identity provider](./configuringIdentityProvider.md). For the short version:
 
 - Create a JSON file in `keepconfig.d` to contain the Keycloak related information.
 - Restart the Domino REST API.
@@ -268,11 +269,11 @@ where:
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | jwt         | Indicates that the config belongs to JWT                                                                                      |
 | Ameca       | The sample Keycloak realm name. It must be unique in the jwt key. Replace it with your chosen realm                           |
-| providerUrl | Points to Keycloak's endpoint with the public key. Note that the last segment is the realm name. The string is case sensitive |
+| providerUrl | Points to Keycloak's endpoint with the public key. Note that the last segment is the realm name. The string is case-sensitive. |
 
 !!! note
 
-    Keycloak's `providerUrl` is different from the general IdP practise to use `/.well-known/openid-configuration`, mainly since Keycloak can handle multiple realms, the well-known approach can't handle. Hence you need ro use `/auth/realms/[RealmName]`
+    Keycloak's `providerUrl` is different from the general IdP practice to use `/.well-known/openid-configuration`, mainly since Keycloak can handle multiple realms, the well-known approach can't handle. Hence you need ro use `/auth/realms/[RealmName]`
 
 ## Expected result
 
@@ -287,8 +288,8 @@ where:
 
 1. Modify the token endpoint of via POST with this `{{server}}/realms/{{realm}}/protocol/openid-connect/token`
 
-   - server: Your Keycloak server.
-   - realm: Your realm name, for example Ameca.
+   - server: your Keycloak server
+   - realm: your realm name, for example Ameca
 
 2. In the `Body`, provide the `client_id`, `client_secret`, `grant_type`, `user_name` and `password` from your Keycloak.
 3. Click **Send**.
@@ -332,6 +333,6 @@ PAYLOAD: DATA
 }
 ```
 
-which has the same result in the Keycloak **generated access token**.
+It has the same result in the Keycloak **generated access token**.
 
 ![Keycloak generated access token](../../assets/images/keyresult.png)

@@ -41,61 +41,14 @@ Check the [Metrics parameters](../../references/configuration/parameters.md#metr
 
 ## Additional information
 
-### Collected metrics
+Out-of-the-box, Vert.x automatically collects various of metrics related to JVM, CPU, thread pools, HTTP servers, and the event bus. In addition to these standard Vert.x metrics, there are metrics specific to Domino REST API. Refer to the following table for the collected metrics and tags.
 
-Out-of-the-box, Vert.x automatically collects various of metrics related to JVM, CPU, thread pools, HTTP servers, and the event bus.
-
-In addition to these standard Vert.x metrics, there are metrics specific to Domino REST API. The following metrics and tags are collected:
-
-- Unauthenticated or badly authenticated requests counter (`keep.unauthenticated.request.count`)
-
-    Tags:
-
-    - `className` (source class name)
-    - `errorClassName` (error class name)
-
-- API requests counter (`keep.web.handler.requests.total`)
-
-    Tags:
-
-    - `route` (such as `api.v1`, `api.admin.v1`) 
-    - `operationId` (such as `fetchjwt`)
-
-- Database-facing handlers requests counter (`keep.database.handler.count`)
-
-    Tags:
-
-    - `className` (source class name)
-    - `keepDatabase` (Domino REST API database queried)
-    - `type` (requests type: application, basic auth, user token)
-
-- Erroring requests to database-facing handlers counter (`keep.database.handler.errors.count`) 
-
-    Tags:
-
-    - `classname` (source class name)
-    - `keepdatabase` (Domino REST API database queried)
-    - `type` (requests type: application, basic auth, user token)
-
-- Database-facing handler request duration timer (`keep.database.handler.duration`). 
-
-    Tags:
-
-    - `className` (source class name)
-    - `keepDatabase` (Domino REST API database queried)
-
-- Server-side application request counter (`keep.application.requests.count`)
-
-    Tags:
-
-    - `className` (source class name)
-    - `keepDatabase` (Domino REST API database queried)
-    - `appId` (ID of the Domino REST API Application making the request)
-
-- View entries requested cpunter (`keep.database.handler.entries.count`) 
-
-    Tags:
-  
-    - `className` (source class name)
-    - `keepDatabase` (Domino REST API database queried)
-    - `type` (requests type: application, basic auth, user token)
+|Metric|Description|Tags|
+|:---|:---|:---|
+|`keep.unauthenticated.request.count`|Unauthenticated or badly authenticated requests counter| `className` (source class name)</br>`errorClassName` (error class name)|
+|`keep.web.handler.requests.total`|API requests counter|`route` (such as `api.v1`, `api.admin.v1`)</br>`operationId` (such as `fetchjwt`)|
+|`keep.database.handler.count`|Database-facing handlers requests counter|`className` (source class name)</br>`keepDatabase` (Domino REST API database queried)</br>`type` (requests type: application, basic auth, user token)|
+|`keep.database.handler.errors.count`|Failing requests to database-facing handlers counter|`classname` (source class name)</br>`keepdatabase` (Domino REST API database queried)</br>`type` (requests type: application, basic auth, user token)|
+|`keep.database.handler.duration`|Database-facing handler request duration timer|`className` (source class name)</br>`keepDatabase` (Domino REST API database queried)|
+|`keep.application.requests.count`|Server-side application request counter|`className` (source class name)</br>`keepDatabase` (Domino REST API database queried)</br>`appId` (ID of the Domino REST API Application making the request)|
+|`keep.database.handler.entries.count`|View entries requested counter|`className` (source class name)</br>`keepDatabase` (Domino REST API database queried)</br>`type` (requests type: application, basic auth, user token)|

@@ -1,4 +1,4 @@
-# Enable CalDav, CardDav, and DXL extension APIs
+# Enable CalDAV, CardDAV, and DXL extension APIs
 
 ## About this task
 

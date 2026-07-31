@@ -21,11 +21,11 @@ The procedure guides you in making changes to the Domino ID vault configuration,
 !!!note
     The steps require you to define your OIDC provider for Domino REST API. In this case, we'll be using a Keycloak installation as an example. If you haven't yet set up Keycloak, see [Configure Keycloak](../IdP/configuringKeycloak.md) before proceeding.
 
-### 1. Configure Keycloak.
+### 1. Configure Keycloak
 
-You need to make some modifications in your Keycloack installation to allow access to the IDs in the ID Vault.
+You need to make some modifications in your Keycloak installation to allow access to the IDs in the ID Vault.
 
-1. In Keycloack, choose the realm you created as part of the Keycloak setup and then go to **Client Scopes**.
+1. In Keycloak, choose the realm you created as part of the Keycloak setup and then go to **Client Scopes**.
 2. Create a client scope.
 
     1. Click **Create client scope**.
@@ -74,20 +74,20 @@ You need to make some modifications in your Keycloack installation to allow acce
     - Get the Client Secret.
 
         1. Clicking **Clients** and then select your Client.
-        2. Click the **Credentials** tab. 
+        2. Click the **Credentials** tab.
         3. In the **Client Secret** field, click the **Copy to clipboard** icon to copy to clipboard the client secret.
 
     - Get the Base URL.
 
         1. Go to **Realm settings**.
         2. At the bottom of the **General** tab, click the `OpenID Endpoint Configuration` link. A JSON will display.
-        3. Find the key `"issuer"`, it's value is the value of the Base URL.  
+        3. Find the key `"issuer"`, its value is the value of the Base URL.  
 
-### 2. Update `notes.ini`.
+### 2. Update `notes.ini`
 
 - Add `$$TEST_JWTIDVAULT=1` to the Domino Administrator client's `notes.ini` and restart Domino Administrator. This is necessary for certain functionalities to be exposed.
 
-### 3. Configure Domino.
+### 3. Configure Domino
 
 1. Go to **People / Policies / Settings** and edit the **Security Settings** document for the vault.  
   
@@ -132,7 +132,7 @@ You need to make some modifications in your Keycloack installation to allow acce
 
     4. Save and close.
   
-### 4. Configure Domino REST API.
+### 4. Configure Domino REST API
 
 When you configured Keycloak using the documentation, it had you set a configuration setting in the `keepconfig.d` directory. You'll be modifying this same file because it needs to change a little based on the following configuration. If you didn't create this configuration, create a new JSON file in `keepconfig.d` that contains the following configuration.
 
@@ -158,6 +158,6 @@ When you configured Keycloak using the documentation, it had you set a configura
 - The `providerUrl` is the Base URL you took earlier from Keycloak.
 - The `additionalClientIds` array should contain the client name you took earlier from Keycloak.
 
-### 5. Restart Domino.
+### 5. Restart Domino
 
 You need to restart Domino.

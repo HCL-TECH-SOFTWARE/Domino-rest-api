@@ -2,7 +2,7 @@
 
 ## About this task
 
-Guides you on how to identify known users with valid JWT tokens. 
+Guides you on how to identify known users with valid JWT tokens.
 
 ## Before you begin
 
@@ -15,15 +15,15 @@ You must have access to the **Management console**.
 ## Procedure
 
 1. Log in to the **Management console** (Port 8889).
-   
+
     ![Management console](../../assets/images/mngmntconsole.png)
 
-2. Click **Users**. The **Known users with valid JWT Token** page opens. 
+2. Click **Users**. The **Known users with valid JWT Token** page opens.
 
     ![Known users with valid JWT Token page](../../assets/images/mcuser1.png)
 
     The **Known users with valid JWT Token** page includes the following columns:
-    
+
     |Column name     |Description|
     |:---|:---|
     |User|It shows the usernames, in the canonical format, of known users who have or had valid JWT tokens.|

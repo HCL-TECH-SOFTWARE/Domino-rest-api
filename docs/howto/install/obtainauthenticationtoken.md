@@ -11,11 +11,11 @@ The container images <!--and Helm charts-->for Domino REST API can be pulled fro
 2. On the login page, click **LOGIN VIA OIDC Provider**, and then login using your corporate email address.
 3. On the **Projects** page, click your username and select **User Profile**.
 
-    ![user profile](../../assets/images/harborproject.png)
+    ![User profile](../../assets/images/harborproject.png)
 
 4. On the **User Profile** dialog, copy the value of the **CLI secret** by clicking the copy icon.
 
-    ![user profile dialog](../../assets/images/userprofile.png)
+    ![User profile dialog](../../assets/images/userprofile.png)
 
 5. Save the **CLI secret** value as you will use it as your authentication token or password when using Docker or Helm CLI to access HCL Container Repository.
-6. Take note of exactly how your email address or username is written in the **User Profile** dialog as authentication is case sensitive on the user email.
+6. Take note of exactly how your email address or username is written in the **User Profile** dialog as authentication is case-sensitive on the user email.

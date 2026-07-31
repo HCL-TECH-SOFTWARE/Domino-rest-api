@@ -1,4 +1,4 @@
-# Adjust number of retrieved entries when pulling in view data 
+# Adjust number of retrieved entries when pulling in view data
 
 ## About this task
 
@@ -33,7 +33,7 @@ For example, to retrieve all the entries from a view with 1350 entries, execute 
 
 `(hostName)/api/v1/lists/(viewName)?dataSource=(scope)&start=1000`
 
-This returns the remaining 350 entries not included in the returned entries in the first API request. 
+This returns the remaining 350 entries not included in the returned entries in the first API request.
 
 **Using the Swagger UI**
 

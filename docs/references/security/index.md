@@ -8,7 +8,7 @@ Here are what we implemented:
 
 - [Open Standards](../standards.md#standards) are used wherever appropriate. Standards enjoy more scrutiny from more eyeballs.
 
-- Domino REST API uses the [Eclipse Vert.x Framework](https://vertx.io), which supports many different versions of [SSL certificates](https://vertx.io/docs/vertx-core/java/#ssl) such as:
+- Domino REST API uses the [Eclipse Vert.x Framework](https://vertx.io), which supports different versions of [SSL certificates](https://vertx.io/docs/vertx-core/java/#ssl) such as:
 
     - [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail)
 

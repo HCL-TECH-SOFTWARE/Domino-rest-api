@@ -10,7 +10,7 @@ This page documents the creation of those keys. Check the [security](./index.md)
 
 ## HTTPs certificates for Domino REST API ports
 
-When your server is facing the internet or you can't distribute custom (root) CAs (certificate authorities) to your users, you should consider using a certificate from an official source such as [LetsEncrypt](https://letsencrypt.org/). (This documentation does not describe how to do that.) You can run Domino REST API without encryption; however, in a production environment this is not recommended, unless you run on a container service like Kubernetes or OpenShift, where the container handles encryption.
+When your server is facing the internet, or you can't distribute custom (root) CAs (certificate authorities) to your users, you should consider using a certificate from an official source such as [Let's Encrypt](https://letsencrypt.org/). (This documentation does not describe how to do that.) You can run Domino REST API without encryption; however, in a production environment this is not recommended, unless you run on a container service like Kubernetes or OpenShift, where the container handles encryption.
 
 If you create your own CA, you must:
 
@@ -21,7 +21,7 @@ If you create your own CA, you must:
 - Make the public key of the root and intermediate certificates available.
 - Import these certificates in all browsers and runtimes used for testing.
 
-Follow the [detailed instructions](https://www.wissel.net/blog/2019/10/create-your-own-ca.html) and the [follow up](https://www.wissel.net/blog/2019/10/a-certificate-wants-a-san.html).
+Follow the [detailed instructions](https://www.wissel.net/blog/2019/10/create-your-own-ca.html) and the [follow-up](https://www.wissel.net/blog/2019/10/a-certificate-wants-a-san.html).
 
 Again, **it's generally better to use [LetsEncrypt](https://letsencrypt.org/)**.
 
@@ -61,7 +61,7 @@ openssl ec -in privatekey.pem -pubout -out publickey.pem
 
 Check how to use the [Management Console for encryption operations](../../howto/management/encryptionops.md) to learn more.
 
-You can also check the [JWT Multi-Server](../../howto/management/jwtmultiserver.md) guide to learn how to set up Domino REST API on multiple Domino servers to use the same JWT keys.
+You can also check the [JWT multiserver](../../howto/management/jwtmultiserver.md) guide to learn how to set up Domino REST API on multiple Domino servers to use the same JWT keys.
 <!--
 ## Using the Management Console for encryption operations
 

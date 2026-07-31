@@ -11,7 +11,7 @@ When none of the existing IdP solutions fit your needs, you can use a custom pro
 
 ## Sample function
 
-This function turns a given user name and scope into a signed JWT token.
+This function turns a given username and scope into a signed JWT token.
 
 ```js
 const template = require('./template.json');
@@ -48,7 +48,7 @@ Error handling omitted for clarity.
 
 ## Dependencies
 
-This the relevant part of the `package.json`.
+This is the relevant part of the `package.json`.
 
 ```json
 "dependencies": {

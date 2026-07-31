@@ -2,7 +2,7 @@
 
 <!--Make yourself familiar with [Schema and Scope](schemascope.md) to make full use of this article.-->
 
-A schema stores meta data, form definitions, view definitions, and agent definitions. All are expressed in JSON, based as far as possible on [OpenAPI specification](https://swagger.io/specification/).
+A schema stores metadata, form definitions, view definitions, and agent definitions. All are expressed in JSON, based as far as possible on [OpenAPI specification](https://swagger.io/specification/).
 
 ## Form definitions
 
@@ -24,8 +24,6 @@ References
 ## View definitions
 
 A view definition configures view visibility and the selection and naming of the view columns. It's an array of entries describing the name or alias, if any, and UNID of the view design element. Views show all columns contained.
-
-### Useful links
 
 Tutorials
 
@@ -51,8 +49,6 @@ Suitable agents can be called from the Domino REST API.
 
     The API doesn't check if the agent is suitable for being called individually. It's the developer's responsibility to ensure this.
 
-### Useful links
-
 Tutorials
 
 - [Manage database agents](../../tutorial/adminui.md#manage-database-agents)
@@ -68,12 +64,10 @@ References
 - [Agent processing](../../topicguides/agents.md)
 - [Running Agents](../../topicguides/agents.md#running-agents)
 
+<!--
 ## Meta data
 
 !!! info
 
     Section under development
-
-<!--## Let's connect
-
-"feedback.md"-->
+-->

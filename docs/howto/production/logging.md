@@ -16,7 +16,7 @@ Guides you on how to create your own logging configuration to meet your requirem
 
 ## Before you begin
 
-Familiarity with [Apache log4j2](https://logging.apache.org/log4j/2.x/) is strongly recommended. 
+Familiarity with [Apache log4j2](https://logging.apache.org/log4j/2.x/) is strongly recommended.
 
 ## Procedure
 
@@ -40,6 +40,5 @@ Familiarity with [Apache log4j2](https://logging.apache.org/log4j/2.x/) is stron
 - The "`jar`" component is included in your Java installation. If your path doesn't lead there, indicate the directory to your `java\bin folder.`
 - Specify the version of your `keep-core jar` file if you want to extract the default `log4j2.properties` file
 - Remove the `log4j2.properties` file from your Rest API directory to avoid potential issues with upgrades.
-- The `log4j.properites` file for the Domino REST API may change without prior notice. When you observe any differences in the logging behavior after a recent upgrade, extract and review the updated `log4j` file.
-
+- The `log4j.properties` file for the Domino REST API may change without prior notice. When you observe any differences in the logging behavior after a recent upgrade, extract and review the updated `log4j` file.
 - Check out the [Log4J documentation](https://logging.apache.org/log4j/log4j-2.0-beta7/manual/appenders.html) for details on the available settings.

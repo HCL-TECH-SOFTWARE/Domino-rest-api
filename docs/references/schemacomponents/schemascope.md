@@ -2,7 +2,7 @@
 
 To use the Domino REST API effectively, it’s important to understand a few key concepts, how they apply, and who is responsible for managing them.
 
-To effectively operate Domino REST API, you needs to be familiar with a the following terms, their application, and the range of responsibility.
+To effectively operate Domino REST API, you need to be familiar with the following terms, their application, and the range of responsibility.
 
 ## Schema
 
@@ -53,7 +53,3 @@ References
 - [Scope Management](../usingwebui/scopeui.md)
 - [Databases, schemas and scopes](../../topicguides/understanding.md#databases-schemas-and-scopes)
 - [Form and Alias handling](../usingdominorestapi/formnames.md)
-
-<!--## Let's Connect
-
-"feedback.md"-->

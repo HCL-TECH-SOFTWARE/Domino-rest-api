@@ -39,7 +39,7 @@ The configuration is as follows in Domino REST API:
 | `microsoft` | **Optional** - Can be used to enable MS-Azure-specific workarounds internally |
 | `allowExpired` | **Optional**- Can be used to consider even expired tokens valid. This should generally only be used during development. |
 
-!!! note 
+!!! note
 
     - You can use `oidc-idpcat` authentication in the same places that "JWT" config blocks were used previously, just with some coordination with core Domino. 
     - "JWT" will work the same on Domino 14. There's no conflict if Domino REST API and Domino have completely distinct authentication providers. 
@@ -108,7 +108,7 @@ The "oidc" is similar to "oidc-idpcat" or "jwt". The keys can be anything, like 
 
 | Items | Description |
 | :--- | :--- |
-| `active` | **Optional**, and can be useful for setting to false to temporarily disable something without deleting the config entirely. |
+| `active` | **Optional** Can be setting to `false` to temporarily disable something without deleting the config entirely. |
 | `providerURL` | It's the OIDC-provider-specific URL. It's in a form common for Keycloak, but Azure and others look different. |
 | `clientId` | It's the configured client ID from the OIDC provider. It is strongly recommended to use `Domino` as client name. |
 | `clientSecret` | It's the generated client secret from the OIDC provider, usually a randomly-generated hex string. |
@@ -135,7 +135,7 @@ The Domino generated JWT:
 
 - Uses a random symmetric key that changes on every Domino REST API restart and is stored only in memory.
 - Works with one Domino server.
-- Can be disabled in Domino REST API configuration with `"disableDominoLogin" :true` .
+- Can be disabled in Domino REST API configuration with `"disableDominoLogin" :true`.
 
 Should Domino use a permanent JWT Key, we can use a public/private key pair and add it to the Domino REST API configuration:
 
@@ -177,7 +177,7 @@ If your provider supports the [`/.well-known/openid-configuration` endpoint](htt
 
 During initialization, Domino REST API will query this endpoint for issuer and key information to trust public keys from that service.
 
-Some IdP, such as [Microsoft Entra ID formerly Azure Active Directory](../../howto/IdP/configuringAD.md), don't provide full information, missing algorithm or accurate issuer info. For them, additional parameters `aud`, `iss` and `algoritm` can be specified.
+Some IdP, such as [Microsoft Entra ID formerly Azure Active Directory](../../howto/IdP/configuringAD.md), don't provide full information, missing algorithm or accurate issuer info. For them, additional parameters `aud`, `iss` and `algorithm` can be specified.
 
 ```json
 {

@@ -13,7 +13,6 @@ Domino REST API is preconfigured with settings that allow you to get started rig
          - Make sure the **Management console** is secure. For more information, see [Functional Accounts](../../references/functionalUsers.md).
          - Credentials for the **Management console** aren't managed by the configured IdP, but are derived from the [configuration of functional accounts](../../references/functionalUsers.md).
 
-
 - Get a better understanding of the core configuration concepts and parameters that enable effective management and customization of the Domino REST API by checking the following topics:
 
     - [Configuration management and overlay hierarchy](../../references/configuration/understandingconfig.md)

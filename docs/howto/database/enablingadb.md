@@ -22,16 +22,17 @@ The Domino REST API doesn't expose any database to HTTP(S) by default. Enabling 
 
 The schema defines what views, folders, document, and agents can be accessed through the Domino REST API. Access to documents is controlled by accessing their `Form` item and use the value to lookup access definitions, called `Mode` in Domino REST API's lingo that define the item names and properties accessible read- or writable.
 
-Since the exact terminology is long winded and colloquially often no distinction is made between document/item and form/field, the short version is that the *Domino REST API schema controls access to forms and fields*.
+Since the exact terminology is long-winded and colloquially often no distinction is made between document/item and form/field, the short version is that the *Domino REST API schema controls access to forms and fields*.
 
 ![From DB to schema to scope](../../assets/images/KeepSchemaToApp.png)
 
-While the Admin UI helps to generate a Domino REST API schema from an existing form, there no technical need for a form to be present, other than the possibility to open the Notes document in a Notes client too. Creating such a Schema requires direct post to the API.
+While the Admin UI helps to generate a Domino REST API schema from an existing form, there is no technical need for a form to be present, other than the possibility to open the Notes document in a Notes' client too. Creating such a Schema requires direct post to the API.
 
 ## Schema components
 
 <!-- prettier-ignore -->
-!!! tip 
+!!! tip
+
     Refer to the OpenAPI specification running on your server. It's the complete reference guide to the APIs available to your deployed version of the Domino REST API.
 
 The high level entry contains a few properties and the collection of forms, views, and agents made available:
@@ -43,7 +44,7 @@ The high level entry contains a few properties and the collection of forms, view
 | **schemaName**              | internal name, matches the JSON filename in Domino design                               |
 | **description**             | visible in Admin UI                                                                       |
 | **nsfPath**                 | path to nsf relative to data directory                                                   |
-| **iconName**                | name of the icon (fixed set) used in the UI. Alternative `icon` can contain a Base64 svg |
+| **iconName**                | name of the icon (fixed set) used in the UI. Alternative `icon` can contain a Base64 SVG |
 | **isActive**                | Can the API be used now                                                                  |
 | **requireRevisionToUpdate** | Measure to prevent overwrite conflicts                                                   |
 | **allowDecryption**         | When also the user has the permission, decrypt documents                                |
@@ -66,7 +67,7 @@ Views will show all columns contained.
 
 ### Agents
 
-An array of agent names that can be called from the REST endpoint. The API doesn't check if the agent is suitable for being called individually, it's the developers responsibility to ensure this.
+An array of agent names that can be called from the REST endpoint. The API doesn't check if the agent is suitable for being called individually, it's the developer's responsibility to ensure this.
 
 ### Forms and Mode
 
@@ -91,25 +92,25 @@ The form array has Form entries with 2 elements:
 
 ## Access formulas
 
-The availability of access formulas follows typical Notes development pattern where actions are rendered based on Formula conditions (a.k.a HideWhen formula). Typically, those formula include references to the user name, role, or group membership and item values like `Status` or `Approver`
+The availability of access formulas follows typical Notes development pattern where actions are rendered based on Formula conditions, also known as `HideWhen` formula. Typically, those formulas include references to the username, role, or group membership and item values like `Status` or `Approver`
 
 ## Domino REST API Fields
 
-We follow the ideas proposed by [JSON schema](https://json-schema.org) with the intention to support most of the constrains available there at some point in time.
+We follow the ideas proposed by [JSON schema](https://json-schema.org) with the intention to support most of the constraints available there at some point in time.
 
 ![Domino REST API Fields](../../assets/images/SchemaKeepFields.png)
 
 | Entry       | Description                                                        |
 | ----------- | ------------------------------------------------------------------ |
 | name        | Field name mapping to item name                                    |
-| type        | Type as permitted by [JSON](https://www.json.org/json-en.html)     |
-| items       | when type = `array`, entry with type/format for array entries      |
-| format      | data format as specified in [JSON schema](https://json-schema.org) |
-|             | with the addition of Notes specific `names`, `authors`, `readers`  |
-| readyOnly\* | Field value can be read, but not written                           |
-| writeOnly\* | Field value can be written, but not read                           |
-|             | \* only one can be set true at a time                              |
+| type        | Permitted by [JSON](https://www.json.org/json-en.html)     |
+| items       | When type = `array`, entry with type/format for array entries      |
+| format      | Data format as specified in [JSON schema](https://json-schema.org) with the addition of Notes specific `names`, `authors`, `readers`  |
+| readyOnly[^1] | Field value can be read, but not written                           |
+| writeOnly[^1] | Field value can be written, but not read                           |
 | fieldGroup  | allows to group a set of multi values into records                 |
+
+[^1]: Only one can be set to true at a time.
 
 ## FieldGroups
 
@@ -158,7 +159,7 @@ By assigning the fields `Name`, `age` and `fruit` the **fieldGroup** `LostBoys`,
 
 ### Form aliases
 
-The form aliases object allows to specify additional values in the form item to be mapped to the form configuration in the schema. The Admin UI will use form alias information extracted from the database design, but the API isn't bound to these settings
+The form aliases object allows specifying additional values in the form item to be mapped to the form configuration in the schema. The Admin UI will use form alias information extracted from the database design, but the API isn't bound to these settings
 
 ### Sample Schema
 
@@ -541,8 +542,8 @@ To list the views available through this scope, run the following command. Find 
 
 ![ListViews](../../assets/images/listviews.png)
 
+??? note "cURL code snippet"
 
-???note "cURL code snippet"
     ```bash
     curl --location --request GET 'localhost:8880/api/v1/lists?dataSource=demo' \
     --header 'Authorization: Bearer $Bearer' \
@@ -679,4 +680,3 @@ To add an application, run the following command. Find the applicable Request UR
       "status": "isActive"
     }'
     ```
-

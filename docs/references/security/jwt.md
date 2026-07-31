@@ -50,8 +50,4 @@ Example configuration:
     }
 ```
 
-In the example configuration, **AzureAD01** is the `IdP name`. 
-
-
-
-
+In the example configuration, **AzureAD01** is the `IdP name`.

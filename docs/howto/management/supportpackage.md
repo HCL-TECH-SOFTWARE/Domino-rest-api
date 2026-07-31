@@ -7,12 +7,12 @@ Guides you on how to create a support package from the **Management console**. T
 - all files in the `IBM_TECHNICAL_SUPPORT` directory
 - JSON files in the `keepconfig.d` directory
 - text file containing a list of all the files in `keepconfig.d`
-- `config.json` file containing data output from the **Config** in the **Management console** 
+- `config.json` file containing data output from the **Config** in the **Management console**
 - `configSrc.json` file containing data output from the **Config scr** in the **Management console**
 - `info.json` file containing data output from the **Info** in the **Management console**
 - `threads.json` file containing data output from the **Threads** in the **Management console**
 
-There is also an option to include `KeepConfig.nsf` in the support package.   
+There is also an option to include `KeepConfig.nsf` in the support package.
 
 ## Before you begin
 
@@ -25,7 +25,7 @@ You must have access to the **Management console**.
 ## Procedure
 
 1. Log in to the **Management console** (Port 8889).
-2. On the **Management console** page, click **Create** in the **Support package** section. 
+2. On the **Management console** page, click **Create** in the **Support package** section.
 
     ![Management console](../../assets/images/mngmntconsole.png)
 
@@ -45,4 +45,3 @@ The support package is a zip file that has the filename format `support-package-
 ### Console command
 
 You can also generate the support package by running the console command `tell restapi support` or `tell restapi support -includensf` on the Domino console. The console command `tell restapi support` creates the support package without the `KeepConfig.nsf`, while the `tell restapi support -includensf` creates the support package that includes the `KeepConfig.nsf`.
-

@@ -14,7 +14,7 @@ Guides you into OAuth authentication to use Domino REST API using [Bruno](../../
 
     In the APIs used in the OAuth investigation, you will see fields surrounded by double brackets like `{{OAUTHHOST}}` or `{{AdminName}}`. These fields represent user inputs and should generally not be hard coded. You can use the following as reference:
 
-    ```
+    ```json
     vars {
       AdminName: John Doe
       OAUTHHOST: http://localhost:8880
@@ -105,13 +105,13 @@ Use the following API to send the OAuth authorization request after getting an H
 
 Use the following API to log in for OAuth acceptance. Make sure to add the required details in the **Body** and the **Headers** tabs. Also add the variables in the **Vars** tab and the assertions in the **Assert** tab as shown in the following images.
 
-![Bruno log in for OAuth acceptance API](../../assets/images/bruno22.png)
+![Bruno login for OAuth acceptance API](../../assets/images/bruno22.png)
 
-![Bruno log in for OAuth acceptance API](../../assets/images/bruno23.png)
+![Bruno login for OAuth acceptance API](../../assets/images/bruno23.png)
 
-![Bruno log in for OAuth acceptance API](../../assets/images/bruno24.png)
+![Bruno login for OAuth acceptance API](../../assets/images/bruno24.png)
 
-![Bruno log in for OAuth acceptance API](../../assets/images/bruno25.png)
+![Bruno login for OAuth acceptance API](../../assets/images/bruno25.png)
 
 ### Create authorization decision
 

@@ -2,14 +2,14 @@
 
 ## About this task
 
-Guides you on how to customize which API schemas and endpoints are available or visible to meet your specific requirements or use cases. 
+Guides you on how to customize which API schemas and endpoints are available or visible to meet your specific requirements or use cases.
 
 ## Before you begin
 
 !!!note
     This prerequisite is applicable to [Customize available endpoints in a specific API schema](#customize-available-endpoints-in-a-specific-api-schema).
 
-You have to take note of the `operationId` of the endpoints in a specific API schema that you want to be unavailable. 
+You have to take note of the `operationId` of the endpoints in a specific API schema that you want to be unavailable.
 
 **To know the operationId**:
 
@@ -22,17 +22,17 @@ You have to take note of the `operationId` of the endpoints in a specific API sc
 
 3. Select the endpoint or endpoints that you don't want to be available. You will see the value of the `operationId` after the endpoint description.
 
-    In the example image, the `operationId` of each listed endpoint is enclosed in the red box. 
+    In the example image, the `operationId` of each listed endpoint is enclosed in the red box.
 
     ![API endpoint operationId](../../assets/images/opID.png)
 
-4. Take note of the `operationId` of each endpoint you don't want to be available. 
+4. Take note of the `operationId` of each endpoint you don't want to be available.
 
 ## Procedure
 
 ### Customize available API schemas
 
-This procedure enables you customize which API schemas are unavailable to end users. 
+This procedure enables you customize which API schemas are unavailable to end users.
 
 1. Create a JSON file using a text editor.
 2. Add the `versions` JSON object with the entry name of the API schema you want to be unavailable and the `active` property.
@@ -116,12 +116,13 @@ This procedure enables you to customize which endpoints in a specific API schema
     }
     ```
 
-    !!!note 
+    !!! note
+
         `disabledOperationIds` is an array.
 
-3.	Enter the `operationID` of each endpoint you want to be unavailable as an array value for the `disabledOperationIds` property.
+3. Enter the `operationID` of each endpoint you want to be unavailable as an array value for the `disabledOperationIds` property.
 
-    For example, if you want to make the `POST v1/document` and `GET v1/document/{unid}` endpoints on the *HCL Domino REST API basis* API schema, and the `GET setup-v1/schema` endpoint on the *HCL Domino REST API setup* API schema to be unavailable, add the `operationId` of each of those endpoints in the JSON file as array values of the `disabledOperationIds` property. 
+    For example, if you want to make the `POST v1/document` and `GET v1/document/{unid}` endpoints on the *HCL Domino REST API basis* API schema, and the `GET setup-v1/schema` endpoint on the *HCL Domino REST API setup* API schema to be unavailable, add the `operationId` of each of those endpoints in the JSON file as array values of the `disabledOperationIds` property.
 
     ``` json
     {
@@ -142,7 +143,7 @@ This procedure enables you to customize which endpoints in a specific API schema
 
 The following images show the availability of the `POST v1/document` and `GET v1/document/{unid}` endpoints on the *HCL Domino REST API basis* API schema, and the `GET setup-v1/schema` endpoint on the *HCL Domino REST API setup* API schema **before** saving the example JSON file in the `keepconfig.d` directory.
 
-???example "Example images before making the endpoints unavailable"
+??? example "Example images before making the endpoints unavailable"
 
     ![API schemas before admin is unavailable](../../assets/images/apischema4.png)
 
@@ -150,7 +151,7 @@ The following images show the availability of the `POST v1/document` and `GET v1
 
 The following images show the availability of the `POST v1/document` and `GET v1/document/{unid}` endpoints on the *HCL Domino REST API basis* API schema, and the `GET setup-v1/schema` endpoint on the *HCL Domino REST API setup* API schema **after** saving the example JSON file in the `keepconfig.d` directory.
 
-???example "Example images after making the endpoints unavailable"
+??? example "Example images after making the endpoints unavailable"
 
     ![API schemas before admin is unavailable](../../assets/images/apischema3.png)
 
@@ -182,4 +183,3 @@ The following image shows the currently supported endpoints for running code aga
 The following image shows some supported and experimental endpoints for running code against data **after** making the experimental endpoints or endpoints under development available.
 
  ![Supported and experimental endpoints for running code against data](../../assets/images/apischema8.png)
-
