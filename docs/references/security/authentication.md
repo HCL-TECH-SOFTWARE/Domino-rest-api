@@ -4,11 +4,13 @@
 
 There are many ways to configure an external IdP in the Domino REST API. Refer to the following table for details and refer to the [comparison](../security/idpcompare.md) for more information.
 
+In all options a JWT token gets validated and authorized access based on its claims, including user identity, roles, and scopes.
+
 |Authentication option|Description|When to use|
 |:---|:---|:---|
-|[OIDC with idpcat authentication](#oidc-with-idpcat-authentication)|Uses OpenID Connect for authentication while leveraging the Domino Identity Provider Catalog (IDPCAT) to map authenticated users to Domino identities. The IDPCAT database stores Identity Provider configurations and user mapping information, enabling Domino to associate external identities with Notes/Domino users.</br></br>This authentication option is the strongly recommended option to use.|Use when your Domino environment is configured with IDPCAT for federated authentication, or when Domino users must be mapped from external identities to existing Domino identities while maintaining Domino security and access control.|
-|[OIDC](#oidc)|Uses OpenID Connect to authenticate users through an external Identity Provider (IdP) such as Keycloak and Microsoft Entra ID. The user is redirected to the IdP to sign in, and Domino REST API trusts the returned ID and access tokens. This provides standards-based Single Sign-On (SSO) and centralized identity management.|Use when you want users to authenticate interactively via an enterprise Identity Provider that enables single sign-on and centralized identity management.|
-|[JWT Authorization](#jwt-authorization)|Uses a JSON Web Token (JWT) issued by a trusted identity provider. The Domino REST API validates the token and authorizes access based on its claims, including user identity, roles, and scopes.|Use when you have a system that authenticates users or services and can provide a trusted JWT to the Domino REST API.|
+|[OIDC with idpcat authentication](#oidc-with-idpcat-authentication)|Uses Domino's own `idpcat.nsf` to provide access to the IdP keys. Requires a clientId and clientSecret. Configuration in IDPCAT. |**all of Domino**<br />Use when your Domino environment is configured with IDPCAT. Enjoy one configuration for all of Domino.|
+|[OIDC](#oidc)|Similar approach like `jwt`, with an additional check. DRAPI logs into the IdP to make sure it got the right one and, on success retrieves hey keys. The login ensures to reach the intended IdP|**DRAPI only** <br/>Use when you have a clientId and clientSecret and like the addditional correctness assurance the login provided.|
+|[JWT Authorization](#jwt-authorization)|Use the `.well-known/openid-configuration` to obtain the `jwks_uri` with the IdP's public key(s). The keys are used to validate the JSON Web Token (JWT)|**DRAPI only** <br/> Use when you can trust that the `.well-known` URL can't be compromized or you don't have a clientId and clientSecret (yet).|
 
 ## OIDC with idpcat authentication
 
