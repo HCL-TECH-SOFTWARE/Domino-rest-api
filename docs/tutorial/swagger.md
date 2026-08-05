@@ -1,5 +1,4 @@
-# Using Swagger UI 
-<!--OpenAPI UI (a.k.a. Swagger)-->
+# Using Swagger UI
 
 ## Overview
 
@@ -7,32 +6,13 @@ This tutorial guides you through using the Swagger UI to visualize and interact 
 
 The Swagger UI is an open source component supported and maintained by [SmartBear](https://swagger.io) and packaged into a [WebJar](https://www.webjars.org) to render the collection of definitions that constitute the Domino REST API. It enables you to visualize and interact with APIs without having any of the actual implementation logic in place. The APIs are automatically generated from the [OpenAPI Specification](https://swagger.io/specification/) with the visual documentation making it easier to implement the back end code at a later stage.
 
-<!--
-You can access the Swagger UI for Domino REST API at `http://localhost:8880`.
-
-!!! note
-
-    The URLs in this tutorial point to a local instance of the Domino REST API. When you want to follow it on your own remote server, you need to replace `http://localhost` with your server address.
-
-This tutorial shows how to use the Swagger UI to:
-
-- [create a JWT token for authorization](#create-a-jwt-token-for-authorization)
-- [create a document](#create-a-document-with-swagger-ui)
-- [list views](#list-views-with-swagger-ui)
-- [view Domino REST API databases](#view-specific-domino-rest-api-database)
-
-The [Swagger UI](https://github.com/swagger-api/swagger-ui) is an OpenSource component supported and maintained by [SmartBear](https://swagger.io) and packaged into a [WebJar](https://www.webjars.org) to render the collection of definitions that constitute the Domino REST API. For an introduction, see [Swagger UI](../references/usertools/swagger.md).
-
-
-!!! note "URLs in this tutorial"
-
-    The URLs in this tutorial point to a local instance of the Domino REST API. When you want to follow it on your own remote server, you need to replace `http://localhost` with your server address.
--->
 ## Before you begin
 
-- You have created a schema using the `Demo.nsf` database.
-- You have activated the database forms and views of your created schema.
-- You have created a scope.
+You have:
+
+- created a schema using the `Demo.nsf` database.
+- activated the database forms and views of your created schema.
+- created a scope.
 
 For more information, see [Using Admin UI](../tutorial/adminui.md).
 
@@ -137,16 +117,11 @@ You need to create a JWT token and use it to get proper authorization to try out
 
 3. Review the schemas at the bottom. If you haven't specified read/write fields on a form, you'll see the genericFormResponse/genericFormRequest. If you have specified read or write fields, you'll see a schema for `formName-modeName Responses`/`formName-modeName Requests`.
 
-      In the following example image, the read or write fields have been specified so you can see the schema for `formName-modeName Responses`/`formName-modeName Requests`. Wherein, the `formName` is *Customer* and the `modeName` is *default* and *odata*.
+      In the following example image, the read or write fields have been specified, so you can see the schema for `formName-modeName Responses`/`formName-modeName Requests`. Wherein, the `formName` is *Customer* and the `modeName` is *default* and *odata*.
 
       ![SwaggerAPIDatabase](../assets/images/drapidb2.png){: style="height:80%;width:80%"}
 
-
 You can share the specific Domino REST API database to other developers who also consume the Domino REST API for that database by copying the URL and then sending it to those developers.
-
-<!--If you URL encode `/api/v1/openapi?dataSource=demo`, you can create a URL to share with developers who consume the Domino REST API for that database. The URL encoded value should be appended as the "url" querystring parameter. The resulting URL will look like `http://localhost:8880/openapi/index.html?url=/api/v1/openapi%3FdataSource%3Ddemo`, where the Domino REST API database name is after the `%3D` (url encoded "=").
-
-1. In the Explore field in the banner, enter `/api/v1/openapi?dataSource=demo`. This will display the KEEP OpenAPI specification specifically for the demo database.-->
 
 ## Additional information
 

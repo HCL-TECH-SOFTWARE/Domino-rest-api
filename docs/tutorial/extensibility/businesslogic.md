@@ -125,7 +125,7 @@ A helper method `entryToJson` converts the `CollectionEntry` into a JsonObject t
       logger.trace("Record {} processed {}", unid, source.toString());
       return Optional.of(result);
     }
-    logger.error("record {} has misssing columns: {}", unid, missing);
+    logger.error("record {} has missing columns: {}", unid, missing);
     return Optional.empty();
   }
 ```
@@ -198,8 +198,7 @@ The code is similar. You check if the document exists and is in a state to be ap
 
 ## Testing
 
-Compile the Jar and throw it into DRAPI's `libs` folder. Restart DRAPI and it should show up.
-Test using curl or Bruno
+Compile the Jar and throw it into Domino REST API's `libs` folder. Restart Domino REST API and it should show up, then test using curl or Bruno.
 
 ## Next
 

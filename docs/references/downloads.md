@@ -65,5 +65,7 @@ The following scripts are for reference only. They have been superseded by the s
 
 [AzureTester.zip](../assets/downloads/AzureTester.zip) is a simple test application you run on a local http server to check if a registered App in Microsoft Entra ID, formerly Azure Active Directory, can be used as JWT provider for the Domino REST API.
 
-!!!warning 
+!!! warning
+
     This is for testing only. Do **NOT** use this code in production.
+    

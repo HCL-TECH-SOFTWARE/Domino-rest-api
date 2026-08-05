@@ -51,8 +51,7 @@ final Document note = optionalNote.orElse(() -> db.createDocument());
 
 ## Privileged operations
 
-A typical requirement in web applications is the need for operation specific elevated privileges. An example is if you want the default access for "ApprovalLog.nsf" to be Reader so nobody can manually create or alter documents, but the code in `SubmitDecision` needs to be able to create. For this scenario, the `KeepJnxSession` allows to execute
-operations as the server, using server privileges.
+A typical requirement in web applications is the need for operation specific elevated privileges. An example is if you want the default access for `ApprovalLog.nsf` to be Reader, so nobody can manually create or alter documents, but the code in `SubmitDecision` needs to be able to create. For this scenario, the `KeepJnxSession` allows executing operations as the server, using server privileges.
 
 The modified code from [Business Logic](./businesslogic.md) would look like this:
 
@@ -81,7 +80,3 @@ The modified code from [Business Logic](./businesslogic.md) would look like this
 ## Next
 
 Proceed to [deployment](deployment.md).
-
-<!--## Let's connect
-
-"feedback.md"-->

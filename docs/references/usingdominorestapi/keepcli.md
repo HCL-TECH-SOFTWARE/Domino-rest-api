@@ -2,7 +2,7 @@
 
 ## Overview
 
-A simple shell script using the curl command is all you need to interact with Domino REST API. You can create the following shell scripts <!--(macOS, Linux, Windows version below)--> in your `~/bin` directory and make it executable by using `chmod +x Domino REST API`.<!--I like to-->You can skip the `.sh` extension so you run the script like a Windows `.cmd` files.
+A simple shell script using the curl command is all you need to interact with Domino REST API. You can create the following shell scripts in your `~/bin` directory and make it executable by using `chmod +x Domino REST API`. You can skip the `.sh` extension, so you run the script like a Windows `.cmd` file.
 
 ??? info "Script for Linux or macOS"
 
@@ -526,7 +526,3 @@ To interact with Domino REST API:
         - `HTTPKEYWORD` can be any standard HTTP method: `GET`, `POST`, `PUT`, `PATCH`, or `DELETE`.
         - For `POST`, `PUT`, and `PATCH` requests, you must provide a `Content-Type` header and a request body.
         - See `man curl` for details.
-
-<!--
-You need to log in using the call `keep login`. Use "keep HTTPKEYWORD urlpath" for example `keep get databases` or `keep pim get inbox` to access the API. For the http keywords `POST`, `PUT` and `PATCH`, you must provide the `Content-Type` header and a body. See `man curl` for details.
--->

@@ -59,7 +59,6 @@ Alternatively, you can use `POST` to `/api/setup-v1/admin/application`
 
         Write or note the App Secret and App Id.
 
-
 Alternatively, you can use `POST` to `/api/setup-v1/admin/application/{{CLIENT_ID}}/secret?force=true`
 
 ```json
@@ -145,14 +144,12 @@ Alternative `POST` to `/api/setup-v1/admin/application`
 
     ![Create a secret](img/Secret01.png)
 
-
 2. The generated secret will be shown on the app.
 
     ![See secret](img/Secret02.png)
 
     !!!note
         Write or note the App Secret and App Id.
-
 
 Alternative `POST` to `/api/setup-v1/admin/application/{{CLIENT_ID}}/secret?force=true`
 

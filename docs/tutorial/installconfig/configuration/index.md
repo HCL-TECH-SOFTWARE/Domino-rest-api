@@ -42,27 +42,3 @@ There are databases created on the Domino server as part of the Domino REST API 
 ## [Expose databases to REST API access](exposedb.md)
 
 To make a database available on the Domino REST API, create a Domino REST API schema and link it to a publicly visible scope. The schema defines what documents, based on the value of their form item, views, folders, and agents are available for a call via HTTP.
-
-<!--
-
-## [Enable a database](../../howto/database/enablingadb.md)
-
-To make a database available on the Domino REST API, create a Domino REST API `schema` and link it to a publicly visible `scope`. The schema defines what documents, based on the value of their `form` item, views, folders, and agents are available for a call via HTTP.
-
-## [Configure JWT](../../references/security/authentication.md)
-
-Domino REST API uses JSON Web Token (JWT) for Authorization. To allow using Domino REST API without the deployment of an external Identity Provider (IdP), Domino REST API can be configured to provide a JWT after authentication with Domino credentials.
-
-## [Sharing JWT between servers](../../references/security/encryption.md)
-
-JWT token can be shared between servers, effectively enabling SSO (Single Sign On) for Domino REST API. It's LTPA for grownups.
-
-## [Configure OAuth access for apps](../../tutorial/adminui.md)
-
-The Admin UI allows to configure database schemas, server scopes and OAuth applications (Domino functioning as IdP).
--->
-
-<!--# Configuration
-
-This section describes how to configure your Domino REST API after installation
--->

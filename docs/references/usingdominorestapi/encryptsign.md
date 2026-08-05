@@ -1,6 +1,7 @@
 # Using encryption, decryption, and signing during development
 
-!!!note 
+!!! note
+
     - This feature is only available starting from the Domino REST API v1.1.0 release. 
     - You must configure your Domino server to enable this feature. For more information, see [Set up Domino REST API for encryption, decryption, and signing](../../howto/production/signencrypt.md). 
 
@@ -30,4 +31,3 @@ Decryption happens passively and requires no schema configuration or special end
 ## Signing
 
 When a Form mode's schema has the **Sign Document** option enabled, creating or updating a document will result in an attempt to load the user's ID from the Vault and sign the document with the user's ID. If that's not possible, the operation will fail with the error message **E1131, Unable to retrieve user ID from Vault for cryptography operations**.
-

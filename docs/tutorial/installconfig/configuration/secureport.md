@@ -4,10 +4,10 @@ Domino REST API uses four ports which have different purposes and warrant differ
 
 |Port|Description|
 |:---|:---|
-|Data port (8880)|Main port used by the Domino REST API. Default authentication uses the user name and Internet password of the person document.|
+|Data port (8880)|Main port used by the Domino REST API. Default authentication uses the username and Internet password of the person document.|
 |Healthcheck port (8886)|Used to verify whether Domino REST API is up using the `/health` endpoint. It has its own functional account that doesn't provide access to other ports.|
 |Management port (8889)|Provides access to the Domino REST API runtime behavior, such as current configuration, runtime information, or Domino REST API shutdown and restart. It's recommended that the port be blocked and accessed only from localhost. It has its own functional account that doesn't provide access to other ports.|
-|Prometheus metrics	port (8890)|Provides metrics in Prometheus format. It has its own functional account that doesn't provide access to other ports.|
+|Prometheus metrics port (8890)|Provides metrics in Prometheus format. It has its own functional account that doesn't provide access to other ports.|
 
 ## About this task
 
@@ -29,9 +29,9 @@ The procedure guides you in securing the ports to encrypt the communication betw
     - Ask your infrastructure, security, or networking team (if you have one) for a valid certificate.
 
 2. Copy the certificate to your preferred location local to the Domino server where Domino REST API is installed.
-3. On the Domino server where Domino RESR API is installed, create a JSON file in the keepconfig.d directory containing the following information:
+3. On the Domino server where Domino REST API is installed, create a JSON file in the `keepconfig.d` directory containing the following information:
 
-    - Use the following to configure TLS for JKS or PFX. make sure to set `TLSType` to the correct type.
+    - Use the following to configure TLS for JKS or PFX. Make sure to set `TLSType` to the correct type.
 
     ```json
     {
@@ -82,7 +82,7 @@ If you are using Domino 14 or above and your certificates are stored in the Domi
 
 To make all ports accessible on Port 443, you can use an HTTPS proxy server (Ingress on Kubernetes). Check the links for more information:
 
-- [Proxy using multiple sub-domains](../../../howto/web/httpsproxy.md)
+- [Proxy using multiple subdomains](../../../howto/web/httpsproxy.md)
 
 - [Proxy using URL path access](../../../howto/web/httpsproxy2.md)
 

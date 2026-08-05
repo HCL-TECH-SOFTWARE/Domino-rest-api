@@ -51,11 +51,11 @@ The schema is created in the Domino database that you want to expose. The Domino
       3. Enter a **Schema Name** and a **Schema Description**.
       4. Click **Save Schema**.
 
-The new schema is available and visible on the **Schema Management** page. If no visible, make sure to click the **Only show schemas configured with scopes** toggle to the off position. 
+The new schema is available and visible on the **Schema Management** page. If no visible, make sure to click the **Only show schemas configured with scopes** toggle to the off position.
 
 !!! tip
 
-    - You also have the option of importing an schema. For more information, see [Add a schema](../../../references/usingwebui/schemaui.md#add-a-schema).
+    You also have the option of importing an schema. For more information, see [Add a schema](../../../references/usingwebui/schemaui.md#add-a-schema).
 
 ### Activate a form
 
@@ -86,7 +86,7 @@ The activated form or forms now have an **Active** status.
     !!! tip
 
         - Click **Add All Fields** icon to add all the available fields to the form.
-        - Click **Refresh List of Fields** icon to refresh the list of avaialble fields.
+        - Click **Refresh List of Fields** icon to refresh the list of available fields.
         - Use the **Search Field** search box to search for a field by field name.
         - Hover over the **Info** icon beside the field name to show the field property. The field can be *editable*, which means that the field has **Read/Write** access setting. The field can also be either *computed*, *computed when composed*, or *computed for display*, which means that the field has **Read Only** access setting.
         - Enter a custom field name in the **Add custom field** and click the **+** icon to add a custom field to the form.
@@ -99,7 +99,7 @@ The activated form or forms now have an **Active** status.
         - Click the **Multi-Value** toggle to the on position to specify a **Field Group**. The **Multi-Value** toggle isn't clickable to the off position if you specified a field group.
         - Click the **Required** toggle to the on position to specify that the field is a required field. When set to the on position, the word *Required* is added below the name of the field in the added field list.
 
-    !!!note "Encryption feature"
+    !!! note "Encryption feature"
 
         The encryption feature is available starting from the Domino REST API v1.1.0 release. Make sure to [set up Domino REST API for encryption, decryption, and signing](../../../howto/production/signencrypt.md) before executing the following steps for encryption and signing.
 
@@ -136,7 +136,7 @@ The activated form or forms now have an **Active** status.
 
 ### Activate a view
 
-1. Click the name of your schema from the breadcrumb navigation menu to go back to the Schema Management page. 
+1. Click the name of your schema from the breadcrumb navigation menu to go back to the Schema Management page.
 2. Select **Database Views** from the menu bar. This lists all the views for the selected schema.
 
       ![List Views](../../../assets/images/ListOfViews1.png)
@@ -155,7 +155,7 @@ The activated form or forms now have an **Active** status.
 
 ## Create a scope
 
-The scope configuration is stored in the KeepConfig.nsf database. This separation of scope and schema means multiple scopes can link to a single schema. You use the scope name when performing all CRUD operations.
+The scope configuration is stored in the `keepconfig.nsf` database. This separation of scope and schema means multiple scopes can link to a single schema. You use the scope name when performing all CRUD operations.
 
 1. Select **Database Management - Activation** from the home page or **Scopes** from the side navigation pane to access the **Scope Management** page.
 2. On the **Scope Management** page, click **Add Scope**.

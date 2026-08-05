@@ -1,6 +1,6 @@
 # Development Container
 
-[Development Containers](https://containers.dev/) is a Microsoft initiated open standard, extending the use case for containers (colloquial Docker) to development environments. Curently, [VSCode](https://code.visualstudio.com/) and [IntelliJ](https://www.jetbrains.com/idea/) are supported.
+[Development Containers](https://containers.dev/) is a Microsoft initiated open standard, extending the use case for containers (colloquial Docker) to development environments. Currently, [VSCode](https://code.visualstudio.com/) and [IntelliJ](https://www.jetbrains.com/idea/) are supported.
 
 !!! info "In a nutshell"
 
@@ -20,10 +20,9 @@ You can walk through the steps required for a consistent DRAPI development exper
 
     Depending on your choice, you might need to obtain a license. Be sure to check.
 
-- a supported IDE
-- the HCL [Domino Container](https://opensource.hcltechsw.com/domino-container/) repository
-- your HCL credentials to obtain the Domino installer
-<!-- some patience and a few hours time-->
+- A supported IDE
+- The HCL [Domino Container](https://opensource.hcltechsw.com/domino-container/) repository
+- Your HCL credentials to obtain the Domino installer
 
 ## Initial image
 
@@ -34,7 +33,3 @@ We start with a Java development image and add Domino and tooling.
 ## Side cars anyone?
 
 --8<-- "future.md"
-
-<!--## Let's connect
-
-"feedback.md"-->

@@ -1,6 +1,6 @@
 # OpenAPI definitions and specifications
 
-The Domino REST API is driven by multiple OpenAPI 3.0.2 specifications. Every Domino server is surfacing the specifications according to its configuration. Additionally each configured access to a database (referred to as scope) is available on your server.
+The Domino REST API is driven by multiple OpenAPI 3.0.2 specifications. Every Domino server is surfacing the specifications according to its configuration. Additionally, each configured access to a database (referred to as scope) is available on your server.
 
 The definitions below serve as reference and guide, so you can learn about the API without having the API installed.
 
@@ -38,7 +38,7 @@ The setup API provides endpoints to configure access to databases. You can speci
 
 ## PIM
 
-PIM stands for "Personal Information Management" and includes access to mail, calendar, contacts, todos, and notebook. Access is based on users ownership of mail resources.
+PIM stands for "Personal Information Management" and includes access to mail, calendar, contacts, to-dos, and notebook. Access is based on users ownership of mail resources.
 
 [Explore the PIM API using the ReDoc viewer](https://redocly.github.io/redoc/?url=https://opensource.hcltechsw.com/Domino-rest-api/assets/downloads/openapi.pim.json)
 
@@ -46,7 +46,7 @@ PIM stands for "Personal Information Management" and includes access to mail, ca
 
 ## POI
 
-We named this API in honor of an [Apache project](https://poi.apache.org/) that enables the access to Microsoft office formats.
+We named this API in honor of an [Apache project](https://poi.apache.org/) that enables the access to Microsoft Office formats.
 
 [Explore the POI API using the ReDoc viewer](https://redocly.github.io/redoc/?url=https://opensource.hcltechsw.com/Domino-rest-api/assets/downloads/openapi.poi.json)
 
@@ -56,7 +56,8 @@ We named this API in honor of an [Apache project](https://poi.apache.org/) that 
 
 *Web Distributed Authoring and Versioning* or WebDAV API provides endpoints to perform remote Web content authoring operations that support the Office Round Trip Experience and Virtual Spreadsheet features of Domino REST API.  
 
-!!!note
+!!! note
+
     `PROPFIND`, `LOCK`, and `UNLOCK` methods aren't included since these aren't supported by OpenAPI.
 
 [Open the `openapi.webdav.json` file](../assets/downloads/openapi.webdav.json)
@@ -112,7 +113,7 @@ We added the following data types:
 | Name | Value | Purpose |
 | :--- | :--- | :--- |
 | x-keep-version | number | Active since which API version, governed by `config.json` |
-| x-keep-nofly | enum (SERVER,CLIENT,EOS) | In which mode client, server, light is this unavailable |
+| x-keep-nofly | enum (SERVER, CLIENT, EOS) | In which mode client, server, light is this unavailable |
 | x-preview | boolean | Is the endpoint available as preview only |
-| x-keep-scope | string | ANY, $SETUP -> scope requirements for endpoint |
+| x-keep-scope | string | ANY, $SETUP &rarr; scope requirements for endpoint |
 | x-content-disposition | string | specify content use (attachment vs. inline) |

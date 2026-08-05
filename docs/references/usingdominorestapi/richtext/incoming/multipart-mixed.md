@@ -1,4 +1,4 @@
-# Example: Incoming multipart/mixed 
+# Example: Incoming multipart/mixed
 
 Let's say you want to save the following `multipart/mixed` MIME in a `richtext` field:
 

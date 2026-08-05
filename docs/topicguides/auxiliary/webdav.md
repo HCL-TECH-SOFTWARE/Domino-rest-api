@@ -1,8 +1,8 @@
-# webDAV
+# WebDAV
 
 ## Overview
 
-Domiro REST API implements the [webDAV](../../references/openapidefinitions.md#webdav) HTTP extensions to facilitate the [Office Round Trip Experience](../../howto/production/roundtrip.md).
+Domino REST API implements the [WebDAV](../../references/openapidefinitions.md#webdav) HTTP extensions to facilitate the [Office Round Trip Experience](../../howto/production/roundtrip.md).
 
 ## How it works
 
@@ -11,6 +11,5 @@ WebDAV enables user agents to collaboratively create and edit content directly o
 ## References
 
 - [WebDAV](https://en.wikipedia.org/wiki/WebDAV)
-- [WebDaV Resources]()
 - [OpenAPI definitions and specifications](../../references/openapidefinitions.md#webdav)
 - [RFC 4918](https://datatracker.ietf.org/doc/html/rfc4918) - HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV)

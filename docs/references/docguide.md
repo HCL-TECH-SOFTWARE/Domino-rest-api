@@ -19,7 +19,7 @@ The sections address different user needs and fulfill different purposes. Below 
 
 **How-to guides** give directions for a user to achieve a specific outcome. It also helps frame the capabilities of the product.
 
-**Topic guides** gives explanations, background, and context to clarify and broaden the user's understanding of a topic. It's not concerned with what the user might be doing as it approaches a topic from a higher perspective and different angles.
+**Topic guides** give explanations, background, and context to clarify and broaden the user's understanding of a topic. It's not concerned with what the user might be doing as it approaches a topic from a higher perspective and different angles.
 
 **References** give exact and up-to-date product descriptions and how to use the product. It enables users to do their work with confidence by providing factual information.
 

@@ -7,7 +7,7 @@ The Domino REST API translates data between native Domino structures and JSON sc
 
 ### Single Values, JSON to Domino
 
-| Schema       | JSON native | Text[^1] | Number | Date | RichText |
+| Schema       | JSON native | Text[^1] | Number | Date | Rich Text |
 | :----        | :----       | :--- | :----- | :--- | :------- |
 | String       | String      | &#10003; | &#10003;| &#10003;| &#10003;|
 | Password     | String      | &#10003; | &#10003;| &#10003;| &#10003;|
@@ -26,7 +26,7 @@ The Domino REST API translates data between native Domino structures and JSON sc
 | RichText[^2] | Object      | &#10003; | &#10003;| &#10003;| &#10003;|
 
 [^1]: Text includes Names, Authors, Readers
-[^2]: RichText can be MIME in Base64, plain, or an Object
+[^2]: Rich Text can be MIME in Base64, plain, or an Object
 
 ![Notes field hierarchy](../../assets/images/FieldStructure.png)
 
@@ -38,7 +38,7 @@ Incoming JSON data is received as JSON arrays and converted into multi-value Not
 
 Domino documents may or may not contain the expected items, and those items might not always conform to the expected data format. The following table summarizes which cases are supported:
 
-| Schema       | JSON native | Text | Number | Date | RichText |
+| Schema       | JSON native | Text | Number | Date | Rich Text |
 | :----        | :----       | :--- | :----- | :--- | :------- |
 | String       | String      | &#10003; | &#10003;| &#10003;| &#10003;|
 | Password     | String      | &#10003; | &#10003;| &#10003;| &#10003;|
@@ -55,7 +55,7 @@ Domino documents may or may not contain the expected items, and those items migh
 | Authors      | String      | &#10003; | &#10003;| &#10003;| &#10003;|
 | RichText[^3] | Object      | &#10003; | &#10003;| &#10003;| &#10003;|
 
-[^3]: RichText is always returned as JSON object. For more information, see [Rich Text](./richtext/index.md).
+[^3]: Rich Text is always returned as JSON object. For more information, see [Rich Text](./richtext/index.md).
 
 ### Multi Values, Domino to JSON
 

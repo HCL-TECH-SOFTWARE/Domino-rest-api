@@ -6,10 +6,12 @@ How to use an example that can be some scheduled process to ETL data.
 
 ## Before you begin
 
-- You have completed [Lab 07 - Create an SPA](lab-07.md).
-- You have Java installed.
-- You have Maven installed.
-- You have internet connection.
+You have:
+
+- completed [Lab 07 - Create an SPA](lab-07.md)
+- Java installed
+- Maven installed
+- internet connection
 
 ## Procedure
 
@@ -21,7 +23,7 @@ How to use an example that can be some scheduled process to ETL data.
 
         The `src` folder contains 2 JavaScript project folders and a Java project folder that you can work with. You need to make the project folder that you will use with your IDE the current or root folder. Since it’s a Java application, use the JavaETL project folder. 
 
-    **Using VSCode**
+    **Using VS Code**
 
     1. Navigate to **File** &rarr; **Open Folder**, and select `src` &rarr; `JavaETL` folder.
     2. Inside the `JavaETL` folder, locate the `config.json` file.

@@ -7,7 +7,7 @@ Depending on your approach, there are some particularities to observe.
 
 We distinguish between client and server based applications.
 **Client based applications** can access databases that have been marked for **Open Access**,
-while **server based applications** can provide an application id and application secret to get a different level of access.
+while **server based applications** can provide an application ID and application secret to get a different level of access.
 
 ### Browser based applications
 

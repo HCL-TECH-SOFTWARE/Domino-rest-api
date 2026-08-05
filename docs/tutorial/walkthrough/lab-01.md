@@ -6,9 +6,11 @@ The four different ways to log in to the Domino REST API.
 
 ## Before you begin
 
-- You have completed [Lab 0 - Overview](lab-00.md).
-- You have a Domino server running with REST API active.
-- You have downloaded the KEEP tool: [`keep`](../downloads/keep) for Mac/Linux or [`keep.cmd`](../downloads/keep.cmd) for Windows.
+You have:
+
+- completed [Lab 0 - Overview](lab-00.md)
+- a Domino server running with REST API active
+- downloaded the KEEP tool: [`keep`](../downloads/keep) for Mac/Linux or [`keep.cmd`](../downloads/keep.cmd) for Windows.
 
 ## Procedure
 

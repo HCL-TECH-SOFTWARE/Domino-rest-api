@@ -58,7 +58,3 @@ The class name gets derived from the tag and the OperationID specified in the Op
 ## Next
 
 Proceed to [implement business logic](businesslogic.md).
-
-<!--## Let's connect
-
-"feedback.md"-->

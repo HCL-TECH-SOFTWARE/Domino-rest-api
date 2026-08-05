@@ -78,7 +78,7 @@ The Schema looks like the following. The URL (see below) will return an array of
 }
 ```
 
-![A pendig approval](../../assets/images/PendingApproval.png){: style="height:80%;width:80%"}
+![A pending approval](../../assets/images/PendingApproval.png){: style="height:80%;width:80%"}
 
 #### Decision
 
@@ -108,7 +108,7 @@ A decision submission needs the `unid`, the new `status`, and in case of a deleg
 
 ### URLs
 
-For this tutorial project, a single URL `/appovals` with `GET` for the list and `POST` for the decision is sufficient.
+For this tutorial project, a single URL `/approvals` with `GET` for the list and `POST` for the decision is sufficient.
 
 ![Get Approvals](../../assets/images/GetApprovals.png){: style="height:80%;width:80%"}
 
@@ -141,7 +141,7 @@ Tags and OperationId will form the package and class name [later on](configjson.
   },
   "post": {
     "summary": "submit an approval decision",
-    "description": "Submisssion of approval, rejection or delegation",
+    "description": "Submission of approval, rejection or delegation",
     "operationId": "submitDecision",
     "tags": ["approval"],
     "parameters": [],
@@ -159,7 +159,7 @@ Tags and OperationId will form the package and class name [later on](configjson.
       }
     ],
     "requestBody": {
-      "$ref": "#/components/requestBodies/DecissionBody"
+      "$ref": "#/components/requestBodies/DecisionBody"
     }
   },
   "parameters": [
@@ -193,7 +193,3 @@ You can reference the full file [here as `openapi.eoffice.json`](openapi.eoffice
 ## Next
 
 Proceed to [provide the config.json](configjson.md).
-
-<!--## Let's connect
-
-"feedback.md"-->

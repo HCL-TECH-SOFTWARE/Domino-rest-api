@@ -136,7 +136,7 @@
 
     - Domino REST API can now encrypt document fields and sign a document with keys stored in your Notes ID file. This protects data from unauthorized access and further enhances data security and integrity. 
     
-        To learn more about encrypting, descrypting, and signing, see [Using encryption, decryption, and signing during development](../references/usingdominorestapi/encryptsign.md).
+        To learn more about encrypting, decrypting, and signing, see [Using encryption, decryption, and signing during development](../references/usingdominorestapi/encryptsign.md).
 
         To set up Domino REST API and enable this feature, see [Set up Domino REST API for encryption, decryption, and signing](../howto/production/signencrypt.md).
     
@@ -184,7 +184,7 @@
 
     **Others**
 
-    - Updated [Edit database schema JSON](../howto/database/editsourcejson.md) and [Export schema as JSON file](../howto/database/exportsourcejson.md) based on the UI enhahcements to the **Source** tab under **Schema Management**.
+    - Updated [Edit database schema JSON](../howto/database/editsourcejson.md) and [Export schema as JSON file](../howto/database/exportsourcejson.md) based on the UI enhancements to the **Source** tab under **Schema Management**.
 
     - The following endpoints have been replaced with the `GET v1/richtext/{richTextAs}/{unid}` endpoint:
 
@@ -203,7 +203,6 @@
     - Docker image version for docker compose .env file from Harbor:
         - For Domino 14: *hclcr.io/domino/restapi:1.1.0-r14*
         - For Domino 12: *hclcr.io/domino/restapi:1.1.0-r12*  
-
 
 ??? info "v1.0.14 - What's new or changed"
     ## v1.0.14 - What's new or changed
@@ -237,8 +236,8 @@
     
     - Implemented documentation updates.
     - Installer jar files:
-	    - For Domino 14: *restapiInstall-r14.jar*
-	    - For Domino 12: *restapiInstall-r12.jar*
+        - For Domino 14: *restapiInstall-r14.jar*
+        - For Domino 12: *restapiInstall-r12.jar*
 
     - Docker image version for docker compose .env file (CONTAINER_IMAGE):
         - For Domino 14: *domino-rest-api:1.0.14-r14*
@@ -247,8 +246,6 @@
     - Docker image version for docker compose .env file from Harbor:
         - For Domino 14: *hclcr.io/domino/restapi:1.0.14-r14*
         - For Domino 12: *hclcr.io/domino/restapi:1.0.14-r12*
-
-
 
 ??? info "v1.0.12 - What's new or changed"
     ## v1.0.12 - What's new or changed
@@ -284,8 +281,8 @@
 
     - Implemented documentation updates.
     - Installer jar files:
-	    - For Domino 14: *restapiInstall-r14.jar*
-	    - For Domino 12: *restapiInstall-r12.jar*
+        - For Domino 14: *restapiInstall-r14.jar*
+        - For Domino 12: *restapiInstall-r12.jar*
 
     - Docker image version for docker compose .env file (CONTAINER_IMAGE):
         - For Domino 14: *domino-rest-api:1.0.12-r14*
@@ -294,7 +291,6 @@
     - Docker image version for docker compose .env file from Harbor:
         - For Domino 14: *hclcr.io/domino/restapi:1.0.12-r14*
         - For Domino 12: *hclcr.io/domino/restapi:1.0.12-r12* 
-
 
 ??? info "v1.0.11 - What's new or changed"
     ## v1.0.11 - What's new or changed
@@ -335,8 +331,8 @@
     - Implemented documentation updates.
     - The terms *Configure* and *Unconfigure* in relation to database forms in the **Admin UI** have been changed to *Activate* and *Deactivate*, respectively.
     - Installer jar files:
-	    - For Domino 14: *restapiInstall-r14.jar*
-	    - For Domino 12: *restapiInstall-r12.jar*
+        - For Domino 14: *restapiInstall-r14.jar*
+        - For Domino 12: *restapiInstall-r12.jar*
 
     - Docker image version for docker compose .env file (CONTAINER_IMAGE):
         - For Domino 14: *domino-rest-api:1.0.11-r14*
@@ -345,7 +341,6 @@
     - Docker image version for docker compose .env file from Harbor:
         - For Domino 14: *hclcr.io/domino/restapi:1.0.11-r14*
         - For Domino 12: *hclcr.io/domino/restapi:1.0.11-r12* 
-
 
 ??? info "v1.0.10 - What's new or changed"
     ## v1.0.10 - What's new or changed
@@ -396,8 +391,8 @@
 
     - Implemented documentation updates.
     - Installer jar files:
-	    - For Domino 14: *restapiInstall-r14.jar*
-	    - For Domino 12: *restapiInstall-r12.jar*
+        - For Domino 14: *restapiInstall-r14.jar*
+        - For Domino 12: *restapiInstall-r12.jar*
 
     - Docker image version for docker compose .env file (CONTAINER_IMAGE):
         - For Domino 14: *domino-rest-api:1.0.10-r14*
@@ -464,7 +459,6 @@
         - For Domino 12: *hclcr.io/domino/restapi:1.0.9-r12* 
         
 
-
 ??? info "v1.0.8 - What's new or changed"
     ## v1.0.8 - What's new or changed
 
@@ -510,8 +504,6 @@
     - Implemented various documentation updates.
     - Docker image version for docker compose .env file (CONTAINER_IMAGE) is *domino-rest-api:1.0.8*.
     - Docker image version for docker compose .env file from Harbor is *hclcr.io/domino/restapi:1.0.8*.
-
-
 
 ??? info "v1.0.7 - What's new or changed"
     ## v1.0.7 - What's new or changed
@@ -582,7 +574,6 @@
 
     - Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:DRAPI-1.0.6*. 
     - Docker image version for docker compose .env file from Harbor is *hclcr.io/domino/restapi:1.0.6*.
-
 
 ???info "v1.0.5 - What's new or changed"
     ## v1.0.5 - What's new or changed
