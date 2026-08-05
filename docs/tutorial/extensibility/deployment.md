@@ -6,6 +6,6 @@
 
 ## Container
 
-## Next
+## Next step
 
 Proceed to [set up a Development Container](devcontainer.md).

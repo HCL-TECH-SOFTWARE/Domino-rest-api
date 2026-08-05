@@ -35,11 +35,11 @@ The schema is created in the Domino database that you want to expose. The Domino
 1. Select **Database Management - REST API** from the home page or **Schemas** from the side navigation pane to access the **Schema Management** page.
 2. On the **Schema Management** page, click **Add Schema**.
 
-      ![Add schema](../../../assets/images/addSchema.png)
+      ![Add schema](../../../assets/images/addSchema.png){: style="height:80%;width:80%"}
 
 3. In the **Add New Schema** dialog, click **Create Schema**.
 
-      ![Create a schema ](../../../assets/images/createSchema.png){: style="height:80%;width:80%"}
+      ![Create a schema ](../../../assets/images/createSchema.png){: style="height:70%;width:70%"}
 
 4. In the **Create Schema** dialog:
 
@@ -139,7 +139,7 @@ The activated form or forms now have an **Active** status.
 1. Click the name of your schema from the breadcrumb navigation menu to go back to the Schema Management page.
 2. Select **Database Views** from the menu bar. This lists all the views for the selected schema.
 
-      ![List Views](../../../assets/images/ListOfViews1.png)
+      ![List Views](../../../assets/images/ListOfViews1.png){: style="height:70%;width:70%"}
 
 3. Select the view that you want to activate, and then click the corresponding **Active** option under **Status**.
 4. Repeat the previous step for all the views that you want to activate.
@@ -148,7 +148,7 @@ The activated form or forms now have an **Active** status.
 
 1. Select **Database Agents** from the menu bar. This lists all the Agents for the selected database.
 
-      ![List Agents](../../../assets/images/ListOfAgents.png)
+      ![List Agents](../../../assets/images/ListOfAgents.png){: style="height:70%;width:70%"}
 
 2. Select the agent you want to activate, and then click the corresponding **Active** option under **Status**.
 3. Repeat the previous step for all the agents that you want to activate.

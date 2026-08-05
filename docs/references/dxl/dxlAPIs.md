@@ -299,7 +299,7 @@ The following tables show the DXL extension API endpoints, including their HTTP 
 
     !!! note
 
-        Do not include an `<?xml ...?>` declaration or DOCTYPE at the top of the body. The importer wraps your fragment in a `<database>` element before parsing, which makes an XML declaration illegal and causes a fatal parse error. For more information, see [Notes on DXL Format](dxlguide.md#notes-on-dxl-format).
+        Do not include an `<?xml ...?>` declaration or DOCTYPE at the top of the body. The importer wraps your fragment in a `<database>` element before parsing, which makes an XML declaration illegal and causes a fatal parse error. For more information, see [DXL format](dxlguide.md#dxl-format).
 
 === "Response"
 

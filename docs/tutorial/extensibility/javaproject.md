@@ -211,7 +211,6 @@ git commit -m 'initial creation'
 
 By frequently committing to your local Git, you work with the assurance that you can respawn in the event of any issues or errors.
 
-## Next
+## Next step
 
 Proceed to [OpenAPI specification](openapi.md).
-

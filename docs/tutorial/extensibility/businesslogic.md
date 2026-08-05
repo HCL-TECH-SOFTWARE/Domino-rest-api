@@ -200,7 +200,7 @@ The code is similar. You check if the document exists and is in a state to be ap
 
 Compile the Jar and throw it into Domino REST API's `libs` folder. Restart Domino REST API and it should show up, then test using curl or Bruno.
 
-## Next
+## Next step
 
 Proceed to [access control](accesscontrol.md).
 

@@ -74,7 +74,7 @@ Use the following to create a schema:
 
 === "Postman"
 
-![PostmanCreateSchema](../assets/images/PostmanCreateSchema.png)
+    ![PostmanCreateSchema](../assets/images/PostmanCreateSchema.png)
 
 === "curl"
 
@@ -442,7 +442,7 @@ Use the following to check the forms in the database:
 
 === "Postman"
 
-![PostmanForms](../assets/images/PostmanForms.png)
+    ![PostmanForms](../assets/images/PostmanForms.png)
 
 === "curl"
 

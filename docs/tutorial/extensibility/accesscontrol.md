@@ -77,6 +77,6 @@ The modified code from [Business Logic](./businesslogic.md) would look like this
 
     While this allows to have tight access control, it can backfire when not implemented carefully.
 
-## Next
+## Next step
 
 Proceed to [deployment](deployment.md).
