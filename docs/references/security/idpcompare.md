@@ -15,7 +15,7 @@ You can use the [build-in IdP](./authentication.md) or an [external IdP](./authe
 | uses secure `idpcat.nsf` | ./. | ./. | ./. | Yes |
 | In sync with core Domino | ./. | ./. | ./. | Yes |
 
-## External IdP config using `jwt`
+<!--## External IdP config using `jwt`
 
 ![external config using jwt](../../assets/images/DRAPIAuth1.png)
 
@@ -25,4 +25,5 @@ You can use the [build-in IdP](./authentication.md) or an [external IdP](./authe
 
 ## External IdP config using `oidc-idpcat`
 
-![external config using oidc-idpcat](../../assets/images/DRAPIAuth3.png)
+![external config using oicd-idpcat](../../assets/images/DRAPIAuth3.png)
+-->
