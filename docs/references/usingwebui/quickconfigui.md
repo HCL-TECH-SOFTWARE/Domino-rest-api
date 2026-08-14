@@ -7,9 +7,9 @@ The **Quick Config** page in the **Admin UI** lets you create a schema and an as
 ## Use Quick Config
 
 1. Open the **Admin UI**.
-2. From the side navigation pane, choose **Quick Config**. The **Quick Config** pane opens.
+2. From the side navigation pane, choose **Quick Config**. The **Quick Config** side drawer opens.
 
-    ![Quick Config](../../assets/images/quickconfig1.png)
+    ![Quick Config](../../assets/images/quickconfig1.png){: style="height:70%;width:70%"}
 
 3. In **Available Databases**, search for and select the target database you want to enable for REST access.
 4. Provide the basic details:

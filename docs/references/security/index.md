@@ -2,7 +2,9 @@
 
 Good security isn't a one-trick pony, but a combination of factors.
 
---8<-- "pickYourAuth.md"
+!!! warning "Important"
+
+    There are multiple ways to configure an external IdP in the Domino REST API: `jwt`, `oidc`, and `oidc-idpcat`. When in doubt, use `oidc-idpcat`. For more information, see [Auth*](authentication.md) for details.
 
 Here are what we implemented:
 

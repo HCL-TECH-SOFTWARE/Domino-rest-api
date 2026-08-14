@@ -9,4 +9,4 @@ nav:
   - setupoauthnsf.md
   - customIdp.md
   - securingKEEPEndpoints.md
-  - idpcompare.md
+#  - idpcompare.md

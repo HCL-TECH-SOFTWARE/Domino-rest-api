@@ -12,7 +12,8 @@ You are aware of how to [change the form configuration](../../references/usingwe
 
 1. Under **Mode Settings**, click the pencil icon corresponding to the **Formula for Write Access**.
 
-    ![Formula for Write Access dialog](../../assets/images/writeaccess.png){: style="height:70%;width:70%"}
+    <!--![Formula for Write Access dialog](../../assets/images/writeaccess.png){: style="height:70%;width:70%"}-->
+    ![Formula for Write Access dialog](../../assets/images/modeformula.png){: style="height:70%;width:70%"}
 
     The **Formula for Write Access** dialog opens.
 

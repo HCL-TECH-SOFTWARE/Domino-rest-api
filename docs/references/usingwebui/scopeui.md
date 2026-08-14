@@ -30,9 +30,10 @@ Use the **Search** field and the search filter to find scopes by **Scope Name** 
 
 A Domino administrator typically creates scopes after a developer has created the corresponding schema.
 
-1. On the **Scope Management** page, click **Add Scope**
+1. On the **Scope Management** page, click **Add Scope**. The **Add New Scope** side drawer opens.
 
-    ![Create Database Scope](../../assets/images/CreateDatabaseBlue.png)
+    ![Configure Database](../../assets/images/AddNewDatabase.png){: style="height:70%;width:70%"}
+    <!--![Create Database Scope](../../assets/images/CreateDatabaseBlue.png)-->
 
 2. Under **Available Schema**, select the schema to associate with the new scope.
 3. Under **Add New Scope**, fill in the fields:
@@ -54,8 +55,6 @@ A Domino administrator typically creates scopes after a developer has created th
     - **Scope Icon** - Choose an icon to help visually identify the scope.
 
 4. Click **Add** to create the scope.
-
-![Configure Database](../../assets/images/AddNewDatabase.png)
 
 ## Edit a scope
 

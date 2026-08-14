@@ -4,7 +4,7 @@
 
 Guides you on testing if a user has read, write, and delete access to the database form based on the **Formula for Read Access**, **Formula for Write Access**, and **Formula for Delete Access** in the **Mode Settings** in the **Admin UI**.
 
-![Mode Settings](../../assets/images/modesettings.png)
+![Mode Settings](../../assets/images/modeformula.png){: style="height:75%;width:75%"}
 
 ## Before you begin
 
@@ -20,7 +20,7 @@ Guides you on testing if a user has read, write, and delete access to the databa
 4. Enter the UNID of the document or database form in the **Document Id** text box.
 5. Click **Run Test**.
 
-![Test Formulas](../../assets/images/testformula.png){: style="height:75%;width:75%"}
+![Test Formulas](../../assets/images/testformula.png){: style="height:50%;width:50%"}
 
 !!! note
 
@@ -30,7 +30,7 @@ Guides you on testing if a user has read, write, and delete access to the databa
 
 The default formula for read and write access is [`@True`](https://help.hcl-software.com/dom_designer/14.0.0/basic/H_TRUE.html), while the default formula for delete access is [`@False`](https://help.hcl-software.com/dom_designer/14.0.0/basic/H_FALSE.html). If the tested user has read and write access and doesn't have delete access to the database form, the test result should be as shown below:
 
-![Test Formulas](../../assets/images/testformula1.png){: style="height:75%;width:75%"}
+![Test Formulas](../../assets/images/testformula1.png){: style="height:50%;width:50%"}
 
 ## Additional information
 

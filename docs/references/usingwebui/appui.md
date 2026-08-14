@@ -28,7 +28,7 @@ On the page, you can:
 ## Add an application
 
 1. On the **Application Management** page, click **Add Application**.
-2. In the **Add New Application** pane that appears:
+2. In the **Add New Application** side drawer that opens:
 
     - Enter a name for your application in the **Application Name** field.
     - Provide details to describe its use in the **Description** field.
@@ -39,7 +39,7 @@ On the page, you can:
     - Choose an **App Icon** to help visually identify the application.
     - Click **Add**.
 
-    ![Application Form](../../assets/images/AddApplicationForm.png)
+    ![Application Form](../../assets/images/AddApplicationForm.png){: style="height:50%;width:50%"}
 
 The new application appears in the **Application Management** page.
 

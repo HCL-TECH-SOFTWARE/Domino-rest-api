@@ -2,7 +2,7 @@
 
 ## Overview
 
-There are many ways to configure an external IdP in the Domino REST API. Refer to the following table for details and refer to the [comparison](../security/idpcompare.md) for more information.
+There are many ways to configure an external IdP in the Domino REST API. Refer to the following table for details and refer to the [comparison](#compare-idp-options) for more information.
 
 In all options, a JWT token gets validated and authorized access based on its claims, including user identity, roles, and scopes.
 
@@ -307,6 +307,23 @@ The Domino REST API probes for the existence of various claims in the JWT token 
 4. preferred_username
 5. email
 6. sub
+
+## Compare IdP options
+
+You can refer to the following table to compare your configuration options:
+
+| Topic | [Internal IdP](../../howto/IdP/configuringCertificates.md) | [external (JWT)](../../howto/IdP/configuringIdentityProvider.md#add-your-own-idp) | [external (OIDC)](../../howto/IdP/configureoidc.md) | [external (OIDC-idpcat)](./authentication.md#oidc-with-idpcat-authentication) |
+| :--- | :--- | :--- | :--- | :--- |
+|Preferred | ./. | ./. | ./. | Yes |
+| Single server symmetric keys | Yes | ./. | ./. | ./. |
+| Private key | Yes | ./. | ./. | ./. |
+| Public key | Yes | Yes | Yes | Yes |
+| Local key files | Yes | Yes | ./. | ./. |
+| Provider URL | ./. | Yes | Yes | Yes |
+| requires `clientId` | ./. | ./. | Yes | Yes |
+| requires `clientSecret` | ./. | ./. | Yes | ./. |
+| uses secure `idpcat.nsf` | ./. | ./. | ./. | Yes |
+| In sync with core Domino | ./. | ./. | ./. | Yes |
 
 --8<-- "onclientids.md"
 

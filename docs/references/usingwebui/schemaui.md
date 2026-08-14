@@ -36,11 +36,11 @@ You can add a schema by creating your own schema or importing a schema.
 
     1. On the **Schema Management** page, click **Add Schema**.
 
-        ![Add schema](../../assets/images/addSchema.png)
+        <!--![Add schema](../../assets/images/addSchema.png)-->
 
     2. In the **Add New Schema** dialog, click **Create Schema**.
 
-        ![Create a schema ](../../assets/images/createSchema.png){: style="height:80%;width:80%"}
+        ![Create a schema ](../../assets/images/createSchema.png){: style="height:40%;width:40%"}
 
     3. In the **Create Schema** dialog:
 
@@ -76,7 +76,7 @@ You can add a schema by creating your own schema or importing a schema.
 1. On the **Schema Management** page, select the schema you want to edit.
 2. In the schema details card, click the edit icon.
 
-      ![Edit icon](../../assets/images/editschema.png){: style="height:50%;width:50%"}
+      ![Edit icon](../../assets/images/editschema.png){: style="height:40%;width:40%"}
 
 3. In the **Edit Schema** dialog, you can:
 
@@ -96,7 +96,7 @@ You can add a schema by creating your own schema or importing a schema.
       |Require Revision|Requires the provision of the correct revision version of the document to update the document through an update endpoint.|
       |Prevent Design Refresh|Flags the schema written to the database, so the Domino design task won't replace or delete the schema.|
 
-    ![Edit schema dialog](../../assets/images/editschema1.png){: style="height:80%;width:80%"}
+    <!--![Edit schema dialog](../../assets/images/editschema1.png){: style="height:80%;width:80%"}-->
 
 4. Click **Save**.
 
@@ -111,7 +111,7 @@ On the **Schema Management** page, select a schema. The **Database Forms** tab i
 
 You can click the **Show Active** toggle to the on position to only show active forms.
 
-![List Forms](../../assets/images/ListOfForms2.png){: style="height:70%;width:70%"}
+![List Forms](../../assets/images/ListOfForms2.png){: style="height:80%;width:80%"}
 
 ## Add new form schema
 
@@ -157,18 +157,18 @@ You can activate forms one at a time or simultaneously.
 
 1. On the **Database Forms** tab, click the pencil icon corresponding to the activated form that you want to edit.
 
-    [![Database forms](../../assets/images/dbforms.png)](../../assets/images/dbforms.png "Click to open in a new tab"){: target="_blank" rel="noopener noreferrer"}
+    ![Database forms](../../assets/images/dbforms.png)
 
     !!!note
         Clicking the pencil icon corresponding to an inactive form shows the **Activate Form** dialog, which requires you to confirm the activation of the form. If you click **OK**, the form is activated, and you are directed to the form **Access Mode** page.
 
     The **Access Mode** page opens showing the `default` access mode.
 
-    [![Access mode](../../assets/images/AccessMode.png)](../../assets/images/AccessMode.png "Click to open in a new tab"){: target="_blank" rel="noopener noreferrer"}
+    ![Access mode](../../assets/images/AccessMode.png)
 
 2. Under **Show fields from**, hover over a field item and click the **+** icon. This adds the field in the form. Repeat this for all the fields to be added.
 
-    [![Add field](../../assets/images/addfield.png){: style="height:50%;width:50%"}](../../assets/images/addfield.png "Click to open in a new tab"){: target="_blank" rel="noopener noreferrer"}
+    ![Add field](../../assets/images/addfield.png)
 
     !!! tip
 
@@ -196,10 +196,8 @@ You can activate forms one at a time or simultaneously.
 4. Under **Mode Settings**:
 
       1. Click the pencil icon corresponding to a mode formula. A dialog opens.
-
-          The following image shows the opened **Formula for Delete Access** dialog.  
-
-          [![Formula Settings](../../assets/images/modeformula1.png)](../../assets/images/modeformula.png "Click to open in a new tab"){: target="_blank" rel="noopener noreferrer"}
+  
+          ![Formula Settings](../../assets/images/modeformula.png)
 
       2. In the text field in the dialog, edit the `@True` or `@False` entry and click **Save** to close the dialog.
 
@@ -250,7 +248,7 @@ You can activate forms one at a time or simultaneously.
 
       The following image shows an example of the added mode, which is the `dql`.
 
-      [![Mode list](../../assets/images/modeList.png)](../../assets/images/modeList.png "Click to open in a new tab"){: target="_blank" rel="noopener noreferrer"}
+      ![Mode list](../../assets/images/modeList.png)
 
 4. Add fields and set the read or write access formula for each of the added fields.
 5. Click **Save**.
@@ -297,7 +295,7 @@ Use this function to see the differences between the modes of a selected form. T
 
         Click the **Show Active** toggle to the on position to only show active views.
 
-        ![List Views](../../assets/images/ListOfViews1.png){: style="height:70%;width:70%"}
+    ![List Views](../../assets/images/ListOfViews1.png){: style="height:80%;width:80%"}
 
 ## Activate a view
 
@@ -332,7 +330,7 @@ See [Edit a database view of a schema](../../howto/database/editviewcolumn.md) f
 
         Click the **Show Active** toggle to the on position to only show active agents.
 
-        ![List Agents](../../assets/images/ListOfAgents.png){: style="height:70%;width:70%"}
+    ![List Agents](../../assets/images/ListOfAgents.png){: style="height:80%;width:80%"}
 
 ## Activate an agent
 

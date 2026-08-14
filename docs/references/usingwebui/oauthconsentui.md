@@ -19,7 +19,7 @@ In the Domino REST API context, an *OAuth consent* is a record that a specific u
 
 The **OAuth Consents** page displays existing OAuth consents along with related details such as the user identity, application name, and expiration information.
 
-[![OAuth Consent page](../../assets/images/oauthConsent.png)](../../assets/images/oauthConsent.png "Click to open in a new tab"){: target="_blank" rel="noopener noreferrer"}
+![OAuth Consent page](../../assets/images/oauthConsent.png)
 
 You may:
 
