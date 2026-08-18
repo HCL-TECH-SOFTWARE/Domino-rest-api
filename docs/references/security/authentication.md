@@ -205,7 +205,7 @@ This is the configuration suggested for outward facing Domino servers. Domino RE
 
 To enable an external provider, Domino REST API requires access to the provider’s public key, which can be configured in two ways.
 
-If your provider supports the [`/.well-known/openid-configuration` endpoint](https://ldapwiki.com/wiki/Wiki.jsp?page=Openid-configuration){: target="\_blank"}, you can provide the base URI or the full URI to that endpoint in the configuration:
+If your provider supports the [`/.well-known/openid-configuration` endpoint](https://ldapwiki.com/wiki/Wiki.jsp?page=Openid-configuration "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:13px;width:13px"}, you can provide the base URI or the full URI to that endpoint in the configuration:
 
 ```json
 {

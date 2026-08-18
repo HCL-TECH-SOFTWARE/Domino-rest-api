@@ -50,7 +50,7 @@ This procedure enables you to use a public/private key pair and add it to the Do
 
 To use JWT tokens from an external provider, Domino REST API requires access to the provider’s public key. This can be done in two ways:
 
-- One way is to provide the base URI or the full URI to the [`/.well-known/openid-configuration` endpoint](https://ldapwiki.com/wiki/Wiki.jsp?page=Openid-configuration){: target="_blank"} in the configuration, if your external provider supports the [`/.well-known/openid-configuration` endpoint](https://ldapwiki.com/wiki/Wiki.jsp?page=Openid-configuration){: target="_blank"}.
+- One way is to provide the base URI or the full URI to the [`/.well-known/openid-configuration` endpoint](https://ldapwiki.com/wiki/Wiki.jsp?page=Openid-configuration "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"} in the configuration, if your external provider supports the `/.well-known/openid-configuration` endpoint.
 
     1. Create a JSON file using a text editor.
     2. Copy the JSON object to the JSON file and update it with the correct values to provide the base URI or the full URI to the endpoint.

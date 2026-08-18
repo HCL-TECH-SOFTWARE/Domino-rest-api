@@ -32,7 +32,7 @@ The view should be in **Active** status. For more information, see [Activate a v
         - Click **Add All** if you want to add all the columns. 
         - To delete a selected column, click the corresponding trash icon. 
 
-    ![Edit view name column](../../assets/images/editviewcolumn.png){: style="height:80%;width:80%"}
+    ![Edit view name column](../../assets/images/editviewcolumn.png){: style="height:90%;width:90%"}
 
 6. **(Optional)** Set the external name of a selected column by entering a name in the corresponding text field under **External Name**.
 
@@ -43,7 +43,8 @@ The view should be in **Active** status. For more information, see [Activate a v
 
 The updated view now displays only your selected columns. On the **Database Views** tab, the edited view appears in bold font to indicate it has been edited. Hovering over the question mark icon beside it reveals a notification confirming that changes have been made.
 
-![Updated view](../../assets/images/updateddbview.png){: style="height:80%;width:80%"}
+<!--![Updated view](../../assets/images/updateddbview.png){: style="height:80%;width:80%"}-->
+![Updated view](../../assets/images/ListOfViews1.png){: style="height:90%;width:90%"}
 
 ### To reset an edited view
 

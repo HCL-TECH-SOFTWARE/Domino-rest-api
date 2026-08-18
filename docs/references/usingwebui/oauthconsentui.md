@@ -9,7 +9,9 @@ In the Domino REST API context, an *OAuth consent* is a record that a specific u
 ## Access OAuth Consents page
 
 1. Log in to the **Admin UI**.
-2. In the side navigation pane, click **Consents** to open the **OAuth Consents** page. The page displays a list of all currently visible OAuth consents.
+2. On the home page, select **Consents Management - OAUTH** to open the **OAuth Consents** page. You can also access the **OAuth Consents** page by clicking **Consents** in the side navigation pane.
+
+    The **OAuth Consents** page displays a list of all currently visible OAuth consents.
 
 !!! note
 

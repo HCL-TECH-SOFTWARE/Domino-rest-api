@@ -6,7 +6,7 @@ This guide provides information on using the Domino REST API documentation.
 
 ## Documentation sections
 
-The Domino REST API documentation is based on the [Diátaxis framework](https://diataxis.fr/ "Link opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:13px;width:13px"}, which organizes documentation into the following main sections:
+The Domino REST API documentation is based on the [Diátaxis framework](https://diataxis.fr/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:13px;width:13px"}, which organizes documentation into the following main sections:
 
 - Tutorials
 - How-to guides
@@ -39,6 +39,6 @@ The search result shows the number of documents with content matching all or any
 
 ## Support and community
 
-To open support tickets, go to the [Customer Support](https://support.hcltechsw.com/csm "Link opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:13px;width:13px"} portal.  
+To open support tickets, go to the [Customer Support](https://support.hcltechsw.com/csm "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:13px;width:13px"} portal.  
 
 To share information, ask questions, and learn about Domino REST API, go to the HCL Domino forum at the [HCLSoftware Digital Solutions Community Forum](https://developer.ds.hcl-software.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:13px;width:13px"} or join the [OpenNTF Discord channel](https://discord.com/invite/jmRHpDRnH4 "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:13px;width:13px"}.

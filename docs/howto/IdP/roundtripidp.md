@@ -34,7 +34,7 @@ Configure an external IdP of your choice. For more information, see [configuring
 
 1. Register an application.
 
-    1. Go to the [Azure portal](https://portal.azure.com){: target="\_blank"} and sign in.
+    1. Go to the [Azure portal](https://portal.azure.com "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"} and sign in.
 
         !!! tip
 
