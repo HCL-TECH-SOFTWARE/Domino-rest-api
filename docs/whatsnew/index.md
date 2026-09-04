@@ -22,7 +22,7 @@ The What's new contains information about the latest features, improvements, fix
     - **3** Experimental features
     - **5** New features
     - **23** Improvements
-    <!-- **0** Resolved issues-->
+    - **2** Resolved issues
     <!-- **0** New features-->
     <!-- **0** Breaking change-->
     <!-- **X** Preview features-->

@@ -12,6 +12,8 @@ Topics to guide you in completing configuration goals and tasks in relation to d
 
 - [Configure Ports](prodports.md)
 
+- [Configure `computeTotalCount` query parameter](totalcount.md)
+
 - [Customize available API schemas and endpoints](customAPI.md)
 
 - [Enable CalDav, CardDav, and DXL extension APIs](davdxl.md)
