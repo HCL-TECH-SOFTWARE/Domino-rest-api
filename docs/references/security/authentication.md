@@ -2,7 +2,7 @@
 
 ## Overview
 
-There are many ways to configure an external IdP in the Domino REST API. Refer to the following table for details and refer to the [comparison](../security/idpcompare.md) for more information.
+There are many ways to configure an external IdP in the Domino REST API. Refer to the following table for details and refer to the [comparison](#compare-idp-options) for more information.
 
 In all options, a JWT token gets validated and authorized access based on its claims, including user identity, roles, and scopes.
 
@@ -141,7 +141,7 @@ The "oidc" is similar to "oidc-idpcat" or "jwt". The keys can be anything, like 
 
 | Items | Description |
 | :--- | :--- |
-| `active` | **Optional**. Set to *false* in order to disable the feature without deleting its configuration.|
+| `active` | **Optional** Can be set to `false` to temporarily disable something without deleting the config entirely. |
 | `providerURL` | It's the OIDC-provider-specific URL. It's in a form common for Keycloak, but Azure and others look different. |
 | `clientId` | It's the configured client ID from the OIDC provider. It is strongly recommended to use `Domino` as client name. |
 | `clientSecret` | It's the generated client secret from the OIDC provider, usually a randomly-generated hex string. |
@@ -205,7 +205,7 @@ This is the configuration suggested for outward facing Domino servers. Domino RE
 
 To enable an external provider, Domino REST API requires access to the provider’s public key, which can be configured in two ways.
 
-If your provider supports the [`/.well-known/openid-configuration` endpoint](https://ldapwiki.com/wiki/Wiki.jsp?page=Openid-configuration){: target="\_blank"}, you can provide the base URI or the full URI to that endpoint in the configuration:
+If your provider supports the [`/.well-known/openid-configuration` endpoint](https://ldapwiki.com/wiki/Wiki.jsp?page=Openid-configuration "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:13px;width:13px"}, you can provide the base URI or the full URI to that endpoint in the configuration:
 
 ```json
 {
@@ -220,7 +220,7 @@ If your provider supports the [`/.well-known/openid-configuration` endpoint](htt
 
 During initialization, Domino REST API will query this endpoint for issuer and key information to trust public keys from that service.
 
-Some IdP, such as [Microsoft Entra ID formerly Azure Active Directory](../../howto/IdP/configuringAD.md), don't provide full information, missing algorithm or accurate issuer info. For them, additional parameters `aud`, `iss` and `algoritm` can be specified.
+Some IdP, such as [Microsoft Entra ID formerly Azure Active Directory](../../howto/IdP/configuringAD.md), don't provide full information, missing algorithm or accurate issuer info. For them, additional parameters `aud`, `iss` and `algorithm` can be specified.
 
 ```json
 {
@@ -307,6 +307,23 @@ The Domino REST API probes for the existence of various claims in the JWT token 
 4. preferred_username
 5. email
 6. sub
+
+## Compare IdP options
+
+You can refer to the following table to compare your configuration options:
+
+| Topic | [Internal IdP](../../howto/IdP/configuringCertificates.md) | [external (JWT)](../../howto/IdP/configuringIdentityProvider.md#add-your-own-idp) | [external (OIDC)](../../howto/IdP/configureoidc.md) | [external (OIDC-idpcat)](./authentication.md#oidc-with-idpcat-authentication) |
+| :--- | :--- | :--- | :--- | :--- |
+|Preferred | ./. | ./. | ./. | Yes |
+| Single server symmetric keys | Yes | ./. | ./. | ./. |
+| Private key | Yes | ./. | ./. | ./. |
+| Public key | Yes | Yes | Yes | Yes |
+| Local key files | Yes | Yes | ./. | ./. |
+| Provider URL | ./. | Yes | Yes | Yes |
+| requires `clientId` | ./. | ./. | Yes | Yes |
+| requires `clientSecret` | ./. | ./. | Yes | ./. |
+| uses secure `idpcat.nsf` | ./. | ./. | ./. | Yes |
+| In sync with core Domino | ./. | ./. | ./. | Yes |
 
 --8<-- "onclientids.md"
 

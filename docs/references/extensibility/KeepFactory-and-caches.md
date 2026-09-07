@@ -23,7 +23,7 @@ The KeepConfig contains two main objects:
 
 - A map of KeepApiInfo objects, one for each endpoint in the OpenAPI spec with an operationId. The key in the map is the operationId. The contents are loaded when Domino REST API loads. The KeepApiInfo object also checks whether it can work as a JSON handling endpoint, if it:
 
-    - responds with JSON 
+    - responds with JSON
     - receives only JSON or expects no body
 
 - A map of KeepDbInfo objects, one for each database exposed for Domino REST API access. The key in the map is the Domino REST API name for the database. The structure is:
@@ -54,11 +54,10 @@ The KeepConfig contains two main objects:
             - Formula(s) to be applied for any GET requests for the form mode (onLoad)
             - Formula(s) to be applied before saving any documents for this form mode (onSave)
         - Whether the Input Translation and Input Validation formulas on the underlying Notes Form should be applied (computeWithForm).
-        <!-- Whether a POST request should be rejected if the content doesn't conform with the list of fields expected for write access (strictInput). If set to false, any fields not in the writeAccessFields are just ignored.-->
 
 The KeepConfig is also used to:
 
-- Get and retrieve the system user name.
+- Get and retrieve the system username.
 - Check if local users are allowed, managed via the GodMode environment variable.
 - Scan and retrieve actual database names for the Domino REST API Admin module.
 - Read the JSON OpenAPI spec.

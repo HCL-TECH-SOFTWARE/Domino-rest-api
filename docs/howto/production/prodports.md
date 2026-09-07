@@ -20,7 +20,7 @@ Check the [configuration parameters](../../references/configuration/parameters.m
     ```json
     {
     "PORT": 8857,
-    "MANAGMENTPORT": 9000,
+    "MANAGEMENTPORT": 9000,
     "METRICSPORT": 8877,
     "HEALTHCHECKPORT": 8865
     }
@@ -53,14 +53,14 @@ Check the [configuration parameters](../../references/configuration/parameters.m
 3. Open each `.json` file and see if the ports are being changed. To know that there are changes, the following settings are modified.
 
     - "PORT" for the main API port
-    - "MANAGMENTPORT" for the Management page port
+    - "MANAGEMENTPORT" for the Management page port
     - "METRICSPORT" for the Metrics port
     - "HEALTHCHECKPORT" for the Health Check port
 
     ```json    
         {
         "PORT": 8857,
-        "MANAGMENTPORT": 8889,
+        "MANAGEMENTPORT": 8889,
         "METRICSPORT": 8890,
         "HEALTHCHECKPORT": 8886,
         "FIREHOSEPORT": 42424

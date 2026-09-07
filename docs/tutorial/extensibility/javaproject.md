@@ -16,7 +16,7 @@ Be careful when installing a JDK, it might have license requirements, such as th
 
 ## Locate and install DRAPI dependencies
 
-Maven at compile time relies on dependencies in the `~/.m2` directory structure, so you need to install DRAPI's jar files there manually since they're not published to Maven central and can't be automagically downloaded.
+Maven at compile time relies on dependencies in the `~/.m2` directory structure, so you need to install DRAPI's jar files there manually since they're not published to Maven central and can't be automatically downloaded.
 
 Locate the DRAPI installation directory and change into it. It typically is something like `/opt/hcl/keep` or `C:\Program files\HCL\restapi`. Make sure you see the following files:
 
@@ -25,7 +25,7 @@ Locate the DRAPI installation directory and change into it. It typically is some
 - keep-core-\*-javadoc.jar
 - keep-extension-\*-javadoc.jar
 
-where `*` stands for the internal build number, such as `1.38.0` for DRAPI v1.1.2.
+The character `*` stands for the internal build number, such as `1.38.0` for DRAPI v1.1.2.
 
 !!! tip "You can use the installer"
 
@@ -70,7 +70,7 @@ mkdir "extension-tutorial\src\test\java\io\projectkeep\domino\keep\dbrequests\ap
 mkdir "extension-tutorial\src\test\resources"
 ```
 
-The structure follows the Maven defaults and the package naming used in DRAPI.
+The structure follows the Maven defaults and the package naming used in Domino REST API.
 
 ## Add the `pom.xml`
 
@@ -201,7 +201,7 @@ In this tutorial, only the absolutely needed pieces are added. Depending on your
 
 ## Configure version control
 
-Create the file `.gitignore` in the root of your project. Take inspiration from existing files [here](https://github.com/github/gitignore/blob/main/Maven.gitignore) or [here](https://github.com/HCL-TECH-SOFTWARE/domino-jnx/blob/develop/.gitignore). It's also **strongly** recommended to create the file [`.gitattributes`](https://github.com/HCL-TECH-SOFTWARE/domino-jnx/blob/develop/.gitattributes). Once created, you initialize and populate the repository:
+Create the file `.gitignore` in the root of your project. Take inspiration from this [file](https://github.com/github/gitignore/blob/main/Maven.gitignore) or this [file](https://github.com/HCL-TECH-SOFTWARE/domino-jnx/blob/develop/.gitignore). It's also **strongly** recommended creating the file [`.gitattributes`](https://github.com/HCL-TECH-SOFTWARE/domino-jnx/blob/develop/.gitattributes). Once created, you initialize and populate the repository:
 
 ```bash
 git init
@@ -211,10 +211,6 @@ git commit -m 'initial creation'
 
 By frequently committing to your local Git, you work with the assurance that you can respawn in the event of any issues or errors.
 
-## Next
+## Next step
 
 Proceed to [OpenAPI specification](openapi.md).
-
-<!--## Let's connect
-
-"feedback.md"-->

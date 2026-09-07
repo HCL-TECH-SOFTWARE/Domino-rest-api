@@ -4,7 +4,9 @@ nav:
     - timeout.md
     - metrics.md
     - Configure ports: prodports.md
+    - Configure computeTotalCount: totalcount.md
     - Customize API schemas and endpoints: customAPI.md
+    - davdxl.md
     - dominohttps.md
     - hardening.md
     - httpsprod.md

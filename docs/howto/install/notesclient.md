@@ -78,14 +78,14 @@ The procedure guides you to try the Domino REST API with a sample demo Notes dat
 
         For different versions of Notes, the Notes JRE path in the script may vary. You may need to change the path in the script.
 
-6. When prompted for a password for your notes.id file in the Java window, enter your password in that Java window. If any error occurs, stop the running process (kill -9 for Mac) and restart the script. For more information, see [Troubleshooting guide](../../references/troubleshooting.md).
+6. When prompted for a password for your `notes.id` file in the Java window, enter your password in that Java window. If any error occurs, stop the running process (kill -9 for Mac) and restart the script. For more information, see [Troubleshooting guide](../../references/troubleshooting.md).
 
     <!-- prettier-ignore -->
     !!! tip
 
         To avoid being prompted for a password each time you start the Domino REST API, go to **File > Security > User Security** in your HCL Notes Client, and then select the **Don't prompt for a password from other Notes-based programs** checkbox in the **Security Basics** tab.
 
-    ![OpenAPI](../../assets/images/NotesSecurityPasswordOption.png){: .scale-img-seventy-five-percent }
+    ![OpenAPI](../../assets/images/NotesSecurityPasswordOption.png){: style="height:75%;width:75%"}
 
 ## Expected result
 
@@ -101,4 +101,4 @@ When run, the Domino REST API starts and checks for any issues. On the first tim
 
 For any issues with the installation, see the [Troubleshooting guide](../../references/troubleshooting.md).
 
-To shutdown the Domino REST API, go to the **Management console** located at `http://localhost:8889`, enter the Management credentials as specified in the `localusers.json` file described above, and click **Shutdown**.
+To shut down the Domino REST API, go to the **Management console** located at `http://localhost:8889`, enter the Management credentials as specified in the `localusers.json` file described above, and click **Shutdown**.

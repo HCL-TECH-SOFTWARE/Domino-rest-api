@@ -17,7 +17,7 @@
 The procedure guides you in creating a schema and a scope using **Quick Config** in the Admin UI.
 
 1. Log in to **Admin UI**.
-2. Expand the side panel and click **Quick Config**.
+2. Expand the side navigation panel and click **Quick Config**.
 
     ![Quick config](img/AdminUIExpanded.png){: style="height:70%;width:70%"}
 

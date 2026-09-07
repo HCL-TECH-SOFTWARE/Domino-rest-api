@@ -6,7 +6,7 @@ By default, the Domino REST API uses a random symmetric JWT signing key that’s
 
 - Understanding how Domino REST API configuration works.
 - Additional endpoints other than port 8880
-- How to use the Management console. 
+- How to use the Management console.
 
 ## Before you begin
 
@@ -31,7 +31,7 @@ Your Domino server must be running.
 - Check the `keepconfig.d` directory. You should see new files matching the entered certificate name.
 
     For example, if you entered `KeepLabIdP` as your certificate name, you should see the following files in `keepconfig.d`:
-    
+
     - `KeepLabIdP.json`
     - `KeepLabIdP.cert.pem`
     - `KeepLabIdP.private.key.pem`

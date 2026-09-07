@@ -58,7 +58,7 @@ HttpListener->HttpClient: response end
 
 ### Anatomy of the EventBus message
 
-EventBus uses header values to transport the meta data.
+EventBus uses header values to transport the metadata.
 The body (usually JSON) has a "payload" property with the requested data.
 
 ![FlowChart of our Eventbus](../../assets/images/HTTPtoEventBus.png)
@@ -70,7 +70,7 @@ using [`EventBus.request()`](https://vertx.io/docs/apidocs/io/vertx/core/eventbu
 
 - db: The Domino REST API alias name of the requested database (`MAIL` for Quattro)
 - jwtclaim: The JWT string the user authenticated with
-- appId: (Optional) Id of the calling server app
+- appId: (Optional) ID of the calling server app
 - appSecret: (Optional) secret of the calling server app
 - operationId: The operationId as defined in OpenApiSpec
 - replyAddress: Address the handler will listen for replies
@@ -95,8 +95,8 @@ Data reply is similar to the initial reply but with more options in `status`:
 ## Reactive wrapper
 
 To simplify the creation of handler and requesters, helper classes are built.
-They encapsulate the process back and forth on the EventBus following the [Reactive](http://reactivex.io/) pattern. This allows for flexible pre/post processing of data sent over the EventBus.
+They encapsulate the process back and forth on the EventBus following the [Reactive](http://reactivex.io/) pattern. This allows for flexible pre-processing/post-processing of data sent over the EventBus.
 
-## TODO: more on the wrapper
+!!! note
 
-The wrapper classes can be found in the package `com.hcl.domino.keep.eventbus`
+    The wrapper classes can be found in the package `com.hcl.domino.keep.eventbus`.

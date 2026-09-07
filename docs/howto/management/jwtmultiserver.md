@@ -1,8 +1,8 @@
-# JWT Multi-Server
+# JWT multiserver
 
 ## About this task
 
-The API uses JWT Bearer Tokens for verification. However, because access tokens come from different token servers, the validation of tokens must be changed. 
+The API uses JWT Bearer Tokens for verification. However, because access tokens come from different token servers, the validation of tokens must be changed.
 
 This guide walks you through setting up Domino REST API across multiple Domino servers to use the same JWT keys.
 

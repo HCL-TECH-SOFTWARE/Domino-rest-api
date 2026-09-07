@@ -1,6 +1,6 @@
 # Configure WebAuthn with Domino REST API and Domino 14 or greater
 
-WebAuthn (Passkey) authentication is enabled by default and can be configured to integrate with the Passkey support in Domino 14 via JSON files in `keepconfig.d`. 
+WebAuthn (Passkey) authentication is enabled by default and can be configured to integrate with the Passkey support in Domino 14 via JSON files in `keepconfig.d`.
 
 ## About this task
 
@@ -13,7 +13,7 @@ The procedure guides you to log in to both Domino REST API and Domino 14 using t
 - The passkey had been created by the administrator of Domino and saved as a `passkey.nsf`.
 
 ## Procedure
-    
+
 1. Create a JSON file using text/code app such as VS Code, Notepad, Notepad++.
 2. Copy the JSON object named `webauthn` to the JSON file.
 
@@ -26,7 +26,8 @@ The procedure guides you to log in to both Domino REST API and Domino 14 using t
         }
     }
     ```
-3. Change the value of the `rpId` parameter with the same URL configured in the Domino directory. 
+
+3. Change the value of the `rpId` parameter with the same URL configured in the Domino directory.
 
     ```json
         {
@@ -38,7 +39,7 @@ The procedure guides you to log in to both Domino REST API and Domino 14 using t
         }
     }
     ```
- 
+
     | Items           | Description                          |
     | :-------------- | :-----------------------------------|
     | `attestation`   |Can be one of "none", "indirect", "direct", or "enterprise"  |
@@ -52,6 +53,7 @@ The procedure guides you to log in to both Domino REST API and Domino 14 using t
 
 5. Restart Domino REST API on all servers with this new configuration.
 
-!!!note
+!!! note
+
     - If you disable the `webAuthnActive` in the settings, you won't be able to use passkey authentication.
-    - The actual WebAuthn keys are stored in each user's device. Domino and Domino REST API store only the public-key part to verify it. 
+    - The actual WebAuthn keys are stored in each user's device. Domino and Domino REST API store only the public-key part to verify it.

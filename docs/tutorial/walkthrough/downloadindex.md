@@ -1,8 +1,3 @@
-<!---
-hide:
-  - navigation
---->
-
 # Downloads
 
 This topic provides all the necessary resource materials required for the capability walkthrough and to complete the exercises.
@@ -40,4 +35,3 @@ Put the command line utilities somewhere on your path. On Linux/macOS, that's ty
     - `brew install curl` (macOS)
     - `sudo dnf install curl` (Redhat/Centos)
     - `sudo apt install curl` (Debian/Ubuntu)
-

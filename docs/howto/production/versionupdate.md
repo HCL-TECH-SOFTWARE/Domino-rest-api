@@ -25,10 +25,10 @@ Follow the procedure based on the installation option you used when installing t
 ### Docker
 
 1. Remove the existing docker container.
-2. If using the docker image from *My HCLSoftware portal*, load the docker image using the following command: 
+2. If using the docker image from *My HCLSoftware portal*, load the docker image using the following command:
 
     ```bash
-	docker load -i [name_of_tar_file].tar
+    docker load -i [name_of_tar_file].tar
     ```
 
     !!! note
@@ -153,8 +153,9 @@ Follow the procedure based on the installation option you used when installing t
 -->
 ### Linux
 
-!!!note
-    - Don't install using the java executable in `/opt/hcl/domino/bin/`. 
+!!! note
+
+    - Don't install using the java executable in `/opt/hcl/domino/bin/`.
     - If your system doesn't have Java installed, you can use the java executable in the `/opt/hcl/domino/notes/latest/linux/jvm/bin/` directory.
 
 To update to the latest release version, run the following command:
@@ -191,7 +192,6 @@ java -jar restapiInstall.jar \
 
     For more information on the installation-related support and limitations to client use, see [Install on Mac](../../tutorial/installconfig/install/mac.md).
 
-
 ### Windows
 
 To update to the latest release version, run the following command:
@@ -200,32 +200,31 @@ To update to the latest release version, run the following command:
 
     Domino REST API installer needs to be run as administrator.
 
-
 --8<-- "jarfilename.md"
 
-**For Windows Domino Server**
+=== "For Windows Domino Server"
 
-```bash
-java -jar restapiInstall.jar ^ 
- -d="C:\Program Files\HCL\Domino\Data" ^ 
- -i="C:\Program Files\HCL\Domino\notes.ini" ^ 
- -p="C:\Program Files\HCL\Domino" ^ 
- -r="C:\Program Files\HCL\Domino\restapi" ^ 
- -u ^
- -a
-```
+    ```bash
+    java -jar restapiInstall.jar ^ 
+     -d="C:\Program Files\HCL\Domino\Data" ^ 
+     -i="C:\Program Files\HCL\Domino\notes.ini" ^ 
+     -p="C:\Program Files\HCL\Domino" ^ 
+     -r="C:\Program Files\HCL\Domino\restapi" ^ 
+     -u ^
+     -a
+    ```
 
-**For Windows Notes Client**
+=== "For Windows Notes Client"
 
-```bash
-java -jar restapiInstall.jar ^
- -d="C:\Program Files\HCL\Notes\Data" ^
- -i="C:\Program Files\HCL\Notes\notes.ini" ^
- -r="C:\Program Files\HCL\Notes\restapi" ^
- -p="C:\Program Files\HCL\Notes" ^
- -u ^
- -a
-```
+    ```bash
+    java -jar restapiInstall.jar ^
+     -d="C:\Program Files\HCL\Notes\Data" ^
+     -i="C:\Program Files\HCL\Notes\notes.ini" ^
+     -r="C:\Program Files\HCL\Notes\restapi" ^
+     -p="C:\Program Files\HCL\Notes" ^
+     -u ^
+     -a
+    ```
 
 When running the command for Windows Notes Client, the installer creates a `runrestapi.cmd` script in the Domino REST API installation directory. Run it to launch the Domino REST API.
 

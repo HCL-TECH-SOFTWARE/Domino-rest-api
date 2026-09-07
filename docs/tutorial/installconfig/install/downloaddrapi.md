@@ -3,10 +3,6 @@
 ## Overview
 
 Domino REST API uses a Java-based installer, except for Docker, which uses a container image. You can download the installer and the Docker image from the **My HCLSoftware Portal**.
-<!--
-- For **Domino customers**, download the Domino REST API via [My HCLSoftware Portal](#download-via-my-hclsoftware-portal).
- For **Volt MX Go customers**, download the Domino REST API via [HCL Software License and Download Portal](#download-via-hcl-software-license-and-download-portal) or via [My HCLSoftware Portal](#download-via-my-hclsoftware-portal).
--->
 
 ## Installation files
 
@@ -34,7 +30,7 @@ For Domino 12
 1. Go to [My HCLSoftware Portal](https://my.hcltechsw.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}.
 
 2. On the landing page, click **Sign in**.
-3. On the sign-in page, log in using your credentials.
+3. Log in using your credentials on the sign-in page.
 4. On the **Software Downloads** page, click **HCL Domino**.
 5. On the **HCL Domino** page, go to the **Tools, Connectors, and Integrators** section and click **Domino REST API**.
 6. Under **Releases**, click the release version you want to download.

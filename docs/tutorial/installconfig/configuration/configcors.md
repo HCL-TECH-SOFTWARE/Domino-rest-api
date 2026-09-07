@@ -49,7 +49,7 @@ The procedure guides you in configuring [Cross-Origin Resource Sharing (CORS)](h
 
     === "For Domino REST API v1.1.3 and later"
 
-        The following example shows CORS rules for the example origins using [Regular expression (Regex)](https://en.wikipedia.org/wiki/Regular_expression 'Opens a new tab'){: target="\_blank" rel="noopener noreferrer"}&nbsp;![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}.
+        The following example shows CORS rules for the example origins using [Regular expression (Regex)](https://en.wikipedia.org/wiki/Regular_expression 'Opens a new tab'){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}.
 
         ```json
         {
@@ -104,7 +104,7 @@ If you encounter any error:
 
 ### Use a regex tool
 
-Regular expressions can be difficult to read and validate due to their syntax and flexibility. Make sure that your regular expressions match the intended patterns by testing with an interactive tool, such as [Regex101](https://regex101.com/ 'Opens a new tab'){: target="\_blank" rel="noopener noreferrer"}&nbsp;![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}. Select the Java flavor to ensure the results reflect the behavior of the intended implementation.
+Regular expressions can be difficult to read and validate due to their syntax and flexibility. Make sure that your regular expressions match the intended patterns by testing with an interactive tool, such as [Regex101](https://regex101.com/ 'Opens a new tab'){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}. Select the Java flavor to ensure the results reflect the behavior of the intended implementation.
 
 ### Regex pointers
 

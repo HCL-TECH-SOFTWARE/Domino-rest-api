@@ -55,10 +55,6 @@ Domino REST API is driven by a [dynamic configuration](../../references/configur
 
 The class name gets derived from the tag and the OperationID specified in the OpenAPI file. The tag gets mapped to a Java package name, while the OperationID forms the class name after the first letter gets capitalized.
 
-## Next
+## Next step
 
 Proceed to [implement business logic](businesslogic.md).
-
-<!--## Let's connect
-
-"feedback.md"-->

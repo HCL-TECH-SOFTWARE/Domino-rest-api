@@ -1,6 +1,6 @@
 # Extensibility
 
-The Domino REST API has been designed from ground up to be extensible. While effort has been spend to ease extensibility, some fundamental understanding of the architecture, the tooling and the extension points is required. This page will serve as the introduction.
+The Domino REST API has been designed from ground up to be extensible. While effort has been spent to ease extensibility, some fundamental understanding of the architecture, the tooling and the extension points is required. This page will serve as the introduction.
 
 ## Components involved
 
@@ -29,19 +29,19 @@ Last, not least, all interface definitions are maintained as [OpenAPI 3.0.x](htt
 - Understanding of OpenAPI (I like [APIGit](https://apigit.com/) as tool)
 - Familiarity with Domino
 - An IDE. Our team works with VSCode, IntelliJ or Eclipse
-- Optional, but strongly recommended: Container (a.k.a Docker) skills
+- Optional, but strongly recommended: Container skills
 
 ## Planning your extension
 
-There are three starting poin to write an extension (with increasing complexity):
+There are three starting points to write an extension (with increasing complexity):
 
-- Create a custom [RichText processor](../../references/richtextension.md) (everyone has their own view on RichText, so we built an extension point)
-- create your own API endpoints. E.g. you want an endpoint for approvals `/api/v1-workflow/approve`.
-- create a custom [Verticle](https://vertx.io/docs/vertx-core/java/#_verticles) that could do anything, e.g. periodically call a web service.
+- Creating a custom [RichText processor](../../references/richtextension.md)
+- Creating your own API endpoints, for example an endpoint for approvals: `/api/v1-workflow/approve`.
+- Having a custom [Verticle](https://vertx.io/docs/vertx-core/java/#_verticles) that could do anything, such as periodically calling a web service.
 
 ### RichText processors
 
-TCreating your own RichText processor is covered in [this reference entry](../../references/richtextension.md). In a nutshell: you create a `jar` file to be placed into DRAPI's `libs/` directory implementing the interfaces `IncomingRichtextProcessor` and `OutgoingRichtextProcessor` and declaring them in `resources/META-INF/services`
+Creating your own RichText processor is covered in [this reference entry](../../references/richtextension.md). In a nutshell: you create a `jar` file to be placed into DRAPI's `libs/` directory implementing the interfaces `IncomingRichtextProcessor` and `OutgoingRichtextProcessor` and declaring them in `resources/META-INF/services`
 
 ### API Endpoints
 
@@ -50,7 +50,7 @@ Creating your own API Endpoints requires more planning and a few more steps:
 1. Create your OpenAPI 3.0.x specification in JSON format. Be careful, the latest version of the OpenAPI specification is 3.1.x, which is due to Java8 limitations currently not supported in DRAPI 1.1.x. You need to save the specification in JSON format, we don't support YAML. Details about file location and naming can be found [in the tutorial](../../tutorial/extensibility/index.md).
 2. Create a Java [Maven](https://maven.apache.org/) project following the standard Maven layout. You will use the [parent module provided by JNX](https://central.sonatype.com/artifact/com.hcl.domino/domino-jnx-parent). Details can be found [in the tutorial](../../tutorial/extensibility/index.md)
 3. Create `src/main/resources/config/config.json`. In that file you point to your OpenAPI file, specify how endpoints get processed. While you can overwrite the configuration later in `keepconfig.d`, you want sensible defaults in that `config.json`. Make sure you understand [how configuration works](../../references/configuration/understandingconfig.md). Details can be found [in the tutorial](../../tutorial/extensibility/index.md)
-4. Implement the class(es) that execute your business logic. As long as your API only sends JSON in and out, you will need to implement just one class that extends the abstract class `AsyncDominoJNXJson` and in that class a single method `process` which gives you access to a session, the database and the incoming request. You can use `@Annotations` to define access requirements. Details can be found [in the tutorial](../../tutorial/extensibility/index.md)
+4. Implement the class or classes that execute your business logic. As long as your API only sends JSON in and out, you will need to implement just one class that extends the abstract class `AsyncDominoJNXJson` and in that class a single method `process` which gives you access to a session, the database and the incoming request. You can use `@Annotations` to define access requirements. Details can be found [in the tutorial](../../tutorial/extensibility/index.md)
 5. Deployment is as simple as putting your jar into the `libs/` directory. For containerized deployments you can use a custom Domino container leveraging [jib](https://github.com/GoogleContainerTools/jib). Details can be found [in the tutorial](../../tutorial/extensibility/index.md)
 
 ### Custom Verticles
@@ -65,7 +65,3 @@ The [vert.x](https://vertx.io/) runtime allows to deploy your own [verticles](ht
 ## Tutorial
 
 The [tutorial](../../tutorial/extensibility/index.md) walks you through the example of a foundational approval service that can work on multiple, data compatible, databases.
-
-<!--## Let's connect
-
-"feedback.md"-->

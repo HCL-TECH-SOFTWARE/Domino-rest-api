@@ -4,7 +4,7 @@ Downloadable assets to get you started in using the Domino REST API.
 
 ## Domino REST API
 
-Download from [My HCLSoftware Portal](https://my.hcltechsw.com/){: target="_blank"}.
+Download from [My HCLSoftware Portal](https://my.hcltechsw.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:13px;width:13px"}.
 
 ## Presentations
 
@@ -31,39 +31,43 @@ Download from [My HCLSoftware Portal](https://my.hcltechsw.com/){: target="_blan
 
 ## Demo.nsf
 
-- [Demo.nsf](../assets/downloads/Demo.nsf) - Demo database for the Postman and Tutorial examples.
+[Demo.nsf](../assets/downloads/Demo.nsf) is a demo database for the Postman and Tutorial examples.
 
 ## Bruno
 
-- [Domino REST API Bruno collection and environment](../assets/downloads/Domino%20REST%20Bruno%20Collection.zip){: download="Domino REST API bruno collection"}.
+[Domino REST API Bruno collection and environment](../assets/downloads/Domino%20REST%20Bruno%20Collection.zip){: download="Domino REST API bruno collection"}.
 
 This is a conversion of the Postman collection and environment, where still appropriate. It expects the [Demo.nsf](../assets/downloads/Demo.nsf) installed in the root of the Domino data directory.
 
-The following scripts are for reference only. They have been superseded by the scripts provided by the installer, so there's no need beyond satisfying curiosity to download them.
+## Scripts
 
-## Mac
+**The following scripts are for reference only**. They have been superseded by the scripts provided by the installer, so there's no need beyond satisfying curiosity to download them.
 
-- [Shell script](../assets/downloads/macClient.sh) to start Domino REST API on MacOS.
+### Mac
 
-- Modify the script and replace all instances in the Shell script before using as follows:
+A [shell script](../assets/downloads/macClient.sh) to start Domino REST API on MacOS.
 
-    - programDir with the directory Notes is located in
-    - dataDir with the directory the Notes Data is located in
-    - keepDir with the directory Domino REST API is located in
+Modify the script and replace all instances in the Shell script before using as follows:
 
-## Windows
+- programDir with the directory Notes is located in
+- dataDir with the directory the Notes Data is located in
+- keepDir with the directory Domino REST API is located in
 
-- [Command file](../assets/downloads/winClient.cmd) to start Domino REST API on a Windows client.
+### Windows
 
-- Modify the script and replace all instances in the Command file before using as follows:
+A [command file](../assets/downloads/winClient.cmd) to start Domino REST API on a Windows client.
 
-    - programDir with the directory Notes is located in
-    - dataDir with the directory the Notes Data is located in
-    - keepDir with the directory Domino REST API is located in
+Modify the script and replace all instances in the Command file before using as follows:
+
+- programDir with the directory Notes is located in
+- dataDir with the directory the Notes Data is located in
+- keepDir with the directory Domino REST API is located in
 
 ## Microsoft Entra ID formerly Azure Active Directory
 
 [AzureTester.zip](../assets/downloads/AzureTester.zip) is a simple test application you run on a local http server to check if a registered App in Microsoft Entra ID, formerly Azure Active Directory, can be used as JWT provider for the Domino REST API.
 
-!!!warning 
+!!! warning
+
     This is for testing only. Do **NOT** use this code in production.
+    

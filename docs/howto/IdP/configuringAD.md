@@ -22,7 +22,7 @@ To learn more about configuring Microsoft Entra ID for the Admin UI or Office Fo
 
 ### Register an application
 
-1. Go to the [Azure portal](https://portal.azure.com){: target="\_blank"} and sign in.
+1. Go to the [Azure portal](https://portal.azure.com "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"} and sign in.
 
     !!! tip
 
@@ -167,7 +167,7 @@ The following example image shows how it would look after adding the scopes.
 
 ### Register an application
 
-1. Navigate to the [Microsoft Azure Portal)](https://portal.azure.com){: target="\_blank"} to login, and then select **App registrations**.
+1. Navigate to the [Microsoft Azure Portal)](https://portal.azure.com){: target="_blank"} to login, and then select **App registrations**.
 
       ![Azure landing page](../../assets/images/configuringAD-01.png)
 

@@ -18,16 +18,10 @@ Topics to guide you in completing goals and tasks related to installation, confi
 
 - [Remove Domino REST API from Domino server or Notes Client](uninstall.md)
 
-- [Use passkey to login to Admin UI](passkey.md)
+- [Use passkey to log in to Admin UI](passkey.md)
 
 - [Configure WebAuthn with Domino REST API and Domino 14 or greater](webauthn.md)
 
 - [Customize OAuth consent screen](oauthoscreen.md) (experimental)
 
 - [Obtain authentication token from HCL Container Repository](obtainauthenticationtoken.md)
-
-<!--
-## Let's connect
-
-"feedback.md"
--->

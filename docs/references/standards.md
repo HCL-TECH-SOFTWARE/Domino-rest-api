@@ -39,15 +39,15 @@ In alphabetical order:-->
 
 - [RFC 7235](https://httpwg.org/specs/rfc7235.html): HTTP/1.1 Authentication
 
-- [RFC 7517](https://tools.ietf.org/html/rfc7517): Json Web Key (JWK).
+- [RFC 7517](https://tools.ietf.org/html/rfc7517): JSON Web Key (JWK).
 
-- [RFC 7519](https://tools.ietf.org/html/rfc7519): Json Web Token (JWT). All our endpoints short of login and OData (OData needs basic, Excel can't handle JWT)
+- [RFC 7519](https://tools.ietf.org/html/rfc7519): JSON Web Token (JWT). All our endpoints short of login and OData (OData needs basic, Excel can't handle JWT)
 
 - [RFC 7540](https://tools.ietf.org/html/rfc7540): HTTP/2
 
 - [RFC 7807](https://tools.ietf.org/html/rfc7807): Problem details for HTTP APIs
 
-- [RFC 8681](https://jmap.io/spec-mail.html): JSON implementation of mail and others
+- [RFC 8681](https://jmap.io/spec/rfc8621/): JSON implementation of mail and others
 
 ## Glossary
 
@@ -55,11 +55,11 @@ Commonly used terms for the Domino REST API.
 
 ### JKS
 
-Java KeyStore, a repository of security certificates used for SSL encryption. Includes authorization and public and private keys.
+Java KeyStore (JKS) is a Java-specific repository that stores private keys, public-key certificates, and trusted certificates used for TLS/SSL authentication and secure communication.
 
 ### JWT
 
-JSON Web Token, used for authentication between two trusted systems.
+JSON Web Token (JWT) is a signed token used to authenticate users and securely transmit identity and authorization claims between systems.
 
 ### NSF
 
@@ -71,7 +71,7 @@ Base64 ASCII encoding security certificates used for SSL encryption. Includes au
 
 ### PIM
 
-Personal Information Management such as mail calendar, contact, notebook/journals, tasks/todo's
+Personal Information Management such as mail calendar, contact, notebook/journals, tasks/to-dos
 
 ### PKS
 
@@ -83,4 +83,4 @@ Directory where you can modify some of Domino REST API's settings. Located in yo
 
 ### domino-keep.log
 
-The default file for storing logs. It's stored in the subdirectory `IBM_TECHNICAL_SUPPORT` of your `Notes/Domino` data directory. For more information, see [Logging](../howto/production/logging.md).
+The default file for storing logs. It's stored in the subdirectory `IBM_TECHNICAL_SUPPORT` of your `Notes/Domino` data directory. For more information, see [Logging](../howto/production/logging.md)

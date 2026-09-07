@@ -53,14 +53,14 @@ The procedure guides you on configuring
 
       Click **OK**. Now try to open the Idpconfig. To do that press **ctrl+o**, enter the name of the current server and file name as “idpcat.nsf”. Click **Open**.
 
-      ![idpcat](../../assets/images/SAML-idpcat.png)
+      ![IdPcat](../../assets/images/SAML-idpcat.png)
 
       Click **Add IdP Config**.
       Under the **Basics** tab, add the following:
 
       - **Host names or addresses mapped to this site**: Add your host name.
       - **Service provider ID**: Add your server URL.
-      - **Single sign-on service URL**: https://keycloak.quattro.rocks/auth/realms/hcllabs/protocol/saml
+      - **Single sign-on service URL**: `https://keycloak.quattro.rocks/auth/realms/hcllabs/protocol/saml`
 
       You should have _descriptor.xml_ file on your machine. Import it here using **Import XML file**.
 

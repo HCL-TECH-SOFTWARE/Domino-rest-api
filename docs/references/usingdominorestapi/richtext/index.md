@@ -1,17 +1,10 @@
 # Rich Text and the Domino REST API
 
-<!-- prettier-ignore -->
 !!! info "Background"
 
     [Rich Text (RTF)](https://en.wikipedia.org/wiki/Rich_Text_Format) was specified by Microsoft in 1987. Notes/Domino uses a similar specification. It's essentially a container format designed to host [plain text](https://www.youtube.com/watch?v=_mZBa3sqTrI), formatted text, images, attachments, embedded objects and layout information. It's whitespace sensitive, a term for formatting achieved by repeatedly pressing the space key.
 
-    Modern container formats with similar capabilities include [ECMA-376 (ISO/IEC-29500)](https://www.ecma-international.org/publications-and-standards/standards/ecma-376/) (Office Open XML) and [ISO/IEC 26300:2006](http://www.oasis-open.org/committees/download.php/19274/OpenDocument-v1.0ed2-cs1.pdf) (Open Document Format), which are both XML-based, and [MIME (RFC 1341)](https://datatracker.ietf.org/doc/html/rfc1341), which is widely used in email. The XML formats, common in word processors, are not native to the web. MIME, being multipurpose, does not prescribe content parts and is not native to web browsers.
-
-<!--
-
-Rich Text Format (RTF), specified by Microsoft in 1987, uses a similar specification in Notes/Domino. Rich Text Format (RTF) It is a container format designed to host plain text, formatted text, images, attachments, embedded objects, and layout information. It is whitespace sensitive—a term for formatting achieved by repeatedly pressing the space key.
-
-The container formats today that resemble these capabilities are [ECMA-376 (ISO/IEC-29500)](https://www.ecma-international.org/publications-and-standards/standards/ecma-376/) (a.k.a Office Open XML), [ISO/IEC 26300:2006](http://www.oasis-open.org/committees/download.php/19274/OpenDocument-v1.0ed2-cs1.pdf) (a.k.a Open Document Format), which are both XML based and [MIME (RFC 1341)](https://datatracker.ietf.org/doc/html/rfc1341) which is widely used in eMail. The XML formats, mainly used in word processors aren't native to the web, while MIME doesn't prescribe (it is **multipurpose** after all) its content parts **and** isn't native to web browsers.-->  
+    Modern container formats with similar capabilities include [ECMA-376 (ISO/IEC-29500)](https://www.ecma-international.org/publications-and-standards/standards/ecma-376/) (Office Open XML) and [ISO/IEC 26300:2006](http://www.oasis-open.org/committees/download.php/19274/OpenDocument-v1.0ed2-cs1.pdf) (Open Document Format), which are both XML-based, and [MIME (RFC 1341)](https://datatracker.ietf.org/doc/html/rfc1341), which is widely used in email. The XML formats, common in word processors, are not native to the web. MIME, being multipurpose, does not prescribe content parts and is not native to web browsers. 
 
 ## Defining Rich Text
 
@@ -38,7 +31,7 @@ There are 6 ways to retrieve Rich Text:
 - Using `/richtext/plain/{unid}` endpoint that returns a stream of plain unformatted text
 - Using the `/bulk/unid` URL
 
-The following APIs return Rich Text as MIME by default. You can specify a different format by using the `richTextAs=` URL parameter, and setting its value to `html`, `mime`, `md`, or `plain`.
+The following APIs return Rich Text as HTML by default. You can specify a different format by using the `richTextAs=` URL parameter, and setting its value to `html`, `mime`, `md`, or `plain`.
 
 - `/document/{unid}`
 - `/query`
@@ -48,6 +41,10 @@ The following APIs return Rich Text as MIME by default. You can specify a differ
 - `/lists/{name}` (when using the `documents=true` parameter)
 
 The request response may include the parameters identified in the table below.
+
+!!! tip
+
+    Starting Domino REST API v1.1.5, users can now request the raw composite data from an HCL Notes rich text item by setting the `richTextAs` query parameter of an applicable endpoint to `compositedata`. When used, the returned value will be a BASE64-encoded byte array of composite data structures.
 
 ## Writing Rich Text
 

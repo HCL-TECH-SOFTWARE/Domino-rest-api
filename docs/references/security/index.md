@@ -2,13 +2,15 @@
 
 Good security isn't a one-trick pony, but a combination of factors.
 
---8<-- "pickYourAuth.md"
+!!! warning "Important"
+
+    There are multiple ways to configure an external IdP in the Domino REST API: `jwt`, `oidc`, and `oidc-idpcat`. When in doubt, use `oidc-idpcat`. For more information, see [Auth*](authentication.md) for details.
 
 Here are what we implemented:
 
 - [Open Standards](../standards.md#standards) are used wherever appropriate. Standards enjoy more scrutiny from more eyeballs.
 
-- Domino REST API uses the [Eclipse Vert.x Framework](https://vertx.io), which supports many different versions of [SSL certificates](https://vertx.io/docs/vertx-core/java/#ssl) such as:
+- Domino REST API uses the [Eclipse Vert.x Framework](https://vertx.io), which supports different versions of [SSL certificates](https://vertx.io/docs/vertx-core/java/#ssl) such as:
 
     - [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail)
 

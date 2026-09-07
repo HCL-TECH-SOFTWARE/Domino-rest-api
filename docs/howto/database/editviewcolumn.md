@@ -6,7 +6,7 @@
 
     You don’t need to edit the database view if the database view design meets your requirements. Only edit it if you want to select specific columns or assign meaningful external names to the columns.
 
-The procedures guide you in editing a database view of a schema so you can:
+The procedures guide you in editing a database view of a schema, so you can:
 
 - select the columns you want to include in the view
 - edit the external name of each selected column
@@ -22,7 +22,7 @@ The view should be in **Active** status. For more information, see [Activate a v
 
 1. Log in to the Domino REST API Admin UI and click **Database Management - REST API**.
 2. Select a schema on the **Schema Management** page.
-3. Click **Database Views** from the menu bar. 
+3. Click **Database Views** from the menu bar.
 4. Click the pencil icon corresponding to the name of the view you want to edit. The **Edit (view name) Columns** page opens.
 5. From the left pane, select the columns that you want to include in the view. The names of the selected columns should appear in the right pane under **Column Name**.
 
@@ -32,7 +32,7 @@ The view should be in **Active** status. For more information, see [Activate a v
         - Click **Add All** if you want to add all the columns. 
         - To delete a selected column, click the corresponding trash icon. 
 
-    ![Edit view name column](../../assets/images/editviewcolumn.png){: style="height:80%;width:80%"}
+    ![Edit view name column](../../assets/images/editviewcolumn.png){: style="height:90%;width:90%"}
 
 6. **(Optional)** Set the external name of a selected column by entering a name in the corresponding text field under **External Name**.
 
@@ -41,12 +41,10 @@ The view should be in **Active** status. For more information, see [Activate a v
 
 7. Click **Save**. A notification informs you that the schema has been successfully updated.
 
-### Expected result
+The updated view now displays only your selected columns. On the **Database Views** tab, the edited view appears in bold font to indicate it has been edited. Hovering over the question mark icon beside it reveals a notification confirming that changes have been made.
 
-- The view now only shows the columns that you have selected. 
-- On the **Database Views** tab, the edited view is shown in bold font as shown in the example image. Hovering over the question mark icon beside the edited view displays a statement that a change has been made in the view.  
-
-![Updated view](../../assets/images/updateddbview.png){: style="height:80%;width:80%"}
+<!--![Updated view](../../assets/images/updateddbview.png){: style="height:80%;width:80%"}-->
+![Updated view](../../assets/images/ListOfViews1.png){: style="height:90%;width:90%"}
 
 ### To reset an edited view
 
@@ -56,7 +54,5 @@ The view should be in **Active** status. For more information, see [Activate a v
 4. Click the pencil icon corresponding to the name of an edited view you want to reset. The **Edit (view name) Columns** page opens.
 5. Click **Reset**. A confirmation dialog appears.
 6. Click **Yes**. A notification informs you that the schema has been successfully updated.
-
-### Expected result
 
 The view is reset to its initial state showing all its columns.

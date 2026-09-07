@@ -16,6 +16,7 @@ The Domino REST API doesn't have an uninstaller. If you'd like to remove it from
 
 <!-- prettier-ignore -->
 !!! tip
+
     - The following conventions are used:
 
         - *Domino program directory* refers to the location of the executables on a specific system. For example:
@@ -68,16 +69,13 @@ The Domino REST API doesn't have an uninstaller. If you'd like to remove it from
       - `keepconfig.d`
       - `keepweb.d`
 
-7. Remove the `Domino REST API` directory and all it's contents.
-
-### Expected result
-
-Domino REST API has been removed from your system.
+7. Remove the `Domino REST API` directory and all its contents.
 
 ## Notes Client
 
 <!-- prettier-ignore -->
 !!! tip
+
     The following conventions are used:
 
     *Notes Data directory* refers to where databases are typically stored. For example:
@@ -102,8 +100,4 @@ Domino REST API has been removed from your system.
       - `keepconfig.d`
       - `keepweb.d`
 
-3. Remove the `Domino REST API` directory and all it's contents.
-
-### Expected result
-
-Domino REST API has been removed from your system.
+3. Remove the `Domino REST API` directory and all its contents.

@@ -2,7 +2,7 @@
 
 ## About this task
 
-The procedures guide you in editing the database schema JSON in the **Tree View** mode and **Text view** mode in the **Source** tab under **Schema Management**, so you can:
+The procedures guide you in editing the database schema JSON in the **Tree View**, **Text View**, and **Diff View** modes in the **Source** tab under **Schema Management**, so you can:
 
 - add a new JSON object to the database schema
 - add a JSON object to an existing JSON object
@@ -12,8 +12,8 @@ The procedures guide you in editing the database schema JSON in the **Tree View*
 
 ## Before you begin
 
-- You have selected a schema on the **Schema Management** page.
-- You have selected **Source** from the menu bar and is in the **Tree View** mode.  
+- Select a schema on the **Schema Management** page, and then select the **Source** tab from the menu bar.
+- Select the appropriate mode from the drop-down list to execute the corresponding procedures below.  
 
 ## Tree View procedures
 
@@ -39,12 +39,6 @@ The procedures guide you in editing the database schema JSON in the **Tree View*
         - If you are adding an *Array* or an *Object*, you must enter a key-value pair in the **Value** text box.
         - The entered value is validated according to the selected type. If the value doesn't match the expected format for that type, the **Value** field is highlighted in red. An error message appears, guiding you to follow the correct format and providing an example for clarification.
 
-            The following images show examples of correct and incorrect entered values.
-
-            ![Correct value format](../../assets/images/validate2.png)
-
-            ![Incorrect value format](../../assets/images/validate1.png)
-
 4. Click **Insert**. The added JSON object is placed at the end of the list.
 
 5. Click the **Save** icon to save the changes.
@@ -63,7 +57,8 @@ The procedures guide you in editing the database schema JSON in the **Tree View*
 
 3. Enter a **Key**, select a **Type**, and then enter a **Value**.
 
-    !!!note
+    !!! note
+
         - If you are adding an *Array* or an *Object*, you must enter a key-value pair in the **Value** text box.
         - The entered value is validated according to the selected type. If the value doesn't match the expected format for that type, the **Value** field is highlighted in red. An error message appears, guiding you to follow the correct format and providing an example for clarification.
 
@@ -128,10 +123,10 @@ You can also enter additional data. As shown in the images, the following are ad
 
 ```json
 {
-   "name": "Fix Body",
+   "name": "Fix assets",
    "alias": [],
-   "unid": "3F8E64B529DA6CF848258435004A37CC"
-  }
+   "unid": "739D9EB82624C0E148258511005070D7" 
+}
 ```
 
 === "Before editing"
@@ -146,3 +141,17 @@ You can also enter additional data. As shown in the images, the following are ad
 
     - Make sure to click the **Save** icon, and then select **Yes** in the **Save changes** dialog to save your changes.
     - Make sure to follow the correct syntax when adding data.
+
+## Diff View procedure
+
+The **Diff View** mode lets you edit the database schema JSON just like using a text editor while viewing a side-by-side comparison of the current saved database schema and your in-progress changes.
+
+1. Identify the JSON key whose value you want to edit.
+2. Edit the value in the JSON on the right. The JSON on the left is read-only.
+
+    When you modify a key, the updated key and its new value are highlighted on the right. The corresponding key and its original value are also highlighted on the left, making it easier to compare your changes with the saved schema.
+
+    ![Diff tree](../../assets/images/difftree1.png)
+
+3. Ensure that the JSON syntax is valid while you edit the value.
+4. Click the **Save** icon, and then select **Yes** in the **Save changes** dialog to save your changes.

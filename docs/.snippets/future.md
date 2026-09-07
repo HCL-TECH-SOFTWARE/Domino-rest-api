@@ -1,3 +1,4 @@
 <!-- prettier-ignore -->
-!!! example "This is work in progress"
-    We are constantly working on improving Domino REST API's functionality and documentation. You have a documentation page which is not quite ready. Feel free to [feedback](https://discord.com/invite/jmRHpDRnH4 "Opens a new tab") what you would like to see here.
+!!! note
+
+    We're continuously enhancing the Domino REST API and expanding its documentation to make it even more useful. This page is currently being developed with additional content and examples. If there's anything you'd like to see covered here, we'd love to hear your [feedback](https://discord.com/invite/jmRHpDRnH4 "Opens a new tab").

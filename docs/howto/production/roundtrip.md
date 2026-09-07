@@ -88,7 +88,6 @@ The procedure guides you on how to set up and use the Microsoft Office Round Tri
     3. Select **Trust Center** &rarr; **Trust Center Settings** &rarr; **Protected View**.
     4. Clear the **Enable Protected View for files originating from the Internet** checkbox, and then click **OK**.
 
-
 1. Open the created link to the MS Office file attachment in a web browser.
 2. In the Open MS Office application dialog, click **Open**.
 

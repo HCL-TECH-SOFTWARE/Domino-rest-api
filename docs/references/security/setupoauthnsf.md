@@ -1,11 +1,12 @@
 # Set up oauth.nsf
 
 ## About this task
+
 The procedure guides you on creating and setting up an `oauth.nsf` from a template.
 
 ## Procedure
 
-**To create oauth.nsf from a template**
+To create `oauth.nsf` from a template
 
 1. Start the Notes Client.
 2. Go to **File > Application > New** or press **Ctrl+N**.
@@ -43,5 +44,5 @@ curl --location --request PUT 'http://yourkeepserver.io:8880/api/admin-v1/acl/en
 ```
 
 !!! note
+
     The part after `/entries/` and before `?dataSource` in the URL in the example must be [URL encoded](https://en.wikipedia.org/wiki/Percent-encoding).
-    {: .alert .alert-info}

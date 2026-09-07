@@ -12,7 +12,6 @@ You must have access to the **Management console**.
      - Make sure the **Management console** is secure. For more information, see [Functional Accounts](../../references/functionalUsers.md).
      - Credentials for the **Management console** aren't managed by the configured IdP, but are derived from the [configuration of functional accounts](../../references/functionalUsers.md).
 
-
 ## Procedure
 
 1. Log in to the **Management console** (Port 8889).
@@ -25,4 +24,4 @@ You must have access to the **Management console**.
 
     ![Temporary Suspended Users](../../assets/images/tempuser.png)
 
-3. Click **Release** corresponding to the temporarily suspended user that you want to unban so that user can now access **Admin UI** without waiting for the lockout period to end. 
+3. Click **Release** corresponding to the temporarily suspended user to restore access to the **Admin UI** immediately, without waiting for the lockout period to end.

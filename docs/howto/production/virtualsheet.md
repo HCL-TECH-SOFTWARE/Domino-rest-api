@@ -21,7 +21,8 @@ The procedure guides you on how to set up and use the Virtual Spreadsheet featur
 
 1. Choose an active view that you want to open.
 
-    !!!tip
+    !!! tip
+
         - To get a list of your views from your target schema, see [List available database views](../../references/usingwebui/schemaui.md#list-database-views).
         - You can set up the view schema however you wish as Virtual Spreadsheet respects the configured view schema.
 
@@ -59,13 +60,15 @@ The procedure guides you on how to set up and use the Virtual Spreadsheet featur
 
     ![Virtual Spreadsheet in MS Excel](../../assets/images/VirtualSpreadsheet.png)
 
-    !!!note
+    !!! note
+
         - Protected cells have colored backgrounds. These cells are formula columns or view entry metadata. Cell protection also applies to the cells outside the main table.
         - Editable cells are cells inside the main table and has a white background.
 
 6. Implement updates as needed and save them using the Microsoft Excel save command. You should see a prompt indicating *Saving...*. If the prompt changes to *Saved.*, it means your updates have been saved.
 
-!!!warning "Important"
+!!! warning "Important"
+
     Changes that result into an error when updating the corresponding document of the view entry won't be saved.
 
     For example, if you edited 10 rows and 1 row encountered an error, Microsoft Excel would prompt a successful save, but in reality, that 1 row's changes wouldn't get reflected back in its corresponding document.
@@ -74,4 +77,4 @@ The procedure guides you on how to set up and use the Virtual Spreadsheet featur
 
 ## Additional information
 
-- Virtual spreadsheet for MS Excel is read and write. If you want it to be read-only using MS Excel, you can try out [OData Feed for MS Excel](../../tutorial/odata/excel.md).
+Virtual spreadsheet for MS Excel is read and write. If you want it to be read-only using MS Excel, you can try out [OData Feed for MS Excel](../../tutorial/odata/excel.md).

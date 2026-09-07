@@ -13,7 +13,7 @@ Introduces two key concepts for managing API access to Domino databases.
 
 ## [Scopes](scopes.md)
 
-Introduces scopes used to specify and limit the resources an API can access to ensure secure and tailored permissions based on the authenticated user’s requirements and database access control.
+Introduces the scopes used to specify and limit the resources an API can access to ensure secure and tailored permissions based on the authenticated user’s requirements and database access control.
 
 ## [Schema components](schemacomp.md)
 

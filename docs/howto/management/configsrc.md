@@ -32,7 +32,7 @@ Using the following example image, you can find the configuration parameter `All
 Using the same example image, you can see that the configuration parameter `AllowLocalMailFile` doesn't have a corresponding entry under the **Source** column. When you see instances like this, it means that you can find the configuration parameter in the preceding file entry in the **Source** column. Based on this example, you can also find the configuration parameter `AllowLocalMailFile` in the `config.json` file located in the `/opt/hcl/keep/resources/config` directory.
 
 ![Configuration page](../../assets/images/configsrc.png)
- 
-Using the following example image, you can find `identity.managementAPI.Doctor Notes.active` and `identity.managementAPI.Doctor Notes.secret` in the `Login.json` file added to the `keepconfig.d` directory. You can also see that the value of `identity.managementAPI.Doctor Notes.secret` has random characters that doesn't provide understandable meaning. This means that the value of `identity.managementAPI.Doctor Notes.secret` can't be exposed. 
+
+Using the following example image, you can find `identity.managementAPI.Doctor Notes.active` and `identity.managementAPI.Doctor Notes.secret` in the `Login.json` file added to the `keepconfig.d` directory. You can also see that the value of `identity.managementAPI.Doctor Notes.secret` has random characters that doesn't provide understandable meaning. This means that the value of `identity.managementAPI.Doctor Notes.secret` can't be exposed.
 
 ![Configuration page](../../assets/images/configsrc1.png)

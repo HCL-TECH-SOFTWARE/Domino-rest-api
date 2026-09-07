@@ -11,9 +11,27 @@ The What's new contains information about the latest features, improvements, fix
 
     Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](../references/deprecated.md).
 
-## Domino REST API v1.1.7
+## Domino REST API v1.1.8
 
 ???+ info "Release summary"
+
+    Release date: September 15, 2026
+
+    !!! danger "If you are upgrading from Domino REST API v1.1.2 or an earlier version, refer to important information regarding [CORS using Regex](v1.1.3.md#cors-is-now-using-regex)."
+
+    - **3** Experimental features
+    - **5** New features
+    - **23** Improvements
+    - **2** Resolved issues
+    <!-- **0** New features-->
+    <!-- **0** Breaking change-->
+    <!-- **X** Preview features-->
+
+    [Read the full details](v1.1.8.md)
+
+## Domino REST API v1.1.7
+
+??? info "Release summary"
 
     Release date: April 7, 2026
 
@@ -26,7 +44,7 @@ The What's new contains information about the latest features, improvements, fix
     <!-- **0** Breaking change-->
     <!-- **X** Preview features-->
 
-[Read the full details](v1.1.7.md)
+    [Read the full details](v1.1.7.md)
 
 ## Domino REST API v1.1.6
 
@@ -43,7 +61,7 @@ The What's new contains information about the latest features, improvements, fix
     <!-- **0** Breaking change-->
     <!-- **X** Preview features-->
 
-[Read the full details](v1.1.6.md)
+    [Read the full details](v1.1.6.md)
 
 ## Domino REST API v1.1.5
 
@@ -60,7 +78,7 @@ The What's new contains information about the latest features, improvements, fix
     <!-- **0** Breaking change-->
     <!-- **X** Preview features-->
 
-[Read the full details](v1.1.5.md)
+    [Read the full details](v1.1.5.md)
 
 ## Domino REST API v1.1.4
 
@@ -77,7 +95,7 @@ The What's new contains information about the latest features, improvements, fix
     <!-- **0** New features-->
     <!-- **0** Breaking change-->
 
-[Read the full details](v1.1.4.md)
+    [Read the full details](v1.1.4.md)
 
 ## Domino REST API v1.1.3.1
 
@@ -92,7 +110,7 @@ The What's new contains information about the latest features, improvements, fix
     - **3** Resolved issues
     - **1** Breaking change
 
-[Read the full details](v1.1.3.md)
+    [Read the full details](v1.1.3.md)
 
 ## Domino REST API v1.1.2 and earlier
 
@@ -104,7 +122,7 @@ The What's new contains information about the latest features, improvements, fix
         - Domino REST API v1.0.2
         - Domino REST API v1.0.1
 
-[Read the full details](whatisnew.md)
+    [Read the full details](whatisnew.md)
 
 <!--
 - Released: [insert release date]

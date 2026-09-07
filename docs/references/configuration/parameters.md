@@ -2,7 +2,7 @@
 
 The topic details the wide range of configuration parameters available, as well as a set of environment parameters. Understanding these parameters and their usage is essential for customizing, securing, and optimizing the Domino REST API.
 
-<!--The configuration is assembled from JSON files and a few selected environment parameters.-->Environment parameters are used because they're a common and convenient method for configuring instances in virtual environments such as Docker, IBM Cloud, and Kubernetes.
+Environment parameters are used because they're a common and convenient method for configuring instances in virtual environments such as Docker, IBM Cloud, and Kubernetes.
 
 The Domino REST API comes with default settings stored in internal files `config.json` and `security.json`. **These files are not subject to user modifications**.
 
@@ -12,17 +12,6 @@ To change a configuration parameter, you can either set an environment parameter
 
     Parameters are case sensitive. 
 
-<!--
-The configuration is assembled from JSON files and a few selected environment parameters. We use those environment parameters because they're a commonly used way to configure instances in virtual environments such as Docker, IBM Cloud, and Kubernetes.
-
-The Domino REST API ships with default settings in internal files `config.json` and `security.json`. **These are internal files and not subject to user modifications**.
-
-!!! warning "CaSe SeNsItIvE"
-
-    Parameters are **case sensitive**
-
-To alter a parameter, either set an environment parameter, if one exists (there aren't that many) or create a JSON file in `keepconfig.d` by following the the steps in [Modify configuration of Domino REST API](../howto/install/configparam.md).
--->
 ## Environment
 
 --8<-- "environmentparam.md"
@@ -34,7 +23,7 @@ A configuration can have the following top-level properties. These properties ar
 |Property|Type|Description|
 |:---|:---|:---|
 |HOST|String|Hostname or IP address to bind to, default is not set|
-|MANAGMENTPORT|int (0 to 65353)|(default 8889) Commands regarding the runtime, for example config and shutdown, should only be exposed to an admin network workstation.|
+|MANAGEMENTPORT|int (0 to 65353)|(default 8889) Commands regarding the runtime, for example config and shutdown, should only be exposed to an admin network workstation.|
 |METRICSPORT|int (0 to 65353)|(default 8890) Port for Prometheus metrics.|
 |HEALTHCHECKPORT|int (0 to 65353)|(default 8886) A port that allows any automated tooling managing your containers to periodically check and automatically take action if the Domino REST API is down.|
 |Firehoseport|int (0 to 65353)|(default 42424) Port for Firehose to successfully deliver data to custom HTTP endpoints.|
@@ -42,9 +31,9 @@ A configuration can have the following top-level properties. These properties ar
 |prometheusMetrics|[prometheusParameters](#prometheus-parameters)|Parameters to hand over to the Prometheus task from vert.x.|
 |versions|[versionParameters](#version-parameters)|List of the OpenAPI definition files to load.|
 |verticles|[verticlesParameters](#restapi-verticle)|The verticles to load.|
-|vertx|[Vert.x parameters](#vertx-parameters)|Parameters controlling threads and blocking threads. For more information, see [the vert.x documentation](https://vertx.io/docs/apidocs/io/vertx/core/VertxOptions.html).|
+|vertx|[Vert.x parameters](#vertx-parameters)| Parameters controlling threads and blocking threads. For more information, see [the vert.x documentation](https://vertx.io/docs/apidocs/io/vertx/core/VertxOptions.html).|
 |ServerDirectDBAccess|Boolean|Set to `true` to allow Direct Database access for server.|
-|createKeepDBfromTemplate|Boolean|Set to `true` to allow create Domino REST API Database from template.|
+|createKeepDBfromTemplate|Boolean|Set to `true` to allow creating Domino REST API Database from template.|
 |useJnxDesigns|Boolean|Set to `false` to stop the use of Jnx Designs.|
 |AllowJwtMail|Boolean|Set to `true` to allow email to be sent via a JWT token.|
 |AllowLocalMailFile|Boolean|Set to `true` to allow local mail file|
@@ -70,7 +59,7 @@ These parameters control the flow of requests to Domino, to shape acceptable loa
 |Property|Type|Description|
 |:---|:---|:---|
 |concurrentRequestMaxCount|int|How many requests can concurrently be opened to Domino core `-1` = unlimited|
-|concurrentRequestDelay|int|Number of milli seconds to retry an operation (default = `42`)|
+|concurrentRequestDelay|int|Number of milliseconds to retry an operation (default = `42`)|
 |concurrentRequestRetries|int|number of retries before rejecting a request (default = `100`)|
 
 ## Prometheus parameters
@@ -105,16 +94,7 @@ The name of the entries must match the name used in versions of the [RestAPI ver
 |workerPoolSize|int|The maximum number of worker threads used for blocking operations.</br></br>Increase the value if blocking requests are timing out or not completing, since the worker pool is exhausted. Setting the value too high increases resource consumption and may reduce server performance if there are insufficient system resources.</br></br>Default: 20|
 
 ## Metrics parameters
-<!--
-Here is a JSON representation of the resource:
 
-```json
-{
-  "enabled": true,
-  "jvmMetricsEnabled": true
-}
-```
--->
 |Property|Type|Description|
 |:---|:---|:---|
 |disabledMetricsCategories|Array of Strings|Specified in the [MetricsDomain Java class](https://github.com/vert-x3/vertx-micrometer-metrics/blob/master/src/main/java/io/vertx/micrometer/MetricsDomain.java), for example `vertx.http.server`|
@@ -131,10 +111,10 @@ Verticles defines a separate unit of work for particular tags. For the Rest API 
 |Property|Type| Description|
 |:---|:---|:---|
 |active| Boolean | Whether to load this verticle. This can be used to limit available operations. For example, on an external facing server set all but the [`basis`](https://redocly.github.io/redoc/?url=https://opensource.hcltechsw.com/Domino-rest-api/assets/downloads/openapi.basis.json) API to false|
-| className | String | Class to use for the verticle. Typically this is `com.hcl.domino.keep.verticles.DominoDefaultVerticle`, unless you need to extend that class.|
+| className | String | Class to use for the verticle. Typically, this is `com.hcl.domino.keep.verticles.DominoDefaultVerticle`, unless you need to extend that class.|
 | tags | Object  | Tags from OpenAPI specs to allocate to this verticle and the package in which to find the NSFHandlers.|
 | instances | int| Relevant only for RestAPI verticle, loads multiple instances that each use a thread pool. You will need to be aware of the number of cores available and scalability, see the [Vert.x documentation](https://vertx.io/docs/vertx-core/java/#_specifying_number_of_verticle_instances).|
-| threadPoolName | String  | When a verticle should use a dedicated pool for the `executeBlocking` operations (a.k.a all calls into the Domino C API), the name for thread pool. By default, it's assigned 10 threads, but this can be overwritten with `threadPoolSize`. Don't use the same `threadPoolName` by multiple verticles, sharing isn't supported. |
+| threadPoolName | String  | When a verticle should use a dedicated pool for the `executeBlocking` operations, the name for thread pool. By default, it's assigned 10 threads, but this can be overwritten with `threadPoolSize`. Don't use the same `threadPoolName` by multiple verticles, sharing isn't supported. |
 | threads | int| Only used for worker threads with a specific `threadPoolName`. The default is 10, but this can be overwritten.|
 | worker| Boolean | To make this a [worker verticle](https://medium.com/@levon_t/java-vert-x-starter-guide-part-2-worker-verticles-c49866df44ab). Worker verticles run on their own event loop thread, pulled from a preconfigured pool of 20 threads. Use for heavy-duty verticles.|
 | threadTimeout | long | defaults to 2. Number of minutes for an [`executeBlocking`](https://vertx.io/docs/vertx-core/java/#blocking_code) to time out. Only in effect when a `threadPoolName` is specified.|
@@ -143,7 +123,7 @@ The following are types of verticles with additional parameters:
 
 ### AsyncAgentScheduler verticle
 
-This is the verticle for running async agents - calls to `/run/agent` with `async` set to `true` in the payload. In the Notes client you can look at `KeepAgents.nsf` for the asynchronous agents that are running or have run. This properties for this verticle include the [above](#verticle-parameters), plus these:
+This is the verticle for running async agents - calls to `/run/agent` with `async` set to `true` in the payload. In the Notes client, you can look at `KeepAgents.nsf` for the asynchronous agents that are running or have run. These properties for this verticle include the [above](#verticle-parameters), plus these:
 
 | Property | Type | Description|
 | :--- | :--- | :--- |
@@ -192,7 +172,7 @@ This is the verticle for managing WebHandlers. `worker`, `threadPoolName`, `thre
 | Property | Type | Description|
 | :--- | :--- | :--- |
 | active | Boolean | Set to `true` to enable the use of external IdP in Admin UI login.|
-| client_id | String  | External IdP client ID to use for Admin UI login. <!--defaults to `keepadminui`.--> |
+| client_id | String  | External IdP client ID to use for Admin UI login. |
 | application_id_uri | String  | An optional property. Required when external IdP is **Microsoft Entra ID, formerly Azure Active Directory**. Ends with a `/`. |
 
 ## JWT OFBA parameters
@@ -200,7 +180,7 @@ This is the verticle for managing WebHandlers. `worker`, `threadPoolName`, `thre
 | Property | Type | Description|
 | :--- | :--- | :--- |
 | active | Boolean | Set to `true` to enable the use of external IdP in OFBA.|
-| client_id | String  | External IdP client ID to use for OFBA. <!--defaults to `keepofba`.--> |
+| client_id | String  | External IdP client ID to use for OFBA. |
 | application_id_uri | String  | An optional property. Required when external IdP is **Microsoft Entra ID, formerly Azure Active Directory**. Ends with a `/`. |
 
 ## Additional information
@@ -247,32 +227,8 @@ In summary, the `setup` API isn't loaded. This is the mechanism to disable defau
 
 ### Overwriting the values
 
-All values can be [over written](https://vertx.io/docs/vertx-config/java/#_overloading_rules) by entries in the `keepconfig.d` located in your Notes/Domino Data directory. If this directory doesn't exist, create it. The structure needs to be the same as in the default file, but only needs the entries you want to change.
+All values can be [overwritten](https://vertx.io/docs/vertx-config/java/#_overloading_rules) by entries in the `keepconfig.d` located in your Notes/Domino Data directory. If this directory doesn't exist, create it. The structure needs to be the same as in the default file, but only needs the entries you want to change.
 
 ### Making excluded database files and directories available
 
 To learn more, see [Enable excluded database files and directories](../../howto/database/excludeddb.md).
-
-<!--
-`config.json` includes the following JSON object that defines the excluded NSF files and directories.
-
-```json
-"nsfExclusions": {
-    "mail/": true,
-    "KeepConfig.nsf": true,
-    "KeepConfig.ntf": true,
-    "KeepAgents.nsf": true,
-    "KeepAgents.ntf": true,
-    "KeepOAuth.ntf": true,
-    "oauth.nsf": true,
-    "names.nsf": true,
-    "*.ntf": true,
-    "help/": true,
-    "as_": true,
-    "MJ": true,
-    "domino/": true
-   }
-```
-
-To make an NSF file or directory, defined in the JSON object, available in the list of databases available when you define a schema in the **Admin UI**, see [Enable excluded database files and directories](../../howto/database/excludeddb.md).
--->

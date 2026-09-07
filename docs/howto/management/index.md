@@ -9,7 +9,7 @@ Topics to guide you in completing goals and tasks about Domino REST API requirin
 - [Disable and enable module in production](disablemodule.md)
 - [Find configuration sources](configsrc.md)
 - [Identify known users with valid JWT token](usersmc.md)
-- [JWT multi server](jwtmultiserver.md)
+- [JWT multiserver](jwtmultiserver.md)
 - [Release suspended users](suspendeduser.md)
 - [Use Domino console](console.md)
 - [Use Management console for encryption operations](encryptionops.md)

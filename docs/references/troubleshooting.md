@@ -78,7 +78,7 @@ This issue may be caused by conflicting libraries.
     1. Review the Domino REST API libraries in `{Domino REST API-install-directory}\libs`.
     2. Compare these libraries with the libraries in `{DominoProgramDir}\jvm\lib\ext`.
     3. Identify any conflicting libraries between the two locations.
-    
+
         !!! note
         
             The library names may not match exactly.
@@ -172,7 +172,7 @@ Check if the schema and the scope still exist. The schema is stored in the datab
 
 ## Unable to start the Domino REST API Domino task after updating configuration to use https
 
-The `KeepManagementURL` setting in your `notes.ini` is the URL needed for the Domino REST API Domino task to talk to the Java side of Domino REST API. By default this is set to `http`. 
+The `KeepManagementURL` setting in your `notes.ini` is the URL needed for the Domino REST API Domino task to talk to the Java side of Domino REST API. By default, this is set to `http`.
 
 **Solution**
 
@@ -180,7 +180,7 @@ After updating the URL to `https`, run `load restapi`. For more information, see
 
 ## User ID and password being requested repeatedly when using Notes for Domino REST API testing
 
-Sometimes on the initial starting up of the Domino REST API or creation of KeepConfig and KeepAgents databases, or doing things like creating a folder in mail database, you are prompted for user ID and password repeatedly. This happens if the **Don't prompt for a password** checkbox under **User Security** isn't selected or if it gets reset based on the organization's policy.
+Sometimes on the initial starting up of the Domino REST API or creation of `KeepConfig` and `KeepAgents` databases, or doing things like creating a folder in mail database, you are prompted for user ID and password repeatedly. This happens if the **Don't prompt for a password** checkbox under **User Security** isn't selected or if it gets reset based on the organization's policy.
 
 **Solution**:
 

@@ -1,9 +1,4 @@
----
-#layout: default
-title: Domino REST API flows
-#parent: How the Domino REST API Works
-#nav_order: 2
----
+# Domino REST API flows
 
 ## Selected Flows in the Domino REST API Architecture
 

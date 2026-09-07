@@ -115,8 +115,3 @@ You don't need access to the Admin UI on your spoke servers, it only increases t
 !!! warning
 
     This also disables the Swagger UI. So use a tool like [Bruno](https://www.usebruno.com/) instead.
-
-<!--## Let's connect
-
-"feedback.md"
--->

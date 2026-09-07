@@ -1,6 +1,4 @@
----
-title: Agent processing
----
+# Agent processing
 
 <!--## Agents - One of Domino's Differentiators
 
@@ -124,4 +122,4 @@ Any queued agents will be picked up for processing when the server restarts.
 
 Certain triggers like selected documents or programmatic collections like `unprocessedDocuments` only make sense in Notes Client. Other triggers like "Before Mail Arrives" only make sense in the context of server scheduling. LotusScript UI classes for interacting with the Notes Client will cause an agent to error if you attempt to run it from outside the context of the Notes Client.
 
-For further clarification, a developer can use the `/design/agents?dataSource=` endpoint to get full information about properties of an agent. The **@validForKeep** property will confirm whether or not the agent can be used from Domino REST API. ***This does not (currently) introspect the LotusScript to check for NotesUI classes. It only uses the triggers to identify agents that cannot be called from outside the Notes Client.***
+For further clarification, a developer can use the `/design/agents?dataSource=` endpoint to get full information about properties of an agent. The **@validForKeep** property will confirm whether the agent can be used from Domino REST API. ***This does not (currently) introspect the LotusScript to check for NotesUI classes. It only uses the triggers to identify agents that cannot be called from outside the Notes Client.***

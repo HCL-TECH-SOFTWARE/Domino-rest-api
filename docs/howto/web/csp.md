@@ -56,7 +56,7 @@ Example of a strict CSP configuration that reports CSP violation that you can ad
     |:---|:---|
     |default-src|The fallback directive for all fetch directives.</br></br>The `'self'` value restricts the loading of resources (such as scripts, images, or stylesheets) to the exact same origin as the document being viewed. This means content is only allowed to load if it shares the same protocol, host, and port.|
     |img-src|Defines permitted sources for loading images.</br></br>The `'self' data` value allows the loading of local images and Base64-encoded inline images, but strictly blocks images loaded from any external, unlisted websites.|
-    |report-uri|Reports CSP violation attempts to a specified URL.</br></br>In the example, CSP violation attemps will be reported to `/api/csp-violation-report`|
+    |report-uri|Reports CSP violation attempts to a specified URL.</br></br>In the example, CSP violation attempts will be reported to `/api/csp-violation-report`|
     |connect-src|Restricts the URLs to which you can make API requests using interfaces like `fetch()`.</br></br> In the example, the `'self'` value allows requests to APIs from the same origin as the document. The `https://office.projectkeep.io` value allows the front-end application to make API or network requests to that domain.</br></br>**This directive is required if the front-end application connects to external APIs or non-Domino REST services. Add the required endpoints to this directive.**|
     |font-src|Sets the origin from which fonts can be downloaded.</br></br>The `'self'` value restricts the loading of the fonts from the same origin as the document.|
 
@@ -84,7 +84,7 @@ In case your front-end application does not have a `manifest.json` file, follow 
     |:--|:--|
     |name|Specifies the full name of your web application as it's usually displayed to users.|
     |short_name|Specifies a short name for your web application, which may be used when the full name is too long for the available space.|
-    |start_url|Specifies the URL that should be opened when launching your application.</br></br>When the value of this manifest member is `"."`, it tells the browser to launch the application at the current directory or folder where the `manifest.json` is located. This typically directs users to the root of your domain, for example, https://example.com/|
+    |start_url|Specifies the URL that should be opened when launching your application.</br></br>When the value of this manifest member is `"."`, it tells the browser to launch the application at the current directory or folder where the `manifest.json` is located. This typically directs users to the root of your domain, for example, `https://example.com/`|
     |display|Specifies your preferred display mode for the application.</br></br>A value of `"standalone"` hides browser UI, like the URL bar. Other value options include `"fullscreen"` or `"minimal-ui"`.|
     |background_color|Specifies an initial background color for your application. This color appears in the application window before your application's stylesheets have loaded.|
     |theme_color|Specifies the default color for your web application's user interface.|

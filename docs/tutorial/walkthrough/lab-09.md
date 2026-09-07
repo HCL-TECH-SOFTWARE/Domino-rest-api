@@ -73,7 +73,6 @@ To verify access using the functional accounts, navigate to the following URLs. 
 
 Proceed to [Lab 10 - Configure JWT](lab-10.md).
 
-
 <!--
 ## Duration 20 min
 

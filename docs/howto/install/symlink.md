@@ -15,7 +15,7 @@ Domino Rest API v1.0.9 or greater must be installed.
 1. Open an elevated Windows **Command Prompt** (run as administrator).
 2. Run the following commands replacing `c:\domino` with the path to your Domino program directory.
 
-     ```
-          mklink c:\domino\jvm\bin\nskn50en.dll c:\domino\nskn50en.dll
-          mklink c:\domino\jvm\bin\nsen50en.dll c:\domino\nsen50en.dll 
+     ```text
+     mklink c:\domino\jvm\bin\nskn50en.dll c:\domino\nskn50en.dll
+     mklink c:\domino\jvm\bin\nsen50en.dll c:\domino\nsen50en.dll 
      ```

@@ -5,7 +5,7 @@ hide:
 
 # Auxiliary services
 
-While the main purpose of a REST API is serving data, mostly JSON, over https, any complete system comes with a range of auxiliary services. The HCL Domino REST API is no exception. Check the details. 
+While the main purpose of a REST API is serving data, mostly JSON, over HTTPS, any complete system comes with a range of auxiliary services. The HCL Domino REST API is no exception. Check the details.
 
 ## [Identity Provider (IdP)](idp.md)
 
@@ -13,7 +13,7 @@ The Domino REST API serves a dual function. It can act as your own [OIDC](../../
 
 ## [webDAV](webdav.md)
 
-Domiro REST API implements the [webDAV](../../references/openapidefinitions.md#webdav) HTTP extensions to facilitate the [Office Round Trip Experience](../../howto/production/roundtrip.md).
+Domino REST API implements the [webDAV](../../references/openapidefinitions.md#webdav) HTTP extensions to facilitate the [Office Round Trip Experience](../../howto/production/roundtrip.md).
 
 ## [OData](odata.md)
 
