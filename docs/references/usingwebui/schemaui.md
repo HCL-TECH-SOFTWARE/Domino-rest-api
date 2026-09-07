@@ -40,7 +40,7 @@ You can add a schema by creating your own schema or importing a schema.
 
     2. In the **Add New Schema** dialog, click **Create Schema**.
 
-        ![Create a schema ](../../assets/images/createSchema.png){: style="height:40%;width:40%"}
+        ![Create a schema ](../../assets/images/createSchema.png){: style="height:80%;width:80%"}
 
     3. In the **Create Schema** dialog:
 
@@ -168,7 +168,7 @@ You can activate forms one at a time or simultaneously.
 
 2. Under **Show fields from**, hover over a field item and click the **+** icon. This adds the field in the form. Repeat this for all the fields to be added.
 
-    ![Add field](../../assets/images/addfield.png)
+    ![Add field](../../assets/images/addfield.png){: style="height:60%;width:60%"}
 
     !!! tip
 

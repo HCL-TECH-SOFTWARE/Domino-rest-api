@@ -18,9 +18,6 @@ The procedure guides you in creating a schema and a scope using **Quick Config**
 
 1. Log in to **Admin UI**.
 2. Expand the side navigation panel and click **Quick Config**.
-
-    ![Quick config](img/AdminUIExpanded.png){: style="height:70%;width:70%"}
-
 3. Select `ApprovalCentral.nsf` from **Available Databases**, and fill in the form.
 
     - **Schema Name**: default

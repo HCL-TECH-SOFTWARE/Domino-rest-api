@@ -36,7 +36,7 @@ A successful login would lead to this landing page:
 
 !!! tip
 
-    Starting with the Domino REST API v1.1.2 release, you can click **Overview** on the landing page, indicated by the <span style="color:red">red arrow</span> in the image, to open the Domino REST API functional diagram. Clicking parts of the functional diagram directs you to corresponding topics in the documentation.
+    Starting with the Domino REST API v1.1.2 release, you can click the **DRAPI overview** on the landing page, indicated by the <span style="color:red">red box</span> in the image, to open the interactive Domino REST API overview diagram. Clicking parts of the overview diagram directs you to corresponding topics in the documentation.
 
 ## Create a schema
 
@@ -73,9 +73,6 @@ A scope enables access to a schema via the Domino REST API. One Domino database 
 **To create a scope:**
 
 1. In the side navigation pane, click **Scopes**.
-
-    ![Overview](../assets/images/overview.png){: style="height:70%;width:70%"}
-
 2. On the **Scope Management** page, click **Add Scope**.
 
     ![Scope Management Page](../assets/images/ScopeManagement.png){: style="height:70%;width:70%"}
@@ -96,8 +93,6 @@ A scope enables access to a schema via the Domino REST API. One Domino database 
     --8<-- "scopenote.md"
 
     For the **Maximum Access Level**, the default is **Editor**. You can set it to another value to set the scope's maximum access anyone using the scope has.
-
-![Configure New Scope](../assets/images/ConfigureNewScope.png){: style="height:70%;width:70%"}
 
 !!! note
 

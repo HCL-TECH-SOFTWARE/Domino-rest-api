@@ -20,14 +20,14 @@ How to expose different sets of information from a database using different sche
 4. Select `ApprovalCentral.nsf` from the **Database**.
 5. Fill in the **Schema Name** with `training` and the other fields as shown.
 
-    ![Add Schema](img/AddSchema.png){: style="height:30%;width:30%"}
+    ![Add Schema](img/AddSchema.png){: style="height:80%;width:80%"}
 
 6. Click **Save Schema**.
 7. On the **Schema Management** page, switch the page view to **NSF View**.
 
-    ![NSF View](img/nsfView.png){: style="height:40%;width:40%"}
+    <!--![NSF View](img/nsfView.png){: style="height:40%;width:40%"}-->
 
-    ![TrainingSchema](img/TrainingSchema.png){: style="height:60%;width:60%"}
+    ![TrainingSchema](img/TrainingSchema.png){: style="height:80%;width:80%"}
 
 8. Click the `training` schema to edit.
 9. Under the **Database Forms**, configure only the form `Training`.
@@ -53,7 +53,7 @@ How to expose different sets of information from a database using different sche
 
 5. Click **Add**. The new scope is added to your scopes list.
 
-    ![Added scope](img/AddScope.png){: style="height:40%;width:40%"}
+    ![Added scope](img/AddScope.png){: style="height:70%;width:70%"}
 
 Alternatively, you can use `POST` to `/api/setup-v1/admin/scope`
 
