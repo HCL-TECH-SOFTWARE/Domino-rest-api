@@ -84,7 +84,7 @@ On successful login, you receive a JSON response containing a token that you can
 
     A successful login shows the Admin UI.
 
-    ![Admin UI](img/AdminUI.png){: style="height:70%;width:70%"}
+    ![Admin UI](../../assets/images/AdminLanding.png){: style="height:70%;width:70%"}
 
 ### Log in using Postman
 

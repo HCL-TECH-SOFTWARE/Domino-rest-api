@@ -160,7 +160,7 @@ The scope configuration is stored in the `keepconfig.nsf` database. This separat
 1. Select **Database Management - Activation** from the home page or **Scopes** from the side navigation pane to access the **Scope Management** page.
 2. On the **Scope Management** page, click **Add Scope**.
 
-      ![Create Database Scope](../../../assets/images/CreateDatabaseBlue.png)
+      ![Create Database Scope](../../../assets/images/ScopeManagement.png)
 
 3. Under **Available Schema**, select the schema that you created.
 4. Under **Add New Scope**, fill in the form and click **Add**.
@@ -174,7 +174,7 @@ The scope configuration is stored in the `keepconfig.nsf` database. This separat
 
     - For the **Maximum Access Level**, the default is **Editor**. You can set it to another value to set the scope's maximum access anyone using the scope has.
 
-![Configure Database](../../../assets/images/AddNewDatabase.png)
+![Configure Database](../../../assets/images/AddNewDatabase.png){: style="height:60%;width:60%"}
 
 !!! note
 
@@ -194,7 +194,7 @@ You can create one or more OAuth applications that can access one or more of the
 2. On the **Application Management** page, click **Add Application**.
 3. Under **Add New Application**, fill in the form and click **Add**.
 
-      ![Application Form](../../../assets/images/AddApplicationForm.png)
+      ![Application Form](../../../assets/images/AddApplicationForm.png){: style="height:60%;width:60%"}
 
       The new application is now shown on the **Application Management** page.
 
