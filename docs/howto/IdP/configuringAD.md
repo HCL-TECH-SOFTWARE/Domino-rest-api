@@ -370,9 +370,11 @@ Check the results:
 
 ![Azure app registration](../../assets/images/configuringAD-22.png){: style="height:70%;width:70%"}
 
-## Troubleshooting
+## Troubleshooting JWT and IdP
 
-A few tips to troubleshoot the setup when the goalpost has been moved:
+--8<-- "jwttroubleshoot.md"
+
+<!--A few tips to troubleshoot the setup when the goalpost has been moved:
 
 - Grab the JWT token and paste it at the [JWT.io](https://jwt.io) website to decode the JSON payload.
 
@@ -380,7 +382,7 @@ A few tips to troubleshoot the setup when the goalpost has been moved:
 - Compare the `iss` value from the JWT token with the `issuer` value from the `openid-configuration` endpoint. If they don't match, you need to add the `iss` to the JSON configuration file you created or edited in `keepconfig.d`.
 - Compare the `aud` value from the JWT token with the `aud` value of the configuration file. Adjust the configuration file if different.
 - Check the `scp`, which is Microsoft's "alternative" to `scope`, and make sure it has the expected values matching the settings in the application configuration in the Admin UI. Adjust the scope in the DRAPI application (Admin UI) or your AzureAD IdP settings.
-
+-->
 ## Additional information
 
 Microsoft Entra ID follows OAuth 2.0 and OpenID Connect standards, but uses some Microsoft-specific conventions for JWT claims:

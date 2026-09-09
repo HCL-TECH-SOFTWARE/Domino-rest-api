@@ -275,16 +275,15 @@ where:
 
     Keycloak's `providerUrl` is different from the general IdP practice to use `/.well-known/openid-configuration`, mainly since Keycloak can handle multiple realms, the well-known approach can't handle. Hence you need ro use `/auth/realms/[RealmName]`
 
-## Expected result
+## Additional information
 
-### Test Application specific scopes result in Postman
+### Troubleshooting JWT and IdP
 
-#### Before you begin
+--8<-- "jwttroubleshoot.md"
 
-- Configured Postman
-- configured Keycloak
+### Test application-specific scopes result in Postman
 
-#### Procedure
+To perform the following procedure, you must have a configured Postman and a configured Keycloak.
 
 1. Modify the token endpoint of via POST with this `{{server}}/realms/{{realm}}/protocol/openid-connect/token`
 

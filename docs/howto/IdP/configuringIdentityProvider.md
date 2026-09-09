@@ -26,6 +26,7 @@ Domino REST API supports identity providers that can produce JWT access tokens. 
 
 <!-- prettier-ignore -->
 !!! tip
+
     Check out the [Keycloak](configuringKeycloak.md) example configuration.
 
 ## Example For Encode JWT
@@ -121,7 +122,7 @@ Domino REST API supports more than one IdP, distinguished by the name `my-idp` i
 
 ## Obtaining the public key directly from the IdP
 
-TO ease configuration and simplify key rollover, the public key for JWT verification can be directly obtained from the key server. You are responsible to only use trusted connections.
+To ease configuration and simplify key rollover, the public key for JWT verification can be directly obtained from the key server. You are responsible to only use trusted connections.
 
 ```json
 {
