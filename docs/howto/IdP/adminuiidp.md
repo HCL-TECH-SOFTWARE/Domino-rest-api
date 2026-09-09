@@ -229,6 +229,10 @@ The following is an example configuration for Keycloak IdP:
 }
 ```
 
+### Troubleshooting JWT and IdP
+
+--8<-- "jwttroubleshoot.md"
+
 <!--
 ## About this task
 
