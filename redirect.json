@@ -144,7 +144,7 @@
     {
       "title": "Configuring ports",
       "old": "installconfig/configuration/configuringPorts.html",
-      "new": "tutorial/installconfig/configuringPorts.html"
+      "new": "topicguides/configuringPorts.html"
     },
 
     {
@@ -161,8 +161,8 @@
 
     {
       "title": "Metrics",
-      "old": "installconfig/metrics.html",
-      "new": "references/usingdominorestapi/metrics.html"
+      "old": "references/usingdominorestapi/metrics.html",
+      "new": "howto/production/metrics.html"
     },
 
     {
@@ -180,12 +180,6 @@
     {
       "title": "Security",
       "old": "security",
-      "new": "references/security/securityindex.html"
-    },
-
-    {
-      "title": "Security",
-      "old": "references/security/securityindex.html",
       "new": "references/security/index.html"
     },
 
@@ -198,7 +192,7 @@
     {
       "title": "Configuration parameters",
       "old": "security/configurationParameters.html",
-      "new": "references/security/configurationParameters.html"
+      "new": "references/configuration/parameters.html"
     },
 
     {
@@ -222,19 +216,19 @@
     {
       "title": "Securing Domino REST API endpoints",
       "old": "security/securingKEEPEndpoints.html",
-      "new": "topicguides/securingKEEPEndpoints.html"
+      "new": "references/security/securingKEEPEndpoints.html"
     },
 
     {
       "title": "config.json",
       "old": "security/configjson.html",
-      "new": "references/parameters.html"
+      "new": "references/configuration/parameters.html"
     },
 
     {
       "title": "config.json",
       "old": "references/security/configjson.html",
-      "new": "references/parameters.html"
+      "new": "references/configuration/parameters.html"
     },
 
     {
@@ -252,13 +246,7 @@
     {
       "title": "security.json",
       "old": "security/securityjson.html",
-      "new": "references/parameters.html"
-    },
-
-    {
-      "title": "security.json",
-      "old": "references/security/securityjson.html",
-      "new": "references/parameters.html"
+      "new": "references/configuration/parameters.html"
     },
 
     {
@@ -277,12 +265,6 @@
       "title": "Custom Identity Provider (IdP)",
       "old": "security/customIdp.html",
       "new": "references/security/customIdp.html"
-    },
-
-    {
-      "title": "Domino REST API IdP & Foundry",
-      "old": "security/configuring-keep-idplite-with-identity-service.html",
-      "new": "howto/VoltMX/configuring-keep-idplite-with-identity-service.html"
     },
 
     {
@@ -312,7 +294,7 @@
     {
       "title": "RichText",
       "old": "usingkeep/richtext.html",
-      "new": "references/usingdominorestapi/richtext.html"
+      "new": "references/usingdominorestapi/richtext/index.html"
     },
 
     {
@@ -367,12 +349,6 @@
       "title": "Factories and Caches",
       "old": "topicguides/KeepFactory-and-caches.html",
       "new": "references/extensibility/KeepFactory-and-caches.html"
-    },
-
-    {
-      "title": "Architectural Decisions",
-      "old": "howkeepworks/architecture.html",
-      "new": "topicguides/architecture.html"
     },
 
     {
@@ -432,7 +408,7 @@
     {
       "title": "Usertools",
       "old": "references/usertools",
-      "new": "references/usertools/index.html"
+      "new": "references/usertools.html"
     }
   ]
 }

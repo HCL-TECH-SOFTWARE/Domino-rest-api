@@ -86,6 +86,7 @@ p a img:hover{
     font-family:"HCLTech Roobert";
     font-size: 15px;
     color: #FFFFFF;
+    padding-left: 20px;
   }
   
   .md-copyright a:link {
@@ -134,10 +135,20 @@ p a img:hover{
   }
 
   /*
-  the following css is for increasing the font size in tables
+  the following css is for increasing the font size in tables. The additional of "table" allows the configuration of the table layout. The addition of overflow-wrap and word-break ensures that the table contents are displayed within the allowable display space without the need of generating a scroll bar
   */
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+  }
+ 
   table td{
     font-size: medium;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+
   }
 
   table th{

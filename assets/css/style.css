@@ -184,7 +184,8 @@
 .dropdown-content a:hover {
     background-color: #ddd;
   /*the following was added as part of the June 2025 update*/
-    color: #ffffff;
+    color: #212121;
+    font-weight: 900;
 }
 
 .dropdown:hover .dropdown-content {display: block;}
@@ -409,3 +410,17 @@ text-align: center;
       margin-left: 65px;
   } */
   
+  .md-tabs__link:hover {
+      font-weight: 900;
+  }
+
+  /*the following css is added to address the color issue of the header for the side drawer when the page is displayed in a small area or in a mobile mode*/
+
+  .md-nav--primary .md-nav__title[for=__drawer] {
+    color: white;
+    background-color: #212121;
+  }
+  
+  .md-nav__source {
+    background-color: #212121;
+  }

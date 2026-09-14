@@ -163,7 +163,7 @@ only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 }
 
 /*Added as part of the June 2025 template updates*/
-.md-footer-copyright {
+/*.md-footer-copyright {
     font-size: .8rem !important;
 	margin-left: 65px;
-}
+}*/
