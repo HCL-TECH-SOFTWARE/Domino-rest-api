@@ -27,6 +27,14 @@ The What's new contains information about the latest features, improvements, fix
     <!-- **0** Breaking change-->
     <!-- **X** Preview features-->
 
+    !!! warning "Known issue: Admin UI schema status indicator"
+
+        **Summary**: The **Admin UI** has a visual issue where a Scope connected to a Schema may display a red dot on the Schema tile instead of the green dot, incorrectly suggesting that the Scope-to-Schema connection is not functioning correctly.
+
+        This is a **visual-only issue** in the Admin UI. The underlying APIs and the connected Scope and Schema continue to function correctly.
+
+        **Action required**: Refer to the [technical note](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0134263 "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:15px;width:15px"} for more details and the recommended workaround to resolve the issue.
+
     [Read the full details](v1.1.8.md)
 
 ## Domino REST API v1.1.7
