@@ -21,7 +21,7 @@ The procedure guides you on configuring
 
       ![Load Internet Configuration](../../assets/images/SAML-LoadInternetConfigurations.png)
 
-2. From the left panel, select **Web** and then select **Internet Sites**. Click on **Add Internet Site** tab and select **Web** from the menu.
+2. From the left panel, select **Web**, and then select **Internet Sites**. Click **Add Internet Site** tab and select **Web** from the menu.
 
       ![Add Internet Site](../../assets/images/SAML-AddInternetSite.png)
 
@@ -43,17 +43,17 @@ The procedure guides you on configuring
 
       Save and close.
 
-3. Create an idpcat.nsf file using idpcat.ntf template. To do that, click **File**, go to **Application** and select **New**. In the **New Application** pop up, fill in the following details:
+3. Create an idpcat.nsf file using idpcat.ntf template. To do that, click **File**, go to **Application**, and select **New**. In the **New Application** pop up, fill in the following details:
 
       - **Server**: Select your server from the dropdown.
       - **Title**: Give title as idpcat.
-      - **Template**: Click on advanced template and select IdP catalog template.
+      - **Template**: Click advanced template and select IdP catalog template.
 
       ![IdP Catalog](../../assets/images/SAML-IdPCatalog.png)
 
-      Click **OK**. Now try to open the Idpconfig. To do that press **ctrl+o**, enter the name of the current server and file name as “idpcat.nsf”. Click **Open**.
+      Click **OK**. Now try to open the Idpconfig. To do that press **ctrl+o**, enter the name of the current server and filename as “idpcat.nsf”. Click **Open**.
 
-      ![IdPcat](../../assets/images/SAML-idpcat.png)
+      ![idpcat](../../assets/images/SAML-idpcat.png)
 
       Click **Add IdP Config**.
       Under the **Basics** tab, add the following:
@@ -77,10 +77,10 @@ The procedure guides you on configuring
 
       ![CreateSPCertificate](../../assets/images/SAML-CreateSPCertificate.png)
 
-      Click **Create SP Certificate**. You will be prompted for **Company name**. Give a unique name. Also set the below field:
+      Click **Create SP Certificate**. You are prompted for **Company name**. Give a unique name. Also set the below field:
       **Domino URL**: Add your service URL.
 
-      Click on **Export SP XML** and save `ServiceProvider.xml` for further use.
+      Click **Export SP XML** and save `ServiceProvider.xml` for further use.
 
       ![Service Provider](../../assets/images/SAML-ServiceProvider.png)
 
@@ -90,15 +90,15 @@ The procedure guides you on configuring
 
       ![Expand ID Vaults](../../assets/images/SAML-ExpandIDVaults.png)
 
-      Click on **Create...**. On the dialog that comes up, click on **Next**.
+      Click **Create...**. On the dialog that comes up, click **Next**.
 
       ![Create ID Vault Dialog](../../assets/images/SAML-CreateIDVaultDialog.png)
 
-      On the next screen, add **ID vault name** and click **Next**.
+      On the next screen, add **ID vault name**, and click **Next**.
 
       ![ID Vault Name](../../assets/images/SAML-IDVaultName.png)
 
-      On the next screen, set your password and hit **Next**.
+      On the next screen, set your password, and hit **Next**.
 
       ![ID Vault Password](../../assets/images/SAML-IDVaultPassword.png)
 
@@ -118,7 +118,7 @@ The procedure guides you on configuring
 
       ![Password Reset](../../assets/images/SAML-PasswordReset.png)
 
-      Click on **Next** and select **Create a new policy assigned to specific people or groups.**
+      Click **Next** and select **Create a new policy assigned to specific people or groups.**
 
       ![Policy](../../assets/images/SAML-Policy.png)
 
@@ -130,7 +130,7 @@ The procedure guides you on configuring
 
       ![Password Hint](../../assets/images/SAML-PasswordHint.png)
 
-      Now by clicking on **Create Vault**, the vault will be created.
+      Now by clicking on **Create Vault**, the vault is created.
 
    You now need to set up your ID Vault.
    Open your vault NSF (for example: `IBMID_VAULT\testsaml.nsf`). Click **Open** by selecting the file.

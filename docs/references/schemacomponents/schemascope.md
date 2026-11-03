@@ -51,5 +51,5 @@ References
 - [Schema Management](../usingwebui/schemaui.md)
 - [Scopes](../schemacomponents/scopes.md)
 - [Scope Management](../usingwebui/scopeui.md)
-- [Databases, schemas and scopes](../../topicguides/understanding.md#databases-schemas-and-scopes)
+- [Databases, schemas, and scopes](../../topicguides/understanding.md#databases-schemas-and-scopes)
 - [Form and Alias handling](../usingdominorestapi/formnames.md)

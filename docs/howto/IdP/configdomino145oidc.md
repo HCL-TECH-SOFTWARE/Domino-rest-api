@@ -90,9 +90,9 @@ This guide walks you through configuring HCL Domino 14.5 as an OIDC provider and
         | Items | Description |
         | :--- | :--- |
         | `active` | **Optional** - Can be useful for setting to `false` to temporarily disable something without deleting the config entirely. |
-        | `providerUrl` | The base URL that includes the name of the OIDC Domino server.<br/><br/>Example: `https://auth.h.test.us/auth/protocol/oidc`<br/>The provided example is based on the details in the example configuration shown in the example images.|
-        | `scope` | A scope that is expected to be included in the token from the OIDC provider. For example, `$DATA`,`email`, etc.|
-        | `aud` | A string or array of strings of audiences expected to be included in the token. Make sure to use the same value as set in the registered OAuth Client.|
+        | `providerUrl` | The base URL that includes the name of the OIDC Domino server.<br/><br/>Example: `https://auth.h.test.us/auth/protocol/oidc`<br/>The provided example is based on the details in the example configuration shown in the example images. |
+        | `scope` | A scope that is expected to be included in the token from the OIDC provider. For example, `$DATA`,`email`, etc. |
+        | `aud` | A string or array of strings of audiences expected to be included in the token. Make sure to use the same value as set in the registered OAuth Client. |
 
     3. Save the JSON file in the `keepconfig.d` directory.
 

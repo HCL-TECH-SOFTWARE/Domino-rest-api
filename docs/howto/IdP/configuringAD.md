@@ -41,7 +41,7 @@ To learn more about configuring Microsoft Entra ID for the Admin UI or Office Fo
 
 4. Click **Register**.
 
-After the registration, you will see the **Overview** page. It is recommended to take note of the displayed values as they might be required for the application configuration.
+After the registration, you see the **Overview** page. Take note of the displayed values as they might need them for the application configuration.
 
 ![Overview page](../../assets/images/entraID2.png){: style="height:70%;width:70%"}
 
@@ -99,7 +99,7 @@ The following example image shows how it would look after adding the scopes.
 
       ![Azure app registration](../../assets/images/entraID8.png){: style="height:70%;width:70%"}
 
-4. Under **Select permissions**, select the required scopes and click **Add permissions**.
+4. Under **Select permissions**, select the required scopes, and click **Add permissions**.
 
       ![Azure app registration](../../assets/images/entraID9.png){: style="height:70%;width:70%"}
 

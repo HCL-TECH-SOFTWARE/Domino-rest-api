@@ -10,11 +10,11 @@ The Domino REST API doesn't expose any database to HTTP(S) by default. Enabling 
 
     ![Domino Designer with Domino REST API](../../assets/images/KeepSchemaFileResource2.png)
 
-    Most people will use [**Schema and Scope Management UI**](../../references/usingwebui/schemaui.md), also known as the **Admin UI**, to modify the schema. This can also be done through the API.
+    Most people use [**Schema and Scope Management UI**](../../references/usingwebui/schemaui.md), also known as the **Admin UI**, to modify the schema. This can also be done through the API.
 
     A brave developer could use Domino designer to create or update the schema. If you manually modify your schema make sure to refresh the schema cache, see [**Domino REST API task**](../../references/usingdominorestapi/restapitask.md#domino-rest-api-task-commands) for details.
 
-2. **Link a schema to a scope** The scope configuration is stored in the `KeepConfig.nsf` database. This separation of `scope` and `schema` means multiple scopes can link to a single schema. You use the scope name when performing all CRUD operations, it's the value to the query param `dataSource`. You can create the scope using the API or the Admin UI.
+2. **Link a schema to a scope** The scope configuration is stored in the `KeepConfig.nsf` database. This separation of `scope` and `schema` means multiple scopes can link to a single schema. You use the scope name when performing all CRUD operations, it's the value to the query parameter `dataSource`. You can create the scope using the API or the Admin UI.
 
 3. Optional **Create an OAuth application** When you use Domino REST API as your IdP, you can create one or more OAuth applications that can access one or more of the defined scopes.
 
@@ -39,29 +39,28 @@ The high level entry contains a few properties and the collection of forms, view
 
 ![High Level schema components](../../assets/images/SchemaTopLevel.png)
 
-| Entry                       | Description                                                                              |
-| --------------------------- | ---------------------------------------------------------------------------------------- |
-| **schemaName**              | internal name, matches the JSON filename in Domino design                               |
-| **description**             | visible in Admin UI                                                                       |
-| **nsfPath**                 | path to nsf relative to data directory                                                   |
-| **iconName**                | name of the icon (fixed set) used in the UI. Alternative `icon` can contain a Base64 SVG |
-| **isActive**                | Can the API be used now                                                                  |
-| **requireRevisionToUpdate** | Measure to prevent overwrite conflicts                                                   |
-| **allowDecryption**         | When also the user has the permission, decrypt documents                                |
-| **formulaEngine**           | domino (current only option)                                                             |
-| **openAccess**              | true - allow access when user has $DATA scope, false: require exact scope                |
-| **allowCode**               | Run supplied external code                                                               |
-| **dqlAccess**               | allow DQL queries                                                                        |
-| **dqlFormula**              | Domino formula with @True/@False result to restrict use of DQL query access              |
-| **views**                   | collection of available views                                                            |
-| **agents**                  | collection of available agents                                                           |
-| **forms**                   | collection of available forms                                                            |
-| **formAliases**             | defined aliases to avoid duplicate definitions                                           |
+| Entry | Description |
+| --- | ---- |
+| **schemaName** | internal name, matches the JSON filename in Domino design |
+| **description** | visible in Admin UI |
+| **nsfPath** | path to NSF relative to data directory |
+| **iconName** | name of the icon (fixed set) used in the UI. Alternative `icon` can contain a Base64 SVG |
+| **isActive** | Can the API be used now |
+| **requireRevisionToUpdate** | Measure to prevent overwrite conflicts |
+| **allowDecryption** | When also the user has the permission, decrypt documents |
+| **formulaEngine** | domino |
+| **openAccess** | true - allow access when user has $DATA scope, false: require exact scope |
+| **allowCode** | Run supplied external code |
+| **dqlAccess** | allow DQL queries |
+| **dqlFormula** | Domino formula with @True/@False result to restrict use of DQL query access |
+| **views** | collection of available views |
+| **agents** | collection of available agents |
+| **forms** | collection of available forms |
+| **formAliases** | defined aliases to avoid duplicate definitions |
 
 ### Views
 
-An array of entries describing name, alias(es), if any and UNID of the view design element.
-Views will show all columns contained.
+An array of entries describing name, alias(es), if any, and UNID of the view design element. Views show all columns contained.
 
 ![Schema component View](../../assets/images/SchemaView.png)
 
@@ -69,26 +68,26 @@ Views will show all columns contained.
 
 An array of agent names that can be called from the REST endpoint. The API doesn't check if the agent is suitable for being called individually, it's the developer's responsibility to ensure this.
 
-### Forms and Mode
+### Forms and mode
 
 The form array has Form entries with 2 elements:
 
-- **formName**: Ideally the value stored in "`Form`" items. Alias resolution provided by `formAliases` element
-- **formModes**: Named schema for a form defining fields and access conditions. A form needs at least one FormMode to make documents available on Domino REST API. There are three mode names with special meaning:
-  - **default** : The first (and last) formMode in a Domino REST API schema
-  - **odata** : The mode used when accessing Domino REST API's OData endpoints
-  - **dql** : The mode used when executing a DQL query
+- **formName** is the value stored in "`Form`" items. Alias resolution provided by `formAliases` element
+- **formModes** is the named schema for a form defining fields and access conditions. A form needs at least one FormMode to make documents available on Domino REST API. There are three mode names with special meaning:
+  - **default** is the first (and last) formMode in a Domino REST API schema.
+  - **odata**  is the mode used when accessing Domino REST API's OData endpoints.
+  - **dql** is the mode used when executing a DQL query.
 
 ![Schema component View](../../assets/images/SchemaFormMode.png)
 
-| Entry               | Description                                                                                                    |
-| ------------------- | -------------------------------------------------------------------------------------------------------------- |
-| modeName            | lowercase letters, used in URL addressing                                                                      |
-| fields              | Array of KeepFields defining field properties (see below)                                                      |
-| readAccessFormula   | Domino formula that needs to compute to @True/@False to determine if this mode is available for read access    |
-| writeAccessFormula  | Domino formula that needs to compute to @True/@False to determine if this mode is available for write access   |
-| deleteAccessFormula | Domino formula that needs to compute to @True/@False to determine if this mode is available for delete access  |
-| required            | Array of field names that must be provided on creation or update. Following the JSON schema specification here |
+| Entry | Description |
+| :--- | :--- |
+| modeName | lowercase letters, used in URL addressing |
+| fields | Array of KeepFields defining field properties (see below) |
+| readAccessFormula | Domino formula that needs to compute to @True/@False to determine if this mode is available for read access |
+| writeAccessFormula | Domino formula that needs to compute to @True/@False to determine if this mode is available for write access |
+| deleteAccessFormula | Domino formula that needs to compute to @True/@False to determine if this mode is available for delete access |
+| required | Array of field names that must be provided on creation or update. Following the JSON schema specification here |
 
 ## Access formulas
 
@@ -96,19 +95,19 @@ The availability of access formulas follows typical Notes development pattern wh
 
 ## Domino REST API Fields
 
-We follow the ideas proposed by [JSON schema](https://json-schema.org) with the intention to support most of the constraints available there at some point in time.
+The ideas proposed by [JSON schema](https://json-schema.org) are followed with the intention to support most of the constraints available there at some point in time.
 
 ![Domino REST API Fields](../../assets/images/SchemaKeepFields.png)
 
-| Entry       | Description                                                        |
-| ----------- | ------------------------------------------------------------------ |
-| name        | Field name mapping to item name                                    |
-| type        | Permitted by [JSON](https://www.json.org/json-en.html)     |
-| items       | When type = `array`, entry with type/format for array entries      |
-| format      | Data format as specified in [JSON schema](https://json-schema.org) with the addition of Notes specific `names`, `authors`, `readers`  |
-| readyOnly[^1] | Field value can be read, but not written                           |
-| writeOnly[^1] | Field value can be written, but not read                           |
-| fieldGroup  | allows to group a set of multi values into records                 |
+| Entry | Description |
+| --- | ---- |
+| name | Field name mapping to item name |
+| type | Permitted by [JSON](https://www.json.org/json-en.html) |
+| items | When type = `array`, entry with type/format for array entries |
+| format | Data format as specified in [JSON schema](https://json-schema.org) with the addition of Notes specific `names`, `authors`, `readers` |
+| readyOnly[^1] | Field value can be read, but not written |
+| writeOnly[^1] | Field value can be written, but not read |
+| fieldGroup | allows to group a set of multi values into records |
 
 [^1]: Only one can be set to true at a time.
 
@@ -131,7 +130,7 @@ A typical Notes construct are documents containing a group of multi value fields
 @endjson
 -->
 
-By assigning the fields `Name`, `age` and `fruit` the **fieldGroup** `LostBoys`, Domino REST API will render them as records in an JSON Object. We opted for an object to ease processing and addressing since arrays might not have a guarantee of sequence. The result looks like this:
+By assigning the fields `Name`, `age` and `fruit` to the **fieldGroup** `LostBoys`, Domino REST API  renders them as records in an JSON Object. An object is used to ease processing and addressing since arrays might not have a guarantee of sequence. The result looks like this:
 
 ![Domino REST API Fields](../../assets/images/SampleJsonFieldGroup.png)
 
@@ -159,13 +158,13 @@ By assigning the fields `Name`, `age` and `fruit` the **fieldGroup** `LostBoys`,
 
 ### Form aliases
 
-The form aliases object allows specifying additional values in the form item to be mapped to the form configuration in the schema. The Admin UI will use form alias information extracted from the database design, but the API isn't bound to these settings
+The form aliases object allows specifying additional values in the form item to be mapped to the form configuration in the schema. The Admin UI uses form alias information extracted from the database design, but the API isn't bound to these settings
 
-### Sample Schema
+### Sample schema
 
 [![Domino REST API Fields](../../assets/images/SchemaComplete.png)](../../assets/images/SchemaComplete.png)
 
-## Enabling a database via Schema and Scope
+## Enabling a database via schema and scope
 
 Follow the tutorial for instructions on how to do this using [Admin UI](../../tutorial/adminui.md) or [Postman or curl](../../tutorial/postmancurl.md).
 

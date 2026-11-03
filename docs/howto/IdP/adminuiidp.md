@@ -56,7 +56,7 @@ Configure an external IdP of your choice. For more information, see [configuring
 
     4. Click **Register**.
 
-    After the registration, you will see the **Overview** page. Take note of the value of the **Application (client) ID**.
+    After the registration, you can see the **Overview** page. Take note of the value of the **Application (client) ID**.
 
 2. Add client credentials.
 
@@ -89,7 +89,7 @@ Configure an external IdP of your choice. For more information, see [configuring
 
         In the example image, it shows the selection of the **DRAPI-API** application, which is the application used by the Domino REST API server as stated in the [Before you begin](#before-you-begin) section.
 
-    4. Under **Select permissions**, select the required scopes and click **Add permissions**. Make sure that the scopes `$SETUP` and `$DATA` are selected.
+    4. Under **Select permissions**, select the required scopes, and click **Add permissions**. Make sure that the scopes `$SETUP` and `$DATA` are selected.
 
         ![Azure app registration](../../assets/images/entraID18.png){: style="height:70%;width:70%"}
 
