@@ -1,6 +1,6 @@
 # Lab 06 - Create a NodeJS application
 
-## What you will learn
+## What you'll learn
 
 How to run a custom NodeJS application that interacts with the Domino REST API.
 

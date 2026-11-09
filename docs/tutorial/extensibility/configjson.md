@@ -1,6 +1,6 @@
 # Create config.json
 
-Domino REST API is driven by a [dynamic configuration](../../references/configuration/understandingconfig.md). To get your extension recognized, you must provide the information what verticle will run your code and what classes implement your business logic. To do so, a file `resources/config/config.json` is required:
+Domino REST API is driven by a [dynamic configuration](../../references/configuration/understandingconfig.md). To get your extension recognized, you must provide the information what verticle runs your code and what classes implement your business logic. To do so, a file `resources/config/config.json` is required:
 
 ```json
 {

@@ -19,7 +19,7 @@ All that are taken care of.
 
 ## DBRequests
 
-There are two OperationIDs to take care of: `getApprovals` and `submitDecision`. They both act on the database specified in the `dataSource` query parameter and accept / return JSON data. There is some overlap in utility methods needed, we shall entertain a utility class for that. Both extend the abstract class `AsyncDominoJNXJson`, which only needs the method `process` to be implemented.
+There are two OperationIDs to take care of: `getApprovals` and `submitDecision`. They both act on the database specified in the `dataSource` query parameter and accept / return JSON data. <!--There is some overlap in utility methods needed, we shall entertain a utility class for that.-->Given the overlap in required utility methods, consider a utility class for that. Both extend the abstract class `AsyncDominoJNXJson`, which only needs the method `process` to be implemented.
 
 ## Primer on DbRequestParameters<?>
 

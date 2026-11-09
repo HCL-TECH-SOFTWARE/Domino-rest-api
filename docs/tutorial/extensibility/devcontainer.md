@@ -26,7 +26,7 @@ You can walk through the steps required for a consistent DRAPI development exper
 
 ## Initial image
 
-We start with a Java development image and add Domino and tooling.
+Start with a Java development image and add Domino and tooling.
 
 ## .devcontainer and scripts
 

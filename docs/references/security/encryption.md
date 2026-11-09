@@ -8,9 +8,9 @@ There are three areas in Domino REST API where encryption keys are needed:
 
 This page documents the creation of those keys. Check the [security](./index.md) page for configuration details.
 
-## HTTPs certificates for Domino REST API ports
+## HTTPS certificates for Domino REST API ports
 
-When your server is facing the internet, or you can't distribute custom (root) CAs (certificate authorities) to your users, you should consider using a certificate from an official source such as [Let's Encrypt](https://letsencrypt.org/). (This documentation does not describe how to do that.) You can run Domino REST API without encryption; however, in a production environment this is not recommended, unless you run on a container service like Kubernetes or OpenShift, where the container handles encryption.
+When your server is facing the internet, or you can't distribute custom (root) CAs (certificate authorities) to your users, you should consider using a certificate from an official source such as [Let's Encrypt](https://letsencrypt.org/). This documentation doesn't describe how to do that. You can run Domino REST API without encryption; however, in a production environment this isn't recommended, unless you run on a container service like Kubernetes or OpenShift, where the container handles encryption.
 
 If you create your own CA, you must:
 

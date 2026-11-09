@@ -8,13 +8,13 @@ In all options, a JWT token gets validated and authorized access based on its cl
 
 |Authentication option|Description|When to use|
 |:---|:---|:---|
-|[OIDC with idpcat authentication](#oidc-with-idpcat-authentication)|Uses Domino's own `idpcat.nsf` to provide access to the IdP keys. Requires a `clientId` and a `clientSecret`. Configuration is in IDPCAT. |**All of Domino**<br/>Use this option when your Domino environment is configured with IDPCAT. Enjoy one configuration for all of Domino.|
+|[OIDC with idpcat authentication](#oidc-with-idpcat-authentication)|Uses Domino's own `idpcat.nsf` to provide access to the IdP keys. Requires a `clientId` and a `clientSecret`. Configuration is in IDPCAT.|**All of Domino**<br/>Use this option when your Domino environment is configured with IDPCAT. Enjoy one configuration for all of Domino.|
 |[OIDC](#oidc)|A similar approach to `jwt`, with an additional check. DRAPI logs into the IdP to ensure it gets the right one and retrieves the keys upon successful login. The login ensures reaching the intended IdP.|**DRAPI only** <br/>Use when you have a `clientId` and a `clientSecret`, and like the additional correctness assurance the login provided.|
 |[JWT Authorization](#jwt-authorization)|Uses the `.well-known/openid-configuration` to obtain the `jwks_uri` with the IdP's public key(s). The keys are used to validate the JSON Web Token (JWT).|**DRAPI only** <br/> Use when you can trust that the `.well-known` URL can't be compromised, or you don't have yet a `clientId` and a `clientSecret`.|
 
 ## OIDC with idpcat authentication
 
-!!! tip "We strongly recommend this option"
+!!! tip "Strongly recommended option"
 
     The `OIDC idpcat` support lets you use providers configured in `idpcat.nsf` ("IdP Catalog") starting with Domino 14. To know more about creating `idpcat.nsf`, see [Configuring trusted OIDC providers](https://help.hcltechsw.com/domino/14.5.0/admin/secu_config_http_bearer_auth_t.html?hl=idp%2Ccatalog)
 
@@ -22,11 +22,11 @@ In all options, a JWT token gets validated and authorized access based on its cl
 
 Process flow:
 
-- Step 1: The Domino Core initiates and completes the initial OIDC authentication flow with an external Identity Provider (IdP).
-- Step 2: Upon a successful handshake, the Domino Core fetches the IdP configuration, endpoints, and public keys from the OpenID discovery endpoint (https://idp/.well-known/...). It stores these details centrally in Domino's IdP Catalog database (idpcat.nsf).
-- Step 3: The client application carries out its standard OIDC handshake with the external IdP to authenticate the end user and receive a signed JWT access token.
-- Step 4: The client application sends a request to the Domino REST API, providing the obtained token via the request header.
-- Step 5: Instead of communicating directly with the external IdP, the Domino REST API delegates token verification (JWT Validation) locally to Domino Core. Domino Core uses the central `idpcat.nsf` configuration and cached public keys to validate the JWT signature on Domino REST API’s behalf.
+- **Step 1.** The Domino Core initiates and completes the initial OIDC authentication flow with an external Identity Provider (IdP).
+- **Step 2.** Upon a successful handshake, the Domino Core fetches the IdP configuration, endpoints, and public keys from the OpenID discovery endpoint (https://idp/.well-known/...). It stores these details centrally in Domino's IdP Catalog database `idpcat.nsf`.
+- **Step 3.** The client application carries out its standard OIDC handshake with the external IdP to authenticate the end user and receive a signed JWT access token.
+- **Step 4.** The client application sends a request to the Domino REST API, providing the obtained token via the request header.
+- **Step 5.** Instead of communicating directly with the external IdP, the Domino REST API delegates token verification (JWT Validation) locally to Domino Core. Domino Core uses the central `idpcat.nsf` configuration and cached public keys to validate the JWT signature on Domino REST API’s behalf.
 
 ### OIDC with idpcat configuration
 
@@ -52,7 +52,7 @@ The configuration is as follows in Domino REST API:
 
 | Items | Description |
 | :--- | :--- |
-| `active` | **Optional** - Can be useful for setting to `false` to temporarily disable something without deleting the config entirely. |
+| `active` | **Optional** - Can be useful for setting to `false` to temporarily disable something without deleting the configuration entirely. |
 | `providerUrl` | It's the OIDC-provider-specific URL. It's in a form common for Keycloak, but Azure and others look different. |
 | `scope` | A scope that is expected to be included in the token from the OIDC provider. |
 | `aud` | A string or an array of strings that specifies audiences expected to be included in the token. |
@@ -94,10 +94,10 @@ The following configuration allows Domino REST API to use Domino as an OIDC prov
 | Items | Description |
 | :--- | :--- |
 | `active` | **Optional** - Can be set to `false` to temporarily disable the configuration without deleting the configuration. |
-| `providerUrl` | The base URL that includes the name of the OIDC Domino server.<br/><br/>For example: `https://auth.mydomains.com/auth/protocol/oidc`|
+| `providerUrl` | The base URL that includes the name of the OIDC Domino server.<br/><br/>For example: `https://auth.mydomains.com/auth/protocol/oidc` |
 | `scope` | A scope that is expected to be included in the token from the OIDC provider. For example, `$DATA`,`email`, etc.<!--The scopes are `openid`, `email`, `profile`, `$DATA`, `Domino.user.all`. `Domino.user.all` is used for Domino HTTP.--> |
-| `aud` | A string or an array of strings that specifies audiences expected to be included in the token. The value of the `aud` property can be set to `https://<Domino REST API DNS name>` to match what Domino HTTP expects.|
-| `additionalClientIds` | **Optional** - A string or an array of strings that specifies all valid client IDs. Any client ID not listed in this property is rejected.|
+| `aud` | A string or an array of strings that specifies audiences expected to be included in the token. The value of the `aud` property can be set to `https://<Domino REST API DNS name>` to match what Domino HTTP expects. |
+| `additionalClientIds` | **Optional** - A string or an array of strings that specifies all valid client IDs. Any client ID not listed in this property is rejected. |
 
 !!! caution
 
@@ -113,10 +113,10 @@ OIDC (OpenID Connect) support lets you point at a standard OIDC provider like [M
 
 Process flow:
 
-- Step 1: The Domino REST API performs an initial OIDC authentication flow with the external IdP to authenticate itself and verify connectivity.
-- Step 2: Upon successful handshake completion, the Domino REST API reads and stores the configuration and public key certificates from the IdP discovery endpoint (https://idp/.well-known/...).
-- Step 3: The client application conducts its own OIDC handshake with the IdP to authenticate the end user and receive a signed JWT.
-- Step 4: The client application sends a request to Domino REST API, including the JWT in the header. Domino REST API validates the incoming token using the IdP keys established during Steps 1 and 2 to authorize access.
+- **Step 1.** The Domino REST API performs an initial OIDC authentication flow with the external IdP to authenticate itself and verify connectivity.
+- **Step 2.** Upon successful handshake completion, the Domino REST API reads and stores the configuration and public key certificates from the IdP discovery endpoint (https://idp/.well-known/...).
+- **Step 3.** The client application conducts its own OIDC handshake with the IdP to authenticate the end user and receive a signed JWT.
+- **Step 4.** The client application sends a request to Domino REST API, including the JWT in the header. Domino REST API validates the incoming token using the IdP keys established during Steps 1 and 2 to authorize access.
 
 ### OIDC configuration
 
@@ -143,9 +143,9 @@ The "oidc" is similar to "oidc-idpcat" or "jwt". The keys can be anything, like 
 | :--- | :--- |
 | `active` | **Optional** Can be set to `false` to temporarily disable something without deleting the config entirely. |
 | `providerURL` | It's the OIDC-provider-specific URL. It's in a form common for Keycloak, but Azure and others look different. |
-| `clientId` | It's the configured client ID from the OIDC provider. It is strongly recommended to use `Domino` as client name. |
-| `clientSecret` | It's the generated client secret from the OIDC provider, usually a randomly-generated hex string. |
-| `userIdentifier` and `userIdentifierInLdapFormat` | **Optional**  |
+| `clientId` | It's the configured client ID from the OIDC provider. It's strongly recommended to use `Domino` as client name. |
+| `clientSecret` | It's the generated client secret from the OIDC provider, usually a randomly generated hex string. |
+| `userIdentifier` and `userIdentifierInLdapFormat` | **Optional** |
 
 ### Differences between `oidc` and `oidc-idpcat`
 
@@ -160,7 +160,7 @@ In general, `oidc` and `oidc-idpcat` achieve the same goal, which is to use a co
 
 Check [Configure Domino REST API to use an OIDC provider](../../howto/IdP/configureoidc.md).
 
-## JWT Authorization
+## JWT authorization
 
 All actions in Domino REST API are secured with JWT. For starters, Domino provides a login endpoint that issues a valid JWT token to access Domino REST API in exchange for Domino credentials (username and HTTP password).
 
@@ -170,7 +170,7 @@ The Domino generated JWT:
 - Works with one Domino server.
 - Can be disabled in Domino REST API configuration with `"disableDominoLogin" :true`.
 
-Should Domino use a permanent JWT Key, we can use a public/private key pair and add it to the Domino REST API configuration:
+Should Domino use a permanent JWT Key, you can use a public/private key pair and add it to the Domino REST API configuration:
 
 ```json
 {
@@ -197,9 +197,9 @@ This is the configuration suggested for outward facing Domino servers. Domino RE
 
 ![OIDC](../../assets/images/DRAPIAuth4.png){: style="height:70%;width:70%"}
 
-- Step 1: The Domino REST API directly reads the OpenID Connect discovery metadata and JSON Web Key Sets (JWKS) from the external IdP endpoint (https://idp/.well-known/...) to fetch public keys for token signature verification.
-- Step 2: The client application performs the standard OIDC flow with the IdP to authenticate the user and receive an identity/access JWT.
-- Step 3: The application sends a request to the Domino REST API with the JWT as a bearer token. The Domino REST API then directly validates the token's signature and claims using the keys fetched in Step 1.
+- **Step 1.** The Domino REST API directly reads the OpenID Connect discovery metadata and JSON Web Key Sets (JWKS) from the external IdP endpoint (https://idp/.well-known/...) to fetch public keys for token signature verification.
+- **Step 2.** The client application performs the standard OIDC flow with the IdP to authenticate the user and receive an identity/access JWT.
+- **Step 3.** The application sends a request to the Domino REST API with the JWT as a bearer token. The Domino REST API then directly validates the token's signature and claims using the keys fetched in Step 1.
 
 #### Configuration
 
@@ -218,9 +218,9 @@ If your provider supports the [`/.well-known/openid-configuration` endpoint](htt
 }
 ```
 
-During initialization, Domino REST API will query this endpoint for issuer and key information to trust public keys from that service.
+During initialization, Domino REST API queries this endpoint for issuer and key information to trust public keys from that service.
 
-Some IdP, such as [Microsoft Entra ID formerly Azure Active Directory](../../howto/IdP/configuringAD.md), don't provide full information, missing algorithm or accurate issuer info. For them, additional parameters `aud`, `iss` and `algorithm` can be specified.
+Some IdP, such as [Microsoft Entra ID formerly Azure Active Directory](../../howto/IdP/configuringAD.md), don't provide full information, missing algorithm, or accurate issuer info. For them, additional parameters `aud`, `iss` and `algorithm` can be specified.
 
 ```json
 {
@@ -282,7 +282,7 @@ All elements need to be present. “Audience” must be set to “Domino” and 
 
 ### Distinguished Names
 
-By default, Domino REST API will expect that incoming tokens contain a Domino-format distinguished name, for example `CN=John Doe/O=SomeOrg`, in either the `CN` or `sub` claims of the token payload. This can be configured in Domino REST API's JWT configuration to use an alternative property and to accept LDAP-format, for example `cn=John Doe,o=SomeOrg` names:
+By default, Domino REST API expects that incoming tokens contain a Domino-format distinguished name, for example `CN=John Doe/O=SomeOrg`, in either the `CN` or `sub` claims of the token payload. This can be configured in Domino REST API's JWT configuration to use an alternative property and to accept LDAP-format, for example `cn=John Doe,o=SomeOrg` names:
 
 ```json
 {
@@ -314,7 +314,7 @@ You can refer to the following table to compare your configuration options:
 
 | Topic | [Internal IdP](../../howto/IdP/configuringCertificates.md) | [external (JWT)](../../howto/IdP/configuringIdentityProvider.md#add-your-own-idp) | [external (OIDC)](../../howto/IdP/configureoidc.md) | [external (OIDC-idpcat)](./authentication.md#oidc-with-idpcat-authentication) |
 | :--- | :--- | :--- | :--- | :--- |
-|Preferred | ./. | ./. | ./. | Yes |
+| Preferred | ./. | ./. | ./. | Yes |
 | Single server symmetric keys | Yes | ./. | ./. | ./. |
 | Private key | Yes | ./. | ./. | ./. |
 | Public key | Yes | Yes | Yes | Yes |

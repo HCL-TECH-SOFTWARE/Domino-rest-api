@@ -6,7 +6,7 @@ The Domino REST API doesn't have an uninstaller. If you'd like to remove it from
 
 <!-- prettier-ignore -->
 !!! caution
-    The following procedures permanently remove *Domino REST API*, including all configurations and customizations. Make a complete backup before proceeding.
+    The following procedures permanently remove *Domino REST API*, including all configurations, and customizations. Make a complete backup before proceeding.
 
 ## Domino Server
 

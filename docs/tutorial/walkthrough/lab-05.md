@@ -4,7 +4,7 @@
 
     An *Application* is the configuration you need when you want to use Domino's built-in Identity Provider (IdP) functionality. IdP is part of the **OAuth**-based Identity standard.
 
-## What you will learn
+## What you'll learn
 
 How to configure credentials for an app to log in *on your behalf* with a limited set of permissions.
 

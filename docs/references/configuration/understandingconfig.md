@@ -27,7 +27,7 @@ The configuration of the Domino REST API follows an **Overlay File System** ap
 - All configuration sources provide JSON data that gets overlaid on top of each other.
 - When two JSON objects contain the same key:
   - The key’s value from the overlay source **replaces** the lower layer’s value.
-  - Arrays are **completely replaced**, not merged or appended.
+  - Arrays are **completely replaced**, not merged, or appended.
 - JSON files in the `keepconfig.d` directory are applied in **alphabetical order**, meaning the last file loaded can override previous ones.
 - This order supports use cases like temporarily disabling settings by placing overriding values in a file with a name starting with `z-` to make sure it's processed last.
 
@@ -37,7 +37,7 @@ For more information, see [vert.x overloading rules](https://vertx.io/docs/vertx
 
 Suppose you have the following configurations and environment setup:
 
-**config.json**
+### config.json
 
 This is an example of the initial configuration.
 
@@ -54,7 +54,7 @@ This is an example of the initial configuration.
 }
 ```
 
-**a.json**
+### a.json
 
 This is an example of a JSON file you save in the `keepconfig.d` directory to overlay and update the initial configuration.
 
@@ -74,7 +74,7 @@ This is an example of a JSON file you save in the `keepconfig.d` directory to ov
 }
 ```
 
-**Environment variable**
+### Environment variable
 
 This is an example of an environment variable.
 

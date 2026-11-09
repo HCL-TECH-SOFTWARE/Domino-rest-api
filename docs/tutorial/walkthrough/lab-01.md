@@ -1,6 +1,6 @@
 # Lab 01 - Log in to the REST API
 
-## What you will learn
+## What you'll learn
 
 The four different ways to log in to the Domino REST API.
 

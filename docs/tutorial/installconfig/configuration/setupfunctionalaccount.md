@@ -96,8 +96,8 @@ You use the password when logging in to the endpoints, while you use the salted 
     | :--- | :--- |
     | JSON key | UserId for authentication, case-sensitive, no variations. In the examples, `metrics` and `John Doe` are JSON keys. You can use other values for the JSON key. |
     | active | The value can be set to `true` or `false`. Setting it to `false` temporarily disables an account. |
-    | CN | **Optional**: Common name in X500 format. When defined, the name is for display only. You still need to log in using the JSON key as your username. |
-    | secret | The salted and encrypted password you [generated](setupfunctionalaccount.md#generate-salted-password).|
+    | CN | **Optional** - Common name in X500 format. When defined, the name is for display only. You still need to log in using the JSON key as your username. |
+    | secret | The salted and encrypted password you [generated](setupfunctionalaccount.md#generate-salted-password). |
 
 3. Restart Domino REST API on all servers with this new configuration.
 

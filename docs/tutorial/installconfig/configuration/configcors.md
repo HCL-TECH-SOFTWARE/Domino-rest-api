@@ -8,7 +8,7 @@ The procedure guides you in configuring [Cross-Origin Resource Sharing (CORS)](h
 
 - Domino REST API is installed.
 - You have administrator access to the Domino server.
-- You know the domains and ports that will access the API.
+- You know the domains and ports that access the API.
 
     ??? tip "Default ports"
 

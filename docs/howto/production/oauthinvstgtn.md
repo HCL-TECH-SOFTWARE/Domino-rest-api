@@ -12,7 +12,7 @@ Guides you into OAuth authentication to use Domino REST API using [Bruno](../../
 
 - Take note of the *Environment variables*.
 
-    In the APIs used in the OAuth investigation, you will see fields surrounded by double brackets like `{{OAUTHHOST}}` or `{{AdminName}}`. These fields represent user inputs and should generally not be hard coded. You can use the following as reference:
+    In the APIs used in the OAuth investigation, you can see fields surrounded by double brackets like `{{OAUTHHOST}}` or `{{AdminName}}`. These fields represent user inputs and should generally not be hard coded. You can use the following as reference:
 
     ```json
     vars {

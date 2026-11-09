@@ -1,6 +1,6 @@
 # Domino REST API flows
 
-## Selected Flows in the Domino REST API Architecture
+## Selected flows in the Domino REST API architecture
 
 To fully understand Domino REST API, it's helpful to know the main flows, Domino REST API has three of them:
 
@@ -8,7 +8,7 @@ To fully understand Domino REST API, it's helpful to know the main flows, Domino
 - Loading of OpenAPI defined routes
 - Serving requests on the loaded routes
 
-## Domino REST API Boot
+## Domino REST API boot
 
 [![Domino REST API Boot](../../assets/images/LaunchFlow.png){: style="height:40%;width:40%"}](../../assets/images/LaunchFlow.png){: target="_blank" rel="noopener noreferrer"}
 

@@ -66,8 +66,8 @@ Use the Filter (funnel icon) to narrow the displayed list of applications based 
 
 |Filter|What it controls|
 |:---|:---|
-|Status| Shows active, inactive, or all applications|
-|Authentication Method| Shows all applications, those that use app secret, those that use app secret with app secret generated, those that use app secret without a generated app secret, or those that use PKCE. |
+|Status|Shows active, inactive, or all applications|
+|Authentication Method|Shows all applications, those that use app secret, those that use app secret with app secret generated, those that use app secret without a generated app secret, or those that use PKCE.|
 
 Click **Reset** to clear all filters.
 

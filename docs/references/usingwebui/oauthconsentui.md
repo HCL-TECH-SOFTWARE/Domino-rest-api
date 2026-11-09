@@ -39,7 +39,7 @@ The **Filter** pane allows you to filter which OAuth consents to display based o
 
 |Filter|What it controls|
 |:----|:----|
-|Status| Shows all consents versus only active consents.|
+|Status|Shows all consents versus only active consents.|
 |App name|Shows only consents with application.|
 |Expiration|Shows consents regardless of expiration, with expiration, or matching a specific expiration date.|
 |Token Expiration|Shows consents regardless of token expiration, with token expiration, or matching a specific token expiration date.|
@@ -61,4 +61,4 @@ When an application should no longer have access to a user’s resources:
 2. Click **Revoke** for that user/app pair.
 3. Confirm by clicking **Yes** in the **Revoke Consent** dialog.
 
-The consent is immediately removed, and the app will no longer have ongoing delegated access.
+The consent is immediately removed, and the app no longer has ongoing delegated access.

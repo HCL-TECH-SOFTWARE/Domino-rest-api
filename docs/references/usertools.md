@@ -10,34 +10,34 @@ These tools are recommended for individual developers and are not installed on t
 
 ### Command-line tools
 
-| Tool Name | Description |
+|Tool name|Description|
 |:---|:---|
 |[curl](https://curl.haxx.se/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:15px;width:15px"}|A versatile command-line tool for transferring data with URLs. Ideal for scripting REST API calls and quick testing from terminals.</br></br>For more information, see [Additional information](#curl).|
 |[jq](https://stedolan.github.io/jq/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:15px;width:15px"}|A command-line JSON processor that works well with curl for filtering, parsing, and manipulating JSON data.|
 
 ### API clients
 
-| Tool Name | Description |
+|Tool name|Description|
 |:---|:---|
 |[Postman](https://www.postman.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:15px;width:15px"}|Cross-platform graphical API client for exploring and testing APIs interactively.</br></br>Sample Domino REST API collections are available. For more information, see [Additional information](#postman).|
 |[Bruno](https://www.usebruno.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:15px;width:15px"}|An open-source, Git-integrated, fully offline API client supporting REST interactions. Available on macOS, Windows, and Linux.<br/><br/>To learn more about Bruno, check the [Bruno documentation](https://docs.usebruno.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:15px;width:15px"}.<br/><br/>Bruno is available as a native desktop app for macOS, Windows, and Linux. For more information, see [Download Bruno's Desktop Application](https://docs.usebruno.com/get-started/bruno-basics/download "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:15px;width:15px"}.|
 
 ### Debugging and proxy tools
 
-| Tool Name | Description |
+|Tool name|Description|
 |:---|:---|
 |[Charles Proxy](https://www.charlesproxy.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:15px;width:15px"}|An HTTP(S) proxy for debugging API traffic, especially useful when the client applications are not browsers.|
 
 ### Data generation and security
 
-| Tool Name | Description |
+|Tool name|Description|
 |:---|:---|
 |[Mockaroo](https://www.mockaroo.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:15px;width:15px"}|Online tool for generating sample JSON or CSV data for API testing.|
 |[Let's Encrypt](https://letsencrypt.org/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:15px;width:15px"}|Provides free SSL certificates to secure your API endpoints.|
 
 ### Version control
 
-| Tool Name | Description |
+|Tool Name|Description|
 |:---|:---|
 |[SourceTree for GIT](https://www.sourcetreeapp.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:15px;width:15px"}|Graphical Git version control client to manage code repositories.|
 

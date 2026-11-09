@@ -163,7 +163,7 @@ The scope configuration is stored in the `keepconfig.nsf` database. This separat
       ![Create Database Scope](../../../assets/images/ScopeManagement.png)
 
 3. Under **Available Schema**, select the schema that you created.
-4. Under **Add New Scope**, fill in the form and click **Add**.
+4. Under **Add New Scope**, fill in the form, and click **Add**.
 
     - For the **Server** field, enter the name of the server the scope is available on, or leave it blank for the current server. The value of the entered name must be either the server's hierarchical name or in canonical format. See the following examples for reference:
 
@@ -192,7 +192,7 @@ You can create one or more OAuth applications that can access one or more of the
 
 1. Select **Application Management - OAUTH** from the home page or **Applications** from the side navigation pane to access the **Application Management** page.
 2. On the **Application Management** page, click **Add Application**.
-3. Under **Add New Application**, fill in the form and click **Add**.
+3. Under **Add New Application**, fill in the form, and click **Add**.
 
       ![Application Form](../../../assets/images/AddApplicationForm.png){: style="height:60%;width:60%"}
 
@@ -213,6 +213,6 @@ You can create one or more OAuth applications that can access one or more of the
 
 Click the **Click to Generate Secret** text corresponding to the new OAuth application to generate the **App Secret**.
 
-You will supply the **App ID** and **App Secret** to the external application that will be accessing the related Domino database through the Domino REST API.
+Supply the **App ID** and **App Secret** to the external application that is going to access the related Domino database through the Domino REST API.
 
-Make sure to take note of the **App Secret**. Once you switch away from the **App Management** page, the **App Secret** will be salted and hashed, and then saved. It can't be transformed back. If you forget it, you need to generate a new one.
+Make sure to take note of the **App Secret**. Once you switch away from the **App Management** page, the **App Secret** is salted and hashed, and then saved. It can't be transformed back. If you forget it, you need to generate a new one.

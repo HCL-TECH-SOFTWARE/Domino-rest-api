@@ -31,7 +31,7 @@ To change one of them:-->
 1. Login into the **Management console** (Port 8889).
 2. Enter a password in the **Salt this** text field and click **Salt**.
 
-The salted and hashed version of the entered password will be shown, and you can copy and use it in a configuration JSON file.
+The salted and hashed version of the entered password is shown, and you can copy and use it in a configuration JSON file.
 
 ### Generate keys and certificates for SAML and JWT
 

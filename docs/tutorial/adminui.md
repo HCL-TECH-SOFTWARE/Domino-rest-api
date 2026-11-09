@@ -83,7 +83,7 @@ A scope enables access to a schema via the Domino REST API. One Domino database 
 
 3. Under **Available Schema**, click `Demo.nsf`. This shows a list of schemas that uses `Demo.nsf` as a database.
 4. Select the schema you created earlier.
-5. Under **Add New Scope**, fill in the form and click **Add**.
+5. Under **Add New Scope**, fill in the form, and click **Add**.
 
     For the **Server** field, enter the name of the server the scope is available on, or leave it blank for the current server. The value of the entered name must be either the server's hierarchical name or in canonical format. See the following examples for reference:
 

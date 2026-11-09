@@ -16,7 +16,7 @@ To create `oauth.nsf` from a template
     3. Set the title as you deem fit.
     4. Select `KeepOauth.ntf` as the application template.
 
-3. Assign the role `[OAuthAdmin]` to the server and your administrative user or user group. We suggest `[LocalKeepAdmins]` using your Notes Client.
+3. Assign the role `[OAuthAdmin]` to the server and your administrative user or user group. `[LocalKeepAdmins]` is suggested using your Notes Client.
 4. Make sure there is an access control list (ACL) entry of the type `server` that has `Manager` access and `OAuthAdmin` role. Make sure to select the checkbox corresponding to `OAuthAdmin`.
 
     ![Domino REST API oauth.nsf ACL](../../assets/images/keep-oauthnsf-acl.png)

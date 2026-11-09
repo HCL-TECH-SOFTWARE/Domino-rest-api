@@ -47,7 +47,7 @@ Before enabling and working with the extension APIs, it is important to get fami
     }
     ```
 
-    The configuration setting will enable the CalDAV, CardDAV, and DXL extension APIs. If you want to enable only a specific one, change the value of the `active` property to `false`. In the following example configuration setting, only CalDAV and CardDAV extensions APIs are enabled.
+    The configuration setting enables the CalDAV, CardDAV, and DXL extension APIs. If you want to enable only a specific one, change the value of the `active` property to `false`. In the following example configuration setting, only CalDAV and CardDAV extensions APIs are enabled.
 
     ```json
     {
@@ -73,6 +73,6 @@ Before enabling and working with the extension APIs, it is important to get fami
 
 4. Restart Domino REST API on all servers.
 
-After restarting Domino REST API, you will now be able to see the CalDAV, CardDAV, and DXL extension APIs tiles under **General Schemas**.
+After restarting Domino REST API, you are now able to see the CalDAV, CardDAV, and DXL extension APIs tiles under **General Schemas**.
 
 ![General Schema](../../assets/images/davdxl.png){: style="height:80%;width:80%"}

@@ -118,7 +118,7 @@ You can click the **Show Active** toggle to the on position to only show active 
 The **Add New Form Schema** feature enables the creation of a new custom form through which you can set up a schema. The feature doesn't create a new form on the backend, so it won't exist in the database. Everything related to the new form is contained within the schema. Therefore, if you delete the form, it's only removed from the list of forms on the **Database Forms** tab.
 
 1. Click **Add New Form Schema**.
-2. In the **Add New Form Schema** dialog, enter your schema name and click **Create**.
+2. In the **Add New Form Schema** dialog, enter your schema name, and click **Create**.
 3. On the **Schema Management - <schema name\>** page, select a form from the **Show fields from** dropdown field to display the fields of the selected form. You can also select **All Fields** from the dropdown field to display all the fields from all the available forms.
 4. Select the fields that you want to add to the mode.
 5. Configure the **Field Setting** and **Mode Settings** as needed for each added field.

@@ -1,6 +1,6 @@
 # Example 4: Outgoing MIME content as plain
 
-Let's say you want to retrieve the following MIME content as plain:
+Suppose you want to retrieve the following MIME content as plain:
 
 ```text
 MIME-Version: 1.0
@@ -36,5 +36,6 @@ You should get the following in the `richtext` field response:
 }
 ```
 
-!!!note
+!!! note
+
     Since there's no `text/plain` part in the stored multipart MIME and no `text/html` part to fall back to, it then checks for a `text/markdown` part, converts it to plain, and then returns it as a response.

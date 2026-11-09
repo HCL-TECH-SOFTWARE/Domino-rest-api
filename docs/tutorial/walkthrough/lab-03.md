@@ -1,6 +1,6 @@
 # Lab 03 - Schema exploration
 
-## What you will learn
+## What you'll learn
 
 - Understanding a form mode
 - Understanding a field group

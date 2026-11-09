@@ -36,7 +36,7 @@ To learn more about Domino Certificate Manager, see [Managing TLS certificates w
 
 2. Restart Domino REST API on all servers with this new configuration.
 
-This configuration will attempt to load a certificate matching the server's "Fully qualified Internet host name" from the server document, either directly or with a matching wildcard certificate. To specify one or more certificate host names to load, use this configuration:
+This configuration attempts to load a certificate matching the server's "Fully qualified Internet host name" from the server document, either directly or with a matching wildcard certificate. To specify one or more certificate host names to load, use this configuration:
 
 Example 1:
 
@@ -56,6 +56,6 @@ Example 2 (showing wildcard usage):
 }
 ```
 
-`TLSCertStoreName` can be a string or array. When multiple are specified, they will be matched to requests via SNI.
+`TLSCertStoreName` can be a string or array. When multiple are specified, they are matched to requests via SNI.
 
 For more information on creating or updating a JSON file, see [Modify configuration of Domino REST API](../install/configparam.md).

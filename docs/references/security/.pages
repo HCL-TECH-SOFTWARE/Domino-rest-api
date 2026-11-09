@@ -1,12 +1,12 @@
 title: Security
 
 nav:
-  - index.md
-  - Auth*: authentication.md
-  - jwt.md
-#  - configurationParameters.md
-  - encryption.md
-  - setupoauthnsf.md
-  - customIdp.md
-  - securingKEEPEndpoints.md
-#  - idpcompare.md
+    - index.md
+    - Auth*: authentication.md
+    - jwt.md
+  #  - configurationParameters.md
+    - encryption.md
+    - setupoauthnsf.md
+    - customIdp.md
+    - securingKEEPEndpoints.md
+  #  - idpcompare.md

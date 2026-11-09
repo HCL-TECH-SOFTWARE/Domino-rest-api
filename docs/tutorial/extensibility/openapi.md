@@ -1,6 +1,6 @@
 # Create OpenAPI 3.0.x specification
 
-You will create an OpenAPI 3.0.x specification. It can be done using Notepad, but you want to use [available tooling](https://openapi.tools/#gui-editors). You can use [Swagger Editor](https://editor.swagger.io/), Redhat's [Apicurio](https://www.apicur.io/) (Apicurito will suffice in most cases), or [APIGit](https://apigit.com/).
+You can create an OpenAPI 3.0.x specification. It can be done using Notepad, but you want to use [available tooling](https://openapi.tools/#gui-editors). You can use [Swagger Editor](https://editor.swagger.io/), Redhat's [Apicurio](https://www.apicur.io/), or [APIGit](https://apigit.com/).
 
 ## The idea
 
@@ -29,7 +29,7 @@ For this tutorial, the final structure is presented.
 
 #### Pending approvals
 
-The Schema looks like the following. The URL (see below) will return an array of them.
+The Schema looks like the following. The URL (see below) returns an array of them.
 
 !!! note
 
@@ -118,7 +118,7 @@ Important elements are:
 - Tags
 - Operation ID
 
-Tags and OperationId will form the package and class name [later on](configjson.md).
+Tags and OperationId form the package and class name [later on](configjson.md).
 
 ```json
 {

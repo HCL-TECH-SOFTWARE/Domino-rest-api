@@ -20,6 +20,6 @@ The approach follows the same principle as the Notes client or the Domino HTTP t
 
 ## The rationale
 
-In contemporary development understanding, there are label/value pairs. To normalize Notes documents, we follow this pattern, using the form name as the label and the last item as the value.
+In contemporary development understanding, there are label/value pairs. To normalize Notes documents, use the following pattern: the form name serves as the label, and the last item serves as the value.
 
 Any intermediate aliases are treated as variations and are excluded from API use to simplify access for external developers.

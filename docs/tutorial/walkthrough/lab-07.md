@@ -1,6 +1,6 @@
 # Lab 07 - Create an SPA
 
-## What you will learn
+## What you'll learn
 
 How to create a browser-based Single Page Application (SPA) using just three files.
 

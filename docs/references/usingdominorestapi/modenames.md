@@ -11,11 +11,11 @@ The `default` mode is the standard mode used when:
 
 ## dql
 
-The `dql` mode specifies what fields are returned when querying documents using [DQL](https://help.hcltechsw.com/dom_designer/12.0.1/basic/dql_overview.html). If a form does not include a `dql` mode, no data for that form will be returned in DQL queries.
+The `dql` mode specifies what fields are returned when querying documents using [DQL](https://help.hcltechsw.com/dom_designer/12.0.1/basic/dql_overview.html). If a form does not include a `dql` mode, no data for that form are returned in DQL queries.
 
 ## odata
 
-The `odata` mode defines what data the OData endpoints will expose for the form. Domino REST API supports the [Open Data Protocol (OData)](https://www.odata.org), and if a form does not have an `odata` mode, OData queries won't return any data for that form.
+The `odata` mode defines what data the OData endpoints expose for the form. Domino REST API supports the [Open Data Protocol (OData)](https://www.odata.org), and if a form does not have an `odata` mode, OData queries won't return any data for that form.
 
 ## raw
 

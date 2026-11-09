@@ -72,7 +72,7 @@ A submission to a `richtext` field as part of a `POST /document/{unid}` needs to
 |----|----|
 |type|Its value must be a valid content type:</br></br>- `text/[subtype]` is mainly `html` but could be `css` or `javascript`.</br></br>- `image/[subtype]` can be any image type that works in the API. But for rendering in the Notes client, stick to `jpg`, `png` or `svg`.</br></br>- `multipart/[subtype]` can be `mixed` or `form-data`. There is a subtle difference, see the examples below.|
 |encoding|Its value can be `PLAIN` or `BASE64`. When using `PLAIN`, you have to escape all quotes, so `BASE64` is recommended.|
-|headers| [MIME](https://datatracker.ietf.org/doc/html/rfc1341) headers used to, for example, determine attachment names.</br></br>Example:</br>`"Content-Disposition: inline; filename=\"KEEPLogo.png\";",`|
+|headers|[MIME](https://datatracker.ietf.org/doc/html/rfc1341) headers used to, for example, determine attachment names.</br></br>Example:</br>`"Content-Disposition: inline; filename=\"KEEPLogo.png\";",`|
 |content|Base64 encoded content|
 
 ## Converting Rich Text
@@ -95,8 +95,8 @@ The table below shows, for each submitted type, which `createAdditional` options
 
 | Submitted type | createAdditional | Stored as | Example |
 | :--- | :--- | :--- | :--- |
-| multipart/mixed | - | multipart/mixed |  [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./incoming/multipart-mixed.md "Click to open the example") |
-| multipart/alternative | - | multipart/alternative | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./incoming/multipart-alternative.md "Click to open the example")    |
+| multipart/mixed | - | multipart/mixed | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./incoming/multipart-mixed.md "Click to open the example") |
+| multipart/alternative | - | multipart/alternative | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./incoming/multipart-alternative.md "Click to open the example") |
 | text/plain | - | text/plain | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./incoming/text-plain.md "Click to open the example") |
 | text/html | - | text/html | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./incoming/text-html.md "Click to open the example") |
 | text/html | plain | - multipart/alternative<br/>- text/html | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./incoming/text-html-plain.md "Click to open the example") |
@@ -118,13 +118,13 @@ The following table shows the content of the `richtext` field, its different `ri
 | Content | richTextAs | Result type | Example |
 | :--- | :--- | :--- | :--- |
 | Rich Text | mime | multipart/mixed | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./outgoing/richtext-mime.md) |
-| Rich Text | html | text/html | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./outgoing/richtext-html.md)  |
+| Rich Text | html | text/html | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./outgoing/richtext-html.md) |
 | Rich Text | plain | text/plain | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./outgoing/richtext-plain.md) |
 | Rich Text | markdown | text/markdown | [![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}](./outgoing/richtext-markdown.md) |
 | MIME | mime | multipart/mixed | [Ex.1](./outgoing/mime-mime-1.md)<br/>[Ex.2](./outgoing/mime-mime-2.md) |
 | MIME | html | text/html<br/><br/>Fallback:<br/>text/markdown &rarr; html | [Ex.1](./outgoing/mime-html-1.md)<br/>[Ex.2](./outgoing/mime-html-2.md)<br/>[Ex.3](./outgoing/mime-html-3.md)<br/>[Ex.4](./outgoing/mime-html-4.md) |
 | MIME | markdown | text/markdown<br/><br/>Fallback:<br/>text/html &rarr; markdown | [Ex.1](./outgoing/mime-markdown-1.md)<br/>[Ex.2](./outgoing/mime-markdown-2.md)<br/>[Ex.3](./outgoing/mime-markdown-3.md)<br/>[Ex.4](./outgoing/mime-markdown-4.md) |
-| MIME | plain | text/plain<br/><br/>Fallback:<br/>- text/html &rarr; plain<br/>- text/markdown &rarr; plain      | [Ex.1](./outgoing/mime-plain-1.md)<br/>[Ex.2](./outgoing/mime-plain-2.md)<br/>[Ex.3](./outgoing/mime-plain-3.md)<br/>[Ex.4](./outgoing/mime-plain-4.md)<br/>[Ex.5](./outgoing/mime-plain-5.md) |
+| MIME | plain | text/plain<br/><br/>Fallback:<br/>- text/html &rarr; plain<br/>- text/markdown &rarr; plain | [Ex.1](./outgoing/mime-plain-1.md)<br/>[Ex.2](./outgoing/mime-plain-2.md)<br/>[Ex.3](./outgoing/mime-plain-3.md)<br/>[Ex.4](./outgoing/mime-plain-4.md)<br/>[Ex.5](./outgoing/mime-plain-5.md) |
 
 ## Examples
 
@@ -216,8 +216,7 @@ Finally, submit it as a String (other fields omitted for clarity):
   ...
 }
 ```
-
-YMMV
+<!--YMMV-->
 
 ### Reading back attachments submitted through MIME
 
@@ -235,7 +234,7 @@ To be successful in composing MIME payloads, familiarize yourself with the speci
 
 - [Mozilla Developer Network on MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)
 
-- [MIME and eMail by Tyler Makin](https://gist.github.com/tylermakin/d820f65eb3c9dd98d58721c7fb1939a8)
+- [MIME and email by Tyler Makin](https://gist.github.com/tylermakin/d820f65eb3c9dd98d58721c7fb1939a8)
 
 - [MIME type sniffing by WHATWG](https://mimesniff.spec.whatwg.org/#understanding-mime-types)
 

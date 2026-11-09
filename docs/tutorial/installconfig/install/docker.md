@@ -3,7 +3,7 @@
 # Run Domino REST API with a Docker image
 
 The Domino REST API Docker image is built **on top of an HCL Domino Docker image**, inspired by [the open source templates](https://github.com/HCL-TECH-SOFTWARE/domino-container).
-All configuration options found there can be applied to the Domino REST API Docker image. You will need to decide if you want to run a standalone server or an additional server in an existing Domino domain.
+All configuration options found there can be applied to the Domino REST API Docker image. You need to decide if you want to run a standalone server or an additional server in an existing Domino domain.
 
 <!-- prettier-ignore -->
 !!! tip
@@ -92,7 +92,7 @@ Store the following files in a folder:
 
 ## Update .env file
 
-Depending on the compose file you choose, a different set of variables needs to be replaced. If a variable isn't in the compose file, you don't need it. We keep the variable names in sync with [One-touch Domino setup](https://help.hcl-software.com/domino/14.0.0/admin/inst_onetouch.html), thus in the compose file you will find gems like `SERVERSETUP_SERVER_NAME: "${SERVERSETUP_SERVER_NAME}"`. This makes naming of variables consistent.
+Depending on the compose file you choose, a different set of variables needs to be replaced. If a variable isn't in the compose file, you don't need it. The variable names are kept in sync with [One-touch Domino setup](https://help.hcl-software.com/domino/14.0.0/admin/inst_onetouch.html). Thus in the compose file, you can find gems like `SERVERSETUP_SERVER_NAME: "${SERVERSETUP_SERVER_NAME}"`. This makes naming of variables consistent.
 
 !!! tip
 

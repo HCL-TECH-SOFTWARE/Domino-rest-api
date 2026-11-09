@@ -21,7 +21,7 @@ kill -9 [pid number]
 
 ## Authentication has gotten slower
 
-Temporary files named `keyutil_<somename>_` in Domino’s temp directory aren't removed after creation, causing slow authentication processing and eventual login timeouts.
+Temporary files named `keyutil_<somename>_` in Domino’s temp directory aren't removed after creation, causing slow authentication processing, and eventual login timeouts.
 
 **Solution**
 
@@ -92,7 +92,7 @@ The Domino REST API should start and function properly.
 
 *If Domino REST API does not start*:
 
-1. Examine `domino-keep.log` for `Failed to load resource {pathToDominoData}\keepconfig.d\{somefile.json}` error, where `{somefile.json}` is the file name of the configuration JSON file with an error.
+1. Examine `domino-keep.log` for `Failed to load resource {pathToDominoData}\keepconfig.d\{somefile.json}` error, where `{somefile.json}` is the filename of the configuration JSON file with an error.
 
     The possible causes of this error are:  
 
@@ -159,7 +159,7 @@ You get a CORS error when logging into the **Admin UI** or when executing APIs.
 
 **Solution**:
 
-You need to configure CORS. For more information, see [Configure CORS for Admin UI, OAuth and your applications](../howto/install/cors.md).
+You need to configure CORS. For more information, see [Configure CORS for Admin UI, OAuth, and your applications](../howto/install/cors.md).
 
 ## Getting an empty response when executing an API request method after a server upgrade
 

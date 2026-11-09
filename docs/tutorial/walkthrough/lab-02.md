@@ -1,6 +1,6 @@
 # Lab 02 - Quick config
 
-## What you will learn
+## What you'll learn
 
 - How to navigate the **Admin UI**.
 - How to configure the "Approval Central" database using the **Admin UI**.
@@ -46,7 +46,7 @@ The procedure guides you in creating a schema and a scope using curl, Postman, o
 
 ## How to verify
 
-In the **Admin UI**, you will find one entry each for schema and scope as shown:
+In the **Admin UI**, you can find one entry each for schema and scope as shown:
 
 ![Schema available](img/schemaAvailable.png){: style="height:70%;width:70%"}
 

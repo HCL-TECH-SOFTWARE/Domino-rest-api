@@ -24,7 +24,7 @@ The path assignment looks like this:
 - /jmapdownload custom app on port 3001
 - All the rest: Domino on port 81
 
-This example is using [Nginx](https://www.nginx.com/) and [Let's Encrypt](https://letsencrypt.org/). We start with a Port 80 configuration and then let [CertBot](https://certbot.eff.org/) handle the SSL configuration thereafter.
+This example is using [nginx](https://www.nginx.com/) and [Let's Encrypt](https://letsencrypt.org/). Start with a Port 80 configuration and then let [CertBot](https://certbot.eff.org/) handle the SSL configuration thereafter.
 
 ## Initial configuration
 

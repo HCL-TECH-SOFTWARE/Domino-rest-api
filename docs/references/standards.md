@@ -41,7 +41,7 @@ In alphabetical order:-->
 
 - [RFC 7517](https://tools.ietf.org/html/rfc7517): JSON Web Key (JWK).
 
-- [RFC 7519](https://tools.ietf.org/html/rfc7519): JSON Web Token (JWT). All our endpoints short of login and OData (OData needs basic, Excel can't handle JWT)
+- [RFC 7519](https://tools.ietf.org/html/rfc7519): JSON Web Token (JWT). All endpoints short of login and OData (OData needs basic, Excel can't handle JWT)
 
 - [RFC 7540](https://tools.ietf.org/html/rfc7540): HTTP/2
 

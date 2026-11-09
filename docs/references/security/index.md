@@ -6,7 +6,7 @@ Good security isn't a one-trick pony, but a combination of factors.
 
     There are multiple ways to configure an external IdP in the Domino REST API: `jwt`, `oidc`, and `oidc-idpcat`. When in doubt, use `oidc-idpcat`. For more information, see [Auth*](authentication.md) for details.
 
-Here are what we implemented:
+Here are what has been implemented:
 
 - [Open Standards](../standards.md#standards) are used wherever appropriate. Standards enjoy more scrutiny from more eyeballs.
 
@@ -20,12 +20,12 @@ Here are what we implemented:
 
 - All Domino REST API access is authorized using a signed [JWT](https://jwt.io) claim. [Access control](../accesscontrol.md) settings are completely observed and honored.
 
-- We support public/private keys for identity provider setup.
+- Support of public/private keys for identity provider setup.
 - Databases aren't automatically exposed on REST when you run Domino REST API. Only the ones configured by the administrators.
 - No anonymous access is granted for REST data.
 - Access to sensitive information can be limited to servers that present additional credentials.
 
-- Read/Write access is controlled on a per form, field and user basis. See [The Barbican](../../references/extensibility/barbican.md) for details.
+- Read/Write access is controlled on a per form, field, and user basis. See [The Barbican](../../references/extensibility/barbican.md) for details.
 
 Here's a flowchart to show how Domino REST API handles security.
 

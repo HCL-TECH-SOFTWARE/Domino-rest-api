@@ -2,9 +2,9 @@
 
 Best practice for any REST API access is to secure the connection using TLS (colloquial, still referred to as SSL). This applies to the Domino REST API too. In general, you have the following options.
 
-## Use a Reverse Proxy
+## Use a reverse proxy
 
-Terminate your TLS connection at a proxy. When the proxy runs on the same "machine", this is a common and accepted practice. We have [outlined the steps using nginx](../../howto/web/httpsproxy.md) as reference.
+Terminate the TLS connection at a proxy. When the proxy runs on the same machine, this is a common and accepted practice. [Steps using nginx](../../howto/web/httpsproxy.md) are outlined as reference.
 
 ## Enable HTTPS using the Domino Certificate Manager
 

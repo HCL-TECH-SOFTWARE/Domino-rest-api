@@ -8,9 +8,9 @@ The provided information guides you in configuring nginx as an HTTPS proxy with 
 
 A typical deployment using a proxy looks like this:
 
-![Nginx Proxy](../../assets/images/NginxProxy.png)
+![nginx Proxy](../../assets/images/NginxProxy.png)
 
-Domino's own http runs on Port 81 and HTTPS is handled by the nginx proxy. The proxy also handles the assignment of subdomains to the correct ports. We will use three domains:
+Domino's own HTTP runs on Port 81 and HTTPS is handled by the nginx proxy. The proxy also handles the assignment of subdomains to the correct ports. The following domains are used:
 
 - keep.someserver.keep - access to the API
 - domino.someserver.keep - access to Domino
@@ -18,9 +18,9 @@ Domino's own http runs on Port 81 and HTTPS is handled by the nginx proxy. The p
 
 Alternatively, the proxy can be configured to use a single Domain and [use location routing](./httpsproxy2.md) to achieve the same result.
 
-We start with a Port 80 configuration and then let [CertBot](https://certbot.eff.org/) handle the SSL configuration thereafter.
+Start with a Port 80 configuration and then let [CertBot](https://certbot.eff.org/) handle the SSL configuration thereafter.
 
-This example is using [Nginx](https://www.nginx.com/) and [Let's Encrypt](https://letsencrypt.org/).
+This example is using [nginx](https://www.nginx.com/) and [Let's Encrypt](https://letsencrypt.org/).
 
 ```bash
 server {

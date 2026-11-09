@@ -1,13 +1,13 @@
 # Hardened production setup
 
-The Domino REST API can be configured to run without configuration and admin access on the server that hosts production databases. Let us outline how.
+The Domino REST API can be configured to run without configuration and admin access on the server that hosts production databases. Here's how it works.
 
 ![Production layout](../../assets/images/access/productionsample.jpg)
 
 - The admin server is only accessible by administrators and not reachable from the general network.
 - The Domino REST API is installed on both servers.
 - The `KeepConfig.nsf` replicates between admin and production server.
-- We have a TLS certificate `thecertificate.pem`.
+- A TLS certificate named `thecertificate.pem` is available.
 - The password for the TLS certificate is provided as environment parameter `TLSPassword`.
 - The production server has a hardened config using `hardening.json`.
 - Domino's nhttp isn't running or isn't using Port 443.
@@ -66,7 +66,7 @@ The name, as long as it ends in `.json`, can be chosen freely. It needs to be pl
 - Do you need CORS support for static application on other servers?
 - Shall the Domino REST API serve as Identity Provider (IdP) or is there a corporate IdP to be used?
 
-YMMV
+<!--YMMV-->
 
 <!--## Let's connect
 

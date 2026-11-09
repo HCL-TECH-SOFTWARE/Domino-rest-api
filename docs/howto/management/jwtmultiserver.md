@@ -34,4 +34,4 @@ You must have access to the **Management console**.
 
 4. Copy these 4 files to your other Domino servers into the `[notesdata]/keepconfig.d` directory.
 
-5. Restart Domino REST API on all servers with this new configuration, and they will now share the same JWT keys.
+5. Restart Domino REST API on all servers to apply the new configuration. The servers now share the same JWT keys.

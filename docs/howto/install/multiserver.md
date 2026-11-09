@@ -1,29 +1,29 @@
 # Deploy DRAPI to multiple servers
 
-The Domino REST API is designed to support sharing configuration across multiple servers. To do this effectively, plan the deployment carefully and follow the steps outlined here. Configuration sharing works not only for tightly coupled systems, but also for servers within the same organization and even across domain boundaries, provided that trust relationships and replication are correctly configured and functioning.
+The Domino REST API is designed to support sharing configuration across multiple servers. To do this effectively, plan the deployment carefully, and follow the steps outlined here. Configuration sharing works not only for tightly coupled systems, but also for servers within the same organization and even across domain boundaries, provided that trust relationships and replication are correctly configured and functioning.
 
 !!! warning "Important"
 
     Settings in `KeepConfig.nsf`, mostly scopes and oauth applications replicate. Configuration settings in `keepconfig.d` and `keepweb.d` are per server. When you want to share those, you need to manually copy them over.
 
-!!!info "We are working on improving the config sharing."
+<!--!!!info "We are working on improving the config sharing."-->
 
 ## Planning
 
 You need to know the following to plan properly:
 
 - How are the participating servers replicating? You need to balance timeliness (to avoid replication conflicts) with resource consumption. Revisit [these considerations](https://www.wissel.net/blog/2009/06/picking-your-routing-and-replication-architecture.html).
-- What will be the source of identity: DRAPI's login/Identity Provider or some external one like [Keycloak](https://www.keycloak.org/), [Microsoft Entra](https://www.microsoft.com/en-us/security/business/microsoft-entra) (formerly known as "Azure Active Directory"), [Okta](https://www.okta.com/) or some other [OIDC](https://openid.net/developers/how-connect-works/) compliant identity service?
+- What's the source of identity: DRAPI's login/Identity Provider or some external one like [Keycloak](https://www.keycloak.org/), [Microsoft Entra](https://www.microsoft.com/en-us/security/business/microsoft-entra) (formerly known as "Azure Active Directory"), [Okta](https://www.okta.com/) or some other [OIDC](https://openid.net/developers/how-connect-works/) compliant identity service?
 - Do you have or plan DRAPI extensions?
 - What [SPA](https://developer.mozilla.org/en-US/docs/Glossary/SPA) are you planning to deploy to `keepweb.d`?
 
 ## Installation
 
-- Follow the [steps outlined here](../../tutorial/installconfig/index.md) to install DRAPI on your main server. We shall refer to it as hub henceforth.
-- Start DRAPI on the hub using the Domino console command `load restapi`. This will create the database `KeepConfig.nsf`. When you upgrade DRAPI, you need to refresh the design of `KeepConfig.nsf` from `KeepConfig.ntf`.
-- Use the Domino admin to create replicas of `KeepConfig.nsf` on all participating servers. You must retain the name and location.
-- If one of the participating servers already has a `KeepConfig.nsf` with a divergent replicaId, you must remove it. If it has no configuration entries, just delete it. When there are, or you aren't sure, rename it and deal with it later on.
-- Create and/or verify scheduled (or cluster) replication between the participating servers (henceforth referred to as spokes) and the hub.
+- Follow the [installation steps](../../tutorial/installconfig/index.md) to install DRAPI on your main server, hereafter referred to as the hub.
+- Start DRAPI on the hub using the Domino console command `load restapi`. This creates the database `KeepConfig.nsf`. When you upgrade DRAPI, you need to refresh the design of `KeepConfig.nsf` from `KeepConfig.ntf`.
+- Use the Domino Administrator to create replicas of `KeepConfig.nsf` on all participating servers. You must retain the name and location.
+- If one of the participating servers already has a `KeepConfig.nsf` with a divergent `replicaId`, you must remove it. If it has no configuration entries, just delete it. When there are, or you aren't sure, rename it, and deal with it later on.
+- Create or verify scheduled or cluster replication between the participating servers, hereafter referred to as spokes, and the hub.
 - Now install DRAPI on the spokes.
 
 ## Configuration
@@ -34,7 +34,7 @@ There are three areas you need to configure:
 - OIDC/OAuth
 - Shared JWT Keys to login to DRAPI (if not using an external IdP)
 
-All those will write their configuration entries into `keepconfig.d`. For now, manually copy them between servers until a more convenient solution is available. Be careful to only copy the settings you want to share.
+All those write their configuration entries into `keepconfig.d`. For now, manually copy them between servers until a more convenient solution is available. Be careful to only copy the settings you want to share.
 
 ### TLS to secure web traffic
 
@@ -46,7 +46,7 @@ The **strongly** recommended way is to use the [Domino Certificate Manager](../p
 }
 ```
 
-Copy the file to all participating servers. This will cause each server to attempt to find a certificate matching its fully qualified domain name as configured in its server document.
+Copy the file to all participating servers. This causes each server to attempt to find a certificate matching its fully qualified domain name as configured in its server document.
 
 You have [other options](../production/httpsprod.md), but they require more work.
 
@@ -68,9 +68,9 @@ When using DRAPI as your JWT provider, as opposed to an external identity provid
 
 `MyCertForKeep` needs to match an existing certificate chain in certstore.nsf.
 
-You can generate the certificate chain using DRAPI, use the Management Console to [generate the Keys for JWT](../management/encryptionops.md). As of 2025, you should prefer [EC](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography) certificates. This will create certificates in the certificate store using the common name of the Domino server and configure the local server to use it.
+You can generate the certificate chain using DRAPI, use the Management Console to [generate the Keys for JWT](../management/encryptionops.md). As of 2025, you should prefer [EC](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography) certificates. This creates certificates in the certificate store using the common name of the Domino server and configure the local server to use it.
 
-To enable access to this certificate for other servers, open the [certificate store database](https://help.hcl-software.com/domino/14.0.0/admin/secu_le_using_certificate_manager.html) and find the newly created certificate document. In that document, modify the **Servers with access\*\*** field to include the other Domino servers that will access it, and click **Submit Request**. This causes the Certificate Manager to encrypt the certificate in a way compatible with each named server.
+To enable access to this certificate for other servers, open the [certificate store database](https://help.hcl-software.com/domino/14.0.0/admin/secu_le_using_certificate_manager.html) and find the newly created certificate document. In that document, modify the **Servers with access\*\*** field to include the other Domino servers that access it, and click **Submit Request**. This causes the Certificate Manager to encrypt the certificate in a way compatible with each named server.
 
 Then, set the `KeepCertStoreNameJWT` notes.ini parameter on each server to the common name of the first server, for example `MyServer`.
 

@@ -101,4 +101,3 @@ See the menu on the left for the sequence.
 - ask questions
 - try things out
 - talk to your fellow participants (a.k.a. pair-programming)-->
-

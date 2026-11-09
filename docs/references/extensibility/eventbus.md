@@ -1,6 +1,6 @@
 # EventBus
 
-The [Vert.x](https://vertx.io) EventBus is the nervous system of Domino REST API. Vert.x relies on an internal EventBus that can operate in a request/reply or a broadcast mode. For simulating a flowable (from reactive principles), we follow a pattern:
+The [Vert.x](https://vertx.io) EventBus is the nervous system of Domino REST API. Vert.x relies on an internal EventBus that can operate in a request/reply or a broadcast mode. For simulating a flowable (from reactive principles), you follow a pattern:
 
 - When the HttpListener receives a request from the HttpClient, it forwards it to the WebHandler based on the OperationId.
 - The WebHandler generates a temporary address to listen for results and forwards the request to the EventBus.
@@ -13,7 +13,7 @@ The [Vert.x](https://vertx.io) EventBus is the nervous system of Domino REST API
 
 ## Flowchart
 
-![FlowChart of our Eventbus](../../assets/images/EventBus.png)
+![FlowChart of eventbus](../../assets/images/EventBus.png)
 
 ```bash
 title EventBus use in KEEP
@@ -61,26 +61,26 @@ HttpListener->HttpClient: response end
 EventBus uses header values to transport the metadata.
 The body (usually JSON) has a "payload" property with the requested data.
 
-![FlowChart of our Eventbus](../../assets/images/HTTPtoEventBus.png)
+![FlowChart of Eventbus](../../assets/images/HTTPtoEventBus.png)
 
 ## Initial request header
 
 Below are the values in the initial request sent over the EventBus
 using [`EventBus.request()`](https://vertx.io/docs/apidocs/io/vertx/core/eventbus/EventBus.html#request-java.lang.String-java.lang.Object-io.vertx.core.eventbus.DeliveryOptions-io.vertx.core.Handler-)
 
-- db: The Domino REST API alias name of the requested database (`MAIL` for Quattro)
-- jwtclaim: The JWT string the user authenticated with
-- appId: (Optional) ID of the calling server app
-- appSecret: (Optional) secret of the calling server app
-- operationId: The operationId as defined in OpenApiSpec
-- replyAddress: Address the handler will listen for replies
+- db: the Domino REST API alias name of the requested database (`MAIL` for Quattro)
+- jwtclaim: the JWT string the user authenticated with
+- appId: (optional) ID of the calling server app
+- appSecret: (optional) secret of the calling server app
+- operationId: the `operationId` as defined in OpenApiSpec
+- replyAddress: the address on which the handler listens for replies
 
 ## Initial reply
 
-- status: Could be "failure" or "success"
-- cause: String with explanation of potential failure
-- statuscode: Suggested HTTP Response code
-- ErrorClass: Type of error based on `com.hcl.domino.keep.exceptions`
+- status: could be "failure" or "success"
+- cause: string with explanation of potential failure
+- statuscode: suggested HTTP Response code
+- ErrorClass: type of error based on `com.hcl.domino.keep.exceptions`
 
 See also the `DeliveryOpts` class
 
@@ -88,8 +88,8 @@ See also the `DeliveryOpts` class
 
 Data reply is similar to the initial reply but with more options in `status`:
 
-- `data`: Actual data in body
-- `complete`: No more data to expect, no data in body
+- `data`: actual data in body
+- `complete`: no more data to expect, no data in body
 - `failure` : as above, stating what went wrong
 
 ## Reactive wrapper

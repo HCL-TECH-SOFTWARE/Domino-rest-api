@@ -1,15 +1,15 @@
 # Set up the Java Maven project
 
-You will install the Domino REST API dependencies, configure a `pom.xml` and the Maven standard directory structure. The manual steps are outlined. Your IDE might have some automation that works faster.
+Install the Domino REST API dependencies, configure a `pom.xml` and the Maven standard directory structure. The manual steps are outlined. Your IDE might have some automation that works faster.
 
 ## Prerequisites
 
 - You need a matching JDK installed as Domino doesn't ship a JDK;
-  - Java 8 for Domino 12
-  - Java 17 for Domino 14
-  - Java 21 for Domino 14.5
+    - Java 8 for Domino 12
+    - Java 17 for Domino 14
+    - Java 21 for Domino 14.5
 - Apache [Maven](https://maven.apache.org/) latest 3.9 edition
-- Version control, we presume `Git` for this tutorial
+- For version control, this tutorial assumes the use of Git.
 - An IDE, but you could just use `vi` if you know how to exit it
 
 Be careful when installing a JDK, it might have license requirements, such as the Oracle version, so stick with OpenJDK.
@@ -44,9 +44,7 @@ mvn install:install-file -dfile=keep-extension-1.38.0-javadoc.jar
 
 Keep all the code in `~/Code` (`%HOME%\Code` for Windows). Don't put files under version control in your `Documents` or `Desktop` folder. You only risk conflicts between version control and cloud sync (Google Drive, OneDrive, iCloud, etc.).
 
-Decide on your organization, usually it's the reverse URL, so when your url is `acme.com`, you use `com.acme` as org, which is the entry to your packet hierarchy, for the purpose of this tutorial we will use `io.projectkeep`. Please **do not** use it for your actual code.
-
-Decide on your organization. Usually, it's the reverse URL, so when your URL is `acme.com`, you use `com.acme` as org, which is the entry to your packet hierarchy. For the purpose of this tutorial, `io.projectkeep` is used. **Do not** use it for your actual code.
+Choose an organization identifier. Typically, it's based on your domain name in reverse order. For example, if your domain is `acme.com`, use `com.acme` as the organization identifier. This identifier serves as the entry of your packet hierarchy. For this tutorial, the organization identifier is `io.projectkeep`.
 
 ![Directory Structure](../../assets/images/DirectoryStructure.png)
 

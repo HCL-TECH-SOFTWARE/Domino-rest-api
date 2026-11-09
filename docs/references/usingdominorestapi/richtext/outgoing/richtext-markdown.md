@@ -1,6 +1,6 @@
 # Example: Outgoing Rich Text content as Markdown
 
-Let's say you want to retrieve the following Rich Text content as Markdown:
+Suppose you want to retrieve the following Rich Text content as Markdown:
 
 ![Example Rich Text content](../../../../assets/images/ExampleRichtextContent.png)
 

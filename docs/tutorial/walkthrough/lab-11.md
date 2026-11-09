@@ -2,7 +2,7 @@
 
 The Domino REST API provides extensive configuration capabilities to cater to different usage scenarios.
 
-## What you will learn
+## What you'll learn
 
 - How to fine tune the Domino REST API configuration.
 - How to enable or disable the API endpoints.

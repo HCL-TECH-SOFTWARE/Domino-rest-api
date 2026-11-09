@@ -1,6 +1,6 @@
 # Example: Outgoing Rich Text content as plain
 
-Let's say you want to retrieve the following Rich Text content as plain:
+Suppose you want to retrieve the following Rich Text content as plain:
 
 ![Example Rich Text content](../../../../assets/images/ExampleRichtextContent.png)
 

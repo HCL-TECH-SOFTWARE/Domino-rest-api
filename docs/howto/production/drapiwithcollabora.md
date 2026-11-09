@@ -79,7 +79,7 @@ The following procedures guide you in setting up your local Collabora container 
     }
     ```
 
-4. Open your browser and go to `office.demo.io:9980/hosting/discovery` where you will see an XML with URLs having the format `office.demo.io:9980/browser/{hash}/cool.html?`. Take note of the `{hash}` value.
+4. Open your browser and go to `office.demo.io:9980/hosting/discovery` where you can see an XML with URLs having the format `office.demo.io:9980/browser/{hash}/cool.html?`. Take note of the `{hash}` value.
 
     In the following example image, the value of `{hash}` is `3dc280be53`.
 
@@ -90,7 +90,7 @@ The following procedures guide you in setting up your local Collabora container 
     - Substitute `{DRAPI_HOST}` with your Domino REST API hostname.
     - Substitute `{file_id}` with the `file_id` you took note from the response to the POST request.
 
-    The resulting URL will serve as the value assigned to the variable `WOPISrc`.
+    The resulting URL serves as the value assigned to the variable `WOPISrc`.
 
 6. Send a POST request to `office.demo.io:9980/browser/{hash}/cool.html?WOPISrc={UrlEncodedWOPISrc}`.
 

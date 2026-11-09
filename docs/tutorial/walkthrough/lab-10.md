@@ -2,7 +2,7 @@
 
 By default, the Domino REST API uses a random symmetric JWT signing key that’s changed each time the API service restarts. This approach works fine for testing and single-server use. However, it's not suitable for multi-server operation or for IdP use.
 
-## What you will learn
+## What you'll learn
 
 - Understanding how Domino REST API configuration works.
 - Additional endpoints other than port 8880
@@ -39,7 +39,7 @@ Your Domino server must be running.
 
 - After restarting Domino REST API, the JWT provider changes. For more information, see [Log in to the REST API](lab-01.md).
 
-When you copy these files to another server, the JWT issued by the first server will be recognized and accepted by the second server as well. This extends to the Domino HTTP task if the core Domino is configured for JWT.
+When you copy these files to another server, the JWT issued by the first server is going to be recognized and accepted by the second server as well. This extends to the Domino HTTP task if the core Domino is configured for JWT.
 
 Check [`http://localhost:8880/.well-known/openid-configuration`](http://localhost:8880/.well-known/openid-configuration).
 

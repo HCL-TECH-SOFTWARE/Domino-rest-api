@@ -14,7 +14,7 @@ The procedure guides you to try the Domino REST API with a sample demo Notes dat
 ## Prerequisites
 
 - HCL Notes Desktop Client installed.
-- Domino REST API installed using the `restapiInstall.jar` from My HCLSoftware Portal.
+- Domino REST API installed using the `restapiInstall.jar` from **My HCLSoftware** portal.
 
     --8<-- "jarfilename.md"
 
@@ -26,7 +26,7 @@ The procedure guides you to try the Domino REST API with a sample demo Notes dat
 
     1. Open the HCL Notes Desktop Client.
     2. Go to the menu **Preferences**.
-    3. Under **Basic Notes Client Configuration**, look for the Local application folder.
+    3. Under **Basic Notes Client Configuration**, look for the local application folder.
 
        For Mac, it's under `/Users/[userid]/Library/Application Support/HCL Notes Data/`.
 
@@ -34,7 +34,7 @@ The procedure guides you to try the Domino REST API with a sample demo Notes dat
 3. Create a functional users file to specify local Domino REST API Users:
 
     1. Locate your Notes Data directory and find the subdirectory named `keepconfig.d`.
-    2. Create a new json file in the `keepconfig.d` directory. You can use any filename as long as the extension is json. As an example, you can use `localusers.json`.
+    2. Create a new JSON file in the `keepconfig.d` directory. You can use any filename as long as the extension is JSON. As an example, you can use `localusers.json`.
     3. Copy the following data into the `localusers.json`file:
 
     ```json
@@ -67,7 +67,7 @@ The procedure guides you to try the Domino REST API with a sample demo Notes dat
         The JSON file creates temporary users that Domino REST API recognizes while the API is running. The users include a Management API user and 2 local users. To use these users, you may need to add their CN to the Database's ACL. `John Doe/Mauraders` should already be in the `Demo.nsf`'s ACL. The password for each user is `password`. For more information, see [Functional Accounts](../../references/functionalUsers.md).
 
 4. Open an elevated terminal and navigate to where Domino REST API was installed.
-5. Run either the Windows cmd file (`runrestapi.cmd`) or Mac bash script (`runrestapi.sh`) that was installed by the installer.
+5. Run the Windows command script `runrestapi.cmd` or the macOS Bash script `runrestapi.sh` installed by the installer.
 
     On Mac, you may have to change file permission to execute the script. To do that, issue the command:
 
@@ -78,7 +78,7 @@ The procedure guides you to try the Domino REST API with a sample demo Notes dat
 
         For different versions of Notes, the Notes JRE path in the script may vary. You may need to change the path in the script.
 
-6. When prompted for a password for your `notes.id` file in the Java window, enter your password in that Java window. If any error occurs, stop the running process (kill -9 for Mac) and restart the script. For more information, see [Troubleshooting guide](../../references/troubleshooting.md).
+6. When prompted for a password for your `notes.id` file in the Java window, enter your password in that Java window. If any error occurs, stop the running process and restart the script. Use `kill -9` for Mac to stop the running process. For more information, see [Troubleshooting guide](../../references/troubleshooting.md).
 
     <!-- prettier-ignore -->
     !!! tip

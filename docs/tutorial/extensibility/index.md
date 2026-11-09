@@ -8,7 +8,7 @@ The tutorial guides you through the creation of a custom URL endpoint that handl
 
 ## [Set up the Maven Java project](javaproject.md)
 
-First step is to set up the Java project. It will use a published parent project and libraries installed with your Domino REST API installation.
+First step is to set up the Java project. It uses a published parent project and libraries installed with your Domino REST API installation.
 
 ## [Create OpenAPI specification](openapi.md)
 
@@ -16,11 +16,11 @@ The second step is to create an OpenAPI 3.0.x specification. It can be done usin
 
 ## [Create the config.json](configjson.md)
 
-Domino REST API is driven by a [dynamic configuration](../../references/configuration/understandingconfig.md). To get your extension recognized, you must provide the information what verticle will run your code and what classes implement your business logic. To do so, a file `resources/config/config.json` is required.
+Domino REST API is driven by a [dynamic configuration](../../references/configuration/understandingconfig.md). To get your extension recognized, you must provide the information what verticle runs your code and what classes implement your business logic. To do so, a file `resources/config/config.json` is required.
 
 ## [Implement business logic](businesslogic.md)
 
-To implement the functionality, two Java classes are involved. One is a handler class that takes in the http request and forwards it on the Eventbus. The other is a dbrequest class that performs the database interaction.
+To implement the functionality, two Java classes are involved. One is a handler class that takes in the HTTP request and forwards it on the Eventbus. The other is a dbrequest class that performs the database interaction.
 
 For the most common use case of JSON in/out, the default handler performs all the necessary actions, no custom code is required.
 
