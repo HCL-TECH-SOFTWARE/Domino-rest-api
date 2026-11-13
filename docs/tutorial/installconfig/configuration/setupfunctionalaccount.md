@@ -14,7 +14,7 @@ The procedure guides you in setting up a functional account.
 
 You need access to the **Management console** to use its utility function to salt and encrypt passwords.
 
-1. Create a `tempmanagement.json` file in your `[NotesData]/keepconfig.d` directory with the following content:
+1. Create a `tempmanagement.json` file in your `keepconfig.d` directory with the following content:
 
     ```json
     {
@@ -50,7 +50,7 @@ You use the password when logging in to the endpoints, while you use the salted 
 
 ## Create functional accounts
 
-1. Create a JSON file in the `[NotesData]/keepconfig.d` directory with the following JSON structure:
+1. Create a JSON file in the `keepconfig.d` directory with the following JSON structure:
 
     ![Functional Users](../../../assets/images/FunctionalUsers.png)
 

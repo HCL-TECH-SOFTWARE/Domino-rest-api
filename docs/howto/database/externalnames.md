@@ -47,7 +47,7 @@ The service UI returns the field names you put in the new test mode.
 
 ### Before you begin
 
-- You need a configured Postman.
+You need a configured Postman.
 
 ### Procedure
 

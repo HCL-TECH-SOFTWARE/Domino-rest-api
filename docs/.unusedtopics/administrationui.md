@@ -1,6 +1,6 @@
 # Using Web UI
 
-The Admin UI provides a user interface to a number of Domino REST APIs. It thus serves an example what a [React](https://reactjs.org/) application using the Domino REST APIs is capable of. It covers schema, scope, and app management. Anything that can be done using the WebUI can also be done using Postman, curl, Swagger UI, or similar tools. There are [tutorials](../../tutorial/index.md) to walk you through the same.
+The **Admin UI** provides a user interface to a number of Domino REST APIs. It thus serves an example what a [React](https://reactjs.org/) application using the Domino REST APIs is capable of. It covers schema, scope, and app management. Anything that can be done using the WebUI can also be done using Postman, curl, Swagger UI, or similar tools. There are [tutorials](../../tutorial/index.md) to walk you through the same.
 
 <!-- prettier-ignore -->
 !!! note
@@ -13,12 +13,12 @@ This is what the login page looks like.
 
 You'll need the administrator username and password to access the server.
 
-To use a Domino database in Domino REST API, it must be configured for use in the API. Download `Demo.nsf` from [Resources](../../references/downloads.md) and save it in the Notes data directory. Then login to the Domino REST API Admin UI using the administrator user name and password.
+To use a Domino database in Domino REST API, it must be configured for use in the API. Download `Demo.nsf` from [Resources](../../references/downloads.md) and save it in the Notes data directory. Then login to the Domino REST API **Admin UI** using the administrator user name and password.
 
-For more information on logging in to the Domino REST API Admin UI:
+For more information on logging in to the Domino REST API **Admin UI**:
 
 - see [Login](../../tutorial/adminui.md#login)
-- see [Use passkey to login to Admin UI](../../howto/install/passkey.md) 
+- see [Use passkey to login to Admin UI](../../howto/install/passkey.md)
 
 ## Database Management - REST API
 
@@ -48,7 +48,7 @@ You can add a schema by [creating your own schema](#create-a-schema) or [importi
 
 2. In the **Add New Schema** dialog, click **Create Schema**.
 
-      ![Create a schema ](../../assets/images/createSchema.png){: style="height:80%;width:80%"}   
+      ![Create a schema ](../../assets/images/createSchema.png){: style="height:80%;width:80%"}
 
 3. Under **Available Databases**, select a database from the list of databases available to the Domino REST API.
 
@@ -283,16 +283,14 @@ The Source tab allows you to view the database schema details in JSON format.
 
 1. Select a schema from the list of schemas to load the schema details.
 2. Select **Source** from the menu bar to show the details for the selected schema in the following view mode:
-      
+
       - **Text Mode** - shows the text view of the details of the selected schema in JSON format
       - **Styled Object** - shows the collapsible view of the details of the selected schema in JSON format 
 
-
-!!!note
+!!! note
       - The database schema JSON details are editable in the **Styled Object** view mode. For more information, see [Edit database schema JSON](../../howto/database/editsourcejson.md).
-      
-      - To export the schema in a .json file, see [Export schema as JSON file](../../howto/database/exportsourcejson.md).
 
+      - To export the schema as a JSON file, see [Export schema as JSON file](../../howto/database/exportsourcejson.md).
 
 ## Database Management - Activation
 
@@ -300,7 +298,8 @@ Select **Database Management - Activation** from the home page.
 
 ### Add a scope
 
-!!!tip
+!!! tip
+
     A scope points to a schema that's contained in a database. A database can have many schemas for different use cases and a schema can be pointed to by more than one scope.
 
 1. On the **Scope Management** page, click **Add Scope** to add a database.
@@ -357,8 +356,9 @@ This opens the **OAuth Consents** pane.
 
 ![Revoke](../../assets/images/oauthConsent.png){: style="height:80%;width:80%"}
 
-!!!note
-    Users logged into the Admin UI that are in the `LocalKeepAdmins` group or are Managers in the `oauth.nsf` ACL will see all user consents and can revoke them as well.
+!!! note
+
+    Users logged into the **Admin UI** that are in the `LocalKeepAdmins` group or are Managers in the `oauth.nsf` ACL will see all user consents and can revoke them as well.
 
 ### View OAuth consent details
 

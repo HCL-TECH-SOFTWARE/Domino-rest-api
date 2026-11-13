@@ -9,7 +9,7 @@
 The procedures guide you in using a passkey to log in to **Admin UI**. The procedures involve:
 
 - signing up with passkey
-- logging in to Admin UI using a passkey
+- logging in to **Admin UI** using a passkey
 - clearing the passkey
 
 Passkeys are better options to passwords as they use public key cryptography to create secure experiences. Passkeys allow sign-in to websites without remembering and managing passwords by using a biometric sensor, PIN, or pattern. For more information, see [passkey.org](https://passkey.org/).

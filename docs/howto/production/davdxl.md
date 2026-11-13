@@ -24,7 +24,7 @@ Before enabling and working with the extension APIs, it is important to get fami
 
 !!! warning "Important"
 
-    The CalDAV, CardDAV, and DXL extension APIs are **experimental and not officially supported**. The CalDAV and CardDAV extension APIs have been tested only with the Mozilla Thunderbird mail client, and we will only provide some level of support for issues limited to Mozilla Thunderbird client integrations. Kindly reach us on the [OpenNTF Discord channel](https://discord.com/invite/jmRHpDRnH4 "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"}. 
+    The CalDAV, CardDAV, and DXL extension APIs are **experimental and not officially supported**. The CalDAV and CardDAV extension APIs have been tested only with the Mozilla Thunderbird mail client. A certain level of support is therefore available to issues limited to Mozilla Thunderbird client integrations. Kindly reach out through the [OpenNTF Discord channel](https://discord.com/invite/jmRHpDRnH4 "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../assets/images/external-link.svg){: style="height:15px;width:15px"}. 
 
 ## Procedure
 

@@ -17,7 +17,7 @@ Outlines the steps to install the Domino REST API and the necessary configuratio
 
 ## [Capability walkthrough](walkthrough/index.md)
 
-Guides you step-by-step through using and configuring the Domino REST API, utilizing the command line, Postman, the Domino REST API Admin UI, and code examples.
+Guides you step-by-step through using and configuring the Domino REST API, utilizing the command line, Postman, the Domino REST API **Admin UI**, and code examples.
 
 ## [Using Admin UI](adminui.md)
 
@@ -45,7 +45,7 @@ Guides you through the creation of a custom URL endpoint that handles the approv
 
 ## More tutorials
 
-Additional tutorials are available at the [HCL Domino REST API Tutorials page](https://opensource.hcltechsw.com/domino-keep-tutorials/index.html). For more information, see the tutorial descriptions below:
+Additional tutorials are available at the [HCL Domino REST API Tutorials page](https://opensource.hcltechsw.com/domino-keep-tutorials/index.html). For more information, see the following tutorial descriptions:
 
 - [Domino ToDo Database tutorial](https://opensource.hcltechsw.com/domino-keep-tutorials/pages/todo/index)
 
@@ -54,7 +54,7 @@ Additional tutorials are available at the [HCL Domino REST API Tutorials page](h
     - Using the XPages ToDo Application.
     - Viewing the ACL via Domino REST API Postman APIs.
     - Configuring it for validated Domino REST API access.
-    - Using OData to access data in Microsoft Excel [^1]. All steps are done via the Domino REST API Admin UI.
+    - Using OData to access data in Microsoft Excel [^1]. All steps are done via the Domino REST API **Admin UI**.
 
 [^1]: Microsoft and Microsoft Excel are registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.
 
@@ -66,7 +66,7 @@ Additional tutorials are available at the [HCL Domino REST API Tutorials page](h
     - Adding forms for customers and contacts.
     - Adding views.
     - Configuring the database for validated REST API access.
-    - Updating the access for the database. Some steps are done via the Domino REST API Admin UI, some via Postman.
+    - Updating the access for the database. Some steps are done via the Domino REST API **Admin UI**, some via Postman.
 
 <!--
 # Tutorials

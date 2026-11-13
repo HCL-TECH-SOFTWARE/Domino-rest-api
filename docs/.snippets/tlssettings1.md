@@ -1,24 +1,32 @@
 ## Example of private key and a self-signed certificate using openSSL
 
-### Bash code
+Bash commands for:
 
-**Generate a private key:**
+- Generating a private key
 
-`openssl genpkey -algorithm RSA -out server-key.pem`
+    ```bash
+    openssl genpkey -algorithm RSA -out server-key.pem
+    ```
 
-**Generate a certificate signing request (CSR):**
+- Generating a certificate signing request (CSR)
 
-`openssl req -new -key server-key.pem -out server.csr`
+    ```bash
+    openssl req -new -key server-key.pem -out server.csr
+    ```
 
-**Self-sign the certificate:**
+- Self-signing the certificate
 
-`openssl x509 -req -days 365 -in server.csr -signkey server-key.pem -out server-cert.pem`
+    ```bash
+    openssl x509 -req -days 365 -in server.csr -signkey server-key.pem -out server-cert.pem
+    ```
 
-**Generate CA certificate:**
+- Generating a CA certificate
 
-`openssl req -new -x509 -days 365 -key server-key.pem -out ca-cert.pem`
+    ```bash
+    openssl req -new -x509 -days 365 -key server-key.pem -out ca-cert.pem
+    ```
 
-The configuration for TLS for pem would look like:
+The TLS configuration for PEM would look like this:
 
 ```json
 {

@@ -2,7 +2,7 @@
 
 ## What you'll learn
 
-The four different ways to log in to the Domino REST API.
+Understanding the four different ways to log in to the Domino REST API.
 
 ## Before you begin
 
@@ -82,7 +82,7 @@ On successful login, you receive a JSON response containing a token that you can
 
     ![Admin Login](../../assets/images/AdminLogin.png){: style="height:70%;width:70%"}
 
-    A successful login shows the Admin UI.
+    A successful login shows the **Admin UI**.
 
     ![Admin UI](../../assets/images/AdminLanding.png){: style="height:70%;width:70%"}
 

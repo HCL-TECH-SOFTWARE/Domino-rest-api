@@ -2,7 +2,7 @@
 
 ## What you'll learn
 
-How to run a custom NodeJS application that interacts with the Domino REST API.
+Running a custom NodeJS application that interacts with the Domino REST API.
 
 ## Before you begin
 

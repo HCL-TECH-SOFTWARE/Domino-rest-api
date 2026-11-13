@@ -6,7 +6,7 @@ The procedure guides you on exporting the database schema in JSON format from th
 
 ## Before you begin
 
-- You have selected a schema on the **Schema Management** page, and have selected the **Source** tab from the menu bar.
+You have selected a schema on the **Schema Management** page, and have selected the **Source** tab from the menu bar.
 
 ## Procedure
 

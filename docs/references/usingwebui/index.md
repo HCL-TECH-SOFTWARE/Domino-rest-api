@@ -44,7 +44,7 @@ The OIDC login option uses the Domino REST API IdP (identity provider) by defaul
 
 !!! info
 
-    If an external identity provider has been configured to log in to the Admin UI, the *Log in with OIDC* will be the default login option. For information about configuring an external IdP for Admin UI login, see [Set up Admin UI external IdP login configuration](../../howto/IdP/adminuiidp.md).
+    If an external identity provider has been configured to log in to the **Admin UI**, the *Log in with OIDC* will be the default login option. For information about configuring an external IdP for **Admin UI** login, see [Set up Admin UI external IdP login configuration](../../howto/IdP/adminuiidp.md).
 
 **To log in**:
 

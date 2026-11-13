@@ -44,8 +44,8 @@ A configuration can have the following top-level properties. These properties ar
 |jwt|[JWT parameters](#jwt-parameters)|Parameters for enabling Domino REST API to accept JWT tokens from external providers|
 |LandingPageRedirect|String|Alternative landing page for those who prefer a different layout than the tiled landing page. Ensure the URL provided is valid and complete.|
 |TokenCookie|Boolean|Set to `true` to allow Domino REST API to send back JWT as cookie named `KeepToken`. The cookie expiry is the same as the JWT expiry. It immediately expires when logout is called.</br></br>Default: `false`|
-|AdminUIKeepLogin|Boolean|If set to `true`, displays the username and password login in the Admin UI login page. If this and `AdminUIOIDCLogin` are set to `false`, the Admin UI login page behaves as if this is set to `true`.</br></br>Default: `true`|
-|AdminUIOIDCLogin|Boolean|If set to `true`, displays the IdP logins in the Admin UI login page.</br></br>Default: `true`|
+|AdminUIKeepLogin|Boolean|If set to `true`, displays the username and password login in the **Admin UI** login page. If this and `AdminUIOIDCLogin` are set to `false`, the **Admin UI** login page behaves as if this is set to `true`.</br></br>Default: `true`|
+|AdminUIOIDCLogin|Boolean|If set to `true`, displays the IdP logins in the **Admin UI** login page.</br></br>Default: `true`|
 |WopiSessionSeconds|int|Duration of WOPI session in seconds. Default is `36000` (10 hours).|
 |WebdavSessionSeconds|int|Duration of Webdav session in seconds. Default is `300` (5 minutes).|
 |WopiLockSeconds|int|Duration of WOPI lock in seconds. Should be less than or the same as `WopiSessionSeconds`. Default is `1800` (15 minutes).|
@@ -164,15 +164,15 @@ This is the verticle for managing WebHandlers. `worker`, `threadPoolName`, `thre
 | keyFile | String | Path to the JWT public key |
 | iss | String | Identifies the principal that issued the JWT. The value is a case-sensitive string containing a string or URI value. |
 | aud | String | Identifies the recipient that the JWT is intended for. When configuring Microsoft Entra ID, formerly Azure Active Directory, as an IdP, the value of this parameter is the Application ID URI you configured. |
-| adminui | [JWT Admin UI parameters](#jwt-admin-ui-parameters) | Parameters for enabling this external IdP to use for Admin UI login. |
+| adminui | [JWT Admin UI parameters](#jwt-admin-ui-parameters) | Parameters for enabling this external IdP to use for **Admin UI** login. |
 | ofba | [JWT OFBA parameters](#jwt-ofba-parameters) | Parameters for enabling this external IdP to use for OFBA. |
 
 ## JWT Admin UI parameters
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| active | Boolean | Set to `true` to enable the use of external IdP in Admin UI login. |
-| client_id | String | External IdP client ID to use for Admin UI login. |
+| active | Boolean | Set to `true` to enable the use of external IdP in **Admin UI** login. |
+| client_id | String | External IdP client ID to use for **Admin UI** login. |
 | application_id_uri | String | An optional property. Required when external IdP is **Microsoft Entra ID, formerly Azure Active Directory**. Ends with a `/`. |
 
 ## JWT OFBA parameters

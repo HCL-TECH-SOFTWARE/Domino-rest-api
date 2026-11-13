@@ -20,7 +20,7 @@ The HTML file uses the [Mustache](https://mustache.github.io/) templating system
 
 ## About this task
 
-Steps to be taken to alter the look & feel of the consent screen
+Steps to be taken to alter the look & feel of the consent screen.
 
 ## Prerequisites
 
@@ -57,9 +57,9 @@ That directory must contain you custom `authorization.html`. It doesn't need to 
 
 ### Modifying the HTML files
 
-The HTML file contains only HTML and links to CSS and JavaScript. It does not contain inline CSS or inline JS. The HTML body consists of 4 main sections:
+The HTML file contains only HTML and links to CSS and JavaScript. It doesn't contain inline CSS or inline JS. The HTML body consists of 4 main sections:
 
-- error DIV: usually hidden, shows up when things go wrong
+- error `<div>` : usually hidden, shows up when things go wrong
 - `splashScreen` : initial screen shown while consent is checking if there is an active user session or an existing consent
 - `loginScreen` : initially hidden, and shows up when user needs to log in
 - `consentScreen` : initially hidden, and shows up when user needs to provide their consent. Contains `{{ mustache }}` variables.
@@ -68,14 +68,14 @@ The HTML file contains only HTML and links to CSS and JavaScript. It does not co
 
 | Name | Purpose |
 | --- | --- |
-| `{{ client_name }}` | Application name as configured in the Admin UI. |
+| `{{ client_name }}` | Application name as configured in the **Admin UI**. |
 | `{{ claims }}` | Repeating element for each requested scope. Use a closing `{{ claims }}` tag to mark the end of the element. |
-| `{{ logoURL }}` | Points to the scope icon configured in the Admin UI. |
-| `{{ claim }}` | Scope name as configured in the Admin UI. |
-| `{{ description }}` | Scope description as configured in the Admin UI. |
+| `{{ logoURL }}` | Points to the scope icon configured in the **Admin UI**. |
+| `{{ claim }}` | Scope name as configured in the **Admin UI**. |
+| `{{ description }}` | Scope description as configured in the **Admin UI**. |
 | `{{ client_id }}` | `UniqueId` of the requesting application. |
 | `{{ state }}` | Application state required by the OAuth flow. Don't modify. |
-| `{{ redirect_uri }}` | Redirect URI configured in the Admin UI. It directs the user back to the application. Don't modify. |
+| `{{ redirect_uri }}` | Redirect URI configured in the **Admin UI**. It directs the user back to the application. Don't modify. |
 | `{{ scope }}` | Requested scopes matched against the application configuration. Don't modify. |
 | `{{ response_type }}` | Response type required by the OAuth flow. Don't modify. |
 

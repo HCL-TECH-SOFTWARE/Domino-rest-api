@@ -1,4 +1,4 @@
-# Form and Alias handling
+# Form and alias handling
 
 Notes and Domino use the value of the form item to determine what form to load when displaying a document. The first match of a form item value (or a form formula in a view or folder) with either a form name or any of the 0:n aliases determines what form is used to render a document.
 

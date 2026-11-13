@@ -2,7 +2,7 @@
 
 ## What you'll learn
 
-How to create a browser-based Single Page Application (SPA) using just three files.
+Creating a browser-based Single Page Application (SPA) using just three files.
 
 ## Before you begin
 
@@ -13,7 +13,7 @@ How to create a browser-based Single Page Application (SPA) using just three fil
 ## Procedure
 
 1. On your Domino server, create a new directory `[notesdata]/keepweb.d/approvalspa`.
-2. Download [SPA-source.zip](../downloads/SPA-source.zip)
+2. Download [SPA-source.zip](../downloads/SPA-source.zip).
 3. Extract the contents of `SPA-source.zip` into the `approvalspa` folder.
 4. Reload the Domino REST API landing page.
 

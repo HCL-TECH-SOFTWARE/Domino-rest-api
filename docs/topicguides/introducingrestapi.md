@@ -77,13 +77,13 @@ Project Domino REST API uses redesigned Java APIs named Domino JNX (Domino Java 
 
 ### Public API based on OpenAPI 3.0
 
-The [API first](https://swagger.io/resources/articles/adopting-an-api-first-approach/) design is followed with full interactive documentation. The public APIs follow the standards set by OpenAPI 3.0. The OpenAPI specifications you see in Swagger/Redoc on the server are used dynamically by Domino REST API to validate requests, so you know they are up-to-date.
+The [API first](https://swagger.io/resources/articles/adopting-an-api-first-approach/) design is followed with full interactive documentation. The public APIs follow the standards set by OpenAPI 3.0. The OpenAPI specifications you see in Swagger/Redoc on the server are used dynamically by Domino REST API to validate requests, so you know they're up-to-date.
 
 ### Extensible architecture
 
 Domino REST API has an extensible architecture that allows it to serve multiple API versions from a Domino server. Currently, admin, core, CI/CD, and PIM APIs are supported but Domino REST API can be extended to add more APIs.
 
-### Web GUI for Schema, Scope, and App management
+### Web GUI for schema, scope, and app management
 
 The Domino REST API provides a [web UI](../references/usingwebui/index.md) that facilitates managing schemas, scopes, and applications.
 

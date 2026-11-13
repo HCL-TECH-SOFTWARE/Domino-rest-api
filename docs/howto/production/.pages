@@ -12,7 +12,6 @@ nav:
     - httpsprod.md
     - Host SPA with ReactJS: reactjs.md
     - oauthinvstgtn.md
-#    - configparam.md
     - planning.md
     - logging.md
     - drapiwithcollabora.md
@@ -20,10 +19,6 @@ nav:
     - computeform.md
     - roundtrip.md
     - virtualsheet.md
-#    - roundtripidp.md
-    - Set up for encryption, decryption, signing: signencrypt.md
+    - Set up for encryption, decryption, and signing: signencrypt.md
     - testformulas.md
     - Update Domino REST API: versionupdate.md
-    
-    
-    

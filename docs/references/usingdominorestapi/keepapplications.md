@@ -91,7 +91,7 @@ This functionality is similar to how Domino serves static files from its `domino
 
 ### Server-based applications
 
-In the Admin UI or the [Admin API](../../references/usingwebui/index.md), you can define an "application" which consists of:
+In the **Admin UI** or the [Admin API](../../references/usingwebui/index.md), you can define an "application" which consists of:
 
 <!--[![Application](../../assets/images/Application.png)](../../assets/images/Application.png "CLick to open in a new tab"){: target="_blank" rel="noopener noreferrer"}-->
 
@@ -102,7 +102,7 @@ In the Admin UI or the [Admin API](../../references/usingwebui/index.md), you ca
 - App ID or Application ID
 - App Secret
 
-In the Admin UI, you can also:
+In the **Admin UI**, you can also:
 
 - Edit an application.
 - Generate or regenerate an application secret.

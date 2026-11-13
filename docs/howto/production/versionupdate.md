@@ -155,8 +155,8 @@ Follow the procedure based on the installation option you used when installing t
 
 !!! note
 
-    - Don't install using the java executable in `/opt/hcl/domino/bin/`.
-    - If your system doesn't have Java installed, you can use the java executable in the `/opt/hcl/domino/notes/latest/linux/jvm/bin/` directory.
+    - Don't install using the Java executable in `/opt/hcl/domino/bin/`.
+    - If your system doesn't have Java installed, you can use the Java executable in the `/opt/hcl/domino/notes/latest/linux/jvm/bin/` directory.
 
 To update to the latest release version, run the following command:
 

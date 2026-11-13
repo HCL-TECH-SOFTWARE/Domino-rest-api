@@ -215,7 +215,7 @@
 
     - Added full support for Domino 14.
     
-        To utilize the newer JVM functionality provided by Domino 14, we  now provide both a Domino 12 and a Domino 14 installer, as well as Docker images for both platforms.
+        To utilize the newer JVM functionality provided by Domino 14, we now provide both a Domino 12 and a Domino 14 installer, as well as Docker images for both platforms.
  
         Older versions of the Domino REST API will run on Domino 14, but may have issues with certain endpoints. It is suggested that you follow the following steps to upgrade your Domino 12 server with the Domino REST API to Domino 14:
  
@@ -284,13 +284,13 @@
     - Added endpoint `GET v1/attachmentnames/{unid}` to return a list of attachments attached to this document.
     - Added endpoint `GET v1/preview` to list endpoints that are marked as preview, may be considered beta endpoints.
     
-    - Added ability to view and revoke OAuth consents in the Admin UI via the [OAuth Consents](../references/usingwebui/oauthconsentui.md#oauth-consents) pane.
+    - Added ability to view and revoke OAuth consents in the **Admin UI** via the [OAuth Consents](../references/usingwebui/oauthconsentui.md#oauth-consents) pane.
     
     **Improvements**
 
-    - Added the ability to [clone form modes](../references/usingwebui/schemaui.md#clone-a-mode) and [compare form modes](../references/usingwebui/schemaui.md#compare-modes) in the Admin UI.
+    - Added the ability to [clone form modes](../references/usingwebui/schemaui.md#clone-a-mode) and [compare form modes](../references/usingwebui/schemaui.md#compare-modes) in the **Admin UI**.
     
-    - Added the ability to [export a schema](../howto/database/exportsourcejson.md) and [import a schema](../references/usingwebui/schemaui.md#add-a-schema) in the Admin UI.
+    - Added the ability to [export a schema](../howto/database/exportsourcejson.md) and [import a schema](../references/usingwebui/schemaui.md#add-a-schema) in the **Admin UI**.
     
     - Added search feature in **Schema Management** to easily look for forms, views, and agents.  
     - Added ability to configure or unconfigure all database forms at the same time.
@@ -328,7 +328,7 @@
 
     - Sped up the `setup-v1/admin/quickconfig` endpoint significantly, which sped up **Admin UI Quick Config**.
     - Added a file selection button for `POST v1/attachments/{unid}` in the Swagger UI to select attachments for a document.
-    - Implemented UI improvements in Schema Management in the Admin UI for better user experience. 
+    - Implemented UI improvements in Schema Management in the **Admin UI** for better user experience. 
 
     **Resolved issues**
 
@@ -361,7 +361,7 @@
 
     **Improvements**
 
-    - A database view can now be edited in the Admin UI to select which columns to include. Column external names can now also be set or edited.
+    - A database view can now be edited in the **Admin UI** to select which columns to include. Column external names can now also be set or edited.
     - Added ability to mark a document as read (`markRead=true`) or unread (`markUnread=true`) when getting a view that contains those documents using the `GET v1/lists/{name}` endpoint.
     - Added the ability to select only distinct documents (`distinctDocuments=true`) when retrieving view contents via the `GET v1/lists/{name}` endpoint.
     - Added ability to mark a document as read (`markRead=true`) or unread (`markUnread=true`) when retrieving a document using the `GET v1/document/{unid}` endpoint.
@@ -435,7 +435,7 @@
     **New features** 
 
     - `/lists/{listname}` API has a new parameter `keyAllowPartial=true` added to allow partial key matches.
-    - New endpoint added to the setup API, call `DELETE /admin/cache` to reset the Domino REST API Scope and Schema cache, call if you are modifying Scopes or Schemas directly in Notes as opposed to the API or the Admin UI.
+    - New endpoint added to the setup API, call `DELETE /admin/cache` to reset the Domino REST API Scope and Schema cache, call if you are modifying Scopes or Schemas directly in Notes as opposed to the API or the **Admin UI**.
     
     **Improvements**
 
@@ -443,10 +443,10 @@
 
     **Resolved issues**
 
-    - The Admin UI became unresponsive when populating the Database list when defining a new Schema when there were a lot of databases on the server.
+    - The **Admin UI** became unresponsive when populating the Database list when defining a new Schema when there were a lot of databases on the server.
     - A JWT token failed to decode if it's claims contained extended characters.
     - On a Windows Domino server, the `.wellknown` issuer may have been wrong.
-    - In various endpoints, an error may have been thrown if a Rich Text CD record returns invalid or unknown data. This issue may have also prevented a database from showing up in the Admin UI.
+    - In various endpoints, an error may have been thrown if a Rich Text CD record returns invalid or unknown data. This issue may have also prevented a database from showing up in the **Admin UI**.
     - When calling the `/design/{designType}/{designName}` and using the `nsfPath` parameter as opposed to the `dataSource` parameter resulted in the API trying to return that design information from KeepConfig.nsf instead of the specified database.
 
     **Others**
@@ -461,13 +461,13 @@
     - Added ability to view the Domino Server console live as well as send commands from the Domino REST API management page if using admin credentials. See [Domino Console Configuration](../howto/management/console.md) for more information.
     
     - Added ability to send Domino Server console commands via API if using admin credentials.
-    - Added ability to view the schema json within the Admin UI.
+    - Added ability to view the schema json within the **Admin UI**.
     - Added ability for customers to use a different name for fields (like an alias) in a schema,  good for obfuscating field names or for descriptive naming.
     
     **Improvements**
 
-    - Increased speed of design element population in the Admin UI.
-    - Increased stability of the Admin UI when the retrieving complex databases.
+    - Increased speed of design element population in the **Admin UI**.
+    - Increased stability of the **Admin UI** when the retrieving complex databases.
     - <span style="color:red">The `setup-v1/design` json output been modified so the design element key is the UNID, previously the key was the design element name. This change was made because design element names are not necessarily unique and part of the fix for design element population noted above.</span>
 
     ```json
@@ -497,7 +497,7 @@
 
     - The installer now has an upgrade option. Please see the [installation instructions](../tutorial/installconfig/index.md) for more information.
     
-    - A Quick Config option is now available to the Admin UI (lightning bolt on the left side). This feature creates a populated Schema and Scope based on the database you choose.
+    - A Quick Config option is now available to the **Admin UI** (lightning bolt on the left side). This feature creates a populated Schema and Scope based on the database you choose.
         - The Schema is configured with all visible Forms and Views.
         - All non-system fields are added to the Forms.
     

@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Schema Management page in the Admin UI allows you to define, view, and modify schemas, which determine what data is accessible via the REST API for reading and writing.
+The Schema Management page in the **Admin UI** allows you to define, view, and modify schemas, which determine what data is accessible via the REST API for reading and writing.
 
 The schema is the shape of data available and is a JSON file in the design resources of the Domino database. It gets created by a developer with *Designer* access to the Domino database. This creates an alias to the schema. This, along with a scope, provides access to the database via the Domino REST API. One Domino database can have multiple schemas, which is useful to provide different data sets or different levels of access to data.
 

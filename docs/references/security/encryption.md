@@ -1,4 +1,4 @@
-# Encryption Keys
+# Encryption keys
 
 There are three areas in Domino REST API where encryption keys are needed:
 
@@ -112,13 +112,13 @@ The 4 files get created in your `keepconfig.d` directory. Distribute them to all
     - for example: MultiDomain
 
 - Click **Create IdP Certificate**.
-- Domino REST API generates 4 files in this server's `[notesdata]/keepconfig.d` directory:
+- Domino REST API generates 4 files in this server's `keepconfig.d` directory:
 
     - MultiDomain.cert.pem
     - MultiDomain.json
     - MultiDomain.private.key.pem
     - MultiDomain.public.key.pem
 
-- Copy these 4 files to your other Domino servers into the `[notesdata]/keepconfig.d` directory.
+- Copy these 4 files to your other Domino servers into the `keepconfig.d` directory.
 - Restart Domino REST API on all servers with this new configuration and they will now share the same JWT keys.
 -->

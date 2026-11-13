@@ -152,7 +152,7 @@ To use the configured external IdP for Office Round Trip Experience login, you n
 
 ### Set up OFBA configuration to use Microsoft Entra ID as external IdP
 
-1. Open the JSON file you used in configuring Domino REST API to use Microsoft Entra ID as an external IdP that is saved in the `[notesdata]/keepconfig.d` directory.
+1. Open the JSON file you used in configuring Domino REST API to use Microsoft Entra ID as an external IdP that is saved in the `keepconfig.d` directory.
 
 2. Add the following JSON object to the Microsoft Entra ID configuration in the JSON file.
 

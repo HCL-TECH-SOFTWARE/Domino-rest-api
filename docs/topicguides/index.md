@@ -17,7 +17,7 @@ Introduces Domino REST API's ability to facilitate modern, RESTful interactions 
 
 Highlights some use cases of the Domino REST API.  
 
-## [Understanding Domino REST API](understanding.md)
+## [Understanding HCL Domino REST API](understanding.md)
 
 Explains how the Domino REST API functions as middleware, connecting Notes and Domino to a contemporary REST like API consuming and producing mostly JSON data. It also covers essential concepts that provide a foundational understanding of how Domino data is securely exposed and managed through the REST API.
 

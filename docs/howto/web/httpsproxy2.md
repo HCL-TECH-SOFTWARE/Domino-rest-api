@@ -12,7 +12,7 @@ Again, Domino would run on port 81, but this version uses path settings instead 
 The path assignment looks like this:
 
 - /api: Domino REST API on port 8880
-- /admin/ui/: Domino REST API Admin UI on port 8880
+- /admin/ui/: Domino REST API **Admin UI** on port 8880
 - /keep: Domino REST API Homepage on port 8880
 - /openapi: OpenAPI spec files and UI on port 8880
 - /EWS: custom app on port 3000

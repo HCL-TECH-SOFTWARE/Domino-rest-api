@@ -6,7 +6,8 @@ Guides you on how to customize which API schemas and endpoints are available or 
 
 ## Before you begin
 
-!!!note
+!!! note
+
     This prerequisite is applicable to [Customize available endpoints in a specific API schema](#customize-available-endpoints-in-a-specific-api-schema).
 
 You have to take note of the `operationId` of the endpoints in a specific API schema that you want to be unavailable.

@@ -26,8 +26,8 @@ The configuration of the Domino REST API follows an **Overlay File System** ap
 
 - All configuration sources provide JSON data that gets overlaid on top of each other.
 - When two JSON objects contain the same key:
-  - The key’s value from the overlay source **replaces** the lower layer’s value.
-  - Arrays are **completely replaced**, not merged, or appended.
+    - The key’s value from the overlay source **replaces** the lower layer’s value.
+    - Arrays are **completely replaced**, not merged, or appended.
 - JSON files in the `keepconfig.d` directory are applied in **alphabetical order**, meaning the last file loaded can override previous ones.
 - This order supports use cases like temporarily disabling settings by placing overriding values in a file with a name starting with `z-` to make sure it's processed last.
 
@@ -37,48 +37,48 @@ For more information, see [vert.x overloading rules](https://vertx.io/docs/vertx
 
 Suppose you have the following configurations and environment setup:
 
-### config.json
+- config.json
 
-This is an example of the initial configuration.
+    This is an example of the initial configuration.
 
-```json
-{
-  "PORT": 8880,
-  "AllowJwtMail": true,
-  "versions": {
-    "basis": {
-      "path": "/schema/openapi.basis.json",
-      "active": true
+    ```json
+    {
+      "PORT": 8880,
+      "AllowJwtMail": true,
+      "versions": {
+        "basis": {
+          "path": "/schema/openapi.basis.json",
+          "active": true
+        }
+      }
     }
-  }
-}
-```
+    ```
 
-### a.json
+- a.json
 
-This is an example of a JSON file you save in the `keepconfig.d` directory to overlay and update the initial configuration.
+    This is an example of a JSON file you save in the `keepconfig.d` directory to overlay and update the initial configuration.
 
-```json
-{
-  "dance": "tango",
-  "PORT": 1234,
-  "versions": {
-    "basis": {
-      "active": false
-    },
-    "special": {
-      "path": "/schema/openapi.special.json",
-      "active": true
+    ```json
+    {
+      "dance": "tango",
+      "PORT": 1234,
+      "versions": {
+        "basis": {
+          "active": false
+        },
+        "special": {
+          "path": "/schema/openapi.special.json",
+          "active": true
+        }
+      }
     }
-  }
-}
-```
+    ```
 
-### Environment variable
+- Environment variable
 
-This is an example of an environment variable.
+    This is an example of an environment variable.
 
-`PORT=8564`
+    `PORT=8564`
 
 When the example JSON files are merged and the environment variable is applied, the resulting merged configuration looks like as follows:
 

@@ -4,7 +4,7 @@ Downloadable assets to get you started in using the Domino REST API.
 
 ## Domino REST API
 
-Download from [My HCLSoftware Portal](https://my.hcltechsw.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:13px;width:13px"}.
+Download from the [My HCLSoftware](https://my.hcltechsw.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:13px;width:13px"} portal.
 
 ## Presentations
 
@@ -65,7 +65,7 @@ Modify the script and replace all instances in the Command file before using as 
 
 ## Microsoft Entra ID formerly Azure Active Directory
 
-[AzureTester.zip](../assets/downloads/AzureTester.zip) is a simple test application you run on a local http server to check if a registered App in Microsoft Entra ID, formerly Azure Active Directory, can be used as JWT provider for the Domino REST API.
+[AzureTester.zip](../assets/downloads/AzureTester.zip) is a simple test application you run on a local HTTP server to check if a registered App in Microsoft Entra ID, formerly Azure Active Directory, can be used as JWT provider for the Domino REST API.
 
 !!! warning
 

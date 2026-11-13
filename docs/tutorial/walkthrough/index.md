@@ -6,7 +6,7 @@ The walkthrough guides you step-by-step on using and configuring the Domino REST
 
 - Command line
 - Postman
-- Domino REST API Admin UI
+- Domino REST API **Admin UI**
 - code examples
 
 ## Objective
@@ -70,7 +70,7 @@ See the menu on the left for the sequence.
     - on your local machine
     - a remote server (note: you need OS access there)
     - in a virtual machine
-    - in a (Docker) container using the the Domino REST API Container image
+    - in a (Docker) container using the Domino REST API Container image
 
 - [Postman](https://www.postman.com) installed
 

@@ -26,7 +26,7 @@ To learn more about Domino Certificate Manager, see [Managing TLS certificates w
 
 ## Procedure
 
-1. Create or update a JSON file in the `{notesdata}/keepconfig.d` directory with the following configuration:
+1. Create or update a JSON file in the `keepconfig.d` directory with the following configuration:
 
     ```json
     {

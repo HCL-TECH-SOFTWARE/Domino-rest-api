@@ -1,6 +1,6 @@
 # Implement business logic
 
-To implement the functionality, two Java classes are involved. One is a handler class that takes in the http request and forwards it on the Eventbus. The other is a dbrequest class that performs the database interaction.
+To implement the functionality, two Java classes are involved. One is a handler class that takes in the HTTP request and forwards it on the Eventbus. The other is a dbrequest class that performs the database interaction.
 
 For the most common use case of JSON in/out, the default handler performs all the necessary actions, no custom code is required.
 
@@ -40,7 +40,7 @@ In a nutshell, the `process` method needs to call `emit()` at least once or thro
 
 ### Errors to throw
 
-While you can throw any [Exception](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html) to terminate a failed operation, DRAPI has a set of Exception classes that determine how the exception maps to a http status code.
+While you can throw any [Exception](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html) to terminate a failed operation, DRAPI has a set of Exception classes that determine how the exception maps to a HTTP status code.
 
 ![KEEP Exceptions](../../assets/images/KeepErrors.png){: style="height:80%;width:80%"}
 
@@ -202,7 +202,7 @@ Compile the Jar and throw it into Domino REST API's `libs` folder. Restart Domin
 
 ## Next step
 
-Proceed to [access control](accesscontrol.md).
+Proceed to [Access control](accesscontrol.md).
 
 <!--## Let's connect
 

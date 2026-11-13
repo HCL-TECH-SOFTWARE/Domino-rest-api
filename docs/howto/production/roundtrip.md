@@ -103,7 +103,7 @@ The procedure guides you on how to set up and use the Microsoft Office Round Tri
 
     !!! note
 
-        You might see a different login dialog with less functionality for OFBA when doing this on **Windows**. It's because some Microsoft applications in **Windows** still use **Internet Explorer**, and many of the functionalities we use in the original login dialog are unsupported.
+        You might see a different login dialog with less functionality for OFBA when doing this on **Windows**. It's because some Microsoft applications in **Windows** still use **Internet Explorer**, and many of the functionalities used in the original login dialog are unsupported.
 
     The MS Office file attachment is now opened in the applicable MS Office application. In the following image, you see an opened MS Word document as an example.
 

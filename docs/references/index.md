@@ -96,7 +96,7 @@ Introduces the DXL Extension API, its capabilities, endpoints, and current featu
 
 Details common errors in installing and running the Domino REST API service and their corresponding resolutions.
 
-## [Limitations and constraints](limitation.md)
+## [Limitations and considerations](limitation.md)
 
 Outlines known limitations and important considerations for using the Domino REST API.
 

@@ -20,7 +20,7 @@ The **Admin UI** provides an easy-to-use interface for creating and managing sch
 
 !!! tip
 
-    For more information on logging in to the Admin UI, see the [other log in options](../../../references/usingwebui/index.md#log-in-options).
+    For more information on logging in to the **Admin UI**, see the [other log in options](../../../references/usingwebui/index.md#log-in-options).
 
 ## Create a schema
 
@@ -131,7 +131,7 @@ The activated form or forms now have an **Active** status.
 
 !!! note
 
-    - Form modes specify what data can be read or written to documents using the form name in their form item. The Admin UI lists four modes that provide a special purpose. They are default, dql, odata and raw. Depending on the use case, the developer may define more than the default mode.
+    - Form modes specify what data can be read or written to documents using the form name in their form item. The **Admin UI** lists four modes that provide a special purpose. They are default, dql, odata and raw. Depending on the use case, the developer may define more than the default mode.
     - For more information on configuring a form, see [Change form configuration](../../../references/usingwebui/schemaui.md#change-form-configuration).
 
 ### Activate a view

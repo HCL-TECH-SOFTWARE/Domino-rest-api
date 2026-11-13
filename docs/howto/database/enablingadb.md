@@ -14,7 +14,7 @@ The Domino REST API doesn't expose any database to HTTP(S) by default. Enabling 
 
     A brave developer could use Domino designer to create or update the schema. If you manually modify your schema make sure to refresh the schema cache, see [**Domino REST API task**](../../references/usingdominorestapi/restapitask.md#domino-rest-api-task-commands) for details.
 
-2. **Link a schema to a scope** The scope configuration is stored in the `KeepConfig.nsf` database. This separation of `scope` and `schema` means multiple scopes can link to a single schema. You use the scope name when performing all CRUD operations, it's the value to the query parameter `dataSource`. You can create the scope using the API or the Admin UI.
+2. **Link a schema to a scope** The scope configuration is stored in the `KeepConfig.nsf` database. This separation of `scope` and `schema` means multiple scopes can link to a single schema. You use the scope name when performing all CRUD operations, it's the value to the query parameter `dataSource`. You can create the scope using the API or the **Admin UI**.
 
 3. Optional **Create an OAuth application** When you use Domino REST API as your IdP, you can create one or more OAuth applications that can access one or more of the defined scopes.
 
@@ -26,7 +26,7 @@ Since the exact terminology is long-winded and colloquially often no distinction
 
 ![From DB to schema to scope](../../assets/images/KeepSchemaToApp.png)
 
-While the Admin UI helps to generate a Domino REST API schema from an existing form, there is no technical need for a form to be present, other than the possibility to open the Notes document in a Notes' client too. Creating such a Schema requires direct post to the API.
+While the **Admin UI** helps to generate a Domino REST API schema from an existing form, there is no technical need for a form to be present, other than the possibility to open the Notes document in a Notes' client too. Creating such a Schema requires direct post to the API.
 
 ## Schema components
 
@@ -42,7 +42,7 @@ The high level entry contains a few properties and the collection of forms, view
 | Entry | Description |
 | --- | ---- |
 | **schemaName** | internal name, matches the JSON filename in Domino design |
-| **description** | visible in Admin UI |
+| **description** | visible in the **Admin UI** |
 | **nsfPath** | path to NSF relative to data directory |
 | **iconName** | name of the icon (fixed set) used in the UI. Alternative `icon` can contain a Base64 SVG |
 | **isActive** | Can the API be used now |
@@ -158,7 +158,7 @@ By assigning the fields `Name`, `age` and `fruit` to the **fieldGroup** `LostBoy
 
 ### Form aliases
 
-The form aliases object allows specifying additional values in the form item to be mapped to the form configuration in the schema. The Admin UI uses form alias information extracted from the database design, but the API isn't bound to these settings
+The form aliases object allows specifying additional values in the form item to be mapped to the form configuration in the schema. The **Admin UI** uses form alias information extracted from the database design, but the API isn't bound to these settings
 
 ### Sample schema
 
@@ -166,9 +166,9 @@ The form aliases object allows specifying additional values in the form item to 
 
 ## Enabling a database via schema and scope
 
-Follow the tutorial for instructions on how to do this using [Admin UI](../../tutorial/adminui.md) or [Postman or curl](../../tutorial/postmancurl.md).
+Follow the tutorial for instructions on how to do this using the [**Admin UI**](../../tutorial/adminui.md) or [Postman or curl](../../tutorial/postmancurl.md).
 
-It's worth noting that all the actions that you can do using the Admin UI can also be done using Postman, curl, or any similar tool.
+It's worth noting that all the actions that you can do using the **Admin UI** can also be done using Postman, curl, or any similar tool.
 Below are some examples to perform additional actions for database and application management, like adding a database, listing views, agents, and forms, and listing and adding application.
 
 A group of API requests is known as a collection. Each collection may have subfolders and multiple requests. Request URL or the endpoint is used to identify the link to where the API will communicate with.
@@ -620,7 +620,7 @@ Find the applicable Request URL from the OpenAPI Specification document. Execute
 
 <!-- prettier-ignore -->
 !!! tip "Postman Variables"
-    In the image above `{{UNID_0}}` is a Postman Environment Variable that automatically got created if you ran the `Create Document` Postman test. This is a feature built into the Postman collection we provided.
+    In the image above `{{UNID_0}}` is a Postman Environment Variable that automatically got created if you ran the `Create Document` Postman test. This is a feature built into the provided Postman collection.
     If you aren't using Postman, replace that with the `unid` of the document you'd like to retrieve.
 
 ???note "cURL code snippet"

@@ -13,7 +13,7 @@ A base function is implemented to give you an idea. The example can be easily ex
     - The OpenApi's 3.0.x JSON format is the only supported format. YAML or 3.1.x are not supported.
     - The name of the file has to start with `openapi.` and end with `.json`.
 
-## End Points
+## Endpoints
 
 The extension shall allow you to retrieve a list of pending approvals, to approve or reject a request, or to delegate the decision.
 
@@ -192,4 +192,4 @@ You can reference the full file [here as `openapi.eoffice.json`](openapi.eoffice
 
 ## Next
 
-Proceed to [provide the config.json](configjson.md).
+Proceed to [Create config.json](configjson.md).

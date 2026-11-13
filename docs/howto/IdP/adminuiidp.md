@@ -8,7 +8,7 @@ The task guides you in setting up an external IdP to use for logging in to the *
 
 When configuring an external identity provider using OpenID Connect (OIDC) or OIDC-idpcat with HCL Domino and the Domino REST API, you must specify a client ID. The default recommendation is to use Domino as the client ID for the Domino REST API server. However, your identity provider administrator might require a different value depending on your organization’s configuration.
 
-A separate client ID is required to support the Admin UI. To do this, you need to configure a separate client in your external IdP. You may specify the value of the client ID, or it might depend on your organization’s IdP configuration.
+A separate client ID is required to support the **Admin UI**. To do this, you need to configure a separate client in your external IdP. You may specify the value of the client ID, or it might depend on your organization’s IdP configuration.
 
 <!--8<-- "onclientids.md"-->
 
@@ -33,7 +33,7 @@ Configure an external IdP of your choice. For more information, see [configuring
 
     When configuring Microsoft Entra ID as your external identity provider (IdP), you must specify a client ID. This value must match the application (client) ID of the client application you configure in Microsoft Entra ID.
 
-    The client ID described here applies only to the Admin UI. A separate client ID (application registration) is required to support the Domino REST API server. For more information, see [Configure Microsoft Entra ID as IdP](configuringAD.md).
+    The client ID described here applies only to the **Admin UI**. A separate client ID (application registration) is required to support the Domino REST API server. For more information, see [Configure Microsoft Entra ID as IdP](configuringAD.md).
 
 1. Register an application.
 
@@ -148,11 +148,11 @@ Configure an external IdP of your choice. For more information, see [configuring
 
 ## Set up Admin UI configuration
 
-To use the configured external IdP for Admin UI login, you need to include the `adminui` property in the configuration file of external IdP saved in `keepconfig.d`. For more information about the `adminui` property, see [JWT parameters](../../references/configuration/parameters.md#jwt-parameters).
+To use the configured external IdP for **Admin UI** login, you need to include the `adminui` property in the configuration file of external IdP saved in `keepconfig.d`. For more information about the `adminui` property, see [JWT parameters](../../references/configuration/parameters.md#jwt-parameters).
 
 ### Set up Admin UI configuration to use Microsoft Entra ID as external IdP
 
-1. Open the JSON file you used in configuring Domino REST API to use Microsoft Entra ID as an external IdP that is saved in the `[notesdata]/keepconfig.d` directory.
+1. Open the JSON file you used in configuring Domino REST API to use Microsoft Entra ID as an external IdP that is saved in the `keepconfig.d` directory.
 
 2. Add the following JSON object to the Microsoft Entra ID configuration in the JSON file.
 
@@ -202,7 +202,7 @@ To use the configured external IdP for Admin UI login, you need to include the `
 
 ### Admin UI external IdP login
 
-The Admin UI shows the OIDC logins and the Domino REST API login, which uses the Domino REST API IdP. To prevent the Admin UI from showing all IdP logins, set the value of the `AdminUIOIDCLogin` parameter to `false`. To disable the login with password button, set the `AdminUIKeepLogin` parameter to `false`. For more information on how to modify the configuration, see [Modify configuration parameters](../install/configparam.md).
+The **Admin UI** shows the OIDC logins and the Domino REST API login, which uses the Domino REST API IdP. To prevent the **Admin UI** from showing all IdP logins, set the value of the `AdminUIOIDCLogin` parameter to `false`. To disable the login with password button, set the `AdminUIKeepLogin` parameter to `false`. For more information on how to modify the configuration, see [Modify configuration parameters](../install/configparam.md).
 
 <!--
 !!! note

@@ -8,9 +8,9 @@ The procedures guide you on configuring Microsoft Entra ID, formerly Azure Activ
 
 When configuring Microsoft Entra ID as your external identity provider (IdP), you must specify a client ID. This value must match the application (client) ID of the client application you configure in Microsoft Entra ID.
 
-The client ID described here applies only to the Domino REST API server. Separate client IDs (application registrations) are required to support the Admin UI and Office Forms Based Authentication (OFBA).
+The client ID described here applies only to the Domino REST API server. Separate client IDs (application registrations) are required to support the **Admin UI** and Office Forms Based Authentication (OFBA).
 
-To learn more about configuring Microsoft Entra ID for the Admin UI or Office Forms Based Authentication (OFBA), see the related topics:
+To learn more about configuring Microsoft Entra ID for the **Admin UI** or Office Forms Based Authentication (OFBA), see the related topics:
 
 - [Set up External IdP for Office Round Trip Experience](roundtripidp.md)
 
@@ -291,7 +291,7 @@ All URLs are retrievable by accessing the _OpenID Connect_ metadata document, co
 
 ## Configuration in Domino REST API
 
-1. Create a [JSON](https://www.json.org/json-en.html) file in the directory `[notesdata]/keepconfig.d`.
+1. Create a [JSON](https://www.json.org/json-en.html) file in the `keepconfig.d` directory.
 
       Use a filename for the JSON file that reveals its purpose. Make sure the filename only includes numbers and ASCII letters (`[0-9a-zA-Z]+`).
 
@@ -328,7 +328,7 @@ All URLs are retrievable by accessing the _OpenID Connect_ metadata document, co
 
 !!! danger "Azure AD / Entra ID is a moving target"
 
-    Depending on your configuration, you will need to adjust the `aud` and `iss` values in the configuration file. To determine the correct values, use the test application below to inspect what values are actually sent with the Azure access token. For `aud`, you might get the application ID and something different for `iss`. Also, the algorithm might be included somewhere. Use the test application below!
+    Depending on your configuration, you will need to adjust the `aud` and `iss` values in the configuration file. To determine the correct values, use the test application below to inspect what values are actually sent with the Azure access token. For `aud`, you might get the application ID and something different for `iss`. Also, the algorithm might be included somewhere. Use the test application below.
 
 ## Test the application
 

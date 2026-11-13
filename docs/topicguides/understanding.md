@@ -12,7 +12,7 @@ By _convention_, documents contain an item with the name `Form` pointing to what
 
 Furthermore, a document might be viewed with different forms and/or change the value of its form item during its lifetime.
 
-These free for all capabilities aren't suitable to be exposed in an API. An API that states "You get something JSON, but can't tell what" is of limited use. Therefore, how to define the shape of data to expose is always considered. The initial approach was to just use the form design at runtime, but found this too limiting. Now the _Scope and Schema management UI_, also know as the Admin UI, uses form design as input for a schema definition that's close to [JSON Schema](https://json-schema.org). The resulting decisions/constrains are:
+These free for all capabilities aren't suitable to be exposed in an API. An API that states "You get something JSON, but can't tell what" is of limited use. Therefore, how to define the shape of data to expose is always considered. The initial approach was to just use the form design at runtime, but found this too limiting. Now the _Scope and Schema management UI_, also know as the **Admin UI**, uses form design as input for a schema definition that's close to [JSON Schema](https://json-schema.org). The resulting decisions/constrains are:
 
 - Use of the value of the `form` item to link a document to 1:n schemas.
 - Documents without a `form` item aren't available in the API, but can contribute to views and forms.
@@ -58,7 +58,7 @@ Domino provides its own source of identity, the Domino directory. However, this 
 
 ## Rich Text
 
-Before [diving into details](../references/usingdominorestapi/richtext/index.md), a quick trip down the IT history lane. [Rich Text (RTF)](https://en.wikipedia.org/wiki/Rich_Text_Format) was specified by Microsoft in 1987. Notes/Domino uses a similar specification. It's essentially a container format designed to host [plain text](https://www.youtube.com/watch?v=_mZBa3sqTrI), formatted text, images, attachments, embedded objects, and layout information. It's [white space sensitive](https://twitter.com/jordwalke/status/1272431278868987904), a fancy term for: being able to "format" something by hitting the space key repeatedly.
+Before [diving into details](../references/usingdominorestapi/richtext/index.md), a quick trip down the IT history lane. [Rich Text (RTF)](https://en.wikipedia.org/wiki/Rich_Text_Format) was specified by Microsoft in 1987. Notes/Domino uses a similar specification. Essentially, it's a container format designed to support [plain text](https://www.youtube.com/watch?v=_mZBa3sqTrI), formatted text, images, attachments, embedded objects, and layout information. It's [white space sensitive](https://twitter.com/jordwalke/status/1272431278868987904), a fancy term for: being able to "format" something by hitting the space key repeatedly.
 
 The container formats today that resemble these capabilities are [ECMA-376 (ISO/IEC-29500)](https://www.ecma-international.org/publications-and-standards/standards/ecma-376/) (also know as Office Open XML), [ISO/IEC 26300:2006](http://www.oasis-open.org/committees/download.php/19274/OpenDocument-v1.0ed2-cs1.pdf) (also known as Open Document Format), which are both XML based and [MIME (RFC 1341)](https://datatracker.ietf.org/doc/html/rfc1341) which is widely used in email. The XML formats, mainly used in word processors aren't native to the web, while MIME doesn't prescribe (it's **multipurpose** after all) its content parts **and** isn't native to web browsers.
 
@@ -73,8 +73,10 @@ Based on this mismatch of source and target environment, the option of [dealing 
 
 Read more about them in [Domino REST API Roles](../references/usingdominorestapi/roles.md).
 
+<!--
 ## On the to-do list
 
 - Schema doctor comparing schema to form to flag inconsistencies
 - Form / document scan: check if documents contain edge cases
 - More options of the JSON schema
+-->

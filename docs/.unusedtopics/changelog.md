@@ -22,7 +22,7 @@ This page lists the changes in each release. For the latest version information,
 - Docker container uses Domino 12.0.2 BETA
 - Database specific Domino REST API configurations now stored as design elements in database (thus also editable from Domino designer)
 - reworked configuration format, close to JSON schema
-- New end point `/listpivot` for server side pivot operations
+- New endpoint `/listpivot` for server side pivot operations
 - Updated admin UI
 - Consistency enforcement for JSON. Fields defined as multi-value will always return array regardless of note content. Fields defined as single value will never return an array
 - Domino REST API Schema caters to Names, Readers, Authors

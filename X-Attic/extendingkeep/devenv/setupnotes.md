@@ -42,7 +42,7 @@ After Notes has been installed, it must be configured to find your Mail file on 
 
 8. Your location record is now complete so click **OK**.
 
-Now that you've imported your Notes ID, do a quick check to verify that that's the ID you're actually using. This is necessary as Notes ships with a generic **user.id** file in the data directory, and if you're using user.id your security is essentially turned off.
+Now that you've imported your Notes ID, perform a quick check to verify that you're using the correct ID. This is necessary as Notes ships with a generic **user.id** file in the data directory, and if you're using user.id your security is essentially turned off.
 
 Select **File \ Security \ User Security**. Verify that the Notes ID in use is correct. If it's not, go to **File \ Security \ Switch Id** to change it.
 

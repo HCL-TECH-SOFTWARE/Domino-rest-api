@@ -2,7 +2,7 @@
 
 ## Overview
 
-Domino REST API uses a Java-based installer, except for Docker, which uses a container image. You can download the installer and the Docker image from the **My HCLSoftware Portal**.
+Domino REST API uses a Java-based installer, except for Docker, which uses a container image. You can download the installer and the Docker image from the **My HCLSoftware** portal.
 
 ## Installation files
 
@@ -25,9 +25,9 @@ For Domino 12
 - `Domino_REST_API_V1.1.5_R12_Docker.tar.gz`
 - `Domino_REST_API_V1.1.5_R12_Installer.tar.gz`
 
-## Procedure <!--Download via My HCLSoftware Portal-->
+## Procedure <!--Download via My HCLSoftware portal-->
 
-1. Go to [My HCLSoftware Portal](https://my.hcltechsw.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}.
+1. Go to [My HCLSoftware](https://my.hcltechsw.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"} portal.
 
 2. On the landing page, click **Sign in**.
 3. Log in using your credentials on the sign-in page.

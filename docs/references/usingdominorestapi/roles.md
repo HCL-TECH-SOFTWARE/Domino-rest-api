@@ -6,7 +6,7 @@ Every organization's size and structure vary, and it's up to the organization wh
 
 ## Domino developer
 
-This role creates the **schema** that defines what data can be accessed in a Domino database. Schemas can be created using the Domino REST API, the Domino REST API GUI (Admin UI) or Domino designer editing the schema JSON file. Schemas are subject to standard inheritance rules, so a schema in a template is inherited by databases derived from it. To create, update, or delete a schema, the Domino developer must have a _Designer_ access or higher roles to the application database.
+This role creates the **schema** that defines what data can be accessed in a Domino database. Schemas can be created using the Domino REST API, the Domino REST API **Admin UI**, or Domino designer editing the schema JSON file. Schemas are subject to standard inheritance rules, so a schema in a template is inherited by databases derived from it. To create, update, or delete a schema, the Domino developer must have a _Designer_ access or higher roles to the application database.
 
 ## Domino/Domino REST API administrator
 

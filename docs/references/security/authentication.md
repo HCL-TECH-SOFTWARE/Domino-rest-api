@@ -68,7 +68,7 @@ The configuration is as follows in Domino REST API:
     - "oidc-idpcat" comes into play if you:
 
         - want both Domino REST API and core Domino to use the same provider.
-        - are on Domino 14 or greater. There's no harm if you use "jwt" or "oidc" without configuring Domino, or even if they happen to point to the same location.
+        - are on Domino 14 or later. There's no harm if you use "jwt" or "oidc" without configuring Domino, or even if they happen to point to the same location.
 
 ### Domino as an OIDC provider
 

@@ -5,8 +5,8 @@ By default, the Domino REST API uses a random symmetric JWT signing key that’s
 ## What you'll learn
 
 - Understanding how Domino REST API configuration works.
-- Additional endpoints other than port 8880
-- How to use the Management console.
+- Understanding additional endpoints other than port 8880.
+- Using the Management console.
 
 ## Before you begin
 

@@ -4,6 +4,8 @@
 
 Topics to guide you in completing database-related goals and tasks in relation to Domino REST API:
 
+- [Adjust number of retrieved entries when pulling in view data](pullviewdata.md)
+
 - [Edit database schema JSON](editsourcejson.md)
 
 - [Edit database view of a schema](editviewcolumn.md)
@@ -15,5 +17,3 @@ Topics to guide you in completing database-related goals and tasks in relation t
 - [Export database schema as JSON file](exportsourcejson.md)
 
 - [Use external names in schema definitions](externalnames.md)
-
-- [Adjust number of retrieved entries when pulling in view data](pullviewdata.md)

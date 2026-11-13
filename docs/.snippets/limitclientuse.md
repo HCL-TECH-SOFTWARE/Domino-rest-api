@@ -7,4 +7,4 @@
     ![Notes security](../../../assets/images/NotesSecurity.png)
 
 - If your organization has a policy to disable the **Don't prompt for a password from other Notes-based programs**, you may need to go into Notes, enable it, and immediately quit Notes. Next time you go into Notes, this setting is again disabled.
-- On the first time run of `runrestapi`, even with **Don't prompt for a password from other Notes-based programs** set, you may be prompted to enter your Notes password in the java window that the Domino REST API is running in. Even if the message prompt has scrolled, you can type in your password and Enter. Notes is prompting because Domino REST API is creating 2 databases needed to run the API.
+- On the first time run of `runrestapi`, even with **Don't prompt for a password from other Notes-based programs** set, you may be prompted to enter your Notes password in the Java window that the Domino REST API is running in. Even if the message prompt has scrolled, you can type in your password and Enter. Notes is prompting because Domino REST API is creating 2 databases needed to run the API.

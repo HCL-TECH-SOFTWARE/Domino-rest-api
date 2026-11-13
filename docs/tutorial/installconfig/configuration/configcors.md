@@ -19,7 +19,7 @@ The procedure guides you in configuring [Cross-Origin Resource Sharing (CORS)](h
         |Management port (8889)|Provides access to the Domino REST API runtime behavior, such as current configuration, runtime information, or Domino REST API shutdown and restart. It's recommended that the port be blocked and accessed only from localhost. It has its own functional account that doesn't provide access to other ports.|
         |Prometheus metrics port (8890)|Provides metrics in Prometheus format. It has its own functional account that doesn't provide access to other ports.|
 
-- You know the location of the Domino REST API configuration directory (`keepconfig.d`).
+- You know the location of the Domino REST API configuration directory `keepconfig.d`.
 
 ## Procedure
 

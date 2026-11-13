@@ -8,7 +8,7 @@ This procedure guides you through creating symbolic links for 2 files on Domino 
 
 ## Before you begin
 
-Domino Rest API v1.0.9 or greater must be installed.
+Domino Rest API v1.0.9 or later must be installed.
 
 ## Procedure
 

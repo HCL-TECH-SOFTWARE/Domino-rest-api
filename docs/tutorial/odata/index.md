@@ -15,7 +15,7 @@ The Domino REST API allows Domino data to be exposed following the OData standar
 
 ## Prepare OData access
 
-Access is on a per-form basis
+Access is on a per-form basis:
 
 - create schema & scope
 - pick form in schema
@@ -23,7 +23,7 @@ Access is on a per-form basis
 
 ## Validate OData access
 
-- Landing page
+- landing page
 - postman endpoints
 
 ## Next step

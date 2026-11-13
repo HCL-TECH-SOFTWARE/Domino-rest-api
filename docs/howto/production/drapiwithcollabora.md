@@ -11,9 +11,7 @@ Guides you on how to set up a local Collabora container and use it to enable rea
 
 ## Before you begin
 
-Download the following zip file to extract the necessary files for setting up a Collabora container.
-
-[Collabora.zip](../../assets/downloads/collabora.zip)
+Download the [Collabora.zip](../../assets/downloads/collabora.zip) file to extract the necessary files for setting up a Collabora container.
 
 ## Procedures
 

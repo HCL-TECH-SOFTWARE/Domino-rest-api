@@ -23,11 +23,11 @@ Look at the implemented source code to see a working implementation
 
 Postman offers to handle authentication for a user, which is "just" a shiny UI covering what goes into the `Authorization` header. For the sample collection, a different approach is taken following the 2 steps outlined above. A [Postman environment](https://learning.postman.com/docs/sending-requests/managing-environments/) is used to capture the bearer in a test:
 
-1. Have an environment and set the collection to `No Auth`.
+1. Set up an environment and set the collection to `No Auth`.
 
       ![Postman No Auth](../../assets/images/code/pm-collection.png)
 
-2. Have a login action that pulls username/password from the environment (you have to add them there).
+2. Create a login action that pulls username/password from the environment. You have to add them there.
 
       ![Postman Login](../../assets/images/code/pm-login01.png)
 

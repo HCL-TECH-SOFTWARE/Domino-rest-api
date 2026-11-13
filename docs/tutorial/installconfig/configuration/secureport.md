@@ -76,7 +76,7 @@ The procedure guides you in securing the ports to encrypt the communication betw
 
 ## Enable HTTPS using Domino Certificate Manager
 
-If you are using Domino 14 or above and your certificates are stored in the Domino Certificate Manager, you may be able to enable HTTPS automatically. For more information, see [Enable HTTPS using the Domino Certificate Manager](../../../howto/production/dominohttps.md).
+If you are using Domino 14 or later and your certificates are stored in the Domino Certificate Manager, you may be able to enable HTTPS automatically. For more information, see [Enable HTTPS using the Domino Certificate Manager](../../../howto/production/dominohttps.md).
 
 ## Additional information
 

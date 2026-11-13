@@ -210,5 +210,5 @@ await httpResponse.body
 
     A common way is to use [local storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage), which also needs to be handled [carefully](https://auth0.com/docs/secure/security-guidance/data-security/token-storage).
 
-- Tighten your [CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) and **please** only HTTP**S**.
+- Tighten your [CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) and **only** use HTTP**S**.
 - Besides extracting the bearer, you could grab the expiry time and create a function that first validates the token's lifespan before making a call.

@@ -4,13 +4,11 @@ Guides you through the procedures for installing Domino REST API.
 
 ## Installation steps
 
-1. [Check system requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789)
+1. Review and ensure compliance with all [system requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789).
 
-    Before starting the installation, make sure that you check the [system requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789).
+2. [Download the Domino REST API](downloaddrapi.md).
 
-2. [Download Domino REST API](downloaddrapi.md)
-
-3. Install Domino REST API on:
+3. Install the Domino REST API on:
 
     - Domino Server on [Linux](linux.md)
     - Domino Server or Notes Client on [Windows](win.md)

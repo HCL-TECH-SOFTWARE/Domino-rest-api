@@ -57,4 +57,4 @@ The class name gets derived from the tag and the OperationID specified in the Op
 
 ## Next step
 
-Proceed to [implement business logic](businesslogic.md).
+Proceed to [Implement business logic](businesslogic.md).

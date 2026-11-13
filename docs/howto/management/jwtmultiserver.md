@@ -25,13 +25,13 @@ You must have access to the **Management console**.
 
 3. Click **Create IdP certificate**.
 
-    Domino REST API generates 4 files in this server's `[notesdata]/keepconfig.d` directory:
+    Domino REST API generates 4 files in this server's `keepconfig.d` directory:
 
     - MultiDomain.cert.pem
     - MultiDomain.json
     - MultiDomain.private.key.pem
     - MultiDomain.public.key.pem
 
-4. Copy these 4 files to your other Domino servers into the `[notesdata]/keepconfig.d` directory.
+4. Copy these 4 files to your other Domino servers into the `keepconfig.d` directory.
 
 5. Restart Domino REST API on all servers to apply the new configuration. The servers now share the same JWT keys.

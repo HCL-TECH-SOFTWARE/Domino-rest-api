@@ -3,7 +3,7 @@
 ## What you'll learn
 
 - Understanding of metrics, healthcheck, and management.
-- How to configure functional accounts.
+- Configuring functional accounts.
 
 ## Before you begin
 
