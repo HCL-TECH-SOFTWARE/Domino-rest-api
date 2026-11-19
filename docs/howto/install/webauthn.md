@@ -1,4 +1,4 @@
-# Configure WebAuthn with Domino REST API and Domino 14 or greater
+# Configure WebAuthn with Domino REST API and Domino 14 or later
 
 WebAuthn (Passkey) authentication is enabled by default and can be configured to integrate with the Passkey support in Domino 14 via JSON files in `keepconfig.d`.
 
@@ -9,7 +9,7 @@ The procedure guides you to log in to both Domino REST API and Domino 14 using t
 ## Prerequisites
 
 - You must be an administrator in Domino REST API WebUI.
-- You must be using Domino 14 or greater.
+- You must be using Domino 14 or later.
 - The passkey had been created by the administrator of Domino and saved as a `passkey.nsf`.
 
 ## Procedure
@@ -40,15 +40,16 @@ The procedure guides you to log in to both Domino REST API and Domino 14 using t
     }
     ```
 
-    | Items           | Description                          |
-    | :-------------- | :-----------------------------------|
-    | `attestation`   |Can be one of "none", "indirect", "direct", or "enterprise"  |
-    | `rpName`| It's a name that the user might see when logging in, depending on their user interface. The default setting is "Domino REST API IdP", whereas the core Domino HTTP stack uses the name of the website document, which could be viewed as "Production Servers" or any other chosen name.  |
-    | `rpId`| The `rpId` is a single value only. It's important to connect it with Domino. Given the scenario where there is a single value present and multiple websites hosted by Domino, the usefulness of this will vary depending on the user's requirements. In the default case, if the user has "domino.somecompany.com" as their server and Domino REST API is listening on the same hostname (although ports may differ), they can sign in with Passkey in Domino REST API and apply the same stored key on Domino HTTP, and vice versa. See [Passkey authentication](https://help.hcltechsw.com/domino/14.0.0/admin/conf_dominopasskeyauth.html) of HCL Domino. |
+    | Items | Description |
+    | :--- | :--- |
+    | `attestation` | Can be one of `"none"`, `"indirect"`, `"direct"`, or `"enterprise"` |
+    | `rpName` | It's a name that the user might see when logging in, depending on their user interface. The default setting is `"Domino REST API IdP"`, whereas the core Domino HTTP stack uses the name of the website document, which could be viewed as "Production Servers" or any other chosen name. |
+    | `rpId` | The `rpId` is a single value only. It's important to connect it with Domino. Given the scenario where there is a single value present and multiple websites hosted by Domino, the usefulness of this varies depending on the user's requirements. In the default case, if the user has "domino.somecompany.com" as their server and Domino REST API is listening on the same hostname (although ports may differ), they can sign in with Passkey in Domino REST API and apply the same stored key on Domino HTTP, and vice versa. See [Passkey authentication](https://help.hcltechsw.com/domino/14.0.0/admin/conf_dominopasskeyauth.html) of HCL Domino. |
 
-4. Save the file in `.json` format inside the `keepconfig.d` directory.
+4. Save the file in JSON format in the `keepconfig.d` directory.
 
     !!! tip
+
         Use a filename for the JSON file that reveals its purpose. To learn more on how JSON files in `keepconfig.d` are processed, see [Configuration management and overlay hierarchy](../../references/configuration/understandingconfig.md).
 
 5. Restart Domino REST API on all servers with this new configuration.

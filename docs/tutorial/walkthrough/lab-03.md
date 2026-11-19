@@ -1,10 +1,10 @@
 # Lab 03 - Schema exploration
 
-## What you will learn
+## What you'll learn
 
-- Understanding a form mode
-- Understanding a field group
-- Formulas to control access
+- Understanding a form mode.
+- Understanding a field group.
+- Using formulas to control access.
 
 ## Before you begin
 
@@ -17,7 +17,7 @@
 
     Before you start altering the schema, use **Postman**, as outlined in [How to verify](#how-to-verify), to observe the API behavior before and after altering the schema.
 
-1. In Admin UI, edit the `default` schema of `ApprovalsCentral.nsf`, and select the Equipment form.
+1. In the **Admin UI**, edit the `default` schema of `ApprovalsCentral.nsf`, and select the Equipment form.
 2. In mode `default`, add the following fields to a `field group` named *stuff*.
 
     - childRN

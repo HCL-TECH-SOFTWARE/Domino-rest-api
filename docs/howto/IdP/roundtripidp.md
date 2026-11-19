@@ -53,7 +53,7 @@ Configure an external IdP of your choice. For more information, see [configuring
 
     4. Click **Register**.
 
-    After the registration, you will see the **Overview** page. Take note of the value of the **Application (client) ID**.
+    After the registration, you see the **Overview** page. Take note of the value of the **Application (client) ID**.
 
 2. Add client credentials.
 
@@ -88,7 +88,7 @@ Configure an external IdP of your choice. For more information, see [configuring
 
         In the example image, it shows the selection of the **DRAPI-API** application, which is the application used by the Domino REST API server as stated in the [Before you begin](#before-you-begin) section.
 
-    4. Under **Select permissions**, select the required scopes and click **Add permissions**.
+    4. Under **Select permissions**, select the required scopes, and click **Add permissions**.
 
         ![Azure app registration](../../assets/images/entraID26.png){: style="height:70%;width:70%"}
 
@@ -152,7 +152,7 @@ To use the configured external IdP for Office Round Trip Experience login, you n
 
 ### Set up OFBA configuration to use Microsoft Entra ID as external IdP
 
-1. Open the JSON file you used in configuring Domino REST API to use Microsoft Entra ID as an external IdP that is saved in the `[notesdata]/keepconfig.d` directory.
+1. Open the JSON file you used in configuring Domino REST API to use Microsoft Entra ID as an external IdP that is saved in the `keepconfig.d` directory.
 
 2. Add the following JSON object to the Microsoft Entra ID configuration in the JSON file.
 

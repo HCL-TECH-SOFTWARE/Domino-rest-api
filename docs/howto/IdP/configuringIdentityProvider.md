@@ -29,7 +29,7 @@ Domino REST API supports identity providers that can produce JWT access tokens. 
 
     Check out the [Keycloak](configuringKeycloak.md) example configuration.
 
-## Example For Encode JWT
+## Example for encode JWT
 
 You can use the [official JWT site](https://jwt.io/) to decode and inspect the encoded token.
 
@@ -111,12 +111,12 @@ The JSON file looks like this:
 
 wherein:
 
-- `disableJwtExpiryCheck`: By setting the value to `true`, the enforcement of JWT expiration can be disabled. **DO NOT** do this on a production system (default is `false`).
-- `jwt`: Entry is related to JWT authorization.
-- `my-idp`: The name you give your IdP. It could be `Rumpelstielzchen` but needs to be unique on your server.
-- `active`: True/false.
-- `algorithm`: Currently supported: `RS256`.
-- `keyFile`: Path to public key file (PEM format), either relative to `keepconfig.d`or an absolute path.
+- `disableJwtExpiryCheck`: default value is `false`. Disables enforcement of JWT expiration when set to `true`. **DO NOT** set the value to `true` on a production system.
+- `jwt`: entry related to JWT authorization.
+- `my-idp`: the name you give your IdP. It could be `Rumpelstielzchen` but needs to be unique on your server.
+- `active`: either `true` or `false`. IdP is inactive when set to `false`.
+- `algorithm`: supports `RS256`.
+- `keyFile`: path to public key file in PEM format, either relative to `keepconfig.d`or an absolute path.
 
 Domino REST API supports more than one IdP, distinguished by the name `my-idp` in the example. Access checking takes longer the more identity providers you configure since Domino REST API checks every provider's key until it finds a match.
 
@@ -135,7 +135,7 @@ To ease configuration and simplify key rollover, the public key for JWT verifica
   }
 ```
 
-The Domino REST API will extend this URL to `https://someidp.your.domain/.well-known/openid-configuration` and check for a JSON return containing the `jwks_uri` key. When your IdP doesn't use the `.well-known` approach, such as [Keycloak](./configuringKeycloak.md), you need to directly point to the key URL.
+The Domino REST API extends this URL to `https://someidp.your.domain/.well-known/openid-configuration` and check for a JSON return containing the `jwks_uri` key. When your IdP doesn't use the `.well-known` approach, such as [Keycloak](./configuringKeycloak.md), you need to directly point to the key URL.
 
 !!! note
 

@@ -1,8 +1,7 @@
 nav:
-  - index.md
-  - schemaui.md
-  - scopeui.md
-  - quickconfigui.md
-  - appui.md
-  - oauthconsentui.md
- 
+    - index.md
+    - schemaui.md
+    - scopeui.md
+    - quickconfigui.md
+    - appui.md
+    - oauthconsentui.md

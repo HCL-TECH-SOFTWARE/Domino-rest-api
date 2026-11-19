@@ -15,7 +15,7 @@ The procedure guides you on how to set up and use the Virtual Spreadsheet featur
 ## Before you begin
 
 - Make sure your computer has Microsoft Excel installed.
-- You must run your Domino REST API in HTTPs.
+- You must run your Domino REST API in HTTPS.
 
 ## Procedure
 
@@ -43,12 +43,12 @@ The procedure guides you on how to set up and use the Virtual Spreadsheet featur
 
     `ms-excel:<command name>|u|<DRAPI HTTPs hostname>/api/webdav-v1/view/<dataSource>/<view name>.xlsx`
 
-    | Property             | Description                                                                                                                             |
-    |----------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-    | command name         | Describes the action that the application should perform.<br><br>ofv - to view the spreadsheet<br>ofe - to edit the spreadsheet |
-    | DRAPI HTTPs hostname | Domino REST API HTTPS hostname.                                                                                                         |
-    | dataSource           | Domino database where your view is in.                                                                                                  |
-    | view name            | URL encoded name of your view.                                                                                                        |
+    | Property | Description |
+    | --- | --- |
+    | command name | Describes the action that the application should perform.<br><br>ofv - to view the spreadsheet<br>ofe - to edit the spreadsheet |
+    | DRAPI HTTPS hostname | Domino REST API HTTPS hostname. |
+    | dataSource | Domino database where your view is in. |
+    | view name | URL encoded name of your view. |
 
     **Example link**:
     `ms-excel:ofe|u|https://whitepalace.projectkeep.io:8880/api/webdav-v1/view/sales/Customers.xlsx`

@@ -20,7 +20,7 @@ The view should be in **Active** status. For more information, see [Activate a v
 
 ### To edit a view
 
-1. Log in to the Domino REST API Admin UI and click **Database Management - REST API**.
+1. Log in to the Domino REST API **Admin UI** and click **Database Management - REST API**.
 2. Select a schema on the **Schema Management** page.
 3. Click **Database Views** from the menu bar.
 4. Click the pencil icon corresponding to the name of the view you want to edit. The **Edit (view name) Columns** page opens.
@@ -48,7 +48,7 @@ The updated view now displays only your selected columns. On the **Database View
 
 ### To reset an edited view
 
-1. Log in to the Domino REST API Admin UI and click **Database Management - REST API**.
+1. Log in to the Domino REST API **Admin UI** and click **Database Management - REST API**.
 2. On the **Schema Management** page, select a schema.
 3. Click **Database Views** from the menu bar.
 4. Click the pencil icon corresponding to the name of an edited view you want to reset. The **Edit (view name) Columns** page opens.

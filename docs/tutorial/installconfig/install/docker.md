@@ -3,7 +3,7 @@
 # Run Domino REST API with a Docker image
 
 The Domino REST API Docker image is built **on top of an HCL Domino Docker image**, inspired by [the open source templates](https://github.com/HCL-TECH-SOFTWARE/domino-container).
-All configuration options found there can be applied to the Domino REST API Docker image. You will need to decide if you want to run a standalone server or an additional server in an existing Domino domain.
+All configuration options found there can be applied to the Domino REST API Docker image. You need to decide if you want to run a standalone server or an additional server in an existing Domino domain.
 
 <!-- prettier-ignore -->
 !!! tip
@@ -29,7 +29,7 @@ Running Domino REST API with a Docker image requires the following:
 
 - **Domino REST API Docker image**.
 
-    Download the image as an archive file from [My HCLSoftware Portal](https://my.hcltechsw.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"}. For more information, see [Download Domino REST API](downloaddrapi.md).
+    Download the image as an archive file from [My HCLSoftware](https://my.hcltechsw.com/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"} portal. For more information, see [Download Domino REST API](downloaddrapi.md).
 
     !!! warning "Important"
 
@@ -69,7 +69,7 @@ Store the following files in a folder:
 
 ## Load Docker image
 
-=== "For docker image from My HCLSoftware Portal"
+=== "For docker image from My HCLSoftware portal"
 
     Load the docker image that you've downloaded from [Before you begin](#before-you-begin). Make sure you [extract the tar.gz file](https://linuxize.com/post/how-to-extract-unzip-tar-gz-file/ "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../../../assets/images/external-link.svg){: style="height:15px;width:15px"} first.
 
@@ -92,7 +92,7 @@ Store the following files in a folder:
 
 ## Update .env file
 
-Depending on the compose file you choose, a different set of variables needs to be replaced. If a variable isn't in the compose file, you don't need it. We keep the variable names in sync with [One-touch Domino setup](https://help.hcl-software.com/domino/14.0.0/admin/inst_onetouch.html), thus in the compose file you will find gems like `SERVERSETUP_SERVER_NAME: "${SERVERSETUP_SERVER_NAME}"`. This makes naming of variables consistent.
+Depending on the compose file you choose, a different set of variables needs to be replaced. If a variable isn't in the compose file, you don't need it. The variable names are kept in sync with [One-touch Domino setup](https://help.hcl-software.com/domino/14.0.0/admin/inst_onetouch.html). Thus in the compose file, you can find gems like `SERVERSETUP_SERVER_NAME: "${SERVERSETUP_SERVER_NAME}"`. This makes naming of variables consistent.
 
 !!! tip
 
@@ -104,8 +104,8 @@ Depending on the compose file you choose, a different set of variables needs to 
 
     | Variable | Example | 
     | :---- | :---- | 
-    | CONTAINER_HOSTNAME | domino.acme.com <br/><br/>Tip: Use something local for local testing| 
-    | CONTAINER_IMAGE | docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.10.0 (example name for docker image from My HCLSoftware Portal from earlier release)</br></br>domino-rest-api:1.0.7 (example name for docker image from My HCLSoftware Portal starting v1.0.7 release)</br></br>hclcr.io/domino/restapi:1.0.6 (example name for docker image from Harbor)</br></br>**Remarks**:</br>For docker image downloaded from My HCLSoftware Portal, update based on the name of the loaded image, such as the example shown above, or use `docker images ls` to see the exact image name. <br><br>For docker image downloaded from Harbor, update based on the image name of the latest docker image version for docker compose .env file from Harbor indicated in [What's New](../../../whatsnew/index.md) of a release.|
+    | CONTAINER_HOSTNAME | domino.acme.com <br/><br/>Tip: Use something local for local testing.| 
+    | CONTAINER_IMAGE | docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.10.0 (example name for docker image from My HCLSoftware portal from earlier release)</br></br>domino-rest-api:1.0.7 (example name for docker image from My HCLSoftware portal starting v1.0.7 release)</br></br>hclcr.io/domino/restapi:1.0.6 (example name for docker image from Harbor)</br></br>**Remarks**:</br>For docker image downloaded from My HCLSoftware portal, update based on the name of the loaded image, such as the example shown above, or use `docker images ls` to see the exact image name. <br><br>For docker image downloaded from Harbor, update based on the image name of the latest docker image version for docker compose .env file from Harbor indicated in [What's New](../../../whatsnew/index.md) of a release.|
     | CONTAINER_NAME | domino-keep-test02 |
     | CONTAINER_VOLUMES | domino_keep_notesdata<br/><br>**Remarks**:</br>No spaces or special characters |
     | SERVERSETUP_ADMIN_CN | Peter Parker | |

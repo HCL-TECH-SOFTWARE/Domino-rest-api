@@ -1,6 +1,6 @@
 # JavaScript
 
-Sample code to interact with the Domino REST API in JavaScript. No additional libraries have been harmed.
+Sample code to interact with the Domino REST API in JavaScript. <!--No additional libraries have been harmed.-->
 
 !!! note
 
@@ -8,7 +8,7 @@ Sample code to interact with the Domino REST API in JavaScript. No additional li
 
     The [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) API works in all modern browsers. However, it is only available in current versions of the server-side JavaScript environments, such as NodeJS, so always check the documentation. 
 
-We will look at three functions that can give you a head start.
+Look at the three functions that can give you a head start.
 
 ## URL collection
 
@@ -89,24 +89,24 @@ const loadApprovals = async (bearer, status) => {
 
 ## Processing list results
 
-The Domino REST API uses chunked returns ([RFC9112](https://tools.ietf.org/html/rfc9112#section-7.1)) for anything that returns an array and thus could return a lot of data. Instead of calling `await response.json()`, we use the [HTTP Streams API](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API). Browsers implement that API in native code for speedy processing. A fetch request returns a [readable stream](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream) that can be processed using a [TransformStream](https://developer.mozilla.org/en-US/docs/Web/API/TransformStream) (a stream that is both readable and writable) to then be consumed by a [writable stream](https://developer.mozilla.org/en-US/docs/Web/API/WritableStream). There are a few steps involved:
+The Domino REST API uses chunked returns ([RFC9112](https://tools.ietf.org/html/rfc9112#section-7.1)) for anything that returns an array and thus could return a lot of data. Instead of calling `await response.json()`, use the [HTTP Streams API](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API). Browsers implement that API in native code for speedy processing. A fetch request returns a [readable stream](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream) that can be processed using a [TransformStream](https://developer.mozilla.org/en-US/docs/Web/API/TransformStream) (a stream that is both readable and writable) to then be consumed by a [writable stream](https://developer.mozilla.org/en-US/docs/Web/API/WritableStream). There are a few steps involved:
 
 ![Stream Steps](../../assets/images/StreamSteps.jpg)
 
-All of these steps get tied together using the `pipeThrough` method calls. Let's look at it step by step:
+All of these steps get tied together using the `pipeThrough` method calls. Look at it step by step:
 
 ### Byte to String
 
-The first part "**Byte to String**" is built-in using a [`TextDecoderStream`](https://developer.mozilla.org/en-US/docs/Web/API/TextDecoderStream). As a result, we get a stream of characters, and we now chop into parts.
+The first part "**Byte to String**" is built-in using a [`TextDecoderStream`](https://developer.mozilla.org/en-US/docs/Web/API/TextDecoderStream). As a result, you get a stream of characters, and you now chop into parts.
 
 ### String to lines
 
-String to lines is our first [`TransformStream`](https://developer.mozilla.org/en-US/docs/Web/API/TransformStream). An instance needs to implement two methods:
+String to lines is your first [`TransformStream`](https://developer.mozilla.org/en-US/docs/Web/API/TransformStream). An instance needs to implement two methods:
 
 - `transform(incoming, controller)` reads incoming data and eventually call the controller's `enqueue(output)` method 0:n times
 - `flush(controller)` called for cleanup
 
-In our case, the incoming character stream is chopped into lines.
+In this case, the incoming character stream is chopped into lines.
 
 ```js
 /* Chops arriving chunks along new lines,
@@ -130,7 +130,7 @@ const splitStream = () => {
 
 ### String to JSON
 
-We chop of the leading `[` and trailing `]` and user `JSON.parse()`. In production code, you could pack the parsing in a try/catch block.
+You chop of the leading `[` and trailing `]` and user `JSON.parse()`. In production code, you could pack the parsing in a try/catch block.
 
 ```js
 /* Parses JSON if row looks like JSON (with eventual comma at end of line) */
@@ -150,8 +150,7 @@ const parseJSON = () => {
 
 ### JSON to HTML
 
-This depends very much on your intended output, a table, cards, graphics etc. For our example, we create table rows.
-You could use a more sophisticated approach using parameters to drive the table shape, your JS skills will help.
+This depends very much on your intended output, a table, cards, graphics etc. For this example, you create table rows. You could use a more sophisticated approach using parameters to drive the table shape, your JS skills is going to be helpful.
 
 ```js
 const rowMaker = () => {
@@ -175,7 +174,7 @@ const rowMaker = () => {
 
 ### Update the UI
 
-We use a [`WritableStream`](https://developer.mozilla.org/en-US/docs/Web/API/WritableStream) to update the UI.
+You can use a [`WritableStream`](https://developer.mozilla.org/en-US/docs/Web/API/WritableStream) to update the UI.
 
 ```js
 const updateUI = (parent) => {
@@ -189,7 +188,7 @@ const updateUI = (parent) => {
 
 ### Putting it all together
 
-With the object instances in place, we can stick the pipe together to execute the flow based on [this article](https://wissel.net/blog/2023/07/handle-http-chunked-responses.html).
+With the object instances in place, you can stick the pipe together to execute the flow based on [this article](https://wissel.net/blog/2023/07/handle-http-chunked-responses.html).
 
 ```js
 const insertPoint = document.getElementById('resultTableBody');
@@ -211,5 +210,5 @@ await httpResponse.body
 
     A common way is to use [local storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage), which also needs to be handled [carefully](https://auth0.com/docs/secure/security-guidance/data-security/token-storage).
 
-- Tighten your [CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) and **please** only HTTP**S**.
+- Tighten your [CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) and **only** use HTTP**S**.
 - Besides extracting the bearer, you could grab the expiry time and create a function that first validates the token's lifespan before making a call.

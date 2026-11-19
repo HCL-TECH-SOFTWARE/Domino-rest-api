@@ -29,9 +29,9 @@ The What's new contains information about the latest features, improvements, fix
 
     !!! warning "Addendum"
 
-        An issue was identified after the Domino REST API v1.1.8 release where a Scope connected to a Schema may display a red dot on the Schema tile in the **Admin UI** instead of a green dot, incorrectly indicating that the Scope-to-Schema connection is not functioning correctly.
+        An issue was identified after the Domino REST API v1.1.8 release where a scope connected to a schema may display a red dot on the schema tile in the **Admin UI** instead of a green dot, incorrectly indicating that the scope-to-schema connection is not functioning correctly.
 
-        This is a **visual-only issue** in the **Admin UI**. The underlying APIs and the connected Scope and Schema continue to function correctly.
+        This is a **visual-only issue** in the **Admin UI**. The underlying APIs and the connected scope and schema continue to function correctly.
 
         Refer to the [technical note](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0134263 "Opens a new tab"){: target="_blank" rel="noopener noreferrer"}&nbsp;![link image](../assets/images/external-link.svg){: style="height:15px;width:15px"} for more details and the recommended workaround to resolve the issue.
 

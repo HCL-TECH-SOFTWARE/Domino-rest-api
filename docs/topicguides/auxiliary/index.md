@@ -17,7 +17,7 @@ Domino REST API implements the [webDAV](../../references/openapidefinitions.md#w
 
 ## [OData](odata.md)
 
-[OData](https://www.odata.org/) or *Open Data Protocol* allows compliant software, for example Excel on Windows, Salesforce, Power BI, to read and potentially write REST data.
+[OData](https://www.odata.org/), or *Open Data Protocol*, lets compliant software, such as Excel on Windows, Salesforce, and Power BI, read and potentially write REST data.
 
 ## [iCal](ical.md)
 

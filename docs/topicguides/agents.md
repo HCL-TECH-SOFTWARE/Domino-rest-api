@@ -25,7 +25,7 @@ To set the agent name in the body of the request, refer to the following example
 
 Example: `{ "agentName" : "myAgent" }`
 
-The agent's response will be `{"agentResponse":"done"}` when completed.
+The agent's response is going to be `{"agentResponse":"done"}` when completed.
 
 To return a different response:
 
@@ -42,16 +42,16 @@ To return a different response:
     pw.println("Java agent was successful.");
     ```
 
-The print output will be stored as a JSON value in the `agentResponse` key of the response, so you must properly escape your print statements for JSON.
+The print output is stored as a JSON value in the `agentResponse` key of the response, so you must properly escape your print statements for JSON.
 
 Example:
 
 - For LotusScript: `Print "{""jsonkey"" : ""Some json value""}"`
 - For Java: `pw.println("{\"jsonkey\" : \"Some json value\"}");`
 
-If you did not properly escape the output, your response will be `{"agentResponse":"done"}`.
+If you didn't properly escape the output, your response is going to be `{"agentResponse":"done"}`.
 
-In addition, `NotesSession.documentContext` will get an in-memory document with the following properties:
+In addition, `NotesSession.documentContext` gets an in-memory document with the following properties:
 
 - **REQUEST_METHOD** set to "KEEP". This can be used to identify how the agent was triggered, for contextual processing.
 - **CONTENT_TYPE** set to "application/json".
@@ -120,6 +120,6 @@ Any queued agents will be picked up for processing when the server restarts.
 
 ## Triggers
 
-Certain triggers like selected documents or programmatic collections like `unprocessedDocuments` only make sense in Notes Client. Other triggers like "Before Mail Arrives" only make sense in the context of server scheduling. LotusScript UI classes for interacting with the Notes Client will cause an agent to error if you attempt to run it from outside the context of the Notes Client.
+Certain triggers like selected documents or programmatic collections like `unprocessedDocuments` only make sense in Notes Client. Other triggers like "Before Mail Arrives" only make sense in the context of server scheduling. LotusScript UI classes for interacting with the Notes Client causes an agent to error if you attempt to run it from outside the context of the Notes Client.
 
-For further clarification, a developer can use the `/design/agents?dataSource=` endpoint to get full information about properties of an agent. The **@validForKeep** property will confirm whether the agent can be used from Domino REST API. ***This does not (currently) introspect the LotusScript to check for NotesUI classes. It only uses the triggers to identify agents that cannot be called from outside the Notes Client.***
+For further clarification, a developer can use the `/design/agents?dataSource=` endpoint to get full information about properties of an agent. The **@validForKeep** property confirms whether the agent can be used from Domino REST API. ***This does not (currently) introspect the LotusScript to check for NotesUI classes. It only uses the triggers to identify agents that cannot be called from outside the Notes Client.***

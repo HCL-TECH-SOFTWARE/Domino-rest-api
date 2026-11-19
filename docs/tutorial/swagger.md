@@ -24,7 +24,7 @@ You can watch the video for a visual walkthrough of using the Swagger UI. The st
 
 ## Authorize with JWT token
 
-You need to create a JWT token and use it to get proper authorization to try out the endpoints. Without proper authorization, you can try executing the endpoints, but you will get an access error.
+You need to create a JWT token and use it to get proper authorization to try out the endpoints. Without proper authorization, you can try executing the endpoints, but you'll get an access error.
 
 1. Open Swagger UI by navigating to `http://localhost:8880/openapi/index.html` in your browser.
 
@@ -42,7 +42,7 @@ You need to create a JWT token and use it to get proper authorization to try out
 
       ![Swagger login](../assets/images/ApiSwaggerLogin.png){: style="height:80%;width:80%"}
 
-      If your credentials are valid, the response will include a JSON object containing the JWT token in the `bearer` key.
+      If your credentials are valid, the response includes a JSON object containing the JWT token in the `bearer` key.
 
       ![Bearer](../assets/images/Bearer.png){: style="height:80%;width:80%"}
 

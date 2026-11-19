@@ -1,8 +1,8 @@
 nav:
-  - index.md
-  - schemascope.md
-  - scopes.md
-  - schemacomp.md
-#  - formdefinitions.md
-#  - viewdefinitions.md
-#  - agentdefinitions.md
+    - index.md
+    - schemascope.md
+    - scopes.md
+    - schemacomp.md
+  #  - formdefinitions.md
+  #  - viewdefinitions.md
+  #  - agentdefinitions.md

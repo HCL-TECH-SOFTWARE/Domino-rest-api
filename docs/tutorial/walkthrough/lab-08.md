@@ -1,8 +1,8 @@
 # Lab 08 - Create a Java application
 
-## What you will learn
+## What you'll learn
 
-How to use an example that can be some scheduled process to ETL data.
+Using an example that can be some scheduled process to ETL data.
 
 ## Before you begin
 

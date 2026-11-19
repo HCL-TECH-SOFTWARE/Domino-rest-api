@@ -14,7 +14,7 @@ You usually provide the issue summary in the Subject field of the support case t
 
 Example:
 
-Users can't log in to the Admin UI after upgrading from Domino REST API v1.1.2 to Domino REST API v1.1.3.
+Users can't log in to the **Admin UI** after upgrading from Domino REST API v1.1.2 to Domino REST API v1.1.3.
 
 ### Detailed description
 

@@ -10,7 +10,7 @@ The definitions below serve as reference and guide, so you can learn about the A
 
 ## Basis
 
-The main API of the Domino REST API. It allows access to documents, views, folders, and agents. An external application will only need this specification.
+The main API of the Domino REST API. It allows access to documents, views, folders, and agents. An external application only needs this specification.
 
 [Explore the basis API using the ReDoc viewer](https://redocly.github.io/redoc/?url=https://opensource.hcltechsw.com/Domino-rest-api/assets/downloads/openapi.basis.json)
 
@@ -101,7 +101,7 @@ The **DXL Extension APIs** extends Domino design management capabilities by enab
 ## OpenAPI extensions
 
 The OpenAPI specification is extensible, for one you can define new data types beyond [the default types](https://spec.openapis.org/oas/v3.0.3#schema-object) and you can introduce new method attributes prefixed with `x-`.
-We added the following data types:
+The following data types were added:
 
 - Names : translate from/to a Domino names item
 - Authors: translate from/to a Domino authors item

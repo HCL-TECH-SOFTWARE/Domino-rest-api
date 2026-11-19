@@ -41,7 +41,7 @@ For example:
 ### Required access levels
 
 | Operation | Minimum ACL level |
-|---|---|
+| --- | --- |
 | Read / List / Export / Validate | READER |
 | Import / Create / Update / Delete design elements | DESIGNER |
 | Create / Update / Delete help documents (About, Using) | DESIGNER |
@@ -52,8 +52,8 @@ For example:
 The following type names are used in path parameters and query parameters throughout
 the API.
 
-|Type name|Domino element|
-|:---|:---|
+| Type name | Domino element |
+| :--- | :--- |
 | `form` | Form |
 | `subform` | Subform |
 | `view` | View |
@@ -166,12 +166,12 @@ curl -X PUT -H "Authorization: Bearer $TOKEN" \
 ## Error reference
 
 | HTTP status | Meaning |
-|---|---|
-| 400 | Bad request — missing required parameter, invalid value, or malformed DXL |
+| --- | --- |
+| 400 | Bad request&mdash;missing required parameter, invalid value, or malformed DXL |
 | 401 | Missing or invalid JWT token |
 | 403 | Insufficient ACL access for this operation |
-| 404 | Resource not found (design element, frameset, import job) |
-| 500 | Internal server error — check the Domino KEEP log |
+| 404 | Resource not found&mdash;requested design element, frameset, or import job doesn't exist |
+| 500 | Internal server error&mdash;check the Domino KEEP log |
 
 All error responses include a JSON body with a `message` field describing the problem.
 
@@ -183,7 +183,7 @@ directly from the Domino 14.5 DXL schema (`domino_14_5.dtd`).
 ### `<agent>` attributes
 
 | Attribute | Type | Default | Description |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `name` | string | — | Agent name (required) |
 | `alias` | string | — | Alternate name |
 | `comment` | string | — | Description shown in Designer |
@@ -202,17 +202,17 @@ directly from the Domino 14.5 DXL schema (`domino_14_5.dtd`).
 #### `restrictions` values
 
 | Value | Description |
-|:---|:---|
+| :--- | :--- |
 | `restricted` | Restricted operations only |
 | `unrestricted` | Unrestricted operations allowed |
-| `fulladminunrestricted` | Full admin unrestricted (requires server trust) |
+| `fulladminunrestricted` | Full administrator unrestricted (requires server trust) |
 
 #### `formulatype` values
 
 For formula agents only.
 
 | Value | Description |
-|:---|:---|
+| :--- | :--- |
 | `modifydocs` | Formula modifies documents |
 | `createdocs` | Formula creates new documents |
 | `selectdocs` | Formula selects documents |
@@ -230,7 +230,7 @@ For scheduled agents, the `<trigger>` element contains a `<schedule>` child elem
 **`type` values**
 
 | Value | Description |
-|:---|:---|
+| :--- | :--- |
 | `actionsmenu` | Manually from Actions menu |
 | `agentlist` | Manually from agent list |
 | `beforenewmail` | Before new mail arrives |
@@ -265,7 +265,7 @@ Each optional child element contains a `<datetime>` element.
 #### `<schedule>` attributes
 
 | Attribute | Type | Default | Description |
-|:---|:---|:---|:---|
+| :--- | :--- | :--- | :--- |
 | `type` | see [details](#type-values) | — | Schedule frequency (required) |
 | `runlocation` | see [details](#runlocation-values) | — | Where the agent runs |
 | `runserver` | string | — | Server name when `runlocation='specific'` |
@@ -278,7 +278,7 @@ Each optional child element contains a `<datetime>` element.
 #### `type` values
 
 | Value | Description |
-|:---|:---|
+| :--- | :--- |
 | `automatic` | Schedule implied by trigger, such as `docupdate` |
 | `byminutes` | More than once a day; use `hours` and/or `minutes` attributes |
 | `daily` | Once per day |
@@ -289,7 +289,7 @@ Each optional child element contains a `<datetime>` element.
 #### `runlocation` values
 
 | Value | Description |
-|:---|:---|
+| :--- | :--- |
 | `any` | Any server |
 | `choose` | User chooses when enabling the agent |
 | `specific` | Specific server named in `runserver` attribute |
@@ -317,7 +317,7 @@ This is an **optional** element that specifies which documents that agent operat
 **`type` values**
 
 | Value | Description |
-|:---|:---|
+| :--- | :--- |
 | `modified` | All new and modified documents |
 | `unreadinview` | All unread documents in a view |
 | `allinview` | All documents in a view |
@@ -447,7 +447,7 @@ The following examples show the minimal payloads required to create agents. They
 
 ### DXL format
 
-- **Do not include an XML declaration.** The Domino DXL importer's XML parser is strict about where `<?xml version='1.0' ...?>` may appear. When our code wraps your element fragment inside a `<database>` element before importing, an XML declaration in your payload ends up *inside* the root element. This is illegal XML and causes an immediate fatal parse error:
+- **Do not include an XML declaration.** The Domino DXL importer's XML parser is strict about where `<?xml version='1.0' ...?>` may appear. When the code wraps your element fragment inside a `<database>` element before importing, an XML declaration in your payload ends up *inside* the root element. This is illegal XML and causes an immediate fatal parse error:
 
   ```text
   Fatal Error: No processing instruction starts with 'xml'
@@ -469,7 +469,7 @@ The following examples show the minimal payloads required to create agents. They
 
 When creating a Java agent using `PUT /{type}/{name}`, Domino attempts to compile the Java source immediately. On some server configurations, compilation can fail silently because of a wildcard `classpath` issue: `libs/*` is passed literally to `javac` instead of being shell-expanded.
 
-If compilation fails, the agent note is still created and signed correctly, but contains only the source and no compiled bytecode and will not run. The import response includes a warning similar to the following:
+If compilation fails, the agent note is still created and signed correctly but contains only the source code, with no compiled bytecode, and cannot be executed. The import response includes a warning similar to the following:
 
 ```text
 Java compile errors: error: illegal argument for --class-path: Illegal char <*>
@@ -485,7 +485,7 @@ The workaround is to open the agent in Domino Designer after import, which trigg
 
 The Domino C API DxlImporter silently drops `<action>` elements whose `title` attribute contains `&amp;` (the XML entity for `&`). For example, a button titled `Save & Close` is encoded in valid XML as `<action title='Save &amp; Close'>`, but the DxlImporter discards the entire element during import without any error raised and without any written log entry.
 
-The issue originates in the Notes C API, not in the DXL specification or this extension. To prevent import failures, DXL-EXT automatically sanitizes affected action button titles before passing DXL to the importer. For example, a title containing `&amp;` is rewritten to use `and` (`Save & Close` becomes `Save and Close`).
+The issue originates in the Notes C API, not in the DXL specification, or this extension. To prevent import failures, DXL-EXT automatically sanitizes affected action button titles before passing DXL to the importer. For example, a title containing `&amp;` is rewritten to use `and` (`Save & Close` becomes `Save and Close`).
 
 When DXL-EXT makes this change, the import response includes a `"sanitized"` array that lists each modified value:
 

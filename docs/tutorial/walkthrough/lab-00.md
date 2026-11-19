@@ -1,9 +1,9 @@
 # Lab 0 - Overview
 
-## What you will learn
+## What you'll learn
 
-- How to validate your laptop setup for the workshop.
-- Gain a first overview of the Domino REST API.
+- Validating your laptop setup for the workshop.
+- Gaining an overview of the Domino REST API.
 
 ## Before you begin
 

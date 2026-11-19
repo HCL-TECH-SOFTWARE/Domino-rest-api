@@ -72,9 +72,9 @@ The updated configuration takes effect the next time you start Domino REST API.
 
 ## Additional example
 
-In this additional example, the protocol will be swapped by disabling `TLSv1.2` and enabling `TLSv1.3`.
+In this additional example, the protocol can be swapped by disabling `TLSv1.2` and enabling `TLSv1.3`.
 
-The default configuration entry that you will see in the **Config** tab in the **Management Console** will look as follows:
+The default configuration entry that you see in the **Config** tab in the **Management Console** looks as follows:
 
 ```json
 {

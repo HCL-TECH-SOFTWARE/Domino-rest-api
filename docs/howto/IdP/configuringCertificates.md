@@ -8,7 +8,7 @@ Domino REST API uses certificates for:
 
 - signing JWT Tokens when you use Domino REST API's login API - 0..1 certificate
 - validating JWT Tokens issued by trusted Identity Providers (IdP) - 0..n certificates
-- Securing HTTPs traffic - 0..1 certificate
+- Securing HTTPS traffic - 0..1 certificate
 
 ## Obtain certificates
 
@@ -20,7 +20,7 @@ To get valid certificates, use any of the following approaches:
 
 - Ask your infrastructure, security or networking team (if you have one) for valid certificates.
 
-- <!--Wanting the first two options,-->On your own risk: Create your [own certificates using OpenSSL](https://gist.github.com/fntlnz/cf14feb5a46b2eda428e000157447309).
+- <!--Wanting the first two options,-->On your own risk, create your [own certificates using OpenSSL](https://gist.github.com/fntlnz/cf14feb5a46b2eda428e000157447309).
 
 !!! note
 
@@ -78,13 +78,13 @@ To get valid certificates, use any of the following approaches:
 
 ## Configure a certificate for HTTPS
 
-When configuring TLS, you can use JSON values or [environment variables](../../references/configuration/parameters.md#environment). You can use either of the two. When using both, the environment variable will take priority.
+When configuring TLS, you can use JSON values or [environment variables](../../references/configuration/parameters.md#environment). You can use either of the two. When using both, the environment variable takes priority.
 
 --8<-- "tlssettings.md"
 
 ### Enabling HTTPS using Domino Certificate Manager
 
-If you are using Domino 14 or above and your certificates are stored in the Domino Certificate Manager, you may be able to enable HTTPS automatically. For more information, see [Enable HTTPS using the Domino Certificate Manager](../production/dominohttps.md).
+If you are using Domino 14 or later and your certificates are stored in the Domino Certificate Manager, you may be able to enable HTTPS automatically. For more information, see [Enable HTTPS using the Domino Certificate Manager](../production/dominohttps.md).
 
 To learn more about Domino Certificate Manager, see [Managing TLS certificates with Certificate Manager](https://help.hcl-software.com/domino/14.0.0/admin/secu_le_using_certificate_manager.html?hl=certificate%2Cmanager).
 

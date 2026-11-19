@@ -4,7 +4,7 @@ This guide is designed to help users with working experience in HCL Notes and HC
 
 ## Step 1: Download the Domino REST API
 
-Log in to [My HCLSoftware Portal](https://my.hcltechsw.com/) and download the latest Domino REST API installer or container (Docker) image. For more information, see [Download Domino REST API](installconfig/install/downloaddrapi.md).
+Log in to [My HCLSoftware](https://my.hcltechsw.com/) portal and download the latest Domino REST API installer or container (Docker) image. For more information, see [Download Domino REST API](installconfig/install/downloaddrapi.md).
 
 ## Step 2: Install and run the Domino REST API
 
@@ -72,7 +72,7 @@ Ensure your endpoints are secure. Bring up a browser and verify that you can hit
 | [Management API](http://localhost:8889/) | 8889 | Access to the log and runtime info |
 | [Prometheus Metrics](http://localhost:8890/) | 8890 | Performance info in Prometheus format. Protected with basic authentication (metrics/metrics) |
 | [Health check endpoint](http://localhost:8886/) | 8886 | Server healthcheck endpoint as used by Kubernetes or OpenShift |
-| [Auth](http://localhost:8880/api/v1/auth) | 8880  | The endpoint, `[POST] http/s://${HOST}:8880/api/v1/auth`, is the default end point to exchange Domino web credentials for a JWT access token. For example, use the token in Postman request headers as a Bearer authentication header. You also can use your [own IdP](../howto/IdP/configuringIdentityProvider.md) to gain access tokens |
+| [Auth](http://localhost:8880/api/v1/auth) | 8880  | The endpoint, `[POST] http/s://${HOST}:8880/api/v1/auth`, is the default endpoint to exchange Domino web credentials for a JWT access token. For example, use the token in Postman request headers as a Bearer authentication header. You also can use your [own IdP](../howto/IdP/configuringIdentityProvider.md) to gain access tokens |
 
 ## What's Next?
 

@@ -18,7 +18,7 @@ To enable access to those, you need functional accounts. The same applies to the
 There are many reasons to keep these users separate from your enterprise directory:
 
 - They need to be available when the directory isn't available.
-- They don't need access to regular end points.
+- They don't need access to regular endpoints.
 
 !!! note
 

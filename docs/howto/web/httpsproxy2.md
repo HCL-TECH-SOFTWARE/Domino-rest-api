@@ -12,7 +12,7 @@ Again, Domino would run on port 81, but this version uses path settings instead 
 The path assignment looks like this:
 
 - /api: Domino REST API on port 8880
-- /admin/ui/: Domino REST API Admin UI on port 8880
+- /admin/ui/: Domino REST API **Admin UI** on port 8880
 - /keep: Domino REST API Homepage on port 8880
 - /openapi: OpenAPI spec files and UI on port 8880
 - /EWS: custom app on port 3000
@@ -24,7 +24,7 @@ The path assignment looks like this:
 - /jmapdownload custom app on port 3001
 - All the rest: Domino on port 81
 
-This example is using [Nginx](https://www.nginx.com/) and [Let's Encrypt](https://letsencrypt.org/). We start with a Port 80 configuration and then let [CertBot](https://certbot.eff.org/) handle the SSL configuration thereafter.
+This example is using [nginx](https://www.nginx.com/) and [Let's Encrypt](https://letsencrypt.org/). Start with a Port 80 configuration and then let [CertBot](https://certbot.eff.org/) handle the SSL configuration thereafter.
 
 ## Initial configuration
 

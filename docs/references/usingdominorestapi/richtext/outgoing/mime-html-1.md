@@ -1,6 +1,6 @@
 # Example 1: Outgoing MIME content as HTML
 
-Let's say you want to retrieve the following MIME content as HTML:
+Suppose you want to retrieve the following MIME content as HTML:
 
 ```text
 MIME-Version: 1.0

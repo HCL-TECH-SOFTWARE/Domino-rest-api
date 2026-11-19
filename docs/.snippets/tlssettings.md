@@ -1,6 +1,6 @@
 <!--To configure a certificate for HTTPS-->
 
-Use the following entry to configure TLS for jks or pfx (set TLSType to the correct type): 
+Use the following entry to configure TLS for JKS or PFX (set TLSType to the correct type):
 
 ```json
 {
@@ -9,7 +9,8 @@ Use the following entry to configure TLS for jks or pfx (set TLSType to the corr
   "TLSType": "pfx"
 }
 ```
-Use the following to configure TLS for pem:
+
+Use the following to configure TLS for PEM:
 
 ```json
 {
@@ -20,17 +21,18 @@ Use the following to configure TLS for pem:
 ```
 <!-- prettier-ignore -->
 !!!note
-    - `TLSfile` must point to private key, while the `PEMCert` must point to the certificate chain. 
+    - `TLSfile` must point to private key, while the `PEMCert` must point to the certificate chain.
     - If you won't define a password, you must set the value of `TLSPassword` to `""`.
 
-- **JKS**: The [Java Key Store](https://en.wikipedia.org/wiki/Java_KeyStore). Only used by Java, follow the [JKS documentation](https://docs.oracle.com/cd/E19509-01/820-3503/ggfen/index.html)
+- **JKS**: [Java KeyStore](https://en.wikipedia.org/wiki/Java_KeyStore). Only used by Java. Refer to the [JKS documentation](https://docs.oracle.com/cd/E19509-01/820-3503/ggfen/index.html) for details.
 
-- **PEM**: defined in [RFC 1422](https://www.rfc-editor.org/rfc/rfc1422), commonly used in http server
+- **PEM**: defined in [RFC 1422](https://www.rfc-editor.org/rfc/rfc1422), and commonly used in HTTP server
 
 - **PFX**: defined in [RFC 7292](https://www.rfc-editor.org/rfc/rfc7292), the RSA provided Public-Key Cryptography Standards
 
 <!-- prettier-ignore -->
 !!! tip
+
     It's your choice which key you want to use. Main considerations are the assessment of your security team and the ease of acquisition of a specific key format in your organization.
 
 <!--

@@ -1,17 +1,14 @@
 title: Using Domino REST API
 
 nav:
-  - index.md
-  - keepapplications.md
-  - keepcli.md
-  - restapitask.md
-  - roles.md
-  - dataformats.md
-  - Encryption, decryption, and signing: encryptsign.md
-  - formnames.md
-  - modenames.md
-  - Rich Text: richtext
+    - index.md
+    - keepapplications.md
+    - keepcli.md
+    - restapitask.md
+    - roles.md
+    - dataformats.md
+    - Encryption, decryption, and signing: encryptsign.md
+    - formnames.md
+    - modenames.md
+    - Rich Text: richtext
 #  - scopes.md
-
-  
-  

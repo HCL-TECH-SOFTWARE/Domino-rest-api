@@ -6,7 +6,8 @@ Guides you on how to customize which API schemas and endpoints are available or 
 
 ## Before you begin
 
-!!!note
+!!! note
+
     This prerequisite is applicable to [Customize available endpoints in a specific API schema](#customize-available-endpoints-in-a-specific-api-schema).
 
 You have to take note of the `operationId` of the endpoints in a specific API schema that you want to be unavailable.
@@ -20,7 +21,7 @@ You have to take note of the `operationId` of the endpoints in a specific API sc
 
     As an example, **basis** API schema is selected.
 
-3. Select the endpoint or endpoints that you don't want to be available. You will see the value of the `operationId` after the endpoint description.
+3. Select the endpoint or endpoints that you don't want to be available. You can see the value of the `operationId` after the endpoint description.
 
     In the example image, the `operationId` of each listed endpoint is enclosed in the red box.
 
@@ -74,7 +75,7 @@ This procedure enables you customize which API schemas are unavailable to end us
     }
     ```
 
-    For example, if you want to make the *HCL Domino REST API admin 1.0.2* API schema unavailable, you will add the following to the JSON file:
+    For example, if you want to make the *HCL Domino REST API admin 1.0.2* API schema unavailable, add the following to the JSON file:
 
     ``` json
     {
@@ -161,8 +162,9 @@ The following images show the availability of the `POST v1/document` and `GET v1
 
 This procedure enables you to make endpoints in API schemas available to end users according to the `keepVersion` parameter. Each endpoint in an API schema has an `x-keep-version` attribute whose value corresponds to the supported API version defined by the `keepVersion` parameter. By modifying the value of the `keepVersion` parameter, you can make endpoints that are experimental or endpoints under development that might be supported in future releases available to meet your specific use case.  
 
-!!!warning "Important"
-    Even if experimental endpoints or endpoints to be supported in future releases can be made available, there is no guarantee that they will function as expected.
+!!! warning "Important"
+
+    Even if experimental endpoints or endpoints to be supported in future releases can be made available, their functionality is not guaranteed.
 
 1. Create a JSON file using a text editor.
 2. Add the `keepVersion` parameter with a value of `5`.

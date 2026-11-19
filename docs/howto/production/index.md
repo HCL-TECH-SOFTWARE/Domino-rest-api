@@ -1,4 +1,4 @@
-# Configuration for Production
+# Configuration for production
 
 --8<-- "future.md"
 

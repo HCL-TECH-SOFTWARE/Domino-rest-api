@@ -1,6 +1,6 @@
 # Example: Outgoing Rich Text content as HTML
 
-Let's say you want to retrieve the following Rich Text content as HTML:
+Suppose you want to retrieve the following Rich Text content as HTML:
 
 ![Example Rich Text content](../../../../assets/images/ExampleRichtextContent.png)
 

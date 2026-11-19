@@ -1,6 +1,6 @@
 # Access Domino OData in MS-Excel
 
-The Domino REST API allows exporting of data from Notes databases to [OData](https://www.odata.org) format, which can then be read by applications like Excel for Windows and Mac, Salesforce, SAP and Business Intelligence.
+The Domino REST API allows exporting of data from Notes databases to [OData](https://www.odata.org) format, which can then be read by applications like Excel for Windows and Mac, Salesforce, SAP, and Business Intelligence.
 This means that the data in a Notes database can be displayed in something as simple as Excel with just a few clicks.
 
 ## For Windows

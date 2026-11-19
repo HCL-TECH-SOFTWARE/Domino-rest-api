@@ -1,6 +1,6 @@
 # Example: Incoming multipart/mixed
 
-Let's say you want to save the following `multipart/mixed` MIME in a `richtext` field:
+Suppose you want to save the following `multipart/mixed` MIME in a `richtext` field:
 
 ```text
 MIME-Version: 1.0
@@ -34,7 +34,7 @@ You first convert it to `BASE64` encoding and use that as the `content` in the f
 }
 ```
 
-Using the mentioned Rich Text JSON, it will then save the following MIME:
+Using the aforementioned Rich Text JSON, the following MIME content is saved:
 
 ```text
 MIME-Version: 1.0

@@ -1,6 +1,6 @@
 # Example: Outgoing Rich Text content as MIME
 
-Let's say you want to retrieve the following Rich Text content as MIME:
+Suppose you want to retrieve the following Rich Text content as MIME:
 
 ![Example Rich Text content](../../../../assets/images/ExampleRichtextContent.png)
 

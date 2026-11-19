@@ -18,8 +18,9 @@ The procedure guides you in making changes to the Domino ID vault configuration,
 
 ## Procedure
   
-!!!note
-    The steps require you to define your OIDC provider for Domino REST API. In this case, we'll be using a Keycloak installation as an example. If you haven't yet set up Keycloak, see [Configure Keycloak](../IdP/configuringKeycloak.md) before proceeding.
+!!! note
+
+    The steps require you to define your OIDC provider for Domino REST API. In this case, you'll be using a Keycloak installation as an example. If you haven't yet set up Keycloak, see [Configure Keycloak](../IdP/configuringKeycloak.md) before proceeding.
 
 ### 1. Configure Keycloak
 
@@ -47,7 +48,7 @@ You need to make some modifications in your Keycloak installation to allow acces
 
 4. Add a mapper.
 
-    1. After saving, you will see the **Mappers** tab. Click it.
+    1. After saving, you can see the **Mappers** tab. Click it.
     2. Click **Add Mapper** and then **Configure a new mapper**.
     3. In the **Configure a new mapper** dialog, select **Audience**.
     4. Set the **Name** to *VaultAud*.
@@ -80,7 +81,7 @@ You need to make some modifications in your Keycloak installation to allow acces
     - Get the Base URL.
 
         1. Go to **Realm settings**.
-        2. At the bottom of the **General** tab, click the `OpenID Endpoint Configuration` link. A JSON will display.
+        2. At the bottom of the **General** tab, click the `OpenID Endpoint Configuration` link. A JSON is displayed.
         3. Find the key `"issuer"`, its value is the value of the Base URL.  
 
 ### 2. Update `notes.ini`

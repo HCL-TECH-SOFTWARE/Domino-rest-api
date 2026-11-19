@@ -1,9 +1,9 @@
 # Lab 9 - Unlock additional ports
 
-## What you will learn
+## What you'll learn
 
 - Understanding of metrics, healthcheck, and management.
-- How to configure functional accounts.
+- Configuring functional accounts.
 
 ## Before you begin
 
@@ -53,7 +53,7 @@ Your Domino server must be running.
 
 ## How to verify
 
-To verify access using the functional accounts, navigate to the following URLs. You will be prompted for basic authentication. Enter the username corresponding to the key specified in the JSON file and the password *supersecret*.
+To verify access using the functional accounts, navigate to the following URLs. You'll be prompted for basic authentication. Enter the username corresponding to the key specified in the JSON file and the password *supersecret*.
 
 - Healthcheck: [http://localhost:8886/health](http://localhost:8886/health)
 

@@ -1,12 +1,12 @@
 # Example: Incoming text/html + plain
 
-Let's say you want to save the following `text/html` content in a `richtext` field:
+Suppose you want to save the following `text/html` content in a `richtext` field:
 
 ```text
 <b>this is the body text</b>
 ```
 
-Additionally, let's say you also want to create a `plain` alternative of the `text/html` content. You then use the following Rich Text JSON:
+Additionally, suppose you also want to create a `plain` alternative of the `text/html` content. You then use the following Rich Text JSON:
 
 ```json
 {

@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Schema Management page in the Admin UI allows you to define, view, and modify schemas, which determine what data is accessible via the REST API for reading and writing.
+The Schema Management page in the **Admin UI** allows you to define, view, and modify schemas, which determine what data is accessible via the REST API for reading and writing.
 
 The schema is the shape of data available and is a JSON file in the design resources of the Domino database. It gets created by a developer with *Designer* access to the Domino database. This creates an alias to the schema. This, along with a scope, provides access to the database via the Domino REST API. One Domino database can have multiple schemas, which is useful to provide different data sets or different levels of access to data.
 
@@ -118,7 +118,7 @@ You can click the **Show Active** toggle to the on position to only show active 
 The **Add New Form Schema** feature enables the creation of a new custom form through which you can set up a schema. The feature doesn't create a new form on the backend, so it won't exist in the database. Everything related to the new form is contained within the schema. Therefore, if you delete the form, it's only removed from the list of forms on the **Database Forms** tab.
 
 1. Click **Add New Form Schema**.
-2. In the **Add New Form Schema** dialog, enter your schema name and click **Create**.
+2. In the **Add New Form Schema** dialog, enter your schema name, and click **Create**.
 3. On the **Schema Management - <schema name\>** page, select a form from the **Show fields from** dropdown field to display the fields of the selected form. You can also select **All Fields** from the dropdown field to display all the fields from all the available forms.
 4. Select the fields that you want to add to the mode.
 5. Configure the **Field Setting** and **Mode Settings** as needed for each added field.

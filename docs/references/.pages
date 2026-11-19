@@ -1,34 +1,34 @@
 title: References
 
 nav:
-  - index.md
-#  - What's new: whatsnew
-  - System requirements: https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789
-  - Installation and configuration: tutorial/installconfig/index.html
-  - Configuration overview: configuration
-#  - understandingconfig.md
-  - Functional accounts: functionalUsers.md
-#  - hostingstatic.md
-  - OpenAPI: openapidefinitions.md
-  - accesscontrol.md
-  - Schema and scope overview: schemacomponents
-  - Using Domino REST API: usingdominorestapi
-  - Using Admin UI: usingwebui
-  - Security: security
-#  - User tools: usertools
-  - Extensibility: extensibility
-#  - parameters.md
-  - sdk.md
-  - DXL Extension API: dxl
-  - troubleshooting.md
-  - limitation.md
-  - richtextension.md
-  - Standards and glossary: standards.md
-#  - Quick reference: quickreference
-  - support.md
-  - usertools.md
-  - downloads.md
-#  - admincheatsheet.md
-#  - ofba.md
-  - deprecated.md
-  - docguide.md
+    - index.md
+  #  - What's new: whatsnew
+    - System requirements: https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789
+    - Installation and configuration: tutorial/installconfig/index.html
+    - Configuration overview: configuration
+  #  - understandingconfig.md
+    - Functional accounts: functionalUsers.md
+  #  - hostingstatic.md
+    - OpenAPI: openapidefinitions.md
+    - accesscontrol.md
+    - Schema and scope overview: schemacomponents
+    - Using Domino REST API: usingdominorestapi
+    - Using Admin UI: usingwebui
+    - Security: security
+  #  - User tools: usertools
+    - Extensibility: extensibility
+  #  - parameters.md
+    - sdk.md
+    - DXL Extension API: dxl
+    - troubleshooting.md
+    - limitation.md
+    - richtextension.md
+    - Standards and glossary: standards.md
+  #  - Quick reference: quickreference
+    - support.md
+    - usertools.md
+    - downloads.md
+  #  - admincheatsheet.md
+  #  - ofba.md
+    - deprecated.md
+    - docguide.md

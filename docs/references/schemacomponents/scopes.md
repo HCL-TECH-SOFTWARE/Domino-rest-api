@@ -12,10 +12,10 @@ This element determines what resources the API access intends to use.
 
 Scopes are a space-separated lists of values. By default, a user who authenticates with Domino to gain a JWT token has the following scope values in the claim:
 
-- MAIL: Access to the user's mailbox and calendar.
-- $DATA: Access to any application the user has access to.
-- $DECRYPT: Access to decrypt encrypted items if the database has decryption enabled. (Requires proper setup.)
-- $SETUP: Access control to endpoints that run write operations (CUD) in the `/setup-v1/` URL space. When your application is accessing endpoints that run write operations (CUD) in the `/setup-v1/` URL space, update your scope from `$DATA` to `$DATA $SETUP`.
+- MAIL: access to the user's mailbox and calendar.
+- $DATA: access to any application the user has access to.
+- $DECRYPT: access to decrypt encrypted items if the database has decryption enabled. (Requires proper setup.)
+- $SETUP: access control to endpoints that run write operations (CUD) in the `/setup-v1/` URL space. When your application is accessing endpoints that run write operations (CUD) in the `/setup-v1/` URL space, update your scope from `$DATA` to `$DATA $SETUP`.
 
 A scope doesn't **open** access to a resource; that's the job of the database ACL. A scope **limits** access.
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This tutorial provides step-by-step instructions for using the Admin UI to configure and manage a Domino database. It covers the preparation of database access, logging in, creation of schemas and scopes, configuration of database forms, views, and agents, and logging out.
+This tutorial provides step-by-step instructions for using the **Admin UI** to configure and manage a Domino database. It covers the preparation of database access, logging in, creation of schemas and scopes, configuration of database forms, views, and agents, and logging out.
 
 ## Prepare database access
 
@@ -13,13 +13,13 @@ You can download and use the example Domino database `Demo.nsf` to complete this
 
 ## Video tutorial
 
-You can watch the video for a visual walkthrough of using the Admin UI. The steps in the video closely follow the instructions in this topic and intend to serve as a visual reference to enhance your understanding. The video shows you the instructions for logging in to the Admin UI, creating schemas and scopes, managing database forms, views, and agents, and configuring activated forms.
+You can watch the video for a visual walkthrough of using the **Admin UI**. The steps in the video closely follow the instructions in this topic and intend to serve as a visual reference to enhance your understanding. The video shows you the instructions for logging in to the **Admin UI**, creating schemas and scopes, managing database forms, views, and agents, and configuring activated forms.
 
 <div class="iframe-container"><iframe width="600" height="400" src="../assets/video/drapivideo1.mp4" title="Using Admin UI"></iframe></div>
 
 ## Log in to Admin UI
 
-1. Open your web browser and navigate to the Admin UI URL.
+1. Open your web browser and navigate to the **Admin UI** URL.
 
     For example: `http://<your-host>:8880/admin/ui`
 
@@ -83,7 +83,7 @@ A scope enables access to a schema via the Domino REST API. One Domino database 
 
 3. Under **Available Schema**, click `Demo.nsf`. This shows a list of schemas that uses `Demo.nsf` as a database.
 4. Select the schema you created earlier.
-5. Under **Add New Scope**, fill in the form and click **Add**.
+5. Under **Add New Scope**, fill in the form, and click **Add**.
 
     For the **Server** field, enter the name of the server the scope is available on, or leave it blank for the current server. The value of the entered name must be either the server's hierarchical name or in canonical format. See the following examples for reference:
 
@@ -164,7 +164,7 @@ When finished with your configurations, you can log out from the **Admin UI**.
 
 ## Additional information
 
-- Everything you can perform via the Admin UI can also be done using Postman, curl, or Swagger UI. For more information, see the following tutorials:
+- Everything you can perform via the **Admin UI** can also be done using Postman, curl, or Swagger UI. For more information, see the following tutorials:
 
     - [Using Postman and curl](./postmancurl.md)
     - [Swagger UI](./swagger.md)

@@ -69,9 +69,9 @@ To use JWT tokens from an external provider, Domino REST API requires access to 
     3. Save the JSON file in the `keepconfig.d` directory.
     4. Restart Domino REST API.
 
-    During initialization, Domino REST API will query this endpoint for issuer and key information to trust public keys from that service.
+    During initialization, Domino REST API queries this endpoint for issuer and key information to trust public keys from that service.
 
-    Some IdP, such as [Microsoft Entra ID formerly Azure Active Directory](../../../howto/IdP/configuringAD.md), don't provide full information, missing algorithm or accurate issuer info. For them, additional parameters `aud`, `iss` and `algorithm` can be specified as shown below:
+    Some IdP, such as [Microsoft Entra ID formerly Azure Active Directory](../../../howto/IdP/configuringAD.md), don't provide full information, missing algorithm, or accurate issuer info. For them, additional parameters `aud`, `iss` and `algorithm` can be specified as shown below:
 
     ```json
     {

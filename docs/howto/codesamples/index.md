@@ -11,23 +11,23 @@ The Domino REST API can be called by any HTTP library in any language following 
 Look at the implemented source code to see a working implementation
 
 | Mentioned | Source | Language |
-|----| ---- | ---- |
+| ---- | ---- | ---- |
 | Walkthrough [Lab 06](../../tutorial/walkthrough/lab-06.md) | [Source](../../tutorial/downloads/apps-src.zip) | NodeJS (OAuth) |
 | Walkthrough [Lab 07](../../tutorial/walkthrough/lab-07.md) | [Source](../../tutorial/downloads/apps-src.zip) | JavaScript (Browser) |
 | Walkthrough [Lab 08](../../tutorial/walkthrough/lab-08.md) | [Source](../../tutorial/downloads/apps-src.zip) | Java |
 | The landing page | use `view source` | JavaScript |
 
-Read more details in the sub-pages (menu on the left).
+<!--Read more details in the sub-pages (menu on the left).-->
 
 ## On Postman usage
 
-Postman offers to handle authentication for a user, which is "just" a shiny UI covering what goes into the `Authorization` header. For our sample collection, we took a different approach following the 2 steps outlined above. We use a [Postman environment](https://learning.postman.com/docs/sending-requests/managing-environments/) to capture the bearer in a test:
+Postman offers to handle authentication for a user, which is "just" a shiny UI covering what goes into the `Authorization` header. For the sample collection, a different approach is taken following the 2 steps outlined above. A [Postman environment](https://learning.postman.com/docs/sending-requests/managing-environments/) is used to capture the bearer in a test:
 
-1. Have an environment and set the collection to `No Auth`.
+1. Set up an environment and set the collection to `No Auth`.
 
       ![Postman No Auth](../../assets/images/code/pm-collection.png)
 
-2. Have a login action that pulls username/password from the environment (you have to add them there).
+2. Create a login action that pulls username/password from the environment. You have to add them there.
 
       ![Postman Login](../../assets/images/code/pm-login01.png)
 

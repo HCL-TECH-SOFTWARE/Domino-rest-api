@@ -25,7 +25,7 @@ Follow the procedure based on the installation option you used when installing t
 ### Docker
 
 1. Remove the existing docker container.
-2. If using the docker image from *My HCLSoftware portal*, load the docker image using the following command:
+2. If using the docker image from **My HCLSoftware** portal, load the docker image using the following command:
 
     ```bash
     docker load -i [name_of_tar_file].tar
@@ -39,7 +39,7 @@ Follow the procedure based on the installation option you used when installing t
 
 3. Take note of the image name.
 
-    - When using the docker image from *My HCLSoftware Portal*, take note of the image name that was output after being loaded. The image name is also indicated in the [What’s New](../../whatsnew/index.md) for each version of the Domino REST API and marked *Docker image version for docker compose .env file (CONTAINER_IMAGE)*.
+    - When using the docker image from **My HCLSoftware** portal, take note of the image name that was output after being loaded. The image name is also indicated in the [What’s New](../../whatsnew/index.md) for each version of the Domino REST API and marked *Docker image version for docker compose .env file (CONTAINER_IMAGE)*.
 
         !!! example "Example loaded image name"
 
@@ -155,8 +155,8 @@ Follow the procedure based on the installation option you used when installing t
 
 !!! note
 
-    - Don't install using the java executable in `/opt/hcl/domino/bin/`.
-    - If your system doesn't have Java installed, you can use the java executable in the `/opt/hcl/domino/notes/latest/linux/jvm/bin/` directory.
+    - Don't install using the Java executable in `/opt/hcl/domino/bin/`.
+    - If your system doesn't have Java installed, you can use the Java executable in the `/opt/hcl/domino/notes/latest/linux/jvm/bin/` directory.
 
 To update to the latest release version, run the following command:
 

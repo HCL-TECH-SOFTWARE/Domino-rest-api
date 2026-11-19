@@ -33,14 +33,14 @@ The procedure guides you on how to set up and use the Microsoft Office Round Tri
 
         Where:
 
-        |Property|Description|
-        |:-----|:--------|
-        |scheme name|Scheme name of Microsoft Office application</br></br>When Microsoft Office is installed, each scheme name is registered with the operating system to be handled by the Office product of the same name. Below is a list of scheme names:</br></br>ms-word</br>ms-powerpoint</br>ms-excel</br>ms-visio</br>ms-access</br>ms-project</br>ms-publisher</br>ms-infopath|
-        |command name|Describes the action that the application should perform.</br></br>**ofv** - to view the file attachment</br>**ofe** - to edit the file attachment</br>|
-        |DRAPI HTTPS hostname| Domino REST API HTTPS hostname|
-        | dataSource | Domino database where your current document is uploaded or attached.|
-        | document UNID| Universal ID of the Domino document.|
-        | filename | Filename of the Microsoft Office file attached to the Domino document.|
+        | Property | Description |
+        | :--- | :--- |
+        | scheme name | Scheme name of Microsoft Office application</br></br>When Microsoft Office is installed, each scheme name is registered with the operating system to be handled by the Office product of the same name. Below is a list of scheme names:</br></br>ms-word</br>ms-powerpoint</br>ms-excel</br>ms-visio</br>ms-access</br>ms-project</br>ms-publisher</br>ms-infopath |
+        | command name | Describes the action that the application should perform.</br></br>**ofv** - to view the file attachment</br>**ofe** - to edit the file attachment</br> |
+        | DRAPI HTTPS hostname | Domino REST API HTTPS hostname |
+        | dataSource | Domino database where your current document is uploaded or attached. |
+        | document UNID | Universal ID of the Domino document. |
+        | filename | Filename of the Microsoft Office file attached to the Domino document. |
 
         **Example link**:</br>
         `ms-word:ofv|u|whitepalace.keepproject.io:8880/api/webdav-v1/attachment/attachmentdb/2D88CDF9549379C700258A9F002797CA/sample.docx`
@@ -55,7 +55,7 @@ The procedure guides you on how to set up and use the Microsoft Office Round Tri
 
             Make sure to set the value of the `includeProtocolUrl` query parameter to `true` to include the attachment URLs in the query response.
 
-        The query response shows the filenames of the attachments and the URLs of the attachments with supported file extensions. There are two URLs for each attachment, one for viewing as indicated by the `ofv` command name and one for editing as indicated by the `ofe` command name included in the URLs. Attachments with unsupported file extensions will have no URLs.
+        The query response shows the filenames of the attachments and the URLs of the attachments with supported file extensions. There are two URLs for each attachment, one for viewing as indicated by the `ofv` command name and one for editing as indicated by the `ofe` command name included in the URLs. Attachments with unsupported file extensions have no URLs.
 
         The query response example below shows the attachment file named `document.docx` has two URLs, as the file extension `.docx` is supported. However, no URLs are available for the attachment file named `sample.png` as the file extension `.png` isn't yet supported.
 
@@ -103,7 +103,7 @@ The procedure guides you on how to set up and use the Microsoft Office Round Tri
 
     !!! note
 
-        You might see a different login dialog with less functionality for OFBA when doing this on **Windows**. It's because some Microsoft applications in **Windows** still use **Internet Explorer**, and many of the functionalities we use in the original login dialog are unsupported.
+        You might see a different login dialog with less functionality for OFBA when doing this on **Windows**. It's because some Microsoft applications in **Windows** still use **Internet Explorer**, and many of the functionalities used in the original login dialog are unsupported.
 
     The MS Office file attachment is now opened in the applicable MS Office application. In the following image, you see an opened MS Word document as an example.
 
@@ -133,13 +133,13 @@ The procedure guides you on how to set up and use the Microsoft Office Round Tri
 
 This section lists filename extensions recognized by the Domino REST API for Office Forms Based Authentication.
 
-|Application|Filename extensions|
-|:---|:---|
-|Microsoft Word|`.doc`, `.docm`, `.docx`, `.dot`, `.dotm`, `.dotx` |
-|Microsoft PowerPoint|`.pot`, `.potm`, `.potx`, `.ppt`, `.pptm`, `.pptx`, `.pps`, `.ppsm`, `.ppsx`, `.sldm`, `.sldx`|
-|Microsoft Excel|`.xla`, `.xla`, `.xlm`, `.xls`, `.xlsb`, `.xlsm`, `.xlsx`, `.xlt`, `.xltm`, `.xltx`, `.xlw`, `.csv`|
-|Microsoft Visio|`.vdx`, `.vsd`, `.vsdx`, `.vss`, `.vst`, `.vsw`, `.vsx`, `.vtx`|
-|Microsoft Access|`.accda`, `.accdb`, `.accdc`, `.accde`, `.accdp`, `.accdr`, `.accdt`, `.accdu`, `.mdb`|
-|Microsoft Project|`.mpd`, `.mpp`, `.mpt`|
-|Microsoft Publisher|`.pub`|
-|Microsoft InfoPath|`.xsn`, `.xsf`|
+| Application | Filename extensions |
+| :--- | :--- |
+| Microsoft Word | `.doc`, `.docm`, `.docx`, `.dot`, `.dotm`, `.dotx` |
+| Microsoft PowerPoint | `.pot`, `.potm`, `.potx`, `.ppt`, `.pptm`, `.pptx`, `.pps`, `.ppsm`, `.ppsx`, `.sldm`, `.sldx` |
+| Microsoft Excel | `.xla`, `.xla`, `.xlm`, `.xls`, `.xlsb`, `.xlsm`, `.xlsx`, `.xlt`, `.xltm`, `.xltx`, `.xlw`, `.csv` |
+| Microsoft Visio | `.vdx`, `.vsd`, `.vsdx`, `.vss`, `.vst`, `.vsw`, `.vsx`, `.vtx` |
+| Microsoft Access | `.accda`, `.accdb`, `.accdc`, `.accde`, `.accdp`, `.accdr`, `.accdt`, `.accdu`, `.mdb` |
+| Microsoft Project | `.mpd`, `.mpp`, `.mpt` |
+| Microsoft Publisher | `.pub` |
+| Microsoft InfoPath | `.xsn`, `.xsf` |

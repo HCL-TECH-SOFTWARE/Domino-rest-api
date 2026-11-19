@@ -38,12 +38,12 @@ The `oauth.nsf` database exists in your Domino data directory. The Domino IdP us
          For more information, see the following table:
 
          | Property | Description |
-         | :---------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-         | `active`                | **Required** <br><br>It has a boolean value indicating if the provided token is now active. If the token is issued by this authorization server, it isn't revoked by the user, and it's not yet expired, the value should be `true`. |
-         | `database`              | The `nsf` file where the authorization details are stored. |
-         | `url`                   | Server URL |
-         | `authCodeExpiresIn`     | The code expiration time in seconds. |
-         | `accessTokenExpiresIn`  | The access token expiration time in seconds. |
+         | :--- | :--- |
+         | `active` | **Required** <br><br>It has a boolean value indicating if the provided token is now active. If the token is issued by this authorization server, it isn't revoked by the user, and it's not yet expired, the value should be `true`. |
+         | `database` | The `nsf` file where the authorization details are stored. |
+         | `url` | Server URL |
+         | `authCodeExpiresIn` | The code expiration time in seconds. |
+         | `accessTokenExpiresIn` | The access token expiration time in seconds. |
          | `refreshTokenExpiresIn` | The refresh token expiration time in seconds. |
 
       3. Change the value of the `url` parameter to match your Domino REST API host.

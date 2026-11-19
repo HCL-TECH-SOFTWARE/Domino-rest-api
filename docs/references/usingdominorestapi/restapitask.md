@@ -35,7 +35,7 @@ Use these commands for refreshing and restarting the Domino REST API from the Do
 
 |Command|Purpose|
 |:---|:---|
-|`tell restapi refresh`|Refreshes Domino REST API with new configuration.<br/><br/>When issuing this command, new incoming requests will be blocked, returning an HTTP Error 503 response. The existing queue of requests will be processed, and once completed, the new configuration will take effect, allowing new requests to be accepted.|
+|`tell restapi refresh`|Refreshes Domino REST API with new configuration.<br/><br/>When issuing this command, new incoming requests are blocked, returning an HTTP Error 503 response. The existing queue of requests is processed, and once completed, the new configuration takes effect, allowing new requests to be accepted.|
 |`tell restapi refresh cache`|Reloads all schemas, scopes, and applications into the cache.<br/><br/>Run this command after manually updating a schema, scope, or application so that the updates are immediately implemented and available.|
 |`tell restapi reload`|Restarts Domino REST API with new configuration.|
 
@@ -88,14 +88,14 @@ The following are settings that can be set in the `notes.ini`.
 | `KeepJavaHome` | optional | Use a different Java binary than the one in {dominoBin}/jvm |
 | `KeepManagementURL` | optional | Domino REST API management URL if different from http://localhost:8889 |
 | `KeepNumAttachAttempts` | optional | Number of attempts to get status of Domino REST API launch (default 10). There is a 3-second interval between attempts. |
-| `KeepLaunchWaitSecs` | optional | Number of seconds to wait before executing java command (default 0) |
+| `KeepLaunchWaitSecs` | optional | Number of seconds to wait before executing Java command (default 0) |
 
 ### Reserved settings for notes.ini
 
 The following are reserved settings that should only be used when directed by Support.
 
 | Setting | Requirement | Description |
-|:---|:---|:---|
+| :--- | :--- | :--- |
 | `KeepLogConfigFile` | optional | Path to an alternate [Log4j2](https://logging.apache.org/log4j/2.x/index.html) configuration file |
 | `KeepCurlLogging` | optional | default `false`, prints curl commands to console |
 | `KeepAddinLogging` | optional | default `false`, prints debug statements for the restapi task |

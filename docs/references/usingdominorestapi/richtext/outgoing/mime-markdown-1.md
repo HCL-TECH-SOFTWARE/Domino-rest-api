@@ -1,6 +1,6 @@
 # Example 1: Outgoing MIME content as Markdown
 
-Let's say you want to retrieve the following MIME content as Markdown:
+Suppose you want to retrieve the following MIME content as Markdown:
 
 ```text
 MIME-Version: 1.0

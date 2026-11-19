@@ -123,7 +123,7 @@ If there is an existing installation at the location you specified as the `resta
   - If this file exists, the installer uses this list as the list of files to remove before proceeding.
 
     - If you specified `-u` on the command line, removal of the old files and installation of the new version are performed.
-    - If you didn't specify `-u`, you will be asked if you want to upgrade. Answering `A <enter>` continues the removal of the old files and the installation of the new version.
+    - If you didn't specify `-u`, a prompt asks if you want to upgrade. Answering `A <enter>` continues the removal of the old files and the installation of the new version.
 
   - If this file doesn't exist, which it didn't with `Domino REST API V1`, the installer checks to see if this is V1 by checking for the existence of the `keep-core-1.9.5.jar` file in the Domino REST API directory.
 
@@ -132,10 +132,10 @@ If there is an existing installation at the location you specified as the `resta
         - If you specified `-u` on the command line, old files are removed and installation of the new version is performed.
         - If you didn't specify `-u`, you'll be asked if you want to upgrade. Answering `A <enter>` continues the removal of the old files and the installation of the new version. Pressing any other key aborts the process.
 
-    - If this isn't V1, you are notified that an unknown version has been found, and if you want to proceed, you will need to force an upgrade to continue. Forcing an upgrade removes ALL files from the Domino REST API directory and it's subdirectories, so take care that any files you may have put there will be removed. Domino REST API doesn't store any configuration or user files in the Domino REST API directory, only its runtime and libraries.
+    - If this isn't V1, you are notified that an unknown version has been found, and if you want to proceed, you'll need to force an upgrade to continue. Forcing an upgrade removes ALL files from the Domino REST API directory and its subdirectories. Any files placed in these directories are also deleted, so make sure to back up anything you want to keep before proceeding. Domino REST API doesn't store any configuration or user files in the Domino REST API directory, only its runtime, and libraries.
   
         - If you specified `-f` on the command line, all files in the Domino REST API directory structure are removed and installation of the new version is performed.
-        - If you didn't specify `-f`, you will be asked if you want to force an upgrade. Answering `A <enter>` continues the removal of all files in the REST API directory structure and the installation of the new version. Pressing any other key aborts the process.
+        - If you didn't specify `-f`, you'll be asked if you want to force an upgrade. Answering `A <enter>` continues the removal of all files in the REST API directory structure and the installation of the new version. Pressing any other key aborts the process.
 
 ## Next step
 

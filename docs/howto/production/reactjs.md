@@ -14,7 +14,7 @@ The Domino REST API allows hosting [SPA](https://en.wikipedia.org/wiki/Single-pa
 
 ## Procedure
 
-In the steps below, the name of the application, and thus the folder name, will be `mydominoreact`. Each application needs its own name, so replace `mydominoreact` with the name of your choice. Following web conventions, use lowercase characters and nothing special in the name, especially no spaces or slashes in any direction.
+In the steps below, the application name, and consequently the folder name, is `mydominoreact`. Each application needs its own name, so replace `mydominoreact` with the name of your choice. Following web conventions, use lowercase characters and nothing special in the name, especially no spaces or slashes in any direction.
 
 1. To ensure proper path resolution, you need to add `PUBLIC_URL=/keepweb/mypromydominoreactject` parameter to `.env` file.
 

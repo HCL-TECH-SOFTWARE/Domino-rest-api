@@ -6,8 +6,7 @@ Every organization's size and structure vary, and it's up to the organization wh
 
 ## Domino developer
 
-This role creates the **schema** that defines what data can be accessed in a Domino database. Schemas can be created using the Domino REST API, the Domino REST API GUI (Admin UI) or Domino designer editing the schema JSON file. Schemas are subject to standard inheritance rules, so a schema in a template will be inherited by databases derived from it.
-To create, update, or delete a schema, the Domino developer must have a _Designer_ access or higher roles to the application database.
+This role creates the **schema** that defines what data can be accessed in a Domino database. Schemas can be created using the Domino REST API, the Domino REST API **Admin UI**, or Domino designer editing the schema JSON file. Schemas are subject to standard inheritance rules, so a schema in a template is inherited by databases derived from it. To create, update, or delete a schema, the Domino developer must have a _Designer_ access or higher roles to the application database.
 
 ## Domino/Domino REST API administrator
 
@@ -19,7 +18,7 @@ This role configures Volt MX's foundry middleware to interact with Domino REST A
 
 ## Volt MX developer
 
-This role develops applications leveraging Domino REST API Endpoints, Volt MX services with the Volt Iris IDE. Needs to be able to read data from a Domino REST API scope, so minimum access is `Reader`. When the application wants to update data in Notes, higher access will be required.
+This role develops applications leveraging Domino REST API Endpoints, Volt MX services with the Volt Iris IDE. Needs to be able to read data from a Domino REST API scope, so minimum access is `Reader`. When the application wants to update data in Notes, higher access is required.
 
 You are not limited to Domino and Volt MX specific roles. Classical development is possible too!
 
@@ -27,11 +26,11 @@ You are not limited to Domino and Volt MX specific roles. Classical development 
 
 ## Web developer
 
-This role develops applications leveraging Domino REST API Endpoints, Volt MX services using front-end tools like VS Code, Bootstrap or any tools and framework of choice. Needs to be able to read data from a Domino REST API scope, so minimum access is `Reader`. When the application wants to update data in Notes, higher access will be required.
+This role develops applications leveraging Domino REST API Endpoints, Volt MX services using front-end tools like VS Code, Bootstrap, or any tools and framework of choice. Needs to be able to read data from a Domino REST API scope, so minimum access is `Reader`. When the application wants to update data in Notes, higher access is required.
 
 ## Mobile developer
 
-This role develops applications using the SDKs native to the mobile OS like Xcode or Android Studio. Needs to be able to read data from a Domino REST API scope, so minimum access is `Reader`. When the application wants to update data in Notes, higher access will be required.
+This role develops applications using the SDKs native to the mobile OS like Xcode or Android Studio. Needs to be able to read data from a Domino REST API scope, so minimum access is `Reader`. When the application wants to update data in Notes, higher access is required.
 
 The **Volt Iris IDE** allows you to create multi-device experiences without getting lost in device specifics.
 

@@ -2,7 +2,7 @@
 
 [Keycloak](https://www.keycloak.org/) is an Open Source Identity and Access Management solution sponsored by [RedHat](https://www.redhat.com/en).
 
-Keycloak can be used to produce JWT Access Token for Domino REST API. Keycloak has many features like default configuration, user federation, identity brokering and social login. Those are topics not covered here. Consult the [Keycloak Tutorial](https://duckduckgo.com/?q=keycloak+tutorial&ia=web) or the [Keycloak documentation](https://www.keycloak.org/documentation) to learn more. This page focuses on the settings required for Domino REST API.
+Keycloak can be used to produce JWT Access Token for Domino REST API. Keycloak has many features like default configuration, user federation, identity brokering, and social login. Those are topics not covered here. Consult the [Keycloak Tutorial](https://duckduckgo.com/?q=keycloak+tutorial&ia=web) or the [Keycloak documentation](https://www.keycloak.org/documentation) to learn more. This page focuses on the settings required for Domino REST API.
 
 --8<-- "onclientids.md"
 
@@ -16,15 +16,15 @@ Only concepts relevant to Domino REST API are listed:
 
 ![Keycloak concepts](../../assets/images/KeycloakConcepts.png){: style="height:80%;width:80%"}
 
-- **Realm**: The starting point for Keycloak identity management, contains all other elements.
-- **Client**: Each accessing application, client app, Single Page App or server app will have a client entry. The client entry contains application Id and, if required, the application secret. Furthermore it has mapper and client scopes assigned to it.
-- **Client Scopes**: Each scope in Domino REST API will have a client scope in Keycloak, so the Keycloak admin can assign them to clients
-- **Mapper**: Configuration entry to determine what information is available in a client and/or Client scope. Each Client has a default entry for Mappers independent from assigned Client Scopes
-- **Users**: Standard attributes assigned to users like username, firstname, lastname, email, credentials as well as any custom attributes. Domino REST API, for example, use `CN` for the Domino style name.
+- **Realm**: The starting point for Keycloak identity management, and containing all other elements.
+- **Client**: Each accessing application, client app, Single Page App or server app have a client entry. The client entry contains application Id and, if required, the application secret. Furthermore, it has mapper and client scopes assigned to it.
+- **Client Scopes**: Each scope in Domino REST API has a client scope in Keycloak, so the Keycloak admin can assign them to clients.
+- **Mapper**: The configuration entry to determine what information is available in a client and/or Client scope. Each Client has a default entry for Mappers independent from assigned Client Scopes
+- **Users**: The standard attributes assigned to users like username, firstname, lastname, email, credentials as well as any custom attributes. Domino REST API, for example, use `CN` for the Domino style name.
 
 ## Procedure
 
-In this example, you will learn and create a realm, a user, client scopes, client and client scope mappers inside the Keycloak app.
+In this example, learn how to create a realm, a user, client scopes, a client, and client scope mappers in the Keycloak app.
 
 !!! note
 
@@ -119,9 +119,9 @@ In this example, you will learn and create a realm, a user, client scopes, clien
 
 5. Click **Client scopes**.
 
-      Each Domino REST API scope in Domino, that you want to make accessible in Keycloak, will need a client scope in Keycloak. This includes all named scopes (the lowercase ones), and the [special scopes](../../references/schemacomponents/scopes.md) like `$DATA` or `MAIL`.
+      Each Domino REST API scope in Domino, that you want to make accessible in Keycloak, needs a client scope in Keycloak. This includes all named scopes (the lowercase ones), and the [special scopes](../../references/schemacomponents/scopes.md) like `$DATA` or `MAIL`.
 
-      Click **Create client scope**. Creating a client scope doesn't automatically expose it, for that, assign it to one or more clients. In this example, create a client scope named `demo`.
+      Click **Create client scope**. Creating a client scope doesn't automatically expose it, for that, assign it to one, or more clients. In this example, create a client scope named `demo`.
 
       ![Keycloak create scope](../../assets/images/keynewscope1.png)
 
@@ -133,7 +133,7 @@ In this example, you will learn and create a realm, a user, client scopes, clien
 
       ![saving client scope screen](../../assets/images/keyscopename1.png)
 
-      The configuration so far will identify a user presenting the access token to Domino REST API, but not yet provide any access. You need to specify what scopes this application will be allowed to access. You can use one or more (lowercase) scopes or some of the special scopes MAIL, $DATA or $DECRYPT. Multiple scopes are separated using a space.
+      The configuration so far identifies a user presenting the access token to Domino REST API, but not yet provide any access. You need to specify what scopes this application is allowed to access. You can use one or more (lowercase) scopes or some of the special scopes MAIL, $DATA or $DECRYPT. Multiple scopes are separated using a space.
 
       Create another specific client scope, like **$DATA**.
 
@@ -265,10 +265,10 @@ For the full explanation, see [Configure an identity provider](./configuringIden
 
 where:
 
-| key         | explanation                                                                                                                   |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| jwt         | Indicates that the config belongs to JWT                                                                                      |
-| Ameca       | The sample Keycloak realm name. It must be unique in the jwt key. Replace it with your chosen realm                           |
+| Key | Explanation |
+| --- | --- |
+| jwt | Indicates that the configuration belongs to JWT |
+| Ameca | The sample Keycloak realm name. It must be unique in the JWT key. Replace it with your chosen realm. |
 | providerUrl | Points to Keycloak's endpoint with the public key. Note that the last segment is the realm name. The string is case-sensitive. |
 
 !!! note

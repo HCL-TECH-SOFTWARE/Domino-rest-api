@@ -38,15 +38,15 @@ A Domino administrator typically creates scopes after a developer has created th
 2. Under **Available Schema**, select the schema to associate with the new scope.
 3. Under **Add New Scope**, fill in the fields:
 
-    - **Scope Name** — Enter a name for the scope.
-    - **Description** — Describe what this scope represents.
-    - **Server** — Enter the name of the Domino server where this scope will be available or leave blank to use the current server.
+    - **Scope Name**&mdash;Enter a name for the scope.
+    - **Description**&mdash;Describe what this scope represents.
+    - **Server**&mdash;Enter the name of the Domino server where this scope is available or leave blank to use the current server.
 
         The server name must be either the server's hierarchical name, for example MyServer/MyOrg or in canonical format, for example CN=MyServer/O=MyOrg.
 
         --8<-- "scopenote.md"
 
-    - **Maximum Access Level** — Select the level of access permitted through this scope, with the default set to *Editor*. This setting defines the maximum level of access available via the Domino REST API but does not override the database ACL. A user’s effective access is determined by the lower of their assigned ACL permissions and the scope’s configured maximum access level.
+    - **Maximum Access Level**&mdash;Select the level of access permitted through this scope, with the default set to *Editor*. This setting defines the maximum level of access available via the Domino REST API but does not override the database ACL. A user’s effective access is determined by the lower of their assigned ACL permissions and the scope’s configured maximum access level.
 
         !!! note
 

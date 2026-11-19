@@ -1,8 +1,8 @@
 # Lab 04 - Additional scope & schema
 
-## What you will learn
+## What you'll learn
 
-How to expose different sets of information from a database using different schemas.
+Exposing different sets of information from a database using different schemas.
 
 ## Before your begin
 

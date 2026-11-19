@@ -1,4 +1,4 @@
-# Plan you application
+# Plan your application
 
 The Domino REST API allows a flexible approach to utilizing Domino as a NoSQL data store. This flexibility requires that you plan well and consider several questions based on the properties of the Domino REST API.
 

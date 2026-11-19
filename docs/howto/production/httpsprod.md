@@ -1,14 +1,14 @@
 # HTTPS for production
 
-Best practice for any REST API access is to secure the connection using TLS (colloquial, still referred to as SSL). This applies to the Domino REST API too. In general, you have the following options.
+The best practice for any REST API access is to secure the connection using TLS, which is often colloquially referred to as SSL. This applies to the Domino REST API as well. In general, you have the following options:
 
-## Use a Reverse Proxy
+## Use a reverse proxy
 
-Terminate your TLS connection at a proxy. When the proxy runs on the same "machine", this is a common and accepted practice. We have [outlined the steps using nginx](../../howto/web/httpsproxy.md) as reference.
+Terminate the TLS connection at a proxy. When the proxy runs on the same machine, this is a common and accepted practice. [Steps using nginx](../../howto/web/httpsproxy.md) are outlined as reference.
 
 ## Enable HTTPS using the Domino Certificate Manager
 
-If you are using Domino 14 or above and your certificates are stored in the Domino Certificate Manager, you may be able to enable HTTPS automatically. For more information, see [Enable HTTPS using the Domino Certificate Manager](../production/dominohttps.md).
+If you are using Domino 14 or later and your certificates are stored in the Domino Certificate Manager, you may be able to enable HTTPS automatically. For more information, see [Enable HTTPS using the Domino Certificate Manager](../production/dominohttps.md).
 
 To learn more about Domino Certificate Manager, see [Managing TLS certificates with Certificate Manager](https://help.hcl-software.com/domino/14.0.0/admin/secu_le_using_certificate_manager.html?hl=certificate%2Cmanager).
 

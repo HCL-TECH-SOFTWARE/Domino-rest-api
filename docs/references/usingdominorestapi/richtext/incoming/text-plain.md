@@ -1,6 +1,6 @@
 # Example: Incoming text/plain
 
-Let's say you want to save the following `text/plain` content in a `richtext` field:
+Suppose you want to save the following `text/plain` content in a `richtext` field:
 
 ```text
 this is the body text

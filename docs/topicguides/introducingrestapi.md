@@ -23,7 +23,7 @@ Classic Domino applications are document-oriented and often based on an approval
 
     The Domino REST API uses an [OpenAPI](https://www.openapis.org) based API specification. Its documentation can be seen after starting Domino REST API and opening its URL (depending on your Domino server URL). This way, you can be sure to always look at the specification running on your server, current and accurate.
 
-Domino REST API moves access control out of the code and into the configuration. But it means control stays with those who need to support the data, not those who consume the data. Domino REST API grants granular access for actions like read or write depending on what the document data is and who is viewing it. This approach ensures that the correct person can perform the correct action on the document and its data. Most importantly, it means control over data quality remains with those who need to support the data, not those who provide and consume the data.
+Domino REST API moves access control out of the code and into the configuration. But it means control stays with those who need to support the data, not those who consume the data. Domino REST API grants granular access for actions like read or write depending on what the document data is and who is viewing it. This approach ensures that the correct person can perform the correct action on the document and its data. Most importantly, it means control over data quality remains with those who need to support the data, and not those who provide and consume the data.
 
 ![Barbican1](../assets/images/BarbicanInActionPart1.png)
 
@@ -31,7 +31,7 @@ For example, in the case of an expense report filed by an employee, the approver
 
 This granular access managed through configurations is what makes Domino REST API unique.
 
-Also, in Domino REST API, we built modern REST APIs that are designed to bring Notes and Domino forward in the current market. Domino REST API adds OpenAPI specified REST APIs to Domino and allows the latter to talk to any server or client over HTTP, HTTPS, or HTTP/2. Using Domino REST API, any application that talks HTTPS can access the data from a Domino database, hence extending the availability of this data beyond the Notes client.
+Also, in Domino REST API, modern REST APIs are built and designed to bring Notes and Domino forward in the current market. Domino REST API adds OpenAPI specified REST APIs to Domino and allows the latter to talk to any server or client over HTTP, HTTPS, or HTTP/2. Using Domino REST API, any application that talks HTTPS can access the data from a Domino database, hence extending the availability of this data beyond the Notes client.
 
 ![Basic KEEP Diagram](../assets/images/svg/Basic_KEEP_Diagram.svg)
 
@@ -65,7 +65,7 @@ Domino REST API is designed to work with:
 
 - [OData](https://www.odata.org) aware applications, such as SAP, Salesforce, Microsoft Excel, [Tableau](https://help.tableau.com/current/pro/desktop/en-us/examples_odata.htm)
 
-- Low-code environments like [HCL Volt MX](https://www.hcltechsw.com/volt-mx), [NodeRED](https://nodered.org/) or others
+- Low-code environments like [HCL Volt MX](https://www.hcltechsw.com/volt-mx), [NodeRED](https://nodered.org/)
 
 ### Domino REST API is secure
 
@@ -77,16 +77,16 @@ Project Domino REST API uses redesigned Java APIs named Domino JNX (Domino Java 
 
 ### Public API based on OpenAPI 3.0
 
-We follow the [API first](https://swagger.io/resources/articles/adopting-an-api-first-approach/) design with full interactive documentation. Our public APIs follow the standards set by OpenAPI 3.0. The OpenAPI specifications you see in Swagger/Redoc on the server are used dynamically by Domino REST API to validate requests, so you know they are up-to-date.
+The [API first](https://swagger.io/resources/articles/adopting-an-api-first-approach/) design is followed with full interactive documentation. The public APIs follow the standards set by OpenAPI 3.0. The OpenAPI specifications you see in Swagger/Redoc on the server are used dynamically by Domino REST API to validate requests, so you know they're up-to-date.
 
 ### Extensible architecture
 
-Domino REST API has an extensible architecture that allows it to serve multiple API versions from a Domino server. We currently support admin, core, CI/CD and PIM APIs but Domino REST API can be extended to add more APIs.
+Domino REST API has an extensible architecture that allows it to serve multiple API versions from a Domino server. Currently, admin, core, CI/CD, and PIM APIs are supported but Domino REST API can be extended to add more APIs.
 
-### Web GUI for Schema, Scope and App management
+### Web GUI for schema, scope, and app management
 
-We provide a [web UI](../references/usingwebui/index.md) that facilitates managing schemas, scopes, and applications.
+The Domino REST API provides a [web UI](../references/usingwebui/index.md) that facilitates managing schemas, scopes, and applications.
 
-### Design, admin and data
+### Design, admin, and data
 
-Along with the application design and admin features, Domino REST API allows CRUD operations on documents, retrieval of collections (aka views and folders), execution of queries and submission of access control, and design and code, while maintaining and extending Domino’s security model.
+In addition to application design and administrative features, Domino REST API supports CRUD operations on documents, retrieval of collections (views and folders), query execution, and submission of access control, design, and code elements, while maintaining and extending Domino's security model.

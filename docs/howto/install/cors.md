@@ -1,4 +1,4 @@
-# Configure CORS for Admin UI, OAuth and your applications
+# Configure CORS for Admin UI, OAuth, and your applications
 
 ## About this task
 
@@ -56,11 +56,11 @@ The regex for `https://drapi.mycompany.com:8880` is `https:\\/\\/.drapi\\.mycomp
 
 !!! tip "You need to include your host"
 
-    The CORS implementation is designed to be restrictive. any HTTP request presenting an `origin` header will be checked against your configuration and denied if no match can be found. The [CORS specification](https://fetch.spec.whatwg.org/#http-cors-protocol) states:
+    The CORS implementation is designed to be restrictive. Any HTTP request presenting an `origin` header will be checked against your configuration and denied if no match can be found. The [CORS specification](https://fetch.spec.whatwg.org/#http-cors-protocol) states:
 
     *Ultimately, server developers have a lot of freedom in how they handle HTTP responses and these tactics can differ between the response to the [CORS-preflight request](https://fetch.spec.whatwg.org/#cors-preflight-request) and the [CORS request](https://fetch.spec.whatwg.org/#cors-request) that follows it.*
 
-    We decided on the side of caution and fail any request that is not a match for a presented `origin` header. As a result, you have to include your Domino REST API host in your CORS setup.
+    To be on the side of caution, any request that does not match a presented `origin` header fails. As a result, the Domino REST API host must be included in your CORS setup.
 
 !!! tip
 

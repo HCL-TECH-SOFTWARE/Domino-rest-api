@@ -9,7 +9,7 @@ This section provides technical descriptions, configuration parameters, access c
 
 ## [System requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0101789)
 
-Specifies the minimum system requirements necessary to install and run the Domino REST API, ensuring compatibility and optimal performance.<!--Provides the minimum system requirements for Domino REST API.-->
+Specifies the minimum system requirements necessary to install and run the Domino REST API, ensuring compatibility, and optimal performance.<!--Provides the minimum system requirements for Domino REST API.-->
 
 ## [Installation and configuration](../tutorial/installconfig/index.md)
 
@@ -96,7 +96,7 @@ Introduces the DXL Extension API, its capabilities, endpoints, and current featu
 
 Details common errors in installing and running the Domino REST API service and their corresponding resolutions.
 
-## [Limitations and constraints](limitation.md)
+## [Limitations and considerations](limitation.md)
 
 Outlines known limitations and important considerations for using the Domino REST API.
 

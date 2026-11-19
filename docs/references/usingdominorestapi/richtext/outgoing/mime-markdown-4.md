@@ -1,6 +1,6 @@
 # Example 4: Outgoing MIME Content as Markdown
 
-Let's say you want to retrieve the following MIME content as Markdown:
+Suppose you want to retrieve the following MIME content as Markdown:
 
 ```text
 MIME-Version: 1.0
@@ -36,5 +36,6 @@ You should get the following in the `richtext` field response:
 }
 ```
 
-!!!note
+!!! note
+
     Since there's no `text/markdown` part in the stored multipart MIME and no `text/html` part to fall back to, it returns a Markdown conversion of all MIME parts.

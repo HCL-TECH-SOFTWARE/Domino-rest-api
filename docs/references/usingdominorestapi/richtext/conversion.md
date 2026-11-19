@@ -18,15 +18,15 @@ The following table is a matrix for submitted types together with its supported 
 
 |Submitted type|createAdditional|Stored as|Example|
 |:---|:---|:---|:---|
-|multipart/mixed| - |multipart/mixed|[Example](./incoming/multipart-mixed.md)|
-|multipart/alternative| - |multipart/alternative|[Example](./incoming/multipart-alternative.md)|
-|text/plain| - |text/plain|[Example](./incoming/text-plain.md)|
-|text/html| - |text/html|[Example](./incoming/text-html.md)|
-|text/html|plain| - multipart/alternative<br>- text/html |[Example](./incoming/text-html-plain.md)|
-|text/markdown| - |text/markdown|[Example](./incoming/text-markdown.md)|
+|multipart/mixed|-|multipart/mixed|[Example](./incoming/multipart-mixed.md)|
+|multipart/alternative|-|multipart/alternative|[Example](./incoming/multipart-alternative.md)|
+|text/plain|-|text/plain|[Example](./incoming/text-plain.md)|
+|text/html|-|text/html|[Example](./incoming/text-html.md)|
+|text/html|plain|- multipart/alternative<br>- text/html|[Example](./incoming/text-html-plain.md)|
+|text/markdown|-|text/markdown|[Example](./incoming/text-markdown.md)|
 |text/markdown|plain|- multipart/alternative<br/>- text/markdown<br/>- text/plain|[Example](./incoming/text-markdown-plain.md)|
-|text/markdown|html| - multipart/alternative<br>- text/markdown<br>- text/html |[Example](./incoming/text-markdown-html.md)|
-|text/markdown|plain, html| - multipart/alternative<br>- text/markdown<br>- text/plain<br>- text/html | [Example](./incoming/text-markdown-plain-html.md)|
+|text/markdown|html|- multipart/alternative<br>- text/markdown<br>- text/html|[Example](./incoming/text-markdown-html.md)|
+|text/markdown|plain, html|- multipart/alternative<br>- text/markdown<br>- text/plain<br>- text/html|[Example](./incoming/text-markdown-plain-html.md)|
 
 !!! warning
 
@@ -44,7 +44,7 @@ The following table shows the content of the `richtext` field, its different `ri
 |Rich Text|html|text/html||[Example](./outgoing/richtext-html.md)|
 |Rich Text|plain|text/plain||[Example](./outgoing/richtext-plain.md)|
 |Rich Text|markdown|text/markdown||[Example](./outgoing/richtext-markdown.md)|
-|MIME|mime| multipart/mixed||[Example 1](./outgoing/mime-mime-1.md)<br>[Example 2](./outgoing/mime-mime-2.md)|
+|MIME|mime|multipart/mixed||[Example 1](./outgoing/mime-mime-1.md)<br>[Example 2](./outgoing/mime-mime-2.md)|
 |MIME|html|text/html|Fallbacks:<br/>- text/markdown &rarr; html|[Example 1](./outgoing/mime-html-1.md)<br>[Example 2](./outgoing/mime-html-2.md)<br>[Example 3](./outgoing/mime-html-3.md)<br>[Example 4](./outgoing/mime-html-4.md)|
 |MIME|markdown|text/markdown|Fallbacks:<br/>- text/html &rarr; markdown|[Example 1](./outgoing/mime-markdown-1.md)<br>[Example 2](./outgoing/mime-markdown-2.md)<br>[Example 3](./outgoing/mime-markdown-3.md)<br>[Example 4](./outgoing/mime-markdown-4.md)|
 |MIME|plain|text/plain|Fallbacks:<br/>- text/html &rarr; plain<br>- text/markdown &rarr; plain|[Example 1](./outgoing/mime-plain-1.md)<br>[Example 2](./outgoing/mime-plain-2.md)<br>[Example 3](./outgoing/mime-plain-3.md)<br>[Example 4](./outgoing/mime-plain-4.md)<br>[Example 5](./outgoing/mime-plain-5.md)|

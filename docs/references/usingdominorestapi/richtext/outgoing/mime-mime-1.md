@@ -1,6 +1,6 @@
 # Example 1: Outgoing MIME content as MIME
 
-Let's say you want to retrieve the following MIME content as MIME:
+Suppose you want to retrieve the following MIME content as MIME:
 
 ```text
 MIME-Version: 1.0

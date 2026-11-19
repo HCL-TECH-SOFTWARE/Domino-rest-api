@@ -1,6 +1,6 @@
 # Example 3: Outgoing MIME content as HTML
 
-Let's say you want to retrieve the following MIME content as HTML:
+Suppose you want to retrieve the following MIME content as HTML:
 
 ```text
 MIME-Version: 1.0
@@ -36,5 +36,6 @@ You should get the following in the `richtext` field response:
 }
 ```
 
-!!!note
+!!! note
+
     Since there's no `text/html` part in the stored multipart MIME, it falls back to finding a `text/markdown` part, converting it to HTML, and then returning it as a response.

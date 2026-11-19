@@ -1,10 +1,10 @@
 # Lab 02 - Quick config
 
-## What you will learn
+## What you'll learn
 
-- How to navigate the **Admin UI**.
-- How to configure the "Approval Central" database using the **Admin UI**.
-- Understand the difference between a *Schema* and a *Scope*.
+- Navigating the **Admin UI**.
+- Configuring the "Approval Central" database using the **Admin UI**.
+- Distinguishing between a *schema* and a *scope*.
 
 ## Before you begin
 
@@ -14,7 +14,7 @@
 
 ## Procedure
 
-The procedure guides you in creating a schema and a scope using **Quick Config** in the Admin UI.
+The procedure guides you in creating a schema and a scope using **Quick Config** in the **Admin UI**.
 
 1. Log in to **Admin UI**.
 2. Expand the side navigation panel and click **Quick Config**.
@@ -46,7 +46,7 @@ The procedure guides you in creating a schema and a scope using curl, Postman, o
 
 ## How to verify
 
-In the **Admin UI**, you will find one entry each for schema and scope as shown:
+In the **Admin UI**, you can find one entry each for schema and scope as shown:
 
 ![Schema available](img/schemaAvailable.png){: style="height:70%;width:70%"}
 
@@ -82,7 +82,7 @@ Proceed to [Lab 03 - Schema exploration](lab-03.md).
 
 - Navigate the Admin UI
 - Configure the "Approval Central" database using the Admin UI
-- Difference between **Schema** and **Scope**
+- Difference between *schema* and *scope*
 
 ## Prerequisites
 

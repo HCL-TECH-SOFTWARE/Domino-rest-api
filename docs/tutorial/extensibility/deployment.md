@@ -2,7 +2,7 @@
 
 --8<-- "future.md"
 
-## OS Level
+## OS level
 
 ## Container
 

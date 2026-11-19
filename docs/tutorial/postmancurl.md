@@ -414,7 +414,7 @@ Use the following to create a schema:
 
 ## Create a scope
 
-Use the following to create a scope for the schema we created:
+Use the following to create a scope for the created schema:
 
 === "Postman"
 

@@ -2,7 +2,7 @@
 
 --8<-- "future.md"
 
-This section provides how-to guides for configuring web access to Domino REST API, including reverse proxy setup and related web security configuration.
+This section provides how-to guides for configuring web access to Domino REST API, including reverse proxy setup, and related web security configuration.
 
 ## Reverse proxy configuration
 
