@@ -10,11 +10,11 @@ The tutorial guides you through the creation of a custom URL endpoint that handl
 
 First step is to set up the Java project. It uses a published parent project and libraries installed with your Domino REST API installation.
 
-## [Create OpenAPI specification](openapi.md)
+## [Create OpenAPI 3.0.x specification](openapi.md)
 
 The second step is to create an OpenAPI 3.0.x specification. It can be done using Notepad, but you want to use [available tooling](https://openapi.tools/#gui-editors). You can use [Swagger Editor](https://editor.swagger.io/), Redhat's [Apicurio](https://www.apicur.io/), or [APIGit](https://apigit.com/).
 
-## [Create the config.json](configjson.md)
+## [Create config.json](configjson.md)
 
 Domino REST API is driven by a [dynamic configuration](../../references/configuration/understandingconfig.md). To get your extension recognized, you must provide the information what verticle runs your code and what classes implement your business logic. To do so, a file `resources/config/config.json` is required.
 
@@ -24,12 +24,12 @@ To implement the functionality, two Java classes are involved. One is a handler 
 
 For the most common use case of JSON in/out, the default handler performs all the necessary actions, no custom code is required.
 
-## [Access Control](accesscontrol.md)
+## [Access control](accesscontrol.md)
 
 Domino REST API follows Domino's access control with no exceptions. However, you can further tighten the security to be very specific on individual access requirements.
 
 ## [Deployment](deployment.md)
 
-## [Setting up a devcontainer](devcontainer.md)
+## [Setting up a dev container](devcontainer.md)
 
 This step is strictly optional. It can, after the initial setup steps, improve your developer experience by creating a well-known development environment.
