@@ -17,7 +17,7 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/Domino-rest-api/howto/install/multiserver.html">
       
       
-        <link rel="prev" href="cors.html">
+        <link rel="prev" href="oauthoscreen.html">
       
       
         <link rel="next" href="notesclient.html">
@@ -27,7 +27,7 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -35,7 +35,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
       
 
@@ -2781,14 +2781,14 @@
   
   
     <li class="md-nav__item">
-      <a href="configparam.html" class="md-nav__link">
+      <a href="cors.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Modify configuration of Domino REST API
+    Configure CORS for Admin UI, OAuth, and your applications
   
 
     
@@ -2809,14 +2809,42 @@
   
   
     <li class="md-nav__item">
-      <a href="cors.html" class="md-nav__link">
+      <a href="webauthn.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Configure CORS for Admin UI, OAuth and your applications
+    Configure WebAuthn with Domino REST API and Domino 14 or later
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="oauthoscreen.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customize OAuth consent screen
   
 
     
@@ -3025,6 +3053,62 @@
   
   
     <li class="md-nav__item">
+      <a href="configparam.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modify configuration of Domino REST API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="obtainauthenticationtoken.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Obtain authentication token from HCL Container Repository
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="uninstall.html" class="md-nav__link">
         
   
@@ -3061,90 +3145,6 @@
     
   
     Use WebAuthn (Passkey) to log in to Admin UI
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="webauthn.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Configure WebAuthn with Domino REST API and Domino 14 or greater
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="oauthoscreen.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Customize OAuth consent screen
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="obtainauthenticationtoken.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Obtain authentication token from HCL Container Repository
   
 
     
@@ -4161,7 +4161,7 @@
   <span class="md-ellipsis">
     
   
-    Plan you application
+    Plan your application
   
 
     
@@ -4357,7 +4357,7 @@
   <span class="md-ellipsis">
     
   
-    Set up for encryption, decryption, signing
+    Set up for encryption, decryption, and signing
   
 
     
@@ -4521,6 +4521,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../database/pullviewdata.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adjust number of retrieved entries when pulling in view data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../database/editsourcejson.html" class="md-nav__link">
         
   
@@ -4669,34 +4697,6 @@
     
   
     Use external names in schema definitions
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../database/pullviewdata.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Adjust number of retrieved entries when pulling in view data
   
 
     
@@ -5322,7 +5322,7 @@
   <span class="md-ellipsis">
     
   
-    Use Cases
+    Use cases
   
 
     
@@ -5378,7 +5378,7 @@
   <span class="md-ellipsis">
     
   
-    Schema Backup
+    Schema backup
   
 
     
@@ -6175,7 +6175,7 @@
   <span class="md-ellipsis">
     
   
-    Schema and Scope
+    Schema and scope
   
 
     
@@ -6518,7 +6518,7 @@
   <span class="md-ellipsis">
     
   
-    Form and Alias handling
+    Form and alias handling
   
 
     
@@ -7006,7 +7006,7 @@
   <span class="md-ellipsis">
     
   
-    Encryption Keys
+    Encryption keys
   
 
     
@@ -8010,29 +8010,28 @@
 
 
 <h1 id="deploy-drapi-to-multiple-servers">Deploy DRAPI to multiple servers</h1>
-<p>The Domino REST API is designed to support sharing configuration across multiple servers. To do this effectively, plan the deployment carefully and follow the steps outlined here. Configuration sharing works not only for tightly coupled systems, but also for servers within the same organization and even across domain boundaries, provided that trust relationships and replication are correctly configured and functioning.</p>
+<p>The Domino REST API is designed to support sharing configuration across multiple servers. To do this effectively, plan the deployment carefully, and follow the steps outlined here. Configuration sharing works not only for tightly coupled systems, but also for servers within the same organization and even across domain boundaries, provided that trust relationships and replication are correctly configured and functioning.</p>
 <div class="admonition warning">
 <p class="admonition-title">Important</p>
 <p>Settings in <code>KeepConfig.nsf</code>, mostly scopes and oauth applications replicate. Configuration settings in <code>keepconfig.d</code> and <code>keepweb.d</code> are per server. When you want to share those, you need to manually copy them over.</p>
 </div>
-<div class="admonition info">
-<p class="admonition-title">We are working on improving the config sharing.</p>
-</div>
+<!--!!!info "We are working on improving the config sharing."-->
+
 <h2 id="planning">Planning</h2>
 <p>You need to know the following to plan properly:</p>
 <ul>
 <li>How are the participating servers replicating? You need to balance timeliness (to avoid replication conflicts) with resource consumption. Revisit <a href="https://www.wissel.net/blog/2009/06/picking-your-routing-and-replication-architecture.html">these considerations</a>.</li>
-<li>What will be the source of identity: DRAPI's login/Identity Provider or some external one like <a href="https://www.keycloak.org/">Keycloak</a>, <a href="https://www.microsoft.com/en-us/security/business/microsoft-entra">Microsoft Entra</a> (formerly known as "Azure Active Directory"), <a href="https://www.okta.com/">Okta</a> or some other <a href="https://openid.net/developers/how-connect-works/">OIDC</a> compliant identity service?</li>
+<li>What's the source of identity: DRAPI's login/Identity Provider or some external one like <a href="https://www.keycloak.org/">Keycloak</a>, <a href="https://www.microsoft.com/en-us/security/business/microsoft-entra">Microsoft Entra</a> (formerly known as "Azure Active Directory"), <a href="https://www.okta.com/">Okta</a> or some other <a href="https://openid.net/developers/how-connect-works/">OIDC</a> compliant identity service?</li>
 <li>Do you have or plan DRAPI extensions?</li>
 <li>What <a href="https://developer.mozilla.org/en-US/docs/Glossary/SPA">SPA</a> are you planning to deploy to <code>keepweb.d</code>?</li>
 </ul>
 <h2 id="installation">Installation</h2>
 <ul>
-<li>Follow the <a href="../../tutorial/installconfig/index.html">steps outlined here</a> to install DRAPI on your main server. We shall refer to it as hub henceforth.</li>
-<li>Start DRAPI on the hub using the Domino console command <code>load restapi</code>. This will create the database <code>KeepConfig.nsf</code>. When you upgrade DRAPI, you need to refresh the design of <code>KeepConfig.nsf</code> from <code>KeepConfig.ntf</code>.</li>
-<li>Use the Domino admin to create replicas of <code>KeepConfig.nsf</code> on all participating servers. You must retain the name and location.</li>
-<li>If one of the participating servers already has a <code>KeepConfig.nsf</code> with a divergent replicaId, you must remove it. If it has no configuration entries, just delete it. When there are, or you aren't sure, rename it and deal with it later on.</li>
-<li>Create and/or verify scheduled (or cluster) replication between the participating servers (henceforth referred to as spokes) and the hub.</li>
+<li>Follow the <a href="../../tutorial/installconfig/index.html">installation steps</a> to install DRAPI on your main server, hereafter referred to as the hub.</li>
+<li>Start DRAPI on the hub using the Domino console command <code>load restapi</code>. This creates the database <code>KeepConfig.nsf</code>. When you upgrade DRAPI, you need to refresh the design of <code>KeepConfig.nsf</code> from <code>KeepConfig.ntf</code>.</li>
+<li>Use the Domino Administrator to create replicas of <code>KeepConfig.nsf</code> on all participating servers. You must retain the name and location.</li>
+<li>If one of the participating servers already has a <code>KeepConfig.nsf</code> with a divergent <code>replicaId</code>, you must remove it. If it has no configuration entries, just delete it. When there are, or you aren't sure, rename it, and deal with it later on.</li>
+<li>Create or verify scheduled or cluster replication between the participating servers, hereafter referred to as spokes, and the hub.</li>
 <li>Now install DRAPI on the spokes.</li>
 </ul>
 <h2 id="configuration">Configuration</h2>
@@ -8042,14 +8041,14 @@
 <li>OIDC/OAuth</li>
 <li>Shared JWT Keys to login to DRAPI (if not using an external IdP)</li>
 </ul>
-<p>All those will write their configuration entries into <code>keepconfig.d</code>. For now, manually copy them between servers until a more convenient solution is available. Be careful to only copy the settings you want to share.</p>
+<p>All those write their configuration entries into <code>keepconfig.d</code>. For now, manually copy them between servers until a more convenient solution is available. Be careful to only copy the settings you want to share.</p>
 <h3 id="tls-to-secure-web-traffic">TLS to secure web traffic</h3>
 <p>The <strong>strongly</strong> recommended way is to use the <a href="../production/dominohttps.html">Domino Certificate Manager</a>. It's the most secure option and the least work. Create a file <code>keepconfig.d\DominoCertMgr.json</code> with the following content:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">"TLSCertStore"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Copy the file to all participating servers. This will cause each server to attempt to find a certificate matching its fully qualified domain name as configured in its server document.</p>
+<p>Copy the file to all participating servers. This causes each server to attempt to find a certificate matching its fully qualified domain name as configured in its server document.</p>
 <p>You have <a href="../production/httpsprod.html">other options</a>, but they require more work.</p>
 <h3 id="oidcoauth">OIDC/OAuth</h3>
 <ul>
@@ -8064,12 +8063,12 @@
 <span class="p">}</span>
 </code></pre></div>
 <p><code>MyCertForKeep</code> needs to match an existing certificate chain in certstore.nsf.</p>
-<p>You can generate the certificate chain using DRAPI, use the Management Console to <a href="../management/encryptionops.html">generate the Keys for JWT</a>. As of 2025, you should prefer <a href="https://en.wikipedia.org/wiki/Elliptic-curve_cryptography">EC</a> certificates. This will create certificates in the certificate store using the common name of the Domino server and configure the local server to use it.</p>
-<p>To enable access to this certificate for other servers, open the <a href="https://help.hcl-software.com/domino/14.0.0/admin/secu_le_using_certificate_manager.html">certificate store database</a> and find the newly created certificate document. In that document, modify the <strong>Servers with access**</strong> field to include the other Domino servers that will access it, and click <strong>Submit Request</strong>. This causes the Certificate Manager to encrypt the certificate in a way compatible with each named server.</p>
+<p>You can generate the certificate chain using DRAPI, use the Management Console to <a href="../management/encryptionops.html">generate the Keys for JWT</a>. As of 2025, you should prefer <a href="https://en.wikipedia.org/wiki/Elliptic-curve_cryptography">EC</a> certificates. This creates certificates in the certificate store using the common name of the Domino server and configure the local server to use it.</p>
+<p>To enable access to this certificate for other servers, open the <a href="https://help.hcl-software.com/domino/14.0.0/admin/secu_le_using_certificate_manager.html">certificate store database</a> and find the newly created certificate document. In that document, modify the <strong>Servers with access**</strong> field to include the other Domino servers that access it, and click <strong>Submit Request</strong>. This causes the Certificate Manager to encrypt the certificate in a way compatible with each named server.</p>
 <p>Then, set the <code>KeepCertStoreNameJWT</code> notes.ini parameter on each server to the common name of the first server, for example <code>MyServer</code>.</p>
 <p>Alternately, to share certificates without the certificate store, follow <a href="../management/jwtmultiserver.html">the steps</a> and copy the 4 files across servers.</p>
 <h2 id="limit-admin-access">Limit admin access</h2>
-<p>You don't need access to the Admin UI on your spoke servers, it only increases the possibility of replication conflicts by an absent-minded admin. The capability walkthrough <a href="../../tutorial/walkthrough/lab-11.html#disable-admin-endpoints-and-ui">Lab 11</a> outlines the steps to disable both the Admin UI and the Admin endpoints. Create a file <code>keepconfig.d/disableadmin.json</code> and copy it to all spokes, but not the hub.</p>
+<p>You don't need access to the <strong>Admin UI</strong> on your spoke servers, it only increases the possibility of replication conflicts by an absent-minded admin. The capability walkthrough <a href="../../tutorial/walkthrough/lab-11.html#disable-admin-endpoints-and-ui">Lab 11</a> outlines the steps to disable both the <strong>Admin UI</strong> and the admin endpoints. Create a file <code>keepconfig.d/disableadmin.json</code> and copy it to all spokes, but not the hub.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">"versions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">"setup"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -8124,7 +8123,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 31, 2026 16:57:17 UTC">July 31, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 13, 2026 15:39:33 UTC">November 13, 2026</span>
   </span>
 
     
@@ -8275,10 +8274,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.path", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.path", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

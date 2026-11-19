@@ -27,7 +27,7 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -35,7 +35,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
       
 
@@ -2779,14 +2779,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../install/configparam.html" class="md-nav__link">
+      <a href="../install/cors.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Modify configuration of Domino REST API
+    Configure CORS for Admin UI, OAuth, and your applications
   
 
     
@@ -2807,14 +2807,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../install/cors.html" class="md-nav__link">
+      <a href="../install/webauthn.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Configure CORS for Admin UI, OAuth and your applications
+    Configure WebAuthn with Domino REST API and Domino 14 or later
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install/oauthoscreen.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customize OAuth consent screen
   
 
     
@@ -2891,6 +2919,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../install/configparam.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modify configuration of Domino REST API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install/obtainauthenticationtoken.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Obtain authentication token from HCL Container Repository
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../install/uninstall.html" class="md-nav__link">
         
   
@@ -2927,90 +3011,6 @@
     
   
     Use WebAuthn (Passkey) to log in to Admin UI
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../install/webauthn.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Configure WebAuthn with Domino REST API and Domino 14 or greater
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../install/oauthoscreen.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Customize OAuth consent screen
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../install/obtainauthenticationtoken.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Obtain authentication token from HCL Container Repository
   
 
     
@@ -4003,7 +4003,7 @@
   <a href="#use-a-reverse-proxy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Use a Reverse Proxy
+        Use a reverse proxy
       
     </span>
   </a>
@@ -4036,77 +4036,10 @@
   <a href="#example-of-private-key-and-a-self-signed-certificate-using-openssl" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example of private key and a self-signed certificate using openSSL:
+        Example of private key and a self-signed certificate using openSSL
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Example of private key and a self-signed certificate using openSSL:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#bash-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Bash code:
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Bash code:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#generate-a-private-key" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Generate a private key
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#generate-a-certificate-signing-request-csr" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Generate a certificate signing request (CSR)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#self-sign-the-certificate" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Self-sign the certificate
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#generate-ca-certificate" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Generate CA certificate
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -4189,7 +4122,7 @@
   <span class="md-ellipsis">
     
   
-    Plan you application
+    Plan your application
   
 
     
@@ -4385,7 +4318,7 @@
   <span class="md-ellipsis">
     
   
-    Set up for encryption, decryption, signing
+    Set up for encryption, decryption, and signing
   
 
     
@@ -4549,6 +4482,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../database/pullviewdata.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adjust number of retrieved entries when pulling in view data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../database/editsourcejson.html" class="md-nav__link">
         
   
@@ -4697,34 +4658,6 @@
     
   
     Use external names in schema definitions
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../database/pullviewdata.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Adjust number of retrieved entries when pulling in view data
   
 
     
@@ -5350,7 +5283,7 @@
   <span class="md-ellipsis">
     
   
-    Use Cases
+    Use cases
   
 
     
@@ -5406,7 +5339,7 @@
   <span class="md-ellipsis">
     
   
-    Schema Backup
+    Schema backup
   
 
     
@@ -6203,7 +6136,7 @@
   <span class="md-ellipsis">
     
   
-    Schema and Scope
+    Schema and scope
   
 
     
@@ -6546,7 +6479,7 @@
   <span class="md-ellipsis">
     
   
-    Form and Alias handling
+    Form and alias handling
   
 
     
@@ -7034,7 +6967,7 @@
   <span class="md-ellipsis">
     
   
-    Encryption Keys
+    Encryption keys
   
 
     
@@ -7872,7 +7805,7 @@
   <a href="#use-a-reverse-proxy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Use a Reverse Proxy
+        Use a reverse proxy
       
     </span>
   </a>
@@ -7905,77 +7838,10 @@
   <a href="#example-of-private-key-and-a-self-signed-certificate-using-openssl" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example of private key and a self-signed certificate using openSSL:
+        Example of private key and a self-signed certificate using openSSL
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Example of private key and a self-signed certificate using openSSL:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#bash-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Bash code:
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Bash code:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#generate-a-private-key" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Generate a private key
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#generate-a-certificate-signing-request-csr" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Generate a certificate signing request (CSR)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#self-sign-the-certificate" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Self-sign the certificate
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#generate-ca-certificate" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Generate CA certificate
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -8066,24 +7932,24 @@
 
 
 <h1 id="https-for-production">HTTPS for production</h1>
-<p>Best practice for any REST API access is to secure the connection using TLS (colloquial, still referred to as SSL). This applies to the Domino REST API too. In general, you have the following options.</p>
-<h2 id="use-a-reverse-proxy">Use a Reverse Proxy</h2>
-<p>Terminate your TLS connection at a proxy. When the proxy runs on the same "machine", this is a common and accepted practice. We have <a href="../web/httpsproxy.html">outlined the steps using nginx</a> as reference.</p>
+<p>The best practice for any REST API access is to secure the connection using TLS, which is often colloquially referred to as SSL. This applies to the Domino REST API as well. In general, you have the following options:</p>
+<h2 id="use-a-reverse-proxy">Use a reverse proxy</h2>
+<p>Terminate the TLS connection at a proxy. When the proxy runs on the same machine, this is a common and accepted practice. <a href="../web/httpsproxy.html">Steps using nginx</a> are outlined as reference.</p>
 <h2 id="enable-https-using-the-domino-certificate-manager">Enable HTTPS using the Domino Certificate Manager</h2>
-<p>If you are using Domino 14 or above and your certificates are stored in the Domino Certificate Manager, you may be able to enable HTTPS automatically. For more information, see <a href="dominohttps.html">Enable HTTPS using the Domino Certificate Manager</a>.</p>
+<p>If you are using Domino 14 or later and your certificates are stored in the Domino Certificate Manager, you may be able to enable HTTPS automatically. For more information, see <a href="dominohttps.html">Enable HTTPS using the Domino Certificate Manager</a>.</p>
 <p>To learn more about Domino Certificate Manager, see <a href="https://help.hcl-software.com/domino/14.0.0/admin/secu_le_using_certificate_manager.html?hl=certificate%2Cmanager">Managing TLS certificates with Certificate Manager</a>.</p>
 <h2 id="use-a-tls-certificate">Use a TLS Certificate</h2>
 <p>The REST API can directly use TLS and is HTTP 1.1 and HTTP/2 compliant. You would obtain a TLS certificate from your IT security team or your favorite supplier, such as <a href="https://letsencrypt.org">Let's Encrypt</a>, and set the configuration parameters in a JSON file.</p>
 <!--To configure a certificate for HTTPS-->
 
-<p>Use the following entry to configure TLS for jks or pfx (set TLSType to the correct type): </p>
-<p><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<p>Use the following entry to configure TLS for JKS or PFX (set TLSType to the correct type):</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">"TLSFile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path.to.file"</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">"TLSPassword"</span><span class="p">:</span><span class="w"> </span><span class="s2">"password-in-clear-protect-this"</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">"TLSType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pfx"</span>
 <span class="p">}</span>
 </code></pre></div>
-Use the following to configure TLS for pem:</p>
+<p>Use the following to configure TLS for PEM:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">"TLSFile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path.to.file"</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">"PEMCert"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path.to.crt.file"</span><span class="p">,</span>
@@ -8094,16 +7960,16 @@ Use the following to configure TLS for pem:</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
-<li><code>TLSfile</code> must point to private key, while the <code>PEMCert</code> must point to the certificate chain. </li>
+<li><code>TLSfile</code> must point to private key, while the <code>PEMCert</code> must point to the certificate chain.</li>
 <li>If you won't define a password, you must set the value of <code>TLSPassword</code> to <code>""</code>.</li>
 </ul>
 </div>
 <ul>
 <li>
-<p><strong>JKS</strong>: The <a href="https://en.wikipedia.org/wiki/Java_KeyStore">Java Key Store</a>. Only used by Java, follow the <a href="https://docs.oracle.com/cd/E19509-01/820-3503/ggfen/index.html">JKS documentation</a></p>
+<p><strong>JKS</strong>: <a href="https://en.wikipedia.org/wiki/Java_KeyStore">Java KeyStore</a>. Only used by Java. Refer to the <a href="https://docs.oracle.com/cd/E19509-01/820-3503/ggfen/index.html">JKS documentation</a> for details.</p>
 </li>
 <li>
-<p><strong>PEM</strong>: defined in <a href="https://www.rfc-editor.org/rfc/rfc1422">RFC 1422</a>, commonly used in http server</p>
+<p><strong>PEM</strong>: defined in <a href="https://www.rfc-editor.org/rfc/rfc1422">RFC 1422</a>, and commonly used in HTTP server</p>
 </li>
 <li>
 <p><strong>PFX</strong>: defined in <a href="https://www.rfc-editor.org/rfc/rfc7292">RFC 7292</a>, the RSA provided Public-Key Cryptography Standards</p>
@@ -8141,17 +8007,31 @@ The configuration for TLS for pem would look like:
 </code></pre></div>
 -->
 
-<h2 id="example-of-private-key-and-a-self-signed-certificate-using-openssl">Example of private key and a self-signed certificate using openSSL:</h2>
-<h3 id="bash-code">Bash code:</h3>
-<h4 id="generate-a-private-key">Generate a private key</h4>
-<p><code>openssl genpkey -algorithm RSA -out server-key.pem</code></p>
-<h4 id="generate-a-certificate-signing-request-csr">Generate a certificate signing request (CSR)</h4>
-<p><code>openssl req -new -key server-key.pem -out server.csr</code></p>
-<h4 id="self-sign-the-certificate">Self-sign the certificate</h4>
-<p><code>openssl x509 -req -days 365 -in server.csr -signkey server-key.pem -out server-cert.pem</code></p>
-<h4 id="generate-ca-certificate">Generate CA certificate</h4>
-<p><code>openssl req -new -x509 -days 365 -key server-key.pem -out ca-cert.pem</code></p>
-<p>The configuration for TLS for pem would look like:</p>
+<h2 id="example-of-private-key-and-a-self-signed-certificate-using-openssl">Example of private key and a self-signed certificate using openSSL</h2>
+<p>Bash commands for:</p>
+<ul>
+<li>
+<p>Generating a private key</p>
+<div class="highlight"><pre><span></span><code>openssl<span class="w"> </span>genpkey<span class="w"> </span>-algorithm<span class="w"> </span>RSA<span class="w"> </span>-out<span class="w"> </span>server-key.pem
+</code></pre></div>
+</li>
+<li>
+<p>Generating a certificate signing request (CSR)</p>
+<div class="highlight"><pre><span></span><code>openssl<span class="w"> </span>req<span class="w"> </span>-new<span class="w"> </span>-key<span class="w"> </span>server-key.pem<span class="w"> </span>-out<span class="w"> </span>server.csr
+</code></pre></div>
+</li>
+<li>
+<p>Self-signing the certificate</p>
+<div class="highlight"><pre><span></span><code>openssl<span class="w"> </span>x509<span class="w"> </span>-req<span class="w"> </span>-days<span class="w"> </span><span class="m">365</span><span class="w"> </span>-in<span class="w"> </span>server.csr<span class="w"> </span>-signkey<span class="w"> </span>server-key.pem<span class="w"> </span>-out<span class="w"> </span>server-cert.pem
+</code></pre></div>
+</li>
+<li>
+<p>Generating a CA certificate</p>
+<div class="highlight"><pre><span></span><code>openssl<span class="w"> </span>req<span class="w"> </span>-new<span class="w"> </span>-x509<span class="w"> </span>-days<span class="w"> </span><span class="m">365</span><span class="w"> </span>-key<span class="w"> </span>server-key.pem<span class="w"> </span>-out<span class="w"> </span>ca-cert.pem
+</code></pre></div>
+</li>
+</ul>
+<p>The TLS configuration for PEM would look like this:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">"TLSFile"</span><span class="p">:</span><span class="w"> </span><span class="err">“server</span><span class="mi">-</span><span class="err">key.pem”</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">"PEMCert"</span><span class="p">:</span><span class="w"> </span><span class="err">“server</span><span class="mi">-</span><span class="err">cer</span><span class="kc">t</span><span class="err">.pem”</span><span class="p">,</span>
@@ -8179,7 +8059,7 @@ The configuration for TLS for pem would look like:
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 31, 2026 16:57:17 UTC">July 31, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 13, 2026 15:39:33 UTC">November 13, 2026</span>
   </span>
 
     
@@ -8330,10 +8210,10 @@ The configuration for TLS for pem would look like:
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.path", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.path", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>
