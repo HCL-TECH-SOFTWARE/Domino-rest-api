@@ -1,4 +1,6 @@
-# What's new in Domino REST API v1.0.14 and earlier
+# What's new in Domino REST API v1.0.14 and earlier EOS
+
+--8<-- "eos.md"
 
 <!-- prettier-ignore -->
 !!! note "Important"
@@ -7,8 +9,8 @@
     are API changes that may impact your applications and should be reviewed before upgrading.
     - Always be aware of features that have been deprecated in the current and earlier releases by checking [deprecated features](../references/deprecated.md).
 
-??? info "v1.0.14 - What's new or changed"
-    ## v1.0.14 - What's new or changed
+??? info "What's new in Domino REST API v1.0.14 EOS"
+    ## What's new in Domino REST API v1.0.14 EOS
 
     *Release date: June 13, 2024*
 
@@ -50,8 +52,8 @@
         - For Domino 14: *hclcr.io/domino/restapi:1.0.14-r14*
         - For Domino 12: *hclcr.io/domino/restapi:1.0.14-r12*
 
-??? info "v1.0.12 - What's new or changed"
-    ## v1.0.12 - What's new or changed
+??? info "What's new in Domino REST API v1.0.12 EOS"
+    ## What's new in Domino REST API v1.0.12 EOS
 
     *Release date: April 25, 2024*
 
@@ -95,8 +97,8 @@
         - For Domino 14: *hclcr.io/domino/restapi:1.0.12-r14*
         - For Domino 12: *hclcr.io/domino/restapi:1.0.12-r12* 
 
-??? info "v1.0.11 - What's new or changed"
-    ## v1.0.11 - What's new or changed
+??? info "What's new in Domino REST API v1.0.11 EOS"
+    ## What's new in Domino REST API v1.0.11 EOS
 
     *Release date: March 27, 2024*
 
@@ -145,8 +147,8 @@
         - For Domino 14: *hclcr.io/domino/restapi:1.0.11-r14*
         - For Domino 12: *hclcr.io/domino/restapi:1.0.11-r12* 
 
-??? info "v1.0.10 - What's new or changed"
-    ## v1.0.10 - What's new or changed
+??? info "What's new in Domino REST API v1.0.10 EOS"
+    ## What's new in Domino REST API v1.0.10 EOS
 
     *Release date: February 22, 2024*
 
@@ -206,8 +208,8 @@
         - For Domino 12: *hclcr.io/domino/restapi:1.0.10-r12* 
     
 
-??? info "v1.0.9 - What's new or changed"
-    ## v1.0.9 - What's new or changed
+??? info "What's new in Domino REST API v1.0.9 EOS"
+    ## What's new in Domino REST API v1.0.9 EOS
 
     *Release date: December 14, 2023*
 
@@ -262,8 +264,8 @@
         - For Domino 12: *hclcr.io/domino/restapi:1.0.9-r12* 
         
 
-??? info "v1.0.8 - What's new or changed"
-    ## v1.0.8 - What's new or changed
+??? info "What's new in Domino REST API v1.0.8 EOS"
+    ## What's new in Domino REST API v1.0.8 EOS
 
     *Release date: November 14, 2023*
 
@@ -308,8 +310,8 @@
     - Docker image version for docker compose .env file (CONTAINER_IMAGE) is *domino-rest-api:1.0.8*.
     - Docker image version for docker compose .env file from Harbor is *hclcr.io/domino/restapi:1.0.8*.
 
-??? info "v1.0.7 - What's new or changed"
-    ## v1.0.7 - What's new or changed
+??? info "What's new in Domino REST API v1.0.7 EOS"
+    ## What's new in Domino REST API v1.0.7 EOS
 
     **New features**
 
@@ -344,8 +346,8 @@
     - Docker image version for docker compose .env file from Harbor is *hclcr.io/domino/restapi:1.0.7*.
     
 
-???info "v1.0.6 - What's new or changed"
-    ## v1.0.6 - What's new or changed
+???info "What's new in Domino REST API v1.0.6 EOS"
+    ## What's new in Domino REST API v1.0.6 EOS
 
     **New features**
 
@@ -378,8 +380,8 @@
     - Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:DRAPI-1.0.6*. 
     - Docker image version for docker compose .env file from Harbor is *hclcr.io/domino/restapi:1.0.6*.
 
-???info "v1.0.5 - What's new or changed"
-    ## v1.0.5 - What's new or changed
+???info "What's new in Domino REST API v1.0.5 EOS"
+    ## What's new in Domino REST API v1.0.5 EOS
 
     **New features**
 
@@ -407,8 +409,8 @@
     - Changed default Rich Text representation to MIME in the documentation.
     - Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.18.3*. 
 
-???info "v1.0.4 - What's new or changed"
-    ## v1.0.4 - What's new or changed
+???info "What's new in Domino REST API v1.0.4 EOS"
+    ## What's new in Domino REST API v1.0.4 EOS
 
     **New features** 
 
@@ -429,8 +431,8 @@
 
     - Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.17.0*.
 
-???info "v1.0.3 - What's new or changed"
-    ## v1.0.3 - What's new or changed
+???info "What's new in Domino REST API v1.0.3 EOS"
+    ## What's new in Domino REST API v1.0.3 EOS
 
     **New features** 
 
@@ -453,8 +455,8 @@
 
     - Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.15.0*. 
 
-???info "v1.0.2 - What's new or changed"
-    ## v1.0.2 - What's new or changed
+???info "What's new in Domino REST API v1.0.2 EOS"
+    ## What's new in Domino REST API v1.0.2 EOS
 
     **New features**
 
@@ -490,8 +492,8 @@
 
     - Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.12.0*.
 
-???info "v1.0.1 - What's new or changed"
-    ## v1.0.1 - What's new or changed
+???info "What's new in Domino REST API v1.0.1 EOS"
+    ## What's new in Domino REST API v1.0.1 EOS
 
     **New features**
 
@@ -520,8 +522,8 @@
 
     - Docker image version for docker compose .env file (CONTAINER_IMAGE) is *docker.qs.hcllabs.net/hclcom/projectkeep-r12:1.10.0*.
 
-???info "v1.0 - What's changed since the Early Access Release"
-    ## v1.0 - _What's changed since the Early Access Release_
+???info "What's new in Domino REST API v1.0 EOS"
+    ## What's new in Domino REST API v1.0 EOS
 
     **Improvements**
 
@@ -532,7 +534,7 @@
 ???info "HCL Domino REST API formerly known as HCL Project KEEP"
     ## HCL Domino REST API formerly known as HCL Project KEEP
 
-    *HCL Project KEEP* was introduced as an Early Adopter program. We've re-branded *HCL Project KEEP* to *HCL Domino REST API* to align with the *HCL VOLT MX GO* strategy. You will find that there are still references to the KEEP branding throughout the product and in the documentation. Refer to the *KEEP branding examples* table to see areas and documentation pages where the KEEP branding is still prevalent.
+    *HCL Project KEEP* was introduced as an Early Adopter program. We've re-branded *HCL Project KEEP* to *HCL Domino REST API* to align with the *HCL Volt MX Go* strategy. You will find that there are still references to the KEEP branding throughout the product and in the documentation. Refer to the *KEEP branding examples* table to see areas and documentation pages where the KEEP branding is still prevalent.
 
     | KEEP branding examples|
     | ---- |

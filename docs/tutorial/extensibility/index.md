@@ -30,6 +30,6 @@ Domino REST API follows Domino's access control with no exceptions. However, you
 
 ## [Deployment](deployment.md)
 
-## [Setting up a dev container](devcontainer.md)
+## [Set up a dev container](devcontainer.md)
 
 This step is strictly optional. It can, after the initial setup steps, improve your developer experience by creating a well-known development environment.
