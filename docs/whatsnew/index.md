@@ -122,23 +122,15 @@ The What's new contains information about the latest features, improvements, fix
 
 ## Domino REST API v1.1.2 - v1.1
 
-??? note "Important"
+[Read the full release details](v1.1.2.md)
 
-    Items marked in <span style="color:red">**red**</span> are API changes that may impact your applications and should be reviewed before upgrading. 
+---
 
-    [Read the full details](v1.1.2.md)
+## Domino REST API v1.0.14 and earlier EOS
 
-## Domino REST API v1.0.14 and earlier
+--8<-- "eos.md"
 
-??? note "Important"
-
-    Items marked in <span style="color:red">**red**</span> are API changes that may impact your applications and should be reviewed before upgrading. These API changes happened in the following previous releases:
-
-    - Domino REST API v1.0.10
-    - Domino REST API v1.0.2
-    - Domino REST API v1.0.1
-
-    [Read the full details](whatisnew.md)
+[Read the full release details](whatisnew.md)
 
 <!--
 - Released: [insert release date]
